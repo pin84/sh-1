@@ -1,0 +1,17 @@
+.yes-icon {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+  background-color: #ff6d53;
+  border-radius: 50%;
+}
+.yes-icon::after {
+  content: '✓';
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+}
+

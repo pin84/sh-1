@@ -1,0 +1,25 @@
+{
+  "name": "lesystem",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "dependencies": {
+    "@dcloudio/uni-i18n": "^2.0.1-33920220314003",
+    "jweixin-module": "^1.6.0",
+    "vconsole": "^3.14.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pin84/lesystem.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pin84/lesystem/issues"
+  },
+  "homepage": "https://github.com/pin84/lesystem#readme"
+}

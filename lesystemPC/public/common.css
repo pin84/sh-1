@@ -1,0 +1,24 @@
+.ball{
+    min-width: 30px;
+    width: auto;
+    padding: 0 10px;
+    font-size: 11px;
+    border-radius: 15px;
+    text-align: center;
+    height: 30px;
+    line-height: 30px;
+}
+
+.main-font-color{
+  color:#fff;
+}
+.main-font-color-08{
+  color:#ffb000;
+}
+
+.base-bg-color {
+  background-color: #fff;
+}
+.main-bg-color {
+  background-color: #7269e6;
+}

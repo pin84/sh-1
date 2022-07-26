@@ -1,0 +1,10 @@
+
+@import '../src/assets/var.scss';
+
+/* 运行时采用下面两行的配置 */
+$--font-path: '~element-ui/lib/theme-chalk/fonts';
+@import "~element-ui/packages/theme-chalk/src/index";
+
+// 编译时采用下面两行的配置
+//$--font-path: 'fonts';
+//@import "../../../node_modules/element-ui/packages/theme-chalk/src/index";

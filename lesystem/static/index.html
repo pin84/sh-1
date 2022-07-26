@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang=zh-CN>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1">
+		<title>ZH</title>
+		<meta name="Copyright" content="yougouzhuan">
+		<!--<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">-->
+		<link rel="shortcut icon" type="image/png" href="/static/logo.png">
+		<style type="text/css">
+			body{
+				margin: 0;
+				background: #16d5cb url("/static/images/2020/kuailegou_pc_bg.jpg") top/cover no-repeat;
+				
+			}
+			iframe{
+				width: 375px;
+				min-height: 570px;
+				background-color: #fff;
+				box-sizing: content-box;
+				border: none;
+			}
+			
+			@media screen and (min-width: 450px) {
+			    iframe {
+					position: fixed;
+					top: 0;
+					right: 0;
+					bottom: 0;
+					left: 0;
+					margin: auto;
+			        border: rgb(19 176 176) solid 5px;
+					    box-shadow: 1px 1px 10px #686767;
+			        border-radius: 4px;
+			    }
+			}
+		</style>
+		
+	</head>
+	<body>
+		<iframe id="app" src="/"></iframe>
+	</body>
+	<script type="text/javascript">
+		window.isPC = true;
+		var query = window.location.search;
+		//console.log(query);
+		if(query!=undefined&&query!=''){
+		//window.location.search = '';
+		document.getElementById("app").src='/'+query;
+		}
+		if (window.innerHeight){
+		            winHeight = window.innerHeight;
+					document.getElementById("app").style.height= winHeight * 1-35 +"px";
+		}
+		
+		window.onload = function(){
+			/* 监听电脑浏览器窗口尺寸改变 */
+			window.onresize = function(){
+				if (window.innerHeight){
+				            winHeight = window.innerHeight;
+							document.getElementById("app").style.height= winHeight * 1-35 +"px";
+				}
+				/* 窗口宽度 小于或等于420px 时，跳转回H5页面 */
+				if(window.innerWidth <= 420){
+					window.location.pathname = '/';
+				}
+				
+				
+			}
+		}
+	</script>
+</html>

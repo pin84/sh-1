@@ -1,0 +1,421 @@
+<script>
+import http from 'common/js/http.js';
+export default {
+	mixins: [http],
+	onLaunch: function() {
+		// 锁定屏幕方向
+		//#ifdef APP-PLUS
+		plus.screen.lockOrientation('portrait-primary'); //锁定
+		let systemInfo = uni.getSystemInfoSync();
+		//#endif
+		/**
+		this.sendRequest({
+			url: 'System.Params.getIndexParams',
+			success: res => {
+				let data = res.data;
+				this.isMaintain = data.IsMaintain;
+				if (this.isMaintain == 1) {
+					this.$util.redirectTo('/pages/maintain/maintain', {}, '', 'reLaunch');
+				}
+			}
+		});
+		*/
+		let default_shop_game_second = uni.getStorageSync('shop_game_second');
+		const r = /^\+?[1-9][0-9]*$/;
+		if (default_shop_game_second == undefined || default_shop_game_second == '' || !r.test(default_shop_game_second)) {
+			uni.setStorageSync('shop_game_second', 60);
+		}
+		//var server = "https://www.xiaohongrao.cn/api.php?method=System.Version.update"; //检查更新地址
+		// let server = 'System.Version.update'; //检查更新地址
+		let server = 'System.Version.upgrade'; //检查更新地址
+
+		let version = 120;
+		let req = {
+			//升级检测数据
+			//#ifdef APP-PLUS
+			platform: systemInfo.platform,
+			brand: systemInfo.brand,
+			model: systemInfo.model,
+			//#endif
+			appid: '__UNI__0687380',
+			version: version
+		};
+		this.sendRequest({
+			url: server,
+			data: req,
+			domainType: 2, //用config.js里配置的域名
+			success: res => {
+				if (res.code == 0) {
+					//1.更新cdndomain
+					uni.removeStorageSync('cdndomain');
+					uni.removeStorageSync('fastestSpeed');
+					//var cdndomain = "api.bbscapi.com,";
+					var cdndomain = res.data.cdndomain;
+					if (cdndomain != undefined && cdndomain != '') {
+						var urls = cdndomain.split(',');
+						for (var i = 0; i < urls.length; i++) {
+							if (urls[i].length > 5) {
+								this.checkApiSpeed(urls[i]);
+							}
+						}
+					}
+
+					//#ifdef APP-PLUS
+					if (res.data.status == 1) {
+						let openUrl = plus.os.name === 'iOS' ? res.data.ios : res.data.android;
+						//2.更新app
+
+						if (res.data.mininum_version != undefined && res.data.mininum_version > version) {
+							//强制升级
+							uni.showModal({
+								title: '更新提示',
+								content: res.data.note ? res.data.note : '请更新',
+								showCancel: false,
+								success: showResult => {
+									if (showResult.confirm) {
+										plus.runtime.openURL(openUrl);
+									}
+									this.canotCloseWindow();
+								}
+							});
+						} else {
+							//可选择的升级
+							uni.showModal({
+								//提醒用户更新
+								title: '更新提示',
+								content: res.data.note ? res.data.note : '是否选择更新',
+								success: showResult => {
+									if (showResult.confirm) {
+										plus.runtime.openURL(openUrl);
+									}
+								}
+							});
+						}
+					}
+					//#endif
+				}
+			}
+		});
+
+		this.checkUnreadMessage();
+		this.unreadMessageTimer = setInterval(this.checkUnreadMessage, 25000);
+	},
+	onShow: function() {
+		// 当 uni-app 启动，或从后台进入前台显示
+		// #ifdef MP
+		this.openAutoLogin();
+		// #endif
+	},
+	onHide: function() {
+		// 当 uni-app 从前台进入后台
+	},
+	data() {
+		return {
+			fastestSpeed: 0,
+			unreadMessageTimer: null
+		};
+	},
+	globalData: {
+		getNextOpentimeTimer: 1,
+		getLastPanicBuyingOrdersTimer: 2
+	},
+	methods: {
+		canotCloseWindow() {
+			uni.showModal({
+				title: '升级后才能使用',
+				content: '请升级后再打开app,如果不能升级,请删除原app或者联系客服',
+				showCancel: false,
+				success: showResult => {
+					this.canotCloseWindow();
+				}
+			});
+		},
+		checkUnreadMessage() {
+			if (uni.getStorageSync('token')) {
+				this.sendRequest({
+					url: 'System.Message.queryMessages',
+					success: res => {
+						if (res.code == 0) {
+							let important_msg_count = res.data.important_count; //重要未读消息
+							let normal_msg_count = res.data.unreaded_count;
+							this.$util.setupTabBarBadge(important_msg_count, normal_msg_count);
+						}
+					}
+				});
+			}
+		},
+
+		async checkApiSpeed(url) {
+			var startTime = new Date().getTime();
+			var cdndomain = url;
+			let res = await this.sendRequest({
+				url: 'System.Speed.testSpeed',
+				async: false,
+				domainType: 1, //用自己配置的域名
+				domain: cdndomain
+			});
+			//let _self = this;
+			if (res.code == 0) {
+				var endTime = new Date().getTime();
+				var fastestSpeed = uni.getStorageSync('fastestSpeed');
+				var speed = endTime - startTime;
+				if (fastestSpeed == undefined || fastestSpeed == '' || speed <= Number(fastestSpeed)) {
+					uni.setStorage({
+						key: 'fastestSpeed',
+						data: speed
+					});
+					uni.setStorage({
+						key: 'cdndomain',
+						data: cdndomain
+					});
+				}
+			}
+		},
+
+		/**
+		 * 检测是否登录
+		 * @param {function} callback 未登录时回调函数
+		 */
+		checkLogin(callback) {
+			const token = uni.getStorageSync('token');
+			if (!token) {
+				typeof callback == 'function' && callback();
+			}
+		},
+		// #ifdef MP
+
+		/**
+		 * 获取openid
+		 */
+		getOpenid(callback) {
+			// 获取服务商
+			var provider = [];
+			uni.getProvider({
+				service: 'oauth',
+				success: res => {
+					provider = res.provider;
+				}
+			});
+			if (provider[0] != undefined) {
+				uni.login({
+					provider: provider[0],
+					timeout: 3000,
+					scopes: 'auth_user',
+					success: res => {
+						if (res.errMsg == 'login:ok') {
+							switch (provider[0]) {
+								// 微信小程序
+								case 'weixin':
+									this.sendRequest({
+										url: 'System.Login.getWechatBasicInfo',
+										data: { code: res.code },
+										success: res => {
+											if (res.data != undefined) {
+												var data = JSON.parse(res.data);
+												if (data.errcode == undefined) {
+													Object.assign(data, { provider: 'weixin' });
+													if (callback) callback(data);
+												} else {
+													this.$util.showToast({ title: data.errmsg });
+												}
+											}
+										}
+									});
+									break;
+							}
+						} else {
+							this.$util.showToast({
+								title: res.errMsg
+							});
+						}
+					}
+				});
+			}
+		},
+
+		/**
+		 * 自动登录
+		 */
+		checkOpenidIsExits(data) {
+			this.sendRequest({
+				url: 'System.UniApp.checkOpenidIsExits',
+				data: data,
+				success: res => {
+					if (res.data.is_bound) {
+						uni.setStorage({
+							key: 'token',
+							data: res.data.token,
+							success: () => {
+								// #ifdef H5
+								let url = window.location.href,
+									domain = url.split('?')[0],
+									hash = url.split('#')[1];
+								location.href = domain + '#' + hash;
+								// #endif
+
+								var page = getCurrentPages().pop();
+								if (page == undefined || page == null) return;
+								page.onShow();
+							}
+						});
+					}
+				}
+			});
+		},
+
+		init() {
+			var data = uni.getStorageSync('bind_data');
+			if (data) {
+				this.checkOpenidIsExits(data);
+			} else {
+				this.getOpenid(params => {
+					let data = {};
+					if (params.provider) data.provider = params.provider;
+					if (params.openid) data.openid = params.openid;
+					if (params.unionid) data.unionid = params.unionid;
+					Object.assign(data, params);
+					this.checkOpenidIsExits(data);
+				});
+			}
+		},
+
+		/**
+		 * 是否开启自动登录
+		 */
+		openAutoLogin() {
+			this.sendRequest({
+				url: 'System.Login.getRegisterAndVisitInfo',
+				success: res => {
+					if (res.data.is_login == 1) {
+						this.init();
+					}
+				}
+			});
+		}
+
+		// #endif
+	}
+};
+</script>
+
+<style lang="scss">
+@import './common/css/colorui.css';
+@import url('./common/css/main.css');
+@import url('./common/css/iconfont');
+
+// /*每个页面公共css */
+// page {
+// 	min-height: 100%;
+// 	display: flex;
+// 	font-size: 16px;
+// }
+
+// /* #ifdef MP-BAIDU */
+// page {
+// 	width: 100%;
+// 	height: 100%;
+// 	display: block;
+// }
+
+// swan-template {
+// 	width: 100%;
+// 	min-height: 100%;
+// 	display: flex;
+// }
+
+// /* 原生组件模式下需要注意组件外部样式 */
+// custom-component {
+// 	width: 100%;
+// 	min-height: 100%;
+// 	display: flex;
+// }
+
+// /* #endif */
+
+// /* #ifdef MP-ALIPAY */
+// page {
+// 	min-height: 100vh;
+// }
+
+// /* #endif */
+
+// /* 原生组件模式下需要注意组件外部样式 */
+// m-input {
+// 	width: 100%;
+// 	/* min-height: 100%; */
+// 	display: flex;
+// 	flex: 1;
+// }
+
+// .content {
+// 	display: flex;
+// 	flex: 1;
+// 	flex-direction: column;
+// 	background-color: #efeff4;
+// 	padding: 10px;
+// }
+
+// .input-group {
+// 	background-color: #ffffff;
+// 	margin-top: 20px;
+// 	position: relative;
+// }
+
+// .input-group::before {
+// 	position: absolute;
+// 	right: 0;
+// 	top: 0;
+// 	left: 0;
+// 	height: 1px;
+// 	content: '';
+// 	-webkit-transform: scaleY(.5);
+// 	transform: scaleY(.5);
+// 	background-color: #c8c7cc;
+// }
+
+// .input-group::after {
+// 	position: absolute;
+// 	right: 0;
+// 	bottom: 0;
+// 	left: 0;
+// 	height: 1px;
+// 	content: '';
+// 	-webkit-transform: scaleY(.5);
+// 	transform: scaleY(.5);
+// 	background-color: #c8c7cc;
+// }
+
+// .input-row {
+// 	display: flex;
+// 	flex-direction: row;
+// 	position: relative;
+// 	font-size: 18px;
+// 	line-height: 40px;
+// }
+
+// .input-row .title {
+// 	width: 72px;
+// 	padding-left: 15px;
+// }
+
+// .input-row.border::after {
+// 	position: absolute;
+// 	right: 0;
+// 	bottom: 0;
+// 	left: 8px;
+// 	height: 1px;
+// 	content: '';
+// 	-webkit-transform: scaleY(.5);
+// 	transform: scaleY(.5);
+// 	background-color: #c8c7cc;
+// }
+
+// .btn-row {
+// 	margin-top: 25px;
+// 	padding: 10px;
+// }
+
+// button.primary {
+// 	background-color: #0faeff;
+// }
+</style>

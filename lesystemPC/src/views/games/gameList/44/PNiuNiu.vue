@@ -1,0 +1,341 @@
+<template>
+  <ul class="longhu">
+    <li class="item" v-for="(title, idx) in titleArr" :key="idx">
+      <div class="title">{{ title }}</div>
+      <ul class="num item-list">
+        <li
+          @click="selectNum(item)"
+          class="num-box"
+          v-for="(item, index) in numList[idx]"
+          :key="index"
+        >
+          <span class="out-line">
+            <span :class="item.isSelected ? 'active' : 'bg'">{{ item.N }}</span>
+          </span>
+          <span class="odds">{{item.odds}}</span>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</template>
+<script>
+export default {
+  props: {
+    config: {
+      type: Object,
+      defaule: () => {},
+    },
+  },
+
+  data() {
+    return {
+      selectedArr: [],
+      titleArr: [],
+      numList: [],
+      radix: 2,
+      mode: 1,
+      times: 1,
+      MaxOdds: {},
+    };
+  },
+
+  watch: {
+    "$store.state.gd.footOdds": {
+      handler: function (val) {
+        this.changeOdds(val);
+      },
+      deep: true,
+    },
+    "$store.state.gd.footRate": {
+      handler: function (val) {
+        let { mode, times } = val;
+        this.mode = mode;
+        this.times = times;
+        this.handlerData();
+      },
+      deep: true,
+    },
+
+    "$store.state.gd.addToBasket": function (val) {
+      this.addToBasket();
+    },
+    "$store.state.gd.toBuy": function (val) {
+      this.toBuy();
+    },
+  },
+
+  created() {
+    this.initData();
+  },
+
+  beforeDestroy() {
+    this.$store.commit("moneyDeviation", 0);
+  },
+
+  methods: {
+    initData() {
+      let { percentage } = this.$store.state.gd.footOdds;
+     let { radix } = this.$store.state.gd.indexGameData;
+      let { mode, times } = this.$store.state.gd.footRate;
+      this.radix = radix;
+      this.mode = mode;
+      this.times = times;
+      let { titleArr } = this.config;
+      this.titleArr = titleArr;
+
+      let obj = this.$store.state.gd.curGame;
+
+      let tem = [];
+      let maxMxO = 0;
+      let MaxOdds = {};
+      let obj1 = obj.C[0];
+      obj1.C.forEach((item) => {
+        item.N1 = obj1.N;
+        item.odds = item.MxO - (item.MxO - item.MiO) * percentage;
+        if (item.MxO > maxMxO) {
+          MaxOdds = item;
+          maxMxO = item.MxO;
+        }
+        tem.push(item);
+      });
+
+      let tem2 = [];
+      let obj2 = obj.C[1];
+      let obj3 = obj.C[2];
+      obj2.C.forEach((item) => {
+        item.N1 = obj2.N;
+        item.odds = item.MxO - (item.MxO - item.MiO) * percentage;
+        if (item.MxO > maxMxO) {
+          MaxOdds = item;
+          maxMxO = item.MxO;
+        }
+        tem2.push(item);
+      });
+      obj3.C.forEach((item) => {
+        item.N1 = obj3.N;
+        item.odds = item.MxO - (item.MxO - item.MiO) * percentage;
+        if (item.MxO > maxMxO) {
+          MaxOdds = item;
+          maxMxO = item.MxO;
+        }
+        tem2.push(item);
+      });
+
+      this.numList.push(tem);
+      this.numList.push(tem2);
+
+      this.MaxOdds = MaxOdds;
+      this.$store.commit("odds", this.MaxOdds);
+    },
+
+    changeOdds(val) {
+      let { percentage } = val;
+      this.numList.forEach((arr) => {
+        arr.forEach((item) => {
+          item.odds = this.$BDH.setNumDecimal(
+            item.MxO - (item.MxO - item.MiO) * percentage,
+            3
+          );
+        });
+      });
+      this.numList.push({});
+      this.numList.pop();
+    },
+
+    selectNum(item, index) {
+      item.isSelected = !item.isSelected;
+      this.numList.push({});
+      this.numList.pop();
+
+      let selectedArr = [];
+      let maxMxO = 0;
+      let selectedOdds = {};
+      let allOdds = {};
+      this.numList.forEach((arr) => {
+        arr.forEach((item) => {
+          if (item.isSelected) {
+            selectedArr.push(item);
+
+            if (item.MxO > maxMxO) {
+              selectedOdds = item;
+              maxMxO = item.MxO;
+            }
+
+            if (allOdds[item.N1]) {
+              if (allOdds[item.N1].MxO < item.MxO) {
+                allOdds[item.N1] = item;
+              }
+            } else {
+              allOdds[item.N1] = item;
+            }
+          }
+        });
+      });
+
+      if (selectedArr.length == 0) {
+        this.$store.commit("odds", this.MaxOdds);
+        this.$store.commit("footMoney", {});
+        return;
+      }
+
+      let moneyDeviation = 0;
+      for (let [key, value] of Object.entries(allOdds)) {
+        if (value.MxO == maxMxO) continue;
+        moneyDeviation += value.MxO;
+      }
+      this.$store.commit("moneyDeviation", moneyDeviation);
+
+      this.$store.commit("odds", selectedOdds);
+      this.selectedArr = selectedArr;
+      this.handlerData();
+    },
+
+    toBuy() {
+      this.addToBasket();
+      let ts = new Date().getTime();
+      this.$store.commit("toBuyNext", ts);
+    },
+    addToBasket() {
+      // let { numStr, orderStr } = this.config.dataHandler(this.selectedArr);
+      let len = this.selectedArr.length;
+      let objArr = [];
+      this.selectedArr.forEach((item) => {
+        let obj = this.$BDH.createBuyObj();
+
+        obj.I = item.I;
+        obj.gName = item.N1;
+        obj.numStr = item.N;
+        obj.orderStr = item.N;
+        obj.num = 1;
+        obj.money = obj.money / len;
+
+        objArr.push(obj);
+      });
+
+      this.$store.commit("basketList", objArr);
+      this.$store.commit("footMoney", {});
+      // this.$store.commit("clearSelect", new Date().getTime());
+      this.selectedArr = [];
+      this.clearSelect()
+    },
+
+    clearSelect() {
+      this.numList.forEach((arr) => {
+        arr.forEach((item) => {
+          if (item.isSelected) {
+            item.isSelected = false;
+          }
+        });
+      });
+       this.numList.push({})
+       this.numList.pop()
+    },
+
+    handlerData() {
+      if (this.selectedArr.length == 0) {
+        this.$store.commit("footMoney", {});
+        return;
+      }
+
+      let s = this.selectedArr.length
+
+      let money = s * this.radix * this.times * this.mode;
+      this.$store.commit("footMoney", { num: s, money });
+    },
+  },
+};
+</script>
+<style lang="scss" scoped>
+$width: 40px;
+$width1: 32px;
+$width3: 36px;
+$width2: 28px;
+.longhu {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  user-select: none;
+  .item {
+    width: 100%;
+    display: flex;
+    padding-bottom: 20px;
+    .title {
+      flex: 0 0 100px;
+      height: 35px;
+      line-height: 35px;
+      text-align: center;
+      background-color: #5a5a5a;
+      color: #fff;
+      border-radius: 5px;
+      font-style: oblique;
+      font-weight: 600;
+    }
+    .item-list {
+      display: flex;
+      align-content: center;
+      justify-content: space-between;
+      margin-left: 40px;
+      .num-box {
+        width: 80px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        .odds {
+          color: #444;
+          margin-top: 10px;
+        }
+        .out-line {
+          display: inline-block;
+          width: $width;
+          height: $width;
+          border: 1px solid #ccc;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          .bg,
+          .active {
+            display: inline-block;
+            width: $width1;
+            height: $width1;
+            line-height: $width1;
+            background-color: #adaead;
+            border-radius: 50%;
+            color: #fff;
+            font-size: 20px;
+            // font-weight:600;
+          }
+          .bg:hover {
+            background-color: orange;
+            cursor: pointer;
+          }
+          .active {
+            background-color: #cf271e;
+          }
+          .active:hover {
+            cursor: pointer;
+          }
+        }
+        .ex {
+          position: absolute;
+          top: 0;
+          right: -12px;
+          // border:1px solid red;
+          font-size: 12px;
+          color: #9b9b9c;
+        }
+        .active {
+          color: #f00;
+        }
+      }
+    }
+
+    // .num {
+    //   width: 100%;
+    // }
+  }
+}
+</style>

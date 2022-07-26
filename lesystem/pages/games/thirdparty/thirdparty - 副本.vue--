@@ -1,0 +1,94 @@
+<template>
+	<view v-if="isOpenNewWindow">
+		<view class="kefu-container">
+			<view style="display: flex;flex-direction:column">
+			<view>您已经在浏览器打开游戏</view>
+			<view>请切换到新浏览器窗口或返回首页</view>
+			</view>
+		</view>
+	</view>
+</template>
+
+<script>
+	import http from 'common/js/http.js';
+	export default {
+		data() {
+			return {
+				gameId:-1,
+				channelId:'',
+				thirdpartyUrl:'',
+				isOpenNewWindow:false
+			}
+		},
+		mixins: [http],
+		methods: {
+			getWapPageLayout() {
+				uni.showLoading({
+					title: '加载中...'
+				});
+				this.sendRequest({
+					url: 'Pc.ThirdPartyGame.getThirdPartyGameLoginUrl',
+					data: { gameId: this.gameId, channelId: this.channelId},
+					success: res => {
+						uni.hideLoading();
+						if (res.code == 0) {
+						this.thirdpartyUrl = res.data;
+						//this.isOpenNewWindow=true;
+						// #ifdef APP-PLUS
+						plus.runtime.openURL(this.thirdpartyUrl);
+						//_this.src = res.data.url;
+						// #endif
+						// #ifdef H5
+						window.open(this.thirdpartyUrl);
+						// #endif
+						
+						uni.switchTab({
+							url:"/pages/index/index/index"
+						})
+						}
+						else{
+							uni.showToast({
+								title:'第三方链接出错'
+							});
+						}
+					}
+				});
+			}
+		},
+		onPullDownRefresh() {
+			this.getWapPageLayout();
+		},
+		onLoad(data) {
+			if (data.gameId != undefined && data.gameId != '') {
+				this.gameId=data.gameId;
+			}
+			if (data.channelId != undefined && data.channelId != '') {
+				this.channelId=data.channelId;
+			}
+			if(this.channelId!=''&& this.gameId!=-1){
+				this.getWapPageLayout();
+			}
+			else{
+				uni.showToast({
+					title:'参数错误'
+				});
+			}
+			
+		},
+	}
+</script>
+
+<style lang="scss" scoped>
+	.kefu-container {
+		min-height: 100vh;
+		background: url(/static/images/2020/kefubg.jpg) no-repeat top;
+		background-size: cover;
+		text-align: center;
+		display: -ms-flexbox;
+		display: flex;
+		-ms-flex-align: center;
+		align-items: center;
+		-ms-flex-pack: center;
+		justify-content: center;
+	}
+</style>
