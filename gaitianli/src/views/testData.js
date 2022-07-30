@@ -1,22 +1,23 @@
 export default {
     "id": 1,
     "YunXingBiaoZhi": 1,
-    "Xian2DianJi1JingXiang": 1,
+    "Xian2DianJi1JingXiang": 0,
     "Xian2DianJi2JingXiang": 1,
     "Xian2DianJi3JingXiang": 1,
     "Xian2DianJi4JingXiang": 1,
     "Xian2DianJi5JingXiang": 1,
     "Xian2DianJi6JingXiang": 1,
-    "Xian2DianJi7JingXiang": 1,
+    "Xian2DianJi7JingXiang": 2,
     "Xian2DianJi8JingXiang": 1,
     "Xian2DianJi9JingXiang": 1,
     "Xian2DianJi10JingXiang": 1,
     "Xian2DianJi11JingXiang": 1,
     "Xian2DianJi12JingXiang": 1,
-    "Xian2DianJi13JingXiang": 1,
+
+    "Xian2DianJi13JingXiang": 0,
     "Xian2DianJi14JingXiang": 1,
     "Xian2DianJi15JingXiang": 1,
-    "Xian2DianJi16JingXiang": 1,
+    "Xian2DianJi16JingXiang": 2,
 
 
     "Xian1DianJi26JingXiang": 1,
@@ -28,7 +29,7 @@ export default {
     "Xian1DianJi31JingXiang": 1,
     "Xian1DianJi32JingXiang": 0,
 
-    "Xian1DianJi33JingXiang": 1,
+    "Xian1DianJi33JingXiang": 2,
     "Xian1DianJi34JingXiang": 1,
     "Xian1DianJi35JingXiang": 1,
     "Xian1DianJi41JingXiang": 1,
@@ -39,17 +40,17 @@ export default {
     "Xian1DianJi45JingXiang": 0,
     "Xian1DianJi46JingXiang": 1,
 
-    "Xian2DianJi47JingXiang": 1,
+    "Xian2DianJi47JingXiang": 2,
     "Xian2DianJi48JingXiang": 1,
-    "Xian2DianJi49JingXiang": 1,
+    "Xian2DianJi49JingXiang": 0,
     "QuanXianJiTing": 1,
-    "Xian2GuangDian1": 1,
+    "Xian2GuangDian1": 0,
     "Xian2GuangDian2": 1,
     "Xian2GuangDian3": 1,
     "Xian2GuangDian4": 1,
     "Xian2GuangDian5": 1,
     "Xian2GuangDian6": 1,
-    "Xian2GuangDian7": 1,
+    "Xian2GuangDian7": 0,
     "Xian2JiTing": 1,
     "Xian1ChuJiTing": 1,
     "Xian2ChuJiTing": 1,
@@ -104,5 +105,8 @@ export default {
     "Xian1GuangDian46": 1,
 
     "Xian1GuangDian32": 0,
+    "Xian1GuangDian33": 1,
+    "Xian2GuangDian47": 1,
+    "Xian2GuangDian49": 0,
 
 }

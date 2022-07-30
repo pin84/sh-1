@@ -17,7 +17,7 @@ export default {
   props: {
     statu: {
       type: Number,
-      default: 0,
+      default: 1,
     },
     lineNum: {
       type: Number,
@@ -29,18 +29,16 @@ export default {
 
 <style lang="scss" scoped>
 .conveyor {
-  width: 50px;
-  border: 4px solid $border-convey-stop;
+  width: 100%;
+  border: 5px solid $border-convey-stop;
   border-top: none;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   border-color: $border-convey-stop;
   box-sizing: border-box;
-  margin-bottom: 0.5px;
-  &.middle{
-    width: 50px;
-  }
+  // margin-bottom: 1px;
+  background-color: $box-bg;
   &.border-green {
     border-color: $border-convey-run;
   }

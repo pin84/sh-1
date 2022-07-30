@@ -1,6 +1,9 @@
 <template>
   <div class="home">
-    <div class="btn-box">
+    <div
+      class="btn-box"
+      v-if="false"
+    >
       <el-button
         @click="test(idx)"
         class="btn"
@@ -9,7 +12,7 @@
         type="primary"
       >{{item}}</el-button>
     </div>
-    <div class="item-box-1">
+    <!-- <div class="item-box-1">
       <Item :d="d1" />
     </div>
     <div class="item-box-2">
@@ -20,8 +23,7 @@
     </div>
     <div class="item-box-4">
       <Item4 :d="d4" />
-    </div>
-
+    </div> -->
 
     <div class="item-info-box-1">
       <Info :d="info1" />
@@ -36,52 +38,197 @@
       <Info :d="info4" />
     </div>
 
-
-    <!-- 
-      lineNum:
-      itemType:1为小的，其他为大的
-     -->
-
     <div class="l1d1">
-      <ConveyorBox  :lineNum='6' :statuArr='l1d1' :isShowArr='l1d1GD' :itemType='1' />
+      <ConveyorBox
+        :lineNum='7'
+        :statuArr='l1d1'
+        :isShowArr='l1d1GD'
+        :itemType='1'
+      />
     </div>
     <div class="l1d2">
-      <ConveyorBox :lineNum='5'   :statuArr='l1d2'  :isShowArr='l1d2GD' :itemType='1'  />
+      <ConveyorBox
+        :lineNum='5'
+        :statuArr='l1d2'
+        :isShowArr='l1d2GD'
+        :itemType='1'
+      />
+    </div>
+    <div class="l1d3">
+      <ConveyorBox
+        :lineNum='15'
+        :statuArr='l1d3'
+        :isShowArr='l1d3GD'
+        :itemType='1'
+      />
     </div>
 
     <div class="l1d4">
-      <ConveyorBox :lineNum='10'   :statuArr='l1d4'  :isShowArr='l1d4GD' :itemType='1'  />
+      <ConveyorBox
+        :lineNum='10'
+        :statuArr='l1d4'
+        :isShowArr='l1d4GD'
+        :itemType='1'
+      />
     </div>
 
-   
+    <div class="l2d1">
+      <ConveyorBox
+        :lineNum='8'
+        :statuArr='l2d1'
+        :isShowArr='l2d1GD'
+        :itemType='1'
+      />
+    </div>
+    <div class="l2d2">
+      <ConveyorBox
+        :lineNum='7'
+        :statuArr='l2d2'
+        :isShowArr='l2d2GD'
+        :itemType='1'
+      />
+    </div>
+
+    <div class="l2d3">
+      <ConveyorBox
+        :lineNum='14'
+        :statuArr='l2d3'
+        :isShowArr='l2d3GD'
+        :itemType='1'
+      />
+    </div>
+    <div class="l2d4">
+      <ConveyorBox
+        :lineNum='17'
+        :statuArr='l2d4'
+        :isShowArr='l2d4GD'
+        :itemType='1'
+      />
+    </div>
+
     <div class="tp-box-1-1">
-        <ConveyorBox  :lineNum='5' :statuArr='l1d5'  :isShowArr='l1d5GD'   />
+      <ConveyorBox
+        :lineNum='5'
+        :statuArr='l1d5'
+        :isShowArr='l1d5GD'
+      />
+      <ConveyorBox
+        :lineNum='5'
+        :statuArr='l1d5_1'
+        :isShowArr='l1d5GD_1'
+      />
     </div>
     <div class="tp-box-1-2">
-        <ConveyorBox  :lineNum='5' :statuArr='l1d6'  :isShowArr='l1d6GD'   />
+      <ConveyorBox
+        :lineNum='5'
+        :statuArr='l1d6'
+        :isShowArr='l1d6GD'
+      />
     </div>
     <div class="tp-box-1-3">
-        <ConveyorBox  :lineNum='5' :statuArr='l1d7'  :isShowArr='l1d7GD'   />
+      <ConveyorBox
+        :lineNum='5'
+        :statuArr='l1d7'
+        :isShowArr='l1d7GD'
+      />
+      <ConveyorBox
+        :lineNum='5'
+        :statuArr='l1d7_1'
+        :isShowArr='l1d7GD_1'
+      />
     </div>
+
+    <div class="tp-box-1-4">
+      <ConveyorBox
+        :lineNum='5'
+        :statuArr='d10'
+        :isShowArr='d10GD'
+      />
+      <ConveyorBox
+        :lineNum='5'
+        :statuArr='d10_1'
+        :isShowArr='d10GD_1'
+      />
+    </div>
+
+    <div class="tp-box-1-5">
+      <ConveyorBox
+        :lineNum='11'
+        :statuArr='d11'
+        :isShowArr='d11GD'
+      />
+      <ConveyorBox
+        :lineNum='5'
+        :statuArr='d11_1'
+        :isShowArr='d11GD_1'
+      />
+    </div>
+
+    <div class="tp-box-1-6">
+      <ConveyorBox
+        :lineNum='5'
+        :statuArr='d12'
+        :isShowArr='d12GD'
+      />
+    </div>
+    <div class="tp-box-1-7">
+      <ConveyorBox
+        :lineNum='5'
+        :statuArr='d13'
+        :isShowArr='d13GD'
+      />
+    </div>
+    <div class="tp-box-1-8">
+      <ConveyorBox
+        :lineNum='11'
+        :statuArr='d14'
+        :isShowArr='d14GD'
+      />
+      <ConveyorBox
+        :lineNum='5'
+        :statuArr='d14_1'
+        :isShowArr='d14GD_1'
+      />
+    </div>
+
     <div class="tp-box-03-01">
-        <ConveyorBox  :lineNum='5' :statuArr='l1d8'  :isShowArr='l1d8GD'   />
+      <ConveyorBox
+        :lineNum='5'
+        :statuArr='l1d8'
+        :isShowArr='l1d8GD'
+      />
+      <ConveyorBox
+        :lineNum='5'
+        :statuArr='l1d8_1'
+        :isShowArr='l1d8GD_1'
+      />
     </div>
     <div class="tp-box-03-02">
-        <ConveyorBox  :lineNum='5' :statuArr='l1d9'  :isShowArr='l1d9GD'   />
+      <ConveyorBox
+        :lineNum='5'
+        :statuArr='l1d9'
+        :isShowArr='l1d9GD'
+      />
+      <ConveyorBox
+        :lineNum='5'
+        :statuArr='l1d9_1'
+        :isShowArr='l1d9GD_1'
+      />
     </div>
+
   </div>
 </template>
 
 <script>
-import testData from '@/views/testData.js'
-import tpss from '@/views/tpss.js'
+import testData from "@/views/testData.js";
+import tpss from "@/views/tpss.js";
 import dataHandler from "@/views/dataHandler.js";
 import Item from "@/views/Item.vue";
 import Item2 from "@/views/Item-2.vue";
 import Item3 from "@/views/Item-3.vue";
 import Item4 from "@/views/Item-4.vue";
 import Info from "@/views/Info.vue";
-import ConveyorBox from '@/views/ConveyorBox.vue'
+import ConveyorBox from "@/views/ConveyorBox.vue";
 
 export default {
   components: {
@@ -90,12 +237,12 @@ export default {
     Item3,
     Item4,
     Info,
-    ConveyorBox
+    ConveyorBox,
   },
   props: {},
   data() {
     return {
-      testData:[0,1,2,0,1],
+      testData: [0, 1, 2, 0, 1],
       btnList: ["电机停止", "电机运行", "电机反转", "光电信号有", "光电信号无"],
       isBreak: false,
       d1: {},
@@ -109,60 +256,94 @@ export default {
       info4: {},
 
       l1d1: [], //1线装瓶电机信号1
-      l1d1GD:[] , // 1线装瓶光电信号1
+      l1d1GD: [], // 1线装瓶光电信号1
 
       l1d2: [], //1线装瓶电机信号2
-      l1d2GD:[] , // 1线装瓶光电信号2
-
+      l1d2GD: [], // 1线装瓶光电信号2
+      l1d3: [],
+      l1d3GD: [],
       l1d4: [], //1线装瓶电机信号2
-      l1d4GD:[] , // 1线装瓶光电信号2
+      l1d4GD: [], // 1线装瓶光电信号2
 
+      l2d1: [],
+      l2d1GD: [],
+      l2d2: [],
+      l2d2GD: [],
+      l2d3: [],
+      l2d3GD: [],
+      l2d4: [],
+      l2d4GD: [],
 
       l1d5: [], //1线托盘传送线电机信号1
-      l1d5GD:[] , // 1线托盘传送线光电信号1
+      l1d5GD: [], // 1线托盘传送线光电信号1
+      l1d5_1: [], //1线托盘传送线电机信号1
+      l1d5GD_1: [], // 1线托盘传送线光电信号1
 
       l1d6: [], //1线托盘传送线电机信号
-      l1d6GD:[] , // 1线托盘传送线光电信号
+      l1d6GD: [], // 1线托盘传送线光电信号
 
       l1d7: [], //1线托盘传送线电机信号
-      l1d7GD:[] , // 1线托盘传送线光电信号
+      l1d7GD: [], // 1线托盘传送线光电信号
+      l1d7_1: [], //1线托盘传送线电机信号
+      l1d7GD_1: [], // 1线托盘传送线光电信号
+
       l1d8: [], //1线托盘传送线电机信号
-      l1d8GD:[] , // 1线托盘传送线光电信号
+      l1d8GD: [], // 1线托盘传送线光电信号
+      l1d8_1: [], //1线托盘传送线电机信号
+      l1d8GD_1: [], // 1线托盘传送线光电信号
+
       l1d9: [], //1线托盘传送线电机信号
-      l1d9GD:[] , // 1线托盘传送线光电信号
+      l1d9GD: [], // 1线托盘传送线光电信号
+      l1d9_1: [], //1线托盘传送线电机信号
+      l1d9GD_1: [], // 1线托盘传送线光电信号
 
+      d10: [],
+      d10GD: [],
+      d10_1: [],
+      d10GD_1: [],
+      d11: [],
+      d11GD: [],
+      d11_1: [],
+      d11GD_1: [],
 
+      d12: [],
+      d12GD: [],
+      d13: [],
+      d13GD: [],
+      d14: [],
+      d14GD: [],
+      d14_1: [],
+      d14GD_1: [],
     };
   },
   methods: {
     test(idx) {
       console.log(idx);
-      if(idx <= 2){
+      if (idx <= 2) {
         this.l1d1 = this.pushD(idx);
         // this.l1d2GD = this.pushD(idx);
-        
+
         // this.l2d1GD = this.pushD(idx);
         // this.l2d2GD = this.pushD(idx);
       }
 
-      if(idx > 2){
-        let i = 1
-        if(idx == 4){
-          i = 0
+      if (idx > 2) {
+        let i = 1;
+        if (idx == 4) {
+          i = 0;
         }
-        this.l1d1GD = this.pushD(i)
-
+        this.l1d1GD = this.pushD(i);
       }
 
-      console.log( this.l1d1);
+      console.log(this.l1d1);
     },
 
     pushD(type = 0) {
       let arr = [];
       // if (type == 0) {
-        for (let i = 0; i < 5; i++) {
-          arr.push(type);
-        }
+      for (let i = 0; i < 5; i++) {
+        arr.push(type);
+      }
       // }
 
       return arr;
@@ -174,14 +355,25 @@ export default {
           break;
         }
         let res = await this.$get("/bankuang");
+        console.log(res);
+
+        await this.awaitTime(1000);
+        if (res.code == -1) continue;
         let {
           bangkuangji: { list },
           zhuangpingshusongxian: { zhuangPingShuSongXianEntity },
-          tuopanshusongxian
+          tuopanshusongxian,
         } = res;
+        if (!list) continue;
+        if (list.lenght == 0) continue;
+        this.d1 = list[0];
+        this.d2 = list[1];
+        this.d3 = list[2];
+        this.d4 = list[3];
+
         // console.log(tuopanshusongxian);
-        // zhuangPingShuSongXianEntity = testData
-        // tuopanshusongxian = tpss
+        zhuangPingShuSongXianEntity = testData;
+        tuopanshusongxian = tpss;
 
         this.l1d1 = dataHandler.getL1D1(zhuangPingShuSongXianEntity);
         this.l1d1GD = dataHandler.getL1D1GD(zhuangPingShuSongXianEntity);
@@ -189,48 +381,82 @@ export default {
         this.l1d2 = dataHandler.getL1D2(zhuangPingShuSongXianEntity);
         this.l1d2GD = dataHandler.getL1D2GD(zhuangPingShuSongXianEntity);
 
+        this.l1d3 = dataHandler.getL1D3(zhuangPingShuSongXianEntity);
+        this.l1d3GD = dataHandler.getL1D3GD(zhuangPingShuSongXianEntity);
+
         this.l1d4 = dataHandler.getL1D4(zhuangPingShuSongXianEntity);
         this.l1d4GD = dataHandler.getL1D4GD(zhuangPingShuSongXianEntity);
 
+        this.l2d1 = dataHandler.getL2D1(zhuangPingShuSongXianEntity);
+        this.l2d1GD = dataHandler.getL2D1GD(zhuangPingShuSongXianEntity);
+        this.l2d2 = dataHandler.getL2D2(zhuangPingShuSongXianEntity);
+        this.l2d2GD = dataHandler.getL2D2GD(zhuangPingShuSongXianEntity);
+        this.l2d3 = dataHandler.getL2D3(zhuangPingShuSongXianEntity);
+        this.l2d3GD = dataHandler.getL2D3GD(zhuangPingShuSongXianEntity);
+        this.l2d4 = dataHandler.getL2D4(zhuangPingShuSongXianEntity);
+        this.l2d4GD = dataHandler.getL2D4GD(zhuangPingShuSongXianEntity);
 
-        let [l1d5GD,l1d5] = dataHandler.getL1D5(tuopanshusongxian);
-        this.l1d5GD = l1d5GD
-        this.l1d5 = l1d5
+        let [l1d5GD, l1d5] = dataHandler.getL1D5(tuopanshusongxian);
+        this.l1d5GD = l1d5GD;
+        this.l1d5 = l1d5;
+        let [l1d5GD_1, l1d5_1] = dataHandler.getL1D5_1(tuopanshusongxian);
+        this.l1d5GD_1 = l1d5GD_1;
+        this.l1d5_1 = l1d5_1;
 
+        let [l1d6GD, l1d6] = dataHandler.getL1D6(tuopanshusongxian);
+        this.l1d6GD = l1d6GD;
+        this.l1d6 = l1d6;
 
-        let [l1d6GD,l1d6] = dataHandler.getL1D6(tuopanshusongxian);
-        this.l1d6GD = l1d6GD
-        this.l1d6 = l1d6
+        let [l1d7GD, l1d7] = dataHandler.getL1D7(tuopanshusongxian);
+        this.l1d7GD = l1d7GD;
+        this.l1d7 = l1d7;
+        let [l1d7GD_1, l1d7_1] = dataHandler.getL1D7_1(tuopanshusongxian);
+        this.l1d7GD_1 = l1d7GD_1;
+        this.l1d7_1 = l1d7_1;
 
-        let [l1d7GD,l1d7] = dataHandler.getL1D7(tuopanshusongxian);
-        this.l1d7GD = l1d7GD
-        this.l1d7 = l1d7
+        let [l1d8GD, l1d8] = dataHandler.getL10301(tuopanshusongxian);
+        this.l1d8GD = l1d8GD;
+        this.l1d8 = l1d8;
+        let [l1d8GD_1, l1d8_1] = dataHandler.getL10301_1(tuopanshusongxian);
+        this.l1d8GD_1 = l1d8GD_1;
+        this.l1d8_1 = l1d8_1;
 
-        let [l1d8GD,l1d8] = dataHandler.getL10301(tuopanshusongxian);
-        this.l1d8GD = l1d8GD
-        this.l1d8 = l1d8
+        let [l1d9GD, l1d9] = dataHandler.getL10302(tuopanshusongxian);
+        this.l1d9GD = l1d9GD;
+        this.l1d9 = l1d9;
 
-        let [l1d9GD,l1d9] = dataHandler.getL10302(tuopanshusongxian);
-        this.l1d9GD = l1d9GD
-        this.l1d9 = l1d9
+        let [l1d9GD_1, l1d9_1] = dataHandler.getL10302_1(tuopanshusongxian);
+        this.l1d9GD_1 = l1d9GD_1;
+        this.l1d9_1 = l1d9_1;
 
+        let [d10GD, d10] = dataHandler.getD10(tuopanshusongxian);
+        this.d10GD = d10GD;
+        this.d10 = d10;
 
+        let [d10GD_1, d10_1] = dataHandler.getD10_1(tuopanshusongxian);
+        this.d10GD_1 = d10GD_1;
+        this.d10_1 = d10_1;
 
+        let [d11GD, d11] = dataHandler.getD11(tuopanshusongxian);
+        this.d11GD = d11GD;
+        this.d11 = d11;
 
-        // console.log( this.l1d4,this.l1d4GD);
+        let [d11GD_1, d11_1] = dataHandler.getD11_1(tuopanshusongxian);
+        this.d11GD_1 = d11GD_1;
+        this.d11_1 = d11_1;
 
-        // this.l2d1 = dataHandler.getL2D1(zhuangPingShuSongXianEntity);
-        // this.l2d1GD = dataHandler.getL2D1GD(zhuangPingShuSongXianEntity);
-        // this.l2d2 = dataHandler.getL2D2(zhuangPingShuSongXianEntity);
-        // this.l2d2GD = dataHandler.getL2D2GD(zhuangPingShuSongXianEntity);
-
-        await this.awaitTime(2000);
-        if (!list) continue;
-        if (list.lenght == 0) continue;
-        this.d1 = list[0];
-        this.d2 = list[1];
-        this.d3 = list[2];
-        this.d4 = list[3];
+        let [d12GD, d12] = dataHandler.getD12(tuopanshusongxian);
+        this.d12GD = d12GD;
+        this.d12 = d12;
+        let [d13GD, d13] = dataHandler.getD13(tuopanshusongxian);
+        this.d13GD = d13GD;
+        this.d13 = d13;
+        let [d14GD, d14] = dataHandler.getD14(tuopanshusongxian);
+        this.d14GD = d14GD;
+        this.d14 = d14;
+        let [d14GD_1, d14_1] = dataHandler.getD14_1(tuopanshusongxian);
+        this.d14GD_1 = d14GD_1;
+        this.d14_1 = d14_1;
       }
     },
     async initDataMiejunqi() {
@@ -268,6 +494,24 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+@mixin df {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+  // border: 1px solid red;
+  overflow: hidden;
+}
+$w: 56px;
+
+@mixin position($top, $left, $w: 100%, $h: 100%) {
+  position: absolute;
+  top: $top;
+  left: $left;
+  height: $h;
+  width: $w;
+}
+
 .home {
   width: 1920px;
   height: 1080px;
@@ -276,27 +520,52 @@ export default {
   background-size: contain;
   position: relative;
 
-  .l1d1{
+  .l1d1 {
     position: absolute;
-    left: 95px;
-    top: 679px;
+    left: 78px;
+    top: 671px;
   }
-  .l1d2{
+  .l1d2 {
     position: absolute;
     left: 125px;
-    top: 822px;
+    top: 835px;
     transform: rotate(-90deg);
   }
+  .l1d3 {
+    position: absolute;
+    left: 170px;
+    top: 535px;
+    // transform: rotate(-90deg);
+  }
 
-  .l1d4{
+  .l1d4 {
     position: absolute;
     left: 318px;
-    top: 405px;
+    top: 387px;
     transform: rotate(-90deg);
   }
 
+  .l2d1 {
+     @include position(642px, 51px,0,0);
+  }
+  .l2d2 {
+    position: absolute;
+    left: 153px;
+    top: 818px;
+    transform: rotate(-90deg);
+  }
+  .l2d3 {
+    position: absolute;
+    left: 253px;
+    top: 608px;
+  }
 
-
+  .l2d4 {
+    position: absolute;
+    left: 361px;
+    top: 506px;
+    transform: rotate(-90deg);
+  }
 
   .btn-box {
     color: #fff;
@@ -317,6 +586,7 @@ export default {
     position: absolute;
     top: 250px;
     left: 400px;
+    z-index: 2;
   }
   .item-box-2 {
     position: absolute;
@@ -333,8 +603,6 @@ export default {
     top: 360px;
     left: 1121px;
   }
-
-
 
   .item-info-box-1 {
     position: absolute;
@@ -357,40 +625,73 @@ export default {
     left: 733px;
   }
 
-
-
-
-
-
   .tp-box-1-1 {
     position: absolute;
-    top: 308px;
-    left: 332px;
-    transform: rotate(180deg);
+    top: 305px;
+    left: 397px;
+    // transform: rotate(180deg);
+    height: 610px;
+    @include df;
   }
 
   .tp-box-1-2 {
     position: absolute;
-    top: 83px;
-    left: 512px;
+    top: 139px;
+    left: 507px;
+    // @include df;
     transform: rotate(-90deg);
   }
 
   .tp-box-1-3 {
     position: absolute;
-    top: 305px;
-    left: 680px;
+    top: 306px;
+    left: 620px;
+    height: 552px;
+    @include df;
   }
+
+  .tp-box-1-4 {
+    @include position(527px, 344px, 278px, $w);
+    transform: rotate(90deg);
+    @include df;
+    flex-direction: row;
+  }
+  .tp-box-1-5 {
+    @include position(416px, 511px, $w, 277px);
+    @include df;
+  }
+
+  .tp-box-1-6 {
+    @include position(777px, 539px, $w, 221px);
+    @include df;
+    transform: rotate(90deg);
+  }
+  .tp-box-1-7 {
+    @include position(277px, 815px, $w, 554px);
+    @include df;
+    transform: rotate(-90deg);
+  }
+  .tp-box-1-8 {
+    @include position(416px, 1120px, $w, 334px);
+    @include df;
+    // transform: rotate(-90deg);
+  }
+
   .tp-box-03-01 {
     position: absolute;
-    top: 192px;
-    left: 960px;
+    top: 248px;
+    left: 897px;
+    @include df;
+    height: 667px;
   }
   .tp-box-03-02 {
     position: absolute;
-    top: 280px;
-    left: 983px;
-    transform: rotate(-90deg);
+    top: 500px;
+    left: 871px;
+    transform: rotate(90deg);
+    width: 333px;
+    @include df;
+    flex-direction: row;
   }
 }
 </style>

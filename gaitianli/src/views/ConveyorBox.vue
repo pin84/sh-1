@@ -1,5 +1,5 @@
 <template>
-  <div class="conveyor-box middle-box">
+  <div class="conveyor-box" :class="{'middle-box' : itemType != 1}">
     <div
       v-for="(n,idx) in statuArr"
       :key="idx"
@@ -74,10 +74,12 @@ $w: 12px;
   height: $h;
 }
 .conveyor-box {
-  width: 100%;
-  // &.middle-box{
-  //    width: 60px;
-  // }
+  width: 15px;
+  // background-color: $box-bg;
+  position: relative;
+  &.middle-box{
+    width: 57px;
+  }
 
   .tp-box {
     position: absolute;
