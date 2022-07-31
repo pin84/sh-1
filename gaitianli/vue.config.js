@@ -28,6 +28,13 @@ module.exports = {
                     '^/miejunqi': ''
                 }
             },
+            '/ZhuangpingxianList': {
+                target: 'http://52.253.90.5:8081/gtl_jk.SterilizingZoneService/ZhuangpingxianList',      //配置要替换的后台接口地址
+                changOrigin: true,                      //配置允许改变Origin
+                pathRewrite: {
+                    '^/ZhuangpingxianList': ''
+                }
+            },
 
             
             

@@ -34,16 +34,18 @@ export default {
 <style lang="scss" scoped>
 .info {
   width: 125px;
-  height: 80px;
+  height: 90px;
   background: url("../../public/gaitianli/wenzibg.png") center no-repeat;
   background-size: contain;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  justify-content: center;
   padding: 5px;
   box-sizing: border-box;
-  font-size: 10px;
+  font-size: 8px;
   color: #99CCFF;
+  line-height: 12px;
   .timing{
     // color: red;
   }

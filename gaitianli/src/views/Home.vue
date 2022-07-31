@@ -12,7 +12,7 @@
         type="primary"
       >{{item}}</el-button>
     </div>
-    <!-- <div class="item-box-1">
+    <div class="item-box-1">
       <Item :d="d1" />
     </div>
     <div class="item-box-2">
@@ -23,7 +23,7 @@
     </div>
     <div class="item-box-4">
       <Item4 :d="d4" />
-    </div> -->
+    </div>
 
     <div class="item-info-box-1">
       <Info :d="info1" />
@@ -36,6 +36,29 @@
     </div>
     <div class="item-info-box-4">
       <Info :d="info4" />
+    </div>
+
+    <div class="info-box-1">
+      <div>
+        <strong>线1</strong>
+        <div>DDJ本次运行产量:{{zpx1.DDJ_BenCiYunXingChanLiang}}</div>
+        <div>DDJ 运行标识:{{zpx1.DDJ_YunXingBiaoZhi}}</div>
+        <div>DDJ 运行速度:{{zpx1.DDJ_YunXingSuDu}}</div>
+        <div>ZPJ 本次运行产量:{{zpx1.ZPJ_BenCiYunXingChanLiang}}</div>
+        <div>ZPJ 运行标识:{{zpx1.ZPJ_YunXingBiaoZhi}}</div>
+        <div>ZPJ 运行速度:{{zpx1.ZPJ_YunXingSuDu}}</div>
+      </div>
+    </div>
+    <div class="info-box-2">
+      <div>
+        <strong>线2</strong>
+        <div>DDJ本次运行产量:{{zpx2.DDJ_BenCiYunXingChanLiang}}</div>
+        <div>DDJ 运行标识:{{zpx2.DDJ_YunXingBiaoZhi}}</div>
+        <div>DDJ 运行速度:{{zpx2.DDJ_YunXingSuDu}}</div>
+        <div>ZPJ 本次运行产量:{{zpx2.ZPJ_BenCiYunXingChanLiang}}</div>
+        <div>ZPJ 运行标识:{{zpx2.ZPJ_YunXingBiaoZhi}}</div>
+        <div>ZPJ 运行速度:{{zpx2.ZPJ_YunXingSuDu}}</div>
+      </div>
     </div>
 
     <div class="l1d1">
@@ -242,6 +265,8 @@ export default {
   props: {},
   data() {
     return {
+      zpx1: {},
+      zpx2: {},
       testData: [0, 1, 2, 0, 1],
       btnList: ["电机停止", "电机运行", "电机反转", "光电信号有", "光电信号无"],
       isBreak: false,
@@ -355,8 +380,6 @@ export default {
           break;
         }
         let res = await this.$get("/bankuang");
-        console.log(res);
-
         await this.awaitTime(1000);
         if (res.code == -1) continue;
         let {
@@ -372,8 +395,8 @@ export default {
         this.d4 = list[3];
 
         // console.log(tuopanshusongxian);
-        zhuangPingShuSongXianEntity = testData;
-        tuopanshusongxian = tpss;
+        // zhuangPingShuSongXianEntity = testData;
+        // tuopanshusongxian = tpss;
 
         this.l1d1 = dataHandler.getL1D1(zhuangPingShuSongXianEntity);
         this.l1d1GD = dataHandler.getL1D1GD(zhuangPingShuSongXianEntity);
@@ -465,6 +488,7 @@ export default {
           break;
         }
         let { list } = await this.$get("/miejunqi");
+        console.log(list);
         await this.awaitTime(2000);
         if (!list) continue;
         if (list.lenght == 0) continue;
@@ -472,6 +496,18 @@ export default {
         this.info2 = list[1];
         this.info3 = list[2];
         this.info4 = list[3];
+      }
+    },
+    async initZhuangPingList() {
+      while (true) {
+        if (this.isBreak) {
+          break;
+        }
+        let {list:[zpx1,zpx2]} = await this.$get('/ZhuangpingxianList')
+        this.zpx1 = zpx1
+        this.zpx2 = zpx2
+        await this.awaitTime(3000);
+       
       }
     },
     async awaitTime(delay) {
@@ -485,7 +521,8 @@ export default {
 
   created() {
     this.initData();
-    // this.initDataMiejunqi();
+    this.initDataMiejunqi();
+    this.initZhuangPingList()
   },
   mounted() {},
   beforeDestroy() {
@@ -519,6 +556,30 @@ $w: 56px;
   background: url("../../public/gaitianli/bg032.jpg") center no-repeat;
   background-size: contain;
   position: relative;
+  font-size: 10px;
+
+  .info-box-1 {
+    position: absolute;
+    top: 722px;
+    left: 72px;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    transform: scale(0.5);
+  }
+  .info-box-2{
+    position: absolute;
+    top: 722px;
+    left: 262px;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    transform: scale(0.5);
+  }
 
   .l1d1 {
     position: absolute;
@@ -528,7 +589,7 @@ $w: 56px;
   .l1d2 {
     position: absolute;
     left: 125px;
-    top: 835px;
+    top: 836px;
     transform: rotate(-90deg);
   }
   .l1d3 {
@@ -541,12 +602,12 @@ $w: 56px;
   .l1d4 {
     position: absolute;
     left: 318px;
-    top: 387px;
+    top: 389px;
     transform: rotate(-90deg);
   }
 
   .l2d1 {
-     @include position(642px, 51px,0,0);
+    @include position(642px, 51px, 0, 0);
   }
   .l2d2 {
     position: absolute;
@@ -563,7 +624,7 @@ $w: 56px;
   .l2d4 {
     position: absolute;
     left: 361px;
-    top: 506px;
+    top: 507px;
     transform: rotate(-90deg);
   }
 
