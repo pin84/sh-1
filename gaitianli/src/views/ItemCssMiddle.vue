@@ -1,7 +1,7 @@
 <template>
   <div
     class="box"
-    :class="[{'middle':itemSize == 'middle'},{'hide':!isHas}]"
+    :class="[{'middle':itemSize == 'middle'},{'white-bg':onlyTP},{'hide':!isHas}]"
   >
     <div class="com-box h-line-box">
       <div
@@ -23,6 +23,10 @@
 <script>
 export default {
   props: {
+    onlyTP:{
+      type:Number,
+      default:()=>0
+    },
     isHas: {
       type: Number,
       default: 1,
@@ -55,6 +59,10 @@ $w: 40px;
   user-select: none;
   box-sizing: border-box;
   background-color: $case-background;
+  &.white-bg{
+    background-color: $case-background-1;
+    border: $case-border-1;
+  }
   &.hide{
     opacity:0;
   }

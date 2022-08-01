@@ -166,11 +166,13 @@
         :lineNum='5'
         :statuArr='d10'
         :isShowArr='d10GD'
+         :onlyTP='1'
       />
       <ConveyorBox
         :lineNum='5'
         :statuArr='d10_1'
         :isShowArr='d10GD_1'
+         :onlyTP='1'
       />
     </div>
 
@@ -179,11 +181,13 @@
         :lineNum='11'
         :statuArr='d11'
         :isShowArr='d11GD'
+        :onlyTP='1'
       />
       <ConveyorBox
         :lineNum='5'
         :statuArr='d11_1'
         :isShowArr='d11GD_1'
+        :onlyTP='1'
       />
     </div>
 
@@ -199,6 +203,7 @@
         :lineNum='5'
         :statuArr='d13'
         :isShowArr='d13GD'
+         :onlyTP='1'
       />
     </div>
     <div class="tp-box-1-8">
@@ -206,11 +211,13 @@
         :lineNum='11'
         :statuArr='d14'
         :isShowArr='d14GD'
+        :onlyTP='1'
       />
       <ConveyorBox
         :lineNum='5'
         :statuArr='d14_1'
         :isShowArr='d14GD_1'
+        :onlyTP='1'
       />
     </div>
 

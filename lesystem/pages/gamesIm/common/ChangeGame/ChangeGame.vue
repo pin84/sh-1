@@ -153,7 +153,6 @@ export default {
       }
 
       this.previousResult = list;
-
     },
 
     createColorObj(arr) {
@@ -175,6 +174,7 @@ export default {
       let { curGameId, gameType, gameName } =
       this.$store.state.GDV3.v3IndexGameAllData;
       this.curGame = gameName;
+     
       let idObj = {
         1: [810, 79, 32, 30],
         2: [

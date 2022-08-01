@@ -194,7 +194,6 @@ export default {
       //
       let res = await this.$http(d);
 
-
       let curIdType;
       for (let [key, value] of Object.entries(ids)) {
         if (value.includes(id)) {
@@ -246,7 +245,6 @@ export default {
       }
 
       this.resultList = res.data;
-
       this.$emit('changeResult',this.resultList[0].result)
     },
   },

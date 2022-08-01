@@ -22,7 +22,7 @@ export default {
   "PDP04LvDeng": 1,
   "PDP04FengMingQi": 1,
   "PDP04HuangDeng": 1,
-  "Z01MB02_PXS1_STP_ZhengShuSongDaoWei": 0,
+  "Z01MB02_PXS1_STP_ZhengShuSongDaoWei": 1,
   "Z01MB02_PXS3_STP_FanShuSongDaoWei": 1,
   "Z01MB02_PXS3_STP_ZhengShuSongDaoWei2": 1,
   "Z01MB04_PXS1_STP_ZhengShuSongDaoWei": 1,

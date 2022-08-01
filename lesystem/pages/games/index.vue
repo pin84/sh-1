@@ -22,9 +22,9 @@
         />
       </uni-nav-bar>
 
-      <view v-if="isShowTitleTrangle" class="set-box"
-        ><NavTitleSetting @close="closeSetting" :textList="textList"
-      /></view>
+      <view v-if="isShowTitleTrangle" class="set-box" >
+        <NavTitleSetting @close="closeSetting" :textList="textList" />
+      </view>
     </view>
 
     <view v-show="isShowPlayType" class="play-type-box" style="z-index: 20">
@@ -193,7 +193,7 @@ export default {
         },
       };
       let res = await this.$http(d);
-
+      console.log(res);
       let { code, message } = res;
       if (code == -9999) {
         uni.reLaunch({
@@ -255,6 +255,7 @@ export default {
 
       this.interval = setInterval(async () => {
         let res = await this.$http(d);
+        console.log(res);
         if (res.code == -4000) {
           if (this.requestFailTimes < 60) {
             this.requestFailTimes++;
@@ -302,9 +303,13 @@ export default {
         fid
       } = obj;
 
-
       if (!Array.isArray(obj.previousResult)) {
-        obj.previousResult = obj.previousResult.split(",");
+        if(previousResult){
+          obj.previousResult = obj.previousResult.split(",");
+        } else {
+          obj.previousResult = []
+        }
+
       }
 
       this.latestPriodData = obj;
