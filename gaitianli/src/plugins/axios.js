@@ -3,8 +3,10 @@ import qs from 'qs'
 // import { baseURL  } from '../config/config';
 // import { Loading } from 'element-ui';
 
+let baseURL = 'http://gtl.zhtest.net/gtl_jk.SterilizingZoneService'
+
 const service = axios.create({
-//   baseURL,
+  baseURL,
   timeout: 60000,
 })
 // let loading = null
@@ -50,12 +52,6 @@ export function get(url, params) {
 export function post(url, params) {
   return service.post(url, params)
 }
-
-
-
-
-
-
 
 
 

@@ -166,13 +166,13 @@
         :lineNum='5'
         :statuArr='d10'
         :isShowArr='d10GD'
-         :onlyTP='1'
+        :onlyTP='1'
       />
       <ConveyorBox
         :lineNum='5'
         :statuArr='d10_1'
         :isShowArr='d10GD_1'
-         :onlyTP='1'
+        :onlyTP='1'
       />
     </div>
 
@@ -203,7 +203,7 @@
         :lineNum='5'
         :statuArr='d13'
         :isShowArr='d13GD'
-         :onlyTP='1'
+        :onlyTP='1'
       />
     </div>
     <div class="tp-box-1-8">
@@ -246,6 +246,20 @@
       />
     </div>
 
+    <div class="lqj-1">
+
+      <div class="lqj-1-1">
+        <ConveyorBox
+          :lineNum='7'
+          :statuArr='l1d1'
+          :isShowArr='l1d1GD'
+          :itemType='1'
+        />
+      </div>
+      <div class="lqj-1-2">
+
+      </div>
+    </div>
   </div>
 </template>
 
@@ -386,7 +400,8 @@ export default {
         if (this.isBreak) {
           break;
         }
-        let res = await this.$get("/bankuang");
+        this.isBreak = true;
+        let res = await this.$get("/BankuangList");
         await this.awaitTime(1000);
         if (res.code == -1) continue;
         let {
@@ -401,7 +416,7 @@ export default {
         this.d3 = list[2];
         this.d4 = list[3];
 
-        // console.log(tuopanshusongxian);
+        console.log(res);
         // zhuangPingShuSongXianEntity = testData;
         // tuopanshusongxian = tpss;
 
@@ -494,8 +509,8 @@ export default {
         if (this.isBreak) {
           break;
         }
-        let { list } = await this.$get("/miejunqi");
-        console.log(list);
+        let { list } = await this.$get("/MiejunqiList");
+        // console.log(list);
         await this.awaitTime(2000);
         if (!list) continue;
         if (list.lenght == 0) continue;
@@ -510,11 +525,12 @@ export default {
         if (this.isBreak) {
           break;
         }
-        let {list:[zpx1,zpx2]} = await this.$get('/ZhuangpingxianList')
-        this.zpx1 = zpx1
-        this.zpx2 = zpx2
+        let {
+          list: [zpx1, zpx2],
+        } = await this.$get("/ZhuangpingxianList");
+        this.zpx1 = zpx1;
+        this.zpx2 = zpx2;
         await this.awaitTime(3000);
-       
       }
     },
     async awaitTime(delay) {
@@ -529,7 +545,7 @@ export default {
   created() {
     this.initData();
     this.initDataMiejunqi();
-    this.initZhuangPingList()
+    this.initZhuangPingList();
   },
   mounted() {},
   beforeDestroy() {
@@ -543,7 +559,6 @@ export default {
   flex-direction: column;
   justify-content: space-between;
   box-sizing: border-box;
-  // border: 1px solid red;
   overflow: hidden;
 }
 $w: 56px;
@@ -555,6 +570,11 @@ $w: 56px;
   height: $h;
   width: $w;
 }
+@mixin tl($top, $left) {
+  position: absolute;
+  top: $top;
+  left: $left;
+}
 
 .home {
   width: 1920px;
@@ -565,10 +585,20 @@ $w: 56px;
   position: relative;
   font-size: 10px;
 
+  .lqj-1 {
+    @include position(344px, 1120px, 535px, 479px);
+    .lqj-1-1 {
+      border: 1px solid red;
+      width: 100%;
+      height: 100%;
+      @include df;
+      align-items: flex-end;
+      padding:25px 0;
+    }
+  }
+
   .info-box-1 {
-    position: absolute;
-    top: 722px;
-    left: 72px;
+    @include tl(722px, 72px);
     color: #fff;
     display: flex;
     justify-content: space-between;
@@ -576,10 +606,8 @@ $w: 56px;
     border-radius: 5px;
     transform: scale(0.5);
   }
-  .info-box-2{
-    position: absolute;
-    top: 722px;
-    left: 262px;
+  .info-box-2 {
+    @include tl(722px, 262px);
     color: #fff;
     display: flex;
     justify-content: space-between;
@@ -589,27 +617,18 @@ $w: 56px;
   }
 
   .l1d1 {
-    position: absolute;
-    left: 78px;
-    top: 671px;
+    @include tl(671px, 78px);
   }
   .l1d2 {
-    position: absolute;
-    left: 125px;
-    top: 836px;
+    @include tl(836px, 125px);
     transform: rotate(-90deg);
   }
   .l1d3 {
-    position: absolute;
-    left: 170px;
-    top: 535px;
-    // transform: rotate(-90deg);
+    @include tl(535px, 170px);
   }
 
   .l1d4 {
-    position: absolute;
-    left: 318px;
-    top: 389px;
+    @include tl(389px, 318px);
     transform: rotate(-90deg);
   }
 
@@ -617,21 +636,15 @@ $w: 56px;
     @include position(642px, 51px, 0, 0);
   }
   .l2d2 {
-    position: absolute;
-    left: 153px;
-    top: 818px;
+    @include tl(818px, 153px);
     transform: rotate(-90deg);
   }
   .l2d3 {
-    position: absolute;
-    left: 253px;
-    top: 608px;
+    @include tl(608px, 253px);
   }
 
   .l2d4 {
-    position: absolute;
-    left: 361px;
-    top: 507px;
+    @include tl(507px, 361px);
     transform: rotate(-90deg);
   }
 
@@ -651,69 +664,48 @@ $w: 56px;
     }
   }
   .item-box-1 {
-    position: absolute;
-    top: 250px;
-    left: 400px;
+    @include tl(250px, 400px);
     z-index: 2;
   }
   .item-box-2 {
-    position: absolute;
-    top: 600px;
-    left: 400px;
+    @include tl(600px, 400px);
+    z-index: 2;
   }
   .item-box-3 {
-    position: absolute;
-    top: 690px;
-    left: 1121px;
+    @include tl(690px, 1121px);
+    z-index: 2;
   }
   .item-box-4 {
-    position: absolute;
-    top: 360px;
-    left: 1121px;
+    @include tl(360px, 1121px);
+    z-index: 2;
   }
 
   .item-info-box-1 {
-    position: absolute;
-    top: 880px;
-    left: 733px;
+    @include tl(880px, 733px);
   }
   .item-info-box-2 {
-    position: absolute;
-    top: 720px;
-    left: 733px;
+    @include tl(720px, 733px);
   }
   .item-info-box-3 {
-    position: absolute;
-    top: 430px;
-    left: 733px;
+    @include tl(430px, 733px);
   }
   .item-info-box-4 {
-    position: absolute;
-    top: 270px;
-    left: 733px;
+    @include tl(270px, 733px);
   }
 
   .tp-box-1-1 {
-    position: absolute;
-    top: 305px;
-    left: 397px;
-    // transform: rotate(180deg);
+    @include tl(305px, 397px);
     height: 610px;
     @include df;
   }
 
   .tp-box-1-2 {
-    position: absolute;
-    top: 139px;
-    left: 507px;
-    // @include df;
+    @include tl(139px, 507px);
     transform: rotate(-90deg);
   }
 
   .tp-box-1-3 {
-    position: absolute;
-    top: 306px;
-    left: 620px;
+    @include tl(306px, 620px);
     height: 552px;
     @include df;
   }
@@ -746,16 +738,12 @@ $w: 56px;
   }
 
   .tp-box-03-01 {
-    position: absolute;
-    top: 248px;
-    left: 897px;
+    @include tl(248px, 897px);
     @include df;
     height: 667px;
   }
   .tp-box-03-02 {
-    position: absolute;
-    top: 500px;
-    left: 871px;
+    @include tl(500px, 871px);
     transform: rotate(90deg);
     width: 333px;
     @include df;
