@@ -400,7 +400,6 @@ export default {
         if (this.isBreak) {
           break;
         }
-        this.isBreak = true;
         let res = await this.$get("/BankuangList");
         await this.awaitTime(1000);
         if (res.code == -1) continue;
@@ -584,11 +583,12 @@ $w: 56px;
   background-size: contain;
   position: relative;
   font-size: 10px;
+  // background-color: #003366;
 
   .lqj-1 {
     @include position(344px, 1120px, 535px, 479px);
     .lqj-1-1 {
-      border: 1px solid red;
+      // border: 1px solid red;
       width: 100%;
       height: 100%;
       @include df;

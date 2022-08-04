@@ -36,18 +36,29 @@ module.exports = {
     //             }
     //         },
 
-            
-            
+
+
     //     }
     // },
 
-    outputDir:'gaitianli',
+    outputDir: 'gaitianli',
 
     css: {
         loaderOptions: {
-          scss: {
-            prependData: `@import "~@/assets/style.scss";`
-          }
+            scss: {
+                prependData: `@import "~@/assets/style.scss";`
+            }
         }
-      }
+    },
+
+    chainWebpack(config) {
+        config.module
+            .rule('scss')
+            .oneOf('vue')
+            .use('px2rem-loader')
+            .loader('px2rem-loader')
+            .before('sass-loader') // this makes it work.
+            .options({ remUnit: 192, remPrecision: 8 })
+            .end()
+    }
 }

@@ -7,7 +7,7 @@ import store from './store' // VUEX
 import './plugins/vueamap.js' //  vue-amap 高德地图
 import './plugins/element.js' //  elemnt组件
 import {get,post} from './plugins/axios.js'
-
+import 'amfe-flexible'
 
 // import { post, get, put, deletes, toJson, isEmpty } from './plugins/http.js' // 请求方式中间件
 //import {api} from './plugins/api.js'  // API 链接
