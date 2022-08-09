@@ -25,7 +25,7 @@ export default {
   props: {
     isHas: {
       type: Number,
-      default: 1,
+      default: 0,
     },
     itemSize: {
       type: String,

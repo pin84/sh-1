@@ -248,24 +248,83 @@
 
     <div class="lqj-1">
 
-      <div class="lqj-1-1">
+      <div class="lq-com lqj-1-1">
         <ConveyorBox
-          :lineNum='7'
-          :statuArr='l1d1'
-          :isShowArr='l1d1GD'
+          :lineNum='8'
+          :statuArr='lqj1'
+          :isShowArr='lqj1GD'
           :itemType='1'
         />
       </div>
-      <div class="lqj-1-2">
-
+      <div class="lq-com lqj-1-2">
+        <ConveyorBox
+          :lineNum='20'
+          :statuArr='lqj2'
+          :isShowArr='lqj2GD'
+          :itemType='1'
+        />
+        <ConveyorBox
+          :lineNum='20'
+          :statuArr='lqj3'
+          :isShowArr='lqj3GD'
+          :itemType='1'
+        />
       </div>
     </div>
+
+    <div class="lgj-2">
+      <ConveyorBox
+        :lineNum='7'
+        :statuArr='lqj4'
+        :isShowArr='lqj4GD'
+        :itemType='1'
+      />
+      <ConveyorBox
+        :lineNum='14'
+        :statuArr='lqc5'
+        :isShowArr='lqc5GD'
+        :itemType='1'
+      />
+    </div>
+    <div class="lgj-3">
+      <ConveyorBox
+        :lineNum='11'
+        :statuArr='lqc6'
+        :isShowArr='lqc6GD'
+        :itemType='1'
+      />
+      <ConveyorBox
+        :lineNum='9'
+        :statuArr='lqc7'
+        :isShowArr='lqc7GD'
+        :itemType='1'
+      />
+
+      <div class="lgj-3-1">
+        <ConveyorBox
+          :lineNum='16'
+          :statuArr='lqc8'
+          :isShowArr='lqc8GD'
+          :itemType='1'
+        />
+        <ConveyorBox
+          :lineNum='16'
+          :statuArr='lqc9'
+          :isShowArr='lqc9GD'
+          :itemType='1'
+        />
+       
+      </div>
+    </div>
+
   </div>
 </template>
 
 <script>
 import testData from "@/views/testData.js";
 import tpss from "@/views/tpss.js";
+import testLQJX from "@/views/testLQJX.js";
+import testLQCX from "@/views/testLQCX.js";
 import dataHandler from "@/views/dataHandler.js";
 import Item from "@/views/Item.vue";
 import Item2 from "@/views/Item-2.vue";
@@ -360,6 +419,26 @@ export default {
       d14GD: [],
       d14_1: [],
       d14GD_1: [],
+
+      lqj1: [],
+      lqj1GD: [],
+
+      lqj2: [],
+      lqj2GD: [],
+      lqj3: [],
+      lqj3GD: [],
+      lqj4: [],
+      lqj4GD: [],
+      lqc5: [],
+      lqc5GD: [],
+      lqc6: [],
+      lqc6GD: [],
+      lqc7: [],
+      lqc7GD: [],
+      lqc8: [],
+      lqc8GD: [],
+      lqc9: [],
+      lqc9GD: [],
     };
   },
   methods: {
@@ -407,6 +486,8 @@ export default {
           bangkuangji: { list },
           zhuangpingshusongxian: { zhuangPingShuSongXianEntity },
           tuopanshusongxian,
+          lengqueshijinxian: { lengQueShiJinXianEntity },
+          lengqueshichuxian: { lengQueShiChuXianEntity },
         } = res;
         if (!list) continue;
         if (list.lenght == 0) continue;
@@ -415,9 +496,11 @@ export default {
         this.d3 = list[2];
         this.d4 = list[3];
 
-        console.log(res);
+        // console.log(res);
         // zhuangPingShuSongXianEntity = testData;
         // tuopanshusongxian = tpss;
+        // lengQueShiJinXianEntity = testLQJX;
+        // lengQueShiChuXianEntity = testLQCX;
 
         this.l1d1 = dataHandler.getL1D1(zhuangPingShuSongXianEntity);
         this.l1d1GD = dataHandler.getL1D1GD(zhuangPingShuSongXianEntity);
@@ -501,6 +584,37 @@ export default {
         let [d14GD_1, d14_1] = dataHandler.getD14_1(tuopanshusongxian);
         this.d14GD_1 = d14GD_1;
         this.d14_1 = d14_1;
+
+        let { lqj1, lqj1GD } = dataHandler.getLQJd1(lengQueShiJinXianEntity);
+        this.lqj1 = lqj1;
+        this.lqj1GD = lqj1GD;
+
+        let { lqj2, lqj2GD } = dataHandler.getLQJd2(lengQueShiJinXianEntity);
+        this.lqj2 = lqj2;
+        this.lqj2GD = lqj2GD;
+
+        let { lqj3, lqj3GD } = dataHandler.getLQJd3(lengQueShiJinXianEntity);
+        this.lqj3 = lqj3;
+        this.lqj3GD = lqj3GD;
+
+        let { lqj4, lqj4GD } = dataHandler.getLQJd4(lengQueShiJinXianEntity);
+        this.lqj4 = lqj4;
+        this.lqj4GD = lqj4GD;
+        let { lqc5, lqc5GD } = dataHandler.getLQJd5(lengQueShiChuXianEntity);
+        this.lqc5 = lqc5;
+        this.lqc5GD = lqc5GD;
+        let { lqc6, lqc6GD } = dataHandler.getLQJd6(lengQueShiChuXianEntity);
+        this.lqc6 = lqc6;
+        this.lqc6GD = lqc6GD;
+        let { lqc7, lqc7GD } = dataHandler.getLQJd7(lengQueShiChuXianEntity);
+        this.lqc7 = lqc7;
+        this.lqc7GD = lqc7GD;
+        let { lqc8, lqc8GD } = dataHandler.getLQJd8(lengQueShiChuXianEntity);
+        this.lqc8 = lqc8;
+        this.lqc8GD = lqc8GD;
+        let { lqc9, lqc9GD } = dataHandler.getLQJd9(lengQueShiChuXianEntity);
+        this.lqc9 = lqc9;
+        this.lqc9GD = lqc9GD;
       }
     },
     async initDataMiejunqi() {
@@ -587,13 +701,49 @@ $w: 56px;
 
   .lqj-1 {
     @include position(344px, 1120px, 535px, 479px);
-    .lqj-1-1 {
-      // border: 1px solid red;
+    .lq-com {
+      @include df;
+      @include tl(0, 0);
       width: 100%;
       height: 100%;
-      @include df;
+    }
+    .lqj-1-1 {
       align-items: flex-end;
-      padding:25px 0;
+      padding: 15px 0;
+    }
+
+    .lqj-1-2 {
+      padding-bottom: 28px;
+      transform: rotate(-90deg);
+      @include position(-28px, 28px, 478px, 535px);
+      flex-direction: row;
+    }
+  }
+
+  .lgj-2 {
+    @include position(386px, 1307px, 311px, 397px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .lgj-3 {
+    position: relative;
+    @include position(360px, 1342px, 443px, 443px);
+    // border: 1px solid red;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+    .lgj-3-1 {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      // border: 1px solid red;
+      transform: rotate(-90deg);
+      z-index: 3;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
   }
 

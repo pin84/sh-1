@@ -152,8 +152,58 @@ const getD14_1 = (d)=>{
   return arr
 }
 
+const getLQJd1 = (d)=>{
+  let moveState =  getLQData(d,['A9','A10_1','A10_2','A10_3','A10_4','HuJiu2','B10_4','B10_3','B10_2','B10_1','B9'])
+  let isHas = getLQDataGD(d,['12_1',['12_2','12_3'],'12_4','12_5',['12_6','12_7'],'24_1',['17_7','17_6'],'17_5','17_4',['17_3','17_2'],'17_1'])
+  return  {lqj1:moveState,lqj1GD:isHas}
+}
 
+const getLQJd2 = (d)=>{
+  // let moveState =  getLQData(d,['A2','A3','A6','A7','A8'])
+  let moveState =  getLQData(d,['B2','B3','B6','B7','B8'])
+  let isHas = getLQDataGD(d,['13_1','13_3','16_5','16_6','16_7'])
+  return  {lqj2:moveState,lqj2GD:isHas}
+}
 
+const getLQJd3 = (d)=>{
+  let moveState =  getLQData(d,['A2','A3','A6','A7','A8'])
+  let isHas = getLQDataGD(d,['8_1','8_3','9_5','9_6','9_7'])
+  return  {lqj3:moveState,lqj3GD:isHas}
+}
+
+const getLQJd4 = (d)=>{
+  let moveState =  getLQData(d,['A4','A5_1','A5_2','A5_3','A5_4','HuJiu1','B5_4','B5_3','B5_2','B5_1','B4'])
+  let isHas = getLQDataGD(d,[['8_6','8_7'],'9_0','9_1','9_2',['9_3','9_4'],'24_0',['16_4','16_3'],'16_2','16_1','16_0',['13_7','13_6']])
+  return  {lqj4:moveState,lqj4GD:isHas}
+}
+const getLQJd5 = (d)=>{
+  let moveState =  getLQData_1(d,['A5_2','A5_1','HuanXiang_2','B5_1','B5_2'])
+  let isHas = getLQDataGD(d,['8_7','8_6','13_6','12_3','12_4'])
+
+  // console.log(moveState,isHas);
+  return  {lqc5:moveState,lqc5GD:isHas}
+}
+const getLQJd6 = (d)=>{
+  let moveState =  getLQData_1(d,['A2','A1_2','A1_1','HuanXiang_1','B1_1','B1_2','B2'])
+  let isHas = getLQDataGD(d,['8_2','8_1','8_0','13_5','9_5','9_6','9_7'])
+  return  {lqc6:moveState,lqc6GD:isHas}
+}
+const getLQJd7 = (d)=>{
+  let moveState =  getLQData_1(d,['A10','YiZai1','YiZai2','YiZai3','YiZai4','B13','B12','B11','B10'])
+  let isHas = getLQDataGD(d,['9_4',['16_3','16_0'],['16_6','17_0'],'17_5','20_2','13_4','13_3','13_2','13_1'])
+  return  {lqc7:moveState,lqc7GD:isHas}
+}
+
+const getLQJd8 = (d)=>{
+  let moveState =  getLQData_1(d,['B3','B6','B7','B8','B9'])
+  let isHas = getLQDataGD(d,['12_0','12_1','12_6','12_7','13_0'])
+  return  {lqc8:moveState,lqc8GD:isHas}
+}
+const getLQJd9 = (d)=>{
+  let moveState =  getLQData_1(d,['A3','A4','A7','A8','A9'])
+  let isHas = getLQDataGD(d,['8_3','8_4','9_1','9_2','9_3'])
+  return  {lqc9:moveState,lqc9GD:isHas}
+}
 
 export default {
     getL1D1,
@@ -193,15 +243,86 @@ export default {
     getD13,
     getD14,
     getD14_1,
+
+    getLQJd1,
+    getLQJd2,
+    getLQJd3,
+    getLQJd4,
+    getLQJd5,
+    getLQJd6,
+    getLQJd7,
+    getLQJd8,
+    getLQJd9
 }
 
-// Z01YZ06_PXS1_STP_ZhengShuSongDaoWei: 1
-// Z01YZ06_PXS3_STP_FanShuSongDaoWei: 1
-// Z01YZ06_PXS3_STP_ZhengShuSongDaoWei2: 1
-// Z01YZ06_ShuSongFanZhuanShuChu: 1
-// Z01YZ06_ShuSongZhengZhuanShuChu: 1
-// Z01YZ06_YiZaiFanZhuanShuChu: 1
-// Z01YZ06_YiZaiZhengZhuanShuChu: 1
+function getLQDataGD(d,Arr){
+  let str = 'GuangDianI'
+  let res = []
+  for(let item of Arr){
+    let flag = Array.isArray(item)
+    if(flag){
+      let n = 0
+      for(let inItem of item){
+        let s = str + inItem
+        if(d[s]){
+          n = d[s]
+        }
+      }
+      res.push(n)
+    } else {
+      res.push(d[str + item] || 0)
+    }
+  }
+
+  return res
+}
+
+//主要处理转向电机1 转向电机2
+function getLQData_1(d,nameArr){
+  let moveState = []
+  for(let name of nameArr){
+    let v = 0
+
+    if(name.includes('HuanXiang')){
+      let [k1,k2] = name.split('_')
+      // HuanXiangDianJi1FanQ HuanXiangDianJi1ZhengQ
+      let key1 = `HuanXiangDianJi${k2}FanQ`
+      let key2 = `HuanXiangDianJi${k2}ZhengQ`
+      let f = d[key1]
+      let z = d[key2]
+      v = z ? z : f ? 2 : 0
+    } else  if(name.includes('_')){
+      let z = d[name+'DianJiZhengQ'] 
+      let f = d[name+'DianJiFanQ']
+      v =  z ? z : f ? 2 : 0
+    } else {
+      v = d[name + 'DianJiQ'] || 0
+    }
+    moveState.push(v)
+  }
+
+  return  moveState
+}
+
+function getLQData(d,nameArr){
+  let moveState = []
+  for(let name of nameArr){
+    let v = 0
+    if(name.includes('_') || name.includes('HuJiu')){
+      let z = d[name+'DianJiZhengQ'] 
+      let f = d[name+'DianJiFanQ']
+      v =  z ? z : f ? 2 : 0
+    } else {
+      v = d[name + 'DianJiQ'] || 0
+    }
+    moveState.push(v)
+  }
+
+  return  moveState
+}
+
+
+
 function getTPData(d,nameArr){
     let isHas = []
     let moveState = []
