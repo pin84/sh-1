@@ -12,6 +12,11 @@ export default new Router({
             name: 'Home',
             component: Home
         },
+        {
+            path: '/cultivation-room',
+            name: 'CultivationRoom',
+            component: ()=>import('@/views/cultivationRoom/index.vue')
+        },
 
 
       

@@ -1,19 +1,22 @@
 <template>
-  <div class="conveyor-box" :class="{'middle-box' : itemType != 1}">
+  <div
+    class="conveyor-box"
+    :class="[{'middle-box' : itemType == 2},{'w_12':itemType==3}]"
+  >
     <div
       v-for="(n,idx) in statuArr"
       :key="idx"
     >
-      <ItemConveyorBelt
-        v-if="itemType == 1"
-        v-bind="$attrs"
-        :statu='n'
-      />
 
       <ItemConveyorBeltMidlle
-        v-else
+        v-if="itemType == 2"
         v-bind="$attrs"
         :statu='statuArr[idx]'
+      />
+      <ItemConveyorBelt
+        v-else
+        v-bind="$attrs"
+        :statu='n'
       />
     </div>
 
@@ -22,12 +25,13 @@
         v-for="(n,index) in statuArr"
         :key="index"
       >
-        <ItemCss
-          v-if="itemType == 1"
+
+        <ItemCssMiddle
+          v-if="itemType == 2"
           v-bind="$attrs"
           :isHas='isShowArr[index]'
         />
-        <ItemCssMiddle
+        <ItemCss
           v-else
           v-bind="$attrs"
           :isHas='isShowArr[index]'
@@ -57,6 +61,14 @@ export default {
       type: Array,
       default: () => [],
     },
+    wh: {
+      type: Object,
+      default: () => {
+        return {
+          width: "12px",
+        };
+      },
+    },
   },
   components: {
     ItemConveyorBelt,
@@ -67,18 +79,15 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-$w: 12px;
-// $h:20px;
-@mixin wh($w, $h: $w) {
-  width: $w;
-  height: $h;
-}
 .conveyor-box {
   width: 15px;
-  // background-color: $box-bg;
   position: relative;
-  &.middle-box{
+  overflow: hidden;
+  &.middle-box {
     width: 57px;
+  }
+  &.w_12 {
+    width: 12px;
   }
 
   .tp-box {

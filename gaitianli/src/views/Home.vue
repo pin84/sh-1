@@ -321,10 +321,10 @@
 </template>
 
 <script>
-import testData from "@/views/testData.js";
-import tpss from "@/views/tpss.js";
-import testLQJX from "@/views/testLQJX.js";
-import testLQCX from "@/views/testLQCX.js";
+// import testData from "@/views/testData.js";
+// import tpss from "@/views/tpss.js";
+// import testLQJX from "@/views/testLQJX.js";
+// import testLQCX from "@/views/testLQCX.js";
 import dataHandler from "@/views/dataHandler.js";
 import Item from "@/views/Item.vue";
 import Item2 from "@/views/Item-2.vue";
@@ -479,6 +479,7 @@ export default {
         if (this.isBreak) {
           break;
         }
+        console.log('--home initData--');
         let res = await this.$get("/BankuangList");
         await this.awaitTime(1000);
         if (res.code == -1) continue;
@@ -619,6 +620,7 @@ export default {
     },
     async initDataMiejunqi() {
       while (true) {
+         console.log('--home initDataMiejunqi--');
         if (this.isBreak) {
           break;
         }
@@ -635,6 +637,7 @@ export default {
     },
     async initZhuangPingList() {
       while (true) {
+         console.log('--home initZhuangPingList--');
         if (this.isBreak) {
           break;
         }
