@@ -13,9 +13,14 @@ export default new Router({
             component: Home
         },
         {
-            path: '/cultivation-room',
-            name: 'CultivationRoom',
-            component: ()=>import('@/views/cultivationRoom/index.vue')
+            path: '/room-3rd',
+            name: 'Room-3rd',
+            component: ()=>import('@/views/room-3rd/index.vue')
+        },
+        {
+            path: '/room-4th',
+            name: 'Room-4th',
+            component: ()=>import('@/views/room-4th/index.vue')
         },
 
 
