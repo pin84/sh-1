@@ -18,6 +18,15 @@
         >{{obj.Days}}</span>
       </div>
     </div>
+
+    <div class="tc-box" :style="TCStyle.styleTC">
+      <div class="zs" :class="{'active':TCStyle.ZSZT}"></div>
+      <div class="tc" :class="{'active':TCStyle.TCZT}"></div>
+    </div>
+
+    <div class="zs-box" :style="TCStyle.styleZS">
+      <div class="zs" :class="{'active':TCStyle.ZSZT}"></div>
+    </div>
   </div>
 </template>
 
@@ -31,53 +40,42 @@ export default {
 
     mrArr_20: {
       type: Array,
-      default: () => [6,20,27,34],
+      default: () => [6, 20, 27, 34],
     },
     mrArr_40: {
       type: Array,
       default: () => [13],
     },
+
+    TCStyle:{
+      type:Object,
+      default :()=>{
+        return {
+          
+        }
+      }
+    },
+    // styleTC:{
+    //   type:Object,
+    //   default:()=>{}
+    // },
+    // styleZS:{
+    //   type:Object,
+    //   default:()=>{}
+    // },
+    // TCZT:{
+    //   type:Number,
+    //   default:()=>0
+    // },
+    // ZSZT:{
+    //   type:Number,
+    //   default:()=>0
+    // },
+
   },
 
   data() {
     return {
-      // d: [
-      //   {
-      //     ID: 29,
-      //     KuHao: 23,
-      //     Lie: -2,
-      //     Ceng: 1,
-      //     Days: 49,
-      //   },
-      //   {
-      //     ID: 23,
-      //     KuHao: 23,
-      //     Lie: 1,
-      //     Ceng: 1,
-      //     Days: 49,
-      //   },
-      //   {
-      //     ID: 30,
-      //     KuHao: 23,
-      //     Lie: 20,
-      //     Ceng: 1,
-      //     Days: 48,
-      //   },
-      //   {
-      //     ID: 21,
-      //     KuHao: 23,
-      //     Lie: 40,
-      //     Ceng: 2,
-      //     Days: 49,
-      //   },
-      //   {
-      //     ID: 22,
-      //     KuHao: 23,
-      //     Lie: 8,
-      //     Ceng: 3,
-      //     Days: 49,
-      //   },
-      // ],
     };
   },
 
@@ -95,15 +93,10 @@ export default {
 $w: 10px;
 $h: 6px;
 .item-block {
-  // width: 100px;
-  // height: 100px;
-
+  position: relative;
   display: flex;
   justify-content: center;
   .list {
-    // display: flex;
-    //  flex-direction: column;
-    //  border: 1px solid #fff;
     &.mr_20 {
       margin-right: 10px;
     }
@@ -123,8 +116,8 @@ $h: 6px;
       justify-content: center;
 
       &.bg_green {
-        background-color: green;
-        border: 1px solid green;
+        background-color: $block-bg;
+        border: 1px solid $block-bg;
       }
       .text-box {
         display: inline-block;
@@ -134,6 +127,43 @@ $h: 6px;
         text-align: center;
         font-size: 6px;
         color: #fff;
+      }
+    }
+  }
+
+  .tc-box,
+  .zs-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(100% - 20px);
+    height: calc(100% - 15px);
+    // border: 1px solid red;
+  }
+
+  .tc-box {
+    transform: translateX(0%);
+    .tc {
+      width: 18px;
+      height: 4px;
+      background-color: $tc-stop;
+      transform: translateY(-250%);
+      &.active {
+        background-color: $tc-run;
+      }
+    }
+  }
+
+  .zs-box {
+    transform: translateX(0%) translateY(0%);
+    .zs {
+      width: 12px;
+      height: 8px;
+      border: 3px solid $zs-release;
+      background-color: transparent;
+      &.active {
+        background-color: $zs-catch;
+        border: 3px solid $zs-catch;
       }
     }
   }

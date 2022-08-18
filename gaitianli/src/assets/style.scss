@@ -9,3 +9,12 @@ $case-background: #009999; //有框
 //-------中间有托盘但没有框的部分
 $case-background-1:#fff;   //只有托盘的背景色
 $case-border-1:3px solid blue; //只有托盘的边框颜色及边框一大小 
+
+//---------显示天数的小方块
+$block-bg:green;
+
+$tc-stop:red;
+$tc-run:green;
+
+$zs-release:red; //抓手松开
+$zs-catch:red;//抓手抓紧

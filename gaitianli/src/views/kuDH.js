@@ -26,54 +26,56 @@ export default {
         return arr
     },
 
-    // getKuData: ({ d = {}, kuHao = 23, lie = 42, ceng = 16, start = 0, mr40Arr = [] } = {}) => {
-    //     let kuArr = d.filter(item => item.KuHao == kuHao)
-    //     let arr = []
-    //     let lielen = lie - Math.abs(start)
-    //     for (let i = 1; i < 17; i++) {
-    //         let temArr = []
-    //         let cengArr = kuArr.filter(item => item.Ceng == i)
-    //         cengArr.sort((a, b) => a.Lie - b.Lie)
-
-    //         let k = 0
-    //         let k1 = 0
-    //         for (let j = start; j < lielen; j++) {
-    //             k++
-    //             k1++
-    //             let curobj = cengArr.find(o => o.Lie == j)
-    //             if (!curobj) {
-    //                 curobj = {
-    //                     Ceng: i,
-    //                     Lie: j
-    //                 }
-    //             }
-    //             if (k == 7) {
-    //                 k = 0
-    //                 curobj['mr_20'] = true
-    //             }
+    createTCStyle:(d)=>{
+        let arr = []
+        let sum  = 159760 + 140204
+         for(let obj of d){
+            let  y = obj.Y1 / 19024 * 100 
 
 
-    //             if (mr40Arr.includes(k1)) {
-    //                 curobj['mr_40'] = true
-    //             }
+            let x = (obj.X1 + 140204) / sum * 100
+            let o = {
+                ZSZT:obj.ZhuaShouZhuangTai,
+                TCZT:obj.YunXingZhuangTai,
+                styleTC:{
+                    transform:`translateX(${x}%)`
+                    // transform:`translateX(0%)`
+                },
+                styleZS:{
+                    transform:`translateX(${x}%) translateY(${y}%)`
+                    // transform:`translateX(0%) translateY(0%)`
+                }
+            }
+            arr.push(o)
+         }
 
-
-
-    //             temArr.push(curobj)
-
-    //         }
-
-    //         arr.push(temArr)
-    //     }
-
-    //     return arr
-    // },
-
-
-    getKuDataSort: (d) => {
-
+        return arr
     },
+    createTCStyle_4:(d)=>{
+        let arr = []
+        let sum  = 159760 + 189724
+         for(let obj of d){
+            let  y = obj.Y1 / 19024 * 100 
 
+
+            let x = (obj.X1 + 189724) / sum * 100
+            let o = {
+                ZSZT:obj.ZhuaShouZhuangTai,
+                TCZT:obj.YunXingZhuangTai,
+                styleTC:{
+                    transform:`translateX(${x}%)`
+                    // transform:`translateX(0%)`
+                },
+                styleZS:{
+                    transform:`translateX(${x}%) translateY(${y}%)`
+                    // transform:`translateX(0%) translateY(0%)`
+                }
+            }
+            arr.push(o)
+         }
+
+        return arr
+    },
 }
 
 function compare(a, b) {

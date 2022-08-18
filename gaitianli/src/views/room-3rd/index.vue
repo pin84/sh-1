@@ -171,37 +171,37 @@
 
     <div class="block-box">
       <div class="box-item ml_2">
-        <Block :d='td7' />
+        <Block :d='td7' :TCStyle='TCStyle[0]' />
         <div class="middle-width"></div>
-        <Block :d='td8' :mrArr_20='intervalAll42' :mrArr_40='[27]' />
+        <Block :d='td8' :TCStyle='TCStyle[1]'  :mrArr_20='intervalAll42'  :mrArr_40='[27]' />
       </div>
       <div class="box-item ml_2">
-        <Block :d='td9' />
+        <Block :d='td9' :TCStyle='TCStyle[2]' />
         <div class="middle-width"></div>
-        <Block :d='td10' :mrArr_20='intervalAll42' :mrArr_40='[27]' />
+        <Block :d='td10' :TCStyle='TCStyle[3]' :mrArr_20='intervalAll42' :mrArr_40='[27]' />
       </div>
 
       <div class="box-item">
-        <Block :d='td11' :mrArr_20='intervalAll56' :mrArr_40='[27]'  />
+        <Block :d='td11' :TCStyle='TCStyle[4]' :mrArr_20='intervalAll56' :mrArr_40='[27]'  />
         <div class="middle-width"></div>
-        <Block :d='td12' :mrArr_20='intervalAll56' :mrArr_40='[27]' />
+        <Block :d='td12' :TCStyle='TCStyle[5]' :mrArr_20='intervalAll56' :mrArr_40='[27]' />
       </div>
       <div class="box-item">
-        <Block :d='td13' :mrArr_20='intervalAll56' :mrArr_40='[27]'  />
+        <Block :d='td13' :TCStyle='TCStyle[6]' :mrArr_20='intervalAll56' :mrArr_40='[27]'  />
         <div class="middle-width"></div>
-        <Block :d='td14' :mrArr_20='intervalAll56' :mrArr_40='[27]' />
-      </div>
-
-      <div class="box-item">
-        <Block :d='td15' :mrArr_20='intervalAll56' :mrArr_40='[27]'  />
-        <div class="middle-width"></div>
-        <Block :d='td16' :mrArr_20='intervalAll56' :mrArr_40='[27]' />
+        <Block :d='td14' :TCStyle='TCStyle[7]' :mrArr_20='intervalAll56' :mrArr_40='[27]' />
       </div>
 
       <div class="box-item">
-        <Block :d='td17' :mrArr_20='intervalAll56' :mrArr_40='[27]'  />
+        <Block :d='td15' :TCStyle='TCStyle[8]' :mrArr_20='intervalAll56' :mrArr_40='[27]'  />
         <div class="middle-width"></div>
-        <Block :d='td18' :mrArr_20='intervalAll56' :mrArr_40='[27]' />
+        <Block :d='td16' :TCStyle='TCStyle[9]' :mrArr_20='intervalAll42' :mrArr_40='[27]' />
+      </div>
+
+      <div class="box-item">
+        <Block :d='td17' :TCStyle='TCStyle[10]' :mrArr_20='intervalAll56' :mrArr_40='[27]'  />
+        <div class="middle-width"></div>
+        <Block :d='td18' :TCStyle='TCStyle[11]' :mrArr_20='intervalAll42' :mrArr_40='[27]' />
       </div>
 
 
@@ -223,6 +223,7 @@ export default {
       dayList: [], //天数
       tiShengJi7Entity: {},
       tiShengJi8Entity: {},
+      TCStyle:[], //天车和抓手的数据
       intervalAll56:[6,13,20,34,41,48],
       intervalAll42:[6,13,20,34],
       ts: 0,
@@ -297,7 +298,7 @@ export default {
           break;
         }
         let res = await this.$get("TianCheKuangDbList/3");
-        console.log("天数-----", res.list);
+        // console.log("天数-----", res.list);
         this.dayList = res.list;
         await this.awaitTime(30000);
       }
@@ -739,9 +740,17 @@ export default {
 
         let res = await this.$get("/TianCheList/3");
         let tc = res.list;
+        // tc[9].X1 = -140204
+        // tc[9].Y1 = 0
+        // tc[9].X1 = 159760
+        // tc[9].Y1 = 19024
 
+        // this.tcDataList = tc
+
+        let TCStyle = kuDH.createTCStyle(tc)
+        this.TCStyle = TCStyle
         // tc = tstc
-        console.log("天车-----", this.dayList);
+        console.log("天车-----", tc);
 
         this.td7 = kuDH.getKuData({ d: this.dayList, kuHao: 7, tcd: tc[0] });
         this.td8 = kuDH.getKuData({ d: this.dayList, kuHao: 8, tcd: tc[1] });
