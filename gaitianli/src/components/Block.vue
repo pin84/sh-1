@@ -11,6 +11,7 @@
         :class="[{'bg_green':obj.isHas}]"
         v-for="(obj,idx) of arr"
         :key="idx"
+        :data-index="index + '-'+idx"
       >
         <span
           class="text-box"
@@ -138,16 +139,17 @@ $h: 6px;
     left: 0;
     width: calc(100% - 20px);
     height: calc(100% - 15px);
+    transition: 2s ease ;
     // border: 1px solid red;
   }
 
   .tc-box {
-    transform: translateX(0%);
+    transform: translateX(0%)  translateY(50px);
     .tc {
       width: 18px;
       height: 4px;
       background-color: $tc-stop;
-      transform: translateY(-250%);
+      transform: translateY(-15px);
       &.active {
         background-color: $tc-run;
       }

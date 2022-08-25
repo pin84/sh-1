@@ -171,39 +171,94 @@
 
     <div class="block-box">
       <div class="box-item ml_2">
-        <Block :d='td7' :TCStyle='TCStyle[0]' />
+        <Block
+          :d='td7'
+          :TCStyle='TCStyle[0]'
+        />
         <div class="middle-width"></div>
-        <Block :d='td8' :TCStyle='TCStyle[1]'  :mrArr_20='intervalAll42'  :mrArr_40='[27]' />
+        <Block
+          :d='td8'
+          :TCStyle='TCStyle[1]'
+          :mrArr_20='intervalAll42'
+          :mrArr_40='[27]'
+        />
       </div>
       <div class="box-item ml_2">
-        <Block :d='td9' :TCStyle='TCStyle[2]' />
+        <Block
+          :d='td9'
+          :TCStyle='TCStyle[2]'
+        />
         <div class="middle-width"></div>
-        <Block :d='td10' :TCStyle='TCStyle[3]' :mrArr_20='intervalAll42' :mrArr_40='[27]' />
+        <Block
+          :d='td10'
+          :TCStyle='TCStyle[3]'
+          :mrArr_20='intervalAll42'
+          :mrArr_40='[27]'
+        />
       </div>
 
       <div class="box-item">
-        <Block :d='td11' :TCStyle='TCStyle[4]' :mrArr_20='intervalAll56' :mrArr_40='[27]'  />
+        <Block
+          :d='td11'
+          :TCStyle='TCStyle[4]'
+          :mrArr_20='intervalAll56'
+          :mrArr_40='[27]'
+        />
         <div class="middle-width"></div>
-        <Block :d='td12' :TCStyle='TCStyle[5]' :mrArr_20='intervalAll56' :mrArr_40='[27]' />
+        <Block
+          :d='td12'
+          :TCStyle='TCStyle[5]'
+          :mrArr_20='intervalAll56'
+          :mrArr_40='[27]'
+        />
       </div>
       <div class="box-item">
-        <Block :d='td13' :TCStyle='TCStyle[6]' :mrArr_20='intervalAll56' :mrArr_40='[27]'  />
+        <Block
+          :d='td13'
+          :TCStyle='TCStyle[6]'
+          :mrArr_20='intervalAll56'
+          :mrArr_40='[27]'
+        />
         <div class="middle-width"></div>
-        <Block :d='td14' :TCStyle='TCStyle[7]' :mrArr_20='intervalAll56' :mrArr_40='[27]' />
+        <Block
+          :d='td14'
+          :TCStyle='TCStyle[7]'
+          :mrArr_20='intervalAll56'
+          :mrArr_40='[27]'
+        />
       </div>
 
       <div class="box-item">
-        <Block :d='td15' :TCStyle='TCStyle[8]' :mrArr_20='intervalAll56' :mrArr_40='[27]'  />
+        <Block
+          :d='td15'
+          :TCStyle='TCStyle[8]'
+          :mrArr_20='intervalAll56'
+          :mrArr_40='[27]'
+        />
         <div class="middle-width"></div>
-        <Block :d='td16' :TCStyle='TCStyle[9]' :mrArr_20='intervalAll42' :mrArr_40='[27]' />
+        <Block
+          :d='td16'
+          :TCStyle='TCStyle[9]'
+          :mrArr_20='intervalAll42'
+          :mrArr_40='[27]'
+        />
       </div>
 
       <div class="box-item">
-        <Block :d='td17' :TCStyle='TCStyle[10]' :mrArr_20='intervalAll56' :mrArr_40='[27]'  />
+        <Block
+          :d='td17'
+          :TCStyle='TCStyle[10]'
+          :mrArr_20='intervalAll56'
+          :mrArr_40='[27]'
+        />
         <div class="middle-width"></div>
-        <Block :d='td18' :TCStyle='TCStyle[11]' :mrArr_20='intervalAll42' :mrArr_40='[27]' />
+        <Block
+          :d='td18'
+          :TCStyle='TCStyle[11]'
+          :mrArr_20='intervalAll42'
+          :mrArr_40='[27]'
+        />
       </div>
-
 
     </div>
   </div>
@@ -223,9 +278,9 @@ export default {
       dayList: [], //天数
       tiShengJi7Entity: {},
       tiShengJi8Entity: {},
-      TCStyle:[], //天车和抓手的数据
-      intervalAll56:[6,13,20,34,41,48],
-      intervalAll42:[6,13,20,34],
+      TCStyle: [], //天车和抓手的数据
+      intervalAll56: [6, 13, 20, 34, 41, 48],
+      intervalAll42: [6, 13, 20, 34],
       ts: 0,
       d1: [],
       d1GD: [],
@@ -290,7 +345,6 @@ export default {
     this.getDays();
   },
 
-
   methods: {
     async getDays() {
       while (true) {
@@ -298,11 +352,25 @@ export default {
           break;
         }
         let res = await this.$get("TianCheKuangDbList/4");
-        // console.log("天数-----", res.list);
+        console.log("天数-----", res.list);
         this.dayList = res.list;
         await this.awaitTime(30000);
       }
     },
+    async getZSData() {
+      while (true) {
+        if (this.isBreak) {
+          break;
+        }
+        let res = await this.$get("TianCheKuangDbList/4");
+        console.log("天数-----", res.list);
+        this.dayList = res.list;
+        await this.awaitTime(30000);
+      }
+    },
+
+
+
 
     //天车
     async getTCData() {
@@ -310,6 +378,14 @@ export default {
         if (this.isBreak) {
           break;
         }
+
+        let o = {
+          Ceng: 1,
+          Days: 52,
+          ID: 21,
+          KuHao: 23,
+          Lie: 1,
+        };
 
         let res = await this.$get("/TianCheList/4");
         let tc = res.list;
@@ -320,8 +396,8 @@ export default {
 
         // this.tcDataList = tc
 
-        let TCStyle = kuDH.createTCStyle_4(tc)
-        this.TCStyle = TCStyle
+        let TCStyle = kuDH.createTCStyle_4(tc);
+        this.TCStyle = TCStyle;
         // tc = tstc
         // console.log("天车-----", tc);
 
@@ -331,19 +407,49 @@ export default {
         this.td9 = kuDH.getKuData({ d: this.dayList, kuHao: 21, tcd: tc[2] });
         this.td10 = kuDH.getKuData({ d: this.dayList, kuHao: 22, tcd: tc[3] });
 
-        this.td11 = kuDH.getKuData({ d: this.dayList, kuHao: 23, lie:57, tcd: tc[4] });
-        this.td12 = kuDH.getKuData({ d: this.dayList, kuHao: 24, lie:57, tcd: tc[5] });
-        this.td13 = kuDH.getKuData({ d: this.dayList, kuHao: 25, lie:57, tcd: tc[6] });
-        this.td14 = kuDH.getKuData({ d: this.dayList, kuHao: 26, lie:57, tcd: tc[7] });
+        this.td11 = kuDH.getKuData({
+          d: this.dayList,
+          kuHao: 23,
+          lie: 57,
+          tcd: tc[4],
+        });
+        this.td12 = kuDH.getKuData({
+          d: this.dayList,
+          kuHao: 24,
+          lie: 57,
+          tcd: tc[5],
+        });
+        this.td13 = kuDH.getKuData({
+          d: this.dayList,
+          kuHao: 25,
+          lie: 57,
+          tcd: tc[6],
+        });
+        this.td14 = kuDH.getKuData({
+          d: this.dayList,
+          kuHao: 26,
+          lie: 57,
+          tcd: tc[7],
+        });
 
-        this.td15 = kuDH.getKuData({ d: this.dayList, kuHao: 27, lie:57, tcd: tc[6] });
+        this.td15 = kuDH.getKuData({
+          d: this.dayList,
+          kuHao: 27,
+          lie: 57,
+          tcd: tc[6],
+        });
         this.td16 = kuDH.getKuData({ d: this.dayList, kuHao: 28, tcd: tc[7] });
-        this.td17 = kuDH.getKuData({ d: this.dayList, kuHao: 29, lie:57, tcd: tc[6] });
+        this.td17 = kuDH.getKuData({
+          d: this.dayList,
+          kuHao: 29,
+          lie: 57,
+          tcd: tc[6],
+        });
         this.td18 = kuDH.getKuData({ d: this.dayList, kuHao: 30, tcd: tc[7] });
 
         // console.log(this.td7);
 
-        await this.awaitTime(3000);
+        await this.awaitTime(5000);
       }
     },
 
@@ -372,7 +478,7 @@ export default {
         if (this.isBreak) {
           break;
         }
-        let res = await this.$get("/SanLouPeiyangShiList");
+        let res = await this.$get("/SiLouPeiyangShiList");
         let {
           sanloupeiyangshiajinxian: { sanLouPeiYangShiAJinXianEntity },
           sanloupeiyangshiachuxian: { sanLouPeiYangShiAChuXianEntity },
@@ -503,19 +609,19 @@ export default {
     margin-right: 10px;
   }
   .block-box {
-    @include tl(120px, 241px);
+    @include tl(60px, 241px);
     // border: 1px solid red;
     // display: flex;
     // flex-direction: column;
     .box-item {
       display: flex;
-      margin-top: 20px;
+      margin-top: 37px;
       &.ml_2 {
         padding-left: 189px;
         box-sizing: border-box;
       }
       .middle-width {
-        flex: 0 0 55px
+        flex: 0 0 55px;
       }
     }
   }

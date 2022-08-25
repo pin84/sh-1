@@ -22,6 +22,11 @@ export default new Router({
             name: 'Room-4th',
             component: ()=>import('@/views/room-4th/index.vue')
         },
+        {
+            path: '/room-mj',
+            name: 'Room-mj',
+            component: ()=>import('@/views/room-mj/index.vue')
+        },
 
 
       

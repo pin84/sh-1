@@ -14,6 +14,7 @@
       :page="page"
       :pageCount="pageCount"
       @showMore="showMore"
+      @showLower='showLower'
     />
   </view>
 </template>
@@ -37,6 +38,7 @@ export default {
       pageCount: 1,
       gameTypeData: [], //游戏种类信息
       accountList: {}, //细目表
+      uid: null,
     };
   },
   components: {
@@ -44,7 +46,12 @@ export default {
     ScreenBar,
   },
   methods: {
-    init() {
+    showLower(obj) {
+      let { uid } = obj;
+      this.uid = uid;
+      this.requestDetaiList();
+    },
+    init(uid) {
       this.requestData("System.HomePage.getAllGameCategory", {}, (res) => {
         this.gameTypeData = res.data;
       });
@@ -56,6 +63,7 @@ export default {
         this.endTime = postData.endTime;
         this.accountName = postData.accountName;
         this.types = postData.types;
+
         this.requestData("System.Agent.getNewTeamReport", postData, (res) => {
           this.accountList = res.data;
           this.page_count = res.data.agentList.page_count;
@@ -141,6 +149,9 @@ export default {
       //重新请求数据，page重置为1
       let postData = this.setRequestData();
       postData.page = 1;
+      if (this.uid) {
+        postData["accountID"] = this.uid;
+      }
       this.requestData("System.Agent.getNewTeamReport", postData, (res) => {
         this.accountList = res.data;
         this.page = 1;

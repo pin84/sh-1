@@ -7,7 +7,8 @@ export default {
             let lieArr = kuArr.filter(item => item.Lie == i)
             let Ceng_Num = tcd[`Ceng_Num${i}`]
             let block = []
-            for (let j = 1; j < 18; j++) {
+            // for (let j = 1; j < 18; j++) {
+                for (let j = 17; j > 0; j--) {
                 let curobj = lieArr.find(o => o.Ceng == j)
                 if (!curobj) {
                     curobj = {
@@ -38,12 +39,12 @@ export default {
                 ZSZT:obj.ZhuaShouZhuangTai,
                 TCZT:obj.YunXingZhuangTai,
                 styleTC:{
-                    transform:`translateX(${x}%)`
+                    transform:`translateX(${x}%)  translateY(-12px)`
                     // transform:`translateX(0%)`
                 },
                 styleZS:{
-                    transform:`translateX(${x}%) translateY(${y}%)`
-                    // transform:`translateX(0%) translateY(0%)`
+                    // transform:`translateX(${x}%) translateY(${y}%)`
+                    transform:`translateX(0%) translateY(-12px)`
                 }
             }
             arr.push(o)
