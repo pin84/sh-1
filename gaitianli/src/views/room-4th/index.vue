@@ -1,140 +1,56 @@
 <template>
   <div class="cultivation-room">
     <div class="box-1">
-      <ConveyorBox
-        :lineNum='10'
-        :statuArr='d1'
-        :isShowArr='d1GD'
-        :itemType='3'
-      />
+      <ConveyorBox :lineNum='10' :statuArr='d1' :isShowArr='d1GD' :itemType='3' />
     </div>
     <div class="box-2">
-      <ConveyorBox
-        :lineNum='8'
-        :statuArr='d2'
-        :isShowArr='d2GD'
-        :itemType='3'
-      />
+      <ConveyorBox :lineNum='11' :statuArr='d2' :isShowArr='d2GD' :itemType='3' />
     </div>
     <div class="box-3">
-      <ConveyorBox
-        :lineNum='19'
-        :statuArr='d3'
-        :isShowArr='d3GD'
-        :itemType='3'
-      />
+      <ConveyorBox :lineNum='21' :statuArr='d3' :isShowArr='d3GD' :itemType='3' />
     </div>
     <div class="box-4">
-      <ConveyorBox
-        :lineNum='9'
-        :statuArr='d4'
-        :isShowArr='d4GD'
-        :itemType='3'
-      />
+      <ConveyorBox  :lineNum='20' :statuArr='d4' :isShowArr='d4GD' :itemType='3' />
 
-      <ConveyorBox
-        :lineNum='7'
-        :statuArr='d4_1'
-        :isShowArr='d4GD_1'
-        :itemType='3'
-      />
+      <ConveyorBox :lineNum='15' :statuArr='d4_1' :isShowArr='d4GD_1' :itemType='3' />
     </div>
 
     <div class="box-5">
-      <ConveyorBox
-        :lineNum='17'
-        :statuArr='d5'
-        :isShowArr='d5GD'
-        :itemType='3'
-      />
+      <ConveyorBox :lineNum='17' :statuArr='d5' :isShowArr='d5GD' :itemType='3' />
     </div>
     <div class="box-6">
-      <ConveyorBox
-        :lineNum='11'
-        :statuArr='d6'
-        :isShowArr='d6GD'
-        :itemType='3'
-      />
+      <ConveyorBox :lineNum='11' :statuArr='d6' :isShowArr='d6GD' :itemType='3' />
     </div>
     <div class="box-7">
-      <ConveyorBox
-        :lineNum='11'
-        :statuArr='d7'
-        :isShowArr='d7GD'
-        :itemType='3'
-      />
+      <ConveyorBox :lineNum='11' :statuArr='d7' :isShowArr='d7GD' :itemType='3' />
     </div>
     <div class="box-8">
-      <ConveyorBox
-        :lineNum='4'
-        :statuArr='d8'
-        :isShowArr='d8GD'
-        :itemType='3'
-      />
+      <ConveyorBox :lineNum='4' :statuArr='d8' :isShowArr='d8GD' :itemType='3' />
     </div>
     <div class="box-9">
-      <ConveyorBox
-        :lineNum='11'
-        :statuArr='d9'
-        :isShowArr='d9GD'
-        :itemType='3'
-      />
+      <ConveyorBox :lineNum='11' :statuArr='d9' :isShowArr='d9GD' :itemType='3' />
     </div>
     <div class="box-10">
-      <ConveyorBox
-        :lineNum='10'
-        :statuArr='d10'
-        :isShowArr='d10GD'
-        :itemType='3'
-      />
+      <ConveyorBox :lineNum='15' :statuArr='d10' :isShowArr='d10GD' :itemType='3' />
     </div>
     <div class="box-11">
-      <ConveyorBox
-        :lineNum='9'
-        :statuArr='d12'
-        :isShowArr='d12GD'
-        :itemType='3'
-      />
-      <ConveyorBox
-        :lineNum='7'
-        :statuArr='d11'
-        :isShowArr='d11GD'
-        :itemType='3'
-      />
+      <ConveyorBox :lineNum='20' :statuArr='d12' :isShowArr='d12GD' :itemType='3' />
+      <ConveyorBox :lineNum='15' :statuArr='d11' :isShowArr='d11GD' :itemType='3' />
     </div>
     <div class="box-13">
-      <ConveyorBox
-        :lineNum='15'
-        :statuArr='d13'
-        :isShowArr='d13GD'
-        :itemType='3'
-      />
+      <ConveyorBox :lineNum='18' :statuArr='d13' :isShowArr='d13GD' :itemType='3' />
     </div>
     <div class="box-14">
-      <ConveyorBox
-        :lineNum='10'
-        :statuArr='d14'
-        :isShowArr='d14GD'
-        :itemType='3'
-      />
+      <ConveyorBox :lineNum='10' :statuArr='d14' :isShowArr='d14GD' :itemType='3' />
     </div>
     <div class="box-15">
-      <ConveyorBox
-        :lineNum='8'
-        :statuArr='d15'
-        :isShowArr='d15GD'
-        :itemType='3'
-      />
+      <ConveyorBox :lineNum='8' :statuArr='d15' :isShowArr='d15GD' :itemType='3' />
     </div>
 
     <div class="info-box">
       <strong>提升机信息</strong>
       <div class="box">
-        <div
-          v-for="(item,index) in infoList"
-          :key="index"
-          class="item mr_10"
-        >
+        <div v-for="(item,index) in infoList" :key="index" class="item mr_10">
           <span>{{item.id}}#:</span>
           <span>{{item.yun_xing_biao_zhi ? '运行' : '停止'}}</span>
           <span v-if="item.wai_bu_ji_ting || item.ping_zan_ting_xin_hao">---急停</span>
@@ -142,27 +58,15 @@
         <div class="item">
           <span>7#:</span>
           <span class="mr_10">{{tiShengJi7Entity.run ? '运行' : '停止'}}</span>
-          <span
-            class="mr_10"
-            v-if="tiShengJi7Entity.x50"
-          >三楼急停</span>
-          <span
-            class="mr_10"
-            v-if="tiShengJi7Entity.x46"
-          >四楼急停</span>
+          <span class="mr_10" v-if="tiShengJi7Entity.x50">三楼急停</span>
+          <span class="mr_10" v-if="tiShengJi7Entity.x46">四楼急停</span>
           <span v-if="tiShengJi7Entity.x47">提升急停</span>
         </div>
         <div class="item">
           <span>8#:</span>
           <span class="mr_10">{{tiShengJi8Entity.run ? '运行' : '停止'}}</span>
-          <span
-            class="mr_10"
-            v-if="tiShengJi8Entity.x51"
-          >三楼急停</span>
-          <span
-            class="mr_10"
-            v-if="tiShengJi8Entity.x47"
-          >四楼急停</span>
+          <span class="mr_10" v-if="tiShengJi8Entity.x51">三楼急停</span>
+          <span class="mr_10" v-if="tiShengJi8Entity.x47">四楼急停</span>
           <span v-if="tiShengJi8Entity.x50">提升急停</span>
         </div>
       </div>
@@ -171,93 +75,37 @@
 
     <div class="block-box">
       <div class="box-item ml_2">
-        <Block
-          :d='td7'
-          :TCStyle='TCStyle[0]'
-        />
+        <Block :d='td7' :TCStyle='TCStyle[0]' />
         <div class="middle-width"></div>
-        <Block
-          :d='td8'
-          :TCStyle='TCStyle[1]'
-          :mrArr_20='intervalAll42'
-          :mrArr_40='[27]'
-        />
+        <Block :d='td8' :TCStyle='TCStyle[1]' :mrArr_20='intervalAll42' :mrArr_40='[27]' />
       </div>
       <div class="box-item ml_2">
-        <Block
-          :d='td9'
-          :TCStyle='TCStyle[2]'
-        />
+        <Block :d='td9' :TCStyle='TCStyle[2]' />
         <div class="middle-width"></div>
-        <Block
-          :d='td10'
-          :TCStyle='TCStyle[3]'
-          :mrArr_20='intervalAll42'
-          :mrArr_40='[27]'
-        />
+        <Block :d='td10' :TCStyle='TCStyle[3]' :mrArr_20='intervalAll42' :mrArr_40='[27]' />
       </div>
 
       <div class="box-item">
-        <Block
-          :d='td11'
-          :TCStyle='TCStyle[4]'
-          :mrArr_20='intervalAll56'
-          :mrArr_40='[27]'
-        />
+        <Block :d='td11' :TCStyle='TCStyle[4]' :mrArr_20='intervalAll56' :mrArr_40='[27]' />
         <div class="middle-width"></div>
-        <Block
-          :d='td12'
-          :TCStyle='TCStyle[5]'
-          :mrArr_20='intervalAll56'
-          :mrArr_40='[27]'
-        />
+        <Block :d='td12' :TCStyle='TCStyle[5]' :mrArr_20='intervalAll56' :mrArr_40='[27]' />
       </div>
       <div class="box-item">
-        <Block
-          :d='td13'
-          :TCStyle='TCStyle[6]'
-          :mrArr_20='intervalAll56'
-          :mrArr_40='[27]'
-        />
+        <Block :d='td13' :TCStyle='TCStyle[6]' :mrArr_20='intervalAll56' :mrArr_40='[27]' />
         <div class="middle-width"></div>
-        <Block
-          :d='td14'
-          :TCStyle='TCStyle[7]'
-          :mrArr_20='intervalAll56'
-          :mrArr_40='[27]'
-        />
+        <Block :d='td14' :TCStyle='TCStyle[7]' :mrArr_20='intervalAll56' :mrArr_40='[27]' />
       </div>
 
       <div class="box-item">
-        <Block
-          :d='td15'
-          :TCStyle='TCStyle[8]'
-          :mrArr_20='intervalAll56'
-          :mrArr_40='[27]'
-        />
+        <Block :d='td15' :TCStyle='TCStyle[8]' :mrArr_20='intervalAll56' :mrArr_40='[27]' />
         <div class="middle-width"></div>
-        <Block
-          :d='td16'
-          :TCStyle='TCStyle[9]'
-          :mrArr_20='intervalAll42'
-          :mrArr_40='[27]'
-        />
+        <Block :d='td16' :TCStyle='TCStyle[9]' :mrArr_20='intervalAll42' :mrArr_40='[27]' />
       </div>
 
       <div class="box-item">
-        <Block
-          :d='td17'
-          :TCStyle='TCStyle[10]'
-          :mrArr_20='intervalAll56'
-          :mrArr_40='[27]'
-        />
+        <Block :d='td17' :TCStyle='TCStyle[10]' :mrArr_20='intervalAll56' :mrArr_40='[27]' />
         <div class="middle-width"></div>
-        <Block
-          :d='td18'
-          :TCStyle='TCStyle[11]'
-          :mrArr_20='intervalAll42'
-          :mrArr_40='[27]'
-        />
+        <Block :d='td18' :TCStyle='TCStyle[11]' :mrArr_20='intervalAll42' :mrArr_40='[27]' />
       </div>
 
     </div>
@@ -270,6 +118,7 @@ import kuDH from "@/views/kuDH.js";
 import ConveyorBox from "@/views/ConveyorBox.vue";
 import Block from "@/components/Block.vue";
 import MyCanvas from "@/components/MyCanvas.vue";
+import testData from './testData'
 export default {
   data() {
     return {
@@ -343,6 +192,10 @@ export default {
 
     this.getTCData();
     this.getDays();
+
+    this.createData()
+
+    // console.log( [undefined, 54, undefined, 55, 56, undefined, 57, 60, undefined].reverse());
   },
 
   methods: {
@@ -352,7 +205,7 @@ export default {
           break;
         }
         let res = await this.$get("TianCheKuangDbList/4");
-        console.log("天数-----", res.list);
+        // console.log("天数-----", res.list);
         this.dayList = res.list;
         await this.awaitTime(30000);
       }
@@ -363,14 +216,11 @@ export default {
           break;
         }
         let res = await this.$get("TianCheKuangDbList/4");
-        console.log("天数-----", res.list);
+        // console.log("天数-----", res.list);
         this.dayList = res.list;
         await this.awaitTime(30000);
       }
     },
-
-
-
 
     //天车
     async getTCData() {
@@ -455,14 +305,14 @@ export default {
 
     createData() {
       let arr = [];
-      let str = "16_";
-      let start = 0;
-      let sum = 8;
+      let str = "8";
+      let start = 4;
+      let sum = 17;
       for (let i = start; i < sum; i++) {
-        arr.push(str + i);
+        arr.push( i);
         // arr.push(str + i + '_1');
       }
-      // console.log(arr);
+      console.log(arr);
       // console.log(arr.reverse());
     },
 
@@ -480,73 +330,84 @@ export default {
         }
         let res = await this.$get("/SiLouPeiyangShiList");
         let {
-          sanloupeiyangshiajinxian: { sanLouPeiYangShiAJinXianEntity },
-          sanloupeiyangshiachuxian: { sanLouPeiYangShiAChuXianEntity },
-          sanloupeiyangshibchuxian: { sanLouPeiYangShiBChuXianEntity },
-          sanloupeiyangshibjinxian: { sanLouPeiYangShiBJinXianEntity },
+          siloupeiyangshiaxian: { siLouPeiYangShiAXianEntity },
+          siloupeiyangshibxian: { siLouPeiYangShiBXianEntity },
         } = res;
 
-        // console.log(res);
-        // sanLouPeiYangShiAJinXianEntity = aj;
+
+        // console.log(siLouPeiYangShiBXianEntity);
+
+
+        // siLouPeiYangShiBXianEntity = testData.aj;
         // sanLouPeiYangShiAChuXianEntity = ac;
         // sanLouPeiYangShiBJinXianEntity = bj;
         // sanLouPeiYangShiBChuXianEntity = bc;
 
-        let [d1, d1GD] = dh.getD1(sanLouPeiYangShiAJinXianEntity);
+        let [d1, d1GD] = dh.getD1(siLouPeiYangShiAXianEntity);
         this.d1 = d1;
         this.d1GD = d1GD;
-        let [d2, d2GD] = dh.getD2(sanLouPeiYangShiAJinXianEntity);
+        let [d2, d2GD] = dh.getD2(siLouPeiYangShiAXianEntity);
         this.d2 = d2;
         this.d2GD = d2GD;
-        let [d3, d3GD] = dh.getD3(sanLouPeiYangShiAJinXianEntity);
+        let [d3, d3GD] = dh.getD3(siLouPeiYangShiAXianEntity);
         this.d3 = d3;
         this.d3GD = d3GD;
-        let [d4_1, d4GD_1] = dh.getD4_1(sanLouPeiYangShiAJinXianEntity);
+        let [d4_1, d4GD_1] = dh.getD4_1(siLouPeiYangShiAXianEntity);
         this.d4_1 = d4_1;
         this.d4GD_1 = d4GD_1;
 
-        let [d4, d4GD] = dh.getD4(sanLouPeiYangShiAChuXianEntity);
+        let [d4, d4GD] = dh.getD4(siLouPeiYangShiAXianEntity);
         this.d4 = d4;
         this.d4GD = d4GD;
-        let [d5, d5GD] = dh.getD5(sanLouPeiYangShiAChuXianEntity);
+        let [d5, d5GD] = dh.getD5(siLouPeiYangShiAXianEntity);
         this.d5 = d5;
         this.d5GD = d5GD;
-        let [d6, d6GD] = dh.getD6(sanLouPeiYangShiAChuXianEntity);
+        let [d6, d6GD] = dh.getD6(siLouPeiYangShiAXianEntity);
         this.d6 = d6;
         this.d6GD = d6GD;
-        let [d7, d7GD] = dh.getD7(sanLouPeiYangShiAChuXianEntity);
+     
+        let [d7, d7GD] = dh.getD7(siLouPeiYangShiAXianEntity);
         this.d7 = d7;
         this.d7GD = d7GD;
 
-        let [d8, d8GD] = dh.getD8(sanLouPeiYangShiBJinXianEntity);
+        let [d8, d8GD] = dh.getD8(siLouPeiYangShiBXianEntity);
         this.d8 = d8;
         this.d8GD = d8GD;
-        let [d9, d9GD] = dh.getD9(sanLouPeiYangShiBJinXianEntity);
+        let [d9, d9GD] = dh.getD9(siLouPeiYangShiBXianEntity);
         this.d9 = d9;
         this.d9GD = d9GD;
-        let [d10, d10GD] = dh.getD10(sanLouPeiYangShiBJinXianEntity);
+        let [d10, d10GD] = dh.getD10(siLouPeiYangShiBXianEntity);
         this.d10 = d10;
         this.d10GD = d10GD;
-        let [d11, d11GD] = dh.getD11(sanLouPeiYangShiBJinXianEntity);
+        let [d11, d11GD] = dh.getD11(siLouPeiYangShiBXianEntity);
         this.d11 = d11;
         this.d11GD = d11GD;
-        let [d12, d12GD] = dh.getD12(sanLouPeiYangShiBJinXianEntity);
+        let [d12, d12GD] = dh.getD12(siLouPeiYangShiBXianEntity);
         this.d12 = d12;
         this.d12GD = d12GD;
-
-        let [d13, d13GD] = dh.getD13(sanLouPeiYangShiBChuXianEntity);
+        let [d13, d13GD] = dh.getD13(siLouPeiYangShiBXianEntity);
         this.d13 = d13;
         this.d13GD = d13GD;
 
-        let [d14, d14GD] = dh.getD14(sanLouPeiYangShiBChuXianEntity);
+        let [d14, d14GD] = dh.getD14(siLouPeiYangShiBXianEntity);
         this.d14 = d14;
         this.d14GD = d14GD;
-
-        let [d15, d15GD] = dh.getD15(sanLouPeiYangShiBChuXianEntity);
+        let [d15, d15GD] = dh.getD15(siLouPeiYangShiBXianEntity);
         this.d15 = d15;
         this.d15GD = d15GD;
         await this.awaitTime(2000);
       }
+    },
+
+
+    diff(o1,o2){
+      let arr = []
+      for(let [key,value] of Object.entries(o1)){
+        if(!o2[key]){
+          arr.push(key)
+        }
+      }
+      console.log(arr);
     },
 
     //提升机
@@ -651,23 +512,24 @@ export default {
     @include tl(735px, 1850px);
   }
   .box-3 {
-    @include tl(464px, 1240px);
-    transform: rotate(-90deg);
+    @include tl(454px, 1240px);
+    transform: rotate(90deg);
   }
   .box-4 {
     width: 38px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    @include tl(115px, 612px);
+    @include tl(105px, 612px);
   }
 
   .box-5 {
     @include tl(781px, 334px);
-    transform: rotate(-90deg);
+    transform: rotate(90deg);
   }
   .box-6 {
     @include tl(243px, 37px);
+    transform: rotate(180deg);
   }
   .box-7 {
     @include tl(206px, 78px);
@@ -676,31 +538,33 @@ export default {
   .box-8 {
     @include tl(761px, 1800px);
     transform: rotate(-90deg);
+    // border: 1px solid red;
   }
   .box-9 {
     @include tl(780px, 1825px);
   }
 
   .box-10 {
-    @include tl(862px, 1635px);
-    transform: rotate(-90deg);
+    @include tl(862px, 1645px);
+    transform: rotate(90deg);
   }
 
   .box-11 {
     width: 39px;
     display: flex;
     justify-content: space-between;
-    @include tl(115px, 1447px);
+    @include tl(90px, 1447px);
     align-items: center;
   }
 
   .box-13 {
-    @include tl(371px, 760px);
-    transform: rotate(-90deg);
+    @include tl(333px, 760px);
+    transform: rotate(90deg);
   }
 
   .box-14 {
     @include tl(320px, 63px);
+    transform: rotate(180deg);
   }
 
   .box-15 {

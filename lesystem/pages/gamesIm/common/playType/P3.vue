@@ -236,7 +236,6 @@ export default {
     //选择游戏类名
     changeCurGame(game) {
       this.$store.commit("v3IsShowNumBaket", false);
-
       this.curGame = "";
       let n = game.N;
       let curList = game.c || game.C;

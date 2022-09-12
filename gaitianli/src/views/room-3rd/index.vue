@@ -1,140 +1,56 @@
 <template>
   <div class="cultivation-room">
     <div class="box-1">
-      <ConveyorBox
-        :lineNum='10'
-        :statuArr='d1'
-        :isShowArr='d1GD'
-        :itemType='3'
-      />
+      <ConveyorBox :lineNum='10' :statuArr='d1' :isShowArr='d1GD' :itemType='3' />
     </div>
     <div class="box-2">
-      <ConveyorBox
-        :lineNum='8'
-        :statuArr='d2'
-        :isShowArr='d2GD'
-        :itemType='3'
-      />
+      <ConveyorBox :lineNum='8' :statuArr='d2' :isShowArr='d2GD' :itemType='3' />
     </div>
     <div class="box-3">
-      <ConveyorBox
-        :lineNum='19'
-        :statuArr='d3'
-        :isShowArr='d3GD'
-        :itemType='3'
-      />
+      <ConveyorBox :lineNum='19' :statuArr='d3' :isShowArr='d3GD' :itemType='3' />
     </div>
     <div class="box-4">
-      <ConveyorBox
-        :lineNum='9'
-        :statuArr='d4'
-        :isShowArr='d4GD'
-        :itemType='3'
-      />
+      <ConveyorBox :lineNum='9' :statuArr='d4' :isShowArr='d4GD' :itemType='3' />
 
-      <ConveyorBox
-        :lineNum='7'
-        :statuArr='d4_1'
-        :isShowArr='d4GD_1'
-        :itemType='3'
-      />
+      <ConveyorBox :lineNum='7' :statuArr='d4_1' :isShowArr='d4GD_1' :itemType='3' />
     </div>
 
     <div class="box-5">
-      <ConveyorBox
-        :lineNum='17'
-        :statuArr='d5'
-        :isShowArr='d5GD'
-        :itemType='3'
-      />
+      <ConveyorBox :lineNum='17' :statuArr='d5' :isShowArr='d5GD' :itemType='3' />
     </div>
     <div class="box-6">
-      <ConveyorBox
-        :lineNum='12'
-        :statuArr='d6'
-        :isShowArr='d6GD'
-        :itemType='3'
-      />
+      <ConveyorBox :lineNum='12' :statuArr='d6' :isShowArr='d6GD' :itemType='3' />
     </div>
     <div class="box-7">
-      <ConveyorBox
-        :lineNum='8'
-        :statuArr='d7'
-        :isShowArr='d7GD'
-        :itemType='3'
-      />
+      <ConveyorBox :lineNum='8' :statuArr='d7' :isShowArr='d7GD' :itemType='3' />
     </div>
     <div class="box-8">
-      <ConveyorBox
-        :lineNum='4'
-        :statuArr='d8'
-        :isShowArr='d8GD'
-        :itemType='3'
-      />
+      <ConveyorBox :lineNum='4' :statuArr='d8' :isShowArr='d8GD' :itemType='3' />
     </div>
     <div class="box-9">
-      <ConveyorBox
-        :lineNum='11'
-        :statuArr='d9'
-        :isShowArr='d9GD'
-        :itemType='3'
-      />
+      <ConveyorBox :lineNum='11' :statuArr='d9' :isShowArr='d9GD' :itemType='3' />
     </div>
     <div class="box-10">
-      <ConveyorBox
-        :lineNum='10'
-        :statuArr='d10'
-        :isShowArr='d10GD'
-        :itemType='3'
-      />
+      <ConveyorBox :lineNum='10' :statuArr='d10' :isShowArr='d10GD' :itemType='3' />
     </div>
     <div class="box-11">
-      <ConveyorBox
-        :lineNum='9'
-        :statuArr='d12'
-        :isShowArr='d12GD'
-        :itemType='3'
-      />
-      <ConveyorBox
-        :lineNum='7'
-        :statuArr='d11'
-        :isShowArr='d11GD'
-        :itemType='3'
-      />
+      <ConveyorBox :lineNum='9' :statuArr='d12' :isShowArr='d12GD' :itemType='3' />
+      <ConveyorBox :lineNum='7' :statuArr='d11' :isShowArr='d11GD' :itemType='3' />
     </div>
     <div class="box-13">
-      <ConveyorBox
-        :lineNum='15'
-        :statuArr='d13'
-        :isShowArr='d13GD'
-        :itemType='3'
-      />
+      <ConveyorBox :lineNum='15' :statuArr='d13' :isShowArr='d13GD' :itemType='3' />
     </div>
     <div class="box-14">
-      <ConveyorBox
-        :lineNum='12'
-        :statuArr='d14'
-        :isShowArr='d14GD'
-        :itemType='3'
-      />
+      <ConveyorBox :lineNum='12' :statuArr='d14' :isShowArr='d14GD' :itemType='3' />
     </div>
     <div class="box-15">
-      <ConveyorBox
-        :lineNum='4'
-        :statuArr='d15'
-        :isShowArr='d15GD'
-        :itemType='3'
-      />
+      <ConveyorBox :lineNum='4' :statuArr='d15' :isShowArr='d15GD' :itemType='3' />
     </div>
 
     <div class="info-box">
       <strong>提升机信息</strong>
       <div class="box">
-        <div
-          v-for="(item,index) in infoList"
-          :key="index"
-          class="item mr_10"
-        >
+        <div v-for="(item,index) in infoList" :key="index" class="item mr_10">
           <span>{{item.id}}#:</span>
           <span>{{item.yun_xing_biao_zhi ? '运行' : '停止'}}</span>
           <span v-if="item.wai_bu_ji_ting || item.ping_zan_ting_xin_hao">---急停</span>
@@ -142,27 +58,15 @@
         <div class="item">
           <span>7#:</span>
           <span class="mr_10">{{tiShengJi7Entity.run ? '运行' : '停止'}}</span>
-          <span
-            class="mr_10"
-            v-if="tiShengJi7Entity.x50"
-          >三楼急停</span>
-          <span
-            class="mr_10"
-            v-if="tiShengJi7Entity.x46"
-          >四楼急停</span>
+          <span class="mr_10" v-if="tiShengJi7Entity.x50">三楼急停</span>
+          <span class="mr_10" v-if="tiShengJi7Entity.x46">四楼急停</span>
           <span v-if="tiShengJi7Entity.x47">提升急停</span>
         </div>
         <div class="item">
           <span>8#:</span>
           <span class="mr_10">{{tiShengJi8Entity.run ? '运行' : '停止'}}</span>
-          <span
-            class="mr_10"
-            v-if="tiShengJi8Entity.x51"
-          >三楼急停</span>
-          <span
-            class="mr_10"
-            v-if="tiShengJi8Entity.x47"
-          >四楼急停</span>
+          <span class="mr_10" v-if="tiShengJi8Entity.x51">三楼急停</span>
+          <span class="mr_10" v-if="tiShengJi8Entity.x47">四楼急停</span>
           <span v-if="tiShengJi8Entity.x50">提升急停</span>
         </div>
       </div>
@@ -171,93 +75,37 @@
 
     <div class="block-box">
       <div class="box-item ml_2">
-        <Block
-          :d='td7'
-          :TCStyle='TCStyle[0]'
-        />
+        <Block :d='td7' :TCStyle='TCStyle[0]' />
         <div class="middle-width"></div>
-        <Block
-          :d='td8'
-          :TCStyle='TCStyle[1]'
-          :mrArr_20='intervalAll42'
-          :mrArr_40='[27]'
-        />
+        <Block :d='td8' :TCStyle='TCStyle[1]' :mrArr_20='intervalAll42' :mrArr_40='[27]' />
       </div>
       <div class="box-item ml_2">
-        <Block
-          :d='td9'
-          :TCStyle='TCStyle[2]'
-        />
+        <Block :d='td9' :TCStyle='TCStyle[2]' />
         <div class="middle-width"></div>
-        <Block
-          :d='td10'
-          :TCStyle='TCStyle[3]'
-          :mrArr_20='intervalAll42'
-          :mrArr_40='[27]'
-        />
+        <Block :d='td10' :TCStyle='TCStyle[3]' :mrArr_20='intervalAll42' :mrArr_40='[27]' />
       </div>
 
       <div class="box-item">
-        <Block
-          :d='td11'
-          :TCStyle='TCStyle[4]'
-          :mrArr_20='intervalAll56'
-          :mrArr_40='[27]'
-        />
+        <Block :d='td11' :TCStyle='TCStyle[4]' :mrArr_20='intervalAll56' :mrArr_40='[27]' />
         <div class="middle-width"></div>
-        <Block
-          :d='td12'
-          :TCStyle='TCStyle[5]'
-          :mrArr_20='intervalAll56'
-          :mrArr_40='[27]'
-        />
+        <Block :d='td12' :TCStyle='TCStyle[5]' :mrArr_20='intervalAll56' :mrArr_40='[27]' />
       </div>
       <div class="box-item">
-        <Block
-          :d='td13'
-          :TCStyle='TCStyle[6]'
-          :mrArr_20='intervalAll56'
-          :mrArr_40='[27]'
-        />
+        <Block :d='td13' :TCStyle='TCStyle[6]' :mrArr_20='intervalAll56' :mrArr_40='[27]' />
         <div class="middle-width"></div>
-        <Block
-          :d='td14'
-          :TCStyle='TCStyle[7]'
-          :mrArr_20='intervalAll56'
-          :mrArr_40='[27]'
-        />
+        <Block :d='td14' :TCStyle='TCStyle[7]' :mrArr_20='intervalAll56' :mrArr_40='[27]' />
       </div>
 
       <div class="box-item">
-        <Block
-          :d='td15'
-          :TCStyle='TCStyle[8]'
-          :mrArr_20='intervalAll56'
-          :mrArr_40='[27]'
-        />
+        <Block :d='td15' :TCStyle='TCStyle[8]' :mrArr_20='intervalAll56' :mrArr_40='[27]' />
         <div class="middle-width"></div>
-        <Block
-          :d='td16'
-          :TCStyle='TCStyle[9]'
-          :mrArr_20='intervalAll42'
-          :mrArr_40='[27]'
-        />
+        <Block :d='td16' :TCStyle='TCStyle[9]' :mrArr_20='intervalAll42' :mrArr_40='[27]' />
       </div>
 
       <div class="box-item">
-        <Block
-          :d='td17'
-          :TCStyle='TCStyle[10]'
-          :mrArr_20='intervalAll56'
-          :mrArr_40='[27]'
-        />
+        <Block :d='td17' :TCStyle='TCStyle[10]' :mrArr_20='intervalAll56' :mrArr_40='[27]' />
         <div class="middle-width"></div>
-        <Block
-          :d='td18'
-          :TCStyle='TCStyle[11]'
-          :mrArr_20='intervalAll42'
-          :mrArr_40='[27]'
-        />
+        <Block :d='td18' :TCStyle='TCStyle[11]' :mrArr_20='intervalAll42' :mrArr_40='[27]' />
       </div>
 
     </div>
@@ -806,20 +654,20 @@ export default {
         // tc = tstc
         // console.log("天车-----", tc);
 
-        tc[0] = {
-          Ceng_Num1: 2,
-          Ceng_Num3: 1,
-          Ceng_Num_m3: 6,
-          DongZuoZhuangTai: 2,
-        };
+        // tc[0] = {
+        //   Ceng_Num1: 2,
+        //   Ceng_Num3: 1,
+        //   Ceng_Num_m3: 6,
+        //   DongZuoZhuangTai: 2,
+        // };
 
-        this.dayList[0] = {
-          Ceng: 1,
-          Days: 53,
-          ID: 7,
-          KuHao: 7,
-          Lie: 1,
-        };
+        // this.dayList[0] = {
+        //   Ceng: 1,
+        //   Days: 53,
+        //   ID: 7,
+        //   KuHao: 7,
+        //   Lie: 1,
+        // };
 
         this.td7 = kuDH.getKuData({ d: this.dayList, kuHao: 7, tcd: tc[0] });
         this.td8 = kuDH.getKuData({ d: this.dayList, kuHao: 8, tcd: tc[1] });
@@ -1071,7 +919,7 @@ export default {
     @include tl(735px, 1850px);
   }
   .box-3 {
-    @include tl(464px, 1240px);
+    @include tl(462px, 1240px);
     transform: rotate(-90deg);
   }
   .box-4 {
@@ -1083,7 +931,7 @@ export default {
   }
 
   .box-5 {
-    @include tl(781px, 334px);
+    @include tl(780px, 334px);
     transform: rotate(-90deg);
   }
   .box-6 {
@@ -1115,7 +963,7 @@ export default {
   }
 
   .box-13 {
-    @include tl(371px, 760px);
+    @include tl(369px, 760px);
     transform: rotate(-90deg);
   }
 

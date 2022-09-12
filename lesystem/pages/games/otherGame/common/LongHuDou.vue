@@ -89,6 +89,8 @@ export default {
 				});
 			});
 			this.curPlayList = arr;
+
+			console.log('--aaaaaa---',arr);
 			this.refreshPage();
 			this.$store.commit('setD1', arr);
 		}

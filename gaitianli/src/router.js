@@ -27,8 +27,21 @@ export default new Router({
             name: 'Room-mj',
             component: ()=>import('@/views/room-mj/index.vue')
         },
-
-
+        {
+            path: '/room-jz',
+            name: 'Room-jz',
+            component: ()=>import('@/views/room-jz/index.vue')
+        },
+        {
+            path: '/room-jz-2',
+            name: 'Room-jz-2',
+            component: ()=>import('@/views/room-jz-2/index.vue')
+        },
+        {
+            path: '/room-cs',
+            name: 'Room-cs',
+            component: ()=>import('@/views/room-cs/index.vue')
+        },
       
     ]
 })

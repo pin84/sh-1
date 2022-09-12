@@ -141,10 +141,7 @@ export default {
       if (Number(res.code) !== 0) {
         return this.$util.showToast({ title: res.message });
       }
-      // res.data.splice(0, 1);
       this.games = res.data;
-      // console.log("-playType---", this.games);
-
       this.showCurGame();
     },
 
@@ -170,14 +167,14 @@ export default {
       let index = this.games.findIndex((obj) => obj.Id == game.Id);
       this.$store.commit("curPlayIndex", index);
       this.secondLindGame = this.games[index];
-      console.log("--secondLindGame--", this.secondLindGame);
+ 
 
-      if (game.N == "龙虎斗") {
-        game.C.forEach((obj) => {
-          let newArr = this.swapArray(obj.C, 1, 2);
-          obj.C = newArr;
-        });
-      }
+      // if (game.N == "龙虎斗") {
+      //   game.C.forEach((obj) => {
+      //     let newArr = this.swapArray(obj.C, 1, 2);
+      //     obj.C = newArr;
+      //   });
+      // }
 
       let curList = game.c || game.C;
 

@@ -426,7 +426,6 @@ export default {
       //   url: "System.Agent.getNewTeamReport",
       //   data: postData,
       // };
-      // debugger;
       // let res = await this.$http(obj);
 
       // console.log(res);
