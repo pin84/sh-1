@@ -96,7 +96,7 @@ export default {
       f1: 1,
       infoArr: [],
       list: [],
-      mlList: [0.1, 1.32, 1.32,1.32],
+      mlList: [0.1, 1.48, 1.48, 1.42],
       l6: 3,
       l7: 0,
       l8: 0,
@@ -139,10 +139,11 @@ export default {
             JiaCengPaiShuiFa,
             JiaCengHuiQiFa,
           } = obj;
+
           infoArr.push({
             JiShi,
             WenDu,
-            YaLi,
+            YaLi:YaLi.toFixed(4),
             ZhuanSu,
           });
         }
@@ -310,7 +311,6 @@ export default {
 
     .info-box {
       @include tl(895px, 255px);
-      // border: 1px solid red;
     }
   }
 }

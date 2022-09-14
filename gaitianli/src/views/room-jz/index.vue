@@ -18,15 +18,13 @@
             </Pipe>
           </div>
           <div class="box-4">
-            <Pipe  :state='item.JiaCengJinShuiFa' :w='0.162'>
+            <Pipe :state='item.JiaCengJinShuiFa' :w='0.162'>
             </Pipe>
             <Pipe :state='item.JiaCengHuiQiFa' :w='0.4'>
               <Vale :state='item.JiaCengHuiQiFa' />
             </Pipe>
-
-
           </div>
-          <div class="box-5" :class="{'active':item.JiaCengHuiQiFa || item.JiaCengJinShuiFa || item.JiaCengPaiShuiFa}"  >
+          <div class="box-5" :class="{'active':item.JiaCengHuiQiFa || item.JiaCengJinShuiFa || item.JiaCengPaiShuiFa}">
             <Pipe :state='item.JiaCengHuiQiFa || item.JiaCengJinShuiFa || item.JiaCengPaiShuiFa' :w='0.375' />
           </div>
 
@@ -40,7 +38,9 @@
           </div>
 
           <div class="box-v-3" :class="{'active':item.JiaCengPaiShuiFa}">
-            <Pipe :state='item.JiaCengPaiShuiFa'> <Vale :state='item.JiaCengPaiShuiFa' />  </Pipe>
+            <Pipe :state='item.JiaCengPaiShuiFa'>
+              <Vale :state='item.JiaCengPaiShuiFa' />
+            </Pipe>
           </div>
           <div class="box-v-4" :class="{'active':false}">
             <Pipe :w='0.235' :state='item.JinYeFa || item.ChuYeFa'></Pipe>
@@ -54,7 +54,9 @@
             </Pipe>
           </div>
           <div class="box-v-6" :class="{'active':item.PaiXieFa}">
-            <Pipe :state='item.PaiXieFa'>  <Vale :state='item.PaiXieFa' :ml='-0.05' /> </Pipe>
+            <Pipe :state='item.PaiXieFa'>
+              <Vale :state='item.PaiXieFa' :ml='-0.05' />
+            </Pipe>
           </div>
           <div class="box-v-7">
             <Pipe :state='item.PaiQiFa'></Pipe>
@@ -96,7 +98,7 @@ export default {
       f1: 1,
       infoArr: [],
       list: [],
-      mlList: [0.1, 1.28, 1.2, 1.15],
+      mlList: [0.1, 1.48, 1.45, 1.42],
       l6: 3,
       l7: 0,
       l8: 0,
@@ -144,7 +146,7 @@ export default {
           infoArr.push({
             JiShi,
             WenDu,
-            YaLi,
+            YaLi: YaLi.toFixed(4),
             ZhuanSu,
           });
         }
@@ -274,7 +276,6 @@ export default {
           width: 35px;
           @include tl(218px, 259px);
           @include tr-90;
-         
         }
         .box-v-8 {
           width: 382px;
@@ -312,7 +313,6 @@ export default {
 
     .info-box {
       @include tl(895px, 255px);
-      // border: 1px solid red;
     }
   }
 }

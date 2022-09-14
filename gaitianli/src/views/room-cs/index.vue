@@ -1,33 +1,101 @@
 <template>
   <div class="mie-jun">
     <div class="main-body">
+      <div class="com-box s1">
+        <div class="item" v-for="(item,idx) in s1List" :key="idx">
+          <span>{{item.name}}：</span>
+          <div>
+            <span>
+              {{d[item.mkey]}}
+            </span>
+            <span v-if="idx == 1">℃</span>
+          </div>
+        </div>
+      </div>
+      <div class="com-box s2">
+        <div class="item" v-for="(item,idx) in c1List" :key="idx">
+          <span>{{item.name}}：</span>
+          <div>
+            <span>
+              {{d[item.mkey]}}
+            </span>
+            <span v-if="idx == 1">℃</span>
+          </div>
+        </div>
+      </div>
 
+      <div class="com-box s3">
+        <span>工作状态：</span>
+        <span class="state" :class="{'active':d.ZiDongShouDongZhuangTai}">{{d.ZiDongShouDongZhuangTai ? '自动状态' :'手动状态'}} ，</span>
+        <span class="state" :class="{'active':d.YunXingBiaoZhi}">{{d.YunXingBiaoZhi ? '运行状态' :'停止状态'}}</span>
+      </div>
+      <div class="s4">
+        <InfoText :state="d.JinShuiDianCiFa" />
+      </div>
+      <div class="s5">
+        <InfoText :state="d.YuanShuiBeng" />
+      </div>
+      <div class="s6">
+        <InfoText :state="d.YiJiGaoYaBeng" />
+      </div>
+      <div class="s7">
+        <InfoText :state="d.ErJiGaoYaBeng" />
+      </div>
+      <div class="s8">
+        <InfoText :state="d.HengYaGongShuiBeng" />
+      </div>
+
+      <div class="s9">
+        <Vale :state="d.YiJiYaLiDi" />
+      </div>
+      <div class="s10">
+        <Vale :state="d.YiJiYaLiGao" />
+      </div>
+      <div class="s11">
+        <Vale :state="d.ErJiYaLiGao" />
+      </div>
     </div>
+
   </div>
 </template>
 
 <script>
-import Vale from "@/components/vale.vue";
+import Vale from "./Vale.vue";
 import Pipe from "@/components/Pipe.vue";
 import InfoBar from "./InfoBar.vue";
 import test from "./test";
+import InfoText from "./InfoText.vue";
 export default {
   data() {
     return {
-      f1: 1,
-      infoArr: [],
-      list: [],
-      mlList: [0.1, 1.32, 1.32, 1.32],
-      l6: 3,
-      l7: 0,
-      l8: 0,
-      l9: 0,
+      d: {},
+      s1List: [
+        {
+          name: "液位",
+          mkey: "YuanShuiXiangDangQianYeWei",
+        },
+        {
+          name: "温度",
+          mkey: "YuanShuiXiangWenDu",
+        },
+      ],
+      c1List: [
+        {
+          name: "液位",
+          mkey: "ChunShuiShuiXiangYeWei",
+        },
+        {
+          name: "温度",
+          mkey: "ChunShuiXiangWenDu",
+        },
+      ],
     };
   },
   components: {
     Vale,
     Pipe,
     InfoBar,
+    InfoText,
   },
   created() {
     this.initData();
@@ -41,12 +109,10 @@ export default {
         }
         let res = await this.$get("/ChunShuiXiTongList");
         let { chunShuiXiTongEntity } = res;
-        chunShuiXiTongEntity = test;
+        this.d = test;
         console.log(chunShuiXiTongEntity);
 
-        
-
-        await this.awaitTime(5000);
+        await this.awaitTime(500000);
       }
     },
 
@@ -73,6 +139,7 @@ export default {
   display: flex;
   justify-content: space-between;
   box-sizing: border-box;
+  font-weight: 600;
 }
 @mixin wh($w, $h) {
   width: $w;
@@ -86,7 +153,7 @@ export default {
   width: 1920px;
   height: 1080px;
   box-sizing: border-box;
-  background: url("../../../public/gaitianli/room-cs.png") center no-repeat;
+  background: url("../../../public/gaitianli/room-cs.jpg") center no-repeat;
   background-size: contain;
   position: relative;
   font-size: 10px;
@@ -95,105 +162,61 @@ export default {
     position: absolute;
     width: 100%;
     height: 100%;
-    // border: 1px solid red;
     .active {
       z-index: 10;
     }
-    .section-box {
-      @include tl(130px, 179px);
-      .section-1 {
-        position: relative;
-        // border: 1px solid red;
-        width: 400px;
-        height: 689px;
-        box-sizing: border-box;
-        .box-3 {
-          @include tl(174px, 22px);
-        }
-
-        .box-4 {
-          @include tl(259px, 288px);
-        }
-        .box-5 {
-          @include tl(386px, 70px);
-        }
-
-        .box-v-1 {
-          width: 395px;
-          @include tl(579px, 22px);
-          @include tr-90;
-        }
-
-        .box-v-2 {
-          width: 300px;
-          @include tl(689px, 70px);
-          @include tr-90;
-        }
-
-        .box-v-3 {
-          width: 255px;
-          @include tr-90;
-          @include tl(652px, 121px);
-        }
-        .box-v-4 {
-          @include tr-90;
-          @include tl(217px, 165px);
-          width: 184px;
-        }
-        .box-v-5 {
-          width: 212px;
-          @include tr-90;
-          transform: rotate(90deg);
-          @include tl(-2px, 238px);
-        }
-        .box-v-6 {
-          width: 190px;
-          @include tl(425px, 245px);
-          @include tr-90;
-          transform: rotate(90deg);
-        }
-        .box-v-7 {
-          width: 35px;
-          @include tl(218px, 259px);
-          @include tr-90;
-        }
-        .box-v-8 {
-          width: 382px;
-          @include tl(652px, 308px);
-          @include tr-90;
-        }
+    .com-box {
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      font-size: 16px;
+      font-weight: 600;
+      .item {
+        display: flex;
+      }
+    }
+    .s1 {
+      @include tl(207px, 355px);
+    }
+    .s2 {
+      @include tl(805px, 655px);
+    }
+    .s3 {
+      flex-direction: row;
+      @include tl(107px, 795px);
+      font-size: 24px;
+      .state {
+        color: red;
+      }
+      .active {
+        color: green;
       }
     }
 
-    .box-1 {
-      width: 1587px;
-      @include tl(117px, 175px);
+    .s4 {
+      @include tl(167px, 255px);
     }
-    .box-2 {
-      width: 1587px;
-      @include tl(152px, 175px);
+    .s5 {
+      @include tl(387px, 705px);
     }
-
-    .box-6 {
-      width: 1587px;
-      @include tl(707px, 175px);
+    .s6 {
+      @include tl(680px, 1005px);
     }
-    .box-7 {
-      width: 1587px;
-      @include tl(743px, 175px);
+    .s7 {
+      @include tl(677px, 405px);
     }
-    .box-8 {
-      width: 1587px;
-      @include tl(780px, 175px);
+    .s8 {
+      @include tl(982px, 1005px);
     }
-    .box-9 {
-      width: 1587px;
-      @include tl(817px, 175px);
+    .s9 {
+      @include tl(506px, 1125px);
     }
-
-    .info-box {
-      @include tl(895px, 255px);
-      // border: 1px solid red;
+    .s10 {
+      @include tl(506px, 845px);
+    }
+    .s11 {
+      @include tl(686px, 208px);
+      transform: rotate(-90deg);
     }
   }
 }
