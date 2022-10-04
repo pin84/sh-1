@@ -170,7 +170,7 @@ export default {
       this.list1 = list;
       setTimeout(() => {
         this.isDoneData = true;
-      });
+      },100);
     },
   },
 };

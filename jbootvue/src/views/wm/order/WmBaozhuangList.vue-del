@@ -1,0 +1,328 @@
+<template>
+  <a-card :bordered="false">
+    <!-- 查询区域 -->
+    <div class="table-page-search-wrapper">
+      <a-form layout="inline" @keyup.enter.native="searchQuery">
+        <a-row :gutter="24">
+          <a-col :xl="6" :lg="7" :md="8" :sm="24">
+            <a-form-item label="包装辅料名称">
+              <a-input placeholder="请输入包装辅料名称" v-model="queryParam.baozhuangName"></a-input>
+            </a-form-item>
+          </a-col>
+          <a-col :xl="6" :lg="7" :md="8" :sm="24">
+            <span style="float: left;overflow: hidden;" class="table-page-search-submitButtons">
+              <a-button type="primary" @click="searchQuery" icon="search">查询</a-button>
+              <a-button type="primary" @click="searchReset" icon="reload" style="margin-left: 8px">重置</a-button>
+              <a @click="handleToggleSearch" style="margin-left: 8px">
+                {{ toggleSearchStatus ? '收起' : '展开' }}
+                <a-icon :type="toggleSearchStatus ? 'up' : 'down'"/>
+              </a>
+            </span>
+          </a-col>
+        </a-row>
+      </a-form>
+    </div>
+    <!-- 查询区域-END -->
+
+    <!-- 操作按钮区域 -->
+    <div class="table-operator">
+      <a-button @click="handleAdd" type="primary" icon="plus">新增</a-button>
+      <a-button type="primary" icon="download" @click="handleExportXls('包装辅料管理')">导出</a-button>
+      <a-upload name="file" :showUploadList="false" :multiple="false" :headers="tokenHeader" :action="importExcelUrl" @change="handleImportExcel">
+        <a-button type="primary" icon="import">导入</a-button>
+      </a-upload>
+      <!-- 高级查询区域 -->
+      <j-super-query :fieldList="superFieldList" ref="superQueryModal" @handleSuperQuery="handleSuperQuery"></j-super-query>
+      <a-dropdown v-if="selectedRowKeys.length > 0">
+        <a-menu slot="overlay">
+          <a-menu-item key="1" @click="batchDel"><a-icon type="delete"/>删除</a-menu-item>
+        </a-menu>
+        <a-button style="margin-left: 8px"> 批量操作 <a-icon type="down" /></a-button>
+      </a-dropdown>
+    </div>
+
+    <!-- table区域-begin -->
+    <div>
+      <div class="ant-alert ant-alert-info" style="margin-bottom: 16px;">
+        <i class="anticon anticon-info-circle ant-alert-icon"></i> 已选择 <a style="font-weight: 600">{{ selectedRowKeys.length }}</a>项
+        <a style="margin-left: 24px" @click="onClearSelected">清空</a>
+      </div>
+
+      <a-table
+        ref="table"
+        size="middle"
+        :scroll="{x:true}"
+        bordered
+        rowKey="id"
+        :columns="columns"
+        :dataSource="dataSource"
+        :pagination="ipagination"
+        :loading="loading"
+        :rowSelection="{selectedRowKeys: selectedRowKeys, onChange: onSelectChange}"
+        class="j-table-force-nowrap"
+        @change="handleTableChange">
+
+        <template slot="htmlSlot" slot-scope="text">
+          <div v-html="text"></div>
+        </template>
+        <template slot="imgSlot" slot-scope="text,record">
+          <span v-if="!text" style="font-size: 12px;font-style: italic;">无图片</span>
+          <img v-else :src="getImgView(text)" :preview="record.id" height="25px" alt="" style="max-width:80px;font-size: 12px;font-style: italic;"/>
+        </template>
+        <template slot="fileSlot" slot-scope="text">
+          <span v-if="!text" style="font-size: 12px;font-style: italic;">无文件</span>
+          <a-button
+            v-else
+            :ghost="true"
+            type="primary"
+            icon="download"
+            size="small"
+            @click="downloadFile(text)">
+            下载
+          </a-button>
+        </template>
+
+        <span slot="action" slot-scope="text, record">
+          <a @click="handleEdit(record)">编辑</a>
+
+          <a-divider type="vertical" />
+          <a-dropdown>
+            <a class="ant-dropdown-link">更多 <a-icon type="down" /></a>
+            <a-menu slot="overlay">
+              <a-menu-item>
+                <a @click="handleDetail(record)">详情</a>
+              </a-menu-item>
+              <a-menu-item>
+                <a-popconfirm title="确定删除吗?" @confirm="() => handleDelete(record.id)">
+                  <a>删除</a>
+                </a-popconfirm>
+              </a-menu-item>
+            </a-menu>
+          </a-dropdown>
+        </span>
+
+      </a-table>
+    </div>
+
+    <wm-baozhuang-modal ref="modalForm" @ok="modalFormOk"></wm-baozhuang-modal>
+  </a-card>
+</template>
+
+<script>
+
+  import '@/assets/less/TableExpand.less'
+  import { mixinDevice } from '@/utils/mixin'
+  import { JeecgListMixin } from '@/mixins/JeecgListMixin'
+  import WmBaozhuangModal from './modules/WmBaozhuangModal'
+  import {filterMultiDictText} from '@/components/dict/JDictSelectUtil'
+
+  export default {
+    name: 'WmBaozhuangList',
+    mixins:[JeecgListMixin, mixinDevice],
+    components: {
+      WmBaozhuangModal
+    },
+    data () {
+      return {
+        description: '包装辅料管理管理页面',
+        // 表头
+        columns: [
+          {
+            title: '#',
+            dataIndex: '',
+            key:'rowIndex',
+            width:60,
+            align:"center",
+            customRender:function (t,r,index) {
+              return parseInt(index)+1;
+            }
+          },
+          {
+            title:'包装辅料名称',
+            align:"center",
+            sorter: true,
+            dataIndex: 'baozhuangName'
+          },
+          {
+            title:'内盒贴标供应商地址信息',
+            align:"center",
+            dataIndex: 'neihetiebiaoGysDesc'
+          },
+          {
+            title:'创建者',
+            align:"center",
+            dataIndex: 'createBy'
+          },
+          {
+            title:'创建时间',
+            align:"center",
+            dataIndex: 'createTime',
+            customRender:function (text) {
+              return !text?"":(text.length>10?text.substr(0,10):text)
+            }
+          },
+          {
+            title:'更新者',
+            align:"center",
+            dataIndex: 'updateBy'
+          },
+          {
+            title:'更新时间',
+            align:"center",
+            dataIndex: 'updateTime',
+            customRender:function (text) {
+              return !text?"":(text.length>10?text.substr(0,10):text)
+            }
+          },
+          {
+            title: '操作',
+            dataIndex: 'action',
+            align:"center",
+            fixed:"right",
+            width:147,
+            scopedSlots: { customRender: 'action' }
+          }
+        ],
+        url: {
+          list: "/order/wmBaozhuang/list",
+          delete: "/order/wmBaozhuang/delete",
+          deleteBatch: "/order/wmBaozhuang/deleteBatch",
+          exportXlsUrl: "/order/wmBaozhuang/exportXls",
+          importExcelUrl: "order/wmBaozhuang/importExcel",
+          
+        },
+        dictOptions:{},
+        superFieldList:[],
+      }
+    },
+    created() {
+      this.$set(this.dictOptions, 'maduanduiyingbiaoIsGys', [{text:'是',value:'Y'},{text:'否',value:'N'}])
+      this.$set(this.dictOptions, 'neiliyinshuaIsGys', [{text:'是',value:'Y'},{text:'否',value:'N'}])
+      this.$set(this.dictOptions, 'bubiaoIsGys', [{text:'是',value:'Y'},{text:'否',value:'N'}])
+      this.$set(this.dictOptions, 'chengfenbiaoIsGys', [{text:'是',value:'Y'},{text:'否',value:'N'}])
+      this.$set(this.dictOptions, 'changguidiaopaiIsGys', [{text:'是',value:'Y'},{text:'否',value:'N'}])
+      this.$set(this.dictOptions, 'shouquanpinpaiIsGys', [{text:'是',value:'Y'},{text:'否',value:'N'}])
+      this.$set(this.dictOptions, 'teshudiaopaiIsGys', [{text:'是',value:'Y'},{text:'否',value:'N'}])
+      this.$set(this.dictOptions, 'jieshuangshengIsGys', [{text:'是',value:'Y'},{text:'否',value:'N'}])
+      this.$set(this.dictOptions, 'fangmeiIsGys', [{text:'是',value:'Y'},{text:'否',value:'N'}])
+      this.$set(this.dictOptions, 'jiaodaiIsGys', [{text:'是',value:'Y'},{text:'否',value:'N'}])
+      this.$set(this.dictOptions, 'jiaodaitieIsGys', [{text:'是',value:'Y'},{text:'否',value:'N'}])
+      this.$set(this.dictOptions, 'neiheIsGys', [{text:'是',value:'Y'},{text:'否',value:'N'}])
+      this.$set(this.dictOptions, 'neihetiebiaoIsGys', [{text:'是',value:'Y'},{text:'否',value:'N'}])
+      this.$set(this.dictOptions, 'chandibiaoIsGys', [{text:'是',value:'Y'},{text:'否',value:'N'}])
+      this.$set(this.dictOptions, 'fangdaobiaoIsGys', [{text:'是',value:'Y'},{text:'否',value:'N'}])
+      this.$set(this.dictOptions, 'softtagIsGys', [{text:'是',value:'Y'},{text:'否',value:'N'}])
+      this.$set(this.dictOptions, 'waixiangIsGys', [{text:'是',value:'Y'},{text:'否',value:'N'}])
+      this.$set(this.dictOptions, 'waixiangtieIsGys', [{text:'是',value:'Y'},{text:'否',value:'N'}])
+      this.$set(this.dictOptions, 'guagouIsGys', [{text:'是',value:'Y'},{text:'否',value:'N'}])
+      this.$set(this.dictOptions, 'guagoutieIsGys', [{text:'是',value:'Y'},{text:'否',value:'N'}])
+      this.$set(this.dictOptions, 'kaobeizhiIsGys', [{text:'是',value:'Y'},{text:'否',value:'N'}])
+    this.getSuperFieldList();
+    },
+    computed: {
+      importExcelUrl: function(){
+        return `${window._CONFIG['domianURL']}/${this.url.importExcelUrl}`;
+      },
+    },
+    methods: {
+      initDictConfig(){
+      },
+      getSuperFieldList(){
+        let fieldList=[];
+        fieldList.push({type:'string',value:'baozhuangName',text:'包装辅料名称',dictCode:''})
+        fieldList.push({type:'string',value:'maduanduiyingbiaoPic',text:'码段楦长对应表图片',dictCode:''})
+        fieldList.push({type:'string',value:'maduanduiyingbiaoDesc',text:'码段楦长对应表说明',dictCode:''})
+        fieldList.push({type:'switch',value:'maduanduiyingbiaoIsGys',text:'是否指定码段楦长供应商'})
+        fieldList.push({type:'string',value:'maduanduiyingbiaoGysDesc',text:'指定供应商地址信息',dictCode:''})
+        fieldList.push({type:'string',value:'neiliyinshuaPic',text:'内里印刷转印图片',dictCode:''})
+        fieldList.push({type:'string',value:'neiliyinshuaDesc',text:'内里印刷转印说明',dictCode:''})
+        fieldList.push({type:'switch',value:'neiliyinshuaIsGys',text:'是否指定内里印刷转印供应商'})
+        fieldList.push({type:'string',value:'neiliyinshuaGysDesc',text:'内里印刷转印指定供应商地址信息',dictCode:''})
+        fieldList.push({type:'string',value:'bubiaoPic',text:'织唛标（布标）图片',dictCode:''})
+        fieldList.push({type:'string',value:'bubiaoDesc',text:'织唛标（布标）说明',dictCode:''})
+        fieldList.push({type:'switch',value:'bubiaoIsGys',text:'织唛标（布标）是否指定供应商'})
+        fieldList.push({type:'string',value:'bubiaoGysDesc',text:'织唛标（布标）供应商地址信息',dictCode:''})
+        fieldList.push({type:'string',value:'chengfenbiaoPic',text:'成份标图片',dictCode:''})
+        fieldList.push({type:'string',value:'chengfenbiaoDesc',text:'成份标说明',dictCode:''})
+        fieldList.push({type:'switch',value:'chengfenbiaoIsGys',text:'成份标是否指定供应商'})
+        fieldList.push({type:'string',value:'chengfenbiaoGysDesc',text:'成份标供应商地址信息',dictCode:''})
+        fieldList.push({type:'string',value:'changguidiaopaiPic',text:'常规吊牌图片',dictCode:''})
+        fieldList.push({type:'string',value:'changguidiaopaiDesc',text:'常规吊牌说明',dictCode:''})
+        fieldList.push({type:'switch',value:'changguidiaopaiIsGys',text:'常规吊牌是否指定供应商'})
+        fieldList.push({type:'string',value:'changguidiaopaiGysDesc',text:'常规吊牌供应商地址信息',dictCode:''})
+        fieldList.push({type:'string',value:'shouquanpinpaiPic',text:'授权品牌吊牌图片',dictCode:''})
+        fieldList.push({type:'string',value:'shouquanpinpaiDesc',text:'授权品牌吊牌说明',dictCode:''})
+        fieldList.push({type:'switch',value:'shouquanpinpaiIsGys',text:'授权品牌吊牌是否指定供应商'})
+        fieldList.push({type:'string',value:'shouquanpinpaiGysDesc',text:'授权品牌吊牌供应商地址信息',dictCode:''})
+        fieldList.push({type:'string',value:'teshudiaopaiPic',text:'特殊吊牌图片',dictCode:''})
+        fieldList.push({type:'string',value:'teshudiaopaiDesc',text:'特殊吊牌说明',dictCode:''})
+        fieldList.push({type:'switch',value:'teshudiaopaiIsGys',text:'特殊吊牌是否指定供应商'})
+        fieldList.push({type:'string',value:'teshudiaopaiGysDesc',text:'特殊吊牌供应商地址信息',dictCode:''})
+        fieldList.push({type:'string',value:'jieshuangshengPic',text:'结双绳图片',dictCode:''})
+        fieldList.push({type:'string',value:'jieshuangshengDesc',text:'结双绳说明',dictCode:''})
+        fieldList.push({type:'switch',value:'jieshuangshengIsGys',text:'结双绳是否指定供应商'})
+        fieldList.push({type:'string',value:'jieshuangshengGysDesc',text:'结双绳供应商地址信息',dictCode:''})
+        fieldList.push({type:'string',value:'fangmeiPic',text:'防霉类型图片',dictCode:''})
+        fieldList.push({type:'string',value:'fangmeiDesc',text:'防霉类型说明',dictCode:''})
+        fieldList.push({type:'switch',value:'fangmeiIsGys',text:'防霉类型是否指定供应商'})
+        fieldList.push({type:'string',value:'fangmeiGysDesc',text:'防霉类型供应商地址信息',dictCode:''})
+        fieldList.push({type:'string',value:'jiaodaiPic',text:'胶带图片',dictCode:''})
+        fieldList.push({type:'string',value:'jiaodaiDesc',text:'胶带说明',dictCode:''})
+        fieldList.push({type:'switch',value:'jiaodaiIsGys',text:'胶带是否指定供应商'})
+        fieldList.push({type:'string',value:'jiaodaiGysDesc',text:'胶带供应商地址信息',dictCode:''})
+        fieldList.push({type:'string',value:'jiaodaitiePic',text:'胶袋贴图片',dictCode:''})
+        fieldList.push({type:'string',value:'jiaodaitieDesc',text:'胶袋贴说明',dictCode:''})
+        fieldList.push({type:'switch',value:'jiaodaitieIsGys',text:'胶袋贴是否指定供应商'})
+        fieldList.push({type:'string',value:'jiaodaitieGysDesc',text:'胶袋贴供应商地址信息',dictCode:''})
+        fieldList.push({type:'string',value:'neihePic',text:'内盒图片',dictCode:''})
+        fieldList.push({type:'string',value:'neiheDesc',text:'内盒说明',dictCode:''})
+        fieldList.push({type:'switch',value:'neiheIsGys',text:'内盒是否指定供应商'})
+        fieldList.push({type:'string',value:'neiheGysDesc',text:'内盒供应商地址信息',dictCode:''})
+        fieldList.push({type:'string',value:'neihetiebiaoPic',text:'内盒贴标图片',dictCode:''})
+        fieldList.push({type:'string',value:'neihetiebiaoDesc',text:'内盒贴标说明',dictCode:''})
+        fieldList.push({type:'switch',value:'neihetiebiaoIsGys',text:'内盒贴标是否指定供应商'})
+        fieldList.push({type:'string',value:'neihetiebiaoGysDesc',text:'内盒贴标供应商地址信息',dictCode:''})
+        fieldList.push({type:'string',value:'chandibiaoPic',text:'产地标图片',dictCode:''})
+        fieldList.push({type:'string',value:'chandibiaoDesc',text:'产地标说明',dictCode:''})
+        fieldList.push({type:'switch',value:'chandibiaoIsGys',text:'产地标是否指定供应商'})
+        fieldList.push({type:'string',value:'chandibiaoGysDesc',text:'产地标供应商地址信息',dictCode:''})
+        fieldList.push({type:'string',value:'fangdaobiaoPic',text:'防盗标图片',dictCode:''})
+        fieldList.push({type:'string',value:'fangdaobiaoDesc',text:'防盗标说明',dictCode:''})
+        fieldList.push({type:'switch',value:'fangdaobiaoIsGys',text:'防盗标是否指定供应商'})
+        fieldList.push({type:'string',value:'fangdaobiaoGysDesc',text:'防盗标供应商地址',dictCode:''})
+        fieldList.push({type:'string',value:'softtagPic',text:'softTag图片',dictCode:''})
+        fieldList.push({type:'string',value:'softtagDesc',text:'softTag说明',dictCode:''})
+        fieldList.push({type:'switch',value:'softtagIsGys',text:'softTag是否指定供应商'})
+        fieldList.push({type:'string',value:'softtagGysDesc',text:'softTag供应商地址信息',dictCode:''})
+        fieldList.push({type:'string',value:'waixiangPic',text:'外箱图片',dictCode:''})
+        fieldList.push({type:'string',value:'waixiangDesc',text:'外箱说明',dictCode:''})
+        fieldList.push({type:'switch',value:'waixiangIsGys',text:'外箱是否指定供应商'})
+        fieldList.push({type:'string',value:'waixiangGysDesc',text:'外箱供应商地址信息',dictCode:''})
+        fieldList.push({type:'string',value:'waixiangtiePic',text:'外箱贴图片',dictCode:''})
+        fieldList.push({type:'string',value:'waixiangtieDesc',text:'外箱贴说明',dictCode:''})
+        fieldList.push({type:'switch',value:'waixiangtieIsGys',text:'外箱贴是否指定供应商'})
+        fieldList.push({type:'string',value:'waixiangtieGysDesc',text:'外箱贴供应商地址信息',dictCode:''})
+        fieldList.push({type:'string',value:'guagouPic',text:'挂钩图片',dictCode:''})
+        fieldList.push({type:'string',value:'guagouDesc',text:'挂钩说明',dictCode:''})
+        fieldList.push({type:'switch',value:'guagouIsGys',text:'挂钩是否指定供应商'})
+        fieldList.push({type:'string',value:'guagouGysDesc',text:'挂钩供应商地址信息',dictCode:''})
+        fieldList.push({type:'string',value:'guagoutiePic',text:'挂钩贴图片',dictCode:''})
+        fieldList.push({type:'string',value:'guagoutieDesc',text:'挂钩贴说明',dictCode:''})
+        fieldList.push({type:'switch',value:'guagoutieIsGys',text:'挂钩贴是否指定供应商'})
+        fieldList.push({type:'string',value:'guagoutieGysDesc',text:'挂钩贴供应商地址信息',dictCode:''})
+        fieldList.push({type:'string',value:'kaobeizhiPic',text:'拷贝纸图片',dictCode:''})
+        fieldList.push({type:'string',value:'kaobeizhiDesc',text:'拷贝纸说明',dictCode:''})
+        fieldList.push({type:'switch',value:'kaobeizhiIsGys',text:'拷贝纸是否指定供应商'})
+        fieldList.push({type:'string',value:'kaobeizhiGysDesc',text:'拷贝纸供应商地址信息',dictCode:''})
+        fieldList.push({type:'string',value:'createBy',text:'创建者',dictCode:''})
+        fieldList.push({type:'date',value:'createTime',text:'创建时间'})
+        fieldList.push({type:'string',value:'updateBy',text:'更新者',dictCode:''})
+        fieldList.push({type:'date',value:'updateTime',text:'更新时间'})
+        this.superFieldList = fieldList
+      }
+    }
+  }
+</script>
+<style scoped>
+  @import '~@assets/less/common.less';
+</style>

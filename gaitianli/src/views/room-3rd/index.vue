@@ -73,16 +73,16 @@
 
     </div>
 
-    <div class="block-box">
+    <div class="block-box" v-if="isInit">
       <div class="box-item ml_2">
-        <Block :d='td7' :TCStyle='TCStyle[0]' />
+        <Block :d='td7' :TCStyle='TCStyle[0]' :mrArr_40='[13]' />
         <div class="middle-width"></div>
-        <Block :d='td8' :TCStyle='TCStyle[1]' :mrArr_20='intervalAll42' :mrArr_40='[27]' />
+        <Block :d='td8' :TCStyle='TCStyle[1]' :mrArr_20='intervalAll56' :mrArr_40='[27]' />
       </div>
       <div class="box-item ml_2">
-        <Block :d='td9' :TCStyle='TCStyle[2]' />
+        <Block :d='td9' :TCStyle='TCStyle[2]' :mrArr_40='[13]'  />
         <div class="middle-width"></div>
-        <Block :d='td10' :TCStyle='TCStyle[3]' :mrArr_20='intervalAll42' :mrArr_40='[27]' />
+        <Block :d='td10' :TCStyle='TCStyle[3]' :mrArr_20='intervalAll56' :mrArr_40='[27]' />
       </div>
 
       <div class="box-item">
@@ -107,12 +107,12 @@
         <div class="middle-width"></div>
         <Block :d='td18' :TCStyle='TCStyle[11]' :mrArr_20='intervalAll42' :mrArr_40='[27]' />
       </div>
-
     </div>
+
+  
   </div>
 </template>
 <script>
-// import td from "./testData";
 import dh from "./dh.js";
 import kuDH from "@/views/kuDH.js";
 import ConveyorBox from "@/views/ConveyorBox.vue";
@@ -121,14 +121,17 @@ import MyCanvas from "@/components/MyCanvas.vue";
 export default {
   data() {
     return {
+      isInit: false,
       isBreak: false,
       infoList: [],
       dayList: [], //天数
       tiShengJi7Entity: {},
       tiShengJi8Entity: {},
       TCStyle: [], //天车和抓手的数据
-      intervalAll56: [6, 13, 20, 34, 41, 48],
-      intervalAll42: [6, 13, 20, 34],
+      intervalAll67: [9, 16, 23, 30, 37, 44, 51, 58],
+      intervalAll56: [6, 13, 20, 27, 34, 41, 48],
+      intervalAll42: [6, 13, 20, 27, 34],
+      intervalAll49: [6, 13, 20, 34, 41],
       ts: 0,
       d1: [],
       d1GD: [],
@@ -189,7 +192,6 @@ export default {
     this.initData();
     this.initTSJ();
 
-    this.getTCData();
     this.getDays();
   },
 
@@ -199,621 +201,180 @@ export default {
         if (this.isBreak) {
           break;
         }
-        let res = await this.$get("TianCheKuangDbList/3");
-        console.log("天数-----", res.list);
-        this.dayList = res.list;
-        await this.awaitTime(30000);
+
+        try {
+          let res = await this.$get("TianCheKuangDbList/3");
+          let { list } = res;
+          console.log("天数-----", res);
+          this.dayList = list || [];
+          await this.getTCData();
+
+          this.isInit = true;
+        } catch (error) {}
+
+        await this.awaitTime(1500);
       }
     },
 
     //天车
     async getTCData() {
-      let arr = [
-        {
-          ID: 21,
-          KuHao: 23,
-          Lie: 1,
-          Ceng: 1,
-          Days: 48,
-        },
-        {
-          ID: 21,
-          KuHao: 23,
-          Lie: 1,
-          Ceng: 2,
-          Days: 47,
-        },
-        {
-          ID: 22,
-          KuHao: 23,
-          Lie: 2,
-          Ceng: 1,
-          Days: 49,
-        },
-        {
-          ID: 23,
-          KuHao: 23,
-          Lie: 1,
-          Ceng: 1,
-          Days: 43,
-        },
-        {
-          ID: 26,
-          KuHao: 24,
-          Lie: 22,
-          Ceng: 1,
-          Days: 49,
-        },
-        {
-          ID: 29,
-          KuHao: 23,
-          Lie: -2,
-          Ceng: 1,
-          Days: 49,
-        },
-        {
-          ID: 30,
-          KuHao: 23,
-          Lie: 20,
-          Ceng: 1,
-          Days: 48,
-        },
-        {
-          ID: 30,
-          KuHao: 23,
-          Lie: 10,
-          Ceng: 1,
-          Days: 48,
-        },
-      ];
-      // this.dayList = arr;
+      let res = await this.$get("/TianCheList/3");
+      let tc = res.list || [];
+      // console.log('---天车---',tc);
 
-      let tstc = [
-        {
-          ID: 7,
-          YunXingZhuangTai: 1,
-          DongZuoZhuangTai: 2,
-          ZhuaShouZhuangTai: 1,
-          X1: 16136,
-          X2: 16136,
-          Y1: 6762,
-          Ceng_Num_m3: 6,
-          Ceng_Num1: 6,
-          Ceng_Num2: 3,
-        },
-        {
-          ID: 8,
-          YunXingZhuangTai: 1,
-          DongZuoZhuangTai: 2,
-          ZhuaShouZhuangTai: 1,
-          X1: 1328,
-          X2: 1326,
-          Ceng_Num_m4: 6,
-          Ceng_Num29: 10,
-          Ceng_Num30: 10,
-          Ceng_Num31: 10,
-          Ceng_Num32: 10,
-          Ceng_Num33: 10,
-          Ceng_Num34: 10,
-          Ceng_Num35: 10,
-          Ceng_Num36: 5,
-        },
-        {
-          ID: 9,
-          YunXingZhuangTai: 1,
-          DongZuoZhuangTai: 2,
-          ZhuaShouZhuangTai: 1,
-          X1: 2098,
-          X2: 2102,
-        },
-        {
-          ID: 10,
-          YunXingZhuangTai: 1,
-          DongZuoZhuangTai: 2,
-          ZhuaShouZhuangTai: 1,
-          X1: -21781,
-          X2: -21791,
-        },
-        {
-          ID: 11,
-          YunXingZhuangTai: 1,
-          DongZuoZhuangTai: 2,
-          ZhuaShouZhuangTai: 1,
-          X1: 2779,
-          X2: 2776,
-          Y1: 1,
-          Ceng_Num15: 16,
-          Ceng_Num16: 16,
-          Ceng_Num17: 16,
-          Ceng_Num18: 16,
-          Ceng_Num19: 16,
-          Ceng_Num20: 16,
-          Ceng_Num21: 11,
-          Ceng_Num22: 16,
-          Ceng_Num23: 16,
-          Ceng_Num24: 16,
-          Ceng_Num25: 16,
-          Ceng_Num26: 16,
-          Ceng_Num27: 16,
-          Ceng_Num28: 11,
-          Ceng_Num29: 16,
-          Ceng_Num30: 16,
-          Ceng_Num31: 16,
-          Ceng_Num32: 16,
-          Ceng_Num33: 16,
-          Ceng_Num34: 16,
-          Ceng_Num35: 14,
-          Ceng_Num36: 16,
-          Ceng_Num37: 16,
-          Ceng_Num38: 16,
-          Ceng_Num39: 16,
-          Ceng_Num40: 16,
-          Ceng_Num41: 16,
-          Ceng_Num42: 13,
-          Ceng_Num43: 16,
-          Ceng_Num44: 16,
-          Ceng_Num45: 16,
-          Ceng_Num46: 16,
-          Ceng_Num47: 16,
-          Ceng_Num48: 16,
-          Ceng_Num49: 13,
-          Ceng_Num50: 16,
-          Ceng_Num51: 16,
-          Ceng_Num52: 16,
-          Ceng_Num53: 16,
-          Ceng_Num54: 16,
-          Ceng_Num55: 16,
-          Ceng_Num56: 12,
-        },
-        {
-          ID: 12,
-          YunXingZhuangTai: 1,
-          DongZuoZhuangTai: 1,
-          ZhuaShouZhuangTai: 1,
-          X1: -77152,
-          X2: -77144,
-          Y1: 669,
-          Ceng_Num1: 16,
-          Ceng_Num2: 16,
-          Ceng_Num3: 16,
-          Ceng_Num4: 16,
-          Ceng_Num5: 16,
-          Ceng_Num6: 16,
-          Ceng_Num7: 12,
-          Ceng_Num8: 16,
-          Ceng_Num9: 16,
-          Ceng_Num10: 16,
-          Ceng_Num11: 16,
-          Ceng_Num12: 16,
-          Ceng_Num13: 16,
-          Ceng_Num14: 12,
-        },
-        {
-          ID: 13,
-          YunXingZhuangTai: 1,
-          DongZuoZhuangTai: 2,
-          ZhuaShouZhuangTai: 1,
-          X1: -92769,
-          X2: -92758,
-          Ceng_Num15: 16,
-          Ceng_Num16: 16,
-          Ceng_Num17: 16,
-          Ceng_Num18: 16,
-          Ceng_Num19: 16,
-          Ceng_Num20: 16,
-          Ceng_Num21: 7,
-          Ceng_Num22: 16,
-          Ceng_Num23: 16,
-          Ceng_Num24: 16,
-          Ceng_Num25: 16,
-          Ceng_Num26: 16,
-          Ceng_Num27: 16,
-          Ceng_Num28: 7,
-          Ceng_Num29: 16,
-          Ceng_Num30: 16,
-          Ceng_Num31: 16,
-          Ceng_Num32: 16,
-          Ceng_Num33: 16,
-          Ceng_Num34: 16,
-          Ceng_Num35: 10,
-          Ceng_Num36: 16,
-          Ceng_Num37: 16,
-          Ceng_Num38: 16,
-          Ceng_Num39: 16,
-          Ceng_Num40: 16,
-          Ceng_Num41: 16,
-          Ceng_Num42: 11,
-          Ceng_Num43: 16,
-          Ceng_Num44: 16,
-          Ceng_Num45: 16,
-          Ceng_Num46: 16,
-          Ceng_Num47: 16,
-          Ceng_Num48: 16,
-          Ceng_Num49: 11,
-          Ceng_Num50: 16,
-          Ceng_Num51: 16,
-          Ceng_Num52: 16,
-          Ceng_Num53: 16,
-          Ceng_Num54: 16,
-          Ceng_Num55: 16,
-          Ceng_Num56: 8,
-        },
-        {
-          ID: 14,
-          YunXingZhuangTai: 1,
-          DongZuoZhuangTai: 1,
-          ZhuaShouZhuangTai: 1,
-          X1: -77188,
-          X2: -77182,
-          Y1: 661,
-          Ceng_Num1: 16,
-          Ceng_Num2: 16,
-          Ceng_Num3: 16,
-          Ceng_Num4: 16,
-          Ceng_Num5: 16,
-          Ceng_Num6: 16,
-          Ceng_Num7: 9,
-          Ceng_Num8: 16,
-          Ceng_Num9: 16,
-          Ceng_Num10: 16,
-          Ceng_Num11: 16,
-          Ceng_Num12: 16,
-          Ceng_Num13: 16,
-          Ceng_Num14: 8,
-        },
-        {
-          ID: 15,
-          YunXingZhuangTai: 1,
-          DongZuoZhuangTai: 1,
-          ZhuaShouZhuangTai: 1,
-          X1: 159756,
-          X2: 159750,
-          Y1: 729,
-          Ceng_Num1: 16,
-          Ceng_Num2: 16,
-          Ceng_Num3: 16,
-          Ceng_Num4: 16,
-          Ceng_Num5: 16,
-          Ceng_Num6: 16,
-          Ceng_Num7: 15,
-          Ceng_Num8: 16,
-          Ceng_Num9: 16,
-          Ceng_Num10: 16,
-          Ceng_Num11: 16,
-          Ceng_Num12: 16,
-          Ceng_Num13: 16,
-          Ceng_Num14: 13,
-          Ceng_Num15: 16,
-          Ceng_Num16: 16,
-          Ceng_Num17: 16,
-          Ceng_Num18: 16,
-          Ceng_Num19: 16,
-          Ceng_Num20: 16,
-          Ceng_Num21: 13,
-          Ceng_Num22: 16,
-          Ceng_Num23: 16,
-          Ceng_Num24: 16,
-          Ceng_Num25: 16,
-          Ceng_Num26: 16,
-          Ceng_Num27: 16,
-          Ceng_Num28: 14,
-          Ceng_Num29: 16,
-          Ceng_Num30: 16,
-          Ceng_Num31: 16,
-          Ceng_Num32: 16,
-          Ceng_Num33: 16,
-          Ceng_Num34: 16,
-          Ceng_Num35: 12,
-          Ceng_Num36: 16,
-          Ceng_Num37: 16,
-          Ceng_Num38: 16,
-          Ceng_Num39: 16,
-          Ceng_Num40: 16,
-          Ceng_Num41: 16,
-          Ceng_Num42: 10,
-          Ceng_Num43: 16,
-          Ceng_Num44: 16,
-          Ceng_Num45: 13,
-          Ceng_Num46: 16,
-          Ceng_Num47: 16,
-          Ceng_Num48: 16,
-          Ceng_Num49: 16,
-          Ceng_Num50: 16,
-          Ceng_Num51: 16,
-          Ceng_Num52: 16,
-          Ceng_Num53: 16,
-          Ceng_Num54: 16,
-          Ceng_Num55: 16,
-          Ceng_Num56: 10,
-        },
-        {
-          ID: 16,
-          YunXingZhuangTai: 1,
-          DongZuoZhuangTai: 1,
-          ZhuaShouZhuangTai: 1,
-          X1: 1468,
-          X2: 1473,
-          Ceng_Num1: 16,
-          Ceng_Num2: 16,
-          Ceng_Num3: 16,
-          Ceng_Num4: 16,
-          Ceng_Num5: 16,
-          Ceng_Num6: 16,
-          Ceng_Num7: 6,
-          Ceng_Num8: 16,
-          Ceng_Num9: 16,
-          Ceng_Num10: 16,
-          Ceng_Num11: 16,
-          Ceng_Num12: 16,
-          Ceng_Num13: 16,
-          Ceng_Num14: 16,
-        },
-        {
-          ID: 17,
-          YunXingZhuangTai: 1,
-          DongZuoZhuangTai: 1,
-          ZhuaShouZhuangTai: 1,
-          X1: 159730,
-          X2: 159744,
-          Y1: 672,
-          Ceng_Num1: 16,
-          Ceng_Num2: 16,
-          Ceng_Num3: 16,
-          Ceng_Num4: 16,
-          Ceng_Num5: 9,
-          Ceng_Num8: 16,
-          Ceng_Num9: 16,
-          Ceng_Num10: 16,
-          Ceng_Num11: 16,
-          Ceng_Num12: 16,
-          Ceng_Num13: 16,
-          Ceng_Num14: 10,
-          Ceng_Num15: 16,
-          Ceng_Num16: 16,
-          Ceng_Num17: 16,
-          Ceng_Num18: 16,
-          Ceng_Num19: 16,
-          Ceng_Num20: 16,
-          Ceng_Num21: 9,
-          Ceng_Num22: 16,
-          Ceng_Num23: 16,
-          Ceng_Num24: 16,
-          Ceng_Num25: 16,
-          Ceng_Num26: 16,
-          Ceng_Num27: 16,
-          Ceng_Num28: 5,
-          Ceng_Num29: 16,
-          Ceng_Num30: 16,
-          Ceng_Num31: 16,
-          Ceng_Num32: 16,
-          Ceng_Num33: 16,
-          Ceng_Num34: 16,
-          Ceng_Num35: 10,
-          Ceng_Num36: 16,
-          Ceng_Num37: 16,
-          Ceng_Num38: 16,
-          Ceng_Num39: 16,
-          Ceng_Num40: 16,
-          Ceng_Num41: 16,
-          Ceng_Num42: 6,
-          Ceng_Num43: 16,
-          Ceng_Num44: 16,
-          Ceng_Num45: 6,
-          Ceng_Num46: 16,
-          Ceng_Num47: 16,
-          Ceng_Num48: 16,
-          Ceng_Num49: 16,
-          Ceng_Num50: 16,
-          Ceng_Num51: 16,
-          Ceng_Num52: 16,
-          Ceng_Num53: 16,
-          Ceng_Num54: 16,
-          Ceng_Num55: 16,
-          Ceng_Num56: 6,
-        },
-        {
-          ID: 18,
-          YunXingZhuangTai: 1,
-          DongZuoZhuangTai: 1,
-          ZhuaShouZhuangTai: 1,
-          X1: -113186,
-          X2: -113185,
-          Y1: 683,
-          Ceng_Num1: 16,
-          Ceng_Num2: 16,
-          Ceng_Num3: 16,
-          Ceng_Num4: 16,
-          Ceng_Num5: 16,
-          Ceng_Num6: 16,
-          Ceng_Num7: 3,
-          Ceng_Num8: 16,
-          Ceng_Num9: 16,
-          Ceng_Num10: 16,
-          Ceng_Num11: 16,
-          Ceng_Num12: 16,
-          Ceng_Num13: 16,
-        },
-      ];
+        // tc = [
+        //   {
+        //     ID: 17,
+        //     DongZuoZhuangTai: 2,
+        //     X1: -23769,
+        //     X2: -23768,
+        //     Y1: 1500,
+        //     Ceng_Num1: 1,
+        //     Ceng_Num2: 16,
+        //     Ceng_Num3: 16,
+        //     Ceng_Num56: 16,
+        //   },
+        // ];
 
-      while (true) {
-        if (this.isBreak) {
-          break;
-        }
 
-        let res = await this.$get("/TianCheList/3");
-        let tc = res.list;
-        // tc[6].X1 = -140204
-        // tc[6].Y1 = 0
-        // tc[9].X1 = 159760
-        // tc[9].Y1 = 19024
 
-        // this.tcDataList = tc
+      let TCStyle = kuDH.createTCStyle(tc);
+      this.TCStyle = TCStyle;
 
-        let TCStyle = kuDH.createTCStyle(tc);
-        this.TCStyle = TCStyle;
-        // tc = tstc
-        // console.log("天车-----", tc);
+      this.td7 = kuDH.getKuData({ d: this.dayList, kuHao: 7, tcd: tc[0] });
+      this.td8 = kuDH.getKuData({ d: this.dayList, kuHao: 8,  lie: 57, tcd: tc[1] });
 
-        // tc[0] = {
-        //   Ceng_Num1: 2,
-        //   Ceng_Num3: 1,
-        //   Ceng_Num_m3: 6,
-        //   DongZuoZhuangTai: 2,
-        // };
+      this.td9 = kuDH.getKuData({ d: this.dayList, kuHao: 9, tcd: tc[2] });
+      this.td10 = kuDH.getKuData({ d: this.dayList, kuHao: 10,  lie: 57, tcd: tc[3] });
 
-        // this.dayList[0] = {
-        //   Ceng: 1,
-        //   Days: 53,
-        //   ID: 7,
-        //   KuHao: 7,
-        //   Lie: 1,
-        // };
+      this.td11 = kuDH.getKuData({
+        d: this.dayList,
+        kuHao: 11,
+        lie: 57,
+        tcd: tc[4],
+      });
+      this.td12 = kuDH.getKuData({
+        d: this.dayList,
+        kuHao: 12,
+        lie: 57,
+        tcd: tc[5],
+      });
+      this.td13 = kuDH.getKuData({
+        d: this.dayList,
+        kuHao: 13,
+        lie: 57,
+        tcd: tc[6],
+      });
+      this.td14 = kuDH.getKuData({
+        d: this.dayList,
+        kuHao: 14,
+        lie: 57,
+        tcd: tc[7],
+      });
 
-        this.td7 = kuDH.getKuData({ d: this.dayList, kuHao: 7, tcd: tc[0] });
-        this.td8 = kuDH.getKuData({ d: this.dayList, kuHao: 8, tcd: tc[1] });
+      this.td15 = kuDH.getKuData({
+        d: this.dayList,
+        kuHao: 15,
+        lie: 57,
+        tcd: tc[8],
+      });
+      this.td16 = kuDH.getKuData({ d: this.dayList, kuHao: 16, tcd: tc[9] });
 
-        this.td9 = kuDH.getKuData({ d: this.dayList, kuHao: 9, tcd: tc[2] });
-        this.td10 = kuDH.getKuData({ d: this.dayList, kuHao: 10, tcd: tc[3] });
+      // let tcdText = {
+      //   ID: 17,
+      //   DongZuoZhuangTai: 2,
+      //   X1: -23769,
+      //   X2: -23768,
+      //   Y1: 1500,
+      //   Ceng_Num1: 1,
+      //   Ceng_Num2: 16,
+      //   Ceng_Num3: 16,
+      //   Ceng_Num56: 16,
+      // };
 
-        this.td11 = kuDH.getKuData({
-          d: this.dayList,
-          kuHao: 11,
-          lie: 57,
-          tcd: tc[4],
-        });
-        this.td12 = kuDH.getKuData({
-          d: this.dayList,
-          kuHao: 12,
-          lie: 57,
-          tcd: tc[5],
-        });
-        this.td13 = kuDH.getKuData({
-          d: this.dayList,
-          kuHao: 13,
-          lie: 57,
-          tcd: tc[6],
-        });
-        this.td14 = kuDH.getKuData({
-          d: this.dayList,
-          kuHao: 14,
-          lie: 57,
-          tcd: tc[7],
-        });
+      this.td17 = kuDH.getKuData({
+        d: this.dayList,
+        kuHao: 17,
+        lie: 57,
+        tcd: tc[10],
+        // tcd: tcdText,
+      });
 
-        this.td15 = kuDH.getKuData({
-          d: this.dayList,
-          kuHao: 15,
-          lie: 57,
-          tcd: tc[6],
-        });
-        this.td16 = kuDH.getKuData({ d: this.dayList, kuHao: 16, tcd: tc[7] });
-        this.td17 = kuDH.getKuData({
-          d: this.dayList,
-          kuHao: 17,
-          lie: 57,
-          tcd: tc[6],
-        });
-        this.td18 = kuDH.getKuData({ d: this.dayList, kuHao: 18, tcd: tc[7] });
-
-        // console.log(this.td7);
-
-        await this.awaitTime(3000);
-      }
+      this.td18 = kuDH.getKuData({ d: this.dayList, kuHao: 18, tcd: tc[11] });
     },
 
-    createData() {
-      let arr = [];
-      let str = "16_";
-      let start = 0;
-      let sum = 8;
-      for (let i = start; i < sum; i++) {
-        arr.push(str + i);
-        // arr.push(str + i + '_1');
-      }
-      // console.log(arr);
-      // console.log(arr.reverse());
-    },
-
-    pushItem(n, arr) {
-      for (let i = 0; i < n; i++) {
-        arr.push(1);
-      }
-    },
     async initData() {
-      // let { aj, ac, bj, bc } = td;
       while (true) {
         // console.log("--cultivationRoom initData--");
         if (this.isBreak) {
           break;
         }
-        let res = await this.$get("/SanLouPeiyangShiList");
-        let {
-          sanloupeiyangshiajinxian: { sanLouPeiYangShiAJinXianEntity },
-          sanloupeiyangshiachuxian: { sanLouPeiYangShiAChuXianEntity },
-          sanloupeiyangshibchuxian: { sanLouPeiYangShiBChuXianEntity },
-          sanloupeiyangshibjinxian: { sanLouPeiYangShiBJinXianEntity },
-        } = res;
 
-        // console.log(res);
-        // sanLouPeiYangShiAJinXianEntity = aj;
-        // sanLouPeiYangShiAChuXianEntity = ac;
-        // sanLouPeiYangShiBJinXianEntity = bj;
-        // sanLouPeiYangShiBChuXianEntity = bc;
+        try {
+          let res = await this.$get("/SanLouPeiyangShiList");
+          let {
+            sanloupeiyangshiajinxian: { sanLouPeiYangShiAJinXianEntity },
+            sanloupeiyangshiachuxian: { sanLouPeiYangShiAChuXianEntity },
+            sanloupeiyangshibchuxian: { sanLouPeiYangShiBChuXianEntity },
+            sanloupeiyangshibjinxian: { sanLouPeiYangShiBJinXianEntity },
+          } = res;
 
-        let [d1, d1GD] = dh.getD1(sanLouPeiYangShiAJinXianEntity);
-        this.d1 = d1;
-        this.d1GD = d1GD;
-        let [d2, d2GD] = dh.getD2(sanLouPeiYangShiAJinXianEntity);
-        this.d2 = d2;
-        this.d2GD = d2GD;
-        let [d3, d3GD] = dh.getD3(sanLouPeiYangShiAJinXianEntity);
-        this.d3 = d3;
-        this.d3GD = d3GD;
-        let [d4_1, d4GD_1] = dh.getD4_1(sanLouPeiYangShiAJinXianEntity);
-        this.d4_1 = d4_1;
-        this.d4GD_1 = d4GD_1;
+          let [d1, d1GD] = dh.getD1(sanLouPeiYangShiAJinXianEntity);
+          this.d1 = d1;
+          this.d1GD = d1GD;
+          let [d2, d2GD] = dh.getD2(sanLouPeiYangShiAJinXianEntity);
+          this.d2 = d2;
+          this.d2GD = d2GD;
+          let [d3, d3GD] = dh.getD3(sanLouPeiYangShiAJinXianEntity);
+          this.d3 = d3;
+          this.d3GD = d3GD;
+          let [d4_1, d4GD_1] = dh.getD4_1(sanLouPeiYangShiAJinXianEntity);
+          this.d4_1 = d4_1;
+          this.d4GD_1 = d4GD_1;
 
-        let [d4, d4GD] = dh.getD4(sanLouPeiYangShiAChuXianEntity);
-        this.d4 = d4;
-        this.d4GD = d4GD;
-        let [d5, d5GD] = dh.getD5(sanLouPeiYangShiAChuXianEntity);
-        this.d5 = d5;
-        this.d5GD = d5GD;
-        let [d6, d6GD] = dh.getD6(sanLouPeiYangShiAChuXianEntity);
-        this.d6 = d6;
-        this.d6GD = d6GD;
-        let [d7, d7GD] = dh.getD7(sanLouPeiYangShiAChuXianEntity);
-        this.d7 = d7;
-        this.d7GD = d7GD;
+          let [d4, d4GD] = dh.getD4(sanLouPeiYangShiAChuXianEntity);
+          this.d4 = d4;
+          this.d4GD = d4GD;
+          let [d5, d5GD] = dh.getD5(sanLouPeiYangShiAChuXianEntity);
+          this.d5 = d5;
+          this.d5GD = d5GD;
+          let [d6, d6GD] = dh.getD6(sanLouPeiYangShiAChuXianEntity);
+          this.d6 = d6;
+          this.d6GD = d6GD;
+          let [d7, d7GD] = dh.getD7(sanLouPeiYangShiAChuXianEntity);
+          this.d7 = d7;
+          this.d7GD = d7GD;
 
-        let [d8, d8GD] = dh.getD8(sanLouPeiYangShiBJinXianEntity);
-        this.d8 = d8;
-        this.d8GD = d8GD;
-        let [d9, d9GD] = dh.getD9(sanLouPeiYangShiBJinXianEntity);
-        this.d9 = d9;
-        this.d9GD = d9GD;
-        let [d10, d10GD] = dh.getD10(sanLouPeiYangShiBJinXianEntity);
-        this.d10 = d10;
-        this.d10GD = d10GD;
-        let [d11, d11GD] = dh.getD11(sanLouPeiYangShiBJinXianEntity);
-        this.d11 = d11;
-        this.d11GD = d11GD;
-        let [d12, d12GD] = dh.getD12(sanLouPeiYangShiBJinXianEntity);
-        this.d12 = d12;
-        this.d12GD = d12GD;
+          let [d8, d8GD] = dh.getD8(sanLouPeiYangShiBJinXianEntity);
+          this.d8 = d8;
+          this.d8GD = d8GD;
+          let [d9, d9GD] = dh.getD9(sanLouPeiYangShiBJinXianEntity);
+          this.d9 = d9;
+          this.d9GD = d9GD;
+          let [d10, d10GD] = dh.getD10(sanLouPeiYangShiBJinXianEntity);
+          this.d10 = d10;
+          this.d10GD = d10GD;
+          let [d11, d11GD] = dh.getD11(sanLouPeiYangShiBJinXianEntity);
+          this.d11 = d11;
+          this.d11GD = d11GD;
+          let [d12, d12GD] = dh.getD12(sanLouPeiYangShiBJinXianEntity);
+          this.d12 = d12;
+          this.d12GD = d12GD;
 
-        let [d13, d13GD] = dh.getD13(sanLouPeiYangShiBChuXianEntity);
-        this.d13 = d13;
-        this.d13GD = d13GD;
+          let [d13, d13GD] = dh.getD13(sanLouPeiYangShiBChuXianEntity);
+          this.d13 = d13;
+          this.d13GD = d13GD;
 
-        let [d14, d14GD] = dh.getD14(sanLouPeiYangShiBChuXianEntity);
-        this.d14 = d14;
-        this.d14GD = d14GD;
+          let [d14, d14GD] = dh.getD14(sanLouPeiYangShiBChuXianEntity);
+          this.d14 = d14;
+          this.d14GD = d14GD;
 
-        let [d15, d15GD] = dh.getD15(sanLouPeiYangShiBChuXianEntity);
-        this.d15 = d15;
-        this.d15GD = d15GD;
-        await this.awaitTime(2000);
+          let [d15, d15GD] = dh.getD15(sanLouPeiYangShiBChuXianEntity);
+          this.d15 = d15;
+          this.d15GD = d15GD;
+        } catch (error) {}
+
+        await this.awaitTime(1500);
       }
     },
 
@@ -824,21 +385,21 @@ export default {
           break;
         }
 
-        let res = await this.$get("/TiShengJiList");
+        try {
+          let res = await this.$get("/TiShengJiList");
+          let {
+            tishengji: { list },
+            tishengji7: { tiShengJi7Entity },
+            tishengji8: { tiShengJi8Entity },
+          } = res;
+          this.tiShengJi7Entity = tiShengJi7Entity;
+          this.tiShengJi8Entity = tiShengJi8Entity;
 
-        let {
-          tishengji: { list },
-          tishengji7: { tiShengJi7Entity },
-          tishengji8: { tiShengJi8Entity },
-        } = res;
-        // list[0].wai_bu_ji_ting = 0
-        // list[0].ping_zan_ting_xin_hao = 0
-        this.tiShengJi7Entity = tiShengJi7Entity;
-        this.tiShengJi8Entity = tiShengJi8Entity;
+          this.infoList = list;
+        } catch (error) {}
 
-        this.infoList = list;
         // console.log(res);
-        await this.awaitTime(5000);
+        await this.awaitTime(1500);
       }
     },
 
@@ -872,7 +433,15 @@ export default {
   background-size: contain;
   position: relative;
   font-size: 10px;
-
+  .tc-arr {
+    border: 2px solid red;
+    width: 150px;
+    @include tl(605px, 83px);
+    color: #fff;
+    .item{
+      display: flex;
+    }
+  }
   .mr_10 {
     margin-right: 10px;
   }
@@ -894,8 +463,8 @@ export default {
     }
   }
 
-  .info-box {
-    @include tl(260px, 220px);
+    .info-box {
+    @include tl(60px, 50px);
     width: 190px;
     padding: 10px 5px;
     border-radius: 5px;
@@ -903,10 +472,6 @@ export default {
     .box {
       display: flex;
       flex-wrap: wrap;
-      // justify-content: space-between;
-      // .item{
-      //   margin-right: 5px;
-      // }
     }
   }
 

@@ -89,7 +89,6 @@
 import Vale from "@/components/vale.vue";
 import Pipe from "@/components/Pipe.vue";
 import InfoBar from "./InfoBar.vue";
-import test from "./test";
 export default {
   data() {
     return {

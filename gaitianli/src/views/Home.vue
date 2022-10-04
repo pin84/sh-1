@@ -1,16 +1,7 @@
 <template>
   <div class="home">
-    <div
-      class="btn-box"
-      v-if="false"
-    >
-      <el-button
-        @click="test(idx)"
-        class="btn"
-        v-for="(item,idx) in btnList"
-        :key="idx"
-        type="primary"
-      >{{item}}</el-button>
+    <div class="btn-box" v-if="1">
+      <el-button @click="test(idx)" class="btn" v-for="(item,idx) in btnList" :key="idx" type="primary">{{item}}</el-button>
     </div>
     <div class="item-box-1">
       <Item :d="d1" />
@@ -62,269 +53,122 @@
     </div>
 
     <div class="l1d1">
-      <ConveyorBox
-        :lineNum='7'
-        :statuArr='l1d1'
-        :isShowArr='l1d1GD'
-        :itemType='1'
-      />
+      <ConveyorBox :lineNum='7' :statuArr='l1d1' :isShowArr='l1d1GD' :itemType='1' />
     </div>
     <div class="l1d2">
-      <ConveyorBox
-        :lineNum='5'
-        :statuArr='l1d2'
-        :isShowArr='l1d2GD'
-        :itemType='1'
-      />
+      <ConveyorBox :lineNum='5' :statuArr='l1d2' :isShowArr='l1d2GD' :itemType='1' />
     </div>
     <div class="l1d3">
-      <ConveyorBox
-        :lineNum='15'
-        :statuArr='l1d3'
-        :isShowArr='l1d3GD'
-        :itemType='1'
-      />
+      <ConveyorBox :lineNum='15' :statuArr='l1d3' :isShowArr='l1d3GD' :itemType='1' />
     </div>
 
     <div class="l1d4">
-      <ConveyorBox
-        :lineNum='10'
-        :statuArr='l1d4'
-        :isShowArr='l1d4GD'
-        :itemType='1'
-      />
+      <ConveyorBox :lineNum='10' :statuArr='l1d4' :isShowArr='l1d4GD' :itemType='1' />
     </div>
 
     <div class="l2d1">
-      <ConveyorBox
-        :lineNum='8'
-        :statuArr='l2d1'
-        :isShowArr='l2d1GD'
-        :itemType='1'
-      />
+      <ConveyorBox :lineNum='8' :statuArr='l2d1' :isShowArr='l2d1GD' :itemType='1' />
     </div>
     <div class="l2d2">
-      <ConveyorBox
-        :lineNum='7'
-        :statuArr='l2d2'
-        :isShowArr='l2d2GD'
-        :itemType='1'
-      />
+      <ConveyorBox :lineNum='7' :statuArr='l2d2' :isShowArr='l2d2GD' :itemType='1' />
     </div>
 
     <div class="l2d3">
-      <ConveyorBox
-        :lineNum='14'
-        :statuArr='l2d3'
-        :isShowArr='l2d3GD'
-        :itemType='1'
-      />
+      <ConveyorBox :lineNum='14' :statuArr='l2d3' :isShowArr='l2d3GD' :itemType='1' />
     </div>
     <div class="l2d4">
-      <ConveyorBox
-        :lineNum='17'
-        :statuArr='l2d4'
-        :isShowArr='l2d4GD'
-        :itemType='1'
-      />
+      <ConveyorBox :lineNum='17' :statuArr='l2d4' :isShowArr='l2d4GD' :itemType='1' />
     </div>
 
     <div class="tp-box-1-1">
-      <ConveyorBox
-        :lineNum='5'
-        :statuArr='l1d5'
-        :isShowArr='l1d5GD'
-      />
-      <ConveyorBox
-        :lineNum='5'
-        :statuArr='l1d5_1'
-        :isShowArr='l1d5GD_1'
-      />
+      <ConveyorBox :lineNum='5' :statuArr='l1d5' :isShowArr='l1d5GD' />
+      <ConveyorBox :lineNum='5' :statuArr='l1d5_1' :isShowArr='l1d5GD_1' />
     </div>
     <div class="tp-box-1-2">
-      <ConveyorBox
-        :lineNum='5'
-        :statuArr='l1d6'
-        :isShowArr='l1d6GD'
-      />
+      <ConveyorBox :lineNum='5' :statuArr='l1d6' :isShowArr='l1d6GD' />
     </div>
     <div class="tp-box-1-3">
-      <ConveyorBox
-        :lineNum='5'
-        :statuArr='l1d7'
-        :isShowArr='l1d7GD'
-      />
-      <ConveyorBox
-        :lineNum='5'
-        :statuArr='l1d7_1'
-        :isShowArr='l1d7GD_1'
-      />
+      <ConveyorBox :lineNum='5' :statuArr='l1d7' :isShowArr='l1d7GD' />
+      <ConveyorBox :lineNum='5' :statuArr='l1d7_1' :isShowArr='l1d7GD_1' />
     </div>
 
     <div class="tp-box-1-4">
-      <ConveyorBox
-        :lineNum='5'
-        :statuArr='d10'
-        :isShowArr='d10GD'
-        :onlyTP='1'
-      />
-      <ConveyorBox
-        :lineNum='5'
-        :statuArr='d10_1'
-        :isShowArr='d10GD_1'
-        :onlyTP='1'
-      />
+      <ConveyorBox :lineNum='5' :statuArr='d10' :isShowArr='d10GD' :onlyTP='1' />
+      <ConveyorBox :lineNum='5' :statuArr='d10_1' :isShowArr='d10GD_1' :onlyTP='1' />
     </div>
 
     <div class="tp-box-1-5">
-      <ConveyorBox
-        :lineNum='11'
-        :statuArr='d11'
-        :isShowArr='d11GD'
-        :onlyTP='1'
-      />
-      <ConveyorBox
-        :lineNum='5'
-        :statuArr='d11_1'
-        :isShowArr='d11GD_1'
-        :onlyTP='1'
-      />
+      <ConveyorBox :lineNum='11' :statuArr='d11' :isShowArr='d11GD' :onlyTP='1' />
+      <ConveyorBox :lineNum='5' :statuArr='d11_1' :isShowArr='d11GD_1' :onlyTP='1' />
     </div>
 
     <div class="tp-box-1-6">
-      <ConveyorBox
-        :lineNum='5'
-        :statuArr='d12'
-        :isShowArr='d12GD'
-      />
+      <ConveyorBox :lineNum='5' :statuArr='d12' :isShowArr='d12GD' />
     </div>
     <div class="tp-box-1-7">
-      <ConveyorBox
-        :lineNum='5'
-        :statuArr='d13'
-        :isShowArr='d13GD'
-        :onlyTP='1'
-      />
+      <ConveyorBox :lineNum='5' :statuArr='d13' :isShowArr='d13GD' :onlyTP='1' />
     </div>
     <div class="tp-box-1-8">
-      <ConveyorBox
-        :lineNum='11'
-        :statuArr='d14'
-        :isShowArr='d14GD'
-        :onlyTP='1'
-      />
-      <ConveyorBox
-        :lineNum='5'
-        :statuArr='d14_1'
-        :isShowArr='d14GD_1'
-        :onlyTP='1'
-      />
+      <ConveyorBox :lineNum='11' :statuArr='d14' :isShowArr='d14GD' :onlyTP='1' />
+      <ConveyorBox :lineNum='5' :statuArr='d14_1' :isShowArr='d14GD_1' :onlyTP='1' />
     </div>
 
     <div class="tp-box-03-01">
-      <ConveyorBox
-        :lineNum='5'
-        :statuArr='l1d8'
-        :isShowArr='l1d8GD'
-      />
-      <ConveyorBox
-        :lineNum='5'
-        :statuArr='l1d8_1'
-        :isShowArr='l1d8GD_1'
-      />
+      <ConveyorBox :lineNum='5' :statuArr='l1d8' :isShowArr='l1d8GD' />
+      <ConveyorBox :lineNum='5' :statuArr='l1d8_1' :isShowArr='l1d8GD_1' />
     </div>
     <div class="tp-box-03-02">
-      <ConveyorBox
-        :lineNum='5'
-        :statuArr='l1d9'
-        :isShowArr='l1d9GD'
-      />
-      <ConveyorBox
-        :lineNum='5'
-        :statuArr='l1d9_1'
-        :isShowArr='l1d9GD_1'
-      />
+      <ConveyorBox :lineNum='5' :statuArr='l1d9' :isShowArr='l1d9GD' />
+      <ConveyorBox :lineNum='5' :statuArr='l1d9_1' :isShowArr='l1d9GD_1' />
     </div>
 
     <div class="lqj-1">
 
       <div class="lq-com lqj-1-1">
-        <ConveyorBox
-          :lineNum='8'
-          :statuArr='lqj1'
-          :isShowArr='lqj1GD'
-          :itemType='1'
-        />
+        <ConveyorBox :lineNum='8' :statuArr='lqj1' :isShowArr='lqj1GD' :itemType='1' />
       </div>
       <div class="lq-com lqj-1-2">
-        <ConveyorBox
-          :lineNum='20'
-          :statuArr='lqj2'
-          :isShowArr='lqj2GD'
-          :itemType='1'
-        />
-        <ConveyorBox
-          :lineNum='20'
-          :statuArr='lqj3'
-          :isShowArr='lqj3GD'
-          :itemType='1'
-        />
+        <ConveyorBox :lineNum='20' :statuArr='lqj2' :isShowArr='lqj2GD' :itemType='1' />
+        <ConveyorBox :lineNum='20' :statuArr='lqj3' :isShowArr='lqj3GD' :itemType='1' />
       </div>
     </div>
 
     <div class="lgj-2">
-      <ConveyorBox
-        :lineNum='7'
-        :statuArr='lqj4'
-        :isShowArr='lqj4GD'
-        :itemType='1'
-      />
-      <ConveyorBox
-        :lineNum='14'
-        :statuArr='lqc5'
-        :isShowArr='lqc5GD'
-        :itemType='1'
-      />
+      <ConveyorBox :lineNum='7' :statuArr='lqj4' :isShowArr='lqj4GD' :itemType='1' />
+      <ConveyorBox :lineNum='14' :statuArr='lqc5' :isShowArr='lqc5GD' :itemType='1' />
     </div>
     <div class="lgj-3">
-      <ConveyorBox
-        :lineNum='11'
-        :statuArr='lqc6'
-        :isShowArr='lqc6GD'
-        :itemType='1'
-      />
-      <ConveyorBox
-        :lineNum='9'
-        :statuArr='lqc7'
-        :isShowArr='lqc7GD'
-        :itemType='1'
-      />
+      <ConveyorBox :lineNum='11' :statuArr='lqc6' :isShowArr='lqc6GD' :itemType='1' />
+      <ConveyorBox :lineNum='9' :statuArr='lqc7' :isShowArr='lqc7GD' :itemType='1' />
 
       <div class="lgj-3-1">
-        <ConveyorBox
-          :lineNum='16'
-          :statuArr='lqc8'
-          :isShowArr='lqc8GD'
-          :itemType='1'
-        />
-        <ConveyorBox
-          :lineNum='16'
-          :statuArr='lqc9'
-          :isShowArr='lqc9GD'
-          :itemType='1'
-        />
-       
+        <ConveyorBox :lineNum='16' :statuArr='lqc8' :isShowArr='lqc8GD' :itemType='1' />
+        <ConveyorBox :lineNum='16' :statuArr='lqc9' :isShowArr='lqc9GD' :itemType='1' />
+
       </div>
     </div>
 
+    <div class="title">槐耳菌质生产车间</div>
+    <div class="section-box">
+      <div class="border-red box-1">
+        <span>装瓶区</span>
+        <span class="text1-2 f_z_22">搬筐机2</span>
+        <span class="text1-1 f_z_22">搬筐机1</span>
+      </div>
+      <div class="border-red box-2">灭菌区</div>
+      <div class="border-red box-3">
+
+        <span>冷却缓冲区</span>
+        <span class="text3-2 f_z_22">搬筐机4</span>
+        <span class="text3-1 f_z_22">搬筐机3</span>
+      </div>
+      <div class="border-red box-4">冷却室</div>
+      <div class="border-red box-5">接种室</div>
+    </div>
   </div>
 </template>
 
 <script>
-// import testData from "@/views/testData.js";
-// import tpss from "@/views/tpss.js";
-// import testLQJX from "@/views/testLQJX.js";
-// import testLQCX from "@/views/testLQCX.js";
 import dataHandler from "@/views/dataHandler.js";
 import Item from "@/views/Item.vue";
 import Item2 from "@/views/Item-2.vue";
@@ -347,7 +191,6 @@ export default {
     return {
       zpx1: {},
       zpx2: {},
-      testData: [0, 1, 2, 0, 1],
       btnList: ["电机停止", "电机运行", "电机反转", "光电信号有", "光电信号无"],
       isBreak: false,
       d1: {},
@@ -445,11 +288,13 @@ export default {
     test(idx) {
       console.log(idx);
       if (idx <= 2) {
-        this.l1d1 = this.pushD(idx);
-        // this.l1d2GD = this.pushD(idx);
+        this.l2d1 = this.pushD(idx);
+        this.l2d1GD = this.pushD(idx);
 
         // this.l2d1GD = this.pushD(idx);
         // this.l2d2GD = this.pushD(idx);
+
+        console.log( this.l1d1);
       }
 
       if (idx > 2) {
@@ -479,7 +324,7 @@ export default {
         if (this.isBreak) {
           break;
         }
-        console.log('--home initData--');
+        console.log("--home initData--");
         let res = await this.$get("/BankuangList");
         await this.awaitTime(1000);
         if (res.code == -1) continue;
@@ -496,12 +341,6 @@ export default {
         this.d2 = list[1];
         this.d3 = list[2];
         this.d4 = list[3];
-
-        // console.log(res);
-        // zhuangPingShuSongXianEntity = testData;
-        // tuopanshusongxian = tpss;
-        // lengQueShiJinXianEntity = testLQJX;
-        // lengQueShiChuXianEntity = testLQCX;
 
         this.l1d1 = dataHandler.getL1D1(zhuangPingShuSongXianEntity);
         this.l1d1GD = dataHandler.getL1D1GD(zhuangPingShuSongXianEntity);
@@ -620,7 +459,7 @@ export default {
     },
     async initDataMiejunqi() {
       while (true) {
-         console.log('--home initDataMiejunqi--');
+        console.log("--home initDataMiejunqi--");
         if (this.isBreak) {
           break;
         }
@@ -637,7 +476,7 @@ export default {
     },
     async initZhuangPingList() {
       while (true) {
-         console.log('--home initZhuangPingList--');
+        console.log("--home initZhuangPingList--");
         if (this.isBreak) {
           break;
         }
@@ -701,7 +540,62 @@ $w: 56px;
   position: relative;
   font-size: 10px;
   // background-color: #003366;
+  .section-box {
+    // width: 100%;
+    height: 800px;
+    @include tl(180px, 40px);
+    color: red;
+    text-align: center;
+    font-size: 28px;
+    display: flex;
+    align-items: center;
+    .border-red {
+      border: 1px solid red;
+      height: 100%;
+      position: relative;
+    }
+    .f_z_22 {
+      font-size: 22px;
+    }
+    .box-1 {
+      width: 630px;
+      .text1-2 {
+        @include tl(250px, 260px);
+      }
+      .text1-1 {
+        @include tl(450px, 260px);
+      }
+    }
+    .box-2 {
+      width: 225px;
+    }
+    .box-3 {
+      width: 275px;
+      height: 750px;
+      .text3-2{
+          @include tl(165px, 130px);
+      }
+      .text3-1{
+          @include tl(565px, 130px);
+      }
+    }
+    .box-4 {
+      width: 610px;
+      height: 580px;
+    }
+    .box-5 {
+      width: 100px;
+      height: 580px;
+    }
+  }
 
+  .title {
+    color: #ccffff;
+    font-size: 32px;
+    font-weight: 600;
+    // opacity: 0.8;
+    @include tl(15px, 835px);
+  }
   .lqj-1 {
     @include position(344px, 1120px, 535px, 479px);
     .lq-com {
@@ -803,10 +697,11 @@ $w: 56px;
 
   .btn-box {
     color: #fff;
-    padding: 400px 50px 0 50px;
+    padding: 50px 50px 0 50px;
     display: flex;
     width: 300px;
     flex-wrap: wrap;
+    z-index: 100;
     .btn {
       border: 1px solid #fff;
       width: 80px;

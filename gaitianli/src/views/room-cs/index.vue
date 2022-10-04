@@ -63,7 +63,6 @@
 import Vale from "./Vale.vue";
 import Pipe from "@/components/Pipe.vue";
 import InfoBar from "./InfoBar.vue";
-import test from "./test";
 import InfoText from "./InfoText.vue";
 export default {
   data() {
@@ -109,10 +108,10 @@ export default {
         }
         let res = await this.$get("/ChunShuiXiTongList");
         let { chunShuiXiTongEntity } = res;
-        this.d = test;
-        console.log(chunShuiXiTongEntity);
+        this.d = chunShuiXiTongEntity;
+        // console.log(chunShuiXiTongEntity);
 
-        await this.awaitTime(500000);
+        await this.awaitTime(2000);
       }
     },
 

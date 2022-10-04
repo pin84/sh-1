@@ -25,7 +25,6 @@
         v-for="(n,index) in statuArr"
         :key="index"
       >
-
         <ItemCssMiddle
           v-if="itemType == 2"
           v-bind="$attrs"
@@ -36,7 +35,6 @@
           v-bind="$attrs"
           :isHas='isShowArr[index]'
         />
-
       </div>
     </div>
   </div>

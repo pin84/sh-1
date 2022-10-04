@@ -91,7 +91,6 @@
 import Vale from "@/components/vale.vue";
 import Pipe from "@/components/Pipe.vue";
 import InfoBar from "./InfoBar.vue";
-import test from "./test";
 export default {
   data() {
     return {
@@ -126,7 +125,6 @@ export default {
         let infoArr = [];
         list.sort((a, b) => a.ID - b.ID);
 
-        // list = test
         this.list = list;
         for (let obj of list) {
           let {
