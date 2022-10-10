@@ -6,7 +6,7 @@ import store from './store' // VUEX
 
 import './plugins/vueamap.js' //  vue-amap 高德地图
 import './plugins/element.js' //  elemnt组件
-import {get, post } from './plugins/axios.js'
+import {get,post} from './plugins/axios.js'
 import 'amfe-flexible'
 
 // import { post, get, put, deletes, toJson, isEmpty } from './plugins/http.js' // 请求方式中间件
@@ -17,6 +17,7 @@ import '../public/fonts/iconfont.css' // 阿里图标
 import '../public/fonts/iconfont.js' // 阿里图标
 // import SiteConfig from './plugins/config.js'
 
+console.log('a');
 
 
 import skeleton from 'vue-skeleton-component' // 骨架
@@ -35,7 +36,7 @@ import md5 from 'js-md5'; // md5
 
 //定义全局变量
 // Vue.prototype.$axios=axios;
-Vue.prototype.$api = api;
+Vue.prototype.$api=api;
 Vue.prototype.$post = post;
 Vue.prototype.$get = get;
 // Vue.prototype.$put = put;

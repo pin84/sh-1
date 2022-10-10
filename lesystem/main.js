@@ -9,6 +9,8 @@ import dataHandler from './common/js/dataHandler.js'
 import buyOptions from '@/pages/gamesIm/gameList/buyOptions.js'
 import SiteConfig from './common/js/config.js'
 
+
+console.log('a');
 //声音
 import myAudio from './common/js/audio.js' 
 Vue.prototype.$store = store
@@ -17,7 +19,7 @@ Vue.prototype.SiteConfig = SiteConfig;
 Vue.config.productionTip = false
 
 
-console.log('999ffffsdf99');
+console.log('999ffffsdf');
 
 
 Vue.prototype.$util = Util;
