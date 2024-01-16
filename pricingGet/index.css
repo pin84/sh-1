@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+}
+
+body {
+  padding: 20px;
+}
+
+.addr-box {
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+}
+
+.addr-box .item {
+  position: relative;
+  display: flex;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.addr-box .item input {
+  width: 100%;
+}
+
+.addr-box .item .dropdown {
+  width: 100%;
+  top: 20px;
+}
+
+.addr-box .btn-box .btn {
+  border: 1px solid #ccc;
+  padding: 3px 8px;
+  cursor: pointer;
+}
+
+.res-box {
+  border: 1px solid #ccc;
+  height: 500px;
+  padding: 5px;
+}
+
+.res-box .item {
+  display: flex;
+  flex-direction: column;
+}
+
+.res-box .item .detail-box .item-price {
+  display: flex;
+  flex-direction: flex;
+}
+
+.hide {
+  display: none;
+}
