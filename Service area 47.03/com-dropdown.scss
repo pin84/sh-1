@@ -1,0 +1,117 @@
+$h60: 40px;
+$w: 12px;
+
+li {
+    list-style: none;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+#my-dropdown-wrapper {
+    position: relative;
+    user-select: none;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    font-size: 14px;
+    .result-box {
+        outline: none;
+        border: none;
+        padding: 0 10px;
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+        box-sizing: border-box;
+        
+    }
+    .list-box {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        border: 1px solid #f1f1f1;
+        box-sizing: border-box;
+        line-height: $h60;
+        overflow: hidden;
+        z-index: 1;
+        &.hide {
+            display: none;
+        }
+        .triangle-box {
+            background-color: #f1f1f1;
+            display: inline-block;
+            height: $h60;
+            line-height: $h60;
+            flex: 0 0 $h60;
+            width: 100%;
+            position: absolute;
+            left: 0;
+            cursor: pointer;
+            &.up {
+                top: 0;
+            }
+            &.down {
+                bottom: 0;
+            }
+            &.hide {
+                display: none;
+            }
+
+            .com-arrow-up,
+            .com-arrow-down {
+                user-select: none;
+            }
+        }
+        .drodown-list {
+            width: 100%;
+            text-align: center;
+            max-height: 300px;
+            background-color: #fff;
+            overflow:  scroll;
+            &::-webkit-scrollbar {
+                width: 0 !important;
+                height: 0 !important;
+            }
+            .drodown-item {
+                // z-index: 10;
+                width: 100%;
+                box-sizing: border-box;
+                color: #333;
+                border-bottom: 1px solid #f1f1f1;
+                &:hover {
+                    background-color: #eee;
+                }
+                &:last-child() {
+                    border-bottom: none;
+                }
+            }
+        }
+    }
+}
+
+.com-arrow {
+    user-select: none;
+    display: inline-block;
+    margin: 5px;
+    width: 8px;
+    height: 8px;
+    box-sizing: border-box;
+}
+.com-arrow-down {
+    @extend .com-arrow;
+    border-top: 1px solid;
+    border-right: 1px solid;
+    transform: rotate(135deg);
+}
+.com-arrow-up {
+    @extend .com-arrow;
+    display: inline-block;
+    border-bottom: 1px solid;
+    border-left: 1px solid;
+    border-top: none;
+    border-right: none;
+    transform: rotate(135deg);
+}

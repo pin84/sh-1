@@ -1,0 +1,67 @@
+<div id="template">
+  <div id="input-field-tmpl-" style="display: none">
+    <!-- <div class="box-index" id="box-index"></div> -->
+    <label tr class="input-label" id="lbl-"></label>
+    <span tr class="no-warn cnt" id="warn-" style="display: none"></span>
+    <input tr class="input-field" class="form-control" id="input-" placeholder="" />
+  </div>
+  <div id="input-field-tmpl-" style="display: none">
+    <label tr class="input-label" id="lbl-"></label>
+    <span tr class="no-warn cnt" id="warn-" style="display: none"></span>
+    <input tr class="input-field" type="text" class="form-control" id="input-" placeholder="-" readonly
+           onfocus="this.removeAttribute('readonly');" autocomplete="off" />
+  </div>
+  <div id="date-range-field-tmpl-" style="display: none">
+    <label tr class="input-label" id="lbl-"></label>
+    <span tr class="no-warn" id="warn-" style="display: none"></span>
+
+    <input tr type="text" class="time-selector-entry bgd-relate" id="start-date" name="start-date" required="required"
+           autocomplete="off" readonly placeholder="please select" />
+    <div class="calendar dropdown" id="start-date-calendar"></div>
+    <span style="margin: 0 10px">-</span>
+    <input tr type="text" class="time-selector-entry bgd-relate" id="end-date" name="end-date" required="required"
+           autocomplete="off" readonly placeholder="please select" />
+    <div class="calendar dropdown" id="end-date-calendar"></div>
+  </div>
+
+  <div id="date-calendar-" style="display: none">
+    <table>
+      <tbody>
+        <tr class="calendar-header" style="height: 50px; position: relative">
+          <td></td>
+          <td class="prev" id="prev">
+            <span class="icon i-arrow-left"></span>
+          </td>
+          <td class="calendar-month text-center" colspan="3" id="cur"></td>
+          <td class="next" id="next">
+            <span class="icon i-arrow-right"></span>
+          </td>
+          <td id="close" style="display: none">X</td>
+          <td></td>
+        </tr>
+        <tr class="date-week">
+          <td>Su</td>
+          <td>Mo</td>
+          <td>Tu</td>
+          <td>We</td>
+          <td>Th</td>
+          <td>Fr</td>
+          <td>Sa</td>
+        </tr>
+        <tr id="week-0" name="week">
+          <td class="date-cell" id="date-0" name="date"></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+
+
+  <div id="switch-btn-tmpl-" style="display: none">
+    <label class="switch-btn" name="switch-btn">
+      <input type="checkbox" checked />
+      <span class="slider"></span>
+    </label>
+  </div>
+
+</div>

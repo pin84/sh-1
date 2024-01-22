@@ -164,11 +164,6 @@ class PartnerAmenity {
 
   async show(id, dList) {
     this.id = id
-    let index = dList.findIndex(item => item.service_area_id == id)
-    let arr = await this.getCurrencyandMeet([dList[index]])
-    dList.push(arr[0])
-    dList.splice(index, 1)
-
     this.curSvc = dList.find(item => item.service_area_id == id)
     let { currency } = this.curSvc
     this.currencyCode = currency
@@ -237,6 +232,7 @@ class PartnerAmenity {
         inputType: 'cs_p',
       },
     ]
+
     let childSetBox = this.rootElm.querySelector('.child-set-box')
     this.fill(childSetBox, this.childSettingData, '2')
   }
@@ -274,7 +270,6 @@ class PartnerAmenity {
         icon: 'i-meet'
       }
     ]
-
     let mngSetBox = this.rootElm.querySelector('.mng-set-box')
 
     this.fill(mngSetBox, this.mngSettingData, '1')
@@ -282,63 +277,6 @@ class PartnerAmenity {
   hide() {
 
     this.rootElm.classList.add('hide')
-  }
-
-
-  async getCurrencyandMeet(list) {
-    let sapids = [];
-    let ids = [];
-    for (let obj of list) {
-      if (obj.service_area_pricing_id) {
-        sapids.push(obj.service_area_pricing_id);
-      } else {
-        ids.push(obj.service_area_id);
-      }
-    }
-
-
-    let url = api[stage].sqlTemplatesRun_3 + `?ses=${_d.ses}`
-    let data = {
-      sql: 134677954,
-      service_area_pricing_ids: sapids,
-      service_area_ids: ids,
-      version: '1.1'
-    }
-
-    let res = await svcUtils.fetchData({
-      url,
-      method: 'POST',
-      data
-    })
-
-    let results = res.results
-    let arr = []
-    for (let obj of list) {
-      let cur = results.find(item => item.service_area_id == obj.service_area_id) || {}
-
-      let curPricing = cur['pricing']
-
-      let pricingObj = {}
-      if (curPricing) {
-        pricingObj = JSON.parse(curPricing)
-      }
-
-      let { currencyCode, pricing, add_service } = pricingObj
-      let { cs_p, is_p, ts_p } = add_service || {}
-      let { meet_n_greet } = pricing || {}
-
-      let o = {
-        currency: currencyCode,
-        mngAmount: meet_n_greet,
-        cs_p: cs_p,
-        is_p: is_p,
-        ts_p: ts_p,
-      }
-
-      arr.push(Object.assign({}, o, obj))
-    }
-
-    return arr
   }
 }
 

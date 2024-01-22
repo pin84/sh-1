@@ -1,0 +1,189 @@
+var partners = [{
+    id: 2,
+    name: "Booking",
+    currencies: ['USD']
+}, {
+    id: 10,
+    name: "China Ctrip",
+    currencies: ['USD']
+}, {
+    id: 5,
+    name: "CityAirportTaxis",
+    currencies: ['USD']
+}, {
+    id: 13,
+    name: "Elife Transfer",
+    currencies: ['USD']
+}, {
+    id: 12,
+    name: "Elifelimo",
+    currencies: ['USD']
+}, {
+    id: 1,
+    name: "Expedia",
+    currencies: ['USD']
+}, {
+    id: 8,
+    name: "Fliggy",
+    currencies: ['USD']
+}, {
+    id: 4,
+    name: "Jayride",
+    currencies: ['USD']
+}, {
+    id: 18,
+    name: "kiwitaxi",
+    currencies: ['USD']
+}, {
+    id: 3,
+    name: "Mozio",
+    currencies: ['USD']
+}, {
+    id: 14,
+    name: "MyTransfers",
+    currencies: ['USD']
+}, {
+    id: 17,
+    name: "Private Car",
+    currencies: ['USD']
+}, {
+    id: 15,
+    name: "Quicktransfer",
+    currencies: ['USD']
+}, {
+    id: 16,
+    name: "TaxiTender",
+    currencies: ['USD']
+}, {
+    id: 11,
+    name: "TESTING",
+    currencies: ['USD']
+}, {
+    id: 6,
+    name: "Ugo Transfers",
+    currencies: ['USD']
+}, {
+    id: 7,
+    name: "VIP Cars",
+    currencies: ['USD']
+}, {
+    id: 19,
+    name: "suntransfers",
+    currencies: ['USD']
+}, {
+    id: 20,
+    name: "Book Taxi",
+    currencies: ['USD']
+}, {
+    id: 21,
+    name: "Civitatis",
+    currencies: ['USD']
+}, {
+    id: 22,
+    name: "Deem",
+    currencies: ['USD']
+}, {
+    id: 23,
+    name: "SIMPLENIGHT",
+    currencies: ['USD']
+}, {
+    id: 24,
+    name: "Tripadvisor",
+    currencies: ['USD']
+}, {
+    id: 25,
+    name: "CabForce",
+    currencies: ['USD']
+}, {
+    id: 26,
+    name: "Airport Shuttles",
+    currencies: ['USD']
+}, {
+    id: 27,
+    name: "Shuttle Central",
+    currencies: ['USD']
+}, {
+    id: 28,
+    name: "Klook",
+    currencies: ['USD']
+}, {
+    id: 29,
+    name: "Karhoo",
+    currencies: ['USD']
+}, {
+    id: 30,
+    name: "get-e",
+    currencies: ['USD']
+}, {
+    id: 31,
+    name: "roundtrip",
+    currencies: ['USD']
+}, {
+    id: 33,
+    name: "Travel Agency",
+    currencies: ['USD']
+}, {
+    id: 34,
+    name: "ShuttleFare",
+    currencies: ['USD']
+}, {
+    id: 35,
+    name: "ShuttlePlanet",
+    currencies: ['USD']
+}, {
+    id: 36,
+    name: "Affiliate",
+    currencies: ['USD']
+}, {
+    id: 37,
+    name: "HertzDriveU",
+    currencies: ['USD']
+}, {
+    id: 38,
+    name: "La Premiere",
+    currencies: ['USD']
+}, {
+    id: 39,
+    name: "Gateway Transfers",
+    currencies: ['USD']
+}, {
+    id: 40,
+    name: "Mozio-despegar",
+    currencies: ['USD']
+}, {
+    id: 41,
+    name: "Price Travel",
+    currencies: ['USD']
+}, {
+    id: 42,
+    name: "BCD Travel",
+    currencies: ['USD']
+}, {
+    id: 43,
+    name: "7transfer-taxi2spain",
+    currencies: ['USD']
+}, {
+    id: 44,
+    name: "Aeromexico",
+    currencies: ['USD']
+}, {
+    id: 45,
+    name: "ServiceAreaApp",
+    currencies: ['USD']
+}, {
+    id: 46,
+    name: "Airport Transport",
+    currencies: ['USD']
+}, {
+    id: 47,
+    name: "Booking Motor",
+    currencies: ['USD']
+}, {
+    id: 48,
+    name: "Cheap Flights Fares",
+    currencies: ['USD']
+}, {
+    id: 49,
+    name: "Booking-Motor__Viajersa",
+    currencies: ['USD']
+}];

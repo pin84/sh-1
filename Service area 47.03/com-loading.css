@@ -1,0 +1,64 @@
+.flex, #my-loading .content .point-box, #my-loading .content, #my-loading,
+.loading-wrapper,
+.my-loading.content,
+.my-loading.content .point-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#my-loading {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  box-sizing: border-box;
+  z-index: 9999;
+}
+#my-loading .content {
+  width: 175px;
+  height: 120px;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px gray;
+  flex-direction: column;
+}
+#my-loading .content .text {
+  font-size: 18px;
+  color: #666;
+}
+#my-loading .content .point-box {
+  width: 100%;
+  height: 30px;
+}
+#my-loading .content .point-box .point {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #999;
+  margin-right: 10px;
+  -webkit-animation: changebg 2.04s ease infinite;
+}
+#my-loading .content .point-box .point:nth-child(1) {
+  -webkit-animation-delay: 0.13s;
+}
+#my-loading .content .point-box .point:nth-child(2) {
+  -webkit-animation-delay: 0.26s;
+}
+#my-loading .content .point-box .point:nth-child(3) {
+  -webkit-animation-delay: 0.39s;
+}
+
+@keyframes changebg {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}/*# sourceMappingURL=com-loading.css.map */

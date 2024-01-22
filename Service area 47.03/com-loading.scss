@@ -1,0 +1,67 @@
+.flex,
+.loading-wrapper,
+.my-loading.content,
+.my-loading.content .point-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@mixin wh($w, $h) {
+    width: $w;
+    height: $h;
+}
+
+#my-loading{
+    @include wh(100vw, 100vh);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    box-sizing: border-box;
+    z-index: 9999;
+    @extend .flex;
+    .content {
+        @include wh(175px, 120px);
+        padding: 10px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 10px gray;
+        @extend .flex;
+        flex-direction: column;
+        .text {
+            font-size: 18px;
+            color: #666;
+        }
+        .point-box {
+            @include wh(100%, 30px);
+            @extend .flex;
+            .point {
+                display: inline-block;
+                @include wh(8px, 8px);
+                border-radius: 50%;
+                background-color: #999;
+                // padding: 0 5px;
+                margin-right: 10px;
+                -webkit-animation: changebg 2.04s ease infinite;
+                &:nth-child(1) {
+                    -webkit-animation-delay: 0.13s;
+                }
+                &:nth-child(2) {
+                    -webkit-animation-delay: 0.26s;
+                }
+                &:nth-child(3) {
+                    -webkit-animation-delay: 0.39s;
+                }
+            }
+        }
+    }
+}
+@keyframes changebg {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}

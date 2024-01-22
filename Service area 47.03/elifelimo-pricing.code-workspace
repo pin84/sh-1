@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../../TEST"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "elifelimo-pricing"
+	}
+}

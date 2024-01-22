@@ -1,0 +1,94 @@
+<div class="vehicle-manage-content">
+  <div class="tab-box">
+    <span idx="0" class="pointer">Vehicle Management</span>
+  </div>
+
+  <div class="main-body">
+    <div class="section country-list com-table" sectionIdx="0">
+
+      <div class="dropdown-box">
+        <input type="text" class="coutry-dropdown-input" placeholder="plaese select a country">
+
+      </div>
+    </div>
+    <div class="section vehicle-list com-table hide" sectionIdx="1">
+    </div>
+
+
+    <!-- <div id="test"></div> -->
+
+    
+    <div class="section vehicle-detail hide" sectionIdx="2">
+      <div class="top">
+        <div class="top-name cur-vehicle-name">Sedan(1)</div>
+  
+        <div class="vehicle-info-box">
+          <div class="vehicle-info"></div>
+          <div class="upload-box">
+            <div class="upload-item">
+              <div class="top">API image*</div>
+              <div class="show-box api-img-show">
+                <span class="icon i-img1"></span>
+              </div>
+              <div class="botoom">
+                <div class="left">
+                  Please upload images with a size of 245*145px
+                </div>
+                <div class="right">
+                  <label for="api-img-uplod">Upload image</label>
+                  <input style="display: none;" type="file" id="api-img-uplod" accept="image/*">
+                </div>
+              </div>
+            </div>
+  
+            <div class="upload-item">
+              <div class="top">Home image*</div>
+              <div class="show-box home-img-show">
+                <span class="icon i-img1"></span>
+              </div>
+              <div class="botoom">
+                <div class="left">
+                  Please upload images with a size of 270*165px
+                </div>
+                <div class="right">
+                  <label for="home-img-uplod">Upload image</label>
+                  <input style="display: none;" type="file" id="home-img-uplod"  accept="image/*">
+                </div>
+              </div>
+            </div>
+  
+          </div>
+        </div>
+  
+        <div class="top-name language">Language</div>
+        <div class="language-list"></div>
+      </div>
+
+      <div class="save-box">
+        <div class="btn cancel">Cancel</div>
+        <div class="btn save">Save</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="template" style="display: none;">
+  <div class="table-item-box">
+    <div class="item">Country</div>
+    <div class="item">Country Code</div>
+  </div>
+  <div class="vehicle-info-item">
+    <div class="item-title">Maker</div>
+    <input type="text" class="input" placeholder="Maker" >
+  </div>
+
+  <div class="vehicle-info-item language-item">
+    <div class="item-title">English</div>
+    <div class="item-title">Maker</div>
+    <input type="text" class="input maker-input" placeholder="Maker" inputType="maker">
+    <div class="item-title">Model</div>
+    <input type="text" class="input model-input" placeholder="Model" inputType="model">
+  </div>
+
+</div>

@@ -1,0 +1,36 @@
+<!--
+ * @FilePath: jump_page.html
+ * @Author: Joy
+ * @Date: 2023-11-06 10:45:32
+ * @LastEditors: Joy
+ * @LastEditTime: 2023-11-06 13:02:41
+ * @Descripttion: jump page
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Area</title>
+</head>
+<body>
+    <script>
+
+    let { origin, pathname} = window.location;
+
+    let url = '';
+    if (pathname.indexOf('dev') > -1) {
+        url = origin + '/dev/service_area-time/service_area.html'
+    } else if (pathname.indexOf('prod') > -1) {
+        url = origin + '/prod/service_area/service_area_v44.html'
+    } else {
+        url = origin + '/service_area.html'
+    }
+
+    console.log(pathname, origin, url)
+
+    window.location.href = url;
+    
+    </script>
+</body>
+</html>

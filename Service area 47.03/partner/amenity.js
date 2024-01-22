@@ -166,8 +166,7 @@ class PartnerAmenity {
     this.id = id
     let index = dList.findIndex(item => item.service_area_id == id)
     let arr = await this.getCurrencyandMeet([dList[index]])
-    dList.push(arr[0])
-    dList.splice(index, 1)
+    dList[index] = arr[0]
 
     this.curSvc = dList.find(item => item.service_area_id == id)
     let { currency } = this.curSvc

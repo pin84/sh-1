@@ -1,0 +1,83 @@
+<div class="vehicles-pricing prev-next-tab hide" id="vehicles-pricing">
+  <div class="content-box">
+    <div class="vehicle-pricing-top-bar" id="vehicle-pricing-top-bar" style="position: relative">
+      <!-- do not delete K's test START -->
+      <div style="color: transparent;user-select: none;">
+        <botton id="to-up" class="to-up">to up</botton>
+        <botton id="to-down" class="to-down">to down</botton>
+        <botton id="to-left" class="to-left">to left</botton>
+        <botton id="to-right" class="to-right">to right</botton>
+      </div>
+      <!-- do not delete K's test END -->
+      <div class="vehicles-pricing-tip"><span>Left:Pick-up</span><span>Right:Drop-off</span></div>
+      <div class="currency-box">
+        <span tr id="currency-title">Currency:</span>
+        <span class="currency" style="font-weight: 600">USD</span>
+      </div>
+
+      <div class="download-csv-btn">Download Price CSV Sheet</div>
+    </div>
+    <div id="vehicle-form" class="vehicles-pricing-from ">
+      <div class="item top-item-template"></div>
+      <div class="item top-item-box hide">
+        <div class="zone-from"></div>
+        <div class="zone-list"></div>
+      </div>
+      <div class="vehicle-top">
+        <div class="top-box">
+          <div class="top"></div>
+        </div>
+      </div>
+      <div class="content">
+        <div class="item left-box-template" style="display: none">
+          <div class="item-left">
+            <input type="checkbox" class="checkbox" />
+            <span class="vehicle-name"></span>
+          </div>
+          <div class="item-right">
+            <input class="input" type="text" oninput="value=value.match(/^\d+(?:\.\d{0,2})?/)" />
+            <span>%</span>
+          </div>
+        </div>
+        <div class="item vehicle-price-item hide">
+          <input class="input" oninput="value=value.match(/^\d+(?:\.\d{0,2})?/)" />
+          <span class="red-triangle hide"></span>
+          <div class="price-zero-tips">
+            The price here is 0
+            <div class="price-zero-tips-btn">OK</div>
+          </div>
+        </div>
+        <div class="tip-box hide">
+          <div class="triangle"></div>
+          <div class="tip-content-box">
+            <div class="tip-content-top">
+              <div class="cale-text">54+(-50)=4</div>
+              <div class="percent">92%</div>
+            </div>
+            <div class="tip-text">General + Delta = Final price</div>
+          </div>
+        </div>
+        <div class="left-box"></div>
+        <div class="right-box">
+          <div class="move to-left hide">
+            <i class="icon i-To_left"></i>
+            <span>Anomalies</span>
+          </div>
+          <div class="move to-right hide">
+            <span>Anomalies</span>
+            <i class="icon i-To_left"></i>
+          </div>
+          <div class="move to-down hide">
+            <span>Anomalies</span>
+            <i class="icon i-To_left"></i>
+          </div>
+          <div class="move to-up hide">
+            <span>Anomalies</span>
+            <i class="icon i-To_left"></i>
+          </div>
+          <div class="right-content"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
