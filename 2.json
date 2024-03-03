@@ -1,941 +1,1658 @@
 {
   "serviceArea": {
-    "parent_fleet_id": 15,
-    "name": "HHN,Frankfurt",
-    "lat": 49.942903,
-    "lng": 7.262953,
-    "radius": 10000,
-    "id": 18312,
-    "parent_fleet_name": "Elife"
+      "id": 318,
+      "parent_fleet_id": 40,
+      "name": "london_service_area_one",
+      "lat": 37.4926301,
+      "lng": -122.15394625,
+      "radius": 160934,
+      "parent_fleet_name": "Elife"
   },
-  "airports": ["HHN"],
-  "countryCode": "DEU",
-  "currencyCode": "USD",
   "pricing": {
-    "min_distance": 10000,
-    "min_amount": 45.65,
-    "currency": "USD",
-    "ranges": [
-      {
-        "seq": 0,
-        "amount": 2,
-        "currency": "USD",
-        "distance": 20000,
-        "from": 10000,
-        "to": 30000,
-        "distanceIn": 20,
-        "per_unit": 1,
-        "toActivy": "false",
-        "amountActivy": "false",
-        "fromActivy_2": "false",
-        "toActivy_2": "false"
-      },
-      {
-        "seq": 1,
-        "amount": 2,
-        "currency": "USD",
-        "distance": 20000,
-        "from": 30000,
-        "to": 50000,
-        "distanceIn": 20,
-        "per_unit": 1,
-        "fromActivy": "false",
-        "toActivy": "false",
-        "amountActivy": "false",
-        "fromActivy_2": "false",
-        "toActivy_2": "false"
-      },
-      {
-        "seq": 2,
-        "amount": 2,
-        "currency": "USD",
-        "distance": 50000,
-        "from": 50000,
-        "to": 100000,
-        "distanceIn": 450,
-        "per_unit": 1,
-        "fromActivy": "false",
-        "toActivy": "false",
-        "amountActivy": "false",
-        "fromActivy_2": "false",
-        "toActivy_2": "false"
-      },
-      {
-        "seq": 3,
-        "amount": 2,
-        "currency": "USD",
-        "distance": 400000,
-        "from": 100000,
-        "to": 500000,
-        "distanceIn": 0,
-        "per_unit": 1,
-        "fromActivy": "false",
-        "toActivy": "false",
-        "amountActivy": "false",
-        "fromActivy_2": "false",
-        "toActivy_2": "false"
-      }
-    ],
-    "meet_n_greet": 0
+      "ranges": [
+          {
+              "seq": 0,
+              "amount": 2.5,
+              "currency": "CNY",
+              "distance": 35405,
+              "from": 16093,
+              "to": 51498,
+              "distanceIn": 22,
+              "per_unit": 0
+          },
+          {
+              "seq": 1,
+              "amount": 2.4,
+              "currency": "CNY",
+              "distance": 80467,
+              "from": 51498,
+              "to": 131965,
+              "distanceIn": 50,
+              "per_unit": 0
+          },
+          {
+              "seq": 2,
+              "amount": 1.9,
+              "currency": "CNY",
+              "distance": 643736,
+              "from": 131965,
+              "to": 775701,
+              "distanceIn": 400,
+              "per_unit": 0
+          },
+          {
+              "seq": 3,
+              "amount": 22,
+              "currency": "CNY",
+              "distance": 189902,
+              "from": 775701,
+              "to": 965604,
+              "distanceIn": 118,
+              "per_unit": 0
+          }
+      ],
+      "min_amount": 650,
+      "currency": "CNY",
+      "min_distance": 16093,
+      "meet_n_greet": 12
   },
-  "zones": [
-    {
-      "name": "Frankfurt",
-      "lat": 50.1109221,
-      "lng": 8.6821267,
-      "radius": 5000,
-      "prices": [
-        {
-          "airport": "HHN",
-          "amount": 190.9,
-          "currency": "USD",
-          "p_amt": 190.9,
-          "d_amt": 190.9
-        }
-      ]
-    },
-    {
-      "name": "Koblenz",
-      "lat": 50.3569429,
-      "lng": 7.5889959,
-      "radius": 5732,
-      "prices": [
-        {
-          "airport": "HHN",
-          "amount": 204.18,
-          "currency": "USD",
-          "p_amt": 204.18,
-          "d_amt": 204.18
-        }
-      ]
-    },
-    {
-      "lat": 49.74883217554715,
-      "lng": 6.643817782892722,
-      "name": "Trier",
-      "p2p": "false",
-      "prices": [
-        {
-          "airport": "HHN",
-          "amount": 204.18,
-          "currency": "USD",
-          "p_amt": 186.75,
-          "d_amt": 186.75
-        }
-      ],
-      "radius": 2000
-    },
-    {
-      "lat": 49.92522238213569,
-      "lng": 7.047223694549647,
-      "name": "Bernkastel-Kues",
-      "p2p": "false",
-      "prices": [
-        {
-          "airport": "HHN",
-          "amount": 204.18,
-          "currency": "USD",
-          "p_amt": 153.55,
-          "d_amt": 153.55
-        }
-      ],
-      "radius": 3000
-    },
-    {
-      "lat": 50.1474123,
-      "lng": 7.1701755,
-      "name": "Cochem",
-      "p2p": "false",
-      "prices": [
-        {
-          "airport": "HHN",
-          "amount": 204.18,
-          "currency": "USD",
-          "p_amt": 141.1,
-          "d_amt": 141.1
-        }
-      ],
-      "radius": 2000
-    },
-    {
-      "lat": 49.71452799999999,
-      "lng": 7.3071512,
-      "name": "Idar-Oberstein",
-      "p2p": "false",
-      "prices": [
-        {
-          "airport": "HHN",
-          "amount": 204.18,
-          "currency": "USD",
-          "p_amt": 124.5,
-          "d_amt": 124.5
-        }
-      ],
-      "radius": 2000
-    },
-    {
-      "lat": 50.00238641737899,
-      "lng": 8.274394913279105,
-      "name": "Mainz",
-      "p2p": "false",
-      "prices": [
-        {
-          "airport": "HHN",
-          "amount": 204.18,
-          "currency": "USD",
-          "p_amt": 230.74,
-          "d_amt": 230.74
-        }
-      ],
-      "radius": 5000
-    },
-    {
-      "lat": 49.8440162,
-      "lng": 7.873134599999999,
-      "name": "Bad Kreuznach",
-      "p2p": "false",
-      "prices": [
-        {
-          "airport": "HHN",
-          "amount": 204.18,
-          "currency": "USD",
-          "p_amt": 207.5,
-          "d_amt": 207.5
-        }
-      ],
-      "radius": 2000
-    },
-    {
-      "lat": 49.44677061663897,
-      "lng": 7.761807063399605,
-      "name": "Kaiserslautern",
-      "p2p": "false",
-      "prices": [
-        {
-          "airport": "HHN",
-          "amount": 204.18,
-          "currency": "USD",
-          "p_amt": 315.4,
-          "d_amt": 315.4
-        }
-      ],
-      "radius": 4000
-    },
-    {
-      "lat": 50.09120499040248,
-      "lng": 8.248778057915718,
-      "name": "Wiesbaden",
-      "p2p": "false",
-      "prices": [
-        {
-          "airport": "HHN",
-          "amount": 204.18,
-          "currency": "USD",
-          "p_amt": 230.74,
-          "d_amt": 230.74
-        }
-      ],
-      "radius": 5000
-    }
+  "airports": [
+      "CDG",
+      "ORY"
   ],
   "vehicleClasses": [
-    {
-      "vehicle_class_id": 1,
-      "delta_amount": 0,
-      "percent": 0,
-      "hourly_percent": 0,
-      "hourly_delta": 0,
-      "percent_appendix": [
-        {
-          "field": "pricing.ranges.1",
-          "delta_amount": 1.2
-        },
-        {
-          "field": "pricing.ranges.2",
-          "delta_amount": -0.6
-        },
-        {
-          "field": "pricing.min_amount",
-          "delta_amount": 12.45
-        },
-        {
-          "field": "pricing.ranges.0",
-          "delta_amount": 0.9
-        },
-        {
-          "field": "pricing.ranges.3",
-          "delta_amount": -0.6
-        },
-        {
-          "field": "zones.1.prices.0.p_amt",
-          "delta_amount": -21.58
-        },
-        {
-          "field": "zones.1.prices.0.d_amt",
-          "delta_amount": -21.58
-        }
-      ],
-      "notice_time": [
-        {
-          "time": 1440,
-          "percent": 20,
-          "allowance": 360
-        }
-      ]
-    },
-    {
-      "vehicle_class_id": 2,
-      "delta_amount": 0,
-      "percent": 50,
-      "hourly_percent": 50,
-      "hourly_delta": 0,
-      "percent_appendix": [
-        {
-          "field": "pricing.ranges.0",
-          "delta_amount": 1.5
-        },
-        {
-          "field": "pricing.ranges.1",
-          "delta_amount": 2
-        }
-      ],
-      "notice_time": [
-        {
-          "time": 1440,
-          "percent": 20,
-          "allowance": 360
-        }
-      ]
-    },
-    {
-      "vehicle_class_id": 40,
-      "delta_amount": 0,
-      "percent": 100,
-      "hourly_percent": 100,
-      "hourly_delta": 0,
-      "notice_time": [
-        {
-          "time": 1440,
-          "percent": 20,
-          "allowance": 360
-        }
-      ]
-    },
-    {
-      "vehicle_class_id": 6,
-      "delta_amount": 0,
-      "percent": 30,
-      "hourly_percent": 30,
-      "hourly_delta": 0,
-      "percent_appendix": [
-        {
-          "field": "zones.0.prices.0",
-          "delta_amount": 29.1
-        },
-        {
-          "field": "pricing.ranges.2",
-          "delta_amount": -0.9
-        },
-        {
-          "field": "zones.1.prices.0",
-          "delta_amount": 25.82
-        },
-        {
-          "field": "pricing.min_amount",
-          "delta_amount": 29.35
-        },
-        {
-          "field": "pricing.ranges.0",
-          "delta_amount": 2
-        },
-        {
-          "field": "pricing.ranges.1",
-          "delta_amount": 1.7
-        },
-        {
-          "field": "pricing.ranges.3",
-          "delta_amount": 1.3
-        },
-        {
-          "field": "zones.2.prices.0.p_amt",
-          "delta_amount": 18.25
-        },
-        {
-          "field": "zones.2.prices.0.d_amt",
-          "delta_amount": 18.25
-        },
-        {
-          "field": "zones.3.prices.0.p_amt",
-          "delta_amount": 71.45
-        },
-        {
-          "field": "zones.3.prices.0.d_amt",
-          "delta_amount": 71.45
-        },
-        {
-          "field": "zones.1.prices.0.p_amt",
-          "delta_amount": -9.18,
-          "hasChanged": "true"
-        },
-        {
-          "field": "zones.1.prices.0.d_amt",
-          "delta_amount": -9.18,
-          "hasChanged": "true"
-        },
-        {
-          "field": "zones.6.prices.0.p_amt",
-          "delta_amount": 69.26,
-          "hasChanged": "true"
-        },
-        {
-          "field": "zones.6.prices.0.d_amt",
-          "delta_amount": 69.26,
-          "hasChanged": "true"
-        },
-        {
-          "field": "zones.7.prices.0.p_amt",
-          "delta_amount": 87.5,
-          "hasChanged": "true"
-        },
-        {
-          "field": "zones.7.prices.0.d_amt",
-          "delta_amount": 87.5,
-          "hasChanged": "true"
-        },
-        {
-          "field": "zones.8.prices.0.p_amt",
-          "delta_amount": 44.6,
-          "hasChanged": "true"
-        },
-        {
-          "field": "zones.8.prices.0.d_amt",
-          "delta_amount": 44.6,
-          "hasChanged": "true"
-        },
-        {
-          "field": "zones.9.prices.0.p_amt",
-          "delta_amount": 54.26,
-          "hasChanged": "true"
-        },
-        {
-          "field": "zones.9.prices.0.d_amt",
-          "delta_amount": 54.26,
-          "hasChanged": "true"
-        }
-      ],
-      "notice_time": [
-        {
-          "time": 1440,
-          "percent": 20,
-          "allowance": 360
-        }
-      ]
-    },
-    {
-      "vehicle_class_id": 3,
-      "delta_amount": 0,
-      "percent": 40,
-      "hourly_percent": 40,
-      "hourly_delta": 0,
-      "percent_appendix": [
-        {
-          "field": "zones.0.prices.0",
-          "delta_amount": 41.5
-        },
-        {
-          "field": "pricing.ranges.2",
-          "delta_amount": -0.9
-        },
-        {
-          "field": "zones.1.prices.0",
-          "delta_amount": 30.82
-        },
-        {
-          "field": "pricing.min_amount",
-          "delta_amount": 32.35
-        },
-        {
-          "field": "pricing.ranges.0",
-          "delta_amount": 2
-        },
-        {
-          "field": "pricing.ranges.1",
-          "delta_amount": 1.7
-        },
-        {
-          "field": "pricing.ranges.3",
-          "delta_amount": 1.3
-        },
-        {
-          "field": "zones.2.prices.0.p_amt",
-          "delta_amount": 20.75
-        },
-        {
-          "field": "zones.2.prices.0.d_amt",
-          "delta_amount": 20.75
-        },
-        {
-          "field": "zones.3.prices.0.p_amt",
-          "delta_amount": 78.85
-        },
-        {
-          "field": "zones.3.prices.0.d_amt",
-          "delta_amount": 78.85
-        },
-        {
-          "field": "zones.1.prices.0.p_amt",
-          "delta_amount": -4.98,
-          "hasChanged": "true"
-        },
-        {
-          "field": "zones.1.prices.0.d_amt",
-          "delta_amount": -4.98,
-          "hasChanged": "true"
-        },
-        {
-          "field": "zones.6.prices.0.p_amt",
-          "delta_amount": 74.26,
-          "hasChanged": "true"
-        },
-        {
-          "field": "zones.6.prices.0.d_amt",
-          "delta_amount": 74.26,
-          "hasChanged": "true"
-        },
-        {
-          "field": "zones.7.prices.0.p_amt",
-          "delta_amount": 95.45,
-          "hasChanged": "true"
-        },
-        {
-          "field": "zones.7.prices.0.d_amt",
-          "delta_amount": 95.45,
-          "hasChanged": "true"
-        },
-        {
-          "field": "zones.8.prices.0.p_amt",
-          "delta_amount": 49.8,
-          "hasChanged": "true"
-        },
-        {
-          "field": "zones.8.prices.0.d_amt",
-          "delta_amount": 49.8,
-          "hasChanged": "true"
-        },
-        {
-          "field": "zones.9.prices.0.p_amt",
-          "delta_amount": 59.26,
-          "hasChanged": "true"
-        },
-        {
-          "field": "zones.9.prices.0.d_amt",
-          "delta_amount": 59.26,
-          "hasChanged": "true"
-        }
-      ],
-      "notice_time": [
-        {
-          "time": 1440,
-          "percent": 20,
-          "allowance": 360
-        }
-      ]
-    },
-    {
-      "vehicle_class_id": 4,
-      "delta_amount": 0,
-      "percent": 110,
-      "hourly_percent": 110,
-      "hourly_delta": 0,
-      "percent_appendix": [
-        {
-          "field": "zones.1.prices.0",
-          "delta_amount": 90.82
-        },
-        {
-          "field": "pricing.ranges.0",
-          "delta_amount": 3
-        }
-      ],
-      "notice_time": [
-        {
-          "time": 1440,
-          "percent": 20,
-          "allowance": 360
-        }
-      ]
-    },
-    {
-      "vehicle_class_id": 36,
-      "delta_amount": 0,
-      "percent": 120,
-      "hourly_percent": 120,
-      "hourly_delta": 0,
-      "notice_time": [
-        {
-          "time": 1440,
-          "percent": 20,
-          "allowance": 360
-        }
-      ]
-    },
-    {
-      "vehicle_class_id": 5,
-      "delta_amount": 0,
-      "percent": 100,
-      "hourly_percent": 100,
-      "hourly_delta": 0,
-      "percent_appendix": [
-        {
-          "field": "zones.0.prices.0",
-          "delta_amount": 48.14
-        },
-        {
-          "field": "pricing.ranges.0",
-          "delta_amount": 2
-        },
-        {
-          "field": "pricing.ranges.1",
-          "delta_amount": 1.7
-        },
-        {
-          "field": "pricing.ranges.2",
-          "delta_amount": -0.9
-        },
-        {
-          "field": "zones.1.prices.0",
-          "delta_amount": 34.86
-        },
-        {
-          "field": "pricing.min_amount",
-          "delta_amount": 37.35
-        },
-        {
-          "field": "pricing.ranges.3",
-          "delta_amount": 1.3
-        },
-        {
-          "field": "zones.4.prices.0.p_amt",
-          "delta_amount": 141.1
-        },
-        {
-          "field": "zones.1.prices.0.p_amt",
-          "delta_amount": 59.76,
-          "hasChanged": "true"
-        },
-        {
-          "field": "zones.1.prices.0.d_amt",
-          "delta_amount": 59.76,
-          "hasChanged": "true"
-        },
-        {
-          "field": "zones.6.prices.0.p_amt",
-          "delta_amount": 82.17,
-          "hasChanged": "true"
-        },
-        {
-          "field": "zones.6.prices.0.d_amt",
-          "delta_amount": 82.17,
-          "hasChanged": "true"
-        },
-        {
-          "field": "zones.9.prices.0.p_amt",
-          "delta_amount": 63.91,
-          "hasChanged": "true"
-        },
-        {
-          "field": "zones.9.prices.0.d_amt",
-          "delta_amount": 63.91,
-          "hasChanged": "true"
-        }
-      ],
-      "notice_time": [
-        {
-          "time": 1440,
-          "percent": 20,
-          "allowance": 360
-        }
-      ]
-    },
-    {
-      "vehicle_class_id": 9,
-      "delta_amount": 0,
-      "percent": 200,
-      "hourly_percent": 200,
-      "hourly_delta": 0,
-      "percent_appendix": [
-        {
-          "field": "zones.1.prices.0",
-          "delta_amount": 525.82
-        },
-        {
-          "field": "pricing.min_amount",
-          "delta_amount": 431.6
-        }
-      ],
-      "notice_time": [
-        {
-          "time": 1440,
-          "percent": 20,
-          "allowance": 360
-        }
-      ]
-    },
-    {
-      "vehicle_class_id": 10,
-      "delta_amount": 0,
-      "percent": 230,
-      "hourly_percent": 230,
-      "hourly_delta": 0,
-      "percent_appendix": [
-        {
-          "field": "zones.1.prices.0",
-          "delta_amount": 535.82
-        },
-        {
-          "field": "pricing.min_amount",
-          "delta_amount": 469.78
-        }
-      ],
-      "notice_time": [
-        {
-          "time": 1440,
-          "percent": 20,
-          "allowance": 360
-        }
-      ]
-    },
-    {
-      "vehicle_class_id": 11,
-      "delta_amount": 0,
-      "percent": 250,
-      "hourly_percent": 250,
-      "hourly_delta": 0,
-      "percent_appendix": [
-        {
-          "field": "zones.1.prices.0",
-          "delta_amount": 545.82
-        },
-        {
-          "field": "pricing.min_amount",
-          "delta_amount": 488.87
-        }
-      ],
-      "notice_time": [
-        {
-          "time": 1440,
-          "percent": 20,
-          "allowance": 360
-        }
-      ]
-    },
-    {
-      "vehicle_class_id": 29,
-      "delta_amount": 0,
-      "percent": 300,
-      "hourly_percent": 300,
-      "hourly_delta": 0,
-      "percent_appendix": [
-        {
-          "field": "zones.1.prices.0",
-          "delta_amount": 585.82
-        },
-        {
-          "field": "pricing.min_amount",
-          "delta_amount": 498.42
-        }
-      ],
-      "notice_time": [
-        {
-          "time": 1440,
-          "percent": 20,
-          "allowance": 360
-        }
-      ]
-    },
-    {
-      "vehicle_class_id": 30,
-      "delta_amount": 0,
-      "percent": 350,
-      "hourly_percent": 350,
-      "hourly_delta": 0,
-      "percent_appendix": [
-        {
-          "field": "zones.1.prices.0",
-          "delta_amount": 595.82
-        },
-        {
-          "field": "pricing.min_amount",
-          "delta_amount": 517.5
-        }
-      ],
-      "notice_time": [
-        {
-          "time": 1440,
-          "percent": 20,
-          "allowance": 360
-        }
-      ]
-    },
-    {
-      "vehicle_class_id": 31,
-      "delta_amount": 0,
-      "percent": 400,
-      "hourly_percent": 400,
-      "hourly_delta": 0,
-      "percent_appendix": [
-        {
-          "field": "zones.1.prices.0",
-          "delta_amount": 625.82
-        },
-        {
-          "field": "pricing.min_amount",
-          "delta_amount": 527.05
-        }
-      ],
-      "notice_time": [
-        {
-          "time": 1440,
-          "percent": 20,
-          "allowance": 360
-        }
-      ]
-    },
-    {
-      "vehicle_class_id": 32,
-      "delta_amount": 0,
-      "percent": 425,
-      "hourly_percent": 425,
-      "hourly_delta": 0,
-      "percent_appendix": [
-        {
-          "field": "zones.1.prices.0",
-          "delta_amount": 645.82
-        },
-        {
-          "field": "pricing.min_amount",
-          "delta_amount": 565.23
-        }
-      ],
-      "notice_time": [
-        {
-          "time": 1440,
-          "percent": 20,
-          "allowance": 360
-        }
-      ]
-    },
-    {
-      "vehicle_class_id": 34,
-      "delta_amount": 0,
-      "percent": 435,
-      "hourly_percent": 435,
-      "hourly_delta": 0,
-      "percent_appendix": [
-        {
-          "field": "zones.1.prices.0",
-          "delta_amount": 695.82
-        },
-        {
-          "field": "pricing.min_amount",
-          "delta_amount": 679.77
-        }
-      ],
-      "notice_time": [
-        {
-          "time": 1440,
-          "percent": 20,
-          "allowance": 360
-        }
-      ]
-    },
-    {
-      "vehicle_class_id": 33,
-      "delta_amount": 0,
-      "percent": 430,
-      "hourly_percent": 430,
-      "hourly_delta": 0,
-      "percent_appendix": [
-        {
-          "field": "zones.1.prices.0",
-          "delta_amount": 685.82
-        },
-        {
-          "field": "pricing.min_amount",
-          "delta_amount": 603.41
-        }
-      ],
-      "notice_time": [
-        {
-          "time": 1440,
-          "percent": 20,
-          "allowance": 360
-        }
-      ]
-    },
-    {
-      "vehicle_class_id": 35,
-      "delta_amount": 0,
-      "percent": 450,
-      "hourly_percent": 450,
-      "hourly_delta": 0,
-      "percent_appendix": [
-        {
-          "field": "zones.1.prices.0",
-          "delta_amount": 745.82
-        },
-        {
-          "field": "pricing.min_amount",
-          "delta_amount": 704.35
-        }
-      ],
-      "notice_time": [
-        {
-          "time": 1440,
-          "percent": 20,
-          "allowance": 360
-        }
-      ]
-    }
+      {
+          "vehicle_class_id": 1,
+          "delta_amount": 0,
+          "percent": 10,
+          "percent_appendix": [
+              {
+                  "field": "zones.0.prices.1",
+                  "delta_amount": 3
+              },
+              {
+                  "field": "zones.1.prices.1",
+                  "delta_amount": 5
+              },
+              {
+                  "field": "zones.2.prices.1",
+                  "delta_amount": 7
+              },
+              {
+                  "field": "hourly_pricing.min_amount",
+                  "delta_amount": -99,
+                  "showRedTriangleIndex": 0
+              },
+              {
+                  "field": "pricing.ranges.2",
+                  "delta_amount": 1.1
+              }
+          ],
+          "hourly_percent": 10,
+          "hourly_delta": 0,
+          "surcharge_schedule": [
+              [
+                  {
+                      "from": "00:00",
+                      "to": "01:30",
+                      "delta_amount": 0
+                  },
+                  {
+                      "from": "03:00",
+                      "to": "04:30",
+                      "percent": 10,
+                      "delta_amount": 0
+                  },
+                  {
+                      "from": "22:00",
+                      "to": "23:59",
+                      "percent": 100,
+                      "delta_amount": 0,
+                      "break": true
+                  }
+              ],
+              "null",
+              [
+                  {
+                      "from": "00:00",
+                      "to": "02:00",
+                      "percent": 5,
+                      "delta_amount": 0
+                  },
+                  {
+                      "from": "04:00",
+                      "to": "05:30",
+                      "delta_amount": 2,
+                      "percent": 0
+                  }
+              ],
+              [
+                  {
+                      "from": "00:00",
+                      "to": "01:00",
+                      "percent": 2,
+                      "delta_amount": 0
+                  },
+                  {
+                      "from": "03:00",
+                      "to": "04:30",
+                      "delta_amount": 8,
+                      "percent": 0
+                  }
+              ],
+              [
+                  {
+                      "from": "00:00",
+                      "to": "01:30",
+                      "percent": 99,
+                      "delta_amount": 0
+                  }
+              ],
+              "null",
+              [
+                  {
+                      "from": "00:30",
+                      "to": "03:00",
+                      "percent": 7,
+                      "delta_amount": 0
+                  }
+              ]
+          ]
+      },
+      {
+          "vehicle_class_id": 2,
+          "delta_amount": 0,
+          "percent": 0,
+          "percent_appendix": [
+              {
+                  "field": "pricing.min_amount",
+                  "delta_amount": 15
+              },
+              {
+                  "field": "pricing.ranges.0",
+                  "delta_amount": 0.3
+              },
+              {
+                  "field": "pricing.ranges.1",
+                  "delta_amount": 0.2
+              },
+              {
+                  "field": "pricing.ranges.2",
+                  "delta_amount": 0.3
+              },
+              {
+                  "field": "zones.0.prices.1",
+                  "delta_amount": 4
+              },
+              {
+                  "field": "zones.1.prices.1",
+                  "delta_amount": 6
+              },
+              {
+                  "field": "zones.2.prices.1",
+                  "delta_amount": 8
+              },
+              {
+                  "field": "hourly_pricing.min_amount",
+                  "delta_amount": -98,
+                  "showRedTriangleIndex": 0
+              },
+              {
+                  "field": "hourly_pricing.ranges.0",
+                  "delta_amount": 9,
+                  "showRedTriangleIndex": 1
+              }
+          ],
+          "hourly_percent": 0,
+          "hourly_delta": 0,
+          "surcharge_schedule": [
+              [
+                  {
+                      "from": "00:00",
+                      "to": "01:30",
+                      "delta_amount": 0
+                  },
+                  {
+                      "from": "03:00",
+                      "to": "04:30",
+                      "percent": 10,
+                      "delta_amount": 0
+                  },
+                  {
+                      "from": "22:00",
+                      "to": "23:59",
+                      "percent": 100,
+                      "delta_amount": 0,
+                      "break": true
+                  }
+              ],
+              "null",
+              [
+                  {
+                      "from": "00:00",
+                      "to": "02:00",
+                      "percent": 5,
+                      "delta_amount": 0
+                  },
+                  {
+                      "from": "04:00",
+                      "to": "05:30",
+                      "delta_amount": 2,
+                      "percent": 0
+                  }
+              ],
+              [
+                  {
+                      "from": "00:00",
+                      "to": "01:00",
+                      "percent": 2,
+                      "delta_amount": 0
+                  },
+                  {
+                      "from": "03:00",
+                      "to": "04:30",
+                      "delta_amount": 8,
+                      "percent": 0
+                  }
+              ],
+              [
+                  {
+                      "from": "00:00",
+                      "to": "01:30",
+                      "percent": 99,
+                      "delta_amount": 0
+                  }
+              ],
+              "null",
+              [
+                  {
+                      "from": "00:30",
+                      "to": "03:00",
+                      "percent": 7,
+                      "delta_amount": 0
+                  }
+              ]
+          ]
+      },
+      {
+          "vehicle_class_id": 40,
+          "delta_amount": 0,
+          "percent": 10,
+          "percent_appendix": [
+              {
+                  "field": "zones.0.prices.1",
+                  "delta_amount": 5
+              },
+              {
+                  "field": "zones.1.prices.1",
+                  "delta_amount": 7
+              },
+              {
+                  "field": "hourly_pricing.ranges.0",
+                  "delta_amount": -27,
+                  "showRedTriangleIndex": 1
+              }
+          ],
+          "hourly_percent": 10,
+          "hourly_delta": 0,
+          "notice_time": [
+              {
+                  "time": 4320,
+                  "percent": 100,
+                  "allowance": 600
+              }
+          ]
+      },
+      {
+          "vehicle_class_id": 6,
+          "delta_amount": 0,
+          "percent": 0,
+          "percent_appendix": [
+              {
+                  "field": "zones.1.prices.1",
+                  "delta_amount": 8
+              }
+          ],
+          "hourly_percent": 0,
+          "hourly_delta": 0,
+          "notice_time": [
+              {
+                  "time": 4320,
+                  "percent": 100,
+                  "allowance": 600
+              }
+          ]
+      },
+      {
+          "vehicle_class_id": 3,
+          "delta_amount": 0,
+          "percent": 0,
+          "hourly_percent": 0,
+          "hourly_delta": 0,
+          "notice_time": [
+              {
+                  "time": 4320,
+                  "percent": 100,
+                  "allowance": 600
+              }
+          ]
+      },
+      {
+          "vehicle_class_id": 4,
+          "delta_amount": 0,
+          "percent": 60,
+          "percent_appendix": [
+              {
+                  "field": "zones.0.prices.0",
+                  "delta_amount": 25
+              }
+          ],
+          "hourly_percent": 60,
+          "hourly_delta": 0,
+          "notice_time": [
+              {
+                  "time": 4320,
+                  "percent": 100,
+                  "allowance": 600
+              }
+          ]
+      },
+      {
+          "vehicle_class_id": 5,
+          "delta_amount": 0,
+          "percent": 100,
+          "percent_appendix": [
+              {
+                  "field": "pricing.min_amount",
+                  "delta_amount": 100
+              },
+              {
+                  "field": "pricing.ranges.0",
+                  "delta_amount": 2.6
+              },
+              {
+                  "field": "pricing.ranges.1",
+                  "delta_amount": 2.5
+              },
+              {
+                  "field": "pricing.ranges.2",
+                  "delta_amount": 2.4
+              },
+              {
+                  "field": "zones.0.prices.0",
+                  "delta_amount": 100
+              }
+          ],
+          "hourly_percent": 100,
+          "hourly_delta": 0
+      },
+      {
+          "vehicle_class_id": 9,
+          "delta_amount": 0,
+          "percent": 105,
+          "percent_appendix": [
+              {
+                  "field": "pricing.min_amount",
+                  "delta_amount": 150
+              },
+              {
+                  "field": "pricing.ranges.0",
+                  "delta_amount": 2.7
+              },
+              {
+                  "field": "pricing.ranges.1",
+                  "delta_amount": 2.6
+              },
+              {
+                  "field": "pricing.ranges.2",
+                  "delta_amount": 2.5
+              },
+              {
+                  "field": "zones.0.prices.0",
+                  "delta_amount": 130
+              }
+          ],
+          "hourly_percent": 105,
+          "hourly_delta": 0
+      },
+      {
+          "vehicle_class_id": 10,
+          "delta_amount": 0,
+          "percent": 115,
+          "percent_appendix": [
+              {
+                  "field": "pricing.min_amount",
+                  "delta_amount": 160
+              },
+              {
+                  "field": "pricing.ranges.0",
+                  "delta_amount": 2.8
+              },
+              {
+                  "field": "pricing.ranges.1",
+                  "delta_amount": 2.7
+              },
+              {
+                  "field": "pricing.ranges.2",
+                  "delta_amount": 2.55
+              },
+              {
+                  "field": "zones.0.prices.0",
+                  "delta_amount": 145
+              }
+          ],
+          "hourly_percent": 115,
+          "hourly_delta": 0
+      },
+      {
+          "vehicle_class_id": 11,
+          "delta_amount": 0,
+          "percent": 120,
+          "percent_appendix": [
+              {
+                  "field": "pricing.min_amount",
+                  "delta_amount": 170
+              },
+              {
+                  "field": "pricing.ranges.0",
+                  "delta_amount": 2.9
+              },
+              {
+                  "field": "pricing.ranges.1",
+                  "delta_amount": 2.8
+              },
+              {
+                  "field": "pricing.ranges.2",
+                  "delta_amount": 2.6
+              },
+              {
+                  "field": "zones.0.prices.0",
+                  "delta_amount": 150
+              }
+          ],
+          "hourly_percent": 120,
+          "hourly_delta": 0
+      },
+      {
+          "vehicle_class_id": 36,
+          "delta_amount": 0,
+          "percent": 0,
+          "hourly_percent": 0,
+          "hourly_delta": 0,
+          "notice_time": [
+              {
+                  "time": 4320,
+                  "percent": 100,
+                  "allowance": 600
+              }
+          ]
+      },
+      {
+          "vehicle_class_id": 21,
+          "delta_amount": 0,
+          "percent": 0,
+          "hourly_percent": 0,
+          "hourly_delta": 0,
+          "notice_time": [
+              {
+                  "time": 4320,
+                  "percent": 100,
+                  "allowance": 600
+              }
+          ],
+          "surcharge_schedule": [
+              [
+                  {
+                      "from": "00:00",
+                      "to": "01:30",
+                      "delta_amount": 0
+                  },
+                  {
+                      "from": "03:00",
+                      "to": "04:30",
+                      "percent": 10,
+                      "delta_amount": 0
+                  },
+                  {
+                      "from": "22:00",
+                      "to": "23:59",
+                      "percent": 100,
+                      "delta_amount": 0,
+                      "break": true
+                  }
+              ],
+              "null",
+              [
+                  {
+                      "from": "00:00",
+                      "to": "02:00",
+                      "percent": 5,
+                      "delta_amount": 0
+                  },
+                  {
+                      "from": "04:00",
+                      "to": "05:30",
+                      "delta_amount": 2,
+                      "percent": 0
+                  }
+              ],
+              [
+                  {
+                      "from": "00:00",
+                      "to": "01:00",
+                      "percent": 2,
+                      "delta_amount": 0
+                  },
+                  {
+                      "from": "03:00",
+                      "to": "04:30",
+                      "delta_amount": 8,
+                      "percent": 0
+                  }
+              ],
+              [
+                  {
+                      "from": "00:00",
+                      "to": "01:30",
+                      "percent": 99,
+                      "delta_amount": 0
+                  }
+              ],
+              "null",
+              [
+                  {
+                      "from": "00:30",
+                      "to": "03:00",
+                      "percent": 7,
+                      "delta_amount": 0
+                  }
+              ]
+          ]
+      },
+      {
+          "vehicle_class_id": 22,
+          "delta_amount": 0,
+          "percent": 0,
+          "hourly_percent": 0,
+          "hourly_delta": 0,
+          "notice_time": [
+              {
+                  "time": 4320,
+                  "percent": 100,
+                  "allowance": 600
+              }
+          ],
+          "surcharge_schedule": [
+              [
+                  {
+                      "from": "00:00",
+                      "to": "01:30",
+                      "delta_amount": 0
+                  },
+                  {
+                      "from": "03:00",
+                      "to": "04:30",
+                      "percent": 10,
+                      "delta_amount": 0
+                  },
+                  {
+                      "from": "22:00",
+                      "to": "23:59",
+                      "percent": 100,
+                      "delta_amount": 0,
+                      "break": true
+                  }
+              ],
+              "null",
+              [
+                  {
+                      "from": "00:00",
+                      "to": "02:00",
+                      "percent": 5,
+                      "delta_amount": 0
+                  },
+                  {
+                      "from": "04:00",
+                      "to": "05:30",
+                      "delta_amount": 2,
+                      "percent": 0
+                  }
+              ],
+              [
+                  {
+                      "from": "00:00",
+                      "to": "01:00",
+                      "percent": 2,
+                      "delta_amount": 0
+                  },
+                  {
+                      "from": "03:00",
+                      "to": "04:30",
+                      "delta_amount": 8,
+                      "percent": 0
+                  }
+              ],
+              [
+                  {
+                      "from": "00:00",
+                      "to": "01:30",
+                      "percent": 99,
+                      "delta_amount": 0
+                  }
+              ],
+              "null",
+              [
+                  {
+                      "from": "00:30",
+                      "to": "03:00",
+                      "percent": 7,
+                      "delta_amount": 0
+                  }
+              ]
+          ]
+      },
+      {
+          "vehicle_class_id": 23,
+          "delta_amount": 0,
+          "percent": 0,
+          "hourly_percent": 0,
+          "hourly_delta": 0,
+          "notice_time": [
+              {
+                  "time": 4320,
+                  "percent": 100,
+                  "allowance": 600
+              }
+          ],
+          "surcharge_schedule": [
+              [
+                  {
+                      "from": "00:00",
+                      "to": "01:30",
+                      "delta_amount": 0
+                  },
+                  {
+                      "from": "03:00",
+                      "to": "04:30",
+                      "percent": 10,
+                      "delta_amount": 0
+                  },
+                  {
+                      "from": "22:00",
+                      "to": "23:59",
+                      "percent": 100,
+                      "delta_amount": 0,
+                      "break": true
+                  }
+              ],
+              "null",
+              [
+                  {
+                      "from": "00:00",
+                      "to": "02:00",
+                      "percent": 5,
+                      "delta_amount": 0
+                  },
+                  {
+                      "from": "04:00",
+                      "to": "05:30",
+                      "delta_amount": 2,
+                      "percent": 0
+                  }
+              ],
+              [
+                  {
+                      "from": "00:00",
+                      "to": "01:00",
+                      "percent": 2,
+                      "delta_amount": 0
+                  },
+                  {
+                      "from": "03:00",
+                      "to": "04:30",
+                      "delta_amount": 8,
+                      "percent": 0
+                  }
+              ],
+              [
+                  {
+                      "from": "00:00",
+                      "to": "01:30",
+                      "percent": 99,
+                      "delta_amount": 0
+                  }
+              ],
+              "null",
+              [
+                  {
+                      "from": "00:30",
+                      "to": "03:00",
+                      "percent": 7,
+                      "delta_amount": 0
+                  }
+              ]
+          ]
+      },
+      {
+          "vehicle_class_id": 24,
+          "delta_amount": 0,
+          "percent": 0,
+          "hourly_percent": 0,
+          "hourly_delta": 0,
+          "notice_time": [
+              {
+                  "time": 4320,
+                  "percent": 100,
+                  "allowance": 600
+              }
+          ],
+          "surcharge_schedule": [
+              [
+                  {
+                      "from": "00:00",
+                      "to": "01:30",
+                      "delta_amount": 0
+                  },
+                  {
+                      "from": "03:00",
+                      "to": "04:30",
+                      "percent": 10,
+                      "delta_amount": 0
+                  },
+                  {
+                      "from": "22:00",
+                      "to": "23:59",
+                      "percent": 100,
+                      "delta_amount": 0,
+                      "break": true
+                  }
+              ],
+              "null",
+              [
+                  {
+                      "from": "00:00",
+                      "to": "02:00",
+                      "percent": 5,
+                      "delta_amount": 0
+                  },
+                  {
+                      "from": "04:00",
+                      "to": "05:30",
+                      "delta_amount": 2,
+                      "percent": 0
+                  }
+              ],
+              [
+                  {
+                      "from": "00:00",
+                      "to": "01:00",
+                      "percent": 2,
+                      "delta_amount": 0
+                  },
+                  {
+                      "from": "03:00",
+                      "to": "04:30",
+                      "delta_amount": 8,
+                      "percent": 0
+                  }
+              ],
+              [
+                  {
+                      "from": "00:00",
+                      "to": "01:30",
+                      "percent": 99,
+                      "delta_amount": 0
+                  }
+              ],
+              "null",
+              [
+                  {
+                      "from": "00:30",
+                      "to": "03:00",
+                      "percent": 7,
+                      "delta_amount": 0
+                  }
+              ]
+          ]
+      },
+      {
+          "vehicle_class_id": 27,
+          "delta_amount": 0,
+          "percent": 0,
+          "hourly_percent": 0,
+          "hourly_delta": 0,
+          "notice_time": [
+              {
+                  "time": 4320,
+                  "percent": 100,
+                  "allowance": 600
+              }
+          ],
+          "surcharge_schedule": [
+              [
+                  {
+                      "from": "00:00",
+                      "to": "01:30",
+                      "delta_amount": 0
+                  },
+                  {
+                      "from": "03:00",
+                      "to": "04:30",
+                      "percent": 10,
+                      "delta_amount": 0
+                  },
+                  {
+                      "from": "22:00",
+                      "to": "23:59",
+                      "percent": 100,
+                      "delta_amount": 0,
+                      "break": true
+                  }
+              ],
+              "null",
+              [
+                  {
+                      "from": "00:00",
+                      "to": "02:00",
+                      "percent": 5,
+                      "delta_amount": 0
+                  },
+                  {
+                      "from": "04:00",
+                      "to": "05:30",
+                      "delta_amount": 2,
+                      "percent": 0
+                  }
+              ],
+              [
+                  {
+                      "from": "00:00",
+                      "to": "01:00",
+                      "percent": 2,
+                      "delta_amount": 0
+                  },
+                  {
+                      "from": "03:00",
+                      "to": "04:30",
+                      "delta_amount": 8,
+                      "percent": 0
+                  }
+              ],
+              [
+                  {
+                      "from": "00:00",
+                      "to": "01:30",
+                      "percent": 99,
+                      "delta_amount": 0
+                  }
+              ],
+              "null",
+              [
+                  {
+                      "from": "00:30",
+                      "to": "03:00",
+                      "percent": 7,
+                      "delta_amount": 0
+                  }
+              ]
+          ]
+      },
+      {
+          "vehicle_class_id": 29,
+          "delta_amount": 0,
+          "percent": 600,
+          "percent_appendix": [
+              {
+                  "field": "pricing.min_amount",
+                  "delta_amount": 375
+              },
+              {
+                  "field": "pricing.ranges.0",
+                  "delta_amount": 4.4
+              },
+              {
+                  "field": "pricing.ranges.1",
+                  "delta_amount": 3.7
+              },
+              {
+                  "field": "pricing.ranges.2",
+                  "delta_amount": 3.5
+              },
+              {
+                  "field": "zones.0.prices.0",
+                  "delta_amount": 340
+              }
+          ],
+          "hourly_percent": 600,
+          "hourly_delta": 0,
+          "notice_time": [
+              {
+                  "time": 4320,
+                  "percent": 100,
+                  "allowance": 600
+              }
+          ],
+          "surcharge_schedule": [
+              "null",
+              [
+                  {
+                      "from": "00:30",
+                      "to": "02:30",
+                      "percent": 33,
+                      "delta_amount": 0
+                  }
+              ],
+              "null",
+              "null",
+              "null",
+              "null",
+              "null"
+          ]
+      },
+      {
+          "vehicle_class_id": 30,
+          "delta_amount": 0,
+          "percent": 650,
+          "percent_appendix": [
+              {
+                  "field": "pricing.min_amount",
+                  "delta_amount": 400
+              },
+              {
+                  "field": "pricing.ranges.0",
+                  "delta_amount": 4.4
+              },
+              {
+                  "field": "pricing.ranges.1",
+                  "delta_amount": 4.7
+              },
+              {
+                  "field": "pricing.ranges.2",
+                  "delta_amount": 3.6
+              }
+          ],
+          "hourly_percent": 650,
+          "hourly_delta": 0,
+          "notice_time": [
+              {
+                  "time": 4320,
+                  "percent": 100,
+                  "allowance": 600
+              }
+          ]
+      },
+      {
+          "vehicle_class_id": 32,
+          "delta_amount": 0,
+          "percent": 700,
+          "percent_appendix": [
+              {
+                  "field": "pricing.min_amount",
+                  "delta_amount": 420
+              },
+              {
+                  "field": "pricing.ranges.0",
+                  "delta_amount": 4.4
+              },
+              {
+                  "field": "pricing.ranges.1",
+                  "delta_amount": 4.9
+              },
+              {
+                  "field": "pricing.ranges.2",
+                  "delta_amount": 4
+              }
+          ],
+          "hourly_percent": 700,
+          "hourly_delta": 0,
+          "notice_time": [
+              {
+                  "time": 4320,
+                  "percent": 100,
+                  "allowance": 600
+              }
+          ]
+      },
+      {
+          "vehicle_class_id": 33,
+          "delta_amount": 0,
+          "percent": 825,
+          "percent_appendix": [
+              {
+                  "field": "pricing.min_amount",
+                  "delta_amount": 500
+              },
+              {
+                  "field": "pricing.ranges.0",
+                  "delta_amount": 4.4
+              },
+              {
+                  "field": "pricing.ranges.1",
+                  "delta_amount": 5.5
+              },
+              {
+                  "field": "pricing.ranges.2",
+                  "delta_amount": 4.5
+              }
+          ],
+          "hourly_percent": 825,
+          "hourly_delta": 0,
+          "notice_time": [
+              {
+                  "time": 4320,
+                  "percent": 100,
+                  "allowance": 600
+              }
+          ]
+      },
+      {
+          "vehicle_class_id": 34,
+          "delta_amount": 0,
+          "percent": 950,
+          "percent_appendix": [
+              {
+                  "field": "pricing.min_amount",
+                  "delta_amount": 575
+              },
+              {
+                  "field": "pricing.ranges.0",
+                  "delta_amount": 4.4
+              },
+              {
+                  "field": "pricing.ranges.1",
+                  "delta_amount": 6
+              },
+              {
+                  "field": "pricing.ranges.2",
+                  "delta_amount": 4.8
+              }
+          ],
+          "hourly_percent": 950,
+          "hourly_delta": 0,
+          "notice_time": [
+              {
+                  "time": 4320,
+                  "percent": 100,
+                  "allowance": 600
+              }
+          ]
+      },
+      {
+          "vehicle_class_id": 35,
+          "delta_amount": 0,
+          "percent": 1000,
+          "percent_appendix": [
+              {
+                  "field": "pricing.min_amount",
+                  "delta_amount": 600
+              },
+              {
+                  "field": "pricing.ranges.0",
+                  "delta_amount": 4.4
+              },
+              {
+                  "field": "pricing.ranges.1",
+                  "delta_amount": 6.5
+              },
+              {
+                  "field": "pricing.ranges.2",
+                  "delta_amount": 5
+              }
+          ],
+          "hourly_percent": 1000,
+          "hourly_delta": 0,
+          "notice_time": [
+              {
+                  "time": 4320,
+                  "percent": 100,
+                  "allowance": 600
+              }
+          ]
+      },
+      {
+          "vehicle_class_id": 41,
+          "delta_amount": 0,
+          "percent": 0,
+          "hourly_percent": 0,
+          "hourly_delta": 0,
+          "percent_appendix": [
+              {
+                  "field": "pricing.ranges.3",
+                  "delta_amount": 0.0
+              }
+          ]
+      },
+      {
+          "vehicle_class_id": 42,
+          "delta_amount": 0,
+          "percent": 0,
+          "hourly_percent": 0,
+          "hourly_delta": 0
+      },
+      {
+          "vehicle_class_id": 43,
+          "delta_amount": 0,
+          "percent": 0,
+          "hourly_percent": 0,
+          "hourly_delta": 0
+      },
+      {
+          "vehicle_class_id": 44,
+          "delta_amount": 0,
+          "percent": 0,
+          "hourly_percent": 0,
+          "hourly_delta": 0
+      },
+      {
+          "vehicle_class_id": 45,
+          "delta_amount": 0,
+          "percent": 0,
+          "hourly_percent": 0,
+          "hourly_delta": 0
+      },
+      {
+          "vehicle_class_id": 46,
+          "delta_amount": 0,
+          "percent": 0,
+          "hourly_percent": 0,
+          "hourly_delta": 0
+      },
+      {
+          "vehicle_class_id": 47,
+          "delta_amount": 0,
+          "percent": 0,
+          "hourly_percent": 0,
+          "hourly_delta": 0
+      },
+      {
+          "vehicle_class_id": 48,
+          "delta_amount": 0,
+          "percent": 0,
+          "hourly_percent": 0,
+          "hourly_delta": 0,
+          "notice_time": [
+              {
+                  "time": 4320,
+                  "percent": 100,
+                  "allowance": 600
+              }
+          ]
+      },
+      {
+          "vehicle_class_id": 49,
+          "delta_amount": 0,
+          "percent": 0,
+          "hourly_percent": 0,
+          "hourly_delta": 0
+      },
+      {
+          "vehicle_class_id": 50,
+          "delta_amount": 0,
+          "percent": 0,
+          "hourly_percent": 0,
+          "hourly_delta": 0,
+          "notice_time": [
+              {
+                  "time": 4320,
+                  "percent": 100,
+                  "allowance": 600
+              }
+          ]
+      },
+      {
+          "vehicle_class_id": 51,
+          "delta_amount": 0,
+          "percent": 0,
+          "hourly_percent": 0,
+          "hourly_delta": 0
+      },
+      {
+          "vehicle_class_id": 52,
+          "delta_amount": 0,
+          "percent": 0,
+          "hourly_percent": 0,
+          "hourly_delta": 0,
+          "notice_time": [
+              {
+                  "time": 4320,
+                  "percent": 100,
+                  "allowance": 600
+              }
+          ]
+      },
+      {
+          "vehicle_class_id": 25,
+          "delta_amount": 0,
+          "percent": 0,
+          "hourly_percent": 0,
+          "hourly_delta": 0,
+          "notice_time": [
+              {
+                  "time": 4320,
+                  "percent": 100,
+                  "allowance": 600
+              }
+          ]
+      },
+      {
+          "vehicle_class_id": 26,
+          "delta_amount": 0,
+          "percent": 0,
+          "hourly_percent": 0,
+          "hourly_delta": 0
+      },
+      {
+          "vehicle_class_id": 28,
+          "delta_amount": 0,
+          "percent": 0,
+          "hourly_percent": 0,
+          "hourly_delta": 0,
+          "notice_time": [
+              {
+                  "time": 4320,
+                  "percent": 100,
+                  "allowance": 600
+              }
+          ]
+      },
+      {
+          "vehicle_class_id": 56,
+          "delta_amount": 0,
+          "percent": 0,
+          "hourly_percent": 0,
+          "hourly_delta": 0,
+          "notice_time": [
+              {
+                  "time": 4320,
+                  "percent": 100,
+                  "allowance": 600
+              }
+          ]
+      },
+      {
+          "vehicle_class_id": 57,
+          "delta_amount": 0,
+          "percent": 0,
+          "hourly_percent": 0,
+          "hourly_delta": 0
+      },
+      {
+          "vehicle_class_id": 58,
+          "delta_amount": 0,
+          "percent": 0,
+          "hourly_percent": 0,
+          "hourly_delta": 0,
+          "notice_time": [
+              {
+                  "time": 4320,
+                  "percent": 100,
+                  "allowance": 600
+              }
+          ]
+      },
+      {
+          "vehicle_class_id": 59,
+          "delta_amount": 0,
+          "percent": 0,
+          "hourly_percent": 0,
+          "hourly_delta": 0,
+          "notice_time": [
+              {
+                  "time": 4320,
+                  "percent": 100,
+                  "allowance": 600
+              }
+          ]
+      },
+      {
+          "vehicle_class_id": 60,
+          "delta_amount": 0,
+          "percent": 0,
+          "hourly_percent": 0,
+          "hourly_delta": 0,
+          "notice_time": [
+              {
+                  "time": 4320,
+                  "percent": 100,
+                  "allowance": 600
+              }
+          ]
+      },
+      {
+          "vehicle_class_id": 61,
+          "delta_amount": 0,
+          "percent": 0,
+          "hourly_percent": 0,
+          "hourly_delta": 0,
+          "notice_time": [
+              {
+                  "time": 4320,
+                  "percent": 100,
+                  "allowance": 600
+              }
+          ]
+      },
+      {
+          "vehicle_class_id": 62,
+          "delta_amount": 0,
+          "percent": 0,
+          "hourly_percent": 0,
+          "hourly_delta": 0
+      },
+      {
+          "vehicle_class_id": 63,
+          "delta_amount": 0,
+          "percent": 0,
+          "hourly_percent": 0,
+          "hourly_delta": 0,
+          "notice_time": [
+              {
+                  "time": 4320,
+                  "percent": 100,
+                  "allowance": 600
+              }
+          ]
+      },
+      {
+          "vehicle_class_id": 64,
+          "delta_amount": 0,
+          "percent": 0,
+          "hourly_percent": 0,
+          "hourly_delta": 0
+      }
+  ],
+  "barriers": [
+      {
+          "a_lat": 37.81175,
+          "a_lng": -122.363802,
+          "a_cross": 1,
+          "b_lat": 37.604236,
+          "b_lng": -122.203127,
+          "b_cross": 1
+      },
+      {
+          "a_lat": 37.604236,
+          "a_lng": -122.203127,
+          "a_cross": 1,
+          "b_lat": 37.519198,
+          "b_lng": -122.105146,
+          "b_cross": 1
+      },
+      {
+          "a_lat": 37.519198,
+          "a_lng": -122.105146,
+          "a_cross": 1,
+          "b_lat": 37.431165,
+          "b_lng": -121.969032,
+          "b_cross": 1
+      },
+      {
+          "a_lat": 37.934907,
+          "a_lng": -122.442818,
+          "a_cross": 1,
+          "b_lat": 37.81175,
+          "b_lng": -122.363802,
+          "b_cross": 1
+      },
+      {
+          "a_lat": 38.154992,
+          "a_lng": -122.400932,
+          "a_cross": 1,
+          "b_lat": 37.934907,
+          "b_lng": -122.442818,
+          "b_cross": 1
+      },
+      {
+          "a_lat": 37.862532,
+          "a_lng": -122.205692,
+          "a_cross": 1,
+          "b_lat": 37.69266,
+          "b_lng": -122.07111,
+          "b_cross": 1
+      },
+      {
+          "a_lat": 37.96221,
+          "a_lng": -122.329288,
+          "a_cross": 1,
+          "b_lat": 37.862532,
+          "b_lng": -122.205692,
+          "b_cross": 1
+      }
+  ],
+  "zones": [
+      {
+          "name": "San Francisco",
+          "lat": 37.278252450601855,
+          "lng": -121.799034640625,
+          "radius": 14484,
+          "prices": [
+              {
+                  "airport": "SFO",
+                  "amount": 60,
+                  "currency": "CNY"
+              },
+              {
+                  "airport": "SJC",
+                  "amount": 200,
+                  "currency": "CNY"
+              }
+          ]
+      },
+      {
+          "name": "Fresno",
+          "lat": 36.7377981,
+          "lng": -119.7871247,
+          "radius": 8047,
+          "prices": [
+              {
+                  "airport": "SFO",
+                  "amount": 14,
+                  "currency": "CNY"
+              },
+              {
+                  "airport": "SJC",
+                  "amount": 13,
+                  "currency": "CNY"
+              }
+          ]
+      },
+      {
+          "name": "Santa Rosa",
+          "lat": 38.440429,
+          "lng": -122.7140548,
+          "radius": 32038,
+          "prices": [
+              {
+                  "airport": "SFO",
+                  "amount": 16,
+                  "currency": "CNY"
+              },
+              {
+                  "airport": "SJC",
+                  "amount": 15,
+                  "currency": "CNY"
+              }
+          ]
+      }
   ],
   "hint": [
-    {
-      "normal_reserve_value": 24,
-      "vehicles": [
-        1, 2, 40, 6, 3, 4, 5, 36, 9, 10, 11, 29, 30, 31, 32, 33, 34, 35
-      ],
-      "notice_time_hint": [
-        {
-          "advance_time_start": 6,
-          "advance_time_end": 24,
-          "notice_time": {
-            "time": 1440,
-            "percent": 20,
-            "allowance": 360
-          }
-        }
-      ]
-    }
+      {
+          "normal_reserve_value": 72,
+          "notice_time_hint": [
+              {
+                  "notice_time": {
+                      "time": 4320,
+                      "percent": 100,
+                      "allowance": 600
+                  },
+                  "advance_time_start": 10,
+                  "advance_time_end": 72
+              }
+          ],
+          "vehicles": [
+              34,
+              35,
+              52,
+              58,
+              59,
+              60,
+              24,
+              22,
+              25,
+              29,
+              30,
+              28,
+              32,
+              33,
+              27,
+              23,
+              36,
+              21,
+              50,
+              61,
+              48,
+              56,
+              4,
+              40,
+              63,
+              6,
+              3
+          ]
+      }
   ],
   "pricing_schedule_sum": [
-    {
-      "notice_time_hint": [
-        "null",
-        "null",
-        "null",
-        "null",
-        "null",
-        "null",
-        "null"
-      ]
-    }
+      {
+          "notice_time_hint": [
+              [
+                  {
+                      "from": "00:00",
+                      "to": "01:30",
+                      "delta_amount": 0
+                  },
+                  {
+                      "from": "03:00",
+                      "to": "04:30",
+                      "percent": 10,
+                      "delta_amount": 0
+                  },
+                  {
+                      "from": "22:00",
+                      "to": "23:59",
+                      "percent": 100,
+                      "delta_amount": 0,
+                      "break": true
+                  }
+              ],
+              "null",
+              [
+                  {
+                      "from": "00:00",
+                      "to": "02:00",
+                      "percent": 5,
+                      "delta_amount": 0
+                  },
+                  {
+                      "from": "04:00",
+                      "to": "05:30",
+                      "delta_amount": 2,
+                      "percent": 0
+                  }
+              ],
+              [
+                  {
+                      "from": "00:00",
+                      "to": "01:00",
+                      "percent": 2,
+                      "delta_amount": 0
+                  },
+                  {
+                      "from": "03:00",
+                      "to": "04:30",
+                      "delta_amount": 8,
+                      "percent": 0
+                  }
+              ],
+              [
+                  {
+                      "from": "00:00",
+                      "to": "01:30",
+                      "percent": 99,
+                      "delta_amount": 0
+                  }
+              ],
+              "null",
+              [
+                  {
+                      "from": "00:30",
+                      "to": "03:00",
+                      "percent": 7,
+                      "delta_amount": 0
+                  }
+              ]
+          ],
+          "vehicles": [
+              23,
+              27,
+              24,
+              21,
+              22,
+              1,
+              2
+          ]
+      },
+      {
+          "notice_time_hint": [
+              "null",
+              [
+                  {
+                      "from": "00:30",
+                      "to": "02:30",
+                      "percent": 33,
+                      "delta_amount": 0
+                  }
+              ],
+              "null",
+              "null",
+              "null",
+              "null",
+              "null"
+          ],
+          "vehicles": [
+              29
+          ]
+      }
   ],
-  "date_surcharge_method": "sum",
-  "service_area_pricing_id": 109430,
-  "req_id": "b26f88b8-a7e8-4dcf-9a06-9a15f22cd8e6",
-  "tz": {
-    "dos": 0,
-    "ros": 3600,
-    "tzid": "Europe/Berlin"
-  }
+  "currencyCode": "CNY",
+  "hourly_pricing": {
+      "min_amount": 100,
+      "min_duration": 3,
+      "currency": "CNY",
+      "ranges": [
+          {
+              "seq": 0,
+              "amount": 30,
+              "currency": "CNY",
+              "duration": 7,
+              "from": 3,
+              "to": 10
+          },
+          {
+              "seq": 1,
+              "amount": 19.6,
+              "currency": "CNY",
+              "duration": 65,
+              "from": 10,
+              "to": 75
+          },
+          {
+              "seq": 2,
+              "amount": 40.5,
+              "currency": "CNY",
+              "duration": 800,
+              "from": 75,
+              "to": 875
+          }
+      ]
+  },
+  "countryCode": "CHN"
 }

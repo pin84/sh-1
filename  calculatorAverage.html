@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        let ha = [
+            {
+                "price": {
+                    "amount": 300.9,
+                    "currency": "USD",
+                    "quote_id": "e8559282b35c4faf8c1bc881eea97836-v1"
+                },
+                "vehicle_class": "Sedan",
+                "vehicle_class_id": 1,
+                "passenger_capacity": 3,
+                "luggage_capacity": 3,
+                "typical_vehicle": {
+                    "model": "Camry",
+                    "manufacturer": "Toyota"
+                },
+                "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/sedan.jpg"
+            },
+            {
+                "price": {
+                    "amount": 381.93,
+                    "currency": "USD",
+                    "quote_id": "e8559282b35c4faf8c1bc881eea97836-v2"
+                },
+                "vehicle_class": "Business Sedan",
+                "vehicle_class_id": 2,
+                "passenger_capacity": 3,
+                "luggage_capacity": 3,
+                "typical_vehicle": {
+                    "model": "Continental",
+                    "manufacturer": "Lincoln"
+                },
+                "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/besiness-sedan.jpg"
+            },
+            {
+                "price": {
+                    "amount": 954.36,
+                    "currency": "USD",
+                    "quote_id": "e8559282b35c4faf8c1bc881eea97836-v40"
+                },
+                "vehicle_class": "First Class",
+                "vehicle_class_id": 40,
+                "passenger_capacity": 3,
+                "luggage_capacity": 3,
+                "typical_vehicle": {
+                    "model": "S550",
+                    "manufacturer": "Mercedes"
+                },
+                "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/first-class.jpg"
+            },
+            {
+                "price": {
+                    "amount": 385.24,
+                    "currency": "USD",
+                    "quote_id": "e8559282b35c4faf8c1bc881eea97836-v6"
+                },
+                "vehicle_class": "MPV-4",
+                "vehicle_class_id": 6,
+                "passenger_capacity": 4,
+                "luggage_capacity": 4,
+                "typical_vehicle": {
+                    "model": "Highlander",
+                    "manufacturer": "Toyota"
+                },
+                "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/mpv-4.jpg"
+            },
+            {
+                "price": {
+                    "amount": 403.25,
+                    "currency": "USD",
+                    "quote_id": "e8559282b35c4faf8c1bc881eea97836-v3"
+                },
+                "vehicle_class": "MPV-5",
+                "vehicle_class_id": 3,
+                "passenger_capacity": 5,
+                "luggage_capacity": 5,
+                "typical_vehicle": {
+                    "model": "Sienna",
+                    "manufacturer": "Toyota"
+                },
+                "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/mpv-5.jpg"
+            },
+            {
+                "price": {
+                    "amount": 487.25,
+                    "currency": "USD",
+                    "quote_id": "e8559282b35c4faf8c1bc881eea97836-v4"
+                },
+                "vehicle_class": "Business MPV-5",
+                "vehicle_class_id": 4,
+                "passenger_capacity": 5,
+                "luggage_capacity": 5,
+                "typical_vehicle": {
+                    "model": "Navigator",
+                    "manufacturer": "Lincoln"
+                },
+                "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/businessminivan.jpg"
+            },
+            {
+                "price": {
+                    "amount": 478.68,
+                    "currency": "USD",
+                    "quote_id": "e8559282b35c4faf8c1bc881eea97836-v36"
+                },
+                "vehicle_class": "Business Van",
+                "vehicle_class_id": 36,
+                "passenger_capacity": 5,
+                "luggage_capacity": 5,
+                "typical_vehicle": {
+                    "model": "GL8",
+                    "manufacturer": "Buick"
+                },
+                "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/businessminivan.jpg"
+            },
+            {
+                "price": {
+                    "amount": 1576.19,
+                    "currency": "USD",
+                    "quote_id": "e8559282b35c4faf8c1bc881eea97836-v21"
+                },
+                "vehicle_class": "6 Passenger Stretch Limo",
+                "vehicle_class_id": 21,
+                "passenger_capacity": 6,
+                "luggage_capacity": 6,
+                "typical_vehicle": {
+                    "model": "MKT or Chrsley",
+                    "manufacturer": "Liconln"
+                },
+                "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/stretch-limo-6.jpg"
+            },
+            {
+                "price": {
+                    "amount": 1586.19,
+                    "currency": "USD",
+                    "quote_id": "e8559282b35c4faf8c1bc881eea97836-v22"
+                },
+                "vehicle_class": "8 Passenger Stretch Limo",
+                "vehicle_class_id": 22,
+                "passenger_capacity": 8,
+                "luggage_capacity": 8,
+                "typical_vehicle": {
+                    "model": "MKT or Chrsley",
+                    "manufacturer": "Liconln"
+                },
+                "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/stretch-limo-8.jpg"
+            },
+            {
+                "price": {
+                    "amount": 1616.19,
+                    "currency": "USD",
+                    "quote_id": "e8559282b35c4faf8c1bc881eea97836-v23"
+                },
+                "vehicle_class": "10 Passenger Stretch Limo",
+                "vehicle_class_id": 23,
+                "passenger_capacity": 9,
+                "luggage_capacity": 9,
+                "typical_vehicle": {
+                    "model": "MKT ",
+                    "manufacturer": "Liconln"
+                },
+                "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/usa/Lincoln-MKT.jpg"
+            },
+            {
+                "price": {
+                    "amount": 1716.18,
+                    "currency": "USD",
+                    "quote_id": "e8559282b35c4faf8c1bc881eea97836-v24"
+                },
+                "vehicle_class": "12 Passenger Stretch Limo",
+                "vehicle_class_id": 24,
+                "passenger_capacity": 12,
+                "luggage_capacity": 12,
+                "typical_vehicle": {
+                    "model": "Navigator",
+                    "manufacturer": "Liconln"
+                },
+                "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/stretch-limo-12.jpg"
+            },
+            {
+                "price": {
+                    "amount": 1767.15,
+                    "currency": "USD",
+                    "quote_id": "e8559282b35c4faf8c1bc881eea97836-v27"
+                },
+                "vehicle_class": "16 Passenger Stretch Limo",
+                "vehicle_class_id": 27,
+                "passenger_capacity": 15,
+                "luggage_capacity": 15,
+                "typical_vehicle": {
+                    "model": "H2",
+                    "manufacturer": "Hummer"
+                },
+                "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/usa/Hummer-H2.jpg"
+            },
+            {
+                "price": {
+                    "amount": 842.66,
+                    "currency": "USD",
+                    "quote_id": "e8559282b35c4faf8c1bc881eea97836-v5"
+                },
+                "vehicle_class": "Minibus-8",
+                "vehicle_class_id": 5,
+                "passenger_capacity": 8,
+                "luggage_capacity": 8,
+                "typical_vehicle": {
+                    "model": "Transit",
+                    "manufacturer": "Ford"
+                },
+                "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/minibus-8.jpg"
+            },
+            {
+                "price": {
+                    "amount": 911.55,
+                    "currency": "USD",
+                    "quote_id": "e8559282b35c4faf8c1bc881eea97836-v9"
+                },
+                "vehicle_class": "Minibus-10",
+                "vehicle_class_id": 9,
+                "passenger_capacity": 10,
+                "luggage_capacity": 10,
+                "typical_vehicle": {
+                    "model": "Ford",
+                    "manufacturer": "Ford"
+                },
+                "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/minibus-10.jpg"
+            },
+            {
+                "price": {
+                    "amount": 958.52,
+                    "currency": "USD",
+                    "quote_id": "e8559282b35c4faf8c1bc881eea97836-v10"
+                },
+                "vehicle_class": "Minibus-12",
+                "vehicle_class_id": 10,
+                "passenger_capacity": 11,
+                "luggage_capacity": 11,
+                "typical_vehicle": {
+                    "model": "Sprinter",
+                    "manufacturer": "Mercedes"
+                },
+                "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/usa/Mercedes-Sprinter.jpg"
+            },
+            {
+                "price": {
+                    "amount": 990.52,
+                    "currency": "USD",
+                    "quote_id": "e8559282b35c4faf8c1bc881eea97836-v11"
+                },
+                "vehicle_class": "Minibus-14",
+                "vehicle_class_id": 11,
+                "passenger_capacity": 14,
+                "luggage_capacity": 14,
+                "typical_vehicle": {
+                    "model": "Sprinter",
+                    "manufacturer": "Mercedes"
+                },
+                "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/minibus-14.jpg"
+            },
+            {
+                "price": {
+                    "amount": 1219.5,
+                    "currency": "USD",
+                    "quote_id": "e8559282b35c4faf8c1bc881eea97836-v29"
+                },
+                "vehicle_class": "16-seat Bus",
+                "vehicle_class_id": 29,
+                "passenger_capacity": 16,
+                "luggage_capacity": 16,
+                "typical_vehicle": {
+                    "model": "E-450",
+                    "manufacturer": "Ford"
+                },
+                "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/bus-16.jpg"
+            },
+            {
+                "price": {
+                    "amount": 1243.32,
+                    "currency": "USD",
+                    "quote_id": "e8559282b35c4faf8c1bc881eea97836-v30"
+                },
+                "vehicle_class": "20-seat Bus",
+                "vehicle_class_id": 30,
+                "passenger_capacity": 20,
+                "luggage_capacity": 20,
+                "typical_vehicle": {
+                    "model": "E-450",
+                    "manufacturer": "Ford"
+                },
+                "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/bus-20.jpg"
+            },
+            {
+                "price": {
+                    "amount": 1247.92,
+                    "currency": "USD",
+                    "quote_id": "e8559282b35c4faf8c1bc881eea97836-v31"
+                },
+                "vehicle_class": "23-seat Bus",
+                "vehicle_class_id": 31,
+                "passenger_capacity": 23,
+                "luggage_capacity": 23,
+                "typical_vehicle": {
+                    "model": "F-550",
+                    "manufacturer": "Ford"
+                },
+                "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/bus-23.jpg"
+            },
+            {
+                "price": {
+                    "amount": 1257.82,
+                    "currency": "USD",
+                    "quote_id": "e8559282b35c4faf8c1bc881eea97836-v32"
+                },
+                "vehicle_class": "27-seat Bus",
+                "vehicle_class_id": 32,
+                "passenger_capacity": 27,
+                "luggage_capacity": 27,
+                "typical_vehicle": {
+                    "model": "F-550",
+                    "manufacturer": "Ford"
+                },
+                "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/bus-27.jpg"
+            },
+            {
+                "price": {
+                    "amount": 1370.59,
+                    "currency": "USD",
+                    "quote_id": "e8559282b35c4faf8c1bc881eea97836-v33"
+                },
+                "vehicle_class": "36-seat Bus",
+                "vehicle_class_id": 33,
+                "passenger_capacity": 36,
+                "luggage_capacity": 36,
+                "typical_vehicle": {
+                    "model": "F-650 or smilar",
+                    "manufacturer": "Ford"
+                },
+                "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/bus-36.jpg"
+            },
+            {
+                "price": {
+                    "amount": 2067.97,
+                    "currency": "USD",
+                    "quote_id": "e8559282b35c4faf8c1bc881eea97836-v34"
+                },
+                "vehicle_class": "44-seat Coach Bus",
+                "vehicle_class_id": 34,
+                "passenger_capacity": 44,
+                "luggage_capacity": 44,
+                "typical_vehicle": {
+                    "model": "Coach bus",
+                    "manufacturer": "Volvo"
+                },
+                "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/bus-44.jpg"
+            },
+            {
+                "price": {
+                    "amount": 2080.97,
+                    "currency": "USD",
+                    "quote_id": "e8559282b35c4faf8c1bc881eea97836-v35"
+                },
+                "vehicle_class": "55-seat Coach Bus",
+                "vehicle_class_id": 35,
+                "passenger_capacity": 55,
+                "luggage_capacity": 55,
+                "typical_vehicle": {
+                    "model": "Motorcoach or smilar",
+                    "manufacturer": "Prevost"
+                },
+                "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/bus-55.jpg"
+            },
+            {
+                "price": {
+                    "amount": 504.12,
+                    "currency": "USD",
+                    "quote_id": "e8559282b35c4faf8c1bc881eea97836-v41"
+                },
+                "vehicle_class": "EV Sedan",
+                "vehicle_class_id": 41,
+                "passenger_capacity": 3,
+                "luggage_capacity": 3,
+                "typical_vehicle": {
+                    "model": "Bolt EUV",
+                    "manufacturer": "Chevy"
+                },
+                "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/home/vehicle-classes/ev-sedan.png"
+            }
+        ]
+
+        let bo = [
+            {
+                "price": {
+                    "amount": 393.96,
+                    "currency": "USD",
+                    "quote_id": "410a2dc40a7c733a7bbf84befd77f4d500ecab504d7d303d2a0f1ba9a3273bd1"
+                },
+                "vehicle_class": "Sedan",
+                "vehicle_class_id": 1,
+                "passenger_capacity": 3,
+                "luggage_capacity": 3,
+                "typical_vehicle": {
+                    "model": "Camry",
+                    "manufacturer": "Toyota"
+                },
+                "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/sedan.jpg"
+            },
+            {
+                "price": {
+                    "amount": 423.73,
+                    "currency": "USD",
+                    "quote_id": "f01839bcd2f6689428bfd7ee5780a941766fec2e6a93551fda5a7f21e21a9fc9"
+                },
+                "vehicle_class": "Business Sedan",
+                "vehicle_class_id": 2,
+                "passenger_capacity": 3,
+                "luggage_capacity": 3,
+                "typical_vehicle": {
+                    "model": "Continental",
+                    "manufacturer": "Lincoln"
+                },
+                "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/besiness-sedan.jpg"
+            },
+            {
+                "price": {
+                    "amount": 1074.04,
+                    "currency": "USD",
+                    "quote_id": "cb74237be695944bf5abcab691c030172986e5759499a9520cf840710fad9722"
+                },
+                "vehicle_class": "First Class",
+                "vehicle_class_id": 40,
+                "passenger_capacity": 3,
+                "luggage_capacity": 3,
+                "typical_vehicle": {
+                    "model": "S550",
+                    "manufacturer": "Mercedes"
+                },
+                "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/first-class.jpg"
+            },
+            {
+                "price": {
+                    "amount": 481.22,
+                    "currency": "USD",
+                    "quote_id": "d184f8428174d3a15e74010253d28eb2d92f1370563aab8c78c38f342033aba1"
+                },
+                "vehicle_class": "MPV-5",
+                "vehicle_class_id": 3,
+                "passenger_capacity": 5,
+                "luggage_capacity": 5,
+                "typical_vehicle": {
+                    "model": "Sienna",
+                    "manufacturer": "Toyota"
+                },
+                "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/mpv-5.jpg"
+            },
+            {
+                "price": {
+                    "amount": 578.01,
+                    "currency": "USD",
+                    "quote_id": "6759cdbad560def7572de81487fbe9cbd77a8e60f48e61e7f76a8d2a626e9823"
+                },
+                "vehicle_class": "Business MPV-5",
+                "vehicle_class_id": 4,
+                "passenger_capacity": 5,
+                "luggage_capacity": 5,
+                "typical_vehicle": {
+                    "model": "Navigator",
+                    "manufacturer": "Lincoln"
+                },
+                "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/businessminivan.jpg"
+            },
+            {
+                "price": {
+                    "amount": 805.35,
+                    "currency": "USD",
+                    "quote_id": "3eb6b53eae7c88a8da639864c2826ec58caf946a5aa0c4e0946eacdd9ad660a2"
+                },
+                "vehicle_class": "Minibus-8",
+                "vehicle_class_id": 5,
+                "passenger_capacity": 8,
+                "luggage_capacity": 8,
+                "typical_vehicle": {
+                    "model": "Transit",
+                    "manufacturer": "Ford"
+                },
+                "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/minibus-8.jpg"
+            },
+            {
+                "price": {
+                    "amount": 861.41,
+                    "currency": "USD",
+                    "quote_id": "2592958f5a0b542a99975a552b784216484f5d228d7f38a583891b9e52fcdbb7"
+                },
+                "vehicle_class": "Minibus-10",
+                "vehicle_class_id": 9,
+                "passenger_capacity": 10,
+                "luggage_capacity": 10,
+                "typical_vehicle": {
+                    "model": "Ford",
+                    "manufacturer": "Ford"
+                },
+                "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/minibus-10.jpg"
+            },
+            {
+                "price": {
+                    "amount": 922.46,
+                    "currency": "USD",
+                    "quote_id": "599940b5b9ad0a17229545dd880833891c1306ff66c4cafbe62a715660aecaa1"
+                },
+                "vehicle_class": "Minibus-12",
+                "vehicle_class_id": 10,
+                "passenger_capacity": 11,
+                "luggage_capacity": 11,
+                "typical_vehicle": {
+                    "model": "Sprinter",
+                    "manufacturer": "Mercedes"
+                },
+                "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/usa/Mercedes-Sprinter.jpg"
+            },
+            {
+                "price": {
+                    "amount": 956.02,
+                    "currency": "USD",
+                    "quote_id": "d58544a4f5e5969bd1270d40799a992560c2727c4bceb7a2b0caea1a42ffc3b1"
+                },
+                "vehicle_class": "Minibus-14",
+                "vehicle_class_id": 11,
+                "passenger_capacity": 14,
+                "luggage_capacity": 14,
+                "typical_vehicle": {
+                    "model": "Sprinter",
+                    "manufacturer": "Mercedes"
+                },
+                "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/minibus-14.jpg"
+            },
+            {
+                "price": {
+                    "amount": 608.01,
+                    "currency": "USD",
+                    "quote_id": "fbe320cad730dd76bc3565b0e5bba73ac8bcf95c42560828ab1a315f55fc6f1b"
+                },
+                "vehicle_class": "Business Van",
+                "vehicle_class_id": 36,
+                "passenger_capacity": 5,
+                "luggage_capacity": 5,
+                "typical_vehicle": {
+                    "model": "GL8",
+                    "manufacturer": "Buick"
+                },
+                "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/businessminivan.jpg"
+            },
+            {
+                "price": {
+                    "amount": 1430.14,
+                    "currency": "USD",
+                    "quote_id": "b81947eea5111a1d3f2edae5d9cd8fae4e32b931f1158a29661a46999358b903"
+                },
+                "vehicle_class": "6 Passenger Stretch Limo",
+                "vehicle_class_id": 21,
+                "passenger_capacity": 6,
+                "luggage_capacity": 6,
+                "typical_vehicle": {
+                    "model": "MKT or Chrsley",
+                    "manufacturer": "Liconln"
+                },
+                "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/stretch-limo-6.jpg"
+            },
+            {
+                "price": {
+                    "amount": 1590.53,
+                    "currency": "USD",
+                    "quote_id": "11be03b0261ecfd77a0d97e743333a9178e99b643470db84638fa35f3189a60e"
+                },
+                "vehicle_class": "8 Passenger Stretch Limo",
+                "vehicle_class_id": 22,
+                "passenger_capacity": 8,
+                "luggage_capacity": 8,
+                "typical_vehicle": {
+                    "model": "MKT or Chrsley",
+                    "manufacturer": "Liconln"
+                },
+                "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/stretch-limo-8.jpg"
+            },
+            {
+                "price": {
+                    "amount": 1857.92,
+                    "currency": "USD",
+                    "quote_id": "5fa68f26e7c1151257db979c6de40f7274c784f3cb659c6759845dc447eea14e"
+                },
+                "vehicle_class": "10 Passenger Stretch Limo",
+                "vehicle_class_id": 23,
+                "passenger_capacity": 9,
+                "luggage_capacity": 9,
+                "typical_vehicle": {
+                    "model": "MKT ",
+                    "manufacturer": "Liconln"
+                },
+                "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/usa/Lincoln-MKT.jpg"
+            },
+            {
+                "price": {
+                    "amount": 2099.85,
+                    "currency": "USD",
+                    "quote_id": "be5c5b430585a4654cea9e28775299332473c5fe9cedb074ad4cbd8905a55762"
+                },
+                "vehicle_class": "12 Passenger Stretch Limo",
+                "vehicle_class_id": 24,
+                "passenger_capacity": 12,
+                "luggage_capacity": 12,
+                "typical_vehicle": {
+                    "model": "Navigator",
+                    "manufacturer": "Liconln"
+                },
+                "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/stretch-limo-12.jpg"
+            },
+            {
+                "price": {
+                    "amount": 2341.4,
+                    "currency": "USD",
+                    "quote_id": "5d71b525042ed9c11edc3d12d5e7530a5e2df5383708310e7212d324e3af00b9"
+                },
+                "vehicle_class": "16 Passenger Stretch Limo",
+                "vehicle_class_id": 27,
+                "passenger_capacity": 15,
+                "luggage_capacity": 15,
+                "typical_vehicle": {
+                    "model": "H2",
+                    "manufacturer": "Hummer"
+                },
+                "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/usa/Hummer-H2.jpg"
+            },
+            {
+                "price": {
+                    "amount": 1217.04,
+                    "currency": "USD",
+                    "quote_id": "f8e8ebda28d937e88ad0dd2f99a9d1c1d8fa635e7b8ba08dc9096061c623d4e8"
+                },
+                "vehicle_class": "16-seat Bus",
+                "vehicle_class_id": 29,
+                "passenger_capacity": 16,
+                "luggage_capacity": 16,
+                "typical_vehicle": {
+                    "model": "E-450",
+                    "manufacturer": "Ford"
+                },
+                "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/bus-16.jpg"
+            },
+            {
+                "price": {
+                    "amount": 1267.04,
+                    "currency": "USD",
+                    "quote_id": "b34ea19177984e3a2acb2b392bc763b5ee37f21a58b289f6d9af0abce8826e6c"
+                },
+                "vehicle_class": "20-seat Bus",
+                "vehicle_class_id": 30,
+                "passenger_capacity": 20,
+                "luggage_capacity": 20,
+                "typical_vehicle": {
+                    "model": "E-450",
+                    "manufacturer": "Ford"
+                },
+                "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/bus-20.jpg"
+            },
+            {
+                "price": {
+                    "amount": 1317.04,
+                    "currency": "USD",
+                    "quote_id": "e65ece76c12883e1d821636ef559a660c50d513cbb4cf452b3515db7a4075d87"
+                },
+                "vehicle_class": "23-seat Bus",
+                "vehicle_class_id": 31,
+                "passenger_capacity": 23,
+                "luggage_capacity": 23,
+                "typical_vehicle": {
+                    "model": "F-550",
+                    "manufacturer": "Ford"
+                },
+                "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/bus-23.jpg"
+            },
+            {
+                "price": {
+                    "amount": 1483.33,
+                    "currency": "USD",
+                    "quote_id": "8761a124bf8028ac7ea2d0563560591cfc5931c3fa6dfc338ae5065e10351cae"
+                },
+                "vehicle_class": "27-seat Bus",
+                "vehicle_class_id": 32,
+                "passenger_capacity": 27,
+                "luggage_capacity": 27,
+                "typical_vehicle": {
+                    "model": "F-550",
+                    "manufacturer": "Ford"
+                },
+                "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/bus-27.jpg"
+            },
+            {
+                "price": {
+                    "amount": 1793.33,
+                    "currency": "USD",
+                    "quote_id": "c3b06ad2844b9376bff52ca382333ffd615a931664da84bc2b2dfc19bee29103"
+                },
+                "vehicle_class": "36-seat Bus",
+                "vehicle_class_id": 33,
+                "passenger_capacity": 36,
+                "luggage_capacity": 36,
+                "typical_vehicle": {
+                    "model": "F-650 or smilar",
+                    "manufacturer": "Ford"
+                },
+                "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/bus-36.jpg"
+            },
+            {
+                "price": {
+                    "amount": 1933.33,
+                    "currency": "USD",
+                    "quote_id": "b7f3605621816ed72f748f24a46b17243358b1b0f28278ce99adb604cc2b3bea"
+                },
+                "vehicle_class": "44-seat Coach Bus",
+                "vehicle_class_id": 34,
+                "passenger_capacity": 44,
+                "luggage_capacity": 44,
+                "typical_vehicle": {
+                    "model": "Coach bus",
+                    "manufacturer": "Volvo"
+                },
+                "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/bus-44.jpg"
+            },
+            {
+                "price": {
+                    "amount": 2083.33,
+                    "currency": "USD",
+                    "quote_id": "ebf1dfb61417ad506a446403455f2becbeb4bd76333fe9e1d3b4f41562787d92"
+                },
+                "vehicle_class": "55-seat Coach Bus",
+                "vehicle_class_id": 35,
+                "passenger_capacity": 55,
+                "luggage_capacity": 55,
+                "typical_vehicle": {
+                    "model": "Motorcoach or smilar",
+                    "manufacturer": "Prevost"
+                },
+                "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/bus-55.jpg"
+            },
+            {
+                "price": {
+                    "amount": 435.14,
+                    "currency": "USD",
+                    "quote_id": "b0756af6abf4c7b00bdf2e9af1be176a0829c96b253b903bd690dc625a021fab"
+                },
+                "vehicle_class": "MPV-4",
+                "vehicle_class_id": 6,
+                "passenger_capacity": 4,
+                "luggage_capacity": 4,
+                "typical_vehicle": {
+                    "model": "Highlander",
+                    "manufacturer": "Toyota"
+                },
+                "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/mpv-4.jpg"
+            },
+            {
+                "price": {
+                    "amount": 638.01,
+                    "currency": "USD",
+                    "quote_id": "f36b14b6ad7c5d68b836a117e93a316ccbe16be6cb25fbc21668763bbb64fd33"
+                },
+                "vehicle_class": "Wheelchair Van",
+                "vehicle_class_id": 50,
+                "passenger_capacity": 1,
+                "luggage_capacity": 1,
+                "typical_vehicle": {
+                    "model": "Sienna",
+                    "manufacturer": "Toyota"
+                },
+                "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/wheelchair-van.jpg"
+            },
+            {
+                "price": {
+                    "amount": 1481.93,
+                    "currency": "USD",
+                    "quote_id": "e650b0a76f62bee01f048c024a4b6d201c50545ae51f373a0dc67b18cec29004"
+                },
+                "vehicle_class": "EV Sedan",
+                "vehicle_class_id": 41,
+                "passenger_capacity": 3,
+                "luggage_capacity": 3,
+                "typical_vehicle": {
+                    "model": "Bolt EUV",
+                    "manufacturer": "Chevy"
+                },
+                "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/home/vehicle-classes/ev-sedan.png"
+            }
+        ]
+        
+        let hs = 0
+        let hi = 0
+        ha.forEach((h, i) => {
+            hs += h.price.amount
+            hi = i
+        })
+
+        let bs = 0
+        let bi = 0
+        bo.forEach((h, i) => {
+            bs += h.price.amount
+            bi = i
+        })
+
+
+
+        console.log('hav--', hs / hi, hs, hi);
+        console.log('bav--', bs / bi, bs, bi);
+
+
+    </script>
+</body>
+
+</html>
