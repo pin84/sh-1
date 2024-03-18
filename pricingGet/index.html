@@ -24,18 +24,18 @@
       <label tr class="input-label" id="lbl-"></label>
       <span tr class="no-warn cnt" id="warn-" style="display: none"></span>
       <input tr class="input-field" type="text" class="form-control" id="input-" placeholder="-" readonly
-        onfocus="this.removeAttribute('readonly');" autocomplete="off" />
+             onfocus="this.removeAttribute('readonly');" autocomplete="off" />
     </div>
     <div id="date-range-field-tmpl-" style="display: none">
       <label tr class="input-label" id="lbl-"></label>
       <span tr class="no-warn" id="warn-" style="display: none"></span>
 
       <input tr type="text" class="time-selector-entry bgd-relate" id="start-date" name="start-date" required="required"
-        autocomplete="off" readonly placeholder="please select" />
+             autocomplete="off" readonly placeholder="please select" />
       <div class="calendar dropdown" id="start-date-calendar"></div>
       <span style="margin: 0 10px">-</span>
       <input tr type="text" class="time-selector-entry bgd-relate" id="end-date" name="end-date" required="required"
-        autocomplete="off" readonly placeholder="please select" />
+             autocomplete="off" readonly placeholder="please select" />
       <div class="calendar dropdown" id="end-date-calendar"></div>
     </div>
 
@@ -101,9 +101,9 @@
 
     <div class="item">
       <label for="time">hour:</label>
-      <input type="text">
+      <input type="text" class="hour">
       <label for="time">minute:</label>
-      <input type="text">
+      <input type="text" class="minute">
 
     </div>
 
@@ -132,9 +132,11 @@
   </div>
 
   <div class="item-price hide">
-    <span class="name"></span> <i>:</i> <span class="price"></span>
-    <span> / </span>
+    <span class="name"></span>  &nbsp; : &nbsp;  <span class="price"></span>
+    <!-- <span> / </span> -->
   </div>
+
+  <script src="./indexDB.js"></script>
 
   <script>
     const stage = 'dev'
@@ -164,7 +166,7 @@
       console.log(y, m, d);
     })
 
-    let vm = {
+    let vehicleMapping = {
       other: {
         'Standard': 1,
         'People Carrier': 3
@@ -193,6 +195,28 @@
     })
 
 
+    let hourInput = document.querySelector('.hour')
+    let minuteInput = document.querySelector('.minute')
+
+    hourInput.addEventListener('input', () => {
+      if (hourInput.value > 24) {
+        hourInput.value = 24
+      }
+      if (hourInput.value < 0) {
+        hourInput.value = 0
+      }
+
+
+    })
+    minuteInput.addEventListener('input', () => {
+      if (minuteInput.value > 60) {
+        minuteInput.value = 60
+      }
+      if (minuteInput.value < 0) {
+        minuteInput.value = 0
+      }
+    })
+
     let dList = [
       {
         "f": {
@@ -211,7 +235,7 @@
           'date': '2024-05-13',
           time: '10:15'
         },
-        "d": {}
+        vehiclePrices:{}
       },
       {
         "f": {
@@ -226,13 +250,17 @@
           "lng": 139.7622284,
           "name": "Hyatt Centric Ginza Tokyo 6-chōme-6-7 Ginza, Chuo City, Tokyo 104-0061, Japan 6-chōme-6-7 Ginza, Chuo City, Tokyo 104-0061, Japan"
         },
-        "d": {}
+        vehiclePrices:{}
       }
     ]
     let add = document.querySelector('.add')
     let hElm = document.querySelector('.h')
     let mElm = document.querySelector('.m')
+
+    // 
     add.addEventListener('click', () => {
+
+      IDB.openDB()
       if (JSON.stringify(f) == '{}' || JSON.stringify(t) == '{}') return
 
       let h = Number(hElm.value)
@@ -258,8 +286,8 @@
 
       let time = `${hour}-${minute}`
 
-      dList.push({ f, t, date: fromDate || '', time, d: {} })
-      console.log(dList);
+      dList.push({ f, t, date: fromDate || '', time,vehiclePrices:{}})
+
       fillPage()
 
       from.value = ''
@@ -267,8 +295,11 @@
       f = {}
       t = {}
 
+     
+
       console.log(dList);
     })
+
     function fillPage() {
       let box = document.querySelector('.res-box')
       let fragm = document.createDocumentFragment()
@@ -285,26 +316,25 @@
         let t = cItem.querySelector('.t')
         t.innerText = tName
 
-        //         [
-        //     {
-        //         "description": "92.69---68.38"
-        //     }
-        // ]    
+
         let detailBox = cItem.querySelector('.detail-box')
         let itemPrice = document.querySelector('.item-price')
-        for (let [key, value] of Object.entries(obj['d'])) {
+
+        if(obj['vehiclePrices']){
+          for (let [key, value] of Object.entries(obj['vehiclePrices'])) {
           let c = itemPrice.cloneNode(true)
           c.querySelector('.name').innerText = key
 
           let arr = value.split('-')
           if (Number(arr[0]) > Number(arr[1])) {
-            // if(true){
             c.classList.add('warn')
           }
           c.querySelector('.price').innerText = value
 
           detailBox.appendChild(c)
         }
+        }
+    
 
         fragm.appendChild(cItem)
       }
@@ -316,33 +346,713 @@
 
     let calculator = document.querySelector('.calculator')
     calculator.addEventListener('click', calc)
-    async function calc() {
+    async function calc(e) {
+      let classList = e.target.classList
+      if (classList.contains('gray')) {
+        return
+      }
+      // classList.add('gray')
+
       for (let obj of dList) {
         let { f, t } = obj
         let { place_id: fpid, lat: fLat, lng: fLng } = f
         let { place_id: tpid, lat: tLat, lng: tLng } = t
 
-        let [e, b] = await Promise.all([getPriceElife(f, t), getPriceBooking(fpid, tpid)])
-        dataHandler(e, b, obj)
+        // let [elifePrices, bookingPrices] = await Promise.all([getPriceElife(f, t), getPriceBooking(fpid, tpid)])
 
-        // console.log('-----------------',f,t);
+        elifePrices = [
+          {
+            "price": {
+              "amount": 68.38,
+              "currency": "USD",
+              "quote_id": "499a61c0f0744a5ebffe3e0168b0cea4-v1"
+            },
+            "vehicle_class": "Sedan",
+            "vehicle_class_id": 1,
+            "passenger_capacity": 3,
+            "luggage_capacity": 3,
+            "typical_vehicle": {
+              "model": "Camry",
+              "manufacturer": "Toyota"
+            },
+            "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/sedan.jpg"
+          },
+          {
+            "price": {
+              "amount": 96.5,
+              "currency": "USD",
+              "quote_id": "499a61c0f0744a5ebffe3e0168b0cea4-v2"
+            },
+            "vehicle_class": "Business Sedan",
+            "vehicle_class_id": 2,
+            "passenger_capacity": 3,
+            "luggage_capacity": 3,
+            "typical_vehicle": {
+              "model": "Continental",
+              "manufacturer": "Lincoln"
+            },
+            "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/besiness-sedan.jpg"
+          },
+          {
+            "price": {
+              "amount": 360,
+              "currency": "USD",
+              "quote_id": "499a61c0f0744a5ebffe3e0168b0cea4-v40"
+            },
+            "vehicle_class": "First Class",
+            "vehicle_class_id": 40,
+            "passenger_capacity": 3,
+            "luggage_capacity": 3,
+            "typical_vehicle": {
+              "model": "S550",
+              "manufacturer": "Mercedes"
+            },
+            "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/first-class.jpg"
+          },
+          {
+            "price": {
+              "amount": 72.18,
+              "currency": "USD",
+              "quote_id": "499a61c0f0744a5ebffe3e0168b0cea4-v6"
+            },
+            "vehicle_class": "MPV-4",
+            "vehicle_class_id": 6,
+            "passenger_capacity": 4,
+            "luggage_capacity": 4,
+            "typical_vehicle": {
+              "model": "Highlander",
+              "manufacturer": "Toyota"
+            },
+            "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/mpv-4.jpg"
+          },
+          {
+            "price": {
+              "amount": 105,
+              "currency": "USD",
+              "quote_id": "499a61c0f0744a5ebffe3e0168b0cea4-v3"
+            },
+            "vehicle_class": "MPV-5",
+            "vehicle_class_id": 3,
+            "passenger_capacity": 5,
+            "luggage_capacity": 5,
+            "typical_vehicle": {
+              "model": "Sienna",
+              "manufacturer": "Toyota"
+            },
+            "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/mpv-5.jpg"
+          },
+          {
+            "price": {
+              "amount": 123.95,
+              "currency": "USD",
+              "quote_id": "499a61c0f0744a5ebffe3e0168b0cea4-v4"
+            },
+            "vehicle_class": "Business MPV-5",
+            "vehicle_class_id": 4,
+            "passenger_capacity": 5,
+            "luggage_capacity": 5,
+            "typical_vehicle": {
+              "model": "Navigator",
+              "manufacturer": "Lincoln"
+            },
+            "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/businessminivan.jpg"
+          },
+          {
+            "price": {
+              "amount": 140,
+              "currency": "USD",
+              "quote_id": "499a61c0f0744a5ebffe3e0168b0cea4-v36"
+            },
+            "vehicle_class": "Business Van",
+            "vehicle_class_id": 36,
+            "passenger_capacity": 5,
+            "luggage_capacity": 5,
+            "typical_vehicle": {
+              "model": "GL8",
+              "manufacturer": "Buick"
+            },
+            "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/businessminivan.jpg"
+          },
+          {
+            "price": {
+              "amount": 850,
+              "currency": "USD",
+              "quote_id": "499a61c0f0744a5ebffe3e0168b0cea4-v21"
+            },
+            "vehicle_class": "6 Passenger Stretch Limo",
+            "vehicle_class_id": 21,
+            "passenger_capacity": 6,
+            "luggage_capacity": 6,
+            "typical_vehicle": {
+              "model": "MKT or Chrsley",
+              "manufacturer": "Liconln"
+            },
+            "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/stretch-limo-6.jpg"
+          },
+          {
+            "price": {
+              "amount": 900,
+              "currency": "USD",
+              "quote_id": "499a61c0f0744a5ebffe3e0168b0cea4-v22"
+            },
+            "vehicle_class": "8 Passenger Stretch Limo",
+            "vehicle_class_id": 22,
+            "passenger_capacity": 8,
+            "luggage_capacity": 8,
+            "typical_vehicle": {
+              "model": "MKT or Chrsley",
+              "manufacturer": "Liconln"
+            },
+            "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/stretch-limo-8.jpg"
+          },
+          {
+            "price": {
+              "amount": 1020,
+              "currency": "USD",
+              "quote_id": "499a61c0f0744a5ebffe3e0168b0cea4-v23"
+            },
+            "vehicle_class": "10 Passenger Stretch Limo",
+            "vehicle_class_id": 23,
+            "passenger_capacity": 9,
+            "luggage_capacity": 9,
+            "typical_vehicle": {
+              "model": "MKT ",
+              "manufacturer": "Liconln"
+            },
+            "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/usa/Lincoln-MKT.jpg"
+          },
+          {
+            "price": {
+              "amount": 1090,
+              "currency": "USD",
+              "quote_id": "499a61c0f0744a5ebffe3e0168b0cea4-v24"
+            },
+            "vehicle_class": "12 Passenger Stretch Limo",
+            "vehicle_class_id": 24,
+            "passenger_capacity": 12,
+            "luggage_capacity": 12,
+            "typical_vehicle": {
+              "model": "Navigator",
+              "manufacturer": "Liconln"
+            },
+            "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/stretch-limo-12.jpg"
+          },
+          {
+            "price": {
+              "amount": 1100,
+              "currency": "USD",
+              "quote_id": "499a61c0f0744a5ebffe3e0168b0cea4-v27"
+            },
+            "vehicle_class": "16 Passenger Stretch Limo",
+            "vehicle_class_id": 27,
+            "passenger_capacity": 15,
+            "luggage_capacity": 15,
+            "typical_vehicle": {
+              "model": "H2",
+              "manufacturer": "Hummer"
+            },
+            "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/usa/Hummer-H2.jpg"
+          },
+          {
+            "price": {
+              "amount": 370,
+              "currency": "USD",
+              "quote_id": "499a61c0f0744a5ebffe3e0168b0cea4-v5"
+            },
+            "vehicle_class": "Minibus-8",
+            "vehicle_class_id": 5,
+            "passenger_capacity": 8,
+            "luggage_capacity": 8,
+            "typical_vehicle": {
+              "model": "Transit",
+              "manufacturer": "Ford"
+            },
+            "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/minibus-8.jpg"
+          },
+          {
+            "price": {
+              "amount": 380,
+              "currency": "USD",
+              "quote_id": "499a61c0f0744a5ebffe3e0168b0cea4-v9"
+            },
+            "vehicle_class": "Minibus-10",
+            "vehicle_class_id": 9,
+            "passenger_capacity": 10,
+            "luggage_capacity": 10,
+            "typical_vehicle": {
+              "model": "Ford",
+              "manufacturer": "Ford"
+            },
+            "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/minibus-10.jpg"
+          },
+          {
+            "price": {
+              "amount": 389,
+              "currency": "USD",
+              "quote_id": "499a61c0f0744a5ebffe3e0168b0cea4-v10"
+            },
+            "vehicle_class": "Minibus-12",
+            "vehicle_class_id": 10,
+            "passenger_capacity": 11,
+            "luggage_capacity": 11,
+            "typical_vehicle": {
+              "model": "Sprinter",
+              "manufacturer": "Mercedes"
+            },
+            "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/usa/Mercedes-Sprinter.jpg"
+          },
+          {
+            "price": {
+              "amount": 393,
+              "currency": "USD",
+              "quote_id": "499a61c0f0744a5ebffe3e0168b0cea4-v11"
+            },
+            "vehicle_class": "Minibus-14",
+            "vehicle_class_id": 11,
+            "passenger_capacity": 14,
+            "luggage_capacity": 14,
+            "typical_vehicle": {
+              "model": "Sprinter",
+              "manufacturer": "Mercedes"
+            },
+            "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/minibus-14.jpg"
+          },
+          {
+            "price": {
+              "amount": 740,
+              "currency": "USD",
+              "quote_id": "499a61c0f0744a5ebffe3e0168b0cea4-v29"
+            },
+            "vehicle_class": "16-seat Bus",
+            "vehicle_class_id": 29,
+            "passenger_capacity": 16,
+            "luggage_capacity": 16,
+            "typical_vehicle": {
+              "model": "E-450",
+              "manufacturer": "Ford"
+            },
+            "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/bus-16.jpg"
+          },
+          {
+            "price": {
+              "amount": 780,
+              "currency": "USD",
+              "quote_id": "499a61c0f0744a5ebffe3e0168b0cea4-v30"
+            },
+            "vehicle_class": "20-seat Bus",
+            "vehicle_class_id": 30,
+            "passenger_capacity": 20,
+            "luggage_capacity": 20,
+            "typical_vehicle": {
+              "model": "E-450",
+              "manufacturer": "Ford"
+            },
+            "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/bus-20.jpg"
+          },
+          {
+            "price": {
+              "amount": 804,
+              "currency": "USD",
+              "quote_id": "499a61c0f0744a5ebffe3e0168b0cea4-v31"
+            },
+            "vehicle_class": "23-seat Bus",
+            "vehicle_class_id": 31,
+            "passenger_capacity": 23,
+            "luggage_capacity": 23,
+            "typical_vehicle": {
+              "model": "F-550",
+              "manufacturer": "Ford"
+            },
+            "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/bus-23.jpg"
+          },
+          {
+            "price": {
+              "amount": 810,
+              "currency": "USD",
+              "quote_id": "499a61c0f0744a5ebffe3e0168b0cea4-v32"
+            },
+            "vehicle_class": "27-seat Bus",
+            "vehicle_class_id": 32,
+            "passenger_capacity": 27,
+            "luggage_capacity": 27,
+            "typical_vehicle": {
+              "model": "F-550",
+              "manufacturer": "Ford"
+            },
+            "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/bus-27.jpg"
+          },
+          {
+            "price": {
+              "amount": 840,
+              "currency": "USD",
+              "quote_id": "499a61c0f0744a5ebffe3e0168b0cea4-v33"
+            },
+            "vehicle_class": "36-seat Bus",
+            "vehicle_class_id": 33,
+            "passenger_capacity": 36,
+            "luggage_capacity": 36,
+            "typical_vehicle": {
+              "model": "F-650 or smilar",
+              "manufacturer": "Ford"
+            },
+            "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/bus-36.jpg"
+          },
+          {
+            "price": {
+              "amount": 945,
+              "currency": "USD",
+              "quote_id": "499a61c0f0744a5ebffe3e0168b0cea4-v34"
+            },
+            "vehicle_class": "44-seat Coach Bus",
+            "vehicle_class_id": 34,
+            "passenger_capacity": 44,
+            "luggage_capacity": 44,
+            "typical_vehicle": {
+              "model": "Coach bus",
+              "manufacturer": "Volvo"
+            },
+            "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/bus-44.jpg"
+          },
+          {
+            "price": {
+              "amount": 980,
+              "currency": "USD",
+              "quote_id": "499a61c0f0744a5ebffe3e0168b0cea4-v35"
+            },
+            "vehicle_class": "55-seat Coach Bus",
+            "vehicle_class_id": 35,
+            "passenger_capacity": 55,
+            "luggage_capacity": 55,
+            "typical_vehicle": {
+              "model": "Motorcoach or smilar",
+              "manufacturer": "Prevost"
+            },
+            "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/bus-55.jpg"
+          },
+          {
+            "price": {
+              "amount": 400,
+              "currency": "USD",
+              "quote_id": "499a61c0f0744a5ebffe3e0168b0cea4-v43"
+            },
+            "vehicle_class": "EV First Class Sedan",
+            "vehicle_class_id": 43,
+            "passenger_capacity": 3,
+            "luggage_capacity": 3,
+            "typical_vehicle": {
+              "model": "Model S",
+              "manufacturer": "Tesla"
+            },
+            "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/home/vehicle-classes/ev-firstclass.png"
+          },
+          {
+            "price": {
+              "amount": 1160,
+              "currency": "USD",
+              "quote_id": "499a61c0f0744a5ebffe3e0168b0cea4-v25"
+            },
+            "vehicle_class": "12 Passenger Party Bus",
+            "vehicle_class_id": 25,
+            "passenger_capacity": 12,
+            "luggage_capacity": 12,
+            "typical_vehicle": {
+              "model": "Sprinter",
+              "manufacturer": "Mercedes"
+            },
+            "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/party-bus-12.jpg"
+          },
+          {
+            "price": {
+              "amount": 1190,
+              "currency": "USD",
+              "quote_id": "499a61c0f0744a5ebffe3e0168b0cea4-v26"
+            },
+            "vehicle_class": "14 Passenger Party Bus",
+            "vehicle_class_id": 26,
+            "passenger_capacity": 14,
+            "luggage_capacity": 14,
+            "typical_vehicle": {
+              "model": "Sprinter",
+              "manufacturer": "Mercedes"
+            },
+            "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/party-bus-14.jpg"
+          },
+          {
+            "price": {
+              "amount": 95,
+              "currency": "USD",
+              "quote_id": "499a61c0f0744a5ebffe3e0168b0cea4-v41"
+            },
+            "vehicle_class": "EV Sedan",
+            "vehicle_class_id": 41,
+            "passenger_capacity": 3,
+            "luggage_capacity": 3,
+            "typical_vehicle": {
+              "model": "Bolt EUV",
+              "manufacturer": "Chevy"
+            },
+            "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/home/vehicle-classes/ev-sedan.png"
+          },
+          {
+            "price": {
+              "amount": 148,
+              "currency": "USD",
+              "quote_id": "499a61c0f0744a5ebffe3e0168b0cea4-v42"
+            },
+            "vehicle_class": "EV Business Sedan",
+            "vehicle_class_id": 42,
+            "passenger_capacity": 3,
+            "luggage_capacity": 3,
+            "typical_vehicle": {
+              "model": "Model 3",
+              "manufacturer": "Tesla"
+            },
+            "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/home/vehicle-classes/ev-business-sedan.png"
+          },
+          {
+            "price": {
+              "amount": 70,
+              "currency": "USD",
+              "quote_id": "499a61c0f0744a5ebffe3e0168b0cea4-v12"
+            },
+            "vehicle_class": "Comfort Sedan",
+            "vehicle_class_id": 12,
+            "passenger_capacity": 3,
+            "luggage_capacity": 3,
+            "typical_vehicle": {
+              "model": "Camry",
+              "manufacturer": "Toyota"
+            },
+            "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/Toyota-Camry.jpg"
+          }
+        ]
+
+        bookingPrices = [
+          {
+            "resultReference": "1",
+            "supplierID": 2544,
+            "supplierLocationID": 6182,
+            "predictedPickupDateTime": "2024-01-30 12:00:00.000",
+            "bags": 3,
+            "meetAndGreet": true,
+            "publicTransport": false,
+            "imageUrl": "https://cdn.rideways.com/images/cars/standard.jpg",
+            "drivingDistance": 23.55,
+            "duration": 29,
+            "maxPassenger": "3",
+            "originalPrice": null,
+            "price": 92.69,
+            "currency": "USD",
+            "hourFrom": "00:00",
+            "hourUntil": "24:00",
+            "frequencyMins": null,
+            "twentyFourHourCancellation": false,
+            "twoHourCancellation": true,
+            "nonRefundable": false,
+            "type": "CAR",
+            "carDetails": {
+              "model": "Skoda Octavia",
+              "modelDescription": "Skoda Octavia or similar",
+              "description": "Standard"
+            },
+            "link": "/bookingDetails/f5b4e86d-194d-4f0f-9a9e-3312f7e130d9/1?lang=en-gb&currency=USD",
+            "supplierCategory": "GOLD",
+            "supplierName": "Carzen+",
+            "cancellationLeadTimeMinutes": 1440,
+            "priceRuleID": 18938,
+            "priceDiscountPercentage": 0
+          },
+          {
+            "resultReference": "5",
+            "supplierID": 2544,
+            "supplierLocationID": 6182,
+            "predictedPickupDateTime": "2024-01-30 12:00:00.000",
+            "bags": 5,
+            "meetAndGreet": true,
+            "publicTransport": false,
+            "imageUrl": "https://cdn.rideways.com/images/cars/people-carrier.jpg",
+            "drivingDistance": 23.55,
+            "duration": 29,
+            "maxPassenger": "5",
+            "originalPrice": null,
+            "price": 92.69,
+            "currency": "USD",
+            "hourFrom": "00:00",
+            "hourUntil": "24:00",
+            "frequencyMins": null,
+            "twentyFourHourCancellation": false,
+            "twoHourCancellation": true,
+            "nonRefundable": false,
+            "type": "CAR",
+            "carDetails": {
+              "model": "Peugeot 5008",
+              "modelDescription": "Peugeot 5008 or similar",
+              "description": "People Carrier"
+            },
+            "link": "/bookingDetails/f5b4e86d-194d-4f0f-9a9e-3312f7e130d9/5?lang=en-gb&currency=USD",
+            "supplierCategory": "GOLD",
+            "supplierName": "Carzen+",
+            "cancellationLeadTimeMinutes": 1440,
+            "priceRuleID": 18942,
+            "priceDiscountPercentage": 0
+          },
+          {
+            "resultReference": "7",
+            "supplierID": 525,
+            "supplierLocationID": 5087,
+            "predictedPickupDateTime": "2024-01-30 12:00:00.000",
+            "bags": 9,
+            "meetAndGreet": true,
+            "publicTransport": false,
+            "imageUrl": "https://cdn.rideways.com/images/cars/minibus.jpg",
+            "drivingDistance": 23.55,
+            "duration": 29,
+            "maxPassenger": "9",
+            "originalPrice": null,
+            "price": 134.83,
+            "currency": "USD",
+            "hourFrom": "00:00",
+            "hourUntil": "24:00",
+            "frequencyMins": null,
+            "twentyFourHourCancellation": true,
+            "twoHourCancellation": false,
+            "nonRefundable": false,
+            "type": "CAR",
+            "carDetails": {
+              "model": "Renault Master",
+              "modelDescription": "Renault Master or similar",
+              "description": "Minibus"
+            },
+            "link": "/bookingDetails/f5b4e86d-194d-4f0f-9a9e-3312f7e130d9/7?lang=en-gb&currency=USD",
+            "supplierCategory": "SILVER",
+            "supplierName": "Japan Airport Transport",
+            "cancellationLeadTimeMinutes": 1440,
+            "priceRuleID": 18944,
+            "priceDiscountPercentage": 0
+          },
+          {
+            "resultReference": "6",
+            "supplierID": 2544,
+            "supplierLocationID": 6182,
+            "predictedPickupDateTime": "2024-01-30 12:00:00.000",
+            "bags": 7,
+            "meetAndGreet": true,
+            "publicTransport": false,
+            "imageUrl": "https://cdn.rideways.com/images/cars/large-people-carrier.jpg",
+            "drivingDistance": 23.55,
+            "duration": 29,
+            "maxPassenger": "7",
+            "originalPrice": null,
+            "price": 139.04,
+            "currency": "USD",
+            "hourFrom": "00:00",
+            "hourUntil": "24:00",
+            "frequencyMins": null,
+            "twentyFourHourCancellation": false,
+            "twoHourCancellation": true,
+            "nonRefundable": false,
+            "type": "CAR",
+            "carDetails": {
+              "model": "Ford Tourneo",
+              "modelDescription": "Ford Tourneo or similar",
+              "description": "Large People Carrier"
+            },
+            "link": "/bookingDetails/f5b4e86d-194d-4f0f-9a9e-3312f7e130d9/6?lang=en-gb&currency=USD",
+            "supplierCategory": "GOLD",
+            "supplierName": "Carzen+",
+            "cancellationLeadTimeMinutes": 1440,
+            "priceRuleID": 18943,
+            "priceDiscountPercentage": 0
+          },
+          {
+            "resultReference": "2",
+            "supplierID": 2544,
+            "supplierLocationID": 6182,
+            "predictedPickupDateTime": "2024-01-30 12:00:00.000",
+            "bags": 2,
+            "meetAndGreet": true,
+            "publicTransport": false,
+            "imageUrl": "https://cdn.rideways.com/images/cars/executive.jpg",
+            "drivingDistance": 23.55,
+            "duration": 29,
+            "maxPassenger": "3",
+            "originalPrice": null,
+            "price": 234.14,
+            "currency": "USD",
+            "hourFrom": "00:00",
+            "hourUntil": "24:00",
+            "frequencyMins": null,
+            "twentyFourHourCancellation": false,
+            "twoHourCancellation": true,
+            "nonRefundable": false,
+            "type": "CAR",
+            "carDetails": {
+              "model": "Mercedes Benz E-Class",
+              "modelDescription": "Mercedes Benz E-Class or similar",
+              "description": "Executive"
+            },
+            "link": "/bookingDetails/f5b4e86d-194d-4f0f-9a9e-3312f7e130d9/2?lang=en-gb&currency=USD",
+            "supplierCategory": "GOLD",
+            "supplierName": "Carzen+",
+            "cancellationLeadTimeMinutes": 1440,
+            "priceRuleID": 18939,
+            "priceDiscountPercentage": 0
+          },
+          {
+            "resultReference": "3",
+            "supplierID": 2544,
+            "supplierLocationID": 6182,
+            "predictedPickupDateTime": "2024-01-30 12:00:00.000",
+            "bags": 5,
+            "meetAndGreet": true,
+            "publicTransport": false,
+            "imageUrl": "https://cdn.rideways.com/images/cars/executive-people-carrier.jpg",
+            "drivingDistance": 23.55,
+            "duration": 29,
+            "maxPassenger": "5",
+            "originalPrice": null,
+            "price": 319.8,
+            "currency": "USD",
+            "hourFrom": "00:00",
+            "hourUntil": "24:00",
+            "frequencyMins": null,
+            "twentyFourHourCancellation": false,
+            "twoHourCancellation": true,
+            "nonRefundable": false,
+            "type": "CAR",
+            "carDetails": {
+              "model": "Mercedes V-Class",
+              "modelDescription": "Mercedes V-Class or similar",
+              "description": "Executive People Carrier"
+            },
+            "link": "/bookingDetails/f5b4e86d-194d-4f0f-9a9e-3312f7e130d9/3?lang=en-gb&currency=USD",
+            "supplierCategory": "GOLD",
+            "supplierName": "Carzen+",
+            "cancellationLeadTimeMinutes": 1440,
+            "priceRuleID": 18940,
+            "priceDiscountPercentage": 0
+          }
+        ];
+
+        dataHandler(elifePrices, bookingPrices, obj)
         await sleep()
-
       }
+
+      console.log(dList);
       fillPage()
+      classList.remove('gray')
     }
 
 
     function dataHandler(e, b, addrItem) {
       for (let item of b) {
         let { price, carDetails: { description } } = item
-        let elifeVId = vm['other'][`${description}`]
+        let elifeVId = vehicleMapping['other'][`${description}`]
         if (!elifeVId) continue
         let elifePrice = e.find(o => o.vehicle_class_id == elifeVId)
         let { price: { amount } } = elifePrice
-        addrItem['d'][description] = `${price}-${amount}`
+        addrItem['vehiclePrices'][description] = `${price}-${amount}`
       }
-
     }
 
 
@@ -581,7 +1291,7 @@
     }
 
     function sleep() {
-      let delay = (Math.floor(Math.random() * 5) + 1) * 1000
+      let delay = (Math.floor(Math.random() * 1) + 1) * 1000
       return new Promise((resolve, rejedt) => {
         setTimeout(() => {
           resolve()

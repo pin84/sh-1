@@ -36,6 +36,14 @@ body {
       padding: 3px 8px;
       cursor: pointer;
     }
+
+    .calculator{
+      background-color: #fe7a1f;
+      color: #fff;
+      &.gray{
+        background-color: #ccc;
+      }
+    }
   }
 }
 
@@ -48,6 +56,7 @@ body {
     flex-direction: column;
     .detail-box{
       display: flex;
+      flex-direction: column;
       .item-price{
         display: flex;
         // flex-direction: flex;

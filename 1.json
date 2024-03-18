@@ -1,75 +1,991 @@
 {
-    "id": "3429fde2-22d0-4667-afe0-166bf4e559c7",
-    "request": {
-        "origin": {
-            "latitude": 6.1712235,
-            "longitude": -75.4329138,
-            "name": "Aeropuerto Internacional Jos\u00e9 Mar\u00eda C\u00f3rdova (MDE), Vereda, Rionegro, Antioquia, Colombia",
-            "city": "Rionegro",
-            "country": "CO",
-            "postcode": "054040",
-            "iata": "MDE"
-        },
-        "destination": {
-            "latitude": 6.202051618917507,
-            "longitude": -75.2066692921906,
-            "name": "Soy Local Guatape, V\u00eda Vda. La Zulia, Pe\u00f1ol, Antioquia, Colombia",
-            "city": null,
-            "country": "CO",
-            "postcode": "053857",
-            "iata": null
-        },
-        "pickupDateTime": "2024-03-03T16:30:00Z",
-        "pickupTimezone": "America/Bogota",
-        "currency": null,
-        "customerCountry": null,
-        "customerLanguage": null,
-        "drivingDistanceInKm": 50.33,
-        "passengers": 3,
-        "supplierPickupId": null,
-        "service_area_id": 643,
-        "country": "COL"
-    },
-    "prices": [
+    "vehicle_classes": [
         {
-            "id": "b874d2de-9d86-4018-8374-04be82ed1202",
             "price": {
-                "transportCategory": "MINIBUS",
-                "price": {
-                    "salePriceMin": 48.06,
-                    "salePriceMax": 48.06,
-                    "currency": "USD"
-                },
-                "minPassengers": 1,
-                "maxPassengers": 12,
-                "features": [
+                "amount": 90.49,
+                "currency": "CNY",
+                "quote_id": "5cb3fd9bde51432fa1e4525ec0b6e0cf-v41"
+            },
+            "vehicle_class": "EV Sedan",
+            "vehicle_class_id": 41,
+            "passenger_capacity": 3,
+            "luggage_capacity": 3,
+            "typical_vehicle": {
+                "model": "Bolt EUV",
+                "manufacturer": "Chevy"
+            },
+            "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/home/vehicle-classes/ev-sedan.png"
+        },
+        {
+            "price": {
+                "amount": 94.61,
+                "currency": "CNY",
+                "quote_id": "5cb3fd9bde51432fa1e4525ec0b6e0cf-v42"
+            },
+            "vehicle_class": "EV Business Sedan",
+            "vehicle_class_id": 42,
+            "passenger_capacity": 3,
+            "luggage_capacity": 3,
+            "typical_vehicle": {
+                "model": "Model 3",
+                "manufacturer": "Tesla"
+            },
+            "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/home/vehicle-classes/ev-business-sedan.png"
+        },
+        {
+            "price": {
+                "amount": 98.72,
+                "currency": "CNY",
+                "quote_id": "5cb3fd9bde51432fa1e4525ec0b6e0cf-v2"
+            },
+            "vehicle_class": "Business Sedan",
+            "vehicle_class_id": 2,
+            "passenger_capacity": 3,
+            "luggage_capacity": 3,
+            "typical_vehicle": {
+                "model": "Continental",
+                "manufacturer": "Lincoln"
+            },
+            "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/besiness-sedan.jpg"
+        },
+        {
+            "price": {
+                "amount": 111.06,
+                "currency": "CNY",
+                "quote_id": "5cb3fd9bde51432fa1e4525ec0b6e0cf-v6"
+            },
+            "vehicle_class": "MPV-4",
+            "vehicle_class_id": 6,
+            "passenger_capacity": 4,
+            "luggage_capacity": 4,
+            "typical_vehicle": {
+                "model": "Highlander",
+                "manufacturer": "Toyota"
+            },
+            "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/mpv-4.jpg"
+        },
+        {
+            "price": {
+                "amount": 108.62,
+                "currency": "CNY",
+                "quote_id": "5cb3fd9bde51432fa1e4525ec0b6e0cf-v3"
+            },
+            "vehicle_class": "MPV-5",
+            "vehicle_class_id": 3,
+            "passenger_capacity": 5,
+            "luggage_capacity": 5,
+            "typical_vehicle": {
+                "model": "Sienna",
+                "manufacturer": "Toyota"
+            },
+            "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/mpv-5.jpg"
+        },
+        {
+            "price": {
+                "amount": 119.29,
+                "currency": "CNY",
+                "quote_id": "5cb3fd9bde51432fa1e4525ec0b6e0cf-v48"
+            },
+            "vehicle_class": "EV SUV",
+            "vehicle_class_id": 48,
+            "passenger_capacity": 4,
+            "luggage_capacity": 4,
+            "typical_vehicle": {
+                "model": "Model  Y",
+                "manufacturer": "Tesla"
+            },
+            "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/home/vehicle-classes/ev-suv.png"
+        },
+        {
+            "price": {
+                "amount": 123.4,
+                "currency": "CNY",
+                "quote_id": "5cb3fd9bde51432fa1e4525ec0b6e0cf-v49"
+            },
+            "vehicle_class": "EV Business SUV",
+            "vehicle_class_id": 49,
+            "passenger_capacity": 4,
+            "luggage_capacity": 4,
+            "typical_vehicle": {
+                "model": "Model X",
+                "manufacturer": "Tesla"
+            },
+            "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/home/vehicle-classes/ev-business-suv.png"
+        },
+        {
+            "price": {
+                "amount": 127.52,
+                "currency": "CNY",
+                "quote_id": "5cb3fd9bde51432fa1e4525ec0b6e0cf-v4"
+            },
+            "vehicle_class": "Business MPV-5",
+            "vehicle_class_id": 4,
+            "passenger_capacity": 5,
+            "luggage_capacity": 5,
+            "typical_vehicle": {
+                "model": "Navigator",
+                "manufacturer": "Lincoln"
+            },
+            "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/besiness-mpv.jpg"
+        },
+        {
+            "price": {
+                "amount": 131.63,
+                "currency": "CNY",
+                "quote_id": "5cb3fd9bde51432fa1e4525ec0b6e0cf-v36"
+            },
+            "vehicle_class": "Business Van",
+            "vehicle_class_id": 36,
+            "passenger_capacity": 6,
+            "luggage_capacity": 6,
+            "typical_vehicle": {
+                "model": "s3",
+                "manufacturer": "toyota"
+            },
+            "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/businessminivan.jpg"
+        },
+        {
+            "price": {
+                "amount": 135.74,
+                "currency": "CNY",
+                "quote_id": "5cb3fd9bde51432fa1e4525ec0b6e0cf-v21"
+            },
+            "vehicle_class": "6 Passenger Stretch Sedan",
+            "vehicle_class_id": 21,
+            "passenger_capacity": 6,
+            "luggage_capacity": 6,
+            "typical_vehicle": {
+                "model": "300",
+                "manufacturer": "Stretch Chrysler"
+            },
+            "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/stretch-limo-6.jpg"
+        },
+        {
+            "price": {
+                "amount": 139.86,
+                "currency": "CNY",
+                "quote_id": "5cb3fd9bde51432fa1e4525ec0b6e0cf-v22"
+            },
+            "vehicle_class": "8 Passenger Stretch Sedan",
+            "vehicle_class_id": 22,
+            "passenger_capacity": 8,
+            "luggage_capacity": 8,
+            "typical_vehicle": {
+                "model": "MKT",
+                "manufacturer": "Lincoln"
+            },
+            "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/stretch-limo-8.jpg"
+        },
+        {
+            "price": {
+                "amount": 143.97,
+                "currency": "CNY",
+                "quote_id": "5cb3fd9bde51432fa1e4525ec0b6e0cf-v23"
+            },
+            "vehicle_class": "10 Passenger Stretch Sedan",
+            "vehicle_class_id": 23,
+            "passenger_capacity": 10,
+            "luggage_capacity": 10,
+            "typical_vehicle": {
+                "model": "MKT",
+                "manufacturer": "Lincoln"
+            },
+            "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/stretch-limo-10.jpg"
+        },
+        {
+            "price": {
+                "amount": 148.08,
+                "currency": "CNY",
+                "quote_id": "5cb3fd9bde51432fa1e4525ec0b6e0cf-v24"
+            },
+            "vehicle_class": "12 Passenger Stretch SUV",
+            "vehicle_class_id": 24,
+            "passenger_capacity": 12,
+            "luggage_capacity": 12,
+            "typical_vehicle": {
+                "model": "Navigator",
+                "manufacturer": "Lincoln"
+            },
+            "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/stretch-limo-12.jpg"
+        },
+        {
+            "price": {
+                "amount": 152.2,
+                "currency": "CNY",
+                "quote_id": "5cb3fd9bde51432fa1e4525ec0b6e0cf-v27"
+            },
+            "vehicle_class": "16 Passenger Stretch Limo",
+            "vehicle_class_id": 27,
+            "passenger_capacity": 16,
+            "luggage_capacity": 16,
+            "typical_vehicle": {
+                "model": "H2",
+                "manufacturer": "Hummer"
+            },
+            "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/stretch-limo-16.jpg"
+        },
+        {
+            "price": {
+                "amount": 156.31,
+                "currency": "CNY",
+                "quote_id": "5cb3fd9bde51432fa1e4525ec0b6e0cf-v25"
+            },
+            "vehicle_class": "12 Passenger Party Bus",
+            "vehicle_class_id": 25,
+            "passenger_capacity": 12,
+            "luggage_capacity": 12,
+            "typical_vehicle": {
+                "model": "Sprinter",
+                "manufacturer": "Mercedes"
+            },
+            "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/home/vehicle-classes/party-bus-12.png"
+        },
+        {
+            "price": {
+                "amount": 160.42,
+                "currency": "CNY",
+                "quote_id": "5cb3fd9bde51432fa1e4525ec0b6e0cf-v26"
+            },
+            "vehicle_class": "14 Passenger Party Bus",
+            "vehicle_class_id": 26,
+            "passenger_capacity": 14,
+            "luggage_capacity": 14,
+            "typical_vehicle": {
+                "model": "Sprinter",
+                "manufacturer": "Mercedes"
+            },
+            "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/home/vehicle-classes/party-bus-14.png"
+        },
+        {
+            "price": {
+                "amount": 164.54,
+                "currency": "CNY",
+                "quote_id": "5cb3fd9bde51432fa1e4525ec0b6e0cf-v5"
+            },
+            "vehicle_class": "Minibus-8",
+            "vehicle_class_id": 5,
+            "passenger_capacity": 8,
+            "luggage_capacity": 8,
+            "typical_vehicle": {
+                "model": "Transit",
+                "manufacturer": "Ford"
+            },
+            "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/minibus-8.jpg"
+        },
+        {
+            "price": {
+                "amount": 168.65,
+                "currency": "CNY",
+                "quote_id": "5cb3fd9bde51432fa1e4525ec0b6e0cf-v9"
+            },
+            "vehicle_class": "Minibus-10",
+            "vehicle_class_id": 9,
+            "passenger_capacity": 10,
+            "luggage_capacity": 10,
+            "typical_vehicle": {
+                "model": "Transit",
+                "manufacturer": "Ford"
+            },
+            "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/minibus-10.jpg"
+        },
+        {
+            "price": {
+                "amount": 172.76,
+                "currency": "CNY",
+                "quote_id": "5cb3fd9bde51432fa1e4525ec0b6e0cf-v10"
+            },
+            "vehicle_class": "Minibus-12",
+            "vehicle_class_id": 10,
+            "passenger_capacity": 12,
+            "luggage_capacity": 12,
+            "typical_vehicle": {
+                "model": "Sprinter",
+                "manufacturer": "Mercedes"
+            },
+            "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/minibus-12.jpg"
+        },
+        {
+            "price": {
+                "amount": 176.88,
+                "currency": "CNY",
+                "quote_id": "5cb3fd9bde51432fa1e4525ec0b6e0cf-v29"
+            },
+            "vehicle_class": "16-seat Bus",
+            "vehicle_class_id": 29,
+            "passenger_capacity": 16,
+            "luggage_capacity": 16,
+            "typical_vehicle": {
+                "model": "E-450",
+                "manufacturer": "Ford"
+            },
+            "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/bus-16.jpg"
+        },
+        {
+            "price": {
+                "amount": 180.99,
+                "currency": "CNY",
+                "quote_id": "5cb3fd9bde51432fa1e4525ec0b6e0cf-v30"
+            },
+            "vehicle_class": "20-seat Bus",
+            "vehicle_class_id": 30,
+            "passenger_capacity": 20,
+            "luggage_capacity": 20,
+            "typical_vehicle": {
+                "model": "E-450",
+                "manufacturer": "Ford"
+            },
+            "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/bus-20.jpg"
+        },
+        {
+            "price": {
+                "amount": 185.1,
+                "currency": "CNY",
+                "quote_id": "5cb3fd9bde51432fa1e4525ec0b6e0cf-v31"
+            },
+            "vehicle_class": "23-seat Bus",
+            "vehicle_class_id": 31,
+            "passenger_capacity": 23,
+            "luggage_capacity": 23,
+            "typical_vehicle": {
+                "model": "F-550",
+                "manufacturer": "Ford"
+            },
+            "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/bus-23.jpg"
+        },
+        {
+            "price": {
+                "amount": 189.22,
+                "currency": "CNY",
+                "quote_id": "5cb3fd9bde51432fa1e4525ec0b6e0cf-v32"
+            },
+            "vehicle_class": "27-seat Bus",
+            "vehicle_class_id": 32,
+            "passenger_capacity": 27,
+            "luggage_capacity": 27,
+            "typical_vehicle": {
+                "model": "F-550",
+                "manufacturer": "Ford"
+            },
+            "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/bus-27.jpg"
+        },
+        {
+            "price": {
+                "amount": 193.33,
+                "currency": "CNY",
+                "quote_id": "5cb3fd9bde51432fa1e4525ec0b6e0cf-v33"
+            },
+            "vehicle_class": "36-seat Bus",
+            "vehicle_class_id": 33,
+            "passenger_capacity": 36,
+            "luggage_capacity": 36,
+            "typical_vehicle": {
+                "model": "F-650",
+                "manufacturer": "Ford"
+            },
+            "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/bus-36.jpg"
+        },
+        {
+            "price": {
+                "amount": 197.44,
+                "currency": "CNY",
+                "quote_id": "5cb3fd9bde51432fa1e4525ec0b6e0cf-v34"
+            },
+            "vehicle_class": "44-seat Coach Bus",
+            "vehicle_class_id": 34,
+            "passenger_capacity": 44,
+            "luggage_capacity": 44,
+            "typical_vehicle": {
+                "model": "9700",
+                "manufacturer": "Volvo"
+            },
+            "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/bus-44.jpg"
+        },
+        {
+            "price": {
+                "amount": 201.56,
+                "currency": "CNY",
+                "quote_id": "5cb3fd9bde51432fa1e4525ec0b6e0cf-v35"
+            },
+            "vehicle_class": "55-seat Coach Bus",
+            "vehicle_class_id": 35,
+            "passenger_capacity": 55,
+            "luggage_capacity": 55,
+            "typical_vehicle": {
+                "model": "X3-45",
+                "manufacturer": "Prevost"
+            },
+            "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/bus-55.jpg"
+        },
+        {
+            "price": {
+                "amount": 117.64,
+                "currency": "CNY",
+                "quote_id": "5cb3fd9bde51432fa1e4525ec0b6e0cf-v7"
+            },
+            "vehicle_class": "MPV-6",
+            "vehicle_class_id": 7,
+            "passenger_capacity": 6,
+            "luggage_capacity": 6,
+            "typical_vehicle": {
+                "model": "Sienna",
+                "manufacturer": "Toyota"
+            },
+            "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/MPV-6.jpg"
+        },
+        {
+            "price": {
+                "amount": 175.23,
+                "currency": "CNY",
+                "quote_id": "5cb3fd9bde51432fa1e4525ec0b6e0cf-v11"
+            },
+            "vehicle_class": "Minibus-14",
+            "vehicle_class_id": 11,
+            "passenger_capacity": 14,
+            "luggage_capacity": 14,
+            "typical_vehicle": {
+                "model": "Sprinter",
+                "manufacturer": "Mercedes"
+            },
+            "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/minibus-14.jpg"
+        },
+        {
+            "price": {
+                "amount": 115.18,
+                "currency": "CNY",
+                "quote_id": "5cb3fd9bde51432fa1e4525ec0b6e0cf-v12"
+            },
+            "vehicle_class": "Comfort Sedan",
+            "vehicle_class_id": 12,
+            "passenger_capacity": 3,
+            "luggage_capacity": 3,
+            "typical_vehicle": {
+                "model": "Camry",
+                "manufacturer": "Toyota"
+            },
+            "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/Toyota-Camry.jpg"
+        },
+        {
+            "price": {
+                "amount": 82.27,
+                "currency": "CNY",
+                "quote_id": "5cb3fd9bde51432fa1e4525ec0b6e0cf-v13"
+            },
+            "vehicle_class": "Business MPV-4",
+            "vehicle_class_id": 13,
+            "passenger_capacity": 4,
+            "luggage_capacity": 4,
+            "typical_vehicle": {
+                "model": "QX60",
+                "manufacturer": "INFINITI"
+            },
+            "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/Business-MPV-4.png"
+        },
+        {
+            "price": {
+                "amount": 82.27,
+                "currency": "CNY",
+                "quote_id": "5cb3fd9bde51432fa1e4525ec0b6e0cf-v14"
+            },
+            "vehicle_class": "Luxury Sedan",
+            "vehicle_class_id": 14,
+            "passenger_capacity": 3,
+            "luggage_capacity": 3,
+            "typical_vehicle": {
+                "model": "e350",
+                "manufacturer": "Mercedes Benz"
+            },
+            "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/Luxury-Sedan.png"
+        },
+        {
+            "price": {
+                "amount": 173.59,
+                "currency": "CNY",
+                "quote_id": "5cb3fd9bde51432fa1e4525ec0b6e0cf-v1"
+            },
+            "vehicle_class": "Sedan",
+            "vehicle_class_id": 1,
+            "passenger_capacity": 3,
+            "luggage_capacity": 3,
+            "typical_vehicle": {
+                "model": "Camry",
+                "manufacturer": "Toyota"
+            },
+            "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/sedan.jpg"
+        },
+        {
+            "price": {
+                "amount": 246.8,
+                "currency": "CNY",
+                "quote_id": "5cb3fd9bde51432fa1e4525ec0b6e0cf-v40"
+            },
+            "vehicle_class": "First Class",
+            "vehicle_class_id": 40,
+            "passenger_capacity": 3,
+            "luggage_capacity": 3,
+            "typical_vehicle": {
+                "model": "S-Class",
+                "manufacturer": "Mercedes"
+            },
+            "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/first-class.jpg"
+        },
+        {
+            "price": {
+                "amount": 246.8,
+                "currency": "CNY",
+                "quote_id": "5cb3fd9bde51432fa1e4525ec0b6e0cf-v18"
+            },
+            "vehicle_class": "First Class Sedan",
+            "vehicle_class_id": 18,
+            "passenger_capacity": 3,
+            "luggage_capacity": 3,
+            "typical_vehicle": {
+                "model": "S550",
+                "manufacturer": "Mercedes"
+            },
+            "image_url": ""
+        },
+        {
+            "price": {
+                "amount": 82.27,
+                "currency": "CNY",
+                "quote_id": "5cb3fd9bde51432fa1e4525ec0b6e0cf-v64"
+            },
+            "vehicle_class": "72-School Bus",
+            "vehicle_class_id": 64,
+            "passenger_capacity": 72,
+            "luggage_capacity": 72,
+            "typical_vehicle": {
+                "model": "",
+                "manufacturer": "International school bus"
+            },
+            "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/home/vehicle-classes/school-bus-72.png"
+        },
+        {
+            "price": {
+                "amount": 82.27,
+                "currency": "CNY",
+                "quote_id": "5cb3fd9bde51432fa1e4525ec0b6e0cf-v63"
+            },
+            "vehicle_class": "44-School Bus",
+            "vehicle_class_id": 63,
+            "passenger_capacity": 44,
+            "luggage_capacity": 44,
+            "typical_vehicle": {
+                "model": "",
+                "manufacturer": "Bluebird Version"
+            },
+            "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/home/vehicle-classes/school-bus-44.png"
+        }
+    ],
+    "meet_and_greet": {
+        "price": {
+            "amount": 40.0,
+            "currency": "CNY",
+            "quote_id": "5cb3fd9bde51432fa1e4525ec0b6e0cf-m"
+        }
+    },
+    "add_service": {
+        "infant": {
+            "price": {
+                "amount": 0,
+                "currency": "CNY",
+                "quote_id": "5cb3fd9bde51432fa1e4525ec0b6e0cf-i"
+            }
+        },
+        "toddler": {
+            "price": {
+                "amount": 0,
+                "currency": "CNY",
+                "quote_id": "5cb3fd9bde51432fa1e4525ec0b6e0cf-t"
+            }
+        },
+        "children": {
+            "price": {
+                "amount": 0,
+                "currency": "CNY",
+                "quote_id": "5cb3fd9bde51432fa1e4525ec0b6e0cf-c"
+            }
+        }
+    },
+    "airports": [
+        "SFO",
+        "SJC"
+    ],
+    "messages": {
+        "url": "https://elifelimo.s3.us-east-2.amazonaws.com/quote/message/messages.json"
+    },
+    "langs": [
+        {
+            "eng": {
+                "vehicles_classes": [
                     {
-                        "name": "noOfBags",
-                        "value": 12
+                        "vehicle_class": "EV Sedan"
+                    },
+                    {
+                        "vehicle_class": "EV Business Sedan"
+                    },
+                    {
+                        "vehicle_class": "Business Sedan"
+                    },
+                    {
+                        "vehicle_class": "Compatct Minivan"
+                    },
+                    {
+                        "vehicle_class": "Minivan"
+                    },
+                    {
+                        "vehicle_class": "EV SUV"
+                    },
+                    {
+                        "vehicle_class": "EV Business SUV"
+                    },
+                    {
+                        "vehicle_class": "Business Minivan"
+                    },
+                    {
+                        "vehicle_class": "Business Van"
+                    },
+                    {
+                        "vehicle_class": "6 Passenger Stretch Sedan"
+                    },
+                    {
+                        "vehicle_class": "8 Passenger Stretch Sedan"
+                    },
+                    {
+                        "vehicle_class": "10 Passenger Stretch Sedan"
+                    },
+                    {
+                        "vehicle_class": "12 Passenger Stretch SUV"
+                    },
+                    {
+                        "vehicle_class": "16 Passenger Stretch Limo"
+                    },
+                    {
+                        "vehicle_class": "12 Passenger Party Bus"
+                    },
+                    {
+                        "vehicle_class": "14 Passenger Party Bus"
+                    },
+                    {
+                        "vehicle_class": "Minibus-8"
+                    },
+                    {
+                        "vehicle_class": "Minibus-10"
+                    },
+                    {
+                        "vehicle_class": "Minibus-12"
+                    },
+                    {
+                        "vehicle_class": "16-seat Bus"
+                    },
+                    {
+                        "vehicle_class": "20-seat Bus"
+                    },
+                    {
+                        "vehicle_class": "23-seat Bus"
+                    },
+                    {
+                        "vehicle_class": "27-seat Bus"
+                    },
+                    {
+                        "vehicle_class": "36-seat Bus"
+                    },
+                    {
+                        "vehicle_class": "44-seat Coach Bus"
+                    },
+                    {
+                        "vehicle_class": "55-seat Coach Bus"
+                    },
+                    {
+                        "vehicle_class": "MPV-6"
+                    },
+                    {
+                        "vehicle_class": "Minibus-14"
+                    },
+                    {
+                        "vehicle_class": "Comfort Sedan"
+                    },
+                    {
+                        "vehicle_class": "Business MPV-4"
+                    },
+                    {
+                        "vehicle_class": "Luxury Sedan"
+                    },
+                    {
+                        "vehicle_class": "Sedan"
+                    },
+                    {
+                        "vehicle_class": "First Class"
+                    },
+                    {
+                        "vehicle_class": "First Class Sedan"
+                    },
+                    {
+                        "vehicle_class": "72-School Bus"
+                    },
+                    {
+                        "vehicle_class": "44-School Bus"
                     }
                 ],
-                "servicesAvailable": [
-                    "meetAndGreet"
+                "messages": [
+                    {
+                        "subject": "waiting time",
+                        "message": "60 minutes of waiting after the arrival of your flight is included"
+                    },
+                    {
+                        "subject": "cancellation",
+                        "message": "full refund if cancenlled 24 hours ahead of the time"
+                    }
+                ]
+            }
+        },
+        {
+            "spa": {
+                "vehicles_classes": [
+                    {
+                        "vehicle_class": "Sedan Eléctrico"
+                    },
+                    {
+                        "vehicle_class": "Sedan Ejecutivo Eléctrico"
+                    },
+                    {
+                        "vehicle_class": "Sedan Ejecutivo"
+                    },
+                    {
+                        "vehicle_class": "Minivan Compacta"
+                    },
+                    {
+                        "vehicle_class": "Minivan"
+                    },
+                    {
+                        "vehicle_class": "SUV Eléctrica"
+                    },
+                    {
+                        "vehicle_class": "SUV Ejecutiva Eléctrica"
+                    },
+                    {
+                        "vehicle_class": "Minivan Ejecutiva"
+                    },
+                    {
+                        "vehicle_class": "Van Ejecutiva"
+                    },
+                    {
+                        "vehicle_class": "6 Passenger Stretch Sedan"
+                    },
+                    {
+                        "vehicle_class": "8 Passenger Stretch Sedan"
+                    },
+                    {
+                        "vehicle_class": "10 Passenger Stretch Sedan"
+                    },
+                    {
+                        "vehicle_class": "12 Passenger Stretch SUV"
+                    },
+                    {
+                        "vehicle_class": "Limosina de 16 pasajeros"
+                    },
+                    {
+                        "vehicle_class": "Party Bus para 12 Pasajeros"
+                    },
+                    {
+                        "vehicle_class": "Party Bus para 14 Pasajeros"
+                    },
+                    {
+                        "vehicle_class": "Minibus de 8 pasajeros"
+                    },
+                    {
+                        "vehicle_class": "Minibus de 10 pasajeros"
+                    },
+                    {
+                        "vehicle_class": "Minibus de 12 pasajeros"
+                    },
+                    {
+                        "vehicle_class": "Autobús de 16 pasajeros"
+                    },
+                    {
+                        "vehicle_class": "Autobús de 20 pasajeros"
+                    },
+                    {
+                        "vehicle_class": "Autobús de 23 pasajeros"
+                    },
+                    {
+                        "vehicle_class": "Autobús de 27 pasajeros"
+                    },
+                    {
+                        "vehicle_class": "Autobús de 36 pasajeros"
+                    },
+                    {
+                        "vehicle_class": "Autobús de 44 pasajeros"
+                    },
+                    {
+                        "vehicle_class": "Autobús de 55 pasajeros"
+                    },
+                    {
+                        "vehicle_class": "MPV-6"
+                    },
+                    {
+                        "vehicle_class": "Minibus de 14 pasajeros"
+                    },
+                    {
+                        "vehicle_class": "Comfort Sedan"
+                    },
+                    {
+                        "vehicle_class": "Business MPV-4"
+                    },
+                    {
+                        "vehicle_class": "Luxury Sedan"
+                    },
+                    {
+                        "vehicle_class": "Sedan"
+                    },
+                    {
+                        "vehicle_class": "Sedan Primera Clase"
+                    },
+                    {
+                        "vehicle_class": "First Class Sedan"
+                    },
+                    {
+                        "vehicle_class": "Autobús Escolar 72 Pasajeros"
+                    },
+                    {
+                        "vehicle_class": "Autobús Escolar 44 Pasajeros"
+                    }
                 ],
-                "vehicle_class_id": 10
+                "messages": [
+                    {
+                        "subject": "Tiempo de espera",
+                        "message": "60 minutos de espera incluidos a la llegada de tu vuelo"
+                    },
+                    {
+                        "subject": "Cancelación",
+                        "message": "Reembolso total en caso de cancelar al menos 24 horas antes del servicio"
+                    }
+                ]
+            },
+            "por": {
+                "vehicles_classes": [
+                    {
+                        "vehicle_class": "EV Sedan"
+                    },
+                    {
+                        "vehicle_class": "EV Business Sedan"
+                    },
+                    {
+                        "vehicle_class": "Business Sedan"
+                    },
+                    {
+                        "vehicle_class": "Compatct Minivan"
+                    },
+                    {
+                        "vehicle_class": "Minivan"
+                    },
+                    {
+                        "vehicle_class": "EV SUV"
+                    },
+                    {
+                        "vehicle_class": "EV Business SUV"
+                    },
+                    {
+                        "vehicle_class": "Business Minivan"
+                    },
+                    {
+                        "vehicle_class": "Business Van"
+                    },
+                    {
+                        "vehicle_class": "6 Passenger Stretch Sedan"
+                    },
+                    {
+                        "vehicle_class": "8 Passenger Stretch Sedan"
+                    },
+                    {
+                        "vehicle_class": "10 Passenger Stretch Sedan"
+                    },
+                    {
+                        "vehicle_class": "12 Passenger Stretch SUV"
+                    },
+                    {
+                        "vehicle_class": "16 Passageiro Stretch Limo"
+                    },
+                    {
+                        "vehicle_class": ""
+                    },
+                    {
+                        "vehicle_class": ""
+                    },
+                    {
+                        "vehicle_class": "Microônibus-8"
+                    },
+                    {
+                        "vehicle_class": "Microônibus-10"
+                    },
+                    {
+                        "vehicle_class": "Microônibus-12"
+                    },
+                    {
+                        "vehicle_class": "Ônibus de 16 lugares"
+                    },
+                    {
+                        "vehicle_class": "Ônibus de 20 lugares"
+                    },
+                    {
+                        "vehicle_class": "Ônibus de 23 lugares"
+                    },
+                    {
+                        "vehicle_class": "Ônibus de 27 lugares"
+                    },
+                    {
+                        "vehicle_class": "Ônibus de 36 lugares"
+                    },
+                    {
+                        "vehicle_class": "Autocarro de 44 lugares"
+                    },
+                    {
+                        "vehicle_class": "Autocarro de 55 lugares"
+                    },
+                    {
+                        "vehicle_class": "MPV-6"
+                    },
+                    {
+                        "vehicle_class": "Microônibus-14"
+                    },
+                    {
+                        "vehicle_class": "Comfort Sedan"
+                    },
+                    {
+                        "vehicle_class": "Business MPV-4"
+                    },
+                    {
+                        "vehicle_class": "Luxury Sedan"
+                    },
+                    {
+                        "vehicle_class": "Sedan"
+                    },
+                    {
+                        "vehicle_class": "Primeira Classe"
+                    },
+                    {
+                        "vehicle_class": "First Class Sedan"
+                    },
+                    {
+                        "vehicle_class": "72-Ônibus escolar"
+                    },
+                    {
+                        "vehicle_class": "44-Ônibus escolar"
+                    }
+                ],
+                "messages": [
+                    {
+                        "subject": "tempo de espera",
+                        "message": "60 minutos de espera após a chegada do seu voo está incluído"
+                    },
+                    {
+                        "subject": "cancelamento",
+                        "message": "reembolso total se cancenlled 24 horas antes do tempo"
+                    }
+                ]
             }
         }
     ],
-    "passenger": {
-        "salutation": " ",
-        "first_name": "daryl",
-        "last_name": "jones",
-        "cell_phone": "+447719095077"
-    },
-    "customerReference": "31125082",
-    "bookingReference": "47283015",
-    "legId": "47283015",
-    "services": [
-        {
-            "name": "meetAndGreetMessage",
-            "value": "daryl jones"
-        }
-    ],
-    "flightNumber": "LA4301",
-    "comment": "Laura Garcia Campbell and Daryl"
+    "quote_id": "",
+    "request_id": 1022454
 }
