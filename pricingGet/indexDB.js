@@ -7,7 +7,6 @@ class IndexDB{
   openDB(){
     const request = window.indexedDB.open("MyTestDatabase", 3);
 
-    debugger
   }
 
 

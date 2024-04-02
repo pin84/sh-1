@@ -11,13 +11,264 @@
 
     <script>
 
-        let list = [
+        let bookingPrices = [
             {
-                "searchResultId": "70fc2a49-211b-44cb-a332-7472fa0be0d0_1",
+                "resultReference": "1",
+                "supplierID": 1279,
+                "supplierLocationID": 4859,
+                "predictedPickupDateTime": "2024-05-28 12:00:00.000",
+                "bags": 3,
+                "meetAndGreet": true,
+                "publicTransport": false,
+                "imageUrl": "https://cdn.rideways.com/images/cars/standard.jpg",
+                "drivingDistance": 8.89,
+                "duration": 26,
+                "maxPassenger": "3",
+                "originalPrice": null,
+                "price": 25.35,
+                "currency": "USD",
+                "hourFrom": "00:00",
+                "hourUntil": "24:00",
+                "frequencyMins": null,
+                "twentyFourHourCancellation": true,
+                "twoHourCancellation": false,
+                "nonRefundable": false,
+                "type": "CAR",
+                "carDetails": {
+                    "model": "Skoda Octavia",
+                    "modelDescription": "Skoda Octavia or similar",
+                    "description": "Standard"
+                },
+                "link": "/bookingDetails/0d78197f-dff9-47b0-a474-cb765283c0b5/1?lang=en-gb&currency=USD",
+                "supplierCategory": "SILVER",
+                "supplierName": "TravelThru",
+                "cancellationLeadTimeMinutes": 1440,
+                "priceRuleID": 19400,
+                "priceDiscountPercentage": 0,
+                "estimatedDriverPickupTimeMinutes": null
+            },
+            {
+                "resultReference": "5",
+                "supplierID": 1279,
+                "supplierLocationID": 4859,
+                "predictedPickupDateTime": "2024-05-28 12:00:00.000",
+                "bags": 4,
+                "meetAndGreet": true,
+                "publicTransport": false,
+                "imageUrl": "https://cdn.rideways.com/images/cars/people-carrier.jpg",
+                "drivingDistance": 8.89,
+                "duration": 26,
+                "maxPassenger": "4",
+                "originalPrice": null,
+                "price": 46.8,
+                "currency": "USD",
+                "hourFrom": "00:00",
+                "hourUntil": "24:00",
+                "frequencyMins": null,
+                "twentyFourHourCancellation": true,
+                "twoHourCancellation": false,
+                "nonRefundable": false,
+                "type": "CAR",
+                "carDetails": {
+                    "model": "Peugeot 5008",
+                    "modelDescription": "Peugeot 5008 or similar",
+                    "description": "People Carrier"
+                },
+                "link": "/bookingDetails/0d78197f-dff9-47b0-a474-cb765283c0b5/5?lang=en-gb&currency=USD",
+                "supplierCategory": "SILVER",
+                "supplierName": "TravelThru",
+                "cancellationLeadTimeMinutes": 1440,
+                "priceRuleID": 19404,
+                "priceDiscountPercentage": 0,
+                "estimatedDriverPickupTimeMinutes": null
+            },
+            {
+                "resultReference": "6",
+                "supplierID": 2512,
+                "supplierLocationID": 5352,
+                "predictedPickupDateTime": "2024-05-28 12:00:00.000",
+                "bags": 6,
+                "meetAndGreet": true,
+                "publicTransport": false,
+                "imageUrl": "https://cdn.rideways.com/images/cars/large-people-carrier.jpg",
+                "drivingDistance": 8.89,
+                "duration": 26,
+                "maxPassenger": "6",
+                "originalPrice": null,
+                "price": 52,
+                "currency": "USD",
+                "hourFrom": "00:00",
+                "hourUntil": "24:00",
+                "frequencyMins": null,
+                "twentyFourHourCancellation": true,
+                "twoHourCancellation": false,
+                "nonRefundable": false,
+                "type": "CAR",
+                "carDetails": {
+                    "model": "Ford Tourneo",
+                    "modelDescription": "Ford Tourneo or similar",
+                    "description": "Large People Carrier"
+                },
+                "link": "/bookingDetails/0d78197f-dff9-47b0-a474-cb765283c0b5/6?lang=en-gb&currency=USD",
+                "supplierCategory": "SILVER",
+                "supplierName": "Transporte Coyoacan Mexico",
+                "cancellationLeadTimeMinutes": 1440,
+                "priceRuleID": 19405,
+                "priceDiscountPercentage": 0,
+                "estimatedDriverPickupTimeMinutes": null
+            },
+            {
+                "resultReference": "2",
+                "supplierID": 2512,
+                "supplierLocationID": 5352,
+                "predictedPickupDateTime": "2024-05-28 12:00:00.000",
+                "bags": 3,
+                "meetAndGreet": true,
+                "publicTransport": false,
+                "imageUrl": "https://cdn.rideways.com/images/cars/executive.jpg",
+                "drivingDistance": 8.89,
+                "duration": 26,
+                "maxPassenger": "3",
+                "originalPrice": null,
+                "price": 58.5,
+                "currency": "USD",
+                "hourFrom": "00:00",
+                "hourUntil": "24:00",
+                "frequencyMins": null,
+                "twentyFourHourCancellation": true,
+                "twoHourCancellation": false,
+                "nonRefundable": false,
+                "type": "CAR",
+                "carDetails": {
+                    "model": "Mercedes Benz E-Class",
+                    "modelDescription": "Mercedes Benz E-Class or similar",
+                    "description": "Executive"
+                },
+                "link": "/bookingDetails/0d78197f-dff9-47b0-a474-cb765283c0b5/2?lang=en-gb&currency=USD",
+                "supplierCategory": "SILVER",
+                "supplierName": "Transporte Coyoacan Mexico",
+                "cancellationLeadTimeMinutes": 1440,
+                "priceRuleID": 19401,
+                "priceDiscountPercentage": 0,
+                "estimatedDriverPickupTimeMinutes": null
+            },
+            {
+                "resultReference": "3",
+                "supplierID": 2512,
+                "supplierLocationID": 5352,
+                "predictedPickupDateTime": "2024-05-28 12:00:00.000",
+                "bags": 6,
+                "meetAndGreet": true,
+                "publicTransport": false,
+                "imageUrl": "https://cdn.rideways.com/images/cars/executive-people-carrier.jpg",
+                "drivingDistance": 8.89,
+                "duration": 26,
+                "maxPassenger": "6",
+                "originalPrice": null,
+                "price": 78,
+                "currency": "USD",
+                "hourFrom": "00:00",
+                "hourUntil": "24:00",
+                "frequencyMins": null,
+                "twentyFourHourCancellation": true,
+                "twoHourCancellation": false,
+                "nonRefundable": false,
+                "type": "CAR",
+                "carDetails": {
+                    "model": "Mercedes V-Class",
+                    "modelDescription": "Mercedes V-Class or similar",
+                    "description": "Executive People Carrier"
+                },
+                "link": "/bookingDetails/0d78197f-dff9-47b0-a474-cb765283c0b5/3?lang=en-gb&currency=USD",
+                "supplierCategory": "SILVER",
+                "supplierName": "Transporte Coyoacan Mexico",
+                "cancellationLeadTimeMinutes": 1440,
+                "priceRuleID": 19402,
+                "priceDiscountPercentage": 0,
+                "estimatedDriverPickupTimeMinutes": null
+            },
+            {
+                "resultReference": "4",
+                "supplierID": 2512,
+                "supplierLocationID": 5352,
+                "predictedPickupDateTime": "2024-05-28 12:00:00.000",
+                "bags": 4,
+                "meetAndGreet": true,
+                "publicTransport": false,
+                "imageUrl": "https://cdn.rideways.com/images/cars/luxury.jpg",
+                "drivingDistance": 8.89,
+                "duration": 26,
+                "maxPassenger": "4",
+                "originalPrice": null,
+                "price": 78,
+                "currency": "USD",
+                "hourFrom": "00:00",
+                "hourUntil": "24:00",
+                "frequencyMins": null,
+                "twentyFourHourCancellation": true,
+                "twoHourCancellation": false,
+                "nonRefundable": false,
+                "type": "CAR",
+                "carDetails": {
+                    "model": "Mercedes Benz S-Class",
+                    "modelDescription": "Mercedes Benz S-Class or similar",
+                    "description": "Luxury"
+                },
+                "link": "/bookingDetails/0d78197f-dff9-47b0-a474-cb765283c0b5/4?lang=en-gb&currency=USD",
+                "supplierCategory": "SILVER",
+                "supplierName": "Transporte Coyoacan Mexico",
+                "cancellationLeadTimeMinutes": 1440,
+                "priceRuleID": 19403,
+                "priceDiscountPercentage": 0,
+                "estimatedDriverPickupTimeMinutes": null
+            },
+            {
+                "resultReference": "7",
+                "supplierID": 2512,
+                "supplierLocationID": 5352,
+                "predictedPickupDateTime": "2024-05-28 12:00:00.000",
+                "bags": 10,
+                "meetAndGreet": true,
+                "publicTransport": false,
+                "imageUrl": "https://cdn.rideways.com/images/cars/minibus.jpg",
+                "drivingDistance": 8.89,
+                "duration": 26,
+                "maxPassenger": "10",
+                "originalPrice": null,
+                "price": 249.6,
+                "currency": "USD",
+                "hourFrom": "00:00",
+                "hourUntil": "24:00",
+                "frequencyMins": null,
+                "twentyFourHourCancellation": true,
+                "twoHourCancellation": false,
+                "nonRefundable": false,
+                "type": "CAR",
+                "carDetails": {
+                    "model": "Renault Master",
+                    "modelDescription": "Renault Master or similar",
+                    "description": "Minibus"
+                },
+                "link": "/bookingDetails/0d78197f-dff9-47b0-a474-cb765283c0b5/7?lang=en-gb&currency=USD",
+                "supplierCategory": "SILVER",
+                "supplierName": "Transporte Coyoacan Mexico",
+                "cancellationLeadTimeMinutes": 1440,
+                "priceRuleID": 19406,
+                "priceDiscountPercentage": 0,
+                "estimatedDriverPickupTimeMinutes": null
+            }
+        ]
+
+        console.log('---booking prices--');
+
+
+        let elifePrices = [
+            {
+                "searchResultId": "f7a92a80-b10e-41ef-afc8-33cd1d1705d9_3",
                 "transportCategory": "STANDARD",
                 "price": {
-                    "salePriceMin": 175.98,
-                    "salePriceMax": 175.98,
+                    "salePriceMin": 17.4,
+                    "salePriceMax": 17.4,
                     "currency": "USD"
                 },
                 "minPassengers": 1,
@@ -33,11 +284,11 @@
                 ]
             },
             {
-                "searchResultId": "7759f34c-e931-46d8-8d0a-d3af5d11bac4_1",
+                "searchResultId": "f7e06f1b-0186-4363-bec8-99b4e7b422b5_3",
                 "transportCategory": "EXECUTIVE",
                 "price": {
-                    "salePriceMin": 607.13,
-                    "salePriceMax": 607.13,
+                    "salePriceMin": 52.74,
+                    "salePriceMax": 52.74,
                     "currency": "USD"
                 },
                 "minPassengers": 1,
@@ -53,11 +304,11 @@
                 ]
             },
             {
-                "searchResultId": "603afcd9-3318-4ceb-9fdb-96dcd12b5004_1",
+                "searchResultId": "11dddafd-65fd-46d9-8d5a-7ec236eaec29_3",
                 "transportCategory": "PEOPLECARRIER",
                 "price": {
-                    "salePriceMin": 256.19,
-                    "salePriceMax": 256.19,
+                    "salePriceMin": 28.0,
+                    "salePriceMax": 28.0,
                     "currency": "USD"
                 },
                 "minPassengers": 1,
@@ -73,31 +324,11 @@
                 ]
             },
             {
-                "searchResultId": "77bc9d6c-f345-49fe-8ea1-53ae878e69d0_1",
-                "transportCategory": "LARGEPEOPLECARRIER",
-                "price": {
-                    "salePriceMin": 262.89,
-                    "salePriceMax": 262.89,
-                    "currency": "USD"
-                },
-                "minPassengers": 1,
-                "maxPassengers": 5,
-                "features": [
-                    {
-                        "name": "noOfBags",
-                        "value": 5
-                    }
-                ],
-                "servicesAvailable": [
-                    "meetAndGreet"
-                ]
-            },
-            {
-                "searchResultId": "462754ed-354d-434b-aff4-e58804f6d74d_1",
+                "searchResultId": "70fce228-4db2-4650-ae4c-a5e68cf7b196_3",
                 "transportCategory": "EXECUTIVEPEOPLECARRIER",
                 "price": {
-                    "salePriceMin": 677.29,
-                    "salePriceMax": 677.29,
+                    "salePriceMin": 52.74,
+                    "salePriceMax": 52.74,
                     "currency": "USD"
                 },
                 "minPassengers": 1,
@@ -113,11 +344,11 @@
                 ]
             },
             {
-                "searchResultId": "e4111b49-50f8-4b76-9df8-b621940bb689_1",
-                "transportCategory": "MINIBUS",
+                "searchResultId": "ef4818ca-eb26-4f73-91b0-67e7892d57b0_3",
+                "transportCategory": "LARGEPEOPLECARRIER",
                 "price": {
-                    "salePriceMin": 695.26,
-                    "salePriceMax": 695.26,
+                    "salePriceMin": 208.0,
+                    "salePriceMax": 208.0,
                     "currency": "USD"
                 },
                 "minPassengers": 1,
@@ -133,19 +364,19 @@
                 ]
             },
             {
-                "searchResultId": "a0deb59e-a555-444b-bb54-f72d76517e60_1",
-                "transportCategory": "ELECTRICSTANDARD",
+                "searchResultId": "d832fae4-4b39-454c-9e4e-0c99c0759941_3",
+                "transportCategory": "MINIBUS",
                 "price": {
-                    "salePriceMin": 621.06,
-                    "salePriceMax": 621.06,
+                    "salePriceMin": 209.0,
+                    "salePriceMax": 209.0,
                     "currency": "USD"
                 },
                 "minPassengers": 1,
-                "maxPassengers": 3,
+                "maxPassengers": 10,
                 "features": [
                     {
                         "name": "noOfBags",
-                        "value": 3
+                        "value": 10
                     }
                 ],
                 "servicesAvailable": [
@@ -153,6 +384,939 @@
                 ]
             }
         ]
+
+
+        console.log('---elifePrices----');
+
+        let mapping = [
+            {
+                "countries": [
+                    "COMMON"
+                ],
+                "mapping": [
+                    {
+                        "elife": "1",
+                        "booking": "STANDARD",
+                        "max": 3
+                    },
+                    {
+                        "elife": "2",
+                        "booking": "EXECUTIVE",
+                        "max": 3
+                    },
+                    {
+                        "elife": "3",
+                        "booking": "PEOPLECARRIER",
+                        "max": 5
+                    },
+                    {
+                        "elife": "4",
+                        "booking": "EXECUTIV]E",
+                        "max": 5
+                    },
+                    {
+                        "elife": "4",
+                        "booking": "EXECUTIVEPEOPLECARRIER",
+                        "max": 5
+                    },
+                    {
+                        "elife": "5",
+                        "booking": "PEOPLECARRIER",
+                        "max": 8
+                    },
+                    {
+                        "elife": "5",
+                        "booking": "LARGEPEOPLECARRIER",
+                        "max": 8
+                    },
+                    {
+                        "elife": "6",
+                        "booking": "PEOPLECARRIER",
+                        "max": 4
+                    },
+                    {
+                        "elife": "9",
+                        "booking": "MINIBUS",
+                        "max": 10
+                    },
+                    {
+                        "elife": "10",
+                        "booking": "MINIBUS",
+                        "max": 12
+                    },
+                    {
+                        "elife": "11",
+                        "booking": "MINIBUS",
+                        "max": 14
+                    },
+                    {
+                        "elife": "29",
+                        "booking": "MINIBUS",
+                        "max": 16
+                    },
+                    {
+                        "elife": "41",
+                        "booking": "ELECTRICSTANDARD",
+                        "max": 3
+                    },
+                    {
+                        "elife": "43",
+                        "booking": "ELECTRICLUXURY]",
+                        "max": 3
+                    }
+                ]
+            },
+            {
+                "countries": [
+                    "CAN",
+                    "USA"
+                ],
+                "mapping": [
+                    {
+                        "elife": "1",
+                        "booking": "STANDARD",
+                        "max": "3"
+                    },
+                    {
+                        "elife": "6",
+                        "booking": "PEOPLECARRIER",
+                        "max": "4"
+                    },
+                    {
+                        "elife": "3",
+                        "booking": "LARGEPEOPLECARRIER",
+                        "max": "5"
+                    },
+                    {
+                        "elife": "9",
+                        "booking": "MINIBUS",
+                        "max": "10"
+                    },
+                    {
+                        "elife": "10",
+                        "booking": "MINIBUS",
+                        "max": "12"
+                    },
+                    {
+                        "elife": "2",
+                        "booking": "EXECUTIVE",
+                        "max": "3"
+                    },
+                    {
+                        "elife": "4",
+                        "booking": "EXECUTIVEPEOPLECARRIER",
+                        "max": "5"
+                    },
+                    {
+                        "elife": "5",
+                        "booking": "MINIBUS",
+                        "max": "8"
+                    },
+                    {
+                        "elife": "11",
+                        "booking": "MINIBUS",
+                        "max": "14"
+                    },
+                    {
+                        "elife": "29",
+                        "booking": "MINIBUS",
+                        "max": "16"
+                    },
+                    {
+                        "elife": "14",
+                        "booking": "LUXURY",
+                        "max": "3"
+                    },
+                    {
+                        "elife": "41",
+                        "booking": "ELECTRICSTANDARD",
+                        "max": "3"
+                    },
+                    {
+                        "elife": "43",
+                        "booking": "ELECTRICLUXURY",
+                        "max": "3"
+                    },
+                    {
+                        "elife": "36",
+                        "booking": "EXECUTIVEPEOPLECARRIER",
+                        "max": "6"
+                    }
+                ]
+            },
+            {
+                "countries": [
+                    "AUS",
+                    "NZL"
+                ],
+                "mapping": [
+                    {
+                        "elife": "1",
+                        "booking": "STANDARD",
+                        "max": "3"
+                    },
+                    {
+                        "elife": "2",
+                        "booking": "EXECUTIVE",
+                        "max": "3"
+                    },
+                    {
+                        "elife": "40",
+                        "booking": "LUXURY",
+                        "max": "3"
+                    },
+                    {
+                        "elife": "6",
+                        "booking": "PEOPLECARRIER",
+                        "max": "4"
+                    },
+                    {
+                        "elife": "4",
+                        "booking": "EXECUTIVEPEOPLECARRIER",
+                        "max": "5"
+                    },
+                    {
+                        "elife": "3",
+                        "booking": "LARGEPEOPLECARRIER",
+                        "max": "5"
+                    },
+                    {
+                        "elife": "5",
+                        "booking": "MINIBUS",
+                        "max": "8"
+                    },
+                    {
+                        "elife": "9",
+                        "booking": "MINIBUS",
+                        "max": "10"
+                    }
+                ]
+            },
+            {
+                "countries": [
+                    "JPN"
+                ],
+                "mapping": [
+                    {
+                        "elife": "1",
+                        "booking": "STANDARD",
+                        "max": "3"
+                    },
+                    {
+                        "elife": "6",
+                        "booking": "PEOPLECARRIER",
+                        "max": "4"
+                    },
+                    {
+                        "elife": "3",
+                        "booking": "PEOPLECARRIER",
+                        "max": "5"
+                    },
+                    {
+                        "elife": "7",
+                        "booking": "LARGEPEOPLECARRIER",
+                        "max": "6"
+                    },
+                    {
+                        "elife": "5",
+                        "booking": "LARGEPEOPLECARRIER",
+                        "max": "7"
+                    },
+                    {
+                        "elife": "8",
+                        "booking": "LARGEPEOPLECARRIER",
+                        "max": "8"
+                    },
+                    {
+                        "elife": "2",
+                        "booking": "EXECUTIVE",
+                        "max": "3"
+                    },
+                    {
+                        "elife": "4",
+                        "booking": "EXECUTIVEPEOPLECARRIER",
+                        "max": "5"
+                    },
+                    {
+                        "elife": "9",
+                        "booking": "MINIBUS",
+                        "max": "10"
+                    },
+                    {
+                        "elife": "10",
+                        "booking": "MINIBUS",
+                        "max": "12"
+                    },
+                    {
+                        "elife": "11",
+                        "booking": "MINIBUS",
+                        "max": "14"
+                    },
+                    {
+                        "elife": "29",
+                        "booking": "MINIBUS",
+                        "max": "16"
+                    },
+                    {
+                        "elife": "14",
+                        "booking": "LUXURY",
+                        "max": "3"
+                    },
+                    {
+                        "elife": "41",
+                        "booking": "ELECTRICSTANDARD",
+                        "max": "3"
+                    },
+                    {
+                        "elife": "43",
+                        "booking": "ELECTRICLUXURY",
+                        "max": "3"
+                    }
+                ]
+            },
+            {
+                "countries": [
+                    "PRT"
+                ],
+                "mapping": [
+                    {
+                        "elife": "1",
+                        "booking": "STANDARD",
+                        "max": "3"
+                    },
+                    {
+                        "elife": "2",
+                        "booking": "EXECUTIVE",
+                        "max": "3"
+                    },
+                    {
+                        "elife": "3",
+                        "booking": "PEOPLECARRIER",
+                        "max": "5"
+                    },
+                    {
+                        "elife": "4",
+                        "booking": "EXECUTIVEPEOPLECARRIER",
+                        "max": "5"
+                    },
+                    {
+                        "elife": "5",
+                        "booking": "LARGEPEOPLECARRIER",
+                        "max": "8"
+                    },
+                    {
+                        "elife": "11",
+                        "booking": "MINIBUS",
+                        "max": "14"
+                    },
+                    {
+                        "elife": "29",
+                        "booking": "MINIBUS",
+                        "max": "16"
+                    },
+                    {
+                        "elife": "41",
+                        "booking": "ELECTRICSTANDARD",
+                        "max": "3"
+                    },
+                    {
+                        "elife": "43",
+                        "booking": "ELECTRICLUXURY",
+                        "max": "3"
+                    }
+                ]
+            },
+            {
+                "countries": [
+                    "THA"
+                ],
+                "mapping": [
+                    {
+                        "elife": "1",
+                        "booking": "STANDARD",
+                        "max": "3"
+                    },
+                    {
+                        "elife": "2",
+                        "booking": "EXECUTIVE",
+                        "max": "3"
+                    },
+                    {
+                        "elife": "6",
+                        "booking": "PEOPLECARRIER",
+                        "max": "4"
+                    },
+                    {
+                        "elife": "3",
+                        "booking": "LARGEPEOPLECARRIER",
+                        "max": "5"
+                    },
+                    {
+                        "elife": "4",
+                        "booking": "EXECUTIVEPEOPLECARRIER",
+                        "max": "5"
+                    },
+                    {
+                        "elife": "36",
+                        "booking": "EXECUTIVEPEOPLECARRIER",
+                        "max": "5"
+                    },
+                    {
+                        "elife": "5",
+                        "booking": "MINIBUS",
+                        "max": "8"
+                    },
+                    {
+                        "elife": "9",
+                        "booking": "MINIBUS",
+                        "max": "10"
+                    },
+                    {
+                        "elife": "10",
+                        "booking": "MINIBUS",
+                        "max": "12"
+                    },
+                    {
+                        "elife": "11",
+                        "booking": "MINIBUS",
+                        "max": "14"
+                    },
+                    {
+                        "elife": "29",
+                        "booking": "MINIBUS",
+                        "max": "16"
+                    },
+                    {
+                        "elife": "41",
+                        "booking": "ELECTICSTANDARD",
+                        "max": "3"
+                    },
+                    {
+                        "elife": "43",
+                        "booking": "ELECTICLUXURY",
+                        "max": "3"
+                    }
+                ]
+            },
+            {
+                "countries": [
+                    "HKG"
+                ],
+                "mapping": [
+                    {
+                        "elife": "1",
+                        "booking": "STANDARD",
+                        "max": "3"
+                    },
+                    {
+                        "elife": "6",
+                        "booking": "PEOPLECARRIER",
+                        "max": "4"
+                    },
+                    {
+                        "elife": "3",
+                        "booking": "LARGEPEOPLECARRIER",
+                        "max": "5"
+                    },
+                    {
+                        "elife": "2",
+                        "booking": "EXECUTIVE",
+                        "max": "3"
+                    },
+                    {
+                        "elife": "4",
+                        "booking": "EXECUTIVEPEOPLECARRIER",
+                        "max": "5"
+                    },
+                    {
+                        "elife": "36",
+                        "booking": "EXECUTIVEPEOPLECARRIER",
+                        "max": "5"
+                    },
+                    {
+                        "elife": "5",
+                        "booking": "MINIBUS",
+                        "max": "8"
+                    },
+                    {
+                        "elife": "9",
+                        "booking": "MINIBUS",
+                        "max": "10"
+                    },
+                    {
+                        "elife": "10",
+                        "booking": "MINIBUS",
+                        "max": "12"
+                    },
+                    {
+                        "elife": "11",
+                        "booking": "MINIBUS",
+                        "max": "14"
+                    },
+                    {
+                        "elife": "29",
+                        "booking": "MINIBUS",
+                        "max": "16"
+                    },
+                    {
+                        "elife": "40",
+                        "booking": "LUXURY",
+                        "max": "3"
+                    },
+                    {
+                        "elife": "41",
+                        "booking": "ELECTRICSTANDARD",
+                        "max": "3"
+                    },
+                    {
+                        "elife": "43",
+                        "booking": "ELECTRICLUXURY",
+                        "max": "3"
+                    }
+                ]
+            },
+            {
+                "countries": [
+                    "CHN"
+                ],
+                "mapping": [
+                    {
+                        "elife": "1",
+                        "booking": "STANDARD",
+                        "max": "3"
+                    },
+                    {
+                        "elife": "6",
+                        "booking": "PEOPLECARRIER",
+                        "max": "4"
+                    },
+                    {
+                        "elife": "3",
+                        "booking": "LARGEPEOPLECARRIER",
+                        "max": "5"
+                    },
+                    {
+                        "elife": "2",
+                        "booking": "EXECUTIVE",
+                        "max": "3"
+                    },
+                    {
+                        "elife": "4",
+                        "booking": "EXECUTIVEPEOPLECARRIER",
+                        "max": "5"
+                    },
+                    {
+                        "elife": "36",
+                        "booking": "EXECUTIVEPEOPLECARRIER",
+                        "max": "5"
+                    },
+                    {
+                        "elife": "5",
+                        "booking": "MINIBUS",
+                        "max": "8"
+                    },
+                    {
+                        "elife": "9",
+                        "booking": "MINIBUS",
+                        "max": "10"
+                    },
+                    {
+                        "elife": "10",
+                        "booking": "MINIBUS",
+                        "max": "12"
+                    },
+                    {
+                        "elife": "11",
+                        "booking": "MINIBUS",
+                        "max": "14"
+                    },
+                    {
+                        "elife": "29",
+                        "booking": "MINIBUS",
+                        "max": "16"
+                    },
+                    {
+                        "elife": "40",
+                        "booking": "LUXURY",
+                        "max": "3"
+                    },
+                    {
+                        "elife": "41",
+                        "booking": "ELECTRICSTANDARD",
+                        "max": "3"
+                    },
+                    {
+                        "elife": "43",
+                        "booking": "ELECTRICLUXURY",
+                        "max": "3"
+                    }
+                ]
+            },
+            {
+                "countries": [
+                    "MYS"
+                ],
+                "mapping": [
+                    {
+                        "elife": "1",
+                        "booking": "STANDARD",
+                        "max": "3"
+                    },
+                    {
+                        "elife": "6",
+                        "booking": "PEOPLECARRIER",
+                        "max": "4"
+                    },
+                    {
+                        "elife": "7",
+                        "booking": "LARGEPEOPLECARRIER",
+                        "max": "6"
+                    },
+                    {
+                        "elife": "8",
+                        "booking": "LARGEPEOPLECARRIER",
+                        "max": "7"
+                    },
+                    {
+                        "elife": "5",
+                        "booking": "LARGEPEOPLECARRIER",
+                        "max": "8"
+                    },
+                    {
+                        "elife": "2",
+                        "booking": "EXECUTIVE",
+                        "max": "3"
+                    },
+                    {
+                        "elife": "4",
+                        "booking": "EXECUTIVEPEOPLECARRIER",
+                        "max": "5"
+                    },
+                    {
+                        "elife": "36",
+                        "booking": "EXECUTIVEPEOPLECARRIER",
+                        "max": "5"
+                    },
+                    {
+                        "elife": "9",
+                        "booking": "MINIBUS",
+                        "max": "10"
+                    },
+                    {
+                        "elife": "10",
+                        "booking": "MINIBUS",
+                        "max": "12"
+                    },
+                    {
+                        "elife": "11",
+                        "booking": "MINIBUS",
+                        "max": "14"
+                    },
+                    {
+                        "elife": "14",
+                        "booking": "LUXURY",
+                        "max": "3"
+                    },
+                    {
+                        "elife": "41",
+                        "booking": "ELECTRICSTANDARD",
+                        "max": "3"
+                    },
+                    {
+                        "elife": "43",
+                        "booking": "ELECTRICLUXURY",
+                        "max": "3"
+                    }
+                ]
+            },
+            {
+                "countries": [
+                    "ZAF",
+                    "KEN",
+                    "MAR",
+                    "NAM",
+                    "NGA",
+                    "UGA",
+                    "TZA",
+                    "ARE",
+                    "SAU",
+                    "LKA",
+                    "NPL",
+                    "QAT"
+                ],
+                "mapping": [
+                    {
+                        "elife": "1",
+                        "booking": "STANDARD",
+                        "max": "3"
+                    },
+                    {
+                        "elife": "2",
+                        "booking": "EXECUTIVE",
+                        "max": "3"
+                    },
+                    {
+                        "elife": "6",
+                        "booking": "PEOPLECARRIER",
+                        "max": "4"
+                    },
+                    {
+                        "elife": "3",
+                        "booking": "LARGEPEOPLECARRIER",
+                        "max": "5"
+                    },
+                    {
+                        "elife": "4",
+                        "booking": "EXECUTIVE",
+                        "max": "5"
+                    },
+                    {
+                        "elife": "4",
+                        "booking": "EXECUTIVEPEOPLECARRIER",
+                        "max": "5"
+                    },
+                    {
+                        "elife": "5",
+                        "booking": "MINIBUS",
+                        "max": "8"
+                    },
+                    {
+                        "elife": "9",
+                        "booking": "MINIBUS",
+                        "max": "10"
+                    },
+                    {
+                        "elife": "10",
+                        "booking": "MINIBUS",
+                        "max": "12"
+                    },
+                    {
+                        "elife": "11",
+                        "booking": "MINIBUS",
+                        "max": "14"
+                    },
+                    {
+                        "elife": "29",
+                        "booking": "MINIBUS",
+                        "max": "16"
+                    },
+                    {
+                        "elife": "41",
+                        "booking": "ELECTRICSTANDARD",
+                        "max": "3"
+                    },
+                    {
+                        "elife": "43",
+                        "booking": "ELECTRICLUXURY",
+                        "max": "3"
+                    }
+                ]
+            },
+            {
+                "countries": [
+                    "LAO"
+                ],
+                "mapping": [
+                    {
+                        "elife": "1",
+                        "booking": "STANDARD",
+                        "max": "3"
+                    },
+                    {
+                        "elife": "2",
+                        "booking": "EXECUTIVE",
+                        "max": "3"
+                    },
+                    {
+                        "elife": "4",
+                        "booking": "EXECUTIVE",
+                        "max": "5"
+                    },
+                    {
+                        "elife": "6",
+                        "booking": "PEOPLECARRIER",
+                        "max": "4"
+                    },
+                    {
+                        "elife": "3",
+                        "booking": "LARGEPEOPLECARRIER",
+                        "max": "5"
+                    },
+                    {
+                        "elife": "5",
+                        "booking": "LARGEPEOPLECARRIER",
+                        "max": "8"
+                    },
+                    {
+                        "elife": "5",
+                        "booking": "MINIBUS",
+                        "max": "8"
+                    },
+                    {
+                        "elife": "9",
+                        "booking": "MINIBUS",
+                        "max": "10"
+                    },
+                    {
+                        "elife": "10",
+                        "booking": "MINIBUS",
+                        "max": "12"
+                    },
+                    {
+                        "elife": "11",
+                        "booking": "MINIBUS",
+                        "max": "14"
+                    },
+                    {
+                        "elife": "29",
+                        "booking": "MINIBUS",
+                        "max": "16"
+                    },
+                    {
+                        "elife": "41",
+                        "booking": "ELECTRICSTANDARD",
+                        "max": "3"
+                    },
+                    {
+                        "elife": "42",
+                        "booking": "ELECTRICLUXURY",
+                        "max": "3"
+                    }
+                ]
+            },
+            {
+                "countries": [
+                    "FRA",
+                    "IRL",
+                    "CHE"
+                ],
+                "mapping": [
+                    {
+                        "elife": "1",
+                        "booking": "STANDARD",
+                        "max": "3"
+                    },
+                    {
+                        "elife": "2",
+                        "booking": "EXECUTIVE",
+                        "max": "3"
+                    },
+                    {
+                        "elife": "4",
+                        "booking": "EXECUTIVE",
+                        "max": "5"
+                    },
+                    {
+                        "elife": "6",
+                        "booking": "PEOPLECARRIER",
+                        "max": "4"
+                    },
+                    {
+                        "elife": "3",
+                        "booking": "LARGEPEOPLECARRIER",
+                        "max": "5"
+                    },
+                    {
+                        "elife": "5",
+                        "booking": "MINIBUS",
+                        "max": "8"
+                    },
+                    {
+                        "elife": "9",
+                        "booking": "MINIBUS",
+                        "max": "10"
+                    },
+                    {
+                        "elife": "10",
+                        "booking": "MINIBUS",
+                        "max": "12"
+                    },
+                    {
+                        "elife": "11",
+                        "booking": "MINIBUS",
+                        "max": "14"
+                    },
+                    {
+                        "elife": "41",
+                        "booking": "ELECTRICSTANDARD",
+                        "max": "3"
+                    },
+                    {
+                        "elife": "42",
+                        "booking": "ELECTRICLUXURY",
+                        "max": "3"
+                    },
+                    {
+                        "elife": "40",
+                        "booking": "LUXURY",
+                        "max": "3"
+                    }
+                ]
+            },
+            {
+                "countries": [
+                    "MEX"
+                ],
+                "mapping": [
+                    {
+                        "elife": "1",
+                        "booking": "STANDARD",
+                        "max": "3"
+                    },
+                    {
+                        "elife": "2",
+                        "booking": "EXECUTIVE",
+                        "max": "3"
+                    },
+                    {
+                        "elife": "6",
+                        "booking": "PEOPLECARRIER",
+                        "max": "4"
+                    },
+                    {
+                        "elife": "3",
+                        "booking": "PEOPLECARRIER",
+                        "max": "5"
+                    },
+                    {
+                        "elife": "4",
+                        "booking": "EXECUTIVEPEOPLECARRIER",
+                        "max": "5"
+                    },
+                    {
+                        "elife": "5",
+                        "booking": "LARGEPEOPLECARRIER",
+                        "max": "8"
+                    },
+                    {
+                        "elife": "9",
+                        "booking": "MINIBUS",
+                        "max": "10"
+                    },
+                    {
+                        "elife": "10",
+                        "booking": "MINIBUS",
+                        "max": "12"
+                    },
+                    {
+                        "elife": "11",
+                        "booking": "MINIBUS",
+                        "max": "14"
+                    },
+                    {
+                        "elife": "41",
+                        "booking": "ELECTRICSTANDARD",
+                        "max": "3"
+                    },
+                    {
+                        "elife": "43",
+                        "booking": "ELECTRICLUXURY",
+                        "max": "3"
+                    }
+                ]
+            }
+        ]
+        console.log('---mapping---');
 
         let vehicles = [
             {
@@ -1297,50 +2461,43 @@
             }
         ]
 
-        
-        
+
+        console.log('-------');
+
+        let curCountryMapping = mapping.find(item => item.countries.includes('MEX')).mapping
+        console.log(curCountryMapping);
+        let bookingList = {}
+        let elifeList = {}
+
+        for (let obj of curCountryMapping) {
+            let { elife, booking } = obj
+            let bookingPriceObj = bookingPrices.find(item => item.carDetails.description.replace(/\s*/g, "").toUpperCase() == booking)
+
+
+            if (!bookingPriceObj) {
+                continue
+            }
+
+            let { price } = bookingPriceObj
+            let { price: { salePriceMin } } = elifePrices.find(item => item.transportCategory == booking)
+            let { vehicle_name } = vehicles.find(item => item.vehicle_id == elife)
+
+
+            if (salePriceMin * 1.3 < price) {
+                if( bookingList[booking]) continue
+                elifeList[vehicle_name] = salePriceMin
+                bookingList[booking] = price
+            }
 
 
 
+        }
 
-        // function createData(d) {
-        //     let arr = []
-        //     for (let obj of d) {
 
-        //         let { vehicle_class, price: { amount }, typical_vehicle: { model, manufacturer } } = obj
-        //         arr.push([
-        //             vehicle_class,
-        //             amount,
-        //             'no show',
-        //             `${manufacturer} ${model}`
-        //         ])
-        //     }
+        console.log(bookingList);
+        console.log(elifeList);
 
-        //     return arr
-        // }
 
-        // let title = ['Elife Vehicle', 'Elife Price', 'Mozio Price', 'Mozio Vehicle']
-        // function exportCSV(title, jsonData) {
-        //     let str = ``;
-        //     for (let i of title) {
-        //         let nameStr = i.replace(/\,/g, ' ')
-        //         str += nameStr + ',';
-        //     }
-        //     str += '\n';
-        //     for (let item of jsonData) {
-        //         for (let el in item) {
-        //             str += `${item[el] + '\t'},`;
-        //         }
-        //         str += '\n';
-        //     }
-        //     const url = 'data:text/csv;charset=utf-8,\ufeff' + encodeURIComponent(str);
-        //     const link = document.createElement('a');
-        //     link.href = url;
-        //     let dateName = new Date().getTime();
-        //     link.download = dateName + '.csv';
-        //     link.click();
-        // }
-        // exportCSV(title, createData(list))
 
     </script>
 </body>
