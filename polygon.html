@@ -1,13 +1,122 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  
-  
+<!doctype html>
+<!--
+ @license
+ Copyright 2019 Google LLC. All Rights Reserved.
+ SPDX-License-Identifier: Apache-2.0
+-->
+<html>
 
+<head>
+  <title>Simple Polygon</title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+  <!-- jsFiddle will insert css and js -->
+
+  <style>
+    #map {
+      height: 80%;
+    }
+
+    html,
+    body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    .input-box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+
+    .input-box .btn {
+      border: 1px solid black;
+      margin-left: 20px;
+    }
+  </style>
+
+
+</head>
+
+<body>
+
+  <div class="input-box">
+    <textarea name="" id="textarea" cols="60" rows="10"></textarea>
+    <div class="btn">画多边形</div>
+  </div>
+  <div id="map"></div>
+
+  <!-- 
+      The `defer` attribute causes the callback to execute after the full HTML
+      document has been parsed. For non-blocking uses, avoiding race conditions,
+      and consistent behavior across browsers, consider loading using Promises.
+      See https://developers.google.com/maps/documentation/javascript/load-maps-js-api
+      for more information.
+      -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly"
+          defer></script>
+
+
+  <script>
+
+    let d = [{ "type": "polygon", "points": [{ "lng": "54.293355", "lat": "24.491384" }, { "lng": "54.312003", "lat": "24.50232" }, { "lng": "54.320009", "lat": "24.514505" }, { "lng": "54.350658", "lat": "24.526994" }, { "lng": "54.359069", "lat": "24.544484" }, { "lng": "54.447131", "lat": "24.562909" }, { "lng": "54.460338", "lat": "24.625775" }, { "lng": "54.493033", "lat": "24.56418" }, { "lng": "54.497173", "lat": "24.54862" }, { "lng": "54.5025", "lat": "24.547385" }, { "lng": "54.503706", "lat": "24.544587" }, { "lng": "54.567317", "lat": "24.510725" }, { "lng": "54.590566", "lat": "24.510323" }, { "lng": "54.603078", "lat": "24.526373" }, { "lng": "54.612595", "lat": "24.529399" }, { "lng": "54.61044", "lat": "24.540234" }, { "lng": "54.611088", "lat": "24.541644" }, { "lng": "54.61281", "lat": "24.542741" }, { "lng": "54.613415", "lat": "24.544697" }, { "lng": "54.612575", "lat": "24.549788" }, { "lng": "54.613299", "lat": "24.550212" }, { "lng": "54.663341", "lat": "24.511714" }, { "lng": "54.698105", "lat": "24.555046" }, { "lng": "54.744973", "lat": "24.55426" }, { "lng": "54.74687", "lat": "24.438653" }, { "lng": "54.841475", "lat": "24.439256" }, { "lng": "54.834639", "lat": "24.277684" }, { "lng": "54.824713", "lat": "24.231484" }, { "lng": "54.823009", "lat": "24.225391" }, { "lng": "54.822807", "lat": "24.222469" }, { "lng": "54.821811", "lat": "24.212149" }, { "lng": "54.821699", "lat": "24.210276" }, { "lng": "54.822274", "lat": "24.209657" }, { "lng": "54.829792", "lat": "24.208651" }, { "lng": "54.843197", "lat": "24.207187" }, { "lng": "54.851124", "lat": "24.205981" }, { "lng": "54.74776", "lat": "24.161525" }, { "lng": "54.714605", "lat": "24.153084" }, { "lng": "54.576884", "lat": "24.171911" }, { "lng": "54.474906", "lat": "24.196459" }, { "lng": "54.420306", "lat": "24.202841" }, { "lng": "54.38524", "lat": "24.257793" }, { "lng": "54.384164", "lat": "24.268585" }, { "lng": "54.406125", "lat": "24.289434" }, { "lng": "54.421563", "lat": "24.302067" }, { "lng": "54.43228", "lat": "24.3093" }, { "lng": "54.437145", "lat": "24.313533" }, { "lng": "54.438693", "lat": "24.314204" }, { "lng": "54.439907", "lat": "24.315028" }, { "lng": "54.442622", "lat": "24.315354" }, { "lng": "54.443744", "lat": "24.319589" }, { "lng": "54.444035", "lat": "24.320512" }, { "lng": "54.444154", "lat": "24.320236" }, { "lng": "54.445176", "lat": "24.319166" }, { "lng": "54.445159", "lat": "24.318828" }, { "lng": "54.447629", "lat": "24.318668" }, { "lng": "54.447786", "lat": "24.320281" }, { "lng": "54.44775", "lat": "24.32035" }, { "lng": "54.445617", "lat": "24.319823" }, { "lng": "54.443699", "lat": "24.325905" }, { "lng": "54.444008", "lat": "24.351639" }, { "lng": "54.446977", "lat": "24.353766" }, { "lng": "54.447929", "lat": "24.354212" }, { "lng": "54.44852", "lat": "24.354315" }, { "lng": "54.449444", "lat": "24.354311" }, { "lng": "54.450155", "lat": "24.354028" }, { "lng": "54.450909", "lat": "24.353634" }, { "lng": "54.451235", "lat": "24.353788" }, { "lng": "54.451799", "lat": "24.354486" }, { "lng": "54.452028", "lat": "24.355373" }, { "lng": "54.452528", "lat": "24.358633" }, { "lng": "54.452842", "lat": "24.359797" }, { "lng": "54.453812", "lat": "24.361265" }, { "lng": "54.456477", "lat": "24.366232" }, { "lng": "54.456868", "lat": "24.368072" }, { "lng": "54.456631", "lat": "24.36954" }, { "lng": "54.456576", "lat": "24.369659" }, { "lng": "54.453653", "lat": "24.37015" }, { "lng": "54.450649", "lat": "24.370361" }, { "lng": "54.448741", "lat": "24.370352" }, { "lng": "54.447112", "lat": "24.370177" }, { "lng": "54.444499", "lat": "24.369985" }, { "lng": "54.441847", "lat": "24.36999" }, { "lng": "54.439933", "lat": "24.370471" }, { "lng": "54.437565", "lat": "24.371276" }, { "lng": "54.435551", "lat": "24.372541" }, { "lng": "54.433623", "lat": "24.373844" }, { "lng": "54.432467", "lat": "24.375275" }, { "lng": "54.431868", "lat": "24.376069" }, { "lng": "54.431332", "lat": "24.376719" }, { "lng": "54.429766", "lat": "24.378152" }, { "lng": "54.428249", "lat": "24.378844" }, { "lng": "54.403811", "lat": "24.392398" }, { "lng": "54.398501", "lat": "24.395423" }, { "lng": "54.395331", "lat": "24.395841" }, { "lng": "54.392459", "lat": "24.396069" }, { "lng": "54.38993", "lat": "24.397001" }, { "lng": "54.38359", "lat": "24.397466" }, { "lng": "54.380182", "lat": "24.397836" }, { "lng": "54.379529", "lat": "24.398158" }, { "lng": "54.378189", "lat": "24.399887" }, { "lng": "54.371883", "lat": "24.402192" }, { "lng": "54.370243", "lat": "24.403608" }, { "lng": "54.365903", "lat": "24.404551" }, { "lng": "54.355041", "lat": "24.410027" }, { "lng": "54.331985", "lat": "24.412577" }, { "lng": "54.268074", "lat": "24.430444" }, { "lng": "54.261036", "lat": "24.452478" }, { "lng": "54.277344", "lat": "24.473884" }] }]
+
+
+
+    function initMap() {
+      const map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 8,
+        center: { lat: 24.886, lng: -70.268 },
+        mapTypeId: "terrain",
+      });
+
+      let btn = document.querySelector('.input-box .btn')
+      let textarea = document.querySelector('.input-box #textarea')
+
+      btn.addEventListener('click', () => {
+        let v = textarea.value
+        if (!v) return
+        let points = JSON.parse(v)[0].points
+        // let points =d[0].points
+        let tem = []
+        points.forEach(item => {
+          let obj = {}
+          for (let [key, value] of Object.entries(item)) {
+            obj[key] = Number(value)
+          }
+          tem.push(obj)
+        })
+
+        if(this.bermudaTriangle){
+          this.bermudaTriangle.setMap(null)
+        }
+
+        this.bermudaTriangle = new google.maps.Polygon({
+          paths: tem,
+          strokeColor: "#FF0000",
+          strokeOpacity: 0.8,
+          strokeWeight: 2,
+          fillColor: "#FF0000",
+          fillOpacity: 0.35,
+        });
+
+
+
+      
+        this.bermudaTriangle.setMap(map);
+        map.setCenter(tem[0])
+      })
+
+
+    }
+
+    window.initMap = initMap;
+
+
+
+
+  </script>
 </body>
+
 </html>
