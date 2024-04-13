@@ -40,24 +40,40 @@
     let te_1 = document.getElementById('textarea-1')
     let te_2 = document.getElementById('textarea-2')
 
+    //已复制 91，126，40
 
-    btn.addEventListener('click', async () => {
-      debugger
-      let newFleetId = await getNewFleetId(40) //52385 
-      let pricingJsonId = await getPricingJsonIdBySvcId(40) // 144999
+    let hasCopy = [ 40]
+    let noPricingIds = []
+    let completedIds = []
 
-      let json = await getPricingJsonById(pricingJsonId)
    
+    btn.addEventListener('click', async () => {
+      let cPartnerJson = JSON.parse(JSON.stringify(partnerJson))
+      let { sas_percent } = cPartnerJson.service_areas
+      cPartnerJson['sas_percent'] = sas_percent.sort((a, b) => a.id - b.id)
+      console.log(cPartnerJson);
 
-      console.log('---before----', json);
-
-
-      let jsonHandled = await jsonHandler(JSON.parse(JSON.stringify(json)), newFleetId)
-
-
-      // let res = await insertAndUpdate(jsonHandled, newFleetId)
-      console.log('end');
-
+      let count = 0
+      for (let id of percentOnly) {
+        if (hasCopy.includes(Number(id))) continue
+        let newFleetId = await getNewFleetId(id) //52385 
+        let pricingJsonId = await getPricingJsonIdBySvcId(id) // 144999
+        if(!pricingJsonId){
+          noPricingIds.push(id)
+          debugger
+          count ++
+          continue
+        } 
+        let json = await getPricingJsonById(pricingJsonId)
+        console.log('---before----', json);
+        let jsonHandled = await jsonHandler(JSON.parse(JSON.stringify(json)), newFleetId, json)
+        let res = await insertAndUpdate(jsonHandled, newFleetId)
+        count ++
+        completedIds.push(id)
+      }
+      console.log(`--- count ++------`, count);
+      console.log('---noPricingIds---',noPricingIds);
+      console.log('---completedIds---',completedIds);
     })
 
 
@@ -127,21 +143,20 @@
     }
 
 
-    async function jsonHandler(svcJson, newFleetId) {
+    async function jsonHandler(svcJson, newFleetId, oldJson) {
 
       te_1.value = JSON.stringify(svcJson)
-
       let mag_delta = partnerJson.service_areas?.mag_delta || []
       let ads_delta = partnerJson.service_areas?.ads_delta || []
       let sas_percent = partnerJson.service_areas?.sas_percent || []
-
       let { serviceArea: { id: svcId } } = svcJson
       for (let item of mag_delta) {
         let { id, switch: isClose, delta } = item
+
         if (id == svcId && isClose == 'on') {
           let mng = svcJson.pricing?.meet_n_greet
           if (mng == undefined) break
-          svcJson.pricing.meet_n_greet += delta
+          svcJson.pricing.meet_n_greet = Number(mng) + Number(delta)
           break
         }
       }
@@ -149,23 +164,24 @@
       let { is_p, ts_p, cs_p } = svcJson.add_service || {}
       for (let item of ads_delta) {
         let { id } = item
+
         if (id == svcId) {
           if (is_p != undefined) {
             let { infant: { delta, switch: isClose, } } = item
             if (isClose == 'on') {
-              svcJson.add_service.is_p += delta
+              svcJson.add_service.is_p = Number(is_p) + Number(delta)
             }
           }
           if (ts_p != undefined) {
             let { toddler: { delta, switch: isClose, } } = item
             if (isClose == 'on') {
-              svcJson.add_service.ts_p += delta
+              svcJson.add_service.ts_p = Number(ts_p) + Number(delta)
             }
           }
           if (cs_p != undefined) {
             let { child: { delta, switch: isClose, } } = item
             if (isClose == 'on') {
-              svcJson.add_service.cs_p += delta
+              svcJson.add_service.cs_p = Number(cs_p) + Number(delta)
             }
           }
         }
@@ -177,149 +193,214 @@
           let vcs = item.vcs || []
           let svcPercent = item.percent || 0
           console.log(`--${id}--add percent--`, svcPercent);
-          if (svcPercent != undefined) {
-            { // pricing
-              let { ranges, meet_n_greet, min_amount } = svcJson.pricing || {}
-              if (meet_n_greet != undefined) {
-                svcJson.pricing.meet_n_greet = addPicies(meet_n_greet, svcPercent)
-              }
-              if (min_amount != undefined) {
-                svcJson.pricing.min_amount = addPicies(min_amount, svcPercent)
-              }
-
-              for (let rang of (ranges || [])) {
-                rang.amount = addPicies(rang.amount, svcPercent)
-              }
+          { // pricing
+            let { ranges, meet_n_greet, min_amount } = svcJson.pricing || {}
+            if (meet_n_greet != undefined) {
+              svcJson.pricing.meet_n_greet = addPicies(meet_n_greet, svcPercent)
+            }
+            if (min_amount != undefined) {
+              svcJson.pricing.min_amount = addPicies(min_amount, svcPercent)
             }
 
-            { // downtown_areas
-              let { ranges, min_amount } = svcJson.downtown_areas || {}
-              if (min_amount != undefined) {
-                svcJson.downtown_areas.min_amount = addPicies(min_amount, svcPercent)
-              }
-              for (let rang of (ranges || [])) {
-                rang.amount = addPicies(rang.amount, svcPercent)
+            for (let rang of (ranges || [])) {
+              rang.amount = addPicies(rang.amount, svcPercent)
+            }
+          }
+
+          { // downtown_areas
+            let { ranges, min_amount } = svcJson.downtown_areas || {}
+            if (min_amount != undefined) {
+              svcJson.downtown_areas.min_amount = addPicies(min_amount, svcPercent)
+            }
+            for (let rang of (ranges || [])) {
+              rang.amount = addPicies(rang.amount, svcPercent)
+            }
+          }
+
+          { //hourly_pricing
+            let rules = svcJson.hourly_pricing?.rules || []
+            for (let r of rules) {
+              let { min_amount, ranges } = r
+              r.min_amount = addPicies(min_amount, svcPercent)
+
+              for (let range of (ranges || [])) {
+                range.amount = addPicies(range.amount, svcPercent)
               }
             }
+          }
 
-            { //hourly_pricing
-              let rules = svcJson.hourly_pricing?.rules || []
-              for (let r of rules) {
-                let { min_amount, ranges } = r
-                r.min_amount = addPicies(min_amount, svcPercent)
 
-                for (let range of (ranges || [])) {
-                  range.amount = addPicies(range.amount, svcPercent)
+          { // zones
+            let zones = svcJson.zones || []
+            for (let z of zones) {
+              for (let p of (z.prices || [])) {
+                let { p_amt, d_amt, amount } = p
+                if (p_amt && d_amt) {
+                  p.p_amt = addPicies(p_amt, svcPercent)
+                  p.d_amt = addPicies(d_amt, svcPercent)
+                }
+
+                if (amount) {
+                  p.amount = addPicies(amount, svcPercent)
                 }
               }
             }
+          }
 
-
-            { // zones
-              let zones = svcJson.zones || []
-              for (let z of zones) {
-                for (let p of (z.prices || [])) {
-                  let { p_amt, d_amt, amount } = p
-                  if (p_amt && d_amt) {
-                    p.p_amt = addPicies(p_amt, svcPercent)
-                    p.d_amt = addPicies(d_amt, svcPercent)
-                  }
-
-                  if (amount) {
-                    p.amount = addPicies(amount, svcPercent)
-                  }
-                }
-              }
+          { //zone2zone
+            let zone2zone = svcJson.zone2zone?.prices || []
+            for (let item of zone2zone) {
+              let { amount, reverse } = item
+              item.amount = addPicies(amount, svcPercent)
             }
-
-            { //zone2zone
-              let zone2zone = svcJson.zone2zone?.prices || []
-              for (let item of zone2zone) {
-                let { amount, reverse } = item
-                item.amount = addPicies(amount, svcPercent)
-              }
-            }
+          }
 
 
-            { //notice_time_rules
-              let noticeTime = svcJson.notice_time_rules || []
-              for (let item of noticeTime) {
-                let ps = item.ps || []
-                for (let p of ps) {
-                  let notice_time = p.notice_time || []
-                  for (let n of notice_time) {
+          { //notice_time_rules
+            let noticeTime = svcJson.notice_time_rules || []
+            for (let item of noticeTime) {
+              let ps = item.ps || []
+              for (let p of ps) {
+                let notice_time = p.notice_time || []
+                for (let n of notice_time) {
 
-                    let { delta_amount, percent } = n
-                    if (delta_amount != undefined) {
-                      n['delta_amount'] = addPicies(n['delta_amount'], svcPercent)
-                    } else {
-                      // n['percent'] = addPercent(n['percent'], svcPercent)
-                    }
-                  }
-                }
-              }
-
-            }
-
-            { // pricing_schedule_sum
-              let pricingScheduleSum = svcJson.pricing_schedule_sum || []
-              for (let item of pricingScheduleSum) {
-                let noticeTimeHint = item.notice_time_hint || []
-
-                for (let n of noticeTimeHint) {
-                  if (n == 'null') continue
-                  for (let o of n) {
-                    let { delta_amount, percent } = o
-                    if (delta_amount != undefined) {
-                      o.delta_amount = addPicies(o.delta_amount, svcPercent)
-                    } else {
-                      // o.percent = addPercent(o.percent, svcPercent)
-                    }
-                  }
-
-                }
-              }
-            }
-
-            { //specific_date_surcharge
-              let specificDateSurcharge = svcJson.specific_date_surcharge || []
-              for (let item of specificDateSurcharge) {
-                let vehicleClasses = item.vehicle_classes || []
-                for (let v of vehicleClasses) {
-                  let { percent, delta_amount } = v
-                  if (delta_amount != 0) {
-                    v.delta_amount = addPicies(v.delta_amount, svcPercent)
+                  let { delta_amount, percent } = n
+                  if (delta_amount != undefined) {
+                    n['delta_amount'] = addPicies(n['delta_amount'], svcPercent)
                   } else {
-                    // v.percent = addPercent(v.percent, svcPercent)
+                    // n['percent'] = addPercent(n['percent'], svcPercent)
                   }
                 }
               }
             }
-
-
-            {//add_service
-              let add_service = svcJson.add_service || {}
-              let keys = Object.keys(add_service)
-              for (let k of keys) {
-                add_service[k] = addPicies(add_service[k], svcPercent)
-              }
-            }
-
-            { //vehicleClasses
-              let vehicleClasses = svcJson.vehicleClasses || []
-              for (let v of vehicleClasses) {
-                let percent_appendix = v.percent_appendix || []
-                for (let p of percent_appendix) {
-                  let { delta_amount } = p
-                  if (!delta_amount) continue
-                  p.delta_amount = addPicies(delta_amount, svcPercent)
-                }
-              }
-            }
-
-
 
           }
+
+          { // pricing_schedule_sum
+            let pricingScheduleSum = svcJson.pricing_schedule_sum || []
+            for (let item of pricingScheduleSum) {
+              let noticeTimeHint = item.notice_time_hint || []
+
+              for (let n of noticeTimeHint) {
+                if (n == 'null') continue
+                for (let o of n) {
+                  let { delta_amount, percent } = o
+                  if (delta_amount != undefined) {
+                    o.delta_amount = addPicies(o.delta_amount, svcPercent)
+                  } else {
+                    // o.percent = addPercent(o.percent, svcPercent)
+                  }
+                }
+
+              }
+            }
+          }
+
+          { //specific_date_surcharge
+            let specificDateSurcharge = svcJson.specific_date_surcharge || []
+            for (let item of specificDateSurcharge) {
+              let vehicleClasses = item.vehicle_classes || []
+              for (let v of vehicleClasses) {
+                let { percent, delta_amount } = v
+                if (delta_amount != 0) {
+                  v.delta_amount = addPicies(v.delta_amount, svcPercent)
+                } else {
+                  // v.percent = addPercent(v.percent, svcPercent)
+                }
+              }
+            }
+          }
+
+
+          {//add_service
+            let add_service = svcJson.add_service || {}
+            let keys = Object.keys(add_service)
+            for (let k of keys) {
+              add_service[k] = addPicies(add_service[k], svcPercent)
+            }
+          }
+
+          { //vehicleClasses
+            let vehicleClasses = svcJson.vehicleClasses || []
+            // let aa = [vehicleClasses[0]]
+            for (let v of vehicleClasses) {
+              let percent_appendix = v.percent_appendix || []
+              for (let p of percent_appendix) {
+                let { delta_amount } = p
+                if (!delta_amount) continue
+                p.delta_amount = addPicies(delta_amount, svcPercent)
+              }
+              let { vehicle_class_id, percent: svcVehiclePercent } = v
+
+              let partnerVehiclePercent = (vcs.find(o => o.id == vehicle_class_id) || {}).percent || undefined
+              if (partnerVehiclePercent == undefined) continue
+
+              partnerVehiclePercent = Number(partnerVehiclePercent)
+              v['percent'] = addPercent(svcVehiclePercent, partnerVehiclePercent)
+              let i = 0
+              for (let p of percent_appendix) {
+                let { delta_amount, field } = p
+                if (!delta_amount) {
+                  i++
+                  continue
+                }
+
+                let oldVal = 0
+                switch (field) {
+                  case "pricing.min_amount":
+                    // oldVal = oldJson['pricing']['min_amount']
+                    oldVal = oldJson.pricing?.min_amount || 0
+                    break;
+                  case "downtown_areas.min_amount":
+                    // oldVal = oldJson['downtown_areas']['min_amount']
+                    oldVal = oldJson.downtown_areas?.min_amount || 0
+                    break;
+                  default:
+                    // if(field == 'hourly_pricing.rules.0.ranges.0'){
+                    let oField = JSON.stringify(field)
+                    let keyArr = field.split('.')
+                    let getValueByKey = (oldJson, keyArr) => {
+                      let k = keyArr.shift()
+                      let val = oldJson[k]
+                      if (!val) {
+                        return
+                      }
+                      if (keyArr.length) {
+                        return getValueByKey(val, keyArr)
+                      }
+                      return val
+                    }
+
+                    let amountOrObj = getValueByKey(oldJson, keyArr)
+                    if (amountOrObj == undefined) {
+                      continue
+                    }
+                    let { amount } = amountOrObj
+                    oldVal = amount || amountOrObj
+                    // }
+                    // console.log(oldVal);
+
+                    break;
+                }
+                // (52.97 + 11 ) * 1.0 - 52.97  * 1.1 = 5.703
+                oldVal = Number(oldVal)
+                let oldVehicleClasses = oldJson['vehicleClasses'].find(v => v.vehicle_class_id == vehicle_class_id)
+                let { delta_amount: oldDeltaAmount } = oldVehicleClasses['percent_appendix'].find(p => p.field == field)
+
+                if (i == 0) {
+                  console.log('--vehicle id--', vehicle_class_id);
+                  console.log('--partner vehicle percent--', partnerVehiclePercent, 'svc vehicle percent--', svcPercent);
+                }
+
+                let newDeltaAmount = (oldVal + Number(oldDeltaAmount)) * percentTranslate(partnerVehiclePercent) - oldVal * percentTranslate(svcPercent)
+
+                p.delta_amount = Number(newDeltaAmount.toFixed(2))
+                i++
+              }
+
+            }
+          }
+
           break
         }
       }
@@ -339,11 +420,21 @@
       svcJson.serviceArea['parent_fleet_name'] = '3_elife'
 
       console.log('---after---', svcJson);
+
       return svcJson
 
     }
 
-  
+
+    function addVehiclePercent() {
+
+    }
+
+    function percentTranslate(p) {
+      p = Number(p)
+      let v = (p + 100) / 100
+      return v
+    }
 
 
     async function insertAndUpdate(svcJson, newFleetId) {
@@ -428,14 +519,20 @@
       let v = (val + val * percent / 100).toFixed(2)
       return Number(v) || 0
     }
+
+    //     old vehicle percentage = OVP
+    // partner vehicle percentage = PVP
+    // New vehicle percentage = (OVP + 100) * (100 + PVP)/100 - 100
     function addPercent(val, percent) {
       val = Number(val)
       percent = Number(percent)
       let v1 = (val + 100) / 100
       let v2 = (percent + 100) / 100
       let v3 = (v1 * v2) * 100 - 100
-      let v = v3.toFixed(0)
-      return Number(v) || 0
+      let v = Number(v3.toFixed(0)) || 0
+      // let vn = (val + 100) * (100 + percent) / 100 - 100
+      // console.log(val,'---',percent);
+      return v
     }
 
 
@@ -445,59 +542,257 @@
       }
       return S4() + S4() + '-' + S4() + '-' + S4() + '-' + S4() + '-' + S4() + S4() + S4();
     }
+    let rest  = [ // 复制报错
+      '995'
+    ]
+
+    let nothing = [
+    "37",
+    "114",
+    "136",
+    "137",
+    "138",
+    "139",
+    "140",
+    "141",
+    "147",
+    "148",
+    "150",
+    "151",
+    "166",
+    "319",
+    "320",
+    "343",
+    "371",
+    "446",
+    "452",
+    "638",
+    "645",
+    "661",
+    "864",
+    "885",
+    "887",
+    "952",
+    "956",
+    "964",
+    "1018",
+    "1106",
+    "1107",
+    "1131",
+    "1133",
+    "1144",
+    "1172",
+    "1174",
+    "1367",
+    "1485",
+    "2148",
+    "21917"
+]
+
+    let bothIds = [
+      "39",
+      "40",
+      "41",
+      "43",
+      "44",
+      "45",
+      "46",
+      "48",
+      "49",
+      "50",
+      "51",
+      "52",
+      "55",
+      "56",
+      "58",
+      "62",
+      "64",
+      "65",
+      "67",
+      "68",
+      "69",
+      "70",
+      "72",
+      "73",
+      "74",
+      "76",
+      "84",
+      "88",
+      "89",
+      "92",
+      "94",
+      "98",
+      "99",
+      "103",
+      "105",
+      "106",
+      "107",
+      "108",
+      "109",
+      "111",
+      "112",
+      "113",
+      "116",
+      "117",
+      "118",
+      "125",
+      "128",
+      "132",
+      "146",
+      "152",
+      "153",
+      "155",
+      "167",
+      "272",
+      "273",
+      "275",
+      "276",
+      "311",
+      "314",
+      "324",
+      "326",
+      "341",
+      "344",
+      "365",
+      "366",
+      "367",
+      "379",
+      "395",
+      "415",
+      "426",
+      "461",
+      "607",
+      "620",
+      "636",
+      "640",
+      "643",
+      "652",
+      "670",
+      "679",
+      "709",
+      "716",
+      "743",
+      "777",
+      "782",
+      "783",
+      "800",
+      "848",
+      "858",
+      "862",
+      "863",
+      "865",
+      "886",
+      "888",
+      "890",
+      "892",
+      "895",
+      "904",
+      "920",
+      "923",
+      "935",
+      "943",
+      "944",
+      "946",
+      "948",
+      "949",
+      "950",
+      "951",
+      "954",
+      "957",
+      "958",
+      "960",
+      "962",
+      "965",
+      "966",
+      "972",
+      "981",
+      "983",
+      "986",
+      "995",
+      "1035",
+      "1077",
+      "1123",
+      "1125",
+      "1127",
+      "1128",
+      "1139",
+      "1140",
+      "1141",
+      "1188",
+      "1198",
+      "1248",
+      "1295",
+      "1297",
+      "1299",
+      "1349",
+      "1355",
+      "1359",
+      "1360",
+      "1369",
+      "1372",
+      "1373",
+      "1378",
+      "1456",
+      "1499",
+      "1679",
+      "1821",
+      "1835",
+      "1840",
+      "27454"
+    ]
 
     let percentOnly = [
-      "91",
-      "126",
-      "127",
-      "129",
-      "130",
-      "142",
-      "143",
-      "144",
-      "145",
-      "165",
-      "168",
-      "378",
-      "390",
-      "467",
-      "482",
-      "647",
-      "665",
-      "745",
-      "746",
-      "769",
-      "776",
-      "803",
-      "809",
-      "953",
-      "1005",
-      "1006",
-      "1052",
-      "1053",
-      "1054",
-      "1055",
-      "1056",
-      "1057",
-      "1058",
-      "1059",
-      "1060",
-      "1061",
-      "1062",
-      "1063",
-      "1117",
-      "1225",
-      "1305",
-      "16767",
-      "16771",
-      "17312",
-      "21916",
-      "22074",
-      "22247",
-      "23660",
-      "36334",
-      "37148"
-    ]
+    "91",
+    "126",
+    "127",
+    "129",
+    "130",
+    "142",
+    "143",
+    "144",
+    "145",
+    "165",
+    "168",
+    "378",
+    "390",
+    "467",
+    "482",
+    "647",
+    "665",
+    "745",
+    "746",
+    "769",
+    "776",
+    "803",
+    "809",
+    "953",
+    "1005",
+    "1006",
+    "1052",
+    "1053",
+    "1054",
+    "1055",
+    "1056",
+    "1057",
+    "1058",
+    "1059",
+    "1060",
+    "1061",
+    "1062",
+    "1063",
+    "1117",
+    "1225",
+    "1305",
+    "16767",
+    "16771",
+    "17312",
+    "21916",
+    "22074",
+    "22247",
+    "23660",
+    "36334",
+    "37148"
+]
 
     let partnerJson = {
       "percent": "0",
@@ -716,7 +1011,7 @@
           },
           {
             "id": "40",
-            "delta": "20",
+            "delta": "30",
             "currency": "USD",
             "switch": "on"
           },
@@ -5036,6 +5331,9 @@
       },
       "doNotDel": "doNotDel"
     }
+
+
+
 
   </script>
 </body>
