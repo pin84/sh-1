@@ -1,1658 +1,3153 @@
 {
-  "serviceArea": {
-      "id": 318,
-      "parent_fleet_id": 40,
-      "name": "london_service_area_one",
-      "lat": 37.4926301,
-      "lng": -122.15394625,
-      "radius": 160934,
-      "parent_fleet_name": "Elife"
-  },
-  "pricing": {
-      "ranges": [
-          {
-              "seq": 0,
-              "amount": 2.5,
-              "currency": "CNY",
-              "distance": 35405,
-              "from": 16093,
-              "to": 51498,
-              "distanceIn": 22,
-              "per_unit": 0
-          },
-          {
-              "seq": 1,
-              "amount": 2.4,
-              "currency": "CNY",
-              "distance": 80467,
-              "from": 51498,
-              "to": 131965,
-              "distanceIn": 50,
-              "per_unit": 0
-          },
-          {
-              "seq": 2,
-              "amount": 1.9,
-              "currency": "CNY",
-              "distance": 643736,
-              "from": 131965,
-              "to": 775701,
-              "distanceIn": 400,
-              "per_unit": 0
-          },
-          {
-              "seq": 3,
-              "amount": 22,
-              "currency": "CNY",
-              "distance": 189902,
-              "from": 775701,
-              "to": 965604,
-              "distanceIn": 118,
-              "per_unit": 0
-          }
-      ],
-      "min_amount": 650,
-      "currency": "CNY",
-      "min_distance": 16093,
-      "meet_n_greet": 12
-  },
-  "airports": [
-      "CDG",
-      "ORY"
-  ],
-  "vehicleClasses": [
-      {
-          "vehicle_class_id": 1,
-          "delta_amount": 0,
-          "percent": 10,
-          "percent_appendix": [
-              {
-                  "field": "zones.0.prices.1",
-                  "delta_amount": 3
-              },
-              {
-                  "field": "zones.1.prices.1",
-                  "delta_amount": 5
-              },
-              {
-                  "field": "zones.2.prices.1",
-                  "delta_amount": 7
-              },
-              {
-                  "field": "hourly_pricing.min_amount",
-                  "delta_amount": -99,
-                  "showRedTriangleIndex": 0
-              },
-              {
-                  "field": "pricing.ranges.2",
-                  "delta_amount": 1.1
-              }
-          ],
-          "hourly_percent": 10,
-          "hourly_delta": 0,
-          "surcharge_schedule": [
-              [
-                  {
-                      "from": "00:00",
-                      "to": "01:30",
-                      "delta_amount": 0
-                  },
-                  {
-                      "from": "03:00",
-                      "to": "04:30",
-                      "percent": 10,
-                      "delta_amount": 0
-                  },
-                  {
-                      "from": "22:00",
-                      "to": "23:59",
-                      "percent": 100,
-                      "delta_amount": 0,
-                      "break": true
-                  }
-              ],
-              "null",
-              [
-                  {
-                      "from": "00:00",
-                      "to": "02:00",
-                      "percent": 5,
-                      "delta_amount": 0
-                  },
-                  {
-                      "from": "04:00",
-                      "to": "05:30",
-                      "delta_amount": 2,
-                      "percent": 0
-                  }
-              ],
-              [
-                  {
-                      "from": "00:00",
-                      "to": "01:00",
-                      "percent": 2,
-                      "delta_amount": 0
-                  },
-                  {
-                      "from": "03:00",
-                      "to": "04:30",
-                      "delta_amount": 8,
-                      "percent": 0
-                  }
-              ],
-              [
-                  {
-                      "from": "00:00",
-                      "to": "01:30",
-                      "percent": 99,
-                      "delta_amount": 0
-                  }
-              ],
-              "null",
-              [
-                  {
-                      "from": "00:30",
-                      "to": "03:00",
-                      "percent": 7,
-                      "delta_amount": 0
-                  }
-              ]
-          ]
-      },
-      {
-          "vehicle_class_id": 2,
-          "delta_amount": 0,
-          "percent": 0,
-          "percent_appendix": [
-              {
-                  "field": "pricing.min_amount",
-                  "delta_amount": 15
-              },
-              {
-                  "field": "pricing.ranges.0",
-                  "delta_amount": 0.3
-              },
-              {
-                  "field": "pricing.ranges.1",
-                  "delta_amount": 0.2
-              },
-              {
-                  "field": "pricing.ranges.2",
-                  "delta_amount": 0.3
-              },
-              {
-                  "field": "zones.0.prices.1",
-                  "delta_amount": 4
-              },
-              {
-                  "field": "zones.1.prices.1",
-                  "delta_amount": 6
-              },
-              {
-                  "field": "zones.2.prices.1",
-                  "delta_amount": 8
-              },
-              {
-                  "field": "hourly_pricing.min_amount",
-                  "delta_amount": -98,
-                  "showRedTriangleIndex": 0
-              },
-              {
-                  "field": "hourly_pricing.ranges.0",
-                  "delta_amount": 9,
-                  "showRedTriangleIndex": 1
-              }
-          ],
-          "hourly_percent": 0,
-          "hourly_delta": 0,
-          "surcharge_schedule": [
-              [
-                  {
-                      "from": "00:00",
-                      "to": "01:30",
-                      "delta_amount": 0
-                  },
-                  {
-                      "from": "03:00",
-                      "to": "04:30",
-                      "percent": 10,
-                      "delta_amount": 0
-                  },
-                  {
-                      "from": "22:00",
-                      "to": "23:59",
-                      "percent": 100,
-                      "delta_amount": 0,
-                      "break": true
-                  }
-              ],
-              "null",
-              [
-                  {
-                      "from": "00:00",
-                      "to": "02:00",
-                      "percent": 5,
-                      "delta_amount": 0
-                  },
-                  {
-                      "from": "04:00",
-                      "to": "05:30",
-                      "delta_amount": 2,
-                      "percent": 0
-                  }
-              ],
-              [
-                  {
-                      "from": "00:00",
-                      "to": "01:00",
-                      "percent": 2,
-                      "delta_amount": 0
-                  },
-                  {
-                      "from": "03:00",
-                      "to": "04:30",
-                      "delta_amount": 8,
-                      "percent": 0
-                  }
-              ],
-              [
-                  {
-                      "from": "00:00",
-                      "to": "01:30",
-                      "percent": 99,
-                      "delta_amount": 0
-                  }
-              ],
-              "null",
-              [
-                  {
-                      "from": "00:30",
-                      "to": "03:00",
-                      "percent": 7,
-                      "delta_amount": 0
-                  }
-              ]
-          ]
-      },
-      {
-          "vehicle_class_id": 40,
-          "delta_amount": 0,
-          "percent": 10,
-          "percent_appendix": [
-              {
-                  "field": "zones.0.prices.1",
-                  "delta_amount": 5
-              },
-              {
-                  "field": "zones.1.prices.1",
-                  "delta_amount": 7
-              },
-              {
-                  "field": "hourly_pricing.ranges.0",
-                  "delta_amount": -27,
-                  "showRedTriangleIndex": 1
-              }
-          ],
-          "hourly_percent": 10,
-          "hourly_delta": 0,
-          "notice_time": [
-              {
-                  "time": 4320,
-                  "percent": 100,
-                  "allowance": 600
-              }
-          ]
-      },
-      {
-          "vehicle_class_id": 6,
-          "delta_amount": 0,
-          "percent": 0,
-          "percent_appendix": [
-              {
-                  "field": "zones.1.prices.1",
-                  "delta_amount": 8
-              }
-          ],
-          "hourly_percent": 0,
-          "hourly_delta": 0,
-          "notice_time": [
-              {
-                  "time": 4320,
-                  "percent": 100,
-                  "allowance": 600
-              }
-          ]
-      },
-      {
-          "vehicle_class_id": 3,
-          "delta_amount": 0,
-          "percent": 0,
-          "hourly_percent": 0,
-          "hourly_delta": 0,
-          "notice_time": [
-              {
-                  "time": 4320,
-                  "percent": 100,
-                  "allowance": 600
-              }
-          ]
-      },
-      {
-          "vehicle_class_id": 4,
-          "delta_amount": 0,
-          "percent": 60,
-          "percent_appendix": [
-              {
-                  "field": "zones.0.prices.0",
-                  "delta_amount": 25
-              }
-          ],
-          "hourly_percent": 60,
-          "hourly_delta": 0,
-          "notice_time": [
-              {
-                  "time": 4320,
-                  "percent": 100,
-                  "allowance": 600
-              }
-          ]
-      },
-      {
-          "vehicle_class_id": 5,
-          "delta_amount": 0,
-          "percent": 100,
-          "percent_appendix": [
-              {
-                  "field": "pricing.min_amount",
-                  "delta_amount": 100
-              },
-              {
-                  "field": "pricing.ranges.0",
-                  "delta_amount": 2.6
-              },
-              {
-                  "field": "pricing.ranges.1",
-                  "delta_amount": 2.5
-              },
-              {
-                  "field": "pricing.ranges.2",
-                  "delta_amount": 2.4
-              },
-              {
-                  "field": "zones.0.prices.0",
-                  "delta_amount": 100
-              }
-          ],
-          "hourly_percent": 100,
-          "hourly_delta": 0
-      },
-      {
-          "vehicle_class_id": 9,
-          "delta_amount": 0,
-          "percent": 105,
-          "percent_appendix": [
-              {
-                  "field": "pricing.min_amount",
-                  "delta_amount": 150
-              },
-              {
-                  "field": "pricing.ranges.0",
-                  "delta_amount": 2.7
-              },
-              {
-                  "field": "pricing.ranges.1",
-                  "delta_amount": 2.6
-              },
-              {
-                  "field": "pricing.ranges.2",
-                  "delta_amount": 2.5
-              },
-              {
-                  "field": "zones.0.prices.0",
-                  "delta_amount": 130
-              }
-          ],
-          "hourly_percent": 105,
-          "hourly_delta": 0
-      },
-      {
-          "vehicle_class_id": 10,
-          "delta_amount": 0,
-          "percent": 115,
-          "percent_appendix": [
-              {
-                  "field": "pricing.min_amount",
-                  "delta_amount": 160
-              },
-              {
-                  "field": "pricing.ranges.0",
-                  "delta_amount": 2.8
-              },
-              {
-                  "field": "pricing.ranges.1",
-                  "delta_amount": 2.7
-              },
-              {
-                  "field": "pricing.ranges.2",
-                  "delta_amount": 2.55
-              },
-              {
-                  "field": "zones.0.prices.0",
-                  "delta_amount": 145
-              }
-          ],
-          "hourly_percent": 115,
-          "hourly_delta": 0
-      },
-      {
-          "vehicle_class_id": 11,
-          "delta_amount": 0,
-          "percent": 120,
-          "percent_appendix": [
-              {
-                  "field": "pricing.min_amount",
-                  "delta_amount": 170
-              },
-              {
-                  "field": "pricing.ranges.0",
-                  "delta_amount": 2.9
-              },
-              {
-                  "field": "pricing.ranges.1",
-                  "delta_amount": 2.8
-              },
-              {
-                  "field": "pricing.ranges.2",
-                  "delta_amount": 2.6
-              },
-              {
-                  "field": "zones.0.prices.0",
-                  "delta_amount": 150
-              }
-          ],
-          "hourly_percent": 120,
-          "hourly_delta": 0
-      },
-      {
-          "vehicle_class_id": 36,
-          "delta_amount": 0,
-          "percent": 0,
-          "hourly_percent": 0,
-          "hourly_delta": 0,
-          "notice_time": [
-              {
-                  "time": 4320,
-                  "percent": 100,
-                  "allowance": 600
-              }
-          ]
-      },
-      {
-          "vehicle_class_id": 21,
-          "delta_amount": 0,
-          "percent": 0,
-          "hourly_percent": 0,
-          "hourly_delta": 0,
-          "notice_time": [
-              {
-                  "time": 4320,
-                  "percent": 100,
-                  "allowance": 600
-              }
-          ],
-          "surcharge_schedule": [
-              [
-                  {
-                      "from": "00:00",
-                      "to": "01:30",
-                      "delta_amount": 0
-                  },
-                  {
-                      "from": "03:00",
-                      "to": "04:30",
-                      "percent": 10,
-                      "delta_amount": 0
-                  },
-                  {
-                      "from": "22:00",
-                      "to": "23:59",
-                      "percent": 100,
-                      "delta_amount": 0,
-                      "break": true
-                  }
-              ],
-              "null",
-              [
-                  {
-                      "from": "00:00",
-                      "to": "02:00",
-                      "percent": 5,
-                      "delta_amount": 0
-                  },
-                  {
-                      "from": "04:00",
-                      "to": "05:30",
-                      "delta_amount": 2,
-                      "percent": 0
-                  }
-              ],
-              [
-                  {
-                      "from": "00:00",
-                      "to": "01:00",
-                      "percent": 2,
-                      "delta_amount": 0
-                  },
-                  {
-                      "from": "03:00",
-                      "to": "04:30",
-                      "delta_amount": 8,
-                      "percent": 0
-                  }
-              ],
-              [
-                  {
-                      "from": "00:00",
-                      "to": "01:30",
-                      "percent": 99,
-                      "delta_amount": 0
-                  }
-              ],
-              "null",
-              [
-                  {
-                      "from": "00:30",
-                      "to": "03:00",
-                      "percent": 7,
-                      "delta_amount": 0
-                  }
-              ]
-          ]
-      },
-      {
-          "vehicle_class_id": 22,
-          "delta_amount": 0,
-          "percent": 0,
-          "hourly_percent": 0,
-          "hourly_delta": 0,
-          "notice_time": [
-              {
-                  "time": 4320,
-                  "percent": 100,
-                  "allowance": 600
-              }
-          ],
-          "surcharge_schedule": [
-              [
-                  {
-                      "from": "00:00",
-                      "to": "01:30",
-                      "delta_amount": 0
-                  },
-                  {
-                      "from": "03:00",
-                      "to": "04:30",
-                      "percent": 10,
-                      "delta_amount": 0
-                  },
-                  {
-                      "from": "22:00",
-                      "to": "23:59",
-                      "percent": 100,
-                      "delta_amount": 0,
-                      "break": true
-                  }
-              ],
-              "null",
-              [
-                  {
-                      "from": "00:00",
-                      "to": "02:00",
-                      "percent": 5,
-                      "delta_amount": 0
-                  },
-                  {
-                      "from": "04:00",
-                      "to": "05:30",
-                      "delta_amount": 2,
-                      "percent": 0
-                  }
-              ],
-              [
-                  {
-                      "from": "00:00",
-                      "to": "01:00",
-                      "percent": 2,
-                      "delta_amount": 0
-                  },
-                  {
-                      "from": "03:00",
-                      "to": "04:30",
-                      "delta_amount": 8,
-                      "percent": 0
-                  }
-              ],
-              [
-                  {
-                      "from": "00:00",
-                      "to": "01:30",
-                      "percent": 99,
-                      "delta_amount": 0
-                  }
-              ],
-              "null",
-              [
-                  {
-                      "from": "00:30",
-                      "to": "03:00",
-                      "percent": 7,
-                      "delta_amount": 0
-                  }
-              ]
-          ]
-      },
-      {
-          "vehicle_class_id": 23,
-          "delta_amount": 0,
-          "percent": 0,
-          "hourly_percent": 0,
-          "hourly_delta": 0,
-          "notice_time": [
-              {
-                  "time": 4320,
-                  "percent": 100,
-                  "allowance": 600
-              }
-          ],
-          "surcharge_schedule": [
-              [
-                  {
-                      "from": "00:00",
-                      "to": "01:30",
-                      "delta_amount": 0
-                  },
-                  {
-                      "from": "03:00",
-                      "to": "04:30",
-                      "percent": 10,
-                      "delta_amount": 0
-                  },
-                  {
-                      "from": "22:00",
-                      "to": "23:59",
-                      "percent": 100,
-                      "delta_amount": 0,
-                      "break": true
-                  }
-              ],
-              "null",
-              [
-                  {
-                      "from": "00:00",
-                      "to": "02:00",
-                      "percent": 5,
-                      "delta_amount": 0
-                  },
-                  {
-                      "from": "04:00",
-                      "to": "05:30",
-                      "delta_amount": 2,
-                      "percent": 0
-                  }
-              ],
-              [
-                  {
-                      "from": "00:00",
-                      "to": "01:00",
-                      "percent": 2,
-                      "delta_amount": 0
-                  },
-                  {
-                      "from": "03:00",
-                      "to": "04:30",
-                      "delta_amount": 8,
-                      "percent": 0
-                  }
-              ],
-              [
-                  {
-                      "from": "00:00",
-                      "to": "01:30",
-                      "percent": 99,
-                      "delta_amount": 0
-                  }
-              ],
-              "null",
-              [
-                  {
-                      "from": "00:30",
-                      "to": "03:00",
-                      "percent": 7,
-                      "delta_amount": 0
-                  }
-              ]
-          ]
-      },
-      {
-          "vehicle_class_id": 24,
-          "delta_amount": 0,
-          "percent": 0,
-          "hourly_percent": 0,
-          "hourly_delta": 0,
-          "notice_time": [
-              {
-                  "time": 4320,
-                  "percent": 100,
-                  "allowance": 600
-              }
-          ],
-          "surcharge_schedule": [
-              [
-                  {
-                      "from": "00:00",
-                      "to": "01:30",
-                      "delta_amount": 0
-                  },
-                  {
-                      "from": "03:00",
-                      "to": "04:30",
-                      "percent": 10,
-                      "delta_amount": 0
-                  },
-                  {
-                      "from": "22:00",
-                      "to": "23:59",
-                      "percent": 100,
-                      "delta_amount": 0,
-                      "break": true
-                  }
-              ],
-              "null",
-              [
-                  {
-                      "from": "00:00",
-                      "to": "02:00",
-                      "percent": 5,
-                      "delta_amount": 0
-                  },
-                  {
-                      "from": "04:00",
-                      "to": "05:30",
-                      "delta_amount": 2,
-                      "percent": 0
-                  }
-              ],
-              [
-                  {
-                      "from": "00:00",
-                      "to": "01:00",
-                      "percent": 2,
-                      "delta_amount": 0
-                  },
-                  {
-                      "from": "03:00",
-                      "to": "04:30",
-                      "delta_amount": 8,
-                      "percent": 0
-                  }
-              ],
-              [
-                  {
-                      "from": "00:00",
-                      "to": "01:30",
-                      "percent": 99,
-                      "delta_amount": 0
-                  }
-              ],
-              "null",
-              [
-                  {
-                      "from": "00:30",
-                      "to": "03:00",
-                      "percent": 7,
-                      "delta_amount": 0
-                  }
-              ]
-          ]
-      },
-      {
-          "vehicle_class_id": 27,
-          "delta_amount": 0,
-          "percent": 0,
-          "hourly_percent": 0,
-          "hourly_delta": 0,
-          "notice_time": [
-              {
-                  "time": 4320,
-                  "percent": 100,
-                  "allowance": 600
-              }
-          ],
-          "surcharge_schedule": [
-              [
-                  {
-                      "from": "00:00",
-                      "to": "01:30",
-                      "delta_amount": 0
-                  },
-                  {
-                      "from": "03:00",
-                      "to": "04:30",
-                      "percent": 10,
-                      "delta_amount": 0
-                  },
-                  {
-                      "from": "22:00",
-                      "to": "23:59",
-                      "percent": 100,
-                      "delta_amount": 0,
-                      "break": true
-                  }
-              ],
-              "null",
-              [
-                  {
-                      "from": "00:00",
-                      "to": "02:00",
-                      "percent": 5,
-                      "delta_amount": 0
-                  },
-                  {
-                      "from": "04:00",
-                      "to": "05:30",
-                      "delta_amount": 2,
-                      "percent": 0
-                  }
-              ],
-              [
-                  {
-                      "from": "00:00",
-                      "to": "01:00",
-                      "percent": 2,
-                      "delta_amount": 0
-                  },
-                  {
-                      "from": "03:00",
-                      "to": "04:30",
-                      "delta_amount": 8,
-                      "percent": 0
-                  }
-              ],
-              [
-                  {
-                      "from": "00:00",
-                      "to": "01:30",
-                      "percent": 99,
-                      "delta_amount": 0
-                  }
-              ],
-              "null",
-              [
-                  {
-                      "from": "00:30",
-                      "to": "03:00",
-                      "percent": 7,
-                      "delta_amount": 0
-                  }
-              ]
-          ]
-      },
-      {
-          "vehicle_class_id": 29,
-          "delta_amount": 0,
-          "percent": 600,
-          "percent_appendix": [
-              {
-                  "field": "pricing.min_amount",
-                  "delta_amount": 375
-              },
-              {
-                  "field": "pricing.ranges.0",
-                  "delta_amount": 4.4
-              },
-              {
-                  "field": "pricing.ranges.1",
-                  "delta_amount": 3.7
-              },
-              {
-                  "field": "pricing.ranges.2",
-                  "delta_amount": 3.5
-              },
-              {
-                  "field": "zones.0.prices.0",
-                  "delta_amount": 340
-              }
-          ],
-          "hourly_percent": 600,
-          "hourly_delta": 0,
-          "notice_time": [
-              {
-                  "time": 4320,
-                  "percent": 100,
-                  "allowance": 600
-              }
-          ],
-          "surcharge_schedule": [
-              "null",
-              [
-                  {
-                      "from": "00:30",
-                      "to": "02:30",
-                      "percent": 33,
-                      "delta_amount": 0
-                  }
-              ],
-              "null",
-              "null",
-              "null",
-              "null",
-              "null"
-          ]
-      },
-      {
-          "vehicle_class_id": 30,
-          "delta_amount": 0,
-          "percent": 650,
-          "percent_appendix": [
-              {
-                  "field": "pricing.min_amount",
-                  "delta_amount": 400
-              },
-              {
-                  "field": "pricing.ranges.0",
-                  "delta_amount": 4.4
-              },
-              {
-                  "field": "pricing.ranges.1",
-                  "delta_amount": 4.7
-              },
-              {
-                  "field": "pricing.ranges.2",
-                  "delta_amount": 3.6
-              }
-          ],
-          "hourly_percent": 650,
-          "hourly_delta": 0,
-          "notice_time": [
-              {
-                  "time": 4320,
-                  "percent": 100,
-                  "allowance": 600
-              }
-          ]
-      },
-      {
-          "vehicle_class_id": 32,
-          "delta_amount": 0,
-          "percent": 700,
-          "percent_appendix": [
-              {
-                  "field": "pricing.min_amount",
-                  "delta_amount": 420
-              },
-              {
-                  "field": "pricing.ranges.0",
-                  "delta_amount": 4.4
-              },
-              {
-                  "field": "pricing.ranges.1",
-                  "delta_amount": 4.9
-              },
-              {
-                  "field": "pricing.ranges.2",
-                  "delta_amount": 4
-              }
-          ],
-          "hourly_percent": 700,
-          "hourly_delta": 0,
-          "notice_time": [
-              {
-                  "time": 4320,
-                  "percent": 100,
-                  "allowance": 600
-              }
-          ]
-      },
-      {
-          "vehicle_class_id": 33,
-          "delta_amount": 0,
-          "percent": 825,
-          "percent_appendix": [
-              {
-                  "field": "pricing.min_amount",
-                  "delta_amount": 500
-              },
-              {
-                  "field": "pricing.ranges.0",
-                  "delta_amount": 4.4
-              },
-              {
-                  "field": "pricing.ranges.1",
-                  "delta_amount": 5.5
-              },
-              {
-                  "field": "pricing.ranges.2",
-                  "delta_amount": 4.5
-              }
-          ],
-          "hourly_percent": 825,
-          "hourly_delta": 0,
-          "notice_time": [
-              {
-                  "time": 4320,
-                  "percent": 100,
-                  "allowance": 600
-              }
-          ]
-      },
-      {
-          "vehicle_class_id": 34,
-          "delta_amount": 0,
-          "percent": 950,
-          "percent_appendix": [
-              {
-                  "field": "pricing.min_amount",
-                  "delta_amount": 575
-              },
-              {
-                  "field": "pricing.ranges.0",
-                  "delta_amount": 4.4
-              },
-              {
-                  "field": "pricing.ranges.1",
-                  "delta_amount": 6
-              },
-              {
-                  "field": "pricing.ranges.2",
-                  "delta_amount": 4.8
-              }
-          ],
-          "hourly_percent": 950,
-          "hourly_delta": 0,
-          "notice_time": [
-              {
-                  "time": 4320,
-                  "percent": 100,
-                  "allowance": 600
-              }
-          ]
-      },
-      {
-          "vehicle_class_id": 35,
-          "delta_amount": 0,
-          "percent": 1000,
-          "percent_appendix": [
-              {
-                  "field": "pricing.min_amount",
-                  "delta_amount": 600
-              },
-              {
-                  "field": "pricing.ranges.0",
-                  "delta_amount": 4.4
-              },
-              {
-                  "field": "pricing.ranges.1",
-                  "delta_amount": 6.5
-              },
-              {
-                  "field": "pricing.ranges.2",
-                  "delta_amount": 5
-              }
-          ],
-          "hourly_percent": 1000,
-          "hourly_delta": 0,
-          "notice_time": [
-              {
-                  "time": 4320,
-                  "percent": 100,
-                  "allowance": 600
-              }
-          ]
-      },
-      {
-          "vehicle_class_id": 41,
-          "delta_amount": 0,
-          "percent": 0,
-          "hourly_percent": 0,
-          "hourly_delta": 0,
-          "percent_appendix": [
-              {
-                  "field": "pricing.ranges.3",
-                  "delta_amount": 0.0
-              }
-          ]
-      },
-      {
-          "vehicle_class_id": 42,
-          "delta_amount": 0,
-          "percent": 0,
-          "hourly_percent": 0,
-          "hourly_delta": 0
-      },
-      {
-          "vehicle_class_id": 43,
-          "delta_amount": 0,
-          "percent": 0,
-          "hourly_percent": 0,
-          "hourly_delta": 0
-      },
-      {
-          "vehicle_class_id": 44,
-          "delta_amount": 0,
-          "percent": 0,
-          "hourly_percent": 0,
-          "hourly_delta": 0
-      },
-      {
-          "vehicle_class_id": 45,
-          "delta_amount": 0,
-          "percent": 0,
-          "hourly_percent": 0,
-          "hourly_delta": 0
-      },
-      {
-          "vehicle_class_id": 46,
-          "delta_amount": 0,
-          "percent": 0,
-          "hourly_percent": 0,
-          "hourly_delta": 0
-      },
-      {
-          "vehicle_class_id": 47,
-          "delta_amount": 0,
-          "percent": 0,
-          "hourly_percent": 0,
-          "hourly_delta": 0
-      },
-      {
-          "vehicle_class_id": 48,
-          "delta_amount": 0,
-          "percent": 0,
-          "hourly_percent": 0,
-          "hourly_delta": 0,
-          "notice_time": [
-              {
-                  "time": 4320,
-                  "percent": 100,
-                  "allowance": 600
-              }
-          ]
-      },
-      {
-          "vehicle_class_id": 49,
-          "delta_amount": 0,
-          "percent": 0,
-          "hourly_percent": 0,
-          "hourly_delta": 0
-      },
-      {
-          "vehicle_class_id": 50,
-          "delta_amount": 0,
-          "percent": 0,
-          "hourly_percent": 0,
-          "hourly_delta": 0,
-          "notice_time": [
-              {
-                  "time": 4320,
-                  "percent": 100,
-                  "allowance": 600
-              }
-          ]
-      },
-      {
-          "vehicle_class_id": 51,
-          "delta_amount": 0,
-          "percent": 0,
-          "hourly_percent": 0,
-          "hourly_delta": 0
-      },
-      {
-          "vehicle_class_id": 52,
-          "delta_amount": 0,
-          "percent": 0,
-          "hourly_percent": 0,
-          "hourly_delta": 0,
-          "notice_time": [
-              {
-                  "time": 4320,
-                  "percent": 100,
-                  "allowance": 600
-              }
-          ]
-      },
-      {
-          "vehicle_class_id": 25,
-          "delta_amount": 0,
-          "percent": 0,
-          "hourly_percent": 0,
-          "hourly_delta": 0,
-          "notice_time": [
-              {
-                  "time": 4320,
-                  "percent": 100,
-                  "allowance": 600
-              }
-          ]
-      },
-      {
-          "vehicle_class_id": 26,
-          "delta_amount": 0,
-          "percent": 0,
-          "hourly_percent": 0,
-          "hourly_delta": 0
-      },
-      {
-          "vehicle_class_id": 28,
-          "delta_amount": 0,
-          "percent": 0,
-          "hourly_percent": 0,
-          "hourly_delta": 0,
-          "notice_time": [
-              {
-                  "time": 4320,
-                  "percent": 100,
-                  "allowance": 600
-              }
-          ]
-      },
-      {
-          "vehicle_class_id": 56,
-          "delta_amount": 0,
-          "percent": 0,
-          "hourly_percent": 0,
-          "hourly_delta": 0,
-          "notice_time": [
-              {
-                  "time": 4320,
-                  "percent": 100,
-                  "allowance": 600
-              }
-          ]
-      },
-      {
-          "vehicle_class_id": 57,
-          "delta_amount": 0,
-          "percent": 0,
-          "hourly_percent": 0,
-          "hourly_delta": 0
-      },
-      {
-          "vehicle_class_id": 58,
-          "delta_amount": 0,
-          "percent": 0,
-          "hourly_percent": 0,
-          "hourly_delta": 0,
-          "notice_time": [
-              {
-                  "time": 4320,
-                  "percent": 100,
-                  "allowance": 600
-              }
-          ]
-      },
-      {
-          "vehicle_class_id": 59,
-          "delta_amount": 0,
-          "percent": 0,
-          "hourly_percent": 0,
-          "hourly_delta": 0,
-          "notice_time": [
-              {
-                  "time": 4320,
-                  "percent": 100,
-                  "allowance": 600
-              }
-          ]
-      },
-      {
-          "vehicle_class_id": 60,
-          "delta_amount": 0,
-          "percent": 0,
-          "hourly_percent": 0,
-          "hourly_delta": 0,
-          "notice_time": [
-              {
-                  "time": 4320,
-                  "percent": 100,
-                  "allowance": 600
-              }
-          ]
-      },
-      {
-          "vehicle_class_id": 61,
-          "delta_amount": 0,
-          "percent": 0,
-          "hourly_percent": 0,
-          "hourly_delta": 0,
-          "notice_time": [
-              {
-                  "time": 4320,
-                  "percent": 100,
-                  "allowance": 600
-              }
-          ]
-      },
-      {
-          "vehicle_class_id": 62,
-          "delta_amount": 0,
-          "percent": 0,
-          "hourly_percent": 0,
-          "hourly_delta": 0
-      },
-      {
-          "vehicle_class_id": 63,
-          "delta_amount": 0,
-          "percent": 0,
-          "hourly_percent": 0,
-          "hourly_delta": 0,
-          "notice_time": [
-              {
-                  "time": 4320,
-                  "percent": 100,
-                  "allowance": 600
-              }
-          ]
-      },
-      {
-          "vehicle_class_id": 64,
-          "delta_amount": 0,
-          "percent": 0,
-          "hourly_percent": 0,
-          "hourly_delta": 0
-      }
-  ],
-  "barriers": [
-      {
-          "a_lat": 37.81175,
-          "a_lng": -122.363802,
-          "a_cross": 1,
-          "b_lat": 37.604236,
-          "b_lng": -122.203127,
-          "b_cross": 1
-      },
-      {
-          "a_lat": 37.604236,
-          "a_lng": -122.203127,
-          "a_cross": 1,
-          "b_lat": 37.519198,
-          "b_lng": -122.105146,
-          "b_cross": 1
-      },
-      {
-          "a_lat": 37.519198,
-          "a_lng": -122.105146,
-          "a_cross": 1,
-          "b_lat": 37.431165,
-          "b_lng": -121.969032,
-          "b_cross": 1
-      },
-      {
-          "a_lat": 37.934907,
-          "a_lng": -122.442818,
-          "a_cross": 1,
-          "b_lat": 37.81175,
-          "b_lng": -122.363802,
-          "b_cross": 1
-      },
-      {
-          "a_lat": 38.154992,
-          "a_lng": -122.400932,
-          "a_cross": 1,
-          "b_lat": 37.934907,
-          "b_lng": -122.442818,
-          "b_cross": 1
-      },
-      {
-          "a_lat": 37.862532,
-          "a_lng": -122.205692,
-          "a_cross": 1,
-          "b_lat": 37.69266,
-          "b_lng": -122.07111,
-          "b_cross": 1
-      },
-      {
-          "a_lat": 37.96221,
-          "a_lng": -122.329288,
-          "a_cross": 1,
-          "b_lat": 37.862532,
-          "b_lng": -122.205692,
-          "b_cross": 1
-      }
-  ],
-  "zones": [
-      {
-          "name": "San Francisco",
-          "lat": 37.278252450601855,
-          "lng": -121.799034640625,
-          "radius": 14484,
-          "prices": [
-              {
-                  "airport": "SFO",
-                  "amount": 60,
-                  "currency": "CNY"
-              },
-              {
-                  "airport": "SJC",
-                  "amount": 200,
-                  "currency": "CNY"
-              }
-          ]
-      },
-      {
-          "name": "Fresno",
-          "lat": 36.7377981,
-          "lng": -119.7871247,
-          "radius": 8047,
-          "prices": [
-              {
-                  "airport": "SFO",
-                  "amount": 14,
-                  "currency": "CNY"
-              },
-              {
-                  "airport": "SJC",
-                  "amount": 13,
-                  "currency": "CNY"
-              }
-          ]
-      },
-      {
-          "name": "Santa Rosa",
-          "lat": 38.440429,
-          "lng": -122.7140548,
-          "radius": 32038,
-          "prices": [
-              {
-                  "airport": "SFO",
-                  "amount": 16,
-                  "currency": "CNY"
-              },
-              {
-                  "airport": "SJC",
-                  "amount": 15,
-                  "currency": "CNY"
-              }
-          ]
-      }
-  ],
-  "hint": [
-      {
-          "normal_reserve_value": 72,
-          "notice_time_hint": [
-              {
-                  "notice_time": {
-                      "time": 4320,
-                      "percent": 100,
-                      "allowance": 600
-                  },
-                  "advance_time_start": 10,
-                  "advance_time_end": 72
-              }
-          ],
-          "vehicles": [
-              34,
-              35,
-              52,
-              58,
-              59,
-              60,
-              24,
-              22,
-              25,
-              29,
-              30,
-              28,
-              32,
-              33,
-              27,
-              23,
-              36,
-              21,
-              50,
-              61,
-              48,
-              56,
-              4,
-              40,
-              63,
-              6,
-              3
-          ]
-      }
-  ],
-  "pricing_schedule_sum": [
-      {
-          "notice_time_hint": [
-              [
-                  {
-                      "from": "00:00",
-                      "to": "01:30",
-                      "delta_amount": 0
-                  },
-                  {
-                      "from": "03:00",
-                      "to": "04:30",
-                      "percent": 10,
-                      "delta_amount": 0
-                  },
-                  {
-                      "from": "22:00",
-                      "to": "23:59",
-                      "percent": 100,
-                      "delta_amount": 0,
-                      "break": true
-                  }
-              ],
-              "null",
-              [
-                  {
-                      "from": "00:00",
-                      "to": "02:00",
-                      "percent": 5,
-                      "delta_amount": 0
-                  },
-                  {
-                      "from": "04:00",
-                      "to": "05:30",
-                      "delta_amount": 2,
-                      "percent": 0
-                  }
-              ],
-              [
-                  {
-                      "from": "00:00",
-                      "to": "01:00",
-                      "percent": 2,
-                      "delta_amount": 0
-                  },
-                  {
-                      "from": "03:00",
-                      "to": "04:30",
-                      "delta_amount": 8,
-                      "percent": 0
-                  }
-              ],
-              [
-                  {
-                      "from": "00:00",
-                      "to": "01:30",
-                      "percent": 99,
-                      "delta_amount": 0
-                  }
-              ],
-              "null",
-              [
-                  {
-                      "from": "00:30",
-                      "to": "03:00",
-                      "percent": 7,
-                      "delta_amount": 0
-                  }
-              ]
-          ],
-          "vehicles": [
-              23,
-              27,
-              24,
-              21,
-              22,
-              1,
-              2
-          ]
-      },
-      {
-          "notice_time_hint": [
-              "null",
-              [
-                  {
-                      "from": "00:30",
-                      "to": "02:30",
-                      "percent": 33,
-                      "delta_amount": 0
-                  }
-              ],
-              "null",
-              "null",
-              "null",
-              "null",
-              "null"
-          ],
-          "vehicles": [
-              29
-          ]
-      }
-  ],
-  "currencyCode": "CNY",
-  "hourly_pricing": {
-      "min_amount": 100,
-      "min_duration": 3,
-      "currency": "CNY",
-      "ranges": [
-          {
-              "seq": 0,
-              "amount": 30,
-              "currency": "CNY",
-              "duration": 7,
-              "from": 3,
-              "to": 10
-          },
-          {
-              "seq": 1,
-              "amount": 19.6,
-              "currency": "CNY",
-              "duration": 65,
-              "from": 10,
-              "to": 75
-          },
-          {
-              "seq": 2,
-              "amount": 40.5,
-              "currency": "CNY",
-              "duration": 800,
-              "from": 75,
-              "to": 875
-          }
-      ]
-  },
-  "countryCode": "CHN"
+    "percent": "0",
+    "dataType": "1",
+    "country": {
+        "exclude": [
+            {
+                "alpha_3": "TWN"
+            }
+        ]
+    },
+    "service_areas": {
+        "mag_delta": [
+            {
+                "id": "40",
+                "delta": "1",
+                "currency": "USD"
+            },
+            {
+                "id": "73",
+                "delta": "-12",
+                "currency": "USD"
+            },
+            {
+                "id": "77",
+                "delta": "-12",
+                "currency": "USD"
+            },
+            {
+                "id": "89",
+                "delta": "-12",
+                "currency": "USD"
+            },
+            {
+                "id": "74",
+                "delta": "-12",
+                "currency": "USD"
+            },
+            {
+                "id": "68",
+                "delta": "-10",
+                "currency": "USD"
+            },
+            {
+                "id": "55",
+                "delta": "-10",
+                "currency": "USD"
+            },
+            {
+                "id": "125",
+                "delta": "0",
+                "currency": "USD"
+            },
+            {
+                "id": "276",
+                "delta": "0",
+                "currency": "USD"
+            },
+            {
+                "id": "57",
+                "delta": 0,
+                "currency": "USD",
+                "switch": "on"
+            }
+        ],
+        "sas_percent": [
+            {
+                "id": 37,
+                "percent": "0"
+            },
+            {
+                "id": 62,
+                "percent": "200",
+                "vcs": [
+                    {
+                        "id": 5,
+                        "percent": "0"
+                    },
+                    {
+                        "id": 9,
+                        "percent": "0"
+                    },
+                    {
+                        "id": 10,
+                        "percent": "0"
+                    },
+                    {
+                        "id": 11,
+                        "percent": "0"
+                    }
+                ]
+            },
+            {
+                "id": "55",
+                "percent": "0"
+            },
+            {
+                "id": "56",
+                "percent": "500",
+                "vcs": [
+                    {
+                        "id": 1,
+                        "percent": "50"
+                    },
+                    {
+                        "id": 6,
+                        "percent": "50"
+                    },
+                    {
+                        "id": 3,
+                        "percent": "50"
+                    }
+                ]
+            },
+            {
+                "id": "778",
+                "percent": "0"
+            },
+            {
+                "id": "168",
+                "percent": "0",
+                "vcs": [
+                    {
+                        "id": "6",
+                        "percent": "-32"
+                    }
+                ]
+            },
+            {
+                "id": "607",
+                "percent": "0"
+            },
+            {
+                "id": "167",
+                "percent": "0",
+                "vcs": []
+            },
+            {
+                "id": "27443",
+                "percent": "10"
+            },
+            {
+                "id": "161",
+                "percent": "-1"
+            },
+            {
+                "id": "157",
+                "percent": "-1"
+            },
+            {
+                "id": "1716",
+                "percent": "-1"
+            },
+            {
+                "id": "158",
+                "percent": "-1"
+            },
+            {
+                "id": "1711",
+                "percent": "2"
+            },
+            {
+                "id": "1713",
+                "percent": "3"
+            },
+            {
+                "id": "42921",
+                "percent": "0"
+            },
+            {
+                "id": "42920",
+                "percent": "20"
+            },
+            {
+                "id": "27053",
+                "percent": "15"
+            },
+            {
+                "id": "27504",
+                "percent": "15"
+            },
+            {
+                "id": "27568",
+                "percent": "20"
+            },
+            {
+                "id": "1745",
+                "percent": "10"
+            },
+            {
+                "id": "27500",
+                "percent": "20"
+            },
+            {
+                "id": "27570",
+                "percent": "0"
+            },
+            {
+                "id": "1710",
+                "percent": "0"
+            },
+            {
+                "id": "27427",
+                "percent": "5"
+            },
+            {
+                "id": "881",
+                "percent": "15"
+            },
+            {
+                "id": "1723",
+                "percent": "0"
+            },
+            {
+                "id": "27546",
+                "percent": "20"
+            },
+            {
+                "id": "27561",
+                "percent": "10"
+            },
+            {
+                "id": "27507",
+                "percent": "0"
+            },
+            {
+                "id": "1714",
+                "percent": "5"
+            },
+            {
+                "id": "27436",
+                "percent": "15"
+            },
+            {
+                "id": "1708",
+                "percent": "0"
+            },
+            {
+                "id": "1718",
+                "percent": "0"
+            },
+            {
+                "id": "27417",
+                "percent": "5"
+            },
+            {
+                "id": "27567",
+                "percent": "10"
+            },
+            {
+                "id": "27563",
+                "percent": "0"
+            },
+            {
+                "id": "27562",
+                "percent": "0"
+            },
+            {
+                "id": "1706",
+                "percent": "0"
+            },
+            {
+                "id": "27560",
+                "percent": "0"
+            },
+            {
+                "id": "27377",
+                "percent": "0"
+            },
+            {
+                "id": "707",
+                "percent": "0"
+            },
+            {
+                "id": "40926",
+                "percent": "20"
+            },
+            {
+                "id": "1848",
+                "percent": "-1"
+            },
+            {
+                "id": "1726",
+                "percent": "-1"
+            },
+            {
+                "id": "1832",
+                "percent": "-2"
+            },
+            {
+                "id": "1720",
+                "percent": "-3"
+            },
+            {
+                "id": "708",
+                "percent": "0"
+            },
+            {
+                "id": "159",
+                "percent": "-2"
+            },
+            {
+                "id": 486,
+                "percent": "100"
+            },
+            {
+                "id": "277",
+                "percent": "100"
+            },
+            {
+                "id": "26047",
+                "percent": "50"
+            },
+            {
+                "id": "1197",
+                "percent": "100"
+            },
+            {
+                "id": "1196",
+                "percent": "100"
+            },
+            {
+                "id": "1194",
+                "percent": "100"
+            },
+            {
+                "id": "1195",
+                "percent": "100"
+            },
+            {
+                "id": "1193",
+                "percent": "100"
+            },
+            {
+                "id": "1192",
+                "percent": "50"
+            },
+            {
+                "id": "1188",
+                "percent": "100"
+            },
+            {
+                "id": "1191",
+                "percent": "100"
+            },
+            {
+                "id": "1189",
+                "percent": "100"
+            },
+            {
+                "id": "1187",
+                "percent": "100"
+            },
+            {
+                "id": "429",
+                "percent": "100"
+            },
+            {
+                "id": "1185",
+                "percent": "100"
+            },
+            {
+                "id": "448",
+                "percent": "100"
+            },
+            {
+                "id": "319",
+                "percent": "100"
+            },
+            {
+                "id": "1206",
+                "percent": "100"
+            },
+            {
+                "id": "1864",
+                "percent": "100"
+            },
+            {
+                "id": "1178",
+                "percent": "100"
+            },
+            {
+                "id": "1184",
+                "percent": "100"
+            },
+            {
+                "id": "1183",
+                "percent": "100"
+            },
+            {
+                "id": "1182",
+                "percent": "100"
+            },
+            {
+                "id": "1181",
+                "percent": "100"
+            },
+            {
+                "id": "1180",
+                "percent": "100"
+            },
+            {
+                "id": "1179",
+                "percent": "100"
+            },
+            {
+                "id": "1175",
+                "percent": "100"
+            },
+            {
+                "id": "1173",
+                "percent": "100"
+            },
+            {
+                "id": "874",
+                "percent": "100"
+            },
+            {
+                "id": "1769",
+                "percent": "100"
+            },
+            {
+                "id": "1172",
+                "percent": "100"
+            },
+            {
+                "id": "1485",
+                "percent": "50"
+            },
+            {
+                "id": "1654",
+                "percent": "50"
+            },
+            {
+                "id": "1484",
+                "percent": "50"
+            },
+            {
+                "id": "1483",
+                "percent": "50"
+            },
+            {
+                "id": "1482",
+                "percent": "50"
+            },
+            {
+                "id": "1481",
+                "percent": "50"
+            },
+            {
+                "id": "1480",
+                "percent": "50"
+            },
+            {
+                "id": "1479",
+                "percent": "50"
+            },
+            {
+                "id": "1477",
+                "percent": "50"
+            },
+            {
+                "id": "1478",
+                "percent": "50"
+            },
+            {
+                "id": "1851",
+                "percent": "50"
+            },
+            {
+                "id": "1476",
+                "percent": "50"
+            },
+            {
+                "id": "1475",
+                "percent": "50"
+            },
+            {
+                "id": "1474",
+                "percent": "50"
+            },
+            {
+                "id": "1473",
+                "percent": "50"
+            },
+            {
+                "id": "1653",
+                "percent": "50"
+            },
+            {
+                "id": "1472",
+                "percent": "50"
+            },
+            {
+                "id": "1822",
+                "percent": "50"
+            },
+            {
+                "id": "1471",
+                "percent": "50"
+            },
+            {
+                "id": "1470",
+                "percent": "50"
+            },
+            {
+                "id": "1469",
+                "percent": "50"
+            },
+            {
+                "id": 276,
+                "percent": "0",
+                "vcs": [
+                    {
+                        "id": 2,
+                        "percent": "-26.35"
+                    },
+                    {
+                        "id": 4,
+                        "percent": "-2.35"
+                    },
+                    {
+                        "id": 36,
+                        "percent": "-2.35"
+                    },
+                    {
+                        "id": 5,
+                        "percent": "-5.3"
+                    },
+                    {
+                        "id": 42,
+                        "percent": "-15"
+                    }
+                ]
+            },
+            {
+                "id": "341",
+                "percent": "",
+                "vcs": [
+                    {
+                        "id": 1,
+                        "percent": "21.5"
+                    },
+                    {
+                        "id": 9,
+                        "percent": "30"
+                    },
+                    {
+                        "id": 10,
+                        "percent": "30"
+                    },
+                    {
+                        "id": 11,
+                        "percent": "30"
+                    }
+                ]
+            },
+            {
+                "id": "11395",
+                "percent": "70"
+            },
+            {
+                "id": "1046",
+                "percent": "40"
+            },
+            {
+                "id": "1045",
+                "percent": "40"
+            },
+            {
+                "id": "1044",
+                "percent": "40"
+            },
+            {
+                "id": "1043",
+                "percent": "40"
+            },
+            {
+                "id": "1042",
+                "percent": "40"
+            },
+            {
+                "id": "623",
+                "percent": "40"
+            },
+            {
+                "id": "1154",
+                "percent": "40"
+            },
+            {
+                "id": "1041",
+                "percent": "40"
+            },
+            {
+                "id": "1153",
+                "percent": "40"
+            },
+            {
+                "id": "1040",
+                "percent": "40"
+            },
+            {
+                "id": "1039",
+                "percent": "40"
+            },
+            {
+                "id": "45",
+                "percent": "0"
+            },
+            {
+                "id": "41",
+                "percent": "0"
+            },
+            {
+                "id": "870",
+                "percent": "30"
+            },
+            {
+                "id": "153",
+                "percent": "0"
+            },
+            {
+                "id": "1152",
+                "percent": "5",
+                "vcs": [
+                    {
+                        "id": "9",
+                        "percent": "100"
+                    },
+                    {
+                        "id": "10",
+                        "percent": "100"
+                    },
+                    {
+                        "id": "11",
+                        "percent": "100"
+                    }
+                ]
+            },
+            {
+                "id": "1151",
+                "percent": "5",
+                "vcs": [
+                    {
+                        "id": "9",
+                        "percent": "100"
+                    },
+                    {
+                        "id": "10",
+                        "percent": "100"
+                    },
+                    {
+                        "id": "11",
+                        "percent": "100"
+                    },
+                    {
+                        "id": "29",
+                        "percent": "100"
+                    },
+                    {
+                        "id": "30",
+                        "percent": "100"
+                    },
+                    {
+                        "id": "31",
+                        "percent": "100"
+                    },
+                    {
+                        "id": "32",
+                        "percent": "100"
+                    },
+                    {
+                        "id": "33",
+                        "percent": "100"
+                    },
+                    {
+                        "id": "34",
+                        "percent": "100"
+                    },
+                    {
+                        "id": "35",
+                        "percent": "100"
+                    }
+                ]
+            },
+            {
+                "id": "1150",
+                "percent": "5",
+                "vcs": [
+                    {
+                        "id": "9",
+                        "percent": "100"
+                    },
+                    {
+                        "id": "10",
+                        "percent": "100"
+                    },
+                    {
+                        "id": "11",
+                        "percent": "100"
+                    },
+                    {
+                        "id": "29",
+                        "percent": "100"
+                    },
+                    {
+                        "id": "30",
+                        "percent": "100"
+                    },
+                    {
+                        "id": "31",
+                        "percent": "100"
+                    },
+                    {
+                        "id": "32",
+                        "percent": "100"
+                    },
+                    {
+                        "id": "33",
+                        "percent": "100"
+                    },
+                    {
+                        "id": "34",
+                        "percent": "100"
+                    },
+                    {
+                        "id": "35",
+                        "percent": "100"
+                    }
+                ]
+            },
+            {
+                "id": "1148",
+                "percent": "5",
+                "vcs": [
+                    {
+                        "id": "9",
+                        "percent": "100"
+                    },
+                    {
+                        "id": "10",
+                        "percent": "100"
+                    },
+                    {
+                        "id": "11",
+                        "percent": "100"
+                    },
+                    {
+                        "id": "40",
+                        "percent": "100"
+                    }
+                ]
+            },
+            {
+                "id": "1147",
+                "percent": "5",
+                "vcs": [
+                    {
+                        "id": "9",
+                        "percent": "100"
+                    },
+                    {
+                        "id": "10",
+                        "percent": "100"
+                    },
+                    {
+                        "id": "11",
+                        "percent": "100"
+                    }
+                ]
+            },
+            {
+                "id": "1146",
+                "percent": "5",
+                "vcs": [
+                    {
+                        "id": "9",
+                        "percent": "100"
+                    },
+                    {
+                        "id": "10",
+                        "percent": "100"
+                    },
+                    {
+                        "id": "11",
+                        "percent": "100"
+                    }
+                ]
+            },
+            {
+                "id": "1145",
+                "percent": "5",
+                "vcs": [
+                    {
+                        "id": "9",
+                        "percent": "100"
+                    },
+                    {
+                        "id": "10",
+                        "percent": "100"
+                    },
+                    {
+                        "id": "11",
+                        "percent": "100"
+                    }
+                ]
+            },
+            {
+                "id": "1144",
+                "percent": "5",
+                "vcs": [
+                    {
+                        "id": "9",
+                        "percent": "100"
+                    },
+                    {
+                        "id": "10",
+                        "percent": "100"
+                    },
+                    {
+                        "id": "11",
+                        "percent": "100"
+                    }
+                ]
+            },
+            {
+                "id": "1143",
+                "percent": "5",
+                "vcs": [
+                    {
+                        "id": "9",
+                        "percent": "100"
+                    },
+                    {
+                        "id": "10",
+                        "percent": "100"
+                    },
+                    {
+                        "id": "11",
+                        "percent": "100"
+                    },
+                    {
+                        "id": "29",
+                        "percent": "100"
+                    },
+                    {
+                        "id": "30",
+                        "percent": "100"
+                    },
+                    {
+                        "id": "31",
+                        "percent": "100"
+                    },
+                    {
+                        "id": "32",
+                        "percent": "100"
+                    },
+                    {
+                        "id": "33",
+                        "percent": "100"
+                    },
+                    {
+                        "id": "34",
+                        "percent": "100"
+                    },
+                    {
+                        "id": "35",
+                        "percent": "100"
+                    }
+                ]
+            },
+            {
+                "id": "1142",
+                "percent": "5",
+                "vcs": [
+                    {
+                        "id": "9",
+                        "percent": "100"
+                    },
+                    {
+                        "id": "10",
+                        "percent": "100"
+                    },
+                    {
+                        "id": "11",
+                        "percent": "100"
+                    },
+                    {
+                        "id": "29",
+                        "percent": "100"
+                    },
+                    {
+                        "id": "30",
+                        "percent": "100"
+                    },
+                    {
+                        "id": "31",
+                        "percent": "100"
+                    },
+                    {
+                        "id": "32",
+                        "percent": "100"
+                    },
+                    {
+                        "id": "33",
+                        "percent": "100"
+                    },
+                    {
+                        "id": "34",
+                        "percent": "100"
+                    },
+                    {
+                        "id": "35",
+                        "percent": "100"
+                    }
+                ]
+            },
+            {
+                "id": "1141",
+                "percent": "5",
+                "vcs": []
+            },
+            {
+                "id": "1138",
+                "percent": "5",
+                "vcs": []
+            },
+            {
+                "id": "1137",
+                "percent": "5",
+                "vcs": []
+            },
+            {
+                "id": "1136",
+                "percent": "5",
+                "vcs": [
+                    {
+                        "id": "9",
+                        "percent": "100"
+                    },
+                    {
+                        "id": "10",
+                        "percent": "100"
+                    },
+                    {
+                        "id": "11",
+                        "percent": "100"
+                    }
+                ]
+            },
+            {
+                "id": "1135",
+                "percent": "5",
+                "vcs": [
+                    {
+                        "id": "9",
+                        "percent": "100"
+                    },
+                    {
+                        "id": "10",
+                        "percent": "100"
+                    },
+                    {
+                        "id": "11",
+                        "percent": "100"
+                    },
+                    {
+                        "id": "29",
+                        "percent": "100"
+                    }
+                ]
+            },
+            {
+                "id": "1411",
+                "percent": "50"
+            },
+            {
+                "id": "1133",
+                "percent": "5",
+                "vcs": [
+                    {
+                        "id": "9",
+                        "percent": "100"
+                    },
+                    {
+                        "id": "10",
+                        "percent": "100"
+                    },
+                    {
+                        "id": "11",
+                        "percent": "100"
+                    },
+                    {
+                        "id": "29",
+                        "percent": "100"
+                    }
+                ]
+            },
+            {
+                "id": "1132",
+                "percent": "5",
+                "vcs": [
+                    {
+                        "id": "9",
+                        "percent": "100"
+                    },
+                    {
+                        "id": "10",
+                        "percent": "100"
+                    },
+                    {
+                        "id": "11",
+                        "percent": "100"
+                    }
+                ]
+            },
+            {
+                "id": "1823",
+                "percent": "5",
+                "vcs": [
+                    {
+                        "id": "9",
+                        "percent": "100"
+                    },
+                    {
+                        "id": "10",
+                        "percent": "100"
+                    },
+                    {
+                        "id": "11",
+                        "percent": "100"
+                    }
+                ]
+            },
+            {
+                "id": "1131",
+                "percent": "5",
+                "vcs": [
+                    {
+                        "id": "9",
+                        "percent": "100"
+                    },
+                    {
+                        "id": "10",
+                        "percent": "100"
+                    },
+                    {
+                        "id": "11",
+                        "percent": "100"
+                    },
+                    {
+                        "id": "29",
+                        "percent": "100"
+                    }
+                ]
+            },
+            {
+                "id": "1130",
+                "percent": "5",
+                "vcs": [
+                    {
+                        "id": "9",
+                        "percent": "100"
+                    },
+                    {
+                        "id": "10",
+                        "percent": "100"
+                    },
+                    {
+                        "id": "11",
+                        "percent": "100"
+                    }
+                ]
+            },
+            {
+                "id": "1129",
+                "percent": "5",
+                "vcs": [
+                    {
+                        "id": "9",
+                        "percent": "100"
+                    },
+                    {
+                        "id": "10",
+                        "percent": "100"
+                    },
+                    {
+                        "id": "11",
+                        "percent": "100"
+                    }
+                ]
+            },
+            {
+                "id": "1128",
+                "percent": "5",
+                "vcs": [
+                    {
+                        "id": "9",
+                        "percent": "100"
+                    },
+                    {
+                        "id": "10",
+                        "percent": "100"
+                    },
+                    {
+                        "id": "11",
+                        "percent": "100"
+                    }
+                ]
+            },
+            {
+                "id": "1127",
+                "percent": "5",
+                "vcs": []
+            },
+            {
+                "id": "1126",
+                "percent": "5",
+                "vcs": [
+                    {
+                        "id": "9",
+                        "percent": "100"
+                    },
+                    {
+                        "id": "10",
+                        "percent": "100"
+                    },
+                    {
+                        "id": "11",
+                        "percent": "100"
+                    },
+                    {
+                        "id": "29",
+                        "percent": "100"
+                    }
+                ]
+            },
+            {
+                "id": "1125",
+                "percent": "5",
+                "vcs": [
+                    {
+                        "id": "9",
+                        "percent": "100"
+                    },
+                    {
+                        "id": "10",
+                        "percent": "100"
+                    },
+                    {
+                        "id": "11",
+                        "percent": "100"
+                    }
+                ]
+            },
+            {
+                "id": "1124",
+                "percent": "5",
+                "vcs": [
+                    {
+                        "id": "9",
+                        "percent": "100"
+                    },
+                    {
+                        "id": "10",
+                        "percent": "100"
+                    },
+                    {
+                        "id": "11",
+                        "percent": "100"
+                    }
+                ]
+            },
+            {
+                "id": "1123",
+                "percent": "5",
+                "vcs": []
+            },
+            {
+                "id": "1159",
+                "percent": "5",
+                "vcs": []
+            },
+            {
+                "id": "1149",
+                "percent": "5",
+                "vcs": []
+            },
+            {
+                "id": "452",
+                "percent": "5",
+                "vcs": []
+            },
+            {
+                "id": "1140",
+                "percent": "5",
+                "vcs": []
+            },
+            {
+                "id": "1139",
+                "percent": "5",
+                "vcs": []
+            },
+            {
+                "id": "1387",
+                "percent": "0"
+            },
+            {
+                "id": "1392",
+                "percent": "0"
+            },
+            {
+                "id": "1393",
+                "percent": "0"
+            },
+            {
+                "id": "152",
+                "percent": "0"
+            },
+            {
+                "id": "323",
+                "percent": "100"
+            },
+            {
+                "id": "324",
+                "percent": "0"
+            },
+            {
+                "id": "426",
+                "percent": "0",
+                "vcs": [
+                    {
+                        "id": 1,
+                        "percent": "-0.5"
+                    },
+                    {
+                        "id": 6,
+                        "percent": "-0.5"
+                    },
+                    {
+                        "id": 5,
+                        "percent": "-0.1"
+                    }
+                ]
+            },
+            {
+                "id": "36334",
+                "percent": "30"
+            },
+            {
+                "id": "449",
+                "percent": "0"
+            },
+            {
+                "id": "76",
+                "percent": "0",
+                "vcs": [
+                    {
+                        "id": "5",
+                        "percent": "0"
+                    },
+                    {
+                        "id": "9",
+                        "percent": "0"
+                    },
+                    {
+                        "id": "10",
+                        "percent": "0"
+                    },
+                    {
+                        "id": "11",
+                        "percent": "0"
+                    }
+                ]
+            },
+            {
+                "id": "73",
+                "percent": "0",
+                "vcs": [
+                    {
+                        "id": "40",
+                        "percent": "0"
+                    },
+                    {
+                        "id": "36",
+                        "percent": "0"
+                    },
+                    {
+                        "id": "21",
+                        "percent": "0"
+                    },
+                    {
+                        "id": "22",
+                        "percent": "0"
+                    },
+                    {
+                        "id": "23",
+                        "percent": "0"
+                    },
+                    {
+                        "id": "24",
+                        "percent": "0"
+                    },
+                    {
+                        "id": "27",
+                        "percent": "0"
+                    },
+                    {
+                        "id": "5",
+                        "percent": "0"
+                    },
+                    {
+                        "id": "9",
+                        "percent": "0"
+                    },
+                    {
+                        "id": "10",
+                        "percent": "0"
+                    },
+                    {
+                        "id": "11",
+                        "percent": "0"
+                    },
+                    {
+                        "id": "29",
+                        "percent": "0"
+                    },
+                    {
+                        "id": "30",
+                        "percent": "0"
+                    },
+                    {
+                        "id": "31",
+                        "percent": "0"
+                    },
+                    {
+                        "id": "32",
+                        "percent": "0"
+                    },
+                    {
+                        "id": "33",
+                        "percent": "0"
+                    },
+                    {
+                        "id": "34",
+                        "percent": "0"
+                    },
+                    {
+                        "id": "35",
+                        "percent": "0"
+                    },
+                    {
+                        "id": "50",
+                        "percent": "0"
+                    }
+                ]
+            },
+            {
+                "id": "77",
+                "percent": "0",
+                "vcs": [
+                    {
+                        "id": "40",
+                        "percent": "0"
+                    },
+                    {
+                        "id": "36",
+                        "percent": "0"
+                    },
+                    {
+                        "id": "21",
+                        "percent": "0"
+                    },
+                    {
+                        "id": "22",
+                        "percent": "0"
+                    },
+                    {
+                        "id": "23",
+                        "percent": "0"
+                    },
+                    {
+                        "id": "24",
+                        "percent": "0"
+                    },
+                    {
+                        "id": "27",
+                        "percent": "0"
+                    },
+                    {
+                        "id": "5",
+                        "percent": "0"
+                    },
+                    {
+                        "id": "9",
+                        "percent": "0"
+                    },
+                    {
+                        "id": "10",
+                        "percent": "0"
+                    },
+                    {
+                        "id": "11",
+                        "percent": "0"
+                    },
+                    {
+                        "id": "29",
+                        "percent": "0"
+                    },
+                    {
+                        "id": "30",
+                        "percent": "0"
+                    },
+                    {
+                        "id": "31",
+                        "percent": "0"
+                    },
+                    {
+                        "id": "32",
+                        "percent": "0"
+                    },
+                    {
+                        "id": "33",
+                        "percent": "0"
+                    },
+                    {
+                        "id": "34",
+                        "percent": "0"
+                    },
+                    {
+                        "id": "35",
+                        "percent": "0"
+                    }
+                ]
+            },
+            {
+                "id": "74",
+                "percent": "0",
+                "vcs": [
+                    {
+                        "id": "40",
+                        "percent": "0"
+                    },
+                    {
+                        "id": "36",
+                        "percent": "0"
+                    },
+                    {
+                        "id": "21",
+                        "percent": "0"
+                    },
+                    {
+                        "id": "22",
+                        "percent": "0"
+                    },
+                    {
+                        "id": "23",
+                        "percent": "0"
+                    },
+                    {
+                        "id": "24",
+                        "percent": "0"
+                    },
+                    {
+                        "id": "27",
+                        "percent": "0"
+                    },
+                    {
+                        "id": "9",
+                        "percent": "0"
+                    },
+                    {
+                        "id": "10",
+                        "percent": "0"
+                    },
+                    {
+                        "id": "11",
+                        "percent": "0"
+                    },
+                    {
+                        "id": "29",
+                        "percent": "0"
+                    },
+                    {
+                        "id": "30",
+                        "percent": "0"
+                    },
+                    {
+                        "id": "31",
+                        "percent": "0"
+                    },
+                    {
+                        "id": "32",
+                        "percent": "0"
+                    },
+                    {
+                        "id": "33",
+                        "percent": "0"
+                    },
+                    {
+                        "id": "34",
+                        "percent": "0"
+                    },
+                    {
+                        "id": "35",
+                        "percent": "0"
+                    },
+                    {
+                        "id": "50",
+                        "percent": "0"
+                    }
+                ]
+            },
+            {
+                "id": "72",
+                "percent": "0",
+                "vcs": [
+                    {
+                        "id": "40",
+                        "percent": "0"
+                    },
+                    {
+                        "id": "5",
+                        "percent": "0"
+                    },
+                    {
+                        "id": "9",
+                        "percent": "0"
+                    },
+                    {
+                        "id": "10",
+                        "percent": "0"
+                    },
+                    {
+                        "id": "11",
+                        "percent": "0"
+                    },
+                    {
+                        "id": "36",
+                        "percent": "0"
+                    },
+                    {
+                        "id": "21",
+                        "percent": "0"
+                    },
+                    {
+                        "id": "22",
+                        "percent": "0"
+                    },
+                    {
+                        "id": "23",
+                        "percent": "0"
+                    },
+                    {
+                        "id": "24",
+                        "percent": "0"
+                    },
+                    {
+                        "id": "27",
+                        "percent": "0"
+                    },
+                    {
+                        "id": "29",
+                        "percent": "0"
+                    },
+                    {
+                        "id": "30",
+                        "percent": "0"
+                    },
+                    {
+                        "id": "31",
+                        "percent": "0"
+                    },
+                    {
+                        "id": "32",
+                        "percent": "0"
+                    },
+                    {
+                        "id": "33",
+                        "percent": "0"
+                    },
+                    {
+                        "id": "34",
+                        "percent": "0"
+                    },
+                    {
+                        "id": "35",
+                        "percent": "0"
+                    },
+                    {
+                        "id": "41",
+                        "percent": "0"
+                    },
+                    {
+                        "id": "12",
+                        "percent": "0"
+                    }
+                ]
+            },
+            {
+                "id": "69",
+                "percent": "0",
+                "vcs": [
+                    {
+                        "id": "40",
+                        "percent": "0"
+                    },
+                    {
+                        "id": "21",
+                        "percent": "0"
+                    },
+                    {
+                        "id": "22",
+                        "percent": "0"
+                    },
+                    {
+                        "id": "23",
+                        "percent": "0"
+                    },
+                    {
+                        "id": "24",
+                        "percent": "0"
+                    },
+                    {
+                        "id": "27",
+                        "percent": "0"
+                    },
+                    {
+                        "id": "30",
+                        "percent": "0"
+                    },
+                    {
+                        "id": "31",
+                        "percent": "0"
+                    },
+                    {
+                        "id": "32",
+                        "percent": "1"
+                    },
+                    {
+                        "id": "33",
+                        "percent": "0"
+                    },
+                    {
+                        "id": "34",
+                        "percent": "0"
+                    },
+                    {
+                        "id": "35",
+                        "percent": "0"
+                    },
+                    {
+                        "id": "41",
+                        "percent": "0"
+                    },
+                    {
+                        "id": "51",
+                        "percent": "0"
+                    },
+                    {
+                        "id": "12",
+                        "percent": "0"
+                    }
+                ]
+            },
+            {
+                "id": "149",
+                "percent": "500"
+            },
+            {
+                "id": "274",
+                "percent": "0"
+            },
+            {
+                "id": "272",
+                "percent": "0",
+                "vcs": [
+                    {
+                        "id": "3",
+                        "percent": "0"
+                    }
+                ]
+            },
+            {
+                "id": "311",
+                "percent": "0"
+            },
+            {
+                "id": "275",
+                "percent": "0"
+            },
+            {
+                "id": "150",
+                "percent": "0",
+                "vcs": [
+                    {
+                        "id": "3",
+                        "percent": "0"
+                    },
+                    {
+                        "id": "5",
+                        "percent": "0"
+                    },
+                    {
+                        "id": "9",
+                        "percent": "0"
+                    },
+                    {
+                        "id": "10",
+                        "percent": "0"
+                    },
+                    {
+                        "id": "11",
+                        "percent": "0"
+                    }
+                ]
+            },
+            {
+                "id": "1107",
+                "percent": "500"
+            },
+            {
+                "id": "147",
+                "percent": "500"
+            },
+            {
+                "id": "148",
+                "percent": "500"
+            },
+            {
+                "id": "1106",
+                "percent": "500"
+            },
+            {
+                "id": "326",
+                "percent": "0",
+                "vcs": [
+                    {
+                        "id": "1",
+                        "percent": "-17"
+                    },
+                    {
+                        "id": "2",
+                        "percent": "-2"
+                    },
+                    {
+                        "id": "6",
+                        "percent": "-29"
+                    },
+                    {
+                        "id": "4",
+                        "percent": "54"
+                    },
+                    {
+                        "id": "5",
+                        "percent": "-57"
+                    }
+                ]
+            },
+            {
+                "id": "1790",
+                "percent": "0",
+                "vcs": [
+                    {
+                        "id": "1",
+                        "percent": "-8"
+                    },
+                    {
+                        "id": "6",
+                        "percent": "-33"
+                    }
+                ]
+            },
+            {
+                "id": "640",
+                "percent": "0",
+                "vcs": [
+                    {
+                        "id": "6",
+                        "percent": "9"
+                    },
+                    {
+                        "id": "10",
+                        "percent": "-13"
+                    }
+                ]
+            },
+            {
+                "id": "863",
+                "percent": "0",
+                "vcs": [
+                    {
+                        "id": "3",
+                        "percent": "11"
+                    },
+                    {
+                        "id": "4",
+                        "percent": "10"
+                    },
+                    {
+                        "id": "5",
+                        "percent": "11"
+                    },
+                    {
+                        "id": "10",
+                        "percent": "20"
+                    }
+                ]
+            },
+            {
+                "id": "643",
+                "percent": "0",
+                "vcs": [
+                    {
+                        "id": "3",
+                        "percent": "-7"
+                    },
+                    {
+                        "id": "5",
+                        "percent": "-15"
+                    },
+                    {
+                        "id": "10",
+                        "percent": "-11"
+                    }
+                ]
+            },
+            {
+                "id": "709",
+                "percent": "0",
+                "vcs": [
+                    {
+                        "id": "1",
+                        "percent": "-25"
+                    },
+                    {
+                        "id": "6",
+                        "percent": "-20"
+                    },
+                    {
+                        "id": "4",
+                        "percent": "-18"
+                    }
+                ]
+            },
+            {
+                "id": "320",
+                "percent": "0",
+                "vcs": [
+                    {
+                        "id": 1,
+                        "percent": "-35"
+                    },
+                    {
+                        "id": 2,
+                        "percent": "-20"
+                    },
+                    {
+                        "id": 6,
+                        "percent": "-10"
+                    },
+                    {
+                        "id": 5,
+                        "percent": "-15"
+                    },
+                    {
+                        "id": 9,
+                        "percent": "-6"
+                    },
+                    {
+                        "id": 10,
+                        "percent": "-10"
+                    }
+                ]
+            },
+            {
+                "id": "636",
+                "percent": "0",
+                "vcs": [
+                    {
+                        "id": "1",
+                        "percent": "-10"
+                    },
+                    {
+                        "id": "10",
+                        "percent": "-11"
+                    }
+                ]
+            },
+            {
+                "id": "1821",
+                "percent": "0",
+                "vcs": [
+                    {
+                        "id": "1",
+                        "percent": "0"
+                    }
+                ]
+            },
+            {
+                "id": "1349",
+                "percent": "0",
+                "vcs": [
+                    {
+                        "id": "1",
+                        "percent": "0"
+                    }
+                ]
+            },
+            {
+                "id": "1305",
+                "percent": "0",
+                "vcs": [
+                    {
+                        "id": "1",
+                        "percent": "-17"
+                    }
+                ]
+            },
+            {
+                "id": "652",
+                "percent": "0",
+                "vcs": []
+            },
+            {
+                "id": "343",
+                "percent": "0",
+                "vcs": [
+                    {
+                        "id": "4",
+                        "percent": "-15"
+                    }
+                ]
+            },
+            {
+                "id": "944",
+                "percent": "0",
+                "vcs": [
+                    {
+                        "id": "6",
+                        "percent": "-13"
+                    }
+                ]
+            },
+            {
+                "id": "958",
+                "percent": "0",
+                "vcs": [
+                    {
+                        "id": "1",
+                        "percent": "-5"
+                    }
+                ]
+            },
+            {
+                "id": "344",
+                "percent": "0",
+                "vcs": [
+                    {
+                        "id": "1",
+                        "percent": "-0"
+                    },
+                    {
+                        "id": "6",
+                        "percent": "0"
+                    }
+                ]
+            },
+            {
+                "id": "964",
+                "percent": "0",
+                "vcs": [
+                    {
+                        "id": "1",
+                        "percent": "0"
+                    },
+                    {
+                        "id": "3",
+                        "percent": "0"
+                    },
+                    {
+                        "id": "6",
+                        "percent": "0"
+                    }
+                ]
+            },
+            {
+                "id": "467",
+                "percent": "0"
+            },
+            {
+                "id": "620",
+                "percent": "0"
+            },
+            {
+                "id": "1295",
+                "percent": "0",
+                "vcs": [
+                    {
+                        "id": "1",
+                        "percent": "-15"
+                    },
+                    {
+                        "id": "5",
+                        "percent": "-10"
+                    },
+                    {
+                        "id": "6",
+                        "percent": "-19"
+                    },
+                    {
+                        "id": "9",
+                        "percent": "-5"
+                    }
+                ]
+            },
+            {
+                "id": "1018",
+                "percent": ""
+            },
+            {
+                "id": "1456",
+                "percent": ""
+            },
+            {
+                "id": "638",
+                "percent": ""
+            },
+            {
+                "id": "155",
+                "percent": ""
+            },
+            {
+                "id": "920",
+                "percent": "",
+                "vcs": [
+                    {
+                        "id": "1",
+                        "percent": "-3"
+                    }
+                ]
+            },
+            {
+                "id": "109",
+                "percent": ""
+            },
+            {
+                "id": "1378",
+                "percent": ""
+            },
+            {
+                "id": "461",
+                "percent": "0"
+            },
+            {
+                "id": "1373",
+                "percent": ""
+            },
+            {
+                "id": "314",
+                "percent": ""
+            },
+            {
+                "id": "923",
+                "percent": "",
+                "vcs": [
+                    {
+                        "id": "1",
+                        "percent": "-2"
+                    },
+                    {
+                        "id": "3",
+                        "percent": "-2"
+                    },
+                    {
+                        "id": "5",
+                        "percent": "-2"
+                    },
+                    {
+                        "id": "6",
+                        "percent": "-2"
+                    }
+                ]
+            },
+            {
+                "id": "1010",
+                "percent": ""
+            },
+            {
+                "id": "132",
+                "percent": "",
+                "vcs": [
+                    {
+                        "id": "6",
+                        "percent": "0"
+                    },
+                    {
+                        "id": "3",
+                        "percent": "0"
+                    },
+                    {
+                        "id": "5",
+                        "percent": "0"
+                    }
+                ]
+            },
+            {
+                "id": "108",
+                "percent": ""
+            },
+            {
+                "id": "16767",
+                "percent": "100"
+            },
+            {
+                "id": "16771",
+                "percent": "100"
+            },
+            {
+                "id": "130",
+                "percent": "100"
+            },
+            {
+                "id": "1063",
+                "percent": "100"
+            },
+            {
+                "id": "1062",
+                "percent": "100"
+            },
+            {
+                "id": "1117",
+                "percent": "100"
+            },
+            {
+                "id": "745",
+                "percent": "100"
+            },
+            {
+                "id": "1056",
+                "percent": "100"
+            },
+            {
+                "id": "129",
+                "percent": "100"
+            },
+            {
+                "id": "1055",
+                "percent": "100"
+            },
+            {
+                "id": "37148",
+                "percent": "100"
+            },
+            {
+                "id": "1057",
+                "percent": "100"
+            },
+            {
+                "id": "746",
+                "percent": "100"
+            },
+            {
+                "id": "1052",
+                "percent": "100"
+            },
+            {
+                "id": "1053",
+                "percent": "100"
+            },
+            {
+                "id": "1060",
+                "percent": "100"
+            },
+            {
+                "id": "128",
+                "percent": "100"
+            },
+            {
+                "id": "126",
+                "percent": "100"
+            },
+            {
+                "id": "127",
+                "percent": "100"
+            },
+            {
+                "id": "44",
+                "percent": "100"
+            },
+            {
+                "id": "43",
+                "percent": "100"
+            },
+            {
+                "id": "125",
+                "percent": "0"
+            },
+            {
+                "id": "49",
+                "percent": "0"
+            },
+            {
+                "id": "105",
+                "percent": "0",
+                "vcs": [
+                    {
+                        "id": "1",
+                        "percent": "0"
+                    }
+                ]
+            },
+            {
+                "id": "145",
+                "percent": "0",
+                "vcs": [
+                    {
+                        "id": "5",
+                        "percent": "50"
+                    }
+                ]
+            },
+            {
+                "id": "1061",
+                "percent": "100"
+            },
+            {
+                "id": "1059",
+                "percent": "100"
+            },
+            {
+                "id": "15384",
+                "percent": "100"
+            },
+            {
+                "id": "1058",
+                "percent": "100"
+            },
+            {
+                "id": "1054",
+                "percent": "100"
+            }
+        ],
+        "ads_delta": [
+            {
+                "id": "57",
+                "infant": {
+                    "delta": 0,
+                    "currency": "USD",
+                    "switch": "on"
+                },
+                "toddler": {
+                    "delta": 0,
+                    "currency": "USD",
+                    "switch": "on"
+                },
+                "child": {
+                    "delta": 0,
+                    "currency": "USD",
+                    "switch": "on"
+                }
+            }
+        ]
+    },
+    "doNotDel": "doNotDel",
+    "vehicle_type_mapping": [
+        {
+            "countries": [
+                "CAN",
+                "USA"
+            ],
+            "mapping": [
+                {
+                    "elife": "1",
+                    "booking": "STANDARD",
+                    "max": "3"
+                },
+                {
+                    "elife": "6",
+                    "booking": "PEOPLECARRIER",
+                    "max": "4"
+                },
+                {
+                    "elife": "3",
+                    "booking": "LARGEPEOPLECARRIER",
+                    "max": "5"
+                },
+                {
+                    "elife": "9",
+                    "booking": "MINIBUS",
+                    "max": "10"
+                },
+                {
+                    "elife": "10",
+                    "booking": "MINIBUS",
+                    "max": "12"
+                },
+                {
+                    "elife": "2",
+                    "booking": "EXECUTIVE",
+                    "max": "3"
+                },
+                {
+                    "elife": "4",
+                    "booking": "EXECUTIVEPEOPLECARRIER",
+                    "max": "5"
+                },
+                {
+                    "elife": "5",
+                    "booking": "MINIBUS",
+                    "max": "8"
+                },
+                {
+                    "elife": "11",
+                    "booking": "MINIBUS",
+                    "max": "14"
+                },
+                {
+                    "elife": "14",
+                    "booking": "LUXURY",
+                    "max": "3"
+                },
+                {
+                    "elife": "41",
+                    "booking": "ELECTRICSTANDARD",
+                    "max": "3"
+                },
+                {
+                    "elife": "43",
+                    "booking": "ELECTRICLUXURY",
+                    "max": "3"
+                },
+                {
+                    "elife": "36",
+                    "booking": "EXECUTIVEPEOPLECARRIER",
+                    "max": "6"
+                }
+            ]
+        },
+        {
+            "countries": [
+                "AUS",
+                "NZL"
+            ],
+            "mapping": [
+                {
+                    "elife": "1",
+                    "booking": "STANDARD",
+                    "max": "3"
+                },
+                {
+                    "elife": "2",
+                    "booking": "EXECUTIVE",
+                    "max": "3"
+                },
+                {
+                    "elife": "40",
+                    "booking": "LUXURY",
+                    "max": "3"
+                },
+                {
+                    "elife": "6",
+                    "booking": "PEOPLECARRIER",
+                    "max": "4"
+                },
+                {
+                    "elife": "4",
+                    "booking": "EXECUTIVEPEOPLECARRIER",
+                    "max": "5"
+                },
+                {
+                    "elife": "3",
+                    "booking": "LARGEPEOPLECARRIER",
+                    "max": "5"
+                },
+                {
+                    "elife": "5",
+                    "booking": "MINIBUS",
+                    "max": "8"
+                },
+                {
+                    "elife": "9",
+                    "booking": "MINIBUS",
+                    "max": "10"
+                }
+            ]
+        },
+        {
+            "countries": [
+                "JPN"
+            ],
+            "mapping": [
+                {
+                    "elife": "1",
+                    "booking": "STANDARD",
+                    "max": "3"
+                },
+                {
+                    "elife": "6",
+                    "booking": "PEOPLECARRIER",
+                    "max": "4"
+                },
+                {
+                    "elife": "3",
+                    "booking": "PEOPLECARRIER",
+                    "max": "5"
+                },
+                {
+                    "elife": "7",
+                    "booking": "LARGEPEOPLECARRIER",
+                    "max": "6"
+                },
+                {
+                    "elife": "5",
+                    "booking": "LARGEPEOPLECARRIER",
+                    "max": "7"
+                },
+                {
+                    "elife": "8",
+                    "booking": "LARGEPEOPLECARRIER",
+                    "max": "8"
+                },
+                {
+                    "elife": "2",
+                    "booking": "EXECUTIVE",
+                    "max": "3"
+                },
+                {
+                    "elife": "4",
+                    "booking": "EXECUTIVEPEOPLECARRIER",
+                    "max": "5"
+                },
+                {
+                    "elife": "9",
+                    "booking": "MINIBUS",
+                    "max": "10"
+                },
+                {
+                    "elife": "10",
+                    "booking": "MINIBUS",
+                    "max": "12"
+                },
+                {
+                    "elife": "11",
+                    "booking": "MINIBUS",
+                    "max": "14"
+                },
+                {
+                    "elife": "14",
+                    "booking": "LUXURY",
+                    "max": "3"
+                },
+                {
+                    "elife": "41",
+                    "booking": "ELECTRICSTANDARD",
+                    "max": "3"
+                },
+                {
+                    "elife": "43",
+                    "booking": "ELECTRICLUXURY",
+                    "max": "3"
+                }
+            ]
+        },
+        {
+            "countries": [
+                "PRT"
+            ],
+            "mapping": [
+                {
+                    "elife": "1",
+                    "booking": "STANDARD",
+                    "max": "3"
+                },
+                {
+                    "elife": "2",
+                    "booking": "EXECUTIVE",
+                    "max": "3"
+                },
+                {
+                    "elife": "3",
+                    "booking": "PEOPLECARRIER",
+                    "max": "5"
+                },
+                {
+                    "elife": "4",
+                    "booking": "EXECUTIVEPEOPLECARRIER",
+                    "max": "5"
+                },
+                {
+                    "elife": "5",
+                    "booking": "LARGEPEOPLECARRIER",
+                    "max": "8"
+                },
+                {
+                    "elife": "11",
+                    "booking": "MINIBUS",
+                    "max": "14"
+                },
+                {
+                    "elife": "41",
+                    "booking": "ELECTRICSTANDARD",
+                    "max": "3"
+                },
+                {
+                    "elife": "43",
+                    "booking": "ELECTRICLUXURY",
+                    "max": "3"
+                }
+            ]
+        },
+        {
+            "countries": [
+                "THA"
+            ],
+            "mapping": [
+                {
+                    "elife": "1",
+                    "booking": "STANDARD",
+                    "max": "3"
+                },
+                {
+                    "elife": "2",
+                    "booking": "EXECUTIVE",
+                    "max": "3"
+                },
+                {
+                    "elife": "6",
+                    "booking": "PEOPLECARRIER",
+                    "max": "4"
+                },
+                {
+                    "elife": "3",
+                    "booking": "LARGEPEOPLECARRIER",
+                    "max": "5"
+                },
+                {
+                    "elife": "4",
+                    "booking": "EXECUTIVEPEOPLECARRIER",
+                    "max": "5"
+                },
+                {
+                    "elife": "36",
+                    "booking": "EXECUTIVEPEOPLECARRIER",
+                    "max": "5"
+                },
+                {
+                    "elife": "5",
+                    "booking": "MINIBUS",
+                    "max": "8"
+                },
+                {
+                    "elife": "9",
+                    "booking": "MINIBUS",
+                    "max": "10"
+                },
+                {
+                    "elife": "10",
+                    "booking": "MINIBUS",
+                    "max": "12"
+                },
+                {
+                    "elife": "11",
+                    "booking": "MINIBUS",
+                    "max": "14"
+                },
+                {
+                    "elife": "41",
+                    "booking": "ELECTICSTANDARD",
+                    "max": "3"
+                },
+                {
+                    "elife": "43",
+                    "booking": "ELECTICLUXURY",
+                    "max": "3"
+                }
+            ]
+        },
+        {
+            "countries": [
+                "HKG"
+            ],
+            "mapping": [
+                {
+                    "elife": "1",
+                    "booking": "STANDARD",
+                    "max": "3"
+                },
+                {
+                    "elife": "6",
+                    "booking": "PEOPLECARRIER",
+                    "max": "4"
+                },
+                {
+                    "elife": "3",
+                    "booking": "LARGEPEOPLECARRIER",
+                    "max": "5"
+                },
+                {
+                    "elife": "2",
+                    "booking": "EXECUTIVE",
+                    "max": "3"
+                },
+                {
+                    "elife": "4",
+                    "booking": "EXECUTIVEPEOPLECARRIER",
+                    "max": "5"
+                },
+                {
+                    "elife": "36",
+                    "booking": "EXECUTIVEPEOPLECARRIER",
+                    "max": "5"
+                },
+                {
+                    "elife": "5",
+                    "booking": "MINIBUS",
+                    "max": "8"
+                },
+                {
+                    "elife": "9",
+                    "booking": "MINIBUS",
+                    "max": "10"
+                },
+                {
+                    "elife": "10",
+                    "booking": "MINIBUS",
+                    "max": "12"
+                },
+                {
+                    "elife": "11",
+                    "booking": "MINIBUS",
+                    "max": "14"
+                },
+                {
+                    "elife": "29",
+                    "booking": "MINIBUS",
+                    "max": "16"
+                },
+                {
+                    "elife": "40",
+                    "booking": "LUXURY",
+                    "max": "3"
+                },
+                {
+                    "elife": "41",
+                    "booking": "ELECTRICSTANDARD",
+                    "max": "3"
+                },
+                {
+                    "elife": "43",
+                    "booking": "ELECTRICLUXURY",
+                    "max": "3"
+                }
+            ]
+        },
+        {
+            "countries": [
+                "MAC"
+            ],
+            "mapping": [
+                {
+                    "elife": "1",
+                    "booking": "STANDARD",
+                    "max": "3"
+                },
+                {
+                    "elife": "2",
+                    "booking": "EXECUTIVE",
+                    "max": "3"
+                },
+                {
+                    "elife": "6",
+                    "booking": "PEOPLECARRIER",
+                    "max": "4"
+                },
+                {
+                    "elife": "3",
+                    "booking": "PEOPLECARRIER",
+                    "max": "5"
+                },
+                {
+                    "elife": "4",
+                    "booking": "EXECUTIVEPEOPLECARRIER",
+                    "max": "5"
+                },
+                {
+                    "elife": "5",
+                    "booking": "LARGEPEOPLECARRIER",
+                    "max": "8"
+                },
+                {
+                    "elife": "9",
+                    "booking": "MINIBUS",
+                    "max": "10"
+                },
+                {
+                    "elife": "10",
+                    "booking": "MINIBUS",
+                    "max": "12"
+                },
+                {
+                    "elife": "11",
+                    "booking": "MINIBUS",
+                    "max": "14"
+                },
+                {
+                    "elife": "29",
+                    "booking": "MINIBUS",
+                    "max": "16"
+                },
+                {
+                    "elife": "41",
+                    "booking": "ELECTRICSTANDARD",
+                    "max": "3"
+                },
+                {
+                    "elife": "43",
+                    "booking": "ELECTRICLUXURY",
+                    "max": "3"
+                }
+            ]
+        },
+        {
+            "countries": [
+                "CHN"
+            ],
+            "mapping": [
+                {
+                    "elife": "1",
+                    "booking": "STANDARD",
+                    "max": "3"
+                },
+                {
+                    "elife": "6",
+                    "booking": "PEOPLECARRIER",
+                    "max": "4"
+                },
+                {
+                    "elife": "3",
+                    "booking": "LARGEPEOPLECARRIER",
+                    "max": "5"
+                },
+                {
+                    "elife": "2",
+                    "booking": "EXECUTIVE",
+                    "max": "3"
+                },
+                {
+                    "elife": "4",
+                    "booking": "EXECUTIVEPEOPLECARRIER",
+                    "max": "5"
+                },
+                {
+                    "elife": "36",
+                    "booking": "EXECUTIVEPEOPLECARRIER",
+                    "max": "5"
+                },
+                {
+                    "elife": "5",
+                    "booking": "MINIBUS",
+                    "max": "8"
+                },
+                {
+                    "elife": "9",
+                    "booking": "MINIBUS",
+                    "max": "10"
+                },
+                {
+                    "elife": "10",
+                    "booking": "MINIBUS",
+                    "max": "12"
+                },
+                {
+                    "elife": "11",
+                    "booking": "MINIBUS",
+                    "max": "14"
+                },
+                {
+                    "elife": "29",
+                    "booking": "MINIBUS",
+                    "max": "16"
+                },
+                {
+                    "elife": "40",
+                    "booking": "LUXURY",
+                    "max": "3"
+                },
+                {
+                    "elife": "41",
+                    "booking": "ELECTRICSTANDARD",
+                    "max": "3"
+                },
+                {
+                    "elife": "43",
+                    "booking": "ELECTRICLUXURY",
+                    "max": "3"
+                }
+            ]
+        },
+        {
+            "countries": [
+                "MYS"
+            ],
+            "mapping": [
+                {
+                    "elife": "1",
+                    "booking": "STANDARD",
+                    "max": "3"
+                },
+                {
+                    "elife": "6",
+                    "booking": "PEOPLECARRIER",
+                    "max": "4"
+                },
+                {
+                    "elife": "7",
+                    "booking": "LARGEPEOPLECARRIER",
+                    "max": "6"
+                },
+                {
+                    "elife": "8",
+                    "booking": "LARGEPEOPLECARRIER",
+                    "max": "7"
+                },
+                {
+                    "elife": "5",
+                    "booking": "LARGEPEOPLECARRIER",
+                    "max": "8"
+                },
+                {
+                    "elife": "2",
+                    "booking": "EXECUTIVE",
+                    "max": "3"
+                },
+                {
+                    "elife": "4",
+                    "booking": "EXECUTIVEPEOPLECARRIER",
+                    "max": "5"
+                },
+                {
+                    "elife": "36",
+                    "booking": "EXECUTIVEPEOPLECARRIER",
+                    "max": "5"
+                },
+                {
+                    "elife": "9",
+                    "booking": "MINIBUS",
+                    "max": "10"
+                },
+                {
+                    "elife": "10",
+                    "booking": "MINIBUS",
+                    "max": "12"
+                },
+                {
+                    "elife": "11",
+                    "booking": "MINIBUS",
+                    "max": "14"
+                },
+                {
+                    "elife": "14",
+                    "booking": "LUXURY",
+                    "max": "3"
+                },
+                {
+                    "elife": "41",
+                    "booking": "ELECTRICSTANDARD",
+                    "max": "3"
+                },
+                {
+                    "elife": "43",
+                    "booking": "ELECTRICLUXURY",
+                    "max": "3"
+                }
+            ]
+        },
+        {
+            "countries": [
+                "ZAF",
+                "KEN",
+                "MAR",
+                "NAM",
+                "NGA",
+                "UGA",
+                "TZA",
+                "ARE",
+                "SAU",
+                "LKA",
+                "NPL",
+                "QAT"
+            ],
+            "mapping": [
+                {
+                    "elife": "1",
+                    "booking": "STANDARD",
+                    "max": "3"
+                },
+                {
+                    "elife": "2",
+                    "booking": "EXECUTIVE",
+                    "max": "3"
+                },
+                {
+                    "elife": "6",
+                    "booking": "PEOPLECARRIER",
+                    "max": "4"
+                },
+                {
+                    "elife": "3",
+                    "booking": "LARGEPEOPLECARRIER",
+                    "max": "5"
+                },
+                {
+                    "elife": "4",
+                    "booking": "EXECUTIVE",
+                    "max": "5"
+                },
+                {
+                    "elife": "4",
+                    "booking": "EXECUTIVEPEOPLECARRIER",
+                    "max": "5"
+                },
+                {
+                    "elife": "5",
+                    "booking": "MINIBUS",
+                    "max": "8"
+                },
+                {
+                    "elife": "9",
+                    "booking": "MINIBUS",
+                    "max": "10"
+                },
+                {
+                    "elife": "10",
+                    "booking": "MINIBUS",
+                    "max": "12"
+                },
+                {
+                    "elife": "11",
+                    "booking": "MINIBUS",
+                    "max": "14"
+                },
+                {
+                    "elife": "41",
+                    "booking": "ELECTRICSTANDARD",
+                    "max": "3"
+                },
+                {
+                    "elife": "43",
+                    "booking": "ELECTRICLUXURY",
+                    "max": "3"
+                }
+            ]
+        },
+        {
+            "countries": [
+                "LAO"
+            ],
+            "mapping": [
+                {
+                    "elife": "1",
+                    "booking": "STANDARD",
+                    "max": "3"
+                },
+                {
+                    "elife": "2",
+                    "booking": "EXECUTIVE",
+                    "max": "3"
+                },
+                {
+                    "elife": "4",
+                    "booking": "EXECUTIVE",
+                    "max": "5"
+                },
+                {
+                    "elife": "6",
+                    "booking": "PEOPLECARRIER",
+                    "max": "4"
+                },
+                {
+                    "elife": "3",
+                    "booking": "LARGEPEOPLECARRIER",
+                    "max": "5"
+                },
+                {
+                    "elife": "5",
+                    "booking": "LARGEPEOPLECARRIER",
+                    "max": "8"
+                },
+                {
+                    "elife": "5",
+                    "booking": "MINIBUS",
+                    "max": "8"
+                },
+                {
+                    "elife": "9",
+                    "booking": "MINIBUS",
+                    "max": "10"
+                },
+                {
+                    "elife": "10",
+                    "booking": "MINIBUS",
+                    "max": "12"
+                },
+                {
+                    "elife": "11",
+                    "booking": "MINIBUS",
+                    "max": "14"
+                },
+                {
+                    "elife": "41",
+                    "booking": "ELECTRICSTANDARD",
+                    "max": "3"
+                },
+                {
+                    "elife": "42",
+                    "booking": "ELECTRICLUXURY",
+                    "max": "3"
+                }
+            ]
+        },
+        {
+            "countries": [
+                "FRA",
+                "IRL",
+                "CHE"
+            ],
+            "mapping": [
+                {
+                    "elife": "1",
+                    "booking": "STANDARD",
+                    "max": "3"
+                },
+                {
+                    "elife": "2",
+                    "booking": "EXECUTIVE",
+                    "max": "3"
+                },
+                {
+                    "elife": "4",
+                    "booking": "EXECUTIVE",
+                    "max": "5"
+                },
+                {
+                    "elife": "6",
+                    "booking": "PEOPLECARRIER",
+                    "max": "4"
+                },
+                {
+                    "elife": "3",
+                    "booking": "LARGEPEOPLECARRIER",
+                    "max": "5"
+                },
+                {
+                    "elife": "5",
+                    "booking": "MINIBUS",
+                    "max": "8"
+                },
+                {
+                    "elife": "9",
+                    "booking": "MINIBUS",
+                    "max": "10"
+                },
+                {
+                    "elife": "10",
+                    "booking": "MINIBUS",
+                    "max": "12"
+                },
+                {
+                    "elife": "11",
+                    "booking": "MINIBUS",
+                    "max": "14"
+                },
+                {
+                    "elife": "41",
+                    "booking": "ELECTRICSTANDARD",
+                    "max": "3"
+                },
+                {
+                    "elife": "42",
+                    "booking": "ELECTRICLUXURY",
+                    "max": "3"
+                },
+                {
+                    "elife": "40",
+                    "booking": "LUXURY",
+                    "max": "3"
+                }
+            ]
+        },
+        {
+            "countries": [
+                "MEX"
+            ],
+            "mapping": [
+                {
+                    "elife": "1",
+                    "booking": "STANDARD",
+                    "max": "3"
+                },
+                {
+                    "elife": "2",
+                    "booking": "EXECUTIVE",
+                    "max": "3"
+                },
+                {
+                    "elife": "6",
+                    "booking": "PEOPLECARRIER",
+                    "max": "4"
+                },
+                {
+                    "elife": "3",
+                    "booking": "PEOPLECARRIER",
+                    "max": "5"
+                },
+                {
+                    "elife": "4",
+                    "booking": "EXECUTIVEPEOPLECARRIER",
+                    "max": "5"
+                },
+                {
+                    "elife": "5",
+                    "booking": "LARGEPEOPLECARRIER",
+                    "max": "8"
+                },
+                {
+                    "elife": "9",
+                    "booking": "MINIBUS",
+                    "max": "10"
+                },
+                {
+                    "elife": "10",
+                    "booking": "MINIBUS",
+                    "max": "12"
+                },
+                {
+                    "elife": "11",
+                    "booking": "MINIBUS",
+                    "max": "14"
+                },
+                {
+                    "elife": "41",
+                    "booking": "ELECTRICSTANDARD",
+                    "max": "3"
+                },
+                {
+                    "elife": "43",
+                    "booking": "ELECTRICLUXURY",
+                    "max": "3"
+                }
+            ]
+        }
+    ]
 }
