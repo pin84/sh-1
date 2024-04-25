@@ -761,18 +761,24 @@ class addrTextAutoComp extends TextAutoComp {
     if (!keywords) {
       return []
     }
-
     let list = _d.predictionsCache[keywords]
     if (list) {
       return list
     }
 
     let { boundLat, boundLng, sessionToken, boundRadius } = _d.originLatLng
-    let url = `${api[stage].maps}/places/auto-comp?input_text=${keywords}&location=${boundLat},${boundLng}&radius=${boundRadius}`
-    if (sessionToken) {
-      url += `&session_token=${sessionToken}`
+    let url = `${api[stage].maps}/places/auto-comp`
+
+    let d = {
+      input_text:keywords,
+      location:`${boundLat},${boundLng}`,
+      radius:boundRadius
     }
-    let res = await svcUtils.fetchData({ url, isShowLoading: false })
+    if (sessionToken) {
+      d['session_token'] = sessionToken
+    }
+
+    let res = await svcUtils.fetchData({ url,data:d, isShowLoading: false })
 
     let { session_token } = res
     _d.originLatLng.sessionToken = session_token
