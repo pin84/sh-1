@@ -87,8 +87,10 @@
         to: {},
         percent: 0,
 
-        addrList :[],
-        pricingList:[]
+        addrList: [],
+        pricingList: [],
+
+        addrCache: {}
       }
     },
 
@@ -127,16 +129,16 @@
             const ws = XLSX.utils.sheet_to_json(workbook.Sheets[wsname]);//生成json表格内容
             console.log(ws);
 
-            for(let obj of ws){
-              let {From,To} = obj
-              if(!From || !To) continue
+            for (let obj of ws) {
+              let { From, To } = obj
+              if (!From || !To) continue
               this.addrList.push({
-                from:{addr:From},
-                to:{addr:To}
+                from: { addr: From },
+                to: { addr: To }
               })
             }
 
-            console.log( this.addrList);
+            console.log(this.addrList);
             this.exportCsv()
           } catch (e) {
             console.log(e);
@@ -145,7 +147,7 @@
         };
         fileReader.readAsBinaryString(files[0]);
 
-        
+
       },
 
       exportPrices() {
@@ -160,21 +162,35 @@
           spinner: 'el-icon-loading',
           background: 'rgba(0, 0, 0, 0.7)'
         });
-        this.addrList.length = 1
+        this.addrList.length = 10
         let len = this.addrList.length
 
         let j = 0
         for (let addr of this.addrList) {
-          let {from,to} = addr
+
+          let { from, to } = addr
+
+          // let fromDetail = this.addrCache[`${from}`]
+          // if (!fromDetail) {
           let fromList = await this.getAddrList(from.addr)
-          let { place_id:from_place_id } = fromList[0]
+          let { place_id: from_place_id } = fromList[0]
           let fromDetail = await this.getDetailByPlaceId(from_place_id)
+          // }
 
+          // let toDetail = this.addrCache[`${to}`]
+          // if (!toDetail) {
           let toList = await this.getAddrList(to.addr)
-          let { place_id:to_place_id } = toList[0]
+          if (!toList.length) {
+            addr['pricing'] = []
+            this.pricingList.push([])
+            continue
+          }
+          let to_place_id = toList[0].place_id
           let toDetail = await this.getDetailByPlaceId(to_place_id)
+          // }
 
-          let res = await this.getPriceElife(fromDetail,toDetail)
+          let res = await this.getPriceElife(fromDetail, toDetail)
+
           addr['pricing'] = res
           from['detail'] = fromDetail
           to['detail'] = toDetail
@@ -185,7 +201,7 @@
           loading.setText(`Loading-${this.percent}%`)
         }
         console.log(this.addrList);
-       
+
 
         let vehicleTem = []
         for (let item of this.pricingList) {
@@ -197,20 +213,21 @@
         let title = ['airport', 'to']
         title.push(...vehicleList)
 
-        debugger
 
         let jsonData = []
-        this.pricingList.forEach((p, index) => {
-          let tem = [`${this.to.name.replace(/\,/g, ' ')}`, `${fromList[index]}`]
-          for (let t of vehicleList) {
-            let obj = p.find(item => item.vehicle_class == t)
-
-            let amount = obj?.price?.amount || undefined
+        for (let item of this.addrList) {
+          let from = item.from.addr
+          let to = item.to.addr
+          let tem = [from, to]
+          for (let vehicleName of vehicleList) {
+            let obj = item.pricing.find(o => o.vehicle_class == vehicleName)
+            let amount = obj?.price?.amount || 'N/A'
             tem.push(amount)
           }
 
           jsonData.push(tem)
-        })
+        }
+
         loading.close()
         this.exportCSV(title, jsonData)
 
@@ -318,11 +335,11 @@
       async getPriceElife(from, to) {
         let { lat: fLat, lng: fLng } = from
         let { lat: tLat, lng: tLng } = to
-        let url = `https://j1j495o5pk.execute-api.us-east-2.amazonaws.com/upncoming/ride-pricings?from_lat=${fLat}&from_lng=${fLng}&to_lat=${tLat}&to_lng=${tLng}&ses=Unrfxa1M0lDAR4ODnRXP5DKfaLTD0Oe6SOfN6FtkCTTIdGi0jB8rcoLk8fsiJSDVd3V9o6hOkzZLeJxp46fW1VpAp7FznwOcR8e6LiMoBBQne4g9PyHdP9pe34omovzH&currency=USD&demand_fleet_id=15&distance=55149`
+        let url = `https://j1j495o5pk.execute-api.us-east-2.amazonaws.com/upncoming/ride-pricings?from_lat=${fLat}&from_lng=${fLng}&to_lat=${tLat}&to_lng=${tLng}&ses=Unrfxa1M0lDAR4ODnRXP5DKfaLTD0Oe6SOfN6FtkCTTIdGi0jB8rcoLk8fsiJSDVd3V9o6hOkzZLeJxp46fW1VpAp7FznwOcR8e6LiMoBBQne4g9PyHdP9pe34omovzH&currency=USD&demand_fleet_id=15`
         let response = await fetch(url)
         let res = await response.json();
         let { fleets } = res
-        if(!fleets.length){
+        if (!fleets.length) {
           return []
         }
         let elife = fleets.find(item => item.parent_fleet_id == 15)
