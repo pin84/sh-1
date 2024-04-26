@@ -108,9 +108,7 @@
 
     methods: {
       inputFile(e) {
-
         const files = e.target.files;
-        console.log(files);
         if (files.length <= 0) {//如果没有文件名
           return false;
         } else if (!/\.(xls|xlsx|csv)$/.test(files[0].name.toLowerCase())) {
