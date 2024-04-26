@@ -170,3 +170,7 @@ body {
   height: 1px;
   background-color: #e5e6eb;
 }
+
+.hide {
+  display: none !important;
+}

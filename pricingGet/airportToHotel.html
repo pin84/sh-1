@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <!-- import CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+  <link rel="stylesheet" href="./airportToHotel.css">
+
+  <!-- <style>
+    .box .addr {
+      display: flex;
+    }
+
+    .box .ex {
+      margin-top: 20px;
+    }
+  </style> -->
+
+</head>
+
+<body>
+  <div id="app">
+    <!-- <div class="box">
+      <div class="addr">
+        <span>from:</span>
+        
+
+        <el-select v-model="placeId" placeholder="请选择" filterable remote :remote-method="toInput" @change="changeAddr">
+          <el-option v-for="item in options" :key="item.place_id" :label="item.description" :value="item.place_id">
+          </el-option>
+        </el-select>
+      </div>
+      <div class="addr">
+        <span>to:</span>
+        <textarea v-model="textareaValue" name="" id="" cols="150" rows="20"></textarea>
+      </div>
+      <el-button @click="exportCsv" class="ex">导出</el-button>
+    </div> -->
+
+    <input ref="inputElm" type="file" accept=".xls,.xlsx,.csv" placeholder="请输入内容" />
+    <el-button @click="exportPrices" class="ex">导出</el-button>
+
+  </div>
+</body>
+<!-- import Vue before Element -->
+<script src="https://unpkg.com/vue@2/dist/vue.js"></script>
+<!-- import JavaScript -->
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+<script src="https://cdn.sheetjs.com/xlsx-0.20.2/package/dist/xlsx.full.min.js"></script>
+
+<script>
+  new Vue({
+    el: '#app',
+    data: function () {
+      return {
+        visible: false,
+        filterable: true,
+        input: '',
+        textareaValue: '',
+        curPartnerSvcData: {}, // partner , current service area data
+        predictionsCache: {}, // Cache search address
+        originLatLng: { //initial bound lat and lng is sfo's
+          boundLat: 37.6213129,
+          boundLng: -122.3789554,
+          boundRadius: 200000
+        },
+
+        options: [{
+          value: '选项1',
+          label: '黄金糕'
+        }, {
+          value: '选项2',
+          label: '双皮奶'
+        }, {
+          value: '选项3',
+          label: '蚵仔煎'
+        }, {
+          value: '选项4',
+          label: '龙须面'
+        }, {
+          value: '选项5',
+          label: '北京烤鸭'
+        }],
+        placeId: '',
+
+        to: {},
+        percent: 0,
+
+        addrList: [],
+        pricingList: [],
+
+        addrCache: {}
+      }
+    },
+
+    mounted() {
+      this.inputFild = this.$refs.inputElm
+
+      this.inputFild.addEventListener('change', (e) => {
+        this.inputFile(e)
+      })
+    },
+
+    created() {
+
+    },
+
+
+
+    methods: {
+      inputFile(e) {
+        const files = e.target.files;
+        if (files.length <= 0) {//如果没有文件名
+          return false;
+        } else if (!/\.(xls|xlsx|csv)$/.test(files[0].name.toLowerCase())) {
+          this.$Message.error('上传格式不正确，请上传xls或者xlsx格式');
+          return false;
+        }
+
+        const fileReader = new FileReader();
+        fileReader.onload = (ev) => {
+          try {
+            const data = ev.target.result;
+            const workbook = XLSX.read(data, {
+              type: 'binary'
+            });
+            const wsname = workbook.SheetNames[0];//取第一张表
+            const ws = XLSX.utils.sheet_to_json(workbook.Sheets[wsname]);//生成json表格内容
+            console.log(ws);
+
+            for (let obj of ws) {
+              let { From, To } = obj
+              if (!From || !To) continue
+              this.addrList.push({
+                from: { addr: From },
+                to: { addr: To }
+              })
+            }
+
+            console.log(this.addrList);
+            this.exportCsv()
+          } catch (e) {
+            console.log(e);
+            return false;
+          }
+        };
+        fileReader.readAsBinaryString(files[0]);
+
+
+      },
+
+      exportPrices() {
+        console.log(this.input);
+      },
+
+      async exportCsv() {
+
+        let loading = this.$loading({
+          lock: true,
+          text: `Loading-${this.percent}%`,
+          spinner: 'el-icon-loading',
+          background: 'rgba(0, 0, 0, 0.7)'
+        });
+        this.addrList.length = 10
+        let len = this.addrList.length
+
+        let j = 0
+        for (let addr of this.addrList) {
+
+          let { from, to } = addr
+
+          // let fromDetail = this.addrCache[`${from}`]
+          // if (!fromDetail) {
+          let fromList = await this.getAddrList(from.addr)
+          let { place_id: from_place_id } = fromList[0]
+          let fromDetail = await this.getDetailByPlaceId(from_place_id)
+          // }
+
+          // let toDetail = this.addrCache[`${to}`]
+          // if (!toDetail) {
+          let toList = await this.getAddrList(to.addr)
+          if (!toList.length) {
+            addr['pricing'] = []
+            this.pricingList.push([])
+            continue
+          }
+          let to_place_id = toList[0].place_id
+          let toDetail = await this.getDetailByPlaceId(to_place_id)
+          // }
+
+          let res = await this.getPriceElife(fromDetail, toDetail)
+
+          addr['pricing'] = res
+          from['detail'] = fromDetail
+          to['detail'] = toDetail
+
+          this.pricingList.push(res)
+          j++
+          this.percent = j / len * 100
+          loading.setText(`Loading-${this.percent}%`)
+        }
+        console.log(this.addrList);
+
+
+        let vehicleTem = []
+        for (let item of this.pricingList) {
+          for (let v of item) {
+            vehicleTem.push(v.vehicle_class)
+          }
+        }
+        let vehicleList = Array.from(new Set(vehicleTem))
+        let title = ['airport', 'to']
+        title.push(...vehicleList)
+
+
+        let jsonData = []
+        for (let item of this.addrList) {
+          let from = item.from.addr
+          let to = item.to.addr
+          let tem = [from, to]
+          for (let vehicleName of vehicleList) {
+            let obj = item.pricing.find(o => o.vehicle_class == vehicleName)
+            let amount = obj?.price?.amount || 'N/A'
+            tem.push(amount)
+          }
+
+          jsonData.push(tem)
+        }
+
+        loading.close()
+        this.exportCSV(title, jsonData)
+
+      },
+
+
+
+
+      exportCSV(title, jsonData) {
+        let str = ``;
+        for (let i of title) {
+          let nameStr = i.replace(/\,/g, ' ')
+          str += nameStr + ',';
+        }
+        str += '\n';
+        for (let item of jsonData) {
+          for (let el in item) {
+            str += `${item[el] + '\t'},`;
+          }
+          str += '\n';
+        }
+        const url = 'data:text/csv;charset=utf-8,\ufeff' + encodeURIComponent(str);
+        const link = document.createElement('a');
+        link.href = url;
+        let dateName = new Date().getTime();
+        link.download = dateName + '.csv';
+        link.click();
+      },
+
+      async toInput(query) {
+        let res = await this.getAddrList(query)
+        this.options = res
+      },
+
+      async changeAddr() {
+        this.to = await this.getDetailByPlaceId(this.placeId)
+      },
+
+
+
+      debounce: (fn, delay = 1000) => {
+        let time = null;
+        return () => {
+          if (time !== null) {
+            clearTimeout(time);
+          }
+          time = setTimeout(() => {
+            fn.call(this, arguments);
+          }, delay);
+        };
+      },
+
+      async getAddrList(keywords = 'SFO') {
+        if (!keywords) {
+          return []
+        }
+
+        let list = this.predictionsCache[keywords]
+        if (list) {
+          return list
+        }
+
+        let { boundLat, boundLng, sessionToken, boundRadius } = this.originLatLng
+        let url = `https://388bivap71.execute-api.us-east-2.amazonaws.com/prod/maps/places/auto-comp?input_text=${keywords}&location=${boundLat},${boundLng}&radius=${boundRadius}`
+        if (sessionToken) {
+          url += `&session_token=${sessionToken}`
+        }
+        let res = await this.fetchData({ url, isShowLoading: false })
+        let { session_token } = res
+        this.originLatLng.sessionToken = session_token
+        list = res.predictions.predictions
+
+        this.predictionsCache[keywords] = list
+        return list
+      },
+
+
+      async getDetailByPlaceId(id) {
+        let url = `https://388bivap71.execute-api.us-east-2.amazonaws.com/prod/maps/places/id?google_place_id=${id}`
+        let { place_detail } = await this.fetchData({ url, isShowLoading: false })
+        let { status } = place_detail
+
+        if (status == 'OK') {
+          let { result: { formatted_address, name: localName, geometry: { location } } } = place_detail
+
+          let val = `${localName} ${formatted_address}`
+          if (formatted_address.startsWith(localName)) {
+            val = formatted_address
+          }
+          // this.elm.value = val
+
+          let { lat, lng, } = location
+          let t = typeof lat === 'number' ? lat : lat()
+          let g = typeof lng === 'number' ? lng : lng()
+
+          this.originLatLng.boundLat = lat
+          this.originLatLng.boundLng = lng
+
+
+          return { lat: t, lng: g, name: val }
+        }
+
+      },
+
+      async getPriceElife(from, to) {
+        let { lat: fLat, lng: fLng } = from
+        let { lat: tLat, lng: tLng } = to
+        let url = `https://j1j495o5pk.execute-api.us-east-2.amazonaws.com/upncoming/ride-pricings?from_lat=${fLat}&from_lng=${fLng}&to_lat=${tLat}&to_lng=${tLng}&ses=Unrfxa1M0lDAR4ODnRXP5DKfaLTD0Oe6SOfN6FtkCTTIdGi0jB8rcoLk8fsiJSDVd3V9o6hOkzZLeJxp46fW1VpAp7FznwOcR8e6LiMoBBQne4g9PyHdP9pe34omovzH&currency=USD&demand_fleet_id=15`
+        let response = await fetch(url)
+        let res = await response.json();
+        let { fleets } = res
+        if (!fleets.length) {
+          return []
+        }
+        let elife = fleets.find(item => item.parent_fleet_id == 15)
+        let list = elife.vehicle_classes
+        return list
+      },
+
+      fetchData: async ({
+        url = '',
+        data = {},
+        method = 'GET',
+        isShowLoading = true
+      } = {}) => {
+        method = method.toUpperCase();
+        if (method == 'GET') {
+          let dataStr = '';
+          Object.keys(data).forEach(key => {
+            dataStr += key + '=' + data[key] + '&';
+          })
+          if (dataStr !== '') {
+            dataStr = dataStr.substring(0, dataStr.lastIndexOf('&'));
+            url = url + '?' + dataStr;
+          }
+        }
+        let requestConfig = {
+          // credentials: 'same-origin',
+          method,
+          headers: {
+            'Accept': 'application/json',
+            // 'Content-method': 'application/json'
+          },
+          // mode: "cors", // same-origin，no-cors（default） cores;
+          // cache: "force-cache" // default 、 no-store 、 reload 、 no-cache 、 force-cache 、 only-if-cached 
+        }
+
+        if (method == 'POST') {
+          Object.defineProperty(requestConfig, 'body', {
+            value: JSON.stringify(data)
+          })
+        }
+        try {
+          const response = await fetch(url, requestConfig);
+          const responseJson = await response.json();
+
+          return responseJson
+        } catch (error) {
+          throw new Error(error)
+        }
+      },
+
+
+    }
+  })
+</script>
+
+</html>

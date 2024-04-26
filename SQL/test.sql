@@ -1,140 +1,17 @@
-select 
-  fleet.id as fleet_id, 
-  fleet.name as service_area_name, 
-  airport_fleet.airport as airport, 
-  airport.ctry as country_code, 
-  country.name as cname, 
-  country.alpha_3 as alpha_3, 
-  fleet.service_area_pricing_id 
-from 
-  fleet 
-  inner join airport_fleet on airport_fleet.fleet_id = fleet.id 
-  left join airport on airport_fleet.airport = airport.code3 
-  inner join country on country.alpha_3 = airport.ctry 
-where 
-  fleet.parent_fleet_id = {{ access_fleet_id }} 
-  and (
-    (
-      (
-        select 
-          count(*) 
-        from 
-          access_airport 
-        where 
-          access_id = {{ access_id }}
-      ) = 0 
-      and (
-        select 
-          count(*) 
-        from 
-          access_country 
-        where 
-          access_id = {{ access_id }}
-      ) = 0
-    ) 
-    or (
-      (
-        (
-          select 
-            count(*) 
-          from 
-            access_airport 
-          where 
-            access_id = {{ access_id }}
-        ) & gt; 0 
-        and (
-          select 
-            count(*) 
-          from 
-            access_country 
-          where 
-            access_id = {{ access_id }}
-        ) = 0
-      ) 
-      and fleet.id in (
-        select 
-          airport_fleet.fleet_id 
-        from 
-          access_airport, 
-          airport_fleet 
-        where 
-          access_id = {{ access_id }} 
-          and access_airport.airport = airport_fleet.airport 
-          and airport_fleet.parent_fleet_id = {{ access_fleet_id }}
-      )
-    ) 
-    or (
-      (
-        (
-          select 
-            count(*) 
-          from 
-            access_airport 
-          where 
-            access_id = {{ access_id }}
-        ) = 0 
-        and (
-          select 
-            count(*) 
-          from 
-            access_country 
-          where 
-            access_id = {{ access_id }}
-        ) & gt; 0
-      ) 
-      and airport.ctry in (
-        select 
-          airport_country 
-        from 
-          access_country 
-        where 
-          access_id = {{ access_id }}
-      )
-    ) 
-    or (
-      (
-        (
-          select 
-            count(*) 
-          from 
-            access_airport 
-          where 
-            access_id = {{ access_id }}
-        ) & gt; 0 
-        and (
-          select 
-            count(*) 
-          from 
-            access_country 
-          where 
-            access_id = {{ access_id }}
-        ) & gt; 0
-      ) 
-      and (
-        fleet.id in (
-          select 
-            airport_fleet.fleet_id 
-          from 
-            access_airport, 
-            airport_fleet 
-          where 
-            access_id = {{ access_id }} 
-            and access_airport.airport = airport_fleet.airport 
-            and airport_fleet.parent_fleet_id = {{ access_fleet_id }}
-        ) 
-        or airport.ctry in (
-          select 
-            airport_country 
-          from 
-            access_country 
-          where 
-            access_id = {{ access_id }}
-        )
-      )
-    )
-  ) 
-order by 
-  fleet.name, 
-  airport_fleet.airport { % if rows_to_fetch % } 
-limit 
-  {{ rows_to_fetch }} { % endif % };
+select
+vehicle_class.id,
+vehicle_class.name,
+case
+when i18n_category.eng_text = 'Sedan' then 'sedan'
+when i18n_category.eng_text like '%Minivans and SUV%' then 'mpv'
+when i18n_category.eng_text = 'Stretch Limousine' then 'passenger-stretch'
+when i18n_category.eng_text = 'Minibus' then 'minibus'
+when i18n_category.eng_text = 'Buses' and  vehicle_class.name not like '%Coach%' then 'bus'
+when i18n_category.eng_text = 'Buses' and  vehicle_class.name like '%Coach%' then 'coach-bus'
+ELSE 'other'
+END as category_name
+FROM vehicle_class
+INNER JOIN vehicle_category_class ON vehicle_class.id = vehicle_category_class.class_id
+INNER JOIN vehicle_category ON vehicle_category_class.category_id = vehicle_category.id
+INNER JOIN i18n as i18n_category ON vehicle_category.name_i18n_id = i18n_category.id
+ORDER BY vehicle_category.seq, category_name,vehicle_category_class.seq;
