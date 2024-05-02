@@ -1,0 +1,266 @@
+{
+  "vehicle_classes": [
+    {
+      "price": {
+        "amount": 107.91,
+        "currency": "USD",
+        "quote_id": "9032f73af9a4445aa0216de61fe5bf89-v1"
+      },
+      "vehicle_class": "Sedan",
+      "vehicle_class_id": 1,
+      "passenger_capacity": 3,
+      "luggage_capacity": 3,
+      "typical_vehicle": {
+        "model": "Corolla",
+        "manufacturer": "Toyota"
+      },
+      "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/mex/Toyota-Corolla.png",
+      "price_detail": {
+        "base_pricing": {
+          "type": "range",
+          "rule": "serviceArea",
+          "zone": "serviceArea",
+          "price": {
+            "amount": 1848.796,
+            "currency": "MXN"
+          }
+        },
+        "special_pricing": [],
+        "partner_pricing": {}
+      }
+    },
+    {
+      "price": {
+        "amount": 377.7,
+        "currency": "USD",
+        "quote_id": "9032f73af9a4445aa0216de61fe5bf89-v2"
+      },
+      "vehicle_class": "Business Sedan",
+      "vehicle_class_id": 2,
+      "passenger_capacity": 3,
+      "luggage_capacity": 3,
+      "typical_vehicle": {
+        "model": "A4",
+        "manufacturer": "Audi"
+      },
+      "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/mex/AUDI-A4.png",
+      "price_detail": {
+        "base_pricing": {
+          "type": "range",
+          "rule": "serviceArea",
+          "zone": "serviceArea",
+          "price": {
+            "amount": 6470.786,
+            "currency": "MXN"
+          }
+        },
+        "special_pricing": [],
+        "partner_pricing": {}
+      }
+    },
+    {
+      "price": {
+        "amount": 116.55,
+        "currency": "USD",
+        "quote_id": "9032f73af9a4445aa0216de61fe5bf89-v3"
+      },
+      "vehicle_class": "MPV-5",
+      "vehicle_class_id": 3,
+      "passenger_capacity": 5,
+      "luggage_capacity": 5,
+      "typical_vehicle": {
+        "model": "Sienna",
+        "manufacturer": "Toyota"
+      },
+      "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/mex/Toyota-Sienna.png",
+      "price_detail": {
+        "base_pricing": {
+          "type": "range",
+          "rule": "serviceArea",
+          "zone": "serviceArea",
+          "price": {
+            "amount": 1996.69968,
+            "currency": "MXN"
+          }
+        },
+        "special_pricing": [],
+        "partner_pricing": {}
+      }
+    },
+    {
+      "price": {
+        "amount": 404.68,
+        "currency": "USD",
+        "quote_id": "9032f73af9a4445aa0216de61fe5bf89-v4"
+      },
+      "vehicle_class": "Business MPV-5",
+      "vehicle_class_id": 4,
+      "passenger_capacity": 5,
+      "luggage_capacity": 5,
+      "typical_vehicle": {
+        "model": "Suburban",
+        "manufacturer": "Chevrolet"
+      },
+      "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/businessminivan.jpg",
+      "price_detail": {
+        "base_pricing": {
+          "type": "range",
+          "rule": "serviceArea",
+          "zone": "serviceArea",
+          "price": {
+            "amount": 6932.985000000001,
+            "currency": "MXN"
+          }
+        },
+        "special_pricing": [],
+        "partner_pricing": {}
+      }
+    },
+    {
+      "price": {
+        "amount": 161.87,
+        "currency": "USD",
+        "quote_id": "9032f73af9a4445aa0216de61fe5bf89-v5"
+      },
+      "vehicle_class": "Minibus-8",
+      "vehicle_class_id": 5,
+      "passenger_capacity": 8,
+      "luggage_capacity": 8,
+      "typical_vehicle": {
+        "model": "Transit",
+        "manufacturer": "Ford"
+      },
+      "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/minibus-8.jpg",
+      "price_detail": {
+        "base_pricing": {
+          "type": "range",
+          "rule": "serviceArea",
+          "zone": "serviceArea",
+          "price": {
+            "amount": 2773.194,
+            "currency": "MXN"
+          }
+        },
+        "special_pricing": [],
+        "partner_pricing": {}
+      }
+    },
+    {
+      "price": {
+        "amount": 113.31,
+        "currency": "USD",
+        "quote_id": "9032f73af9a4445aa0216de61fe5bf89-v6"
+      },
+      "vehicle_class": "MPV-4",
+      "vehicle_class_id": 6,
+      "passenger_capacity": 4,
+      "luggage_capacity": 4,
+      "typical_vehicle": {
+        "model": "CRV",
+        "manufacturer": "Honda"
+      },
+      "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/mex/Honda-Crv.png",
+      "price_detail": {
+        "base_pricing": {
+          "type": "range",
+          "rule": "serviceArea",
+          "zone": "serviceArea",
+          "price": {
+            "amount": 1941.2358,
+            "currency": "MXN"
+          }
+        },
+        "special_pricing": [],
+        "partner_pricing": {}
+      }
+    },
+    {
+      "price": {
+        "amount": 205.04,
+        "currency": "USD",
+        "quote_id": "9032f73af9a4445aa0216de61fe5bf89-v9"
+      },
+      "vehicle_class": "Minibus-10",
+      "vehicle_class_id": 9,
+      "passenger_capacity": 10,
+      "luggage_capacity": 10,
+      "typical_vehicle": {
+        "model": "Ford",
+        "manufacturer": "Ford"
+      },
+      "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/minibus-10.jpg",
+      "price_detail": {
+        "base_pricing": {
+          "type": "range",
+          "rule": "serviceArea",
+          "zone": "serviceArea",
+          "price": {
+            "amount": 3512.7124,
+            "currency": "MXN"
+          }
+        },
+        "special_pricing": [],
+        "partner_pricing": {}
+      }
+    },
+    {
+      "price": {
+        "amount": 210.43,
+        "currency": "USD",
+        "quote_id": "9032f73af9a4445aa0216de61fe5bf89-v10"
+      },
+      "vehicle_class": "Minibus-12",
+      "vehicle_class_id": 10,
+      "passenger_capacity": 12,
+      "luggage_capacity": 12,
+      "typical_vehicle": {
+        "model": "Sprinter",
+        "manufacturer": "Mercedes"
+      },
+      "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/minibus-12.jpg",
+      "price_detail": {
+        "base_pricing": {
+          "type": "range",
+          "rule": "serviceArea",
+          "zone": "serviceArea",
+          "price": {
+            "amount": 3605.1522000000004,
+            "currency": "MXN"
+          }
+        },
+        "special_pricing": [],
+        "partner_pricing": {}
+      }
+    },
+    {
+      "price": {
+        "amount": 215.83,
+        "currency": "USD",
+        "quote_id": "9032f73af9a4445aa0216de61fe5bf89-v11"
+      },
+      "vehicle_class": "Minibus-14",
+      "vehicle_class_id": 11,
+      "passenger_capacity": 14,
+      "luggage_capacity": 14,
+      "typical_vehicle": {
+        "model": "Sprinter",
+        "manufacturer": "Mercedes"
+      },
+      "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/minibus-14.jpg",
+      "price_detail": {
+        "base_pricing": {
+          "type": "range",
+          "rule": "serviceArea",
+          "zone": "serviceArea",
+          "price": {
+            "amount": 3697.592,
+            "currency": "MXN"
+          }
+        },
+        "special_pricing": [],
+        "partner_pricing": {}
+      }
+    }
+  ],
+  "quote_id": ""
+}

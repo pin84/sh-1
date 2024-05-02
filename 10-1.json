@@ -2,9 +2,9 @@
   "vehicle_classes": [
     {
       "price": {
-        "amount": 84.66,
+        "amount": 40.29,
         "currency": "USD",
-        "quote_id": "1ee2c146a04a4af38643aac400104e61-v1"
+        "quote_id": "ea7dc5a90af744829ad3b87fa04fcd99-v1"
       },
       "vehicle_class": "Sedan",
       "vehicle_class_id": 1,
@@ -19,9 +19,9 @@
         "base_pricing": {
           "type": "fixed",
           "fix_price_type": "Transfer",
-          "zone": "San Pedro de alcantara",
+          "zone": "san bruo",
           "price": {
-            "amount": 84.66,
+            "amount": 40.29,
             "currency": "USD"
           }
         },
@@ -31,9 +31,9 @@
     },
     {
       "price": {
-        "amount": 134.04,
+        "amount": 74.1,
         "currency": "USD",
-        "quote_id": "1ee2c146a04a4af38643aac400104e61-v2"
+        "quote_id": "ea7dc5a90af744829ad3b87fa04fcd99-v2"
       },
       "vehicle_class": "Business Sedan",
       "vehicle_class_id": 2,
@@ -48,9 +48,9 @@
         "base_pricing": {
           "type": "fixed",
           "fix_price_type": "Transfer",
-          "zone": "San Pedro de alcantara",
+          "zone": "san bruo",
           "price": {
-            "amount": 134.045,
+            "amount": 74.1,
             "currency": "USD"
           }
         },
@@ -60,9 +60,9 @@
     },
     {
       "price": {
-        "amount": 149.81,
+        "amount": 180.0,
         "currency": "USD",
-        "quote_id": "1ee2c146a04a4af38643aac400104e61-v40"
+        "quote_id": "ea7dc5a90af744829ad3b87fa04fcd99-v40"
       },
       "vehicle_class": "First Class",
       "vehicle_class_id": 40,
@@ -77,9 +77,9 @@
         "base_pricing": {
           "type": "fixed",
           "fix_price_type": "Transfer",
-          "zone": "San Pedro de alcantara",
+          "zone": "san bruo",
           "price": {
-            "amount": 149.815,
+            "amount": 180.0,
             "currency": "USD"
           }
         },
@@ -89,9 +89,9 @@
     },
     {
       "price": {
-        "amount": 105.0,
+        "amount": 47.68,
         "currency": "USD",
-        "quote_id": "1ee2c146a04a4af38643aac400104e61-v6"
+        "quote_id": "ea7dc5a90af744829ad3b87fa04fcd99-v6"
       },
       "vehicle_class": "MPV-4",
       "vehicle_class_id": 6,
@@ -106,9 +106,9 @@
         "base_pricing": {
           "type": "fixed",
           "fix_price_type": "Transfer",
-          "zone": "San Pedro de alcantara",
+          "zone": "san bruo",
           "price": {
-            "amount": 105.0,
+            "amount": 47.68,
             "currency": "USD"
           }
         },
@@ -118,9 +118,9 @@
     },
     {
       "price": {
-        "amount": 107.9,
+        "amount": 63.45,
         "currency": "USD",
-        "quote_id": "1ee2c146a04a4af38643aac400104e61-v3"
+        "quote_id": "ea7dc5a90af744829ad3b87fa04fcd99-v3"
       },
       "vehicle_class": "MPV-5",
       "vehicle_class_id": 3,
@@ -135,9 +135,9 @@
         "base_pricing": {
           "type": "fixed",
           "fix_price_type": "Transfer",
-          "zone": "San Pedro de alcantara",
+          "zone": "san bruo",
           "price": {
-            "amount": 107.89999999999999,
+            "amount": 63.45,
             "currency": "USD"
           }
         },
@@ -147,26 +147,26 @@
     },
     {
       "price": {
-        "amount": 137.99,
+        "amount": 125.66,
         "currency": "USD",
-        "quote_id": "1ee2c146a04a4af38643aac400104e61-v4"
+        "quote_id": "ea7dc5a90af744829ad3b87fa04fcd99-v4"
       },
       "vehicle_class": "Business MPV-5",
       "vehicle_class_id": 4,
-      "passenger_capacity": 4,
-      "luggage_capacity": 4,
+      "passenger_capacity": 5,
+      "luggage_capacity": 5,
       "typical_vehicle": {
-        "model": "X4",
-        "manufacturer": "BMW"
+        "model": "Navigator",
+        "manufacturer": "Lincoln"
       },
-      "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/esp/BSUV.png",
+      "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/businessminivan.jpg",
       "price_detail": {
         "base_pricing": {
           "type": "fixed",
           "fix_price_type": "Transfer",
-          "zone": "San Pedro de alcantara",
+          "zone": "san bruo",
           "price": {
-            "amount": 137.98749999999998,
+            "amount": 125.66,
             "currency": "USD"
           }
         },
@@ -176,9 +176,9 @@
     },
     {
       "price": {
-        "amount": 138.78,
+        "amount": 139.9,
         "currency": "USD",
-        "quote_id": "1ee2c146a04a4af38643aac400104e61-v36"
+        "quote_id": "ea7dc5a90af744829ad3b87fa04fcd99-v36"
       },
       "vehicle_class": "Business Van",
       "vehicle_class_id": 36,
@@ -193,9 +193,9 @@
         "base_pricing": {
           "type": "fixed",
           "fix_price_type": "Transfer",
-          "zone": "San Pedro de alcantara",
+          "zone": "san bruo",
           "price": {
-            "amount": 138.77599999999998,
+            "amount": 139.9,
             "currency": "USD"
           }
         },
@@ -205,9 +205,154 @@
     },
     {
       "price": {
-        "amount": 122.84,
+        "amount": 650.0,
         "currency": "USD",
-        "quote_id": "1ee2c146a04a4af38643aac400104e61-v5"
+        "quote_id": "ea7dc5a90af744829ad3b87fa04fcd99-v21"
+      },
+      "vehicle_class": "6 Passenger Stretch Limo",
+      "vehicle_class_id": 21,
+      "passenger_capacity": 6,
+      "luggage_capacity": 6,
+      "typical_vehicle": {
+        "model": "MKT or Chrsley",
+        "manufacturer": "Liconln"
+      },
+      "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/stretch-limo-6.jpg",
+      "price_detail": {
+        "base_pricing": {
+          "type": "fixed",
+          "fix_price_type": "Transfer",
+          "zone": "san bruo",
+          "price": {
+            "amount": 650.0,
+            "currency": "USD"
+          }
+        },
+        "special_pricing": [],
+        "partner_pricing": {}
+      }
+    },
+    {
+      "price": {
+        "amount": 695.0,
+        "currency": "USD",
+        "quote_id": "ea7dc5a90af744829ad3b87fa04fcd99-v22"
+      },
+      "vehicle_class": "8 Passenger Stretch Limo",
+      "vehicle_class_id": 22,
+      "passenger_capacity": 8,
+      "luggage_capacity": 8,
+      "typical_vehicle": {
+        "model": "MKT or Chrsley",
+        "manufacturer": "Liconln"
+      },
+      "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/stretch-limo-8.jpg",
+      "price_detail": {
+        "base_pricing": {
+          "type": "fixed",
+          "fix_price_type": "Transfer",
+          "zone": "san bruo",
+          "price": {
+            "amount": 695.0,
+            "currency": "USD"
+          }
+        },
+        "special_pricing": [],
+        "partner_pricing": {}
+      }
+    },
+    {
+      "price": {
+        "amount": 630.0,
+        "currency": "USD",
+        "quote_id": "ea7dc5a90af744829ad3b87fa04fcd99-v23"
+      },
+      "vehicle_class": "10 Passenger Stretch Limo",
+      "vehicle_class_id": 23,
+      "passenger_capacity": 9,
+      "luggage_capacity": 9,
+      "typical_vehicle": {
+        "model": "MKT ",
+        "manufacturer": "Liconln"
+      },
+      "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/usa/Lincoln-MKT.jpg",
+      "price_detail": {
+        "base_pricing": {
+          "type": "fixed",
+          "fix_price_type": "Transfer",
+          "zone": "san bruo",
+          "price": {
+            "amount": 630.0,
+            "currency": "USD"
+          }
+        },
+        "special_pricing": [],
+        "partner_pricing": {}
+      }
+    },
+    {
+      "price": {
+        "amount": 675.0,
+        "currency": "USD",
+        "quote_id": "ea7dc5a90af744829ad3b87fa04fcd99-v24"
+      },
+      "vehicle_class": "12 Passenger Stretch Limo",
+      "vehicle_class_id": 24,
+      "passenger_capacity": 12,
+      "luggage_capacity": 12,
+      "typical_vehicle": {
+        "model": "Navigator",
+        "manufacturer": "Liconln"
+      },
+      "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/stretch-limo-12.jpg",
+      "price_detail": {
+        "base_pricing": {
+          "type": "fixed",
+          "fix_price_type": "Transfer",
+          "zone": "san bruo",
+          "price": {
+            "amount": 675.0,
+            "currency": "USD"
+          }
+        },
+        "special_pricing": [],
+        "partner_pricing": {}
+      }
+    },
+    {
+      "price": {
+        "amount": 720.0,
+        "currency": "USD",
+        "quote_id": "ea7dc5a90af744829ad3b87fa04fcd99-v27"
+      },
+      "vehicle_class": "16 Passenger Stretch Limo",
+      "vehicle_class_id": 27,
+      "passenger_capacity": 15,
+      "luggage_capacity": 15,
+      "typical_vehicle": {
+        "model": "H2",
+        "manufacturer": "Hummer"
+      },
+      "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/usa/Hummer-H2.jpg",
+      "price_detail": {
+        "base_pricing": {
+          "type": "fixed",
+          "fix_price_type": "Transfer",
+          "zone": "san bruo",
+          "price": {
+            "amount": 720.0,
+            "currency": "USD"
+          }
+        },
+        "special_pricing": [],
+        "partner_pricing": {}
+      }
+    },
+    {
+      "price": {
+        "amount": 235.0,
+        "currency": "USD",
+        "quote_id": "ea7dc5a90af744829ad3b87fa04fcd99-v5"
       },
       "vehicle_class": "Minibus-8",
       "vehicle_class_id": 5,
@@ -222,9 +367,9 @@
         "base_pricing": {
           "type": "fixed",
           "fix_price_type": "Transfer",
-          "zone": "San Pedro de alcantara",
+          "zone": "san bruo",
           "price": {
-            "amount": 122.84,
+            "amount": 235.0,
             "currency": "USD"
           }
         },
@@ -234,9 +379,9 @@
     },
     {
       "price": {
-        "amount": 315.4,
+        "amount": 250.0,
         "currency": "USD",
-        "quote_id": "1ee2c146a04a4af38643aac400104e61-v9"
+        "quote_id": "ea7dc5a90af744829ad3b87fa04fcd99-v9"
       },
       "vehicle_class": "Minibus-10",
       "vehicle_class_id": 9,
@@ -251,9 +396,9 @@
         "base_pricing": {
           "type": "fixed",
           "fix_price_type": "Transfer",
-          "zone": "San Pedro de alcantara",
+          "zone": "san bruo",
           "price": {
-            "amount": 315.4,
+            "amount": 250.0,
             "currency": "USD"
           }
         },
@@ -263,26 +408,26 @@
     },
     {
       "price": {
-        "amount": 331.17,
+        "amount": 262.5,
         "currency": "USD",
-        "quote_id": "1ee2c146a04a4af38643aac400104e61-v10"
+        "quote_id": "ea7dc5a90af744829ad3b87fa04fcd99-v10"
       },
       "vehicle_class": "Minibus-12",
       "vehicle_class_id": 10,
-      "passenger_capacity": 12,
-      "luggage_capacity": 12,
+      "passenger_capacity": 11,
+      "luggage_capacity": 11,
       "typical_vehicle": {
         "model": "Sprinter",
         "manufacturer": "Mercedes"
       },
-      "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/minibus-12.jpg",
+      "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/usa/Mercedes-Sprinter.jpg",
       "price_detail": {
         "base_pricing": {
           "type": "fixed",
           "fix_price_type": "Transfer",
-          "zone": "San Pedro de alcantara",
+          "zone": "san bruo",
           "price": {
-            "amount": 331.16999999999996,
+            "amount": 262.5,
             "currency": "USD"
           }
         },
@@ -292,9 +437,9 @@
     },
     {
       "price": {
-        "amount": 339.05,
+        "amount": 345.0,
         "currency": "USD",
-        "quote_id": "1ee2c146a04a4af38643aac400104e61-v11"
+        "quote_id": "ea7dc5a90af744829ad3b87fa04fcd99-v11"
       },
       "vehicle_class": "Minibus-14",
       "vehicle_class_id": 11,
@@ -309,9 +454,9 @@
         "base_pricing": {
           "type": "fixed",
           "fix_price_type": "Transfer",
-          "zone": "San Pedro de alcantara",
+          "zone": "san bruo",
           "price": {
-            "amount": 339.05499999999995,
+            "amount": 345.0,
             "currency": "USD"
           }
         },
@@ -321,9 +466,9 @@
     },
     {
       "price": {
-        "amount": 346.94,
+        "amount": 700.0,
         "currency": "USD",
-        "quote_id": "1ee2c146a04a4af38643aac400104e61-v29"
+        "quote_id": "ea7dc5a90af744829ad3b87fa04fcd99-v29"
       },
       "vehicle_class": "16-seat Bus",
       "vehicle_class_id": 29,
@@ -338,9 +483,9 @@
         "base_pricing": {
           "type": "fixed",
           "fix_price_type": "Transfer",
-          "zone": "San Pedro de alcantara",
+          "zone": "san bruo",
           "price": {
-            "amount": 346.93999999999994,
+            "amount": 700.0,
             "currency": "USD"
           }
         },
@@ -350,9 +495,9 @@
     },
     {
       "price": {
-        "amount": 394.25,
+        "amount": 705.0,
         "currency": "USD",
-        "quote_id": "1ee2c146a04a4af38643aac400104e61-v30"
+        "quote_id": "ea7dc5a90af744829ad3b87fa04fcd99-v30"
       },
       "vehicle_class": "20-seat Bus",
       "vehicle_class_id": 30,
@@ -367,9 +512,9 @@
         "base_pricing": {
           "type": "fixed",
           "fix_price_type": "Transfer",
-          "zone": "San Pedro de alcantara",
+          "zone": "san bruo",
           "price": {
-            "amount": 394.25,
+            "amount": 705.0,
             "currency": "USD"
           }
         },
@@ -379,9 +524,9 @@
     },
     {
       "price": {
-        "amount": 410.02,
+        "amount": 710.0,
         "currency": "USD",
-        "quote_id": "1ee2c146a04a4af38643aac400104e61-v31"
+        "quote_id": "ea7dc5a90af744829ad3b87fa04fcd99-v31"
       },
       "vehicle_class": "23-seat Bus",
       "vehicle_class_id": 31,
@@ -396,9 +541,9 @@
         "base_pricing": {
           "type": "fixed",
           "fix_price_type": "Transfer",
-          "zone": "San Pedro de alcantara",
+          "zone": "san bruo",
           "price": {
-            "amount": 410.02,
+            "amount": 710.0,
             "currency": "USD"
           }
         },
@@ -408,9 +553,9 @@
     },
     {
       "price": {
-        "amount": 433.67,
+        "amount": 718.0,
         "currency": "USD",
-        "quote_id": "1ee2c146a04a4af38643aac400104e61-v32"
+        "quote_id": "ea7dc5a90af744829ad3b87fa04fcd99-v32"
       },
       "vehicle_class": "27-seat Bus",
       "vehicle_class_id": 32,
@@ -425,9 +570,9 @@
         "base_pricing": {
           "type": "fixed",
           "fix_price_type": "Transfer",
-          "zone": "San Pedro de alcantara",
+          "zone": "san bruo",
           "price": {
-            "amount": 433.67499999999995,
+            "amount": 718.0,
             "currency": "USD"
           }
         },
@@ -437,9 +582,9 @@
     },
     {
       "price": {
-        "amount": 473.1,
+        "amount": 775.0,
         "currency": "USD",
-        "quote_id": "1ee2c146a04a4af38643aac400104e61-v33"
+        "quote_id": "ea7dc5a90af744829ad3b87fa04fcd99-v33"
       },
       "vehicle_class": "36-seat Bus",
       "vehicle_class_id": 33,
@@ -454,9 +599,9 @@
         "base_pricing": {
           "type": "fixed",
           "fix_price_type": "Transfer",
-          "zone": "San Pedro de alcantara",
+          "zone": "san bruo",
           "price": {
-            "amount": 473.1,
+            "amount": 775.0,
             "currency": "USD"
           }
         },
@@ -466,9 +611,9 @@
     },
     {
       "price": {
-        "amount": 512.52,
+        "amount": 970.0,
         "currency": "USD",
-        "quote_id": "1ee2c146a04a4af38643aac400104e61-v34"
+        "quote_id": "ea7dc5a90af744829ad3b87fa04fcd99-v34"
       },
       "vehicle_class": "44-seat Coach Bus",
       "vehicle_class_id": 34,
@@ -483,9 +628,9 @@
         "base_pricing": {
           "type": "fixed",
           "fix_price_type": "Transfer",
-          "zone": "San Pedro de alcantara",
+          "zone": "san bruo",
           "price": {
-            "amount": 512.525,
+            "amount": 970.0,
             "currency": "USD"
           }
         },
@@ -495,9 +640,9 @@
     },
     {
       "price": {
-        "amount": 591.38,
+        "amount": 1160.0,
         "currency": "USD",
-        "quote_id": "1ee2c146a04a4af38643aac400104e61-v35"
+        "quote_id": "ea7dc5a90af744829ad3b87fa04fcd99-v35"
       },
       "vehicle_class": "55-seat Coach Bus",
       "vehicle_class_id": 35,
@@ -512,9 +657,212 @@
         "base_pricing": {
           "type": "fixed",
           "fix_price_type": "Transfer",
-          "zone": "San Pedro de alcantara",
+          "zone": "san bruo",
           "price": {
-            "amount": 591.375,
+            "amount": 1160.0,
+            "currency": "USD"
+          }
+        },
+        "special_pricing": [],
+        "partner_pricing": {}
+      }
+    },
+    {
+      "price": {
+        "amount": 200.0,
+        "currency": "USD",
+        "quote_id": "ea7dc5a90af744829ad3b87fa04fcd99-v43"
+      },
+      "vehicle_class": "EV First Class Sedan",
+      "vehicle_class_id": 43,
+      "passenger_capacity": 3,
+      "luggage_capacity": 3,
+      "typical_vehicle": {
+        "model": "Model S",
+        "manufacturer": "Tesla"
+      },
+      "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/home/vehicle-classes/ev-firstclass.png",
+      "price_detail": {
+        "base_pricing": {
+          "type": "fixed",
+          "fix_price_type": "Transfer",
+          "zone": "san bruo",
+          "price": {
+            "amount": 200.0,
+            "currency": "USD"
+          }
+        },
+        "special_pricing": [],
+        "partner_pricing": {}
+      }
+    },
+    {
+      "price": {
+        "amount": 765.0,
+        "currency": "USD",
+        "quote_id": "ea7dc5a90af744829ad3b87fa04fcd99-v25"
+      },
+      "vehicle_class": "12 Passenger Party Bus",
+      "vehicle_class_id": 25,
+      "passenger_capacity": 12,
+      "luggage_capacity": 12,
+      "typical_vehicle": {
+        "model": "Sprinter",
+        "manufacturer": "Mercedes"
+      },
+      "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/party-bus-12.jpg",
+      "price_detail": {
+        "base_pricing": {
+          "type": "fixed",
+          "fix_price_type": "Transfer",
+          "zone": "san bruo",
+          "price": {
+            "amount": 765.0,
+            "currency": "USD"
+          }
+        },
+        "special_pricing": [],
+        "partner_pricing": {}
+      }
+    },
+    {
+      "price": {
+        "amount": 810.0,
+        "currency": "USD",
+        "quote_id": "ea7dc5a90af744829ad3b87fa04fcd99-v26"
+      },
+      "vehicle_class": "14 Passenger Party Bus",
+      "vehicle_class_id": 26,
+      "passenger_capacity": 14,
+      "luggage_capacity": 14,
+      "typical_vehicle": {
+        "model": "Sprinter",
+        "manufacturer": "Mercedes"
+      },
+      "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/party-bus-14.jpg",
+      "price_detail": {
+        "base_pricing": {
+          "type": "fixed",
+          "fix_price_type": "Transfer",
+          "zone": "san bruo",
+          "price": {
+            "amount": 810.0,
+            "currency": "USD"
+          }
+        },
+        "special_pricing": [],
+        "partner_pricing": {}
+      }
+    },
+    {
+      "price": {
+        "amount": 80.0,
+        "currency": "USD",
+        "quote_id": "ea7dc5a90af744829ad3b87fa04fcd99-v41"
+      },
+      "vehicle_class": "EV Sedan",
+      "vehicle_class_id": 41,
+      "passenger_capacity": 3,
+      "luggage_capacity": 3,
+      "typical_vehicle": {
+        "model": "Bolt EUV",
+        "manufacturer": "Chevy"
+      },
+      "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/home/vehicle-classes/ev-sedan.png",
+      "price_detail": {
+        "base_pricing": {
+          "type": "fixed",
+          "fix_price_type": "Transfer",
+          "zone": "san bruo",
+          "price": {
+            "amount": 80.0,
+            "currency": "USD"
+          }
+        },
+        "special_pricing": [],
+        "partner_pricing": {}
+      }
+    },
+    {
+      "price": {
+        "amount": 118.0,
+        "currency": "USD",
+        "quote_id": "ea7dc5a90af744829ad3b87fa04fcd99-v42"
+      },
+      "vehicle_class": "EV Business Sedan",
+      "vehicle_class_id": 42,
+      "passenger_capacity": 3,
+      "luggage_capacity": 3,
+      "typical_vehicle": {
+        "model": "Model 3",
+        "manufacturer": "Tesla"
+      },
+      "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/home/vehicle-classes/ev-business-sedan.png",
+      "price_detail": {
+        "base_pricing": {
+          "type": "fixed",
+          "fix_price_type": "Transfer",
+          "zone": "san bruo",
+          "price": {
+            "amount": 118.0,
+            "currency": "USD"
+          }
+        },
+        "special_pricing": [],
+        "partner_pricing": {}
+      }
+    },
+    {
+      "price": {
+        "amount": 45.0,
+        "currency": "USD",
+        "quote_id": "ea7dc5a90af744829ad3b87fa04fcd99-v12"
+      },
+      "vehicle_class": "Comfort Sedan",
+      "vehicle_class_id": 12,
+      "passenger_capacity": 3,
+      "luggage_capacity": 3,
+      "typical_vehicle": {
+        "model": "Camry",
+        "manufacturer": "Toyota"
+      },
+      "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/Toyota-Camry.jpg",
+      "price_detail": {
+        "base_pricing": {
+          "type": "fixed",
+          "fix_price_type": "Transfer",
+          "zone": "san bruo",
+          "price": {
+            "amount": 45.0,
+            "currency": "USD"
+          }
+        },
+        "special_pricing": [],
+        "partner_pricing": {}
+      }
+    },
+    {
+      "price": {
+        "amount": 450.0,
+        "currency": "USD",
+        "quote_id": "ea7dc5a90af744829ad3b87fa04fcd99-v50"
+      },
+      "vehicle_class": "Wheelchair Van",
+      "vehicle_class_id": 50,
+      "passenger_capacity": 1,
+      "luggage_capacity": 1,
+      "typical_vehicle": {
+        "model": "Sienna",
+        "manufacturer": "Toyota"
+      },
+      "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/wheelchair-van.jpg",
+      "price_detail": {
+        "base_pricing": {
+          "type": "fixed",
+          "fix_price_type": "Transfer",
+          "zone": "san bruo",
+          "price": {
+            "amount": 450.0,
             "currency": "USD"
           }
         },
@@ -527,12 +875,47 @@
     "price": {
       "amount": 0,
       "currency": "USD",
-      "quote_id": "1ee2c146a04a4af38643aac400104e61-m"
+      "quote_id": "ea7dc5a90af744829ad3b87fa04fcd99-m"
     }
   },
-  "add_service": {},
-  "add_service_unit_price": {},
-  "airports": ["AGP"],
+  "add_service": {
+    "infant": {
+      "price": {
+        "amount": 0,
+        "currency": "USD",
+        "quote_id": "ea7dc5a90af744829ad3b87fa04fcd99-i"
+      }
+    },
+    "toddler": {
+      "price": {
+        "amount": 0,
+        "currency": "USD",
+        "quote_id": "ea7dc5a90af744829ad3b87fa04fcd99-t"
+      }
+    },
+    "children": {
+      "price": {
+        "amount": 0,
+        "currency": "USD",
+        "quote_id": "ea7dc5a90af744829ad3b87fa04fcd99-c"
+      }
+    }
+  },
+  "add_service_unit_price": {
+    "infant": {
+      "currency": "USD",
+      "amount": 10.0
+    },
+    "toddler": {
+      "currency": "USD",
+      "amount": 10.0
+    },
+    "children": {
+      "currency": "USD",
+      "amount": 10.0
+    }
+  },
+  "airports": ["OAK", "SJC", "SFO", "SMF"],
   "messages": {
     "url": "https://elifelimo.s3.us-east-2.amazonaws.com/quote/message/messages.json"
   },
@@ -560,6 +943,21 @@
           },
           {
             "vehicle_class": "Business Van"
+          },
+          {
+            "vehicle_class": "6 Passenger Stretch Limo"
+          },
+          {
+            "vehicle_class": "8 Passenger Stretch Limo"
+          },
+          {
+            "vehicle_class": "10 Passenger Stretch Limo"
+          },
+          {
+            "vehicle_class": "12 Passenger Stretch Limo"
+          },
+          {
+            "vehicle_class": "16 Passenger Stretch Limo"
           },
           {
             "vehicle_class": "Minibus-8"
@@ -593,6 +991,27 @@
           },
           {
             "vehicle_class": "55-seat Coach Bus"
+          },
+          {
+            "vehicle_class": "EV First Class Sedan"
+          },
+          {
+            "vehicle_class": "12 Passenger Party Bus"
+          },
+          {
+            "vehicle_class": "14 Passenger Party Bus"
+          },
+          {
+            "vehicle_class": "EV Sedan"
+          },
+          {
+            "vehicle_class": "EV Business Sedan"
+          },
+          {
+            "vehicle_class": "Comfort Sedan"
+          },
+          {
+            "vehicle_class": "Wheelchair Van"
           }
         ],
         "messages": [
@@ -632,6 +1051,21 @@
             "vehicle_class": "Van Ejecutiva"
           },
           {
+            "vehicle_class": "Limosina de 6 pasajeros"
+          },
+          {
+            "vehicle_class": "Limosina de 8 pasajeros"
+          },
+          {
+            "vehicle_class": "Limosina de 10 pasajeros"
+          },
+          {
+            "vehicle_class": "Limosina de 12 pasajeros"
+          },
+          {
+            "vehicle_class": "Limosina de 16 pasajeros"
+          },
+          {
             "vehicle_class": "Minibus de 8 pasajeros"
           },
           {
@@ -663,6 +1097,27 @@
           },
           {
             "vehicle_class": "Autobús de 55 pasajeros"
+          },
+          {
+            "vehicle_class": "Sedan Primera Clase Eléctrico"
+          },
+          {
+            "vehicle_class": "Party Bus para 12 Pasajeros"
+          },
+          {
+            "vehicle_class": "Party Bus para 14 Pasajeros"
+          },
+          {
+            "vehicle_class": "Sedan Eléctrico"
+          },
+          {
+            "vehicle_class": "Sedan Ejecutivo Eléctrico"
+          },
+          {
+            "vehicle_class": "Comfort Sedan"
+          },
+          {
+            "vehicle_class": "Van para Silla de Ruedas"
           }
         ],
         "messages": [
@@ -700,6 +1155,21 @@
             "vehicle_class": "Business Van"
           },
           {
+            "vehicle_class": "6 Passageiros Stretch Limo"
+          },
+          {
+            "vehicle_class": "8 Passageiros Stretch Limo"
+          },
+          {
+            "vehicle_class": "10 Passageiros Stretch Limo"
+          },
+          {
+            "vehicle_class": "12 passageiros Stretch Limo"
+          },
+          {
+            "vehicle_class": "16 Passageiro Stretch Limo"
+          },
+          {
             "vehicle_class": "Microônibus-8"
           },
           {
@@ -731,6 +1201,27 @@
           },
           {
             "vehicle_class": "Autocarro de 55 lugares"
+          },
+          {
+            "vehicle_class": "Sedan de primeira classe EV"
+          },
+          {
+            "vehicle_class": ""
+          },
+          {
+            "vehicle_class": ""
+          },
+          {
+            "vehicle_class": "EV Sedan"
+          },
+          {
+            "vehicle_class": "EV Business Sedan"
+          },
+          {
+            "vehicle_class": "Comfort Sedan"
+          },
+          {
+            "vehicle_class": ""
           }
         ],
         "messages": [

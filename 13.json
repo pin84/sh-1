@@ -2,38 +2,9 @@
   "vehicle_classes": [
     {
       "price": {
-        "amount": 84.66,
+        "amount": 406.21,
         "currency": "USD",
-        "quote_id": "53b07240b65f429f8ae893c45580a721-v1"
-      },
-      "vehicle_class": "Sedan",
-      "vehicle_class_id": 1,
-      "passenger_capacity": 3,
-      "luggage_capacity": 3,
-      "typical_vehicle": {
-        "model": "Camry",
-        "manufacturer": "Toyota"
-      },
-      "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/sedan.jpg",
-      "price_detail": {
-        "base_pricing": {
-          "type": "fixed",
-          "fix_price_type": "Transfer",
-          "zone": "San Pedro de alcantara",
-          "price": {
-            "amount": 84.66,
-            "currency": "USD"
-          }
-        },
-        "special_pricing": [],
-        "partner_pricing": {}
-      }
-    },
-    {
-      "price": {
-        "amount": 134.04,
-        "currency": "USD",
-        "quote_id": "53b07240b65f429f8ae893c45580a721-v2"
+        "quote_id": "409dd9f0a5634398bf564cb3c7f00f37-v2"
       },
       "vehicle_class": "Business Sedan",
       "vehicle_class_id": 2,
@@ -46,11 +17,11 @@
       "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/besiness-sedan.jpg",
       "price_detail": {
         "base_pricing": {
-          "type": "fixed",
-          "fix_price_type": "Transfer",
-          "zone": "San Pedro de alcantara",
+          "type": "range",
+          "rule": "serviceArea",
+          "zone": "serviceArea",
           "price": {
-            "amount": 134.045,
+            "amount": 406.2065799999999,
             "currency": "USD"
           }
         },
@@ -60,9 +31,9 @@
     },
     {
       "price": {
-        "amount": 149.81,
+        "amount": 937.4,
         "currency": "USD",
-        "quote_id": "53b07240b65f429f8ae893c45580a721-v40"
+        "quote_id": "409dd9f0a5634398bf564cb3c7f00f37-v40"
       },
       "vehicle_class": "First Class",
       "vehicle_class_id": 40,
@@ -75,11 +46,11 @@
       "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/first-class.jpg",
       "price_detail": {
         "base_pricing": {
-          "type": "fixed",
-          "fix_price_type": "Transfer",
-          "zone": "San Pedro de alcantara",
+          "type": "range",
+          "rule": "serviceArea",
+          "zone": "serviceArea",
           "price": {
-            "amount": 149.815,
+            "amount": 937.3997999999999,
             "currency": "USD"
           }
         },
@@ -89,9 +60,9 @@
     },
     {
       "price": {
-        "amount": 105.0,
+        "amount": 406.21,
         "currency": "USD",
-        "quote_id": "53b07240b65f429f8ae893c45580a721-v6"
+        "quote_id": "409dd9f0a5634398bf564cb3c7f00f37-v6"
       },
       "vehicle_class": "MPV-4",
       "vehicle_class_id": 6,
@@ -104,11 +75,11 @@
       "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/mpv-4.jpg",
       "price_detail": {
         "base_pricing": {
-          "type": "fixed",
-          "fix_price_type": "Transfer",
-          "zone": "San Pedro de alcantara",
+          "type": "range",
+          "rule": "serviceArea",
+          "zone": "serviceArea",
           "price": {
-            "amount": 105.0,
+            "amount": 406.2065799999999,
             "currency": "USD"
           }
         },
@@ -118,9 +89,9 @@
     },
     {
       "price": {
-        "amount": 107.9,
+        "amount": 406.21,
         "currency": "USD",
-        "quote_id": "53b07240b65f429f8ae893c45580a721-v3"
+        "quote_id": "409dd9f0a5634398bf564cb3c7f00f37-v3"
       },
       "vehicle_class": "MPV-5",
       "vehicle_class_id": 3,
@@ -133,11 +104,11 @@
       "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/mpv-5.jpg",
       "price_detail": {
         "base_pricing": {
-          "type": "fixed",
-          "fix_price_type": "Transfer",
-          "zone": "San Pedro de alcantara",
+          "type": "range",
+          "rule": "serviceArea",
+          "zone": "serviceArea",
           "price": {
-            "amount": 107.89999999999999,
+            "amount": 406.2065799999999,
             "currency": "USD"
           }
         },
@@ -147,38 +118,9 @@
     },
     {
       "price": {
-        "amount": 137.99,
+        "amount": 499.95,
         "currency": "USD",
-        "quote_id": "53b07240b65f429f8ae893c45580a721-v4"
-      },
-      "vehicle_class": "Business MPV-5",
-      "vehicle_class_id": 4,
-      "passenger_capacity": 4,
-      "luggage_capacity": 4,
-      "typical_vehicle": {
-        "model": "X4",
-        "manufacturer": "BMW"
-      },
-      "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/esp/BSUV.png",
-      "price_detail": {
-        "base_pricing": {
-          "type": "fixed",
-          "fix_price_type": "Transfer",
-          "zone": "San Pedro de alcantara",
-          "price": {
-            "amount": 137.98749999999998,
-            "currency": "USD"
-          }
-        },
-        "special_pricing": [],
-        "partner_pricing": {}
-      }
-    },
-    {
-      "price": {
-        "amount": 138.78,
-        "currency": "USD",
-        "quote_id": "53b07240b65f429f8ae893c45580a721-v36"
+        "quote_id": "409dd9f0a5634398bf564cb3c7f00f37-v36"
       },
       "vehicle_class": "Business Van",
       "vehicle_class_id": 36,
@@ -191,11 +133,11 @@
       "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/businessminivan.jpg",
       "price_detail": {
         "base_pricing": {
-          "type": "fixed",
-          "fix_price_type": "Transfer",
-          "zone": "San Pedro de alcantara",
+          "type": "range",
+          "rule": "serviceArea",
+          "zone": "serviceArea",
           "price": {
-            "amount": 138.77599999999998,
+            "amount": 499.94656,
             "currency": "USD"
           }
         },
@@ -205,9 +147,9 @@
     },
     {
       "price": {
-        "amount": 122.84,
+        "amount": 624.93,
         "currency": "USD",
-        "quote_id": "53b07240b65f429f8ae893c45580a721-v5"
+        "quote_id": "409dd9f0a5634398bf564cb3c7f00f37-v5"
       },
       "vehicle_class": "Minibus-8",
       "vehicle_class_id": 5,
@@ -220,11 +162,11 @@
       "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/minibus-8.jpg",
       "price_detail": {
         "base_pricing": {
-          "type": "fixed",
-          "fix_price_type": "Transfer",
-          "zone": "San Pedro de alcantara",
+          "type": "range",
+          "rule": "serviceArea",
+          "zone": "serviceArea",
           "price": {
-            "amount": 122.84,
+            "amount": 624.9331999999999,
             "currency": "USD"
           }
         },
@@ -234,9 +176,9 @@
     },
     {
       "price": {
-        "amount": 315.4,
+        "amount": 937.4,
         "currency": "USD",
-        "quote_id": "53b07240b65f429f8ae893c45580a721-v9"
+        "quote_id": "409dd9f0a5634398bf564cb3c7f00f37-v9"
       },
       "vehicle_class": "Minibus-10",
       "vehicle_class_id": 9,
@@ -249,11 +191,11 @@
       "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/minibus-10.jpg",
       "price_detail": {
         "base_pricing": {
-          "type": "fixed",
-          "fix_price_type": "Transfer",
-          "zone": "San Pedro de alcantara",
+          "type": "range",
+          "rule": "serviceArea",
+          "zone": "serviceArea",
           "price": {
-            "amount": 315.4,
+            "amount": 937.3997999999999,
             "currency": "USD"
           }
         },
@@ -263,9 +205,9 @@
     },
     {
       "price": {
-        "amount": 331.17,
+        "amount": 937.4,
         "currency": "USD",
-        "quote_id": "53b07240b65f429f8ae893c45580a721-v10"
+        "quote_id": "409dd9f0a5634398bf564cb3c7f00f37-v10"
       },
       "vehicle_class": "Minibus-12",
       "vehicle_class_id": 10,
@@ -278,11 +220,11 @@
       "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/minibus-12.jpg",
       "price_detail": {
         "base_pricing": {
-          "type": "fixed",
-          "fix_price_type": "Transfer",
-          "zone": "San Pedro de alcantara",
+          "type": "range",
+          "rule": "serviceArea",
+          "zone": "serviceArea",
           "price": {
-            "amount": 331.16999999999996,
+            "amount": 937.3997999999999,
             "currency": "USD"
           }
         },
@@ -292,9 +234,9 @@
     },
     {
       "price": {
-        "amount": 339.05,
+        "amount": 1249.87,
         "currency": "USD",
-        "quote_id": "53b07240b65f429f8ae893c45580a721-v11"
+        "quote_id": "409dd9f0a5634398bf564cb3c7f00f37-v11"
       },
       "vehicle_class": "Minibus-14",
       "vehicle_class_id": 11,
@@ -307,11 +249,11 @@
       "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/minibus-14.jpg",
       "price_detail": {
         "base_pricing": {
-          "type": "fixed",
-          "fix_price_type": "Transfer",
-          "zone": "San Pedro de alcantara",
+          "type": "range",
+          "rule": "serviceArea",
+          "zone": "serviceArea",
           "price": {
-            "amount": 339.05499999999995,
+            "amount": 1249.8663999999999,
             "currency": "USD"
           }
         },
@@ -321,9 +263,9 @@
     },
     {
       "price": {
-        "amount": 346.94,
+        "amount": 1562.33,
         "currency": "USD",
-        "quote_id": "53b07240b65f429f8ae893c45580a721-v29"
+        "quote_id": "409dd9f0a5634398bf564cb3c7f00f37-v29"
       },
       "vehicle_class": "16-seat Bus",
       "vehicle_class_id": 29,
@@ -336,11 +278,11 @@
       "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/bus-16.jpg",
       "price_detail": {
         "base_pricing": {
-          "type": "fixed",
-          "fix_price_type": "Transfer",
-          "zone": "San Pedro de alcantara",
+          "type": "range",
+          "rule": "serviceArea",
+          "zone": "serviceArea",
           "price": {
-            "amount": 346.93999999999994,
+            "amount": 1562.333,
             "currency": "USD"
           }
         },
@@ -350,9 +292,9 @@
     },
     {
       "price": {
-        "amount": 394.25,
+        "amount": 1874.8,
         "currency": "USD",
-        "quote_id": "53b07240b65f429f8ae893c45580a721-v30"
+        "quote_id": "409dd9f0a5634398bf564cb3c7f00f37-v30"
       },
       "vehicle_class": "20-seat Bus",
       "vehicle_class_id": 30,
@@ -365,11 +307,11 @@
       "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/bus-20.jpg",
       "price_detail": {
         "base_pricing": {
-          "type": "fixed",
-          "fix_price_type": "Transfer",
-          "zone": "San Pedro de alcantara",
+          "type": "range",
+          "rule": "serviceArea",
+          "zone": "serviceArea",
           "price": {
-            "amount": 394.25,
+            "amount": 1874.7995999999998,
             "currency": "USD"
           }
         },
@@ -379,9 +321,9 @@
     },
     {
       "price": {
-        "amount": 410.02,
+        "amount": 1874.8,
         "currency": "USD",
-        "quote_id": "53b07240b65f429f8ae893c45580a721-v31"
+        "quote_id": "409dd9f0a5634398bf564cb3c7f00f37-v31"
       },
       "vehicle_class": "23-seat Bus",
       "vehicle_class_id": 31,
@@ -394,11 +336,11 @@
       "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/bus-23.jpg",
       "price_detail": {
         "base_pricing": {
-          "type": "fixed",
-          "fix_price_type": "Transfer",
-          "zone": "San Pedro de alcantara",
+          "type": "range",
+          "rule": "serviceArea",
+          "zone": "serviceArea",
           "price": {
-            "amount": 410.02,
+            "amount": 1874.7995999999998,
             "currency": "USD"
           }
         },
@@ -408,9 +350,9 @@
     },
     {
       "price": {
-        "amount": 433.67,
+        "amount": 2187.27,
         "currency": "USD",
-        "quote_id": "53b07240b65f429f8ae893c45580a721-v32"
+        "quote_id": "409dd9f0a5634398bf564cb3c7f00f37-v32"
       },
       "vehicle_class": "27-seat Bus",
       "vehicle_class_id": 32,
@@ -423,11 +365,11 @@
       "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/bus-27.jpg",
       "price_detail": {
         "base_pricing": {
-          "type": "fixed",
-          "fix_price_type": "Transfer",
-          "zone": "San Pedro de alcantara",
+          "type": "range",
+          "rule": "serviceArea",
+          "zone": "serviceArea",
           "price": {
-            "amount": 433.67499999999995,
+            "amount": 2187.2662,
             "currency": "USD"
           }
         },
@@ -437,9 +379,9 @@
     },
     {
       "price": {
-        "amount": 473.1,
+        "amount": 2812.2,
         "currency": "USD",
-        "quote_id": "53b07240b65f429f8ae893c45580a721-v33"
+        "quote_id": "409dd9f0a5634398bf564cb3c7f00f37-v33"
       },
       "vehicle_class": "36-seat Bus",
       "vehicle_class_id": 33,
@@ -452,11 +394,11 @@
       "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/bus-36.jpg",
       "price_detail": {
         "base_pricing": {
-          "type": "fixed",
-          "fix_price_type": "Transfer",
-          "zone": "San Pedro de alcantara",
+          "type": "range",
+          "rule": "serviceArea",
+          "zone": "serviceArea",
           "price": {
-            "amount": 473.1,
+            "amount": 2812.1994,
             "currency": "USD"
           }
         },
@@ -466,9 +408,9 @@
     },
     {
       "price": {
-        "amount": 512.52,
+        "amount": 3124.67,
         "currency": "USD",
-        "quote_id": "53b07240b65f429f8ae893c45580a721-v34"
+        "quote_id": "409dd9f0a5634398bf564cb3c7f00f37-v34"
       },
       "vehicle_class": "44-seat Coach Bus",
       "vehicle_class_id": 34,
@@ -481,11 +423,11 @@
       "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/bus-44.jpg",
       "price_detail": {
         "base_pricing": {
-          "type": "fixed",
-          "fix_price_type": "Transfer",
-          "zone": "San Pedro de alcantara",
+          "type": "range",
+          "rule": "serviceArea",
+          "zone": "serviceArea",
           "price": {
-            "amount": 512.525,
+            "amount": 3124.666,
             "currency": "USD"
           }
         },
@@ -495,9 +437,9 @@
     },
     {
       "price": {
-        "amount": 591.38,
+        "amount": 3437.13,
         "currency": "USD",
-        "quote_id": "53b07240b65f429f8ae893c45580a721-v35"
+        "quote_id": "409dd9f0a5634398bf564cb3c7f00f37-v35"
       },
       "vehicle_class": "55-seat Coach Bus",
       "vehicle_class_id": 35,
@@ -510,11 +452,40 @@
       "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/bus-55.jpg",
       "price_detail": {
         "base_pricing": {
-          "type": "fixed",
-          "fix_price_type": "Transfer",
-          "zone": "San Pedro de alcantara",
+          "type": "range",
+          "rule": "serviceArea",
+          "zone": "serviceArea",
           "price": {
-            "amount": 591.375,
+            "amount": 3437.1326,
+            "currency": "USD"
+          }
+        },
+        "special_pricing": [],
+        "partner_pricing": {}
+      }
+    },
+    {
+      "price": {
+        "amount": 312.47,
+        "currency": "USD",
+        "quote_id": "409dd9f0a5634398bf564cb3c7f00f37-v1"
+      },
+      "vehicle_class": "Sedan",
+      "vehicle_class_id": 1,
+      "passenger_capacity": 3,
+      "luggage_capacity": 3,
+      "typical_vehicle": {
+        "model": "Camry",
+        "manufacturer": "Toyota"
+      },
+      "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/sedan.jpg",
+      "price_detail": {
+        "base_pricing": {
+          "type": "range",
+          "rule": "serviceArea",
+          "zone": "serviceArea",
+          "price": {
+            "amount": 312.46659999999997,
             "currency": "USD"
           }
         },

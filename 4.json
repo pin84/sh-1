@@ -1,0 +1,341 @@
+{
+  "vehicle_classes": [
+    {
+      "price": {
+        "amount": 9.39,
+        "currency": "USD",
+        "quote_id": "4a342d515fb2483791c1ec06d75ff0a1-v1"
+      },
+      "vehicle_class": "Sedan",
+      "vehicle_class_id": 1,
+      "passenger_capacity": 3,
+      "luggage_capacity": 3,
+      "typical_vehicle": {
+        "model": "Camry",
+        "manufacturer": "Toyota"
+      },
+      "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/vnm/Toyota-Camry.jpg",
+      "price_detail": {
+        "base_pricing": {
+          "type": "fixed",
+          "fix_price_type": "Transfer",
+          "zone": "Hoi An",
+          "price": {
+            "amount": 8.39,
+            "currency": "USD"
+          }
+        },
+        "special_pricing": [
+          {
+            "type": "date",
+            "zone": null,
+            "delta_amount": 1,
+            "currency": "USD",
+            "rule": "5月后"
+          }
+        ],
+        "partner_pricing": {}
+      }
+    },
+    {
+      "price": {
+        "amount": 10.98,
+        "currency": "USD",
+        "quote_id": "4a342d515fb2483791c1ec06d75ff0a1-v6"
+      },
+      "vehicle_class": "MPV-4",
+      "vehicle_class_id": 6,
+      "passenger_capacity": 4,
+      "luggage_capacity": 4,
+      "typical_vehicle": {
+        "model": "Highlander",
+        "manufacturer": "Toyota"
+      },
+      "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/mpv-4.jpg",
+      "price_detail": {
+        "base_pricing": {
+          "type": "fixed",
+          "fix_price_type": "Transfer",
+          "zone": "Hoi An",
+          "price": {
+            "amount": 10.98,
+            "currency": "USD"
+          }
+        },
+        "special_pricing": [],
+        "partner_pricing": {}
+      }
+    },
+    {
+      "price": {
+        "amount": 13.0,
+        "currency": "USD",
+        "quote_id": "4a342d515fb2483791c1ec06d75ff0a1-v3"
+      },
+      "vehicle_class": "MPV-5",
+      "vehicle_class_id": 3,
+      "passenger_capacity": 5,
+      "luggage_capacity": 5,
+      "typical_vehicle": {
+        "model": "Sienna",
+        "manufacturer": "Toyota"
+      },
+      "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/mpv-5.jpg",
+      "price_detail": {
+        "base_pricing": {
+          "type": "fixed",
+          "fix_price_type": "Transfer",
+          "zone": "Hoi An",
+          "price": {
+            "amount": 13.0,
+            "currency": "USD"
+          }
+        },
+        "special_pricing": [],
+        "partner_pricing": {}
+      }
+    },
+    {
+      "price": {
+        "amount": 15.49,
+        "currency": "USD",
+        "quote_id": "4a342d515fb2483791c1ec06d75ff0a1-v5"
+      },
+      "vehicle_class": "Minibus-8",
+      "vehicle_class_id": 5,
+      "passenger_capacity": 8,
+      "luggage_capacity": 8,
+      "typical_vehicle": {
+        "model": "Transit",
+        "manufacturer": "Ford"
+      },
+      "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/vnm/Ford-Transit-Small.jpg",
+      "price_detail": {
+        "base_pricing": {
+          "type": "fixed",
+          "fix_price_type": "Transfer",
+          "zone": "Hoi An",
+          "price": {
+            "amount": 15.49,
+            "currency": "USD"
+          }
+        },
+        "special_pricing": [],
+        "partner_pricing": {}
+      }
+    },
+    {
+      "price": {
+        "amount": 16.0,
+        "currency": "USD",
+        "quote_id": "4a342d515fb2483791c1ec06d75ff0a1-v9"
+      },
+      "vehicle_class": "Minibus-10",
+      "vehicle_class_id": 9,
+      "passenger_capacity": 10,
+      "luggage_capacity": 10,
+      "typical_vehicle": {
+        "model": "Ford",
+        "manufacturer": "Ford"
+      },
+      "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/minibus-10.jpg",
+      "price_detail": {
+        "base_pricing": {
+          "type": "fixed",
+          "fix_price_type": "Transfer",
+          "zone": "Hoi An",
+          "price": {
+            "amount": 16.0,
+            "currency": "USD"
+          }
+        },
+        "special_pricing": [],
+        "partner_pricing": {}
+      }
+    },
+    {
+      "price": {
+        "amount": 35.0,
+        "currency": "USD",
+        "quote_id": "4a342d515fb2483791c1ec06d75ff0a1-v10"
+      },
+      "vehicle_class": "Minibus-12",
+      "vehicle_class_id": 10,
+      "passenger_capacity": 12,
+      "luggage_capacity": 12,
+      "typical_vehicle": {
+        "model": "Transit",
+        "manufacturer": "Ford"
+      },
+      "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/vnm/Ford-Transit-Big.jpg",
+      "price_detail": {
+        "base_pricing": {
+          "type": "fixed",
+          "fix_price_type": "Transfer",
+          "zone": "Hoi An",
+          "price": {
+            "amount": 35.0,
+            "currency": "USD"
+          }
+        },
+        "special_pricing": [],
+        "partner_pricing": {}
+      }
+    },
+    {
+      "price": {
+        "amount": 42.5,
+        "currency": "USD",
+        "quote_id": "4a342d515fb2483791c1ec06d75ff0a1-v11"
+      },
+      "vehicle_class": "Minibus-14",
+      "vehicle_class_id": 11,
+      "passenger_capacity": 14,
+      "luggage_capacity": 14,
+      "typical_vehicle": {
+        "model": "Transit",
+        "manufacturer": "Ford"
+      },
+      "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/vnm/Hyundai-County-36.jpg",
+      "price_detail": {
+        "base_pricing": {
+          "type": "fixed",
+          "fix_price_type": "Transfer",
+          "zone": "Hoi An",
+          "price": {
+            "amount": 42.5,
+            "currency": "USD"
+          }
+        },
+        "special_pricing": [],
+        "partner_pricing": {}
+      }
+    }
+  ],
+  "meet_and_greet": {
+    "price": {
+      "amount": 0,
+      "currency": "USD",
+      "quote_id": "4a342d515fb2483791c1ec06d75ff0a1-m"
+    }
+  },
+  "add_service": {},
+  "add_service_unit_price": {},
+  "airports": ["DAD"],
+  "messages": {
+    "url": "https://elifelimo.s3.us-east-2.amazonaws.com/quote/message/messages.json"
+  },
+  "langs": [
+    {
+      "eng": {
+        "vehicles_classes": [
+          {
+            "vehicle_class": "Sedan"
+          },
+          {
+            "vehicle_class": "Compatct Minivan"
+          },
+          {
+            "vehicle_class": "Minivan"
+          },
+          {
+            "vehicle_class": "Minibus-8"
+          },
+          {
+            "vehicle_class": "Minibus-10"
+          },
+          {
+            "vehicle_class": "Minibus-12"
+          },
+          {
+            "vehicle_class": "Minibus-14"
+          }
+        ],
+        "messages": [
+          {
+            "subject": "waiting time",
+            "message": "60 minutes of waiting after the arrival of your flight is included"
+          },
+          {
+            "subject": "cancellation",
+            "message": "full refund if cancenlled 24 hours ahead of the time"
+          }
+        ]
+      }
+    },
+    {
+      "spa": {
+        "vehicles_classes": [
+          {
+            "vehicle_class": "Sedan"
+          },
+          {
+            "vehicle_class": "Minivan Compacta"
+          },
+          {
+            "vehicle_class": "Minivan"
+          },
+          {
+            "vehicle_class": "Minibus de 8 pasajeros"
+          },
+          {
+            "vehicle_class": "Minibus de 10 pasajeros"
+          },
+          {
+            "vehicle_class": "Minibus de 12 pasajeros"
+          },
+          {
+            "vehicle_class": "Minibus de 14 pasajeros"
+          }
+        ],
+        "messages": [
+          {
+            "subject": "Tiempo de espera",
+            "message": "60 minutos de espera incluidos a la llegada de tu vuelo"
+          },
+          {
+            "subject": "Cancelación",
+            "message": "Reembolso total en caso de cancelar al menos 24 horas antes del servicio"
+          }
+        ]
+      },
+      "por": {
+        "vehicles_classes": [
+          {
+            "vehicle_class": "Sedan"
+          },
+          {
+            "vehicle_class": "Compatct Minivan"
+          },
+          {
+            "vehicle_class": "Minivan"
+          },
+          {
+            "vehicle_class": "Microônibus-8"
+          },
+          {
+            "vehicle_class": "Microônibus-10"
+          },
+          {
+            "vehicle_class": "Microônibus-12"
+          },
+          {
+            "vehicle_class": "Microônibus-14"
+          }
+        ],
+        "messages": [
+          {
+            "subject": "tempo de espera",
+            "message": "60 minutos de espera após a chegada do seu voo está incluído"
+          },
+          {
+            "subject": "cancelamento",
+            "message": "reembolso total se cancenlled 24 horas antes do tempo"
+          }
+        ]
+      }
+    }
+  ],
+  "quote_id": "",
+  "request_id": "3-879c48d6a79b4297b8e79ca2d822cc02-1714518166-ag6dirsy"
+}
