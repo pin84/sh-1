@@ -1110,10 +1110,10 @@ Object.assign(svcUtils, {
       const response = await fetch(url, requestConfig);
       const responseJson = await response.json();
       isShowLoading && getLoading().hidden();
-
+      debugger
       return responseJson
     } catch (error) {
-
+debugger
       isShowLoading && getLoading().hidden();
       throw new Error(error)
     }

@@ -1,751 +1,148 @@
 {
-  "vehicle_classes": [
+  "results": [
     {
+      "searchResultId": "a4bfead7-45da-49b2-87ee-fe504a2d4bba_1",
+      "transportCategory": "STANDARD",
       "price": {
-        "amount": 84.66,
-        "currency": "USD",
-        "quote_id": "1ee2c146a04a4af38643aac400104e61-v1"
+        "salePriceMin": 11.33,
+        "salePriceMax": 11.33,
+        "currency": "USD"
       },
-      "vehicle_class": "Sedan",
-      "vehicle_class_id": 1,
-      "passenger_capacity": 3,
-      "luggage_capacity": 3,
-      "typical_vehicle": {
-        "model": "Camry",
-        "manufacturer": "Toyota"
-      },
-      "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/sedan.jpg",
-      "price_detail": {
-        "base_pricing": {
-          "type": "fixed",
-          "fix_price_type": "Transfer",
-          "zone": "San Pedro de alcantara",
-          "price": {
-            "amount": 84.66,
-            "currency": "USD"
-          }
-        },
-        "special_pricing": [],
-        "partner_pricing": {}
-      }
+      "minPassengers": 1,
+      "maxPassengers": 3,
+      "features": [
+        {
+          "name": "noOfBags",
+          "value": 3
+        }
+      ],
+      "servicesAvailable": ["meetAndGreet"]
     },
     {
+      "searchResultId": "e6743674-022a-406e-a623-506fbc8dae6b_1",
+      "transportCategory": "EXECUTIVE",
       "price": {
-        "amount": 134.04,
-        "currency": "USD",
-        "quote_id": "1ee2c146a04a4af38643aac400104e61-v2"
+        "salePriceMin": 42.85,
+        "salePriceMax": 42.85,
+        "currency": "USD"
       },
-      "vehicle_class": "Business Sedan",
-      "vehicle_class_id": 2,
-      "passenger_capacity": 3,
-      "luggage_capacity": 3,
-      "typical_vehicle": {
-        "model": "Continental",
-        "manufacturer": "Lincoln"
-      },
-      "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/besiness-sedan.jpg",
-      "price_detail": {
-        "base_pricing": {
-          "type": "fixed",
-          "fix_price_type": "Transfer",
-          "zone": "San Pedro de alcantara",
-          "price": {
-            "amount": 134.045,
-            "currency": "USD"
-          }
-        },
-        "special_pricing": [],
-        "partner_pricing": {}
-      }
+      "minPassengers": 1,
+      "maxPassengers": 3,
+      "features": [
+        {
+          "name": "noOfBags",
+          "value": 3
+        }
+      ],
+      "servicesAvailable": ["meetAndGreet"]
     },
     {
+      "searchResultId": "7c062187-58ba-41d2-af2e-95c06553afc5_1",
+      "transportCategory": "PEOPLECARRIER",
       "price": {
-        "amount": 149.81,
-        "currency": "USD",
-        "quote_id": "1ee2c146a04a4af38643aac400104e61-v40"
+        "salePriceMin": 24.43,
+        "salePriceMax": 24.43,
+        "currency": "USD"
       },
-      "vehicle_class": "First Class",
-      "vehicle_class_id": 40,
-      "passenger_capacity": 3,
-      "luggage_capacity": 3,
-      "typical_vehicle": {
-        "model": "S550",
-        "manufacturer": "Mercedes"
-      },
-      "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/first-class.jpg",
-      "price_detail": {
-        "base_pricing": {
-          "type": "fixed",
-          "fix_price_type": "Transfer",
-          "zone": "San Pedro de alcantara",
-          "price": {
-            "amount": 149.815,
-            "currency": "USD"
-          }
-        },
-        "special_pricing": [],
-        "partner_pricing": {}
-      }
+      "minPassengers": 1,
+      "maxPassengers": 4,
+      "features": [
+        {
+          "name": "noOfBags",
+          "value": 4
+        }
+      ],
+      "servicesAvailable": ["meetAndGreet"]
     },
     {
+      "searchResultId": "207b573e-f95d-4774-9905-4d5c4d10daf8_1",
+      "transportCategory": "LARGEPEOPLECARRIER",
       "price": {
-        "amount": 105.0,
-        "currency": "USD",
-        "quote_id": "1ee2c146a04a4af38643aac400104e61-v6"
+        "salePriceMin": 25.98,
+        "salePriceMax": 25.98,
+        "currency": "USD"
       },
-      "vehicle_class": "MPV-4",
-      "vehicle_class_id": 6,
-      "passenger_capacity": 4,
-      "luggage_capacity": 4,
-      "typical_vehicle": {
-        "model": "Highlander",
-        "manufacturer": "Toyota"
-      },
-      "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/mpv-4.jpg",
-      "price_detail": {
-        "base_pricing": {
-          "type": "fixed",
-          "fix_price_type": "Transfer",
-          "zone": "San Pedro de alcantara",
-          "price": {
-            "amount": 105.0,
-            "currency": "USD"
-          }
-        },
-        "special_pricing": [],
-        "partner_pricing": {}
-      }
+      "minPassengers": 1,
+      "maxPassengers": 5,
+      "features": [
+        {
+          "name": "noOfBags",
+          "value": 5
+        }
+      ],
+      "servicesAvailable": ["meetAndGreet"]
     },
     {
+      "searchResultId": "d36647c8-02bb-450a-ad34-29d87556bece_1",
+      "transportCategory": "EXECUTIVEPEOPLECARRIER",
       "price": {
-        "amount": 107.9,
-        "currency": "USD",
-        "quote_id": "1ee2c146a04a4af38643aac400104e61-v3"
+        "salePriceMin": 80.0,
+        "salePriceMax": 80.0,
+        "currency": "USD"
       },
-      "vehicle_class": "MPV-5",
-      "vehicle_class_id": 3,
-      "passenger_capacity": 5,
-      "luggage_capacity": 5,
-      "typical_vehicle": {
-        "model": "Sienna",
-        "manufacturer": "Toyota"
-      },
-      "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/mpv-5.jpg",
-      "price_detail": {
-        "base_pricing": {
-          "type": "fixed",
-          "fix_price_type": "Transfer",
-          "zone": "San Pedro de alcantara",
-          "price": {
-            "amount": 107.89999999999999,
-            "currency": "USD"
-          }
-        },
-        "special_pricing": [],
-        "partner_pricing": {}
-      }
+      "minPassengers": 1,
+      "maxPassengers": 5,
+      "features": [
+        {
+          "name": "noOfBags",
+          "value": 5
+        }
+      ],
+      "servicesAvailable": ["meetAndGreet"]
     },
     {
+      "searchResultId": "3274c511-e672-4914-881e-f65eb23e72f1_1",
+      "transportCategory": "MINIBUS",
       "price": {
-        "amount": 137.99,
-        "currency": "USD",
-        "quote_id": "1ee2c146a04a4af38643aac400104e61-v4"
+        "salePriceMin": 120.0,
+        "salePriceMax": 120.0,
+        "currency": "USD"
       },
-      "vehicle_class": "Business MPV-5",
-      "vehicle_class_id": 4,
-      "passenger_capacity": 4,
-      "luggage_capacity": 4,
-      "typical_vehicle": {
-        "model": "X4",
-        "manufacturer": "BMW"
-      },
-      "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/esp/BSUV.png",
-      "price_detail": {
-        "base_pricing": {
-          "type": "fixed",
-          "fix_price_type": "Transfer",
-          "zone": "San Pedro de alcantara",
-          "price": {
-            "amount": 137.98749999999998,
-            "currency": "USD"
-          }
-        },
-        "special_pricing": [],
-        "partner_pricing": {}
-      }
+      "minPassengers": 1,
+      "maxPassengers": 8,
+      "features": [
+        {
+          "name": "noOfBags",
+          "value": 8
+        }
+      ],
+      "servicesAvailable": ["meetAndGreet"]
     },
     {
+      "searchResultId": "abe2d184-c28a-40eb-9374-f3b813fd1528_1",
+      "transportCategory": "ELECTRICSTANDARD",
       "price": {
-        "amount": 138.78,
-        "currency": "USD",
-        "quote_id": "1ee2c146a04a4af38643aac400104e61-v36"
+        "salePriceMin": 17.03,
+        "salePriceMax": 17.03,
+        "currency": "USD"
       },
-      "vehicle_class": "Business Van",
-      "vehicle_class_id": 36,
-      "passenger_capacity": 5,
-      "luggage_capacity": 5,
-      "typical_vehicle": {
-        "model": "GL8",
-        "manufacturer": "Buick"
-      },
-      "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/businessminivan.jpg",
-      "price_detail": {
-        "base_pricing": {
-          "type": "fixed",
-          "fix_price_type": "Transfer",
-          "zone": "San Pedro de alcantara",
-          "price": {
-            "amount": 138.77599999999998,
-            "currency": "USD"
-          }
-        },
-        "special_pricing": [],
-        "partner_pricing": {}
-      }
+      "minPassengers": 1,
+      "maxPassengers": 3,
+      "features": [
+        {
+          "name": "noOfBags",
+          "value": 3
+        }
+      ],
+      "servicesAvailable": ["meetAndGreet"]
     },
     {
+      "searchResultId": "d96e33fc-995e-4ab8-adf1-478a66dd31a6_1",
+      "transportCategory": "LUXURY",
       "price": {
-        "amount": 122.84,
-        "currency": "USD",
-        "quote_id": "1ee2c146a04a4af38643aac400104e61-v5"
+        "salePriceMin": 120.0,
+        "salePriceMax": 120.0,
+        "currency": "USD"
       },
-      "vehicle_class": "Minibus-8",
-      "vehicle_class_id": 5,
-      "passenger_capacity": 8,
-      "luggage_capacity": 8,
-      "typical_vehicle": {
-        "model": "Transit",
-        "manufacturer": "Ford"
-      },
-      "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/minibus-8.jpg",
-      "price_detail": {
-        "base_pricing": {
-          "type": "fixed",
-          "fix_price_type": "Transfer",
-          "zone": "San Pedro de alcantara",
-          "price": {
-            "amount": 122.84,
-            "currency": "USD"
-          }
-        },
-        "special_pricing": [],
-        "partner_pricing": {}
-      }
-    },
-    {
-      "price": {
-        "amount": 315.4,
-        "currency": "USD",
-        "quote_id": "1ee2c146a04a4af38643aac400104e61-v9"
-      },
-      "vehicle_class": "Minibus-10",
-      "vehicle_class_id": 9,
-      "passenger_capacity": 10,
-      "luggage_capacity": 10,
-      "typical_vehicle": {
-        "model": "Ford",
-        "manufacturer": "Ford"
-      },
-      "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/minibus-10.jpg",
-      "price_detail": {
-        "base_pricing": {
-          "type": "fixed",
-          "fix_price_type": "Transfer",
-          "zone": "San Pedro de alcantara",
-          "price": {
-            "amount": 315.4,
-            "currency": "USD"
-          }
-        },
-        "special_pricing": [],
-        "partner_pricing": {}
-      }
-    },
-    {
-      "price": {
-        "amount": 331.17,
-        "currency": "USD",
-        "quote_id": "1ee2c146a04a4af38643aac400104e61-v10"
-      },
-      "vehicle_class": "Minibus-12",
-      "vehicle_class_id": 10,
-      "passenger_capacity": 12,
-      "luggage_capacity": 12,
-      "typical_vehicle": {
-        "model": "Sprinter",
-        "manufacturer": "Mercedes"
-      },
-      "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/minibus-12.jpg",
-      "price_detail": {
-        "base_pricing": {
-          "type": "fixed",
-          "fix_price_type": "Transfer",
-          "zone": "San Pedro de alcantara",
-          "price": {
-            "amount": 331.16999999999996,
-            "currency": "USD"
-          }
-        },
-        "special_pricing": [],
-        "partner_pricing": {}
-      }
-    },
-    {
-      "price": {
-        "amount": 339.05,
-        "currency": "USD",
-        "quote_id": "1ee2c146a04a4af38643aac400104e61-v11"
-      },
-      "vehicle_class": "Minibus-14",
-      "vehicle_class_id": 11,
-      "passenger_capacity": 14,
-      "luggage_capacity": 14,
-      "typical_vehicle": {
-        "model": "Sprinter",
-        "manufacturer": "Mercedes"
-      },
-      "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/minibus-14.jpg",
-      "price_detail": {
-        "base_pricing": {
-          "type": "fixed",
-          "fix_price_type": "Transfer",
-          "zone": "San Pedro de alcantara",
-          "price": {
-            "amount": 339.05499999999995,
-            "currency": "USD"
-          }
-        },
-        "special_pricing": [],
-        "partner_pricing": {}
-      }
-    },
-    {
-      "price": {
-        "amount": 346.94,
-        "currency": "USD",
-        "quote_id": "1ee2c146a04a4af38643aac400104e61-v29"
-      },
-      "vehicle_class": "16-seat Bus",
-      "vehicle_class_id": 29,
-      "passenger_capacity": 16,
-      "luggage_capacity": 16,
-      "typical_vehicle": {
-        "model": "E-450",
-        "manufacturer": "Ford"
-      },
-      "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/bus-16.jpg",
-      "price_detail": {
-        "base_pricing": {
-          "type": "fixed",
-          "fix_price_type": "Transfer",
-          "zone": "San Pedro de alcantara",
-          "price": {
-            "amount": 346.93999999999994,
-            "currency": "USD"
-          }
-        },
-        "special_pricing": [],
-        "partner_pricing": {}
-      }
-    },
-    {
-      "price": {
-        "amount": 394.25,
-        "currency": "USD",
-        "quote_id": "1ee2c146a04a4af38643aac400104e61-v30"
-      },
-      "vehicle_class": "20-seat Bus",
-      "vehicle_class_id": 30,
-      "passenger_capacity": 20,
-      "luggage_capacity": 20,
-      "typical_vehicle": {
-        "model": "E-450",
-        "manufacturer": "Ford"
-      },
-      "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/bus-20.jpg",
-      "price_detail": {
-        "base_pricing": {
-          "type": "fixed",
-          "fix_price_type": "Transfer",
-          "zone": "San Pedro de alcantara",
-          "price": {
-            "amount": 394.25,
-            "currency": "USD"
-          }
-        },
-        "special_pricing": [],
-        "partner_pricing": {}
-      }
-    },
-    {
-      "price": {
-        "amount": 410.02,
-        "currency": "USD",
-        "quote_id": "1ee2c146a04a4af38643aac400104e61-v31"
-      },
-      "vehicle_class": "23-seat Bus",
-      "vehicle_class_id": 31,
-      "passenger_capacity": 23,
-      "luggage_capacity": 23,
-      "typical_vehicle": {
-        "model": "F-550",
-        "manufacturer": "Ford"
-      },
-      "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/bus-23.jpg",
-      "price_detail": {
-        "base_pricing": {
-          "type": "fixed",
-          "fix_price_type": "Transfer",
-          "zone": "San Pedro de alcantara",
-          "price": {
-            "amount": 410.02,
-            "currency": "USD"
-          }
-        },
-        "special_pricing": [],
-        "partner_pricing": {}
-      }
-    },
-    {
-      "price": {
-        "amount": 433.67,
-        "currency": "USD",
-        "quote_id": "1ee2c146a04a4af38643aac400104e61-v32"
-      },
-      "vehicle_class": "27-seat Bus",
-      "vehicle_class_id": 32,
-      "passenger_capacity": 27,
-      "luggage_capacity": 27,
-      "typical_vehicle": {
-        "model": "F-550",
-        "manufacturer": "Ford"
-      },
-      "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/bus-27.jpg",
-      "price_detail": {
-        "base_pricing": {
-          "type": "fixed",
-          "fix_price_type": "Transfer",
-          "zone": "San Pedro de alcantara",
-          "price": {
-            "amount": 433.67499999999995,
-            "currency": "USD"
-          }
-        },
-        "special_pricing": [],
-        "partner_pricing": {}
-      }
-    },
-    {
-      "price": {
-        "amount": 473.1,
-        "currency": "USD",
-        "quote_id": "1ee2c146a04a4af38643aac400104e61-v33"
-      },
-      "vehicle_class": "36-seat Bus",
-      "vehicle_class_id": 33,
-      "passenger_capacity": 36,
-      "luggage_capacity": 36,
-      "typical_vehicle": {
-        "model": "F-650 or smilar",
-        "manufacturer": "Ford"
-      },
-      "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/bus-36.jpg",
-      "price_detail": {
-        "base_pricing": {
-          "type": "fixed",
-          "fix_price_type": "Transfer",
-          "zone": "San Pedro de alcantara",
-          "price": {
-            "amount": 473.1,
-            "currency": "USD"
-          }
-        },
-        "special_pricing": [],
-        "partner_pricing": {}
-      }
-    },
-    {
-      "price": {
-        "amount": 512.52,
-        "currency": "USD",
-        "quote_id": "1ee2c146a04a4af38643aac400104e61-v34"
-      },
-      "vehicle_class": "44-seat Coach Bus",
-      "vehicle_class_id": 34,
-      "passenger_capacity": 44,
-      "luggage_capacity": 44,
-      "typical_vehicle": {
-        "model": "Coach bus",
-        "manufacturer": "Volvo"
-      },
-      "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/bus-44.jpg",
-      "price_detail": {
-        "base_pricing": {
-          "type": "fixed",
-          "fix_price_type": "Transfer",
-          "zone": "San Pedro de alcantara",
-          "price": {
-            "amount": 512.525,
-            "currency": "USD"
-          }
-        },
-        "special_pricing": [],
-        "partner_pricing": {}
-      }
-    },
-    {
-      "price": {
-        "amount": 591.38,
-        "currency": "USD",
-        "quote_id": "1ee2c146a04a4af38643aac400104e61-v35"
-      },
-      "vehicle_class": "55-seat Coach Bus",
-      "vehicle_class_id": 35,
-      "passenger_capacity": 55,
-      "luggage_capacity": 55,
-      "typical_vehicle": {
-        "model": "Motorcoach or smilar",
-        "manufacturer": "Prevost"
-      },
-      "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/bus-55.jpg",
-      "price_detail": {
-        "base_pricing": {
-          "type": "fixed",
-          "fix_price_type": "Transfer",
-          "zone": "San Pedro de alcantara",
-          "price": {
-            "amount": 591.375,
-            "currency": "USD"
-          }
-        },
-        "special_pricing": [],
-        "partner_pricing": {}
-      }
+      "minPassengers": 1,
+      "maxPassengers": 3,
+      "features": [
+        {
+          "name": "noOfBags",
+          "value": 3
+        }
+      ],
+      "servicesAvailable": ["meetAndGreet"]
     }
-  ],
-  "meet_and_greet": {
-    "price": {
-      "amount": 0,
-      "currency": "USD",
-      "quote_id": "1ee2c146a04a4af38643aac400104e61-m"
-    }
-  },
-  "add_service": {},
-  "add_service_unit_price": {},
-  "airports": ["AGP"],
-  "messages": {
-    "url": "https://elifelimo.s3.us-east-2.amazonaws.com/quote/message/messages.json"
-  },
-  "langs": [
-    {
-      "eng": {
-        "vehicles_classes": [
-          {
-            "vehicle_class": "Sedan"
-          },
-          {
-            "vehicle_class": "Business Sedan"
-          },
-          {
-            "vehicle_class": "First Class"
-          },
-          {
-            "vehicle_class": "Compatct Minivan"
-          },
-          {
-            "vehicle_class": "Minivan"
-          },
-          {
-            "vehicle_class": "Business Minivan"
-          },
-          {
-            "vehicle_class": "Business Van"
-          },
-          {
-            "vehicle_class": "Minibus-8"
-          },
-          {
-            "vehicle_class": "Minibus-10"
-          },
-          {
-            "vehicle_class": "Minibus-12"
-          },
-          {
-            "vehicle_class": "Minibus-14"
-          },
-          {
-            "vehicle_class": "16-seat Bus"
-          },
-          {
-            "vehicle_class": "20-seat Bus"
-          },
-          {
-            "vehicle_class": "23-seat Bus"
-          },
-          {
-            "vehicle_class": "27-seat Bus"
-          },
-          {
-            "vehicle_class": "36-seat Bus"
-          },
-          {
-            "vehicle_class": "44-seat Coach Bus"
-          },
-          {
-            "vehicle_class": "55-seat Coach Bus"
-          }
-        ],
-        "messages": [
-          {
-            "subject": "waiting time",
-            "message": "60 minutes of waiting after the arrival of your flight is included"
-          },
-          {
-            "subject": "cancellation",
-            "message": "full refund if cancenlled 24 hours ahead of the time"
-          }
-        ]
-      }
-    },
-    {
-      "spa": {
-        "vehicles_classes": [
-          {
-            "vehicle_class": "Sedan"
-          },
-          {
-            "vehicle_class": "Sedan Ejecutivo"
-          },
-          {
-            "vehicle_class": "Sedan Primera Clase"
-          },
-          {
-            "vehicle_class": "Minivan Compacta"
-          },
-          {
-            "vehicle_class": "Minivan"
-          },
-          {
-            "vehicle_class": "Minivan Ejecutiva"
-          },
-          {
-            "vehicle_class": "Van Ejecutiva"
-          },
-          {
-            "vehicle_class": "Minibus de 8 pasajeros"
-          },
-          {
-            "vehicle_class": "Minibus de 10 pasajeros"
-          },
-          {
-            "vehicle_class": "Minibus de 12 pasajeros"
-          },
-          {
-            "vehicle_class": "Minibus de 14 pasajeros"
-          },
-          {
-            "vehicle_class": "Autobús de 16 pasajeros"
-          },
-          {
-            "vehicle_class": "Autobús de 20 pasajeros"
-          },
-          {
-            "vehicle_class": "Autobús de 23 pasajeros"
-          },
-          {
-            "vehicle_class": "Autobús de 27 pasajeros"
-          },
-          {
-            "vehicle_class": "Autobús de 36 pasajeros"
-          },
-          {
-            "vehicle_class": "Autobús de 44 pasajeros"
-          },
-          {
-            "vehicle_class": "Autobús de 55 pasajeros"
-          }
-        ],
-        "messages": [
-          {
-            "subject": "Tiempo de espera",
-            "message": "60 minutos de espera incluidos a la llegada de tu vuelo"
-          },
-          {
-            "subject": "Cancelación",
-            "message": "Reembolso total en caso de cancelar al menos 24 horas antes del servicio"
-          }
-        ]
-      },
-      "por": {
-        "vehicles_classes": [
-          {
-            "vehicle_class": "Sedan"
-          },
-          {
-            "vehicle_class": "Business Sedan"
-          },
-          {
-            "vehicle_class": "Primeira Classe"
-          },
-          {
-            "vehicle_class": "Compatct Minivan"
-          },
-          {
-            "vehicle_class": "Minivan"
-          },
-          {
-            "vehicle_class": "Business Minivan"
-          },
-          {
-            "vehicle_class": "Business Van"
-          },
-          {
-            "vehicle_class": "Microônibus-8"
-          },
-          {
-            "vehicle_class": "Microônibus-10"
-          },
-          {
-            "vehicle_class": "Microônibus-12"
-          },
-          {
-            "vehicle_class": "Microônibus-14"
-          },
-          {
-            "vehicle_class": "Ônibus de 16 lugares"
-          },
-          {
-            "vehicle_class": "Ônibus de 20 lugares"
-          },
-          {
-            "vehicle_class": "Ônibus de 23 lugares"
-          },
-          {
-            "vehicle_class": "Ônibus de 27 lugares"
-          },
-          {
-            "vehicle_class": "Ônibus de 36 lugares"
-          },
-          {
-            "vehicle_class": "Autocarro de 44 lugares"
-          },
-          {
-            "vehicle_class": "Autocarro de 55 lugares"
-          }
-        ],
-        "messages": [
-          {
-            "subject": "tempo de espera",
-            "message": "60 minutos de espera após a chegada do seu voo está incluído"
-          },
-          {
-            "subject": "cancelamento",
-            "message": "reembolso total se cancenlled 24 horas antes do tempo"
-          }
-        ]
-      }
-    }
-  ],
-  "quote_id": "",
-  "request_id": "3-879c48d6a79b4297b8e79ca2d822cc02-1714518166-ag6dirsy"
+  ]
 }

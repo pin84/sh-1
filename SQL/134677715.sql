@@ -1,1 +1,0 @@
-select * from sql_template where sql_enum=134677630
