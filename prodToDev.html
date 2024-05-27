@@ -41,53 +41,68 @@
     let te_2 = document.getElementById('textarea-2')
 
 
-    let hasCopy = [39,65,1139]
+    let hasCopy = []
     let noPricingIds = []
     let completedIds = []
 
 
     btn.addEventListener('click', async () => {
-      let cPartnerJson = JSON.parse(JSON.stringify(partnerJson))
-      let { sas_percent } = cPartnerJson.service_areas
-      cPartnerJson['sas_percent'] = sas_percent.sort((a, b) => a.id - b.id)
-      console.log(cPartnerJson);
 
-      ids = [72,670,995]
-      let count = 0
-      for (let id of ids) {
-        if (hasCopy.includes(Number(id))) continue
-        let newFleetId = await getNewFleetId(id) //52385 
-        let pricingJsonId = await getPricingJsonIdBySvcId(id) // 144999
+
+        // if (hasCopy.includes(Number(id))) continue
+        // // let newFleetId = await getNewFleetId(id) //52385 
+        let pricingJsonId = await getPricingJsonIdBySvcId(1172) // 144999
 
         if (!pricingJsonId) {
           noPricingIds.push(id)
-          count++
-          continue
+          return
         }
         let json = await getPricingJsonById(pricingJsonId)
-        console.log('---before----', json);
-        let jsonHandled = await jsonHandler(JSON.parse(JSON.stringify(json)), newFleetId, json)
-        console.log('---after----', jsonHandled);
-        let res = await insertAndUpdate(jsonHandled, newFleetId)
-        count++
-        completedIds.push(id)
-      }
-      console.log(`--- count ++------`, count);
-      console.log('---noPricingIds---', noPricingIds);
-      console.log('---completedIds---', completedIds);
+        // console.log('---before----', json);
+
+        let {airports} = json
+
+
+        let d = {
+          sql: 134678832,
+          version: '1.0',
+          airport: airports[0]
+        }
+
+        let airportFleet = await fetchData({
+          url:urlDev,
+          method: 'POST',
+          data: d,
+          desc: 'get airprot fleet by airport v1'
+        })
+
+        let {id,airport,fleet_id} = airportFleet
+
+        if(id){
+
+        } else {
+
+
+
+        }
+        
+
+
+   
+
     })
 
 
 
 
     //PROD
-    let prodSES = '8JIOKRSCYyWkgmDnsqJ1d0bqNP6U8RSopQfoxVd94V2jgZATfS4bvd1gFSDy4q575A1i42yIpBQ5wLGZLFbWRfnLwlbDX1Mw1ReYkrnnuR6RVdzoeqLlzcwjwfJRO89j'
-    let url = `https://51y9xc7cuh.execute-api.us-east-2.amazonaws.com/upncoming/sql-templates/run?ses=${prodSES}`
+    let sesProd = '8JIOKRSCYyWkgmDnsqJ1d0bqNP6U8RSopQfoxVd94V2jgZATfS4bvd1gFSDy4q575A1i42yIpBQ5wLGZLFbWRfnLwlbDX1Mw1ReYkrnnuR6RVdzoeqLlzcwjwfJRO89j'
+    let urlProd = `https://51y9xc7cuh.execute-api.us-east-2.amazonaws.com/upncoming/sql-templates/run?ses=${sesProd}`
 
 
-    //DEV
-    // let ses = 'vbrkSAyz6CCAztNt4Pu6HVFdCXquUPHcMwtg6LSZTNfmqrD6A5a3iAuOMZDKUUe9BKSIRMfohJqisplYXlImmlwIFTHMISHtuPKMsH5fl3zZkE3deNQwfLouWDzYGz42'
-    // let url = `https://jqwys3p5nk.execute-api.us-east-2.amazonaws.com/dev/sql-template/run?ses=${ses}`
+    // DEV
+    let sesDev = 'vbrkSAyz6CCAztNt4Pu6HVFdCXquUPHcMwtg6LSZTNfmqrD6A5a3iAuOMZDKUUe9BKSIRMfohJqisplYXlImmlwIFTHMISHtuPKMsH5fl3zZkE3deNQwfLouWDzYGz42'
+    let urlDev = `https://jqwys3p5nk.execute-api.us-east-2.amazonaws.com/dev/sql-template/run?ses=${sesDev}`
 
 
     async function getNewFleetId(oldFleetId) {
@@ -117,7 +132,7 @@
       }
 
       let res = await fetchData({
-        url,
+        url:urlProd,
         method: 'POST',
         data: d,
         desc: 'get pricing json_id'
@@ -135,7 +150,7 @@
       }
 
       let res_json = await fetchData({
-        url,
+        url:urlProd,
         method: 'POST',
         data: d,
         desc: 'get pricing json by id'
@@ -229,7 +244,7 @@
               svcJson.hourly_pricing.min_amount = addPicies(min_amount, svcPercent)
             }
 
-           
+
 
             let rules = svcJson.hourly_pricing?.rules || []
             let ranges = svcJson.hourly_pricing?.ranges || []
@@ -428,7 +443,7 @@
       svcJson.serviceArea['parent_fleet_id'] = 51488
       svcJson.serviceArea['parent_fleet_name'] = '3_elife'
 
-      let {name} = svcJson.serviceArea
+      let { name } = svcJson.serviceArea
       svcJson.serviceArea['name'] = name.replace(/\,/g, ' ')
 
 

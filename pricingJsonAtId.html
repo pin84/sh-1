@@ -1,0 +1,1361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    .box {
+      width: 100%;
+      display: flex;
+
+
+    }
+
+    .textarea-1,
+    .textarea-2 {
+      width: 100%;
+      border: 1px solid red;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="box">
+    <textarea name="" id="textarea-1" cols="50" rows="10"></textarea>
+    <textarea name="" id="textarea-2" cols="50" rows="10"></textarea>
+  </div>
+  <div id='btn' class="btn">BTN</div>
+
+
+
+
+  <script>
+    let btn = document.getElementById('btn')
+
+    btn.addEventListener('click', async () => {
+
+      let ignoreKeys = ['amount', 'min_amount']
+
+      let jsonOld = {
+        "currencyCode": "USD",
+        "serviceArea": {
+          "name": "nanning",
+          "lat": 22.791353405922795,
+          "lng": 108.25311325248032,
+          "radius": 50000,
+          "parent_fleet_id": 27672,
+          "id": 28095,
+          "parent_fleet_name": "3_elife"
+        },
+        "airports": [
+          "NNG"
+        ],
+        "countryCode": "CHN",
+        "pricing": {
+          "ranges": [
+            {
+              "seq": 0,
+              "amount": 8.21,
+              "currency": "USD",
+              "distance": 1000,
+              "from": 1000,
+              "to": 2000,
+              "distanceIn": 0,
+              "per_unit": 1
+            }
+          ],
+          "currency": "USD",
+          "min_amount": 1,
+          "min_distance": 1000,
+          "meet_n_greet": 999
+        },
+        "vehicleClasses": [
+          {
+            "vehicle_class_id": 1,
+            "delta_amount": 0,
+            "percent": 0,
+            "hourly_percent": 0,
+            "hourly_delta": 0,
+            "surcharge_schedule": [
+              [
+                {
+                  "from": "00:00",
+                  "to": "02:00",
+                  "break": "false",
+                  "percent": 968,
+                  "ts": 1712809373016
+                }
+              ],
+              [
+                {
+                  "from": "00:00",
+                  "to": "02:00",
+                  "break": "false",
+                  "percent": 968,
+                  "ts": 1712809373016
+                }
+              ],
+              [
+                {
+                  "from": "00:00",
+                  "to": "02:00",
+                  "break": "false",
+                  "percent": 968,
+                  "ts": 1712809373016
+                }
+              ],
+              "null",
+              "null",
+              "null",
+              "null"
+            ],
+            "percent_appendix": [
+              {
+                "field": "pricing.ranges.0",
+                "delta_amount": -7.21
+              }
+            ]
+          },
+          {
+            "vehicle_class_id": 12,
+            "delta_amount": 0,
+            "percent": 2,
+            "hourly_percent": 2,
+            "hourly_delta": 0,
+            "percent_appendix": [
+              {
+                "field": "hourly_pricing.rules.0.min_amount",
+                "delta_amount": 1324.99
+              },
+              {
+                "field": "pricing.min_amount",
+                "delta_amount": -24.68
+              },
+              {
+                "field": "pricing.ranges.0",
+                "delta_amount": 213.79
+              },
+              {
+                "field": "zones.0.prices.0.p_amt",
+                "delta_amount": -4.61
+              },
+              {
+                "field": "zones.0.prices.0.d_amt",
+                "delta_amount": -12.88
+              },
+              {
+                "field": "zones.1.prices.0.p_amt",
+                "delta_amount": -11.68
+              },
+              {
+                "field": "zones.1.prices.0.d_amt",
+                "delta_amount": -18.68
+              }
+            ]
+          }
+        ],
+        "date_surcharge_method": "sum",
+        "downtown_areas": {
+          "area_geometry": [
+            {
+              "lat": 23.01725052231879,
+              "lng": 106.81734911796875
+            },
+            {
+              "lat": 23.38746667128864,
+              "lng": 107.05917040703125
+            },
+            {
+              "lat": 23.427795359137434,
+              "lng": 107.51534716484375
+            },
+            {
+              "lat": 23.38664313295705,
+              "lng": 107.603298825
+            },
+            {
+              "lat": 23.022306265279664,
+              "lng": 107.66927782890625
+            },
+            {
+              "lat": 22.692015395854128,
+              "lng": 107.63070361015625
+            },
+            {
+              "lat": 22.651465812901023,
+              "lng": 107.09212939140625
+            }
+          ],
+          "ranges": [
+            {
+              "seq": 0,
+              "amount": 8.21,
+              "currency": "USD",
+              "distance": 1000000,
+              "from": 1000000,
+              "to": 2000000,
+              "distanceIn": 0,
+              "per_unit": 1
+            }
+          ],
+          "currency": "USD",
+          "min_amount": 862.55,
+          "min_distance": 1000000
+        },
+        "hourly_pricing": {
+          "rules": [
+            {
+              "io": 1,
+              "name": "Rule 1",
+              "currency": "COP",
+              "min_amount": 8.21,
+              "min_duration": 1,
+              "max_distance": 100,
+              "zones": [
+                "serviceArea"
+              ],
+              "ranges": [
+                {
+                  "seq": 0,
+                  "amount": 25.88,
+                  "currency": "USD",
+                  "duration": 1,
+                  "from": 1,
+                  "to": 2
+                }
+              ]
+            },
+            {
+              "io": 0,
+              "name": "Rule 2",
+              "currency": "COP",
+              "max_distance": 200,
+              "min_amount": 17.68,
+              "min_duration": 1,
+              "ranges": [
+                {
+                  "seq": 0,
+                  "amount": 17.68,
+                  "currency": "USD",
+                  "duration": 1,
+                  "from": 1,
+                  "to": 2
+                }
+              ],
+              "zones": [
+                "serviceArea"
+              ]
+            }
+          ],
+          "currency": "USD"
+        },
+        "notice_time_rules": [
+          {
+            "zones": [
+              "serviceArea"
+            ],
+            "ps": [
+              {
+                "vc_ids": [
+                  1
+                ],
+                "notice_time": [
+                  {
+                    "percent": 46,
+                    "time": 1440
+                  }
+                ],
+                "allowance": 1200
+              }
+            ]
+          }
+        ],
+        "pricing_schedule_sum": [
+          {
+            "notice_time_hint": [
+              [
+                {
+                  "from": "00:00",
+                  "to": "02:00",
+                  "break": "false",
+                  "percent": 968,
+                  "ts": 1712809373016
+                }
+              ],
+              [
+                {
+                  "from": "00:00",
+                  "to": "02:00",
+                  "break": "false",
+                  "percent": 968,
+                  "ts": 1712809373016
+                }
+              ],
+              [
+                {
+                  "from": "00:00",
+                  "to": "02:00",
+                  "break": "false",
+                  "percent": 968,
+                  "ts": 1712809373016
+                }
+              ],
+              "null",
+              "null",
+              "null",
+              "null"
+            ],
+            "vehicles": [
+              1
+            ]
+          }
+        ],
+        "specific_date_surcharge": [
+          {
+            "from_date": "2024-04-16",
+            "to_date": "2024-04-24",
+            "currency": "USD",
+            "vehicle_classes": [
+              {
+                "vehicle_class_ids": [
+                  1
+                ],
+                "percent": 0,
+                "delta_amount": 1
+              }
+            ],
+            "zones": [
+              "serviceArea"
+            ],
+            "name": "Rule 1"
+          }
+        ],
+        "add_service": {
+          "is_p": 32.74,
+          "ts_p": 8.21
+        },
+        "tz": {
+          "dos": 0,
+          "ros": 28800,
+          "tzid": "Asia/Shanghai"
+        },
+        "zone2zone": {
+          "mac": 0,
+          "prices": [
+            {
+              "name": "NNG-市区",
+              "from_zone": "NNG机场",
+              "to_zone": "市区",
+              "amount": 25.88,
+              "reverse": 45
+            }
+          ]
+        },
+        "zones": [
+          {
+            "lat": 23.180706677963947,
+            "lng": 107.5692143266991,
+            "name": "NNG机场",
+            "p2p": "true",
+            "prices": [
+              {
+                "airport": "NNG",
+                "p_amt": 8.21,
+                "d_amt": 17.68,
+                "currency": "USD",
+                "amount": 1.2
+              }
+            ],
+            "radius": 0,
+            "polygons": [
+              {
+                "lat": 23.1453894174652,
+                "lng": 107.29705856498035
+              },
+              {
+                "lat": 23.36774707465213,
+                "lng": 107.58831833060535
+              },
+              {
+                "lat": 23.440844658426546,
+                "lng": 107.80828903373035
+              },
+              {
+                "lat": 23.17064214492708,
+                "lng": 107.84137008841785
+              },
+              {
+                "lat": 22.920568697501345,
+                "lng": 107.73687790091785
+              },
+              {
+                "lat": 22.93574621190943,
+                "lng": 107.50592086966785
+              }
+            ],
+            "p2p_t": "NNG.p"
+          },
+          {
+            "lat": 22.540494629220326,
+            "lng": 109.15117637304155,
+            "name": "市区",
+            "p2p": "false",
+            "prices": [
+              {
+                "airport": "NNG",
+                "p_amt": 17.68,
+                "d_amt": 25.88,
+                "currency": "USD",
+                "amount": 2.4
+              }
+            ],
+            "radius": 16666.666666666668
+          }
+        ],
+        "service_area_pricing_id": 5663,
+        "req_id": "0f3bae6d-875c-4c57-8f02-17cd059b991b"
+      }
+
+      let keyList = [
+        'serviceArea', 'pricing', 'downtown_areas'
+      ]
+
+      for (let [key, value] of Object.entries(jsonOld)) {
+        // let type = Object.prototype.toString.call(value)
+        switch (key) {
+          case 'serviceArea':
+            value['id_serviceArea'] = 0
+            break;
+          case 'pricing':
+            value['id_pricing'] = 0
+            break;
+          case 'hourly_pricing':
+            let rules = value?.rules || []
+            rules.forEach((rule, index) => {
+              rule['id_hourlyPricing'] = index
+            })
+            break;
+          case 'aa':
+
+            break;
+          case 'aa':
+
+            break;
+
+          default: //'[object String]'
+            break;
+        }
+
+      }
+
+      console.log(jsonOld);
+
+
+      // for (let [key, value] of Object.entries(jsonOld)) {
+      //   let type = Object.prototype.toString.call(value)
+      //   console.log(type);
+      //   switch (type) {
+      //     case '[object Object]':
+
+      //       break;
+      //     case '[object Array]':
+
+      //       break;
+
+      //     default: //'[object String]'
+      //       break;
+      //   }
+
+      // }
+
+
+
+
+
+    })
+
+
+
+
+
+
+
+    //PROD
+    // let prodSES = '8JIOKRSCYyWkgmDnsqJ1d0bqNP6U8RSopQfoxVd94V2jgZATfS4bvd1gFSDy4q575A1i42yIpBQ5wLGZLFbWRfnLwlbDX1Mw1ReYkrnnuR6RVdzoeqLlzcwjwfJRO89j'
+    // let url = `https://51y9xc7cuh.execute-api.us-east-2.amazonaws.com/upncoming/sql-templates/run?ses=${prodSES}`
+
+
+    //DEV
+    let ses = 'vbrkSAyz6CCAztNt4Pu6HVFdCXquUPHcMwtg6LSZTNfmqrD6A5a3iAuOMZDKUUe9BKSIRMfohJqisplYXlImmlwIFTHMISHtuPKMsH5fl3zZkE3deNQwfLouWDzYGz42'
+    let url = `https://jqwys3p5nk.execute-api.us-east-2.amazonaws.com/dev/sql-template/run?ses=${ses}`
+
+
+    async function getNewFleetId(oldFleetId) {
+
+      // select  id  from fleet where name=(select name from fleet where id={{fleet_id}}) and parent_fleet_id = 51488
+      let d = {
+        sql: 134678775,
+        version: '1.0',
+        fleet_id: oldFleetId
+      }
+
+      let res_id = await fetchData({
+        url,
+        method: 'POST',
+        data: d,
+        desc: 'get new fleet id'
+      })
+      return res_id.results[0].id
+    }
+
+    async function getPricingJsonIdBySvcId(id) {
+      // select id,service_area_pricing_id from fleet where id={{svc_id}}
+      let d = {
+        sql: 134678857,
+        version: '1.0',
+        // fleetId:26975
+      }
+
+      let res = await fetchData({
+        url,
+        method: 'POST',
+        data: d,
+        desc: 'get pricing json_id'
+      })
+      debugger
+      return
+    }
+
+
+    async function getPricingJsonById(pricing_id) {
+      // select id ,pricing  from service_area_pricing where id={{pricing_id}}
+      let d = {
+        sql: 134678771,
+        version: '1.0',
+        pricing_id: pricing_id
+      }
+
+      let res_json = await fetchData({
+        url,
+        method: 'POST',
+        data: d,
+        desc: 'get pricing json by id'
+      })
+
+      let c_svcJson = JSON.parse(res_json.results[0].pricing)
+
+
+      return c_svcJson
+    }
+
+
+    async function jsonHandler(svcJson, newFleetId, oldJson) {
+
+      te_1.value = JSON.stringify(svcJson)
+      let mag_delta = partnerJson.service_areas?.mag_delta || []
+      let ads_delta = partnerJson.service_areas?.ads_delta || []
+      let sas_percent = partnerJson.service_areas?.sas_percent || []
+      let { serviceArea: { id: svcId } } = svcJson
+      for (let item of mag_delta) {
+        let { id, switch: isClose, delta } = item
+
+        if (id == svcId && isClose == 'on') {
+          let mng = svcJson.pricing?.meet_n_greet
+          if (mng == undefined) break
+          svcJson.pricing.meet_n_greet = Number(mng) + Number(delta)
+          break
+        }
+      }
+
+      let { is_p, ts_p, cs_p } = svcJson.add_service || {}
+      for (let item of ads_delta) {
+        let { id } = item
+
+        if (id == svcId) {
+          if (is_p != undefined) {
+            let { infant: { delta, switch: isClose, } } = item
+            if (isClose == 'on') {
+              svcJson.add_service.is_p = Number(is_p) + Number(delta)
+            }
+          }
+          if (ts_p != undefined) {
+            let { toddler: { delta, switch: isClose, } } = item
+            if (isClose == 'on') {
+              svcJson.add_service.ts_p = Number(ts_p) + Number(delta)
+            }
+          }
+          if (cs_p != undefined) {
+            let { child: { delta, switch: isClose, } } = item
+            if (isClose == 'on') {
+              svcJson.add_service.cs_p = Number(cs_p) + Number(delta)
+            }
+          }
+        }
+      }
+
+      for (let item of sas_percent) {
+        let { id } = item
+        if (id == svcId) {
+          let vcs = item.vcs || []
+          let svcPercent = item.percent || 0
+          console.log(`--${id}--add percent--`, svcPercent);
+          { // pricing
+            let { ranges, meet_n_greet, min_amount } = svcJson.pricing || {}
+            if (meet_n_greet != undefined) {
+              svcJson.pricing.meet_n_greet = addPicies(meet_n_greet, svcPercent)
+            }
+            if (min_amount != undefined) {
+              svcJson.pricing.min_amount = addPicies(min_amount, svcPercent)
+            }
+
+            for (let rang of (ranges || [])) {
+              rang.amount = addPicies(rang.amount, svcPercent)
+            }
+          }
+
+          { // downtown_areas
+            let { ranges, min_amount } = svcJson.downtown_areas || {}
+            if (min_amount != undefined) {
+              svcJson.downtown_areas.min_amount = addPicies(min_amount, svcPercent)
+            }
+            for (let rang of (ranges || [])) {
+              rang.amount = addPicies(rang.amount, svcPercent)
+            }
+          }
+
+          { //hourly_pricing
+
+            let min_amount = svcJson.hourly_pricing?.min_amount || undefined
+            if (min_amount != undefined) {
+              svcJson.hourly_pricing.min_amount = addPicies(min_amount, svcPercent)
+            }
+
+
+
+            let rules = svcJson.hourly_pricing?.rules || []
+            let ranges = svcJson.hourly_pricing?.ranges || []
+            for (let r of ranges) {
+              let amount = r.amount
+              r.amount = addPicies(amount, svcPercent)
+            }
+
+            for (let r of rules) {
+              let { min_amount, ranges } = r
+              r.min_amount = addPicies(min_amount, svcPercent)
+
+              for (let range of (ranges || [])) {
+                range.amount = addPicies(range.amount, svcPercent)
+              }
+            }
+          }
+
+
+          { // zones
+            let zones = svcJson.zones || []
+            for (let z of zones) {
+              for (let p of (z.prices || [])) {
+                let { p_amt, d_amt, amount } = p
+                if (p_amt && d_amt) {
+                  p.p_amt = addPicies(p_amt, svcPercent)
+                  p.d_amt = addPicies(d_amt, svcPercent)
+                }
+
+                if (amount) {
+                  p.amount = addPicies(amount, svcPercent)
+                }
+              }
+            }
+          }
+
+          { //zone2zone
+            let zone2zone = svcJson.zone2zone?.prices || []
+            for (let item of zone2zone) {
+              let { amount, reverse } = item
+              item.amount = addPicies(amount, svcPercent)
+            }
+          }
+
+
+          { //notice_time_rules
+            let noticeTime = svcJson.notice_time_rules || []
+            for (let item of noticeTime) {
+              let ps = item.ps || []
+              for (let p of ps) {
+                let notice_time = p.notice_time || []
+                for (let n of notice_time) {
+
+                  let { delta_amount, percent } = n
+                  if (delta_amount != undefined) {
+                    n['delta_amount'] = addPicies(n['delta_amount'], svcPercent)
+                  } else {
+                  }
+                }
+              }
+            }
+
+          }
+
+          { // pricing_schedule_sum
+            let pricingScheduleSum = svcJson.pricing_schedule_sum || []
+            for (let item of pricingScheduleSum) {
+              let noticeTimeHint = item.notice_time_hint || []
+
+              for (let n of noticeTimeHint) {
+                if (n == 'null') continue
+                for (let o of n) {
+                  let { delta_amount, percent } = o
+                  if (delta_amount != undefined) {
+                    o.delta_amount = addPicies(o.delta_amount, svcPercent)
+                  } else {
+                  }
+                }
+
+              }
+            }
+          }
+
+          { //specific_date_surcharge
+            let specificDateSurcharge = svcJson.specific_date_surcharge || []
+            for (let item of specificDateSurcharge) {
+              let vehicleClasses = item.vehicle_classes || []
+              for (let v of vehicleClasses) {
+                let { percent, delta_amount } = v
+                if (delta_amount != 0) {
+                  v.delta_amount = addPicies(v.delta_amount, svcPercent)
+                } else {
+                }
+              }
+            }
+          }
+
+
+          {//add_service
+            let add_service = svcJson.add_service || {}
+            let keys = Object.keys(add_service)
+            for (let k of keys) {
+              add_service[k] = addPicies(add_service[k], svcPercent)
+            }
+          }
+
+          { //vehicleClasses
+            let vehicleClasses = svcJson.vehicleClasses || []
+            // let aa = [vehicleClasses[0]]
+            for (let v of vehicleClasses) {
+              let percent_appendix = v.percent_appendix || []
+              for (let p of percent_appendix) {
+                let { delta_amount } = p
+                if (!delta_amount) continue
+                p.delta_amount = addPicies(delta_amount, svcPercent)
+              }
+              let { vehicle_class_id, percent: svcVehiclePercent } = v
+
+              let partnerVehiclePercent = (vcs.find(o => o.id == vehicle_class_id) || {}).percent || undefined
+              if (partnerVehiclePercent == undefined) {
+                continue
+              }
+
+              partnerVehiclePercent = Number(partnerVehiclePercent)
+
+
+              v['percent'] = addPercent_2(partnerVehiclePercent, svcVehiclePercent, svcPercent)
+              v['hourly_percent'] = addPercent_2(partnerVehiclePercent, svcVehiclePercent, svcPercent)
+              let i = 0
+              for (let p of percent_appendix) {
+                let { delta_amount, field } = p
+                if (!delta_amount) {
+                  i++
+                  continue
+                }
+
+                let oldVal = 0
+                switch (field) {
+                  case "pricing.min_amount":
+                    oldVal = oldJson.pricing?.min_amount || 0
+                    break;
+                  case "downtown_areas.min_amount":
+                    oldVal = oldJson.downtown_areas?.min_amount || 0
+                    break;
+                  default:
+                    let oField = JSON.stringify(field)
+                    let keyArr = field.split('.')
+                    let getValueByKey = (oldJson, keyArr) => {
+                      let k = keyArr.shift()
+                      let val = oldJson[k]
+                      if (!val) {
+                        return
+                      }
+                      if (keyArr.length) {
+                        return getValueByKey(val, keyArr)
+                      }
+                      return val
+                    }
+
+                    let amountOrObj = getValueByKey(oldJson, keyArr)
+                    if (amountOrObj == undefined) {
+                      continue
+                    }
+                    let { amount } = amountOrObj
+                    oldVal = amount || amountOrObj
+                    break;
+                }
+                // (52.97 + 11 ) * 1.0 - 52.97  * 1.1 = 5.703
+                oldVal = Number(oldVal)
+                let oldVehicleClasses = oldJson['vehicleClasses'].find(v => v.vehicle_class_id == vehicle_class_id)
+                let { delta_amount: oldDeltaAmount } = oldVehicleClasses['percent_appendix'].find(p => p.field == field)
+
+                let newDeltaAmount = (oldVal + Number(oldDeltaAmount)) * percentTranslate(partnerVehiclePercent) - oldVal * percentTranslate(svcPercent)
+
+                p.delta_amount = Number(newDeltaAmount.toFixed(2))
+                i++
+              }
+
+            }
+          }
+          break
+        }
+      }
+
+
+
+
+      te_2.value = JSON.stringify(svcJson)
+
+      let { service_area_pricing_id, serviceArea } = svcJson
+      if (service_area_pricing_id) {
+        svcJson.service_area_pricing_id = null
+      }
+
+      svcJson.serviceArea['id'] = newFleetId
+      svcJson.serviceArea['parent_fleet_id'] = 51488
+      svcJson.serviceArea['parent_fleet_name'] = '3_elife'
+
+      let { name } = svcJson.serviceArea
+      svcJson.serviceArea['name'] = name.replace(/\,/g, ' ')
+
+
+      return svcJson
+    }
+
+
+    function addVehiclePercent() {
+
+    }
+
+    function percentTranslate(p) {
+      p = Number(p)
+      let v = (p + 100) / 100
+      return v
+    }
+
+
+    async function insertAndUpdate(svcJson, newFleetId) {
+      let updateD = {
+        sql: 134678780,
+        version: '1.0',
+        pricing_str: JSON.stringify(svcJson),
+        new_fleet_id: newFleetId
+      }
+
+      //       insert into service_area_pricing (service_area_id,pricing,effective_at,expire_at) 
+      // values  ({{new_fleet_id}},'{{pricing_str}}','2024-04-08 05:05:00','2037-12-31 23:59:59' );
+      // update fleet set service_area_pricing_id = last_insert_id() where id = {{new_fleet_id}} limit 1;
+
+      let res = await fetchData({
+        url,
+        method: 'POST',
+        data: updateD,
+        desc: 'update json'
+      })
+
+      return res
+    }
+
+
+
+
+
+
+
+    async function fetchData({
+      url = '',
+      data = {},
+      method = 'GET',
+      isShowLoading = true,
+      desc = 'abc'
+    } = {}) {
+      method = method.toUpperCase();
+      data['req_id'] = uuid()
+
+      if (method == 'GET') {
+        let dataStr = '';
+        Object.keys(data).forEach(key => {
+          dataStr += key + '=' + data[key] + '&';
+        })
+        if (dataStr !== '') {
+          dataStr = dataStr.substring(0, dataStr.lastIndexOf('&'));
+          url = url + '?' + dataStr;
+        }
+      }
+      let requestConfig = {
+        // credentials: 'same-origin',
+        method,
+        headers: {
+          'Accept': 'application/json',
+          // 'Content-method': 'application/json'
+        },
+        // mode: "cors", // same-origin，no-cors（default） cores;
+        // cache: "force-cache" // default 、 no-store 、 reload 、 no-cache 、 force-cache 、 only-if-cached 
+      }
+
+      if (method == 'POST') {
+        Object.defineProperty(requestConfig, 'body', {
+          value: JSON.stringify(data)
+        })
+      }
+
+      try {
+        const response = await fetch(url, requestConfig);
+        const responseJson = await response.json();
+        console.log(`--${desc}--success--`, data);
+        return responseJson
+      } catch (error) {
+        console.log(`--${desc}--err--`, data);
+        throw new Error(error)
+      }
+    }
+
+    function addPicies(val, percent) {
+      val = Number(val)
+      percent = Number(percent)
+      let v = (val + val * percent / 100).toFixed(2)
+      return Number(v) || 0
+    }
+
+    //     old vehicle percentage = OVP
+    // partner vehicle percentage = PVP
+    // New vehicle percentage = (OVP + 100) * (100 + PVP)/100 - 100
+    function addPercent(val, percent) {
+      val = Number(val)
+      percent = Number(percent)
+      let v1 = (val + 100) / 100
+      let v2 = (percent + 100) / 100
+      let v3 = (v1 * v2) * 100 - 100
+      let v = Number(v3.toFixed(0)) || 0
+      // let vn = (val + 100) * (100 + percent) / 100 - 100
+      // console.log(val,'---',percent);
+      return v
+    }
+
+    function addPercent_2(partnerVehiclePercent, svcVehiclePercent, partnerSvcPercent) {
+      let v1 = Number(partnerVehiclePercent) + 100
+      let v2 = Number(svcVehiclePercent) + 100
+      let v3 = Number(partnerSvcPercent) + 100
+
+      let v = ((v1 * v2) / v3) - 100
+      v = Number(v.toFixed(2))
+      // if(v < 0 ){
+      //   v = 0
+      // }
+      return v
+    }
+
+
+    function uuid() {
+      function S4() {
+        return (((1 + Math.random()) * 0x10000) | 0).toString(16).substring(1);
+      }
+      return S4() + S4() + '-' + S4() + '-' + S4() + '-' + S4() + '-' + S4() + S4() + S4();
+    }
+
+
+
+    let jsonNew = {
+      "currencyCode": "CNY",
+      "serviceArea": {
+        "name": "nanning",
+        "lat": 22.791353405922795,
+        "lng": 108.25311325248032,
+        "radius": 50000,
+        "parent_fleet_id": 27672,
+        "id": 28095,
+        "parent_fleet_name": "3_elife"
+      },
+      "airports": [
+        "NNG"
+      ],
+      "countryCode": "CHN",
+      "pricing": {
+        "ranges": [
+          {
+            "seq": 0,
+            "amount": 8.21,
+            "currency": "USD",
+            "distance": 1000,
+            "from": 1000,
+            "to": 2000,
+            "distanceIn": 0,
+            "per_unit": 1
+          }
+        ],
+        "currency": "USD",
+        "min_amount": 25.88,
+        "min_distance": 1000,
+        "meet_n_greet": 999
+      },
+      "vehicleClasses": [
+        {
+          "vehicle_class_id": 1,
+          "delta_amount": 0,
+          "percent": 0,
+          "hourly_percent": 0,
+          "hourly_delta": 0,
+          "surcharge_schedule": [
+            [
+              {
+                "from": "00:00",
+                "to": "02:00",
+                "break": "false",
+                "percent": 968,
+                "ts": 1712809373016
+              }
+            ],
+            [
+              {
+                "from": "00:00",
+                "to": "02:00",
+                "break": "false",
+                "percent": 968,
+                "ts": 1712809373016
+              }
+            ],
+            [
+              {
+                "from": "00:00",
+                "to": "02:00",
+                "break": "false",
+                "percent": 968,
+                "ts": 1712809373016
+              }
+            ],
+            "null",
+            "null",
+            "null",
+            "null"
+          ],
+          "percent_appendix": [
+            {
+              "field": "pricing.ranges.0",
+              "delta_amount": -7.21
+            }
+          ]
+        },
+        {
+          "vehicle_class_id": 12,
+          "delta_amount": 0,
+          "percent": 2,
+          "hourly_percent": 2,
+          "hourly_delta": 0,
+          "percent_appendix": [
+            {
+              "field": "hourly_pricing.rules.0.min_amount",
+              "delta_amount": 1324.99
+            },
+            {
+              "field": "pricing.min_amount",
+              "delta_amount": -24.68
+            },
+            {
+              "field": "pricing.ranges.0",
+              "delta_amount": 213.79
+            },
+            {
+              "field": "zones.0.prices.0.p_amt",
+              "delta_amount": -4.61
+            },
+            {
+              "field": "zones.0.prices.0.d_amt",
+              "delta_amount": -12.88
+            },
+            {
+              "field": "zones.1.prices.0.p_amt",
+              "delta_amount": -11.68
+            },
+            {
+              "field": "zones.1.prices.0.d_amt",
+              "delta_amount": -18.68
+            }
+          ]
+        }
+      ],
+      "date_surcharge_method": "sum",
+      "downtown_areas": {
+        "area_geometry": [
+          {
+            "lat": 23.01725052231879,
+            "lng": 106.81734911796875
+          },
+          {
+            "lat": 23.38746667128864,
+            "lng": 107.05917040703125
+          },
+          {
+            "lat": 23.427795359137434,
+            "lng": 107.51534716484375
+          },
+          {
+            "lat": 23.38664313295705,
+            "lng": 107.603298825
+          },
+          {
+            "lat": 23.022306265279664,
+            "lng": 107.66927782890625
+          },
+          {
+            "lat": 22.692015395854128,
+            "lng": 107.63070361015625
+          },
+          {
+            "lat": 22.651465812901023,
+            "lng": 107.09212939140625
+          }
+        ],
+        "ranges": [
+          {
+            "seq": 0,
+            "amount": 8.21,
+            "currency": "USD",
+            "distance": 1000000,
+            "from": 1000000,
+            "to": 2000000,
+            "distanceIn": 0,
+            "per_unit": 1
+          }
+        ],
+        "currency": "USD",
+        "min_amount": 862.55,
+        "min_distance": 1000000
+      },
+      "hourly_pricing": {
+        "rules": [
+          {
+            "io": 1,
+            "name": "Rule 1",
+            "currency": "COP",
+            "min_amount": 8.21,
+            "min_duration": 1,
+            "max_distance": 100,
+            "zones": [
+              "serviceArea"
+            ],
+            "ranges": [
+              {
+                "seq": 0,
+                "amount": 25.88,
+                "currency": "USD",
+                "duration": 1,
+                "from": 1,
+                "to": 2
+              }
+            ]
+          },
+          {
+            "io": 0,
+            "name": "Rule 2",
+            "currency": "COP",
+            "max_distance": 200,
+            "min_amount": 17.68,
+            "min_duration": 1,
+            "ranges": [
+              {
+                "seq": 0,
+                "amount": 17.68,
+                "currency": "USD",
+                "duration": 1,
+                "from": 1,
+                "to": 2
+              }
+            ],
+            "zones": [
+              "serviceArea"
+            ]
+          }
+        ],
+        "currency": "USD"
+      },
+      "notice_time_rules": [
+        {
+          "zones": [
+            "serviceArea"
+          ],
+          "ps": [
+            {
+              "vc_ids": [
+                1
+              ],
+              "notice_time": [
+                {
+                  "percent": 46,
+                  "time": 1440
+                }
+              ],
+              "allowance": 1200
+            }
+          ]
+        }
+      ],
+      "pricing_schedule_sum": [
+        {
+          "notice_time_hint": [
+            [
+              {
+                "from": "00:00",
+                "to": "02:00",
+                "break": "false",
+                "percent": 968,
+                "ts": 1712809373016
+              }
+            ],
+            [
+              {
+                "from": "00:00",
+                "to": "02:00",
+                "break": "false",
+                "percent": 968,
+                "ts": 1712809373016
+              }
+            ],
+            [
+              {
+                "from": "00:00",
+                "to": "02:00",
+                "break": "false",
+                "percent": 968,
+                "ts": 1712809373016
+              }
+            ],
+            "null",
+            "null",
+            "null",
+            "null"
+          ],
+          "vehicles": [
+            1
+          ]
+        }
+      ],
+      "specific_date_surcharge": [
+        {
+          "from_date": "2024-04-16",
+          "to_date": "2024-04-24",
+          "currency": "USD",
+          "vehicle_classes": [
+            {
+              "vehicle_class_ids": [
+                1
+              ],
+              "percent": 0,
+              "delta_amount": 1
+            }
+          ],
+          "zones": [
+            "serviceArea"
+          ],
+          "name": "Rule 1"
+        }
+      ],
+      "add_service": {
+        "is_p": 32.74,
+        "ts_p": 8.21
+      },
+      "tz": {
+        "dos": 0,
+        "ros": 28800,
+        "tzid": "Asia/Shanghai"
+      },
+      "zone2zone": {
+        "mac": 0,
+        "prices": [
+          {
+            "name": "NNG-市区",
+            "from_zone": "NNG机场",
+            "to_zone": "市区",
+            "amount": 25.88,
+            "reverse": 45
+          }
+        ]
+      },
+      "zones": [
+        {
+          "lat": 23.180706677963947,
+          "lng": 107.5692143266991,
+          "name": "NNG机场",
+          "p2p": "true",
+          "prices": [
+            {
+              "airport": "NNG",
+              "p_amt": 8.21,
+              "d_amt": 17.68,
+              "currency": "USD",
+              "amount": 1.2
+            }
+          ],
+          "radius": 0,
+          "polygons": [
+            {
+              "lat": 23.1453894174652,
+              "lng": 107.29705856498035
+            },
+            {
+              "lat": 23.36774707465213,
+              "lng": 107.58831833060535
+            },
+            {
+              "lat": 23.440844658426546,
+              "lng": 107.80828903373035
+            },
+            {
+              "lat": 23.17064214492708,
+              "lng": 107.84137008841785
+            },
+            {
+              "lat": 22.920568697501345,
+              "lng": 107.73687790091785
+            },
+            {
+              "lat": 22.93574621190943,
+              "lng": 107.50592086966785
+            }
+          ],
+          "p2p_t": "NNG.p"
+        },
+        {
+          "lat": 22.540494629220326,
+          "lng": 109.15117637304155,
+          "name": "市区",
+          "p2p": "false",
+          "prices": [
+            {
+              "airport": "NNG",
+              "p_amt": 17.68,
+              "d_amt": 25.88,
+              "currency": "USD",
+              "amount": 2.4
+            }
+          ],
+          "radius": 16666.666666666668
+        }
+      ],
+      "service_area_pricing_id": 5663,
+      "req_id": "0f3bae6d-875c-4c57-8f02-17cd059b991b"
+    }
+
+
+  </script>
+</body>
+
+</html>

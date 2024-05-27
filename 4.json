@@ -1,0 +1,879 @@
+{
+  "vehicle_classes": [
+      {
+          "price": {
+              "amount": 40.0,
+              "currency": "USD",
+              "quote_id": "fd7f82a7d927439cb42b8d95bfe8164c-v1"
+          },
+          "vehicle_class": "Sedan",
+          "vehicle_class_id": 1,
+          "passenger_capacity": 3,
+          "luggage_capacity": 3,
+          "typical_vehicle": {
+              "model": "S puls",
+              "manufacturer": "Aion"
+          },
+          "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/chn/Aion-s-puls.jpg",
+          "price_detail": {
+              "base_pricing": {
+                  "type": "fixed",
+                  "fix_price_type": "Transfer",
+                  "zone": "南宁市区",
+                  "price": {
+                      "amount": 30.0,
+                      "currency": "USD"
+                  }
+              },
+              "special_pricing": [
+                  {
+                      "delta_amount": 10,
+                      "zone": "serviceArea",
+                      "currency": "USD",
+                      "type": "service"
+                  }
+              ],
+              "partner_pricing": {}
+          }
+      },
+      {
+          "price": {
+              "amount": 70.0,
+              "currency": "USD",
+              "quote_id": "fd7f82a7d927439cb42b8d95bfe8164c-v2"
+          },
+          "vehicle_class": "Business Sedan",
+          "vehicle_class_id": 2,
+          "passenger_capacity": 3,
+          "luggage_capacity": 3,
+          "typical_vehicle": {
+              "model": "X5",
+              "manufacturer": "BMW"
+          },
+          "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/chn/BMW-X5.jpg",
+          "price_detail": {
+              "base_pricing": {
+                  "type": "fixed",
+                  "fix_price_type": "Transfer",
+                  "zone": "南宁市区",
+                  "price": {
+                      "amount": 60.0,
+                      "currency": "USD"
+                  }
+              },
+              "special_pricing": [
+                  {
+                      "delta_amount": 10,
+                      "zone": "serviceArea",
+                      "currency": "USD",
+                      "type": "service"
+                  }
+              ],
+              "partner_pricing": {}
+          }
+      },
+      {
+          "price": {
+              "amount": 60.0,
+              "currency": "USD",
+              "quote_id": "fd7f82a7d927439cb42b8d95bfe8164c-v3"
+          },
+          "vehicle_class": "MPV-5",
+          "vehicle_class_id": 3,
+          "passenger_capacity": 5,
+          "luggage_capacity": 5,
+          "typical_vehicle": {
+              "model": "gl8",
+              "manufacturer": "Buick"
+          },
+          "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/chn/Buick-gl8.jpg",
+          "price_detail": {
+              "base_pricing": {
+                  "type": "fixed",
+                  "fix_price_type": "Transfer",
+                  "zone": "南宁市区",
+                  "price": {
+                      "amount": 50.0,
+                      "currency": "USD"
+                  }
+              },
+              "special_pricing": [
+                  {
+                      "delta_amount": 10,
+                      "zone": "serviceArea",
+                      "currency": "USD",
+                      "type": "service"
+                  }
+              ],
+              "partner_pricing": {}
+          }
+      },
+      {
+          "price": {
+              "amount": 100.0,
+              "currency": "USD",
+              "quote_id": "fd7f82a7d927439cb42b8d95bfe8164c-v4"
+          },
+          "vehicle_class": "Business MPV-5",
+          "vehicle_class_id": 4,
+          "passenger_capacity": 5,
+          "luggage_capacity": 5,
+          "typical_vehicle": {
+              "model": "V260",
+              "manufacturer": "Mercedes"
+          },
+          "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/chn/Mercedes-V260.jpg",
+          "price_detail": {
+              "base_pricing": {
+                  "type": "fixed",
+                  "fix_price_type": "Transfer",
+                  "zone": "南宁市区",
+                  "price": {
+                      "amount": 90.0,
+                      "currency": "USD"
+                  }
+              },
+              "special_pricing": [
+                  {
+                      "delta_amount": 10,
+                      "zone": "serviceArea",
+                      "currency": "USD",
+                      "type": "service"
+                  }
+              ],
+              "partner_pricing": {}
+          }
+      },
+      {
+          "price": {
+              "amount": 234.0,
+              "currency": "USD",
+              "quote_id": "fd7f82a7d927439cb42b8d95bfe8164c-v5"
+          },
+          "vehicle_class": "Minibus-8",
+          "vehicle_class_id": 5,
+          "passenger_capacity": 8,
+          "luggage_capacity": 8,
+          "typical_vehicle": {
+              "model": "T7",
+              "manufacturer": "Yutong"
+          },
+          "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/chn/Yutong-T7.jpg",
+          "price_detail": {
+              "base_pricing": {
+                  "type": "fixed",
+                  "fix_price_type": "Transfer",
+                  "zone": "南宁市区",
+                  "price": {
+                      "amount": 180.0,
+                      "currency": "USD"
+                  }
+              },
+              "special_pricing": [
+                  {
+                      "percent": 30,
+                      "zone": "serviceArea",
+                      "currency": "USD",
+                      "type": "service"
+                  }
+              ],
+              "partner_pricing": {}
+          }
+      },
+      {
+          "price": {
+              "amount": 50.0,
+              "currency": "USD",
+              "quote_id": "fd7f82a7d927439cb42b8d95bfe8164c-v6"
+          },
+          "vehicle_class": "MPV-4",
+          "vehicle_class_id": 6,
+          "passenger_capacity": 4,
+          "luggage_capacity": 4,
+          "typical_vehicle": {
+              "model": "Noah ",
+              "manufacturer": "Toyota"
+          },
+          "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/chn/Toyota-Noah.jpg",
+          "price_detail": {
+              "base_pricing": {
+                  "type": "fixed",
+                  "fix_price_type": "Transfer",
+                  "zone": "南宁市区",
+                  "price": {
+                      "amount": 40.0,
+                      "currency": "USD"
+                  }
+              },
+              "special_pricing": [
+                  {
+                      "delta_amount": 10,
+                      "zone": "serviceArea",
+                      "currency": "USD",
+                      "type": "service"
+                  }
+              ],
+              "partner_pricing": {}
+          }
+      },
+      {
+          "price": {
+              "amount": 247.0,
+              "currency": "USD",
+              "quote_id": "fd7f82a7d927439cb42b8d95bfe8164c-v9"
+          },
+          "vehicle_class": "Minibus-10",
+          "vehicle_class_id": 9,
+          "passenger_capacity": 10,
+          "luggage_capacity": 10,
+          "typical_vehicle": {
+              "model": "T7",
+              "manufacturer": "Yutong"
+          },
+          "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/chn/Yutong-T7.jpg",
+          "price_detail": {
+              "base_pricing": {
+                  "type": "fixed",
+                  "fix_price_type": "Transfer",
+                  "zone": "南宁市区",
+                  "price": {
+                      "amount": 190.0,
+                      "currency": "USD"
+                  }
+              },
+              "special_pricing": [
+                  {
+                      "percent": 30,
+                      "zone": "serviceArea",
+                      "currency": "USD",
+                      "type": "service"
+                  }
+              ],
+              "partner_pricing": {}
+          }
+      },
+      {
+          "price": {
+              "amount": 260.0,
+              "currency": "USD",
+              "quote_id": "fd7f82a7d927439cb42b8d95bfe8164c-v10"
+          },
+          "vehicle_class": "Minibus-12",
+          "vehicle_class_id": 10,
+          "passenger_capacity": 12,
+          "luggage_capacity": 12,
+          "typical_vehicle": {
+              "model": "T7",
+              "manufacturer": "Yutong"
+          },
+          "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/chn/Yutong-T7.jpg",
+          "price_detail": {
+              "base_pricing": {
+                  "type": "fixed",
+                  "fix_price_type": "Transfer",
+                  "zone": "南宁市区",
+                  "price": {
+                      "amount": 200.0,
+                      "currency": "USD"
+                  }
+              },
+              "special_pricing": [
+                  {
+                      "percent": 30,
+                      "zone": "serviceArea",
+                      "currency": "USD",
+                      "type": "service"
+                  }
+              ],
+              "partner_pricing": {}
+          }
+      },
+      {
+          "price": {
+              "amount": 273.0,
+              "currency": "USD",
+              "quote_id": "fd7f82a7d927439cb42b8d95bfe8164c-v11"
+          },
+          "vehicle_class": "Minibus-14",
+          "vehicle_class_id": 11,
+          "passenger_capacity": 14,
+          "luggage_capacity": 14,
+          "typical_vehicle": {
+              "model": "T7",
+              "manufacturer": "Yutong"
+          },
+          "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/chn/Yutong-T7.jpg",
+          "price_detail": {
+              "base_pricing": {
+                  "type": "fixed",
+                  "fix_price_type": "Transfer",
+                  "zone": "南宁市区",
+                  "price": {
+                      "amount": 210.0,
+                      "currency": "USD"
+                  }
+              },
+              "special_pricing": [
+                  {
+                      "percent": 30,
+                      "zone": "serviceArea",
+                      "currency": "USD",
+                      "type": "service"
+                  }
+              ],
+              "partner_pricing": {}
+          }
+      },
+      {
+          "price": {
+              "amount": 100.0,
+              "currency": "USD",
+              "quote_id": "fd7f82a7d927439cb42b8d95bfe8164c-v36"
+          },
+          "vehicle_class": "Business Van",
+          "vehicle_class_id": 36,
+          "passenger_capacity": 5,
+          "luggage_capacity": 5,
+          "typical_vehicle": {
+              "model": "GL8",
+              "manufacturer": "Buick"
+          },
+          "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/businessminivan.jpg",
+          "price_detail": {
+              "base_pricing": {
+                  "type": "fixed",
+                  "fix_price_type": "Transfer",
+                  "zone": "南宁市区",
+                  "price": {
+                      "amount": 90.0,
+                      "currency": "USD"
+                  }
+              },
+              "special_pricing": [
+                  {
+                      "delta_amount": 10,
+                      "zone": "serviceArea",
+                      "currency": "USD",
+                      "type": "service"
+                  }
+              ],
+              "partner_pricing": {}
+          }
+      },
+      {
+          "price": {
+              "amount": 40.0,
+              "currency": "USD",
+              "quote_id": "fd7f82a7d927439cb42b8d95bfe8164c-v41"
+          },
+          "vehicle_class": "EV Sedan",
+          "vehicle_class_id": 41,
+          "passenger_capacity": 3,
+          "luggage_capacity": 3,
+          "typical_vehicle": {
+              "model": "Han",
+              "manufacturer": "BYD"
+          },
+          "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/chn/BYD-han.jpg",
+          "price_detail": {
+              "base_pricing": {
+                  "type": "fixed",
+                  "fix_price_type": "Transfer",
+                  "zone": "南宁市区",
+                  "price": {
+                      "amount": 30.0,
+                      "currency": "USD"
+                  }
+              },
+              "special_pricing": [
+                  {
+                      "delta_amount": 10,
+                      "zone": "serviceArea",
+                      "currency": "USD",
+                      "type": "service"
+                  }
+              ],
+              "partner_pricing": {}
+          }
+      },
+      {
+          "price": {
+              "amount": 286.0,
+              "currency": "USD",
+              "quote_id": "fd7f82a7d927439cb42b8d95bfe8164c-v29"
+          },
+          "vehicle_class": "16-seat Bus",
+          "vehicle_class_id": 29,
+          "passenger_capacity": 16,
+          "luggage_capacity": 16,
+          "typical_vehicle": {
+              "model": "T7",
+              "manufacturer": "Yutong"
+          },
+          "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/chn/Yutong-T7.jpg",
+          "price_detail": {
+              "base_pricing": {
+                  "type": "fixed",
+                  "fix_price_type": "Transfer",
+                  "zone": "南宁市区",
+                  "price": {
+                      "amount": 220.0,
+                      "currency": "USD"
+                  }
+              },
+              "special_pricing": [
+                  {
+                      "percent": 30,
+                      "zone": "serviceArea",
+                      "currency": "USD",
+                      "type": "service"
+                  }
+              ],
+              "partner_pricing": {}
+          }
+      },
+      {
+          "price": {
+              "amount": 299.0,
+              "currency": "USD",
+              "quote_id": "fd7f82a7d927439cb42b8d95bfe8164c-v30"
+          },
+          "vehicle_class": "20-seat Bus",
+          "vehicle_class_id": 30,
+          "passenger_capacity": 20,
+          "luggage_capacity": 20,
+          "typical_vehicle": {
+              "model": "BUS",
+              "manufacturer": "Yutong"
+          },
+          "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/chn/Yutong-T7.jpg",
+          "price_detail": {
+              "base_pricing": {
+                  "type": "fixed",
+                  "fix_price_type": "Transfer",
+                  "zone": "南宁市区",
+                  "price": {
+                      "amount": 230.0,
+                      "currency": "USD"
+                  }
+              },
+              "special_pricing": [
+                  {
+                      "percent": 30,
+                      "zone": "serviceArea",
+                      "currency": "USD",
+                      "type": "service"
+                  }
+              ],
+              "partner_pricing": {}
+          }
+      },
+      {
+          "price": {
+              "amount": 312.0,
+              "currency": "USD",
+              "quote_id": "fd7f82a7d927439cb42b8d95bfe8164c-v31"
+          },
+          "vehicle_class": "23-seat Bus",
+          "vehicle_class_id": 31,
+          "passenger_capacity": 23,
+          "luggage_capacity": 23,
+          "typical_vehicle": {
+              "model": "BUS",
+              "manufacturer": "Yutong"
+          },
+          "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/chn/Yutong-T7.jpg",
+          "price_detail": {
+              "base_pricing": {
+                  "type": "fixed",
+                  "fix_price_type": "Transfer",
+                  "zone": "南宁市区",
+                  "price": {
+                      "amount": 240.0,
+                      "currency": "USD"
+                  }
+              },
+              "special_pricing": [
+                  {
+                      "percent": 30,
+                      "zone": "serviceArea",
+                      "currency": "USD",
+                      "type": "service"
+                  }
+              ],
+              "partner_pricing": {}
+          }
+      },
+      {
+          "price": {
+              "amount": 325.0,
+              "currency": "USD",
+              "quote_id": "fd7f82a7d927439cb42b8d95bfe8164c-v32"
+          },
+          "vehicle_class": "27-seat Bus",
+          "vehicle_class_id": 32,
+          "passenger_capacity": 27,
+          "luggage_capacity": 27,
+          "typical_vehicle": {
+              "model": "BUS",
+              "manufacturer": "Yutong"
+          },
+          "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/chn/Yutong-T7.jpg",
+          "price_detail": {
+              "base_pricing": {
+                  "type": "fixed",
+                  "fix_price_type": "Transfer",
+                  "zone": "南宁市区",
+                  "price": {
+                      "amount": 250.0,
+                      "currency": "USD"
+                  }
+              },
+              "special_pricing": [
+                  {
+                      "percent": 30,
+                      "zone": "serviceArea",
+                      "currency": "USD",
+                      "type": "service"
+                  }
+              ],
+              "partner_pricing": {}
+          }
+      },
+      {
+          "price": {
+              "amount": 338.0,
+              "currency": "USD",
+              "quote_id": "fd7f82a7d927439cb42b8d95bfe8164c-v33"
+          },
+          "vehicle_class": "36-seat Bus",
+          "vehicle_class_id": 33,
+          "passenger_capacity": 36,
+          "luggage_capacity": 36,
+          "typical_vehicle": {
+              "model": "BUS",
+              "manufacturer": "Yutong"
+          },
+          "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/chn/Yutong-36.jpg",
+          "price_detail": {
+              "base_pricing": {
+                  "type": "fixed",
+                  "fix_price_type": "Transfer",
+                  "zone": "南宁市区",
+                  "price": {
+                      "amount": 260.0,
+                      "currency": "USD"
+                  }
+              },
+              "special_pricing": [
+                  {
+                      "percent": 30,
+                      "zone": "serviceArea",
+                      "currency": "USD",
+                      "type": "service"
+                  }
+              ],
+              "partner_pricing": {}
+          }
+      },
+      {
+          "price": {
+              "amount": 364.0,
+              "currency": "USD",
+              "quote_id": "fd7f82a7d927439cb42b8d95bfe8164c-v34"
+          },
+          "vehicle_class": "44-seat Coach Bus",
+          "vehicle_class_id": 34,
+          "passenger_capacity": 44,
+          "luggage_capacity": 44,
+          "typical_vehicle": {
+              "model": "BUS",
+              "manufacturer": "Yutong"
+          },
+          "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/chn/Yutong-bus.jpg",
+          "price_detail": {
+              "base_pricing": {
+                  "type": "fixed",
+                  "fix_price_type": "Transfer",
+                  "zone": "南宁市区",
+                  "price": {
+                      "amount": 280.0,
+                      "currency": "USD"
+                  }
+              },
+              "special_pricing": [
+                  {
+                      "percent": 30,
+                      "zone": "serviceArea",
+                      "currency": "USD",
+                      "type": "service"
+                  }
+              ],
+              "partner_pricing": {}
+          }
+      },
+      {
+          "price": {
+              "amount": 390.0,
+              "currency": "USD",
+              "quote_id": "fd7f82a7d927439cb42b8d95bfe8164c-v35"
+          },
+          "vehicle_class": "55-seat Coach Bus",
+          "vehicle_class_id": 35,
+          "passenger_capacity": 55,
+          "luggage_capacity": 55,
+          "typical_vehicle": {
+              "model": "BUS",
+              "manufacturer": "Yutong"
+          },
+          "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/chn/Yutong-bus.jpg",
+          "price_detail": {
+              "base_pricing": {
+                  "type": "fixed",
+                  "fix_price_type": "Transfer",
+                  "zone": "南宁市区",
+                  "price": {
+                      "amount": 300.0,
+                      "currency": "USD"
+                  }
+              },
+              "special_pricing": [
+                  {
+                      "percent": 30,
+                      "zone": "serviceArea",
+                      "currency": "USD",
+                      "type": "service"
+                  }
+              ],
+              "partner_pricing": {}
+          }
+      }
+  ],
+  "meet_and_greet": {
+      "price": {
+          "amount": 1.0,
+          "currency": "USD",
+          "quote_id": "fd7f82a7d927439cb42b8d95bfe8164c-m"
+      }
+  },
+  "add_service": {},
+  "add_service_unit_price": {},
+  "airports": [
+      "NNG"
+  ],
+  "messages": {
+      "url": "https://elifelimo.s3.us-east-2.amazonaws.com/quote/message/messages.json"
+  },
+  "langs": [
+      {
+          "eng": {
+              "vehicles_classes": [
+                  {
+                      "vehicle_class": "Sedan"
+                  },
+                  {
+                      "vehicle_class": "Business Sedan"
+                  },
+                  {
+                      "vehicle_class": "Minivan"
+                  },
+                  {
+                      "vehicle_class": "Business Minivan"
+                  },
+                  {
+                      "vehicle_class": "Minibus-8"
+                  },
+                  {
+                      "vehicle_class": "Compatct Minivan"
+                  },
+                  {
+                      "vehicle_class": "Minibus-10"
+                  },
+                  {
+                      "vehicle_class": "Minibus-12"
+                  },
+                  {
+                      "vehicle_class": "Minibus-14"
+                  },
+                  {
+                      "vehicle_class": "Business Van"
+                  },
+                  {
+                      "vehicle_class": "EV Sedan"
+                  },
+                  {
+                      "vehicle_class": "16-seat Bus"
+                  },
+                  {
+                      "vehicle_class": "20-seat Bus"
+                  },
+                  {
+                      "vehicle_class": "23-seat Bus"
+                  },
+                  {
+                      "vehicle_class": "27-seat Bus"
+                  },
+                  {
+                      "vehicle_class": "36-seat Bus"
+                  },
+                  {
+                      "vehicle_class": "44-seat Coach Bus"
+                  },
+                  {
+                      "vehicle_class": "55-seat Coach Bus"
+                  }
+              ],
+              "messages": [
+                  {
+                      "subject": "waiting time",
+                      "message": "60 minutes of waiting after the arrival of your flight is included"
+                  },
+                  {
+                      "subject": "cancellation",
+                      "message": "full refund if cancenlled 24 hours ahead of the time"
+                  }
+              ]
+          }
+      },
+      {
+          "spa": {
+              "vehicles_classes": [
+                  {
+                      "vehicle_class": "Sedan"
+                  },
+                  {
+                      "vehicle_class": "Sedan Ejecutivo"
+                  },
+                  {
+                      "vehicle_class": "Minivan"
+                  },
+                  {
+                      "vehicle_class": "Minivan Ejecutiva"
+                  },
+                  {
+                      "vehicle_class": "Minibus de 8 pasajeros"
+                  },
+                  {
+                      "vehicle_class": "Minivan Compacta"
+                  },
+                  {
+                      "vehicle_class": "Minibus de 10 pasajeros"
+                  },
+                  {
+                      "vehicle_class": "Minibus de 12 pasajeros"
+                  },
+                  {
+                      "vehicle_class": "Minibus de 14 pasajeros"
+                  },
+                  {
+                      "vehicle_class": "Van Ejecutiva"
+                  },
+                  {
+                      "vehicle_class": "Sedan Eléctrico"
+                  },
+                  {
+                      "vehicle_class": "Autobús de 16 pasajeros"
+                  },
+                  {
+                      "vehicle_class": "Autobús de 20 pasajeros"
+                  },
+                  {
+                      "vehicle_class": "Autobús de 23 pasajeros"
+                  },
+                  {
+                      "vehicle_class": "Autobús de 27 pasajeros"
+                  },
+                  {
+                      "vehicle_class": "Autobús de 36 pasajeros"
+                  },
+                  {
+                      "vehicle_class": "Autobús de 44 pasajeros"
+                  },
+                  {
+                      "vehicle_class": "Autobús de 55 pasajeros"
+                  }
+              ],
+              "messages": [
+                  {
+                      "subject": "Tiempo de espera",
+                      "message": "60 minutos de espera incluidos a la llegada de tu vuelo"
+                  },
+                  {
+                      "subject": "Cancelación",
+                      "message": "Reembolso total en caso de cancelar al menos 24 horas antes del servicio"
+                  }
+              ]
+          },
+          "por": {
+              "vehicles_classes": [
+                  {
+                      "vehicle_class": "Sedan"
+                  },
+                  {
+                      "vehicle_class": "Business Sedan"
+                  },
+                  {
+                      "vehicle_class": "Minivan"
+                  },
+                  {
+                      "vehicle_class": "Business Minivan"
+                  },
+                  {
+                      "vehicle_class": "Microônibus-8"
+                  },
+                  {
+                      "vehicle_class": "Compatct Minivan"
+                  },
+                  {
+                      "vehicle_class": "Microônibus-10"
+                  },
+                  {
+                      "vehicle_class": "Microônibus-12"
+                  },
+                  {
+                      "vehicle_class": "Microônibus-14"
+                  },
+                  {
+                      "vehicle_class": "Business Van"
+                  },
+                  {
+                      "vehicle_class": "EV Sedan"
+                  },
+                  {
+                      "vehicle_class": "Ônibus de 16 lugares"
+                  },
+                  {
+                      "vehicle_class": "Ônibus de 20 lugares"
+                  },
+                  {
+                      "vehicle_class": "Ônibus de 23 lugares"
+                  },
+                  {
+                      "vehicle_class": "Ônibus de 27 lugares"
+                  },
+                  {
+                      "vehicle_class": "Ônibus de 36 lugares"
+                  },
+                  {
+                      "vehicle_class": "Autocarro de 44 lugares"
+                  },
+                  {
+                      "vehicle_class": "Autocarro de 55 lugares"
+                  }
+              ],
+              "messages": [
+                  {
+                      "subject": "tempo de espera",
+                      "message": "60 minutos de espera após a chegada do seu voo está incluído"
+                  },
+                  {
+                      "subject": "cancelamento",
+                      "message": "reembolso total se cancenlled 24 horas antes do tempo"
+                  }
+              ]
+          }
+      }
+  ],
+  "quote_id": "",
+  "request_id": "3-mozio-ping-new-nng"
+}

@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "percent": "25",
   "doNotDel": "doNotDel",
   "service_areas": {
@@ -2005,4 +2006,152 @@
       }
     ]
   }
+=======
+  "results": [
+    {
+      "searchResultId": "d59c63a9-98ec-4e29-ab39-1e6671215592_1",
+      "transportCategory": "STANDARD",
+      "price": {
+        "salePriceMin": 11.33,
+        "salePriceMax": 11.33,
+        "currency": "USD"
+      },
+      "minPassengers": 1,
+      "maxPassengers": 3,
+      "features": [
+        {
+          "name": "noOfBags",
+          "value": 3
+        }
+      ],
+      "servicesAvailable": ["meetAndGreet"]
+    },
+    {
+      "searchResultId": "d2691492-7bf3-4e9d-9e47-0cd58d84e5e4_1",
+      "transportCategory": "EXECUTIVE",
+      "price": {
+        "salePriceMin": 42.85,
+        "salePriceMax": 42.85,
+        "currency": "USD"
+      },
+      "minPassengers": 1,
+      "maxPassengers": 3,
+      "features": [
+        {
+          "name": "noOfBags",
+          "value": 3
+        }
+      ],
+      "servicesAvailable": ["meetAndGreet"]
+    },
+    {
+      "searchResultId": "9b504de5-2a43-4b2f-8b22-3ac0d862aada_1",
+      "transportCategory": "PEOPLECARRIER",
+      "price": {
+        "salePriceMin": 24.43,
+        "salePriceMax": 24.43,
+        "currency": "USD"
+      },
+      "minPassengers": 1,
+      "maxPassengers": 4,
+      "features": [
+        {
+          "name": "noOfBags",
+          "value": 4
+        }
+      ],
+      "servicesAvailable": ["meetAndGreet"]
+    },
+    {
+      "searchResultId": "299df130-0e9e-4316-b89e-4cf4e7b284ec_1",
+      "transportCategory": "LARGEPEOPLECARRIER",
+      "price": {
+        "salePriceMin": 25.98,
+        "salePriceMax": 25.98,
+        "currency": "USD"
+      },
+      "minPassengers": 1,
+      "maxPassengers": 5,
+      "features": [
+        {
+          "name": "noOfBags",
+          "value": 5
+        }
+      ],
+      "servicesAvailable": ["meetAndGreet"]
+    },
+    {
+      "searchResultId": "8250ed22-9da7-4d59-be5a-202be3ea24cd_1",
+      "transportCategory": "EXECUTIVEPEOPLECARRIER",
+      "price": {
+        "salePriceMin": 80.0,
+        "salePriceMax": 80.0,
+        "currency": "USD"
+      },
+      "minPassengers": 1,
+      "maxPassengers": 5,
+      "features": [
+        {
+          "name": "noOfBags",
+          "value": 5
+        }
+      ],
+      "servicesAvailable": ["meetAndGreet"]
+    },
+    {
+      "searchResultId": "8ed43865-24cd-422f-87ff-d91d4ad885a7_1",
+      "transportCategory": "MINIBUS",
+      "price": {
+        "salePriceMin": 120.0,
+        "salePriceMax": 120.0,
+        "currency": "USD"
+      },
+      "minPassengers": 1,
+      "maxPassengers": 8,
+      "features": [
+        {
+          "name": "noOfBags",
+          "value": 8
+        }
+      ],
+      "servicesAvailable": ["meetAndGreet"]
+    },
+    {
+      "searchResultId": "74083fb4-3283-4ea7-b958-d509f872a80a_1",
+      "transportCategory": "ELECTRICSTANDARD",
+      "price": {
+        "salePriceMin": 17.03,
+        "salePriceMax": 17.03,
+        "currency": "USD"
+      },
+      "minPassengers": 1,
+      "maxPassengers": 3,
+      "features": [
+        {
+          "name": "noOfBags",
+          "value": 3
+        }
+      ],
+      "servicesAvailable": ["meetAndGreet"]
+    },
+    {
+      "searchResultId": "ed3b5fe7-4c9b-4a6f-8049-48ae228d3003_1",
+      "transportCategory": "LUXURY",
+      "price": {
+        "salePriceMin": 120.0,
+        "salePriceMax": 120.0,
+        "currency": "USD"
+      },
+      "minPassengers": 1,
+      "maxPassengers": 3,
+      "features": [
+        {
+          "name": "noOfBags",
+          "value": 3
+        }
+      ],
+      "servicesAvailable": ["meetAndGreet"]
+    }
+  ]
+>>>>>>> 180d1906fd24e15367796cd3545259ee09cab870
 }
