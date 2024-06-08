@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./step1.css">
+  <link rel="stylesheet" href="./iconfont/iconfont.css">
+  <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+
+  <!-- import Vue before Element -->
+  <script src="https://unpkg.com/vue@2/dist/vue.js"></script>
+  <!-- import JavaScript -->
+  <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+  <script src="https://cdn.sheetjs.com/xlsx-0.20.2/package/dist/xlsx.full.min.js"></script>
+</head>
+
+
+<body>
+  <div id="app">
+    <div class="main-body">
+      <div class="top-box">
+        <div class="top-left">
+          <div class="route">MIA-Miami beach</div>
+          <div class="vehicle">
+            <span>Sedan</span>
+            <svg class="symbol" aria-hidden="true">
+              <use xlink:href="#i-arrow-down"></use>
+            </svg>
+          </div>
+        </div>
+
+        <div class="save">Save</div>
+      </div>
+
+      <div class="setting-box">
+        <div class="top setting-item">
+          <div class="top-left">
+            Set
+          </div>
+          <div class="top-right">
+            <legend>Target</legend>
+            <div>
+              <input type="radio" id="huey" name="drone" value="huey" checked />
+              <label for="huey">Increase Order Volume</label>
+            </div>
+
+            <div>
+              <input type="radio" id="dewey" name="drone" value="dewey" />
+              <label for="dewey">Increased profitability</label>
+            </div>
+          </div>
+        </div>
+        <div class="setting-pricing setting-item">
+          <div class="setting-pricing-item" v-for="(item,index) in settingList" :index="index">
+            <span>{{item.name}} :</span>
+            <div class="block" v-if="item.isDate">
+              <!-- <span class="demonstration">默认</span> -->
+              <el-date-picker v-model="value1" type="datetimerange" range-separator="至" start-placeholder="开始日期"
+                              end-placeholder="结束日期">
+
+              </el-date-picker>
+            </div>
+            <input class="input" v-else type="text">
+            <span class="unit">{{item.unit}}</span>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="result-list">
+        <div class="result-item" v-for="(item,index) in resultList " :key="index">
+          <div class="item">
+            <div class="item-top">
+              <span class="price">35.65</span>
+              <span>USD</span>
+            </div>
+            <div class="item-bottom">
+              <span>33usd 5% (成本和最低利润)</span>
+            </div>
+          </div>
+          <div class="item">
+            <div class="item-top">
+              <span class="mr_10">Ranking</span>
+              <span @click="showRankingDetail">Detail</span>
+            </div>
+
+            <div class="item-bottom">
+              <span>Elie</span>
+              <span>2</span>
+            </div>
+          </div>
+          <div class="item">
+            <div class="item-top">
+              <span  class="price">50</span>
+              <span>Conversion rate</span>
+            </div>
+            <div class="item-bottom">
+              <span>Order quantity</span>
+              <span>100</span>
+              <span>Requesting</span>
+              <span>50</span>
+            </div>
+
+          </div>
+
+          <div class="item">
+            <div class="item-top">
+              2024/06/03 12:00:00
+            </div>
+            <div class="item-bottom" v-if="index == 0">
+              <span>Price</span>
+              <input type="text">
+              <el-button class="save-btn">ok</el-button>
+            </div>
+            <div class="item-bottom-confirm" v-else>
+              <span>Objective 1 +1usd</span>
+              <div class="icon i-close"></div>
+              <div class="icon i-select"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+  </div>
+
+
+  <script src="./iconfont/iconfont.js"></script>
+
+  <script>
+    new Vue({
+      el: '#app',
+
+      data: () => {
+        return {
+          resultList: [
+            {
+              price: 36.5,
+              unit: 'USD',
+
+            },
+            {
+              price: 36.5,
+              unit: 'USD',
+
+            },
+            {
+              price: 36.5,
+              unit: 'USD',
+
+            }
+          ],
+          value1: [],
+          value2: '',
+          settingList: [
+            {
+              name: 'Cost',
+              unit: 'usd'
+            },
+            {
+              name: 'Profit',
+              unit: '%'
+            },
+            {
+              name: 'Car time',
+              isDate: true
+            },
+            {
+              name: 'Maximum Order Volume in Service Area',
+              unit: '/day'
+            },
+
+          ]
+        }
+      },
+
+      created() {
+        console.log('adfsdf');
+      },
+
+      methods:{
+        showRankingDetail(){
+          console.log('ad');
+        }
+      }
+    })
+  </script>
+
+
+
+  <script>
+
+
+
+
+    let saveBtn = document.querySelector('.save')
+
+    saveBtn.addEventListener('click', async () => {
+
+      let res = await fetchData({
+        url,
+        method: 'POST',
+        data: {
+          sql: 134678258,
+          version: '1.1',
+        }
+      })
+
+    })
+
+
+
+
+    //PROD
+    // let ses = '8JIOKRSCYyWkgmDnsqJ1d0bqNP6U8RSopQfoxVd94V2jgZATfS4bvd1gFSDy4q575A1i42yIpBQ5wLGZLFbWRfnLwlbDX1Mw1ReYkrnnuR6RVdzoeqLlzcwjwfJRO89j'
+    // let url = `https://51y9xc7cuh.execute-api.us-east-2.amazonaws.com/upncoming/sql-templates/run?ses=${ses}`
+
+    //DEV
+    let ses = 'vbrkSAyz6CCAztNt4Pu6HVFdCXquUPHcMwtg6LSZTNfmqrD6A5a3iAuOMZDKUUe9BKSIRMfohJqisplYXlImmlwIFTHMISHtuPKMsH5fl3zZkE3deNQwfLouWDzYGz42'
+    let url = `https://jqwys3p5nk.execute-api.us-east-2.amazonaws.com/dev/sql-template/run?ses=${ses}`
+
+    function fetchData({
+      url = '',
+      data = {},
+      method = 'GET',
+      // isShowLoading = true
+    } = {}) {
+      method = method.toUpperCase();
+      data['req_id'] = uuid()
+      if (method == 'GET') {
+        let dataStr = '';
+        Object.keys(data).forEach(key => {
+          dataStr += key + '=' + data[key] + '&';
+        })
+        if (dataStr !== '') {
+          dataStr = dataStr.substring(0, dataStr.lastIndexOf('&'));
+          url = url + '?' + dataStr;
+        }
+      }
+      let requestConfig = {
+        // credentials: 'same-origin',
+        method,
+        headers: {
+          'Accept': 'application/json',
+          // 'Content-method': 'application/json'
+        },
+        // mode: "cors", // same-origin，no-cors（default） cores;
+        // cache: "force-cache" // default 、 no-store 、 reload 、 no-cache 、 force-cache 、 only-if-cached 
+      }
+
+      if (method == 'POST') {
+        Object.defineProperty(requestConfig, 'body', {
+          value: JSON.stringify(data)
+        })
+      }
+      return fetch(url, requestConfig).then(async (response) => {
+        const data = await response.json()
+        if (response.ok && response.status === 200) {
+          return Promise.resolve(data)
+        } else {
+          let { errMsg } = data
+          // svcUtils.msgBox({ msg: errMsg })
+          return Promise.reject(null)
+        }
+      })
+        .catch((error) => {
+          console.log(error);
+          // return {}
+        })
+    }
+
+
+    function uuid() {
+      function S4() {
+        return (((1 + Math.random()) * 0x10000) | 0).toString(16).substring(1);
+      }
+      return S4() + S4() + '-' + S4() + '-' + S4() + '-' + S4() + '-' + S4() + S4() + S4();
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,1926 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Service Area</title>
+    <meta name="google" content="notranslate" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,shrink-to-fit=no" />
+    <script>
+      let _ver = '23.01';
+      let { protocol, origin, href } = window.location;
+      let _path = href.substring(0, href.lastIndexOf('/'));
+
+      // if (protocol == 'https:') {
+      _path += '/' + _ver;
+      // }
+
+      const stage = 'dev';
+      // const stage = 'upncoming';
+
+      const elifeFleetId = stage == 'dev' ? 40 : 15;
+    </script>
+    <!-- <link rel="stylesheet" href="iconfont/iconfont.css" /> -->
+    <script>
+      let _d = {
+        isAddServiceAreaState: false,
+        langCode: 'eng',
+        countryCode: 'USA',
+        vehicleList: {},
+        // ENV: 'dev',
+        envAndVersionNum: '',
+        isChangeVersion: false,
+        svcList: [],
+        lastSvcPricingId: 0,
+
+        isAirportSaved: true,
+        isAirportLoaded: false,
+        airports: {}, // airport data
+        countryAirport: {}, // each country's airport list
+        originalSelectedVids: [],
+        allCountry: [], //
+
+        googleMapCountryList: ['CHN', 'HKG', 'TWN', 'MYS', 'SGP', 'KOR', 'JPN', 'AUS'],
+        // googleMapCountryList: [],
+        isGoogleMap: false, //false ,true
+
+        unit: 'M', // KM or M
+        im: 0, //  0 or 1
+
+        isEmployee: true, // true or false
+        empEmail: '',
+        fleetEmail: '',
+        empPwd: undefined,
+        ses: undefined,
+        fleet_id: '',
+        elifeFleetId: stage == 'dev' ? 40 : 15,
+
+        curPartnerSvcData: {}, // partner , current service area data
+        predictionsCache: {}, // Cache search address
+
+        originLatLng: {
+          //initial bound lat and lng is sfo's
+          boundLat: 37.6213129,
+          boundLng: -122.3789554,
+          boundRadius: 200000,
+        },
+        hasRoutePerUser: ['gangye@elifetransfer.com', 'ping@elifeteam.com', 'fujiang@elifeteam.com', 'kevin@elifeteam.com', 'hehao@elifeteam.com'],
+        hasRoutePer: true, // true or false,show add route entrance
+        hidePartner: false,
+        notEditable: false,
+        partnerLogoText: '',
+      };
+
+      let _p = {
+        // cache partner page data
+        curPartnerData: {},
+        partnerList: [],
+      };
+
+      let partnerUserInfoList = [
+        {
+          fleetEmail: '3_elife@3_elife.com',
+          partnerLogoText: 'M_o<span>(3)</span>',
+          hidePartner: true,
+          notEditable: true,
+        },
+        {
+          fleetEmail: 'cost@elife.com',
+          partnerLogoText: 'Cost',
+          hidePartner: false,
+          notEditable: true,
+        },
+      ];
+
+      const svcUtils = {
+        loadJs: (url, isAsync = true) => {
+          return new Promise((resolve, reject) => {
+            let isLoad = document.getElementById(url);
+            if (isLoad) {
+              resolve();
+              return;
+            }
+            const script = document.createElement('script');
+            script.id = url;
+            if (isAsync) {
+              script.setAttribute('async', '');
+            }
+            script.type = 'text/javascript';
+            script.src = url;
+            document.body.appendChild(script);
+            script.onload = () => {
+              script.setAttribute('isDone', true);
+              resolve();
+            };
+          });
+        },
+        loadCssList: (list, path = _path) => {
+          list.forEach((item) => {
+            const link = document.createElement('link');
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = path + '/' + item;
+            const head = document.getElementsByTagName('head')[0];
+            head.appendChild(link);
+          });
+        },
+        loadJsList: async (list, path = _path) => {
+          if (list.length === 0) return;
+          for (let srcName of list) {
+            let url;
+            if (srcName.startsWith('http')) {
+              url = srcName;
+            } else {
+              url = path + '/' + srcName;
+            }
+            await svcUtils.loadJs(url);
+          }
+        },
+        loadJsListAsync: (list, path = _path) => {
+          if (list.length === 0) return;
+          for (let srcName of list) {
+            let url;
+            if (srcName.startsWith('http')) {
+              url = srcName;
+            } else {
+              url = path + '/' + srcName;
+            }
+            svcUtils.loadJs(url);
+          }
+        },
+      };
+    </script>
+    <script>
+      svcUtils.loadCssList(['service_area.css', 'service_area_part_2.css', 'svc-login/service_area_login.css', 'svc_components.css', 'com_dialog.css', 'iconfont/iconfont.css']);
+    </script>
+    <!-- <script src="./iconfont/iconfont.js"></script> -->
+    <script src="https://elifelimo.s3.us-east-2.amazonaws.com/general/jquery_3.4.1.js"></script>
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/js/bootstrap.min.js"
+          crossorigin="anonymous"></script> -->
+
+    <link rel="stylesheet" type="text/css" href="https://js.api.here.com/v3/3.1/mapsjs-ui.css" />
+  </head>
+
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <!-- <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-ML3WLXD" height="0" width="0"
+            style="display: none; visibility: hidden"></iframe>
+  </noscript> -->
+    <!-- End Google Tag Manager (noscript) -->
+
+    <div class="template"></div>
+
+    <div class="container-fluid" id="contain-fluid">
+      <!-- <div class="container-fluid" id="contain-fluid" style="display: none"> -->
+      <div
+        class="modal-shadow"
+        id="modal-shadow"
+        style="width: 100%; height: 100%; background-color: rgba(51, 51, 51, 0.4); position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); z-index: 999; display: none"
+      ></div>
+      <div class="loading-modal" id="loading-modal" style="display: none">
+        <h3 id="loading-title" style="font-size: 16px; font-weight: 700; text-align: center; margin-left: 0">Working on it</h3>
+        <div class="blink-loop" style="padding-left: 87px; margin-top: 30px">
+          <div class="blink-loop-spot current-blinking" id="loading-blink-loop-spot" name="loading-blink-loop-spot"></div>
+          <div class="blink-loop-spot" id="loading-blink-loop-spot" name="loading-blink-loop-spot"></div>
+          <div class="blink-loop-spot" id="loading-blink-loop-spot" name="loading-blink-loop-spot"></div>
+        </div>
+      </div>
+      <div
+        class="err-warn-modal"
+        id="err-warn-modal"
+        style="
+          width: 500px;
+          height: 300px;
+          border-radius: 8px;
+          box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 15px;
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          text-align: center;
+          padding: 105px 0;
+          background-color: #fff;
+          z-index: 999999999;
+          display: none;
+        "
+      >
+        <img
+          src="https://elifetransfer.s3.us-east-2.amazonaws.com/art/icon/consumer_pc/close.png"
+          alt=""
+          class="close-btn"
+          id="err-warn-modal-close-btn"
+          style="position: absolute; top: 30px; right: 30px"
+        />
+        <div class="error-icon-box" id="error-icon-box">
+          <img src="https://elifelimo.s3.us-east-2.amazonaws.com/art/flt_mgr/error.png" alt="" class="error-icon" id="error-icon" />
+        </div>
+        <p class="error-statement" id="error-statement" style="font-size: 16px; color: rgb(230, 0, 18); margin-top: 30px"></p>
+      </div>
+      <div class="modal-bgc" id="modal-bgc" style="width: 100%; height: 100%; background-color: rgba(148, 74, 25, 0); position: absolute; left: 0; display: none; z-index: 99"></div>
+      <div
+        class="service-area-json"
+        id="service-area-json"
+        style="width: 100%; height: 100%; z-index: 9999999999; display: none; position: absolute; left: 0; overflow-y: scroll; background-color: #fff; border: 2px solid black"
+      >
+        <div class="modal-close" id="modal-close"></div>
+        <textarea class="service-area-json-cnt" id="service-area-json-cnt" style="width: 100%; height: 100%; padding-left: 400px; resize: none; border: none"></textarea>
+        <div class="verify-num-box" id="service-area-json-verify-num-box" style="margin-bottom: 50px; position: fixed; right: 15px; bottom: 0; height: 80px">
+          <input type="text" class="verify-num-fld" id="verify-num-fld" placeholder="Verification Number" />
+          <div class="verify-num-sign" id="verify-num-sign" style="width: 100px"></div>
+          <button class="change-service-area" id="change-service-area" style="margin-top: 20px">change</button>
+        </div>
+      </div>
+
+      <!-- index tab -->
+      <!-- sign-in tab START -->
+      <div class="sign-in" id="sign-in">
+        <div class="sign-in-top">
+          <div class="sign-in-left">
+            <div class="sign-in-logo"></div>
+            <span>Elife</span>
+          </div>
+          <div class="time" id="sign-in-time"></div>
+        </div>
+        <div class="sign-in-bottom">
+          <div class="sign-in-left-bg"></div>
+          <div class="sign-in-left-main">
+            <p>Welcome to Pricing System</p>
+            <span>Dividing the service area and pricing system according to Range, hourly, special area, special time, model, different partners in the service area</span>
+          </div>
+          <form id="sign-in-form" class="sign-in-form">
+            <div class="sign-in-form-top">Login</div>
+            <div class="sign-in-form-main">
+              <div class="logo">
+                <div class="sign-in-logo" id="sign-in-logo"></div>
+                <span id="logo-text" id="sign-in-sys">Pricing System</span>
+              </div>
+              <div class="form-label-group">
+                <label>Email Account</label>
+                <div class="form-input">
+                  <span class="icon i-userhui input-icon"></span>
+                  <input type="email" class="index-fld" id="sign-in-email" placeholder="Please input email account" required autofocus autocomplete="off" />
+                </div>
+              </div>
+              <div class="form-label-group hide" id="driver-item">
+                <label>Driver Email</label>
+                <div class="form-input">
+                  <span class="icon i-userhui input-icon"></span>
+                  <input type="email" class="index-fld" id="sign-in-driver" placeholder="Please input email account" required autocomplete="off" />
+                  <span class="icon i-icon-delete delete" id="driver-delete"></span>
+                </div>
+              </div>
+              <div class="form-label-group">
+                <label>Password</label>
+                <div class="form-input">
+                  <span class="icon i-lockhui input-icon"></span>
+                  <div id="login-password">
+                    <input type="text" class="index-fld sign-in-password hide" placeholder="Please input password" required autocomplete="off" style="-webkit-text-security: disc" />
+                    <input type="password" class="index-fld sign-in-password-dev hide" placeholder="Please input password" required />
+                  </div>
+                </div>
+              </div>
+              <button class="index-btn active" id="sign-in-act" type="button">Sign in</button>
+            </div>
+          </form>
+        </div>
+        <div class="sign-in-tips" id="sign-in-tips"></div>
+      </div>
+      <!-- sign-in tab END -->
+
+      <div class="svc-full-screen-table hide" id="svc-full-screen-table">
+        <div class="table-name-btns">
+          <div class="table-name">Price calculation sheet</div>
+          <div class="full-table-btns-box">
+            <div class="full-table-exit-btn">Exit</div>
+            <div class="full-table-download-btn">Download</div>
+          </div>
+        </div>
+        <div class="full-screen-tab-content"></div>
+      </div>
+
+      <div class="status-drawer-container" id="status-drawer-container">
+        <div class="drawer">
+          <div class="drawer-header">
+            <span class="icon i-zhankai-2 left-icon hide"></span>
+            <span class="drawer-header-title">Call Details</span>
+            <span class="drawer-header-download hide">download</span>
+          </div>
+          <div class="drawer-content">
+            <div class="page-call-list">
+              <div class="detail-title-sticky-box">
+                <div class="detail-title-box">
+                  <div class="detail-title-box-left">
+                    <div class="name-info">
+                      <span class="details-partner-name">2-Booking</span>
+                      <div class="details-partner-info">
+                        <div class="details-partner-data details-partner-from">San Francisco Airport Airport Airport Airport Airport</div>
+                        <div class="separate">-</div>
+                        <div class="details-partner-data details-partner-to">Hilton Hotels Hunan Changs Changs Changs Changs Changs</div>
+                      </div>
+                    </div>
+                    <div class="details-partner-city">Changsha</div>
+                  </div>
+                  <div class="detail-title-box-right">Last 12 hour:20</div>
+                </div>
+              </div>
+              <div class="call-list-box"></div>
+              <div class="call-item-box call-item-box-template hide">
+                <div class="call-item-info-box">
+                  <div class="call-vehicle-price">
+                    <div class="sample-price-box sample-price-box-line">
+                      <span class="sample-v-name">Sedan</span>
+                      <span class="sample-v-prive">$20.00</span>
+                    </div>
+                    <div class="sample-price-box sample-price-box-line">
+                      <span class="sample-v-name">MPV-4</span>
+                      <span class="sample-v-prive">$30.00</span>
+                    </div>
+                    <div class="sample-price-box">
+                      <span class="sample-v-name">Minibus-8</span>
+                      <span class="sample-v-prive">$40.00</span>
+                    </div>
+                    <div class="sample-price-box more-vehicle-btn">
+                      <span class="more-text">more</span>
+                      <span></span>
+                    </div>
+                  </div>
+                  <div class="car-time-status-box">
+                    <span class="car-time-info">Car Time(UTC):2023-06-07 17:20:00</span>
+                    <div class="item-request-status-box">
+                      <div class="request-status">
+                        <span class="status-icon"></span>
+                        <!-- <span class="status-icon-warn"></span> -->
+                        Request
+                      </div>
+                      <div class="quote-status quote-status-warn">
+                        <span class="status-icon"></span>
+                        <span class="status-icon-warn"></span>
+                        Quote
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="request-time">Request Time(UTC):2023-06-07 17:20:00</div>
+              </div>
+            </div>
+            <div class="page-call-details">
+              <div class="call-Vehicle-title">
+                <span>Vehicle class</span>
+                <span>Price</span>
+              </div>
+              <div class="call-vehicle-list-box"></div>
+              <div class="call-vehicle-item-box call-vehicle-item-box-template hide">
+                <span>Sedan(1)</span>
+                <span>$20.00</span>
+              </div>
+            </div>
+            <div class="download-json-box hide">
+              <div class="json-id-info">Request & Quote</div>
+              <div class="json-operate-box">
+                <div class="operate-name-box">
+                  <span class="icon i-code"></span>
+                  <span>R&Q.json</span>
+                </div>
+                <div class="operate-list">
+                  <div class="operate-icon-box call-details-copy"><span class="icon i-copy1"></span></div>
+                  <div class="operate-icon-box call-details-download"><span class="icon i-download1"></span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="status-overlay"></div>
+
+      <div class="status-drawer-container" id="zones-all-list-box">
+        <div class="drawer">
+          <div class="drawer-header">
+            <span class="drawer-header-title">Chart Preview</span>
+          </div>
+          <div class="drawer-content">
+            <div class="zones-list-big-box">
+              <div class="zones-tips-box">
+                <div>Left:Pick-up</div>
+                <div>Righ:Drop-off</div>
+              </div>
+              <div class="zones-item-table">
+                <div class="zones-table-header">
+                  <div class="zone-seq">Seq</div>
+                  <div class="zone-name">Zones</div>
+                  <div class="zone-radius">Radius</div>
+                  <div class="zone-airport-box" id="header-zone-airport-box">
+                    <div class="zone-airport-item">SFO</div>
+                    <div class="zone-airport-item">SJC</div>
+                    <div class="zone-airport-item">ACB</div>
+                  </div>
+                </div>
+                <div class="zones-item-box">
+                  <div class="zones-table-item">
+                    <div class="zone-seq">1</div>
+                    <div class="zone-name">SF市区e</div>
+                    <div class="zone-radius">8M</div>
+                    <div class="zone-airport-box">
+                      <div class="zone-airport-item">234</div>
+                      <div class="zone-airport-item">258</div>
+                      <div class="zone-airport-item">145</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="zones-table-item zones-table-item-template hide">
+                  <div class="zone-seq">1</div>
+                  <div class="zone-name">SF市区</div>
+                  <div class="zone-radius">8M</div>
+                  <div class="zone-airport-box">
+                    <div class="zone-airport-item">234</div>
+                    <div class="zone-airport-item">258</div>
+                    <div class="zone-airport-item">145</div>
+                  </div>
+                  <div class="zone-airport-item zone-airport-item-template hide"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="status-drawer-container" id="zone-to-zone">
+        <div class="drawer">
+          <div class="drawer-header">
+            <span class="drawer-header-title">Zone to Zone<i class="icon i-question" id="zone2zone-question"></i></span>
+          </div>
+          <div class="drawer-content">
+            <div class="price-select">
+              <p>When a point is in two different zones, the price:</p>
+              <div class="price-select-btns">
+                <div class="price-select-btn">
+                  <label class="switch-btn" name="switch-btn">
+                    <input type="checkbox" id="zone-higher" />
+                    <span class="slider"></span>
+                  </label>
+                  <span>Higher</span>
+                </div>
+                <div class="price-select-btn">
+                  <label class="switch-btn" name="switch-btn">
+                    <input type="checkbox" id="zone-lower" checked />
+                    <span class="slider"></span>
+                  </label>
+                  <span>Lower</span>
+                </div>
+              </div>
+            </div>
+            <div class="zone-rule-item hide">
+              <div class="zone-rule-top">
+                <div class="zone-rule-top-left">
+                  <span id="zone-rule-serial">1</span>
+                  <input class="zone-rule-name" type="text" required />
+                  <i class="icon i-icon-edit"></i>
+                </div>
+                <div class="zone-rule-top-right">
+                  <i class="icon i-icon-delete" style="cursor: pointer" id="delete-zone2zone"></i>
+                </div>
+              </div>
+              <div class="zone-rule-box">
+                <div class="select-zone-top">
+                  <div class="select-zone">
+                    <input class="select-zone-input" id="select-zone1" type="text" placeholder="Starting point" />
+                    <span class="icon i-down" id="select-zone1-arrow"></span>
+                  </div>
+                  <span style="margin: 0 8px">-</span>
+                  <div class="select-zone">
+                    <input class="select-zone-input" id="select-zone2" type="text" placeholder="End point" />
+                    <span class="icon i-down" id="select-zone2-arrow"></span>
+                  </div>
+                  <div class="select-zone-price">
+                    <input class="select-zone-input" id="select-zone-price" type="text" placeholder="Pricing" />
+                    <div class="select-zone-unit">USD</div>
+                  </div>
+                </div>
+                <div class="select-zone-bottom">
+                  <div class="price-select-btn">
+                    <label class="switch-btn" name="switch-btn">
+                      <input type="checkbox" id="zone2zone-reverse1" />
+                      <span class="slider"></span>
+                    </label>
+                    <span>Same price for return trip</span>
+                  </div>
+                  <div class="price-select-btn">
+                    <label class="switch-btn" name="switch-btn">
+                      <input type="checkbox" id="zone2zone-reverse2" />
+                      <span class="slider"></span>
+                    </label>
+                    <span>Different price for return trip</span>
+                  </div>
+                  <div class="select-zone-price">
+                    <input class="select-zone-input" id="zone2zone-reverse-amount" type="text" placeholder="Pricing" />
+                    <div class="select-zone-unit">%</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="zone-rules"></div>
+            <div class="add-btn" id="add-zone2zone">
+              <i class="icon i-icon-minus"></i>
+              <span>Add a pricing</span>
+            </div>
+          </div>
+        </div>
+        <div class="tips hide">
+          <div class="tips-header">
+            <span>Zone to Zone rules</span>
+            <i class="icon i-close" id="drawer-tips-close"></i>
+          </div>
+          <div class="tips-content">
+            <div class="tips-text">
+              <p>
+                <span>1、</span>
+                <font>起点和终点不能处于同一区域</font>
+              </p>
+              <p>
+                <span>2、</span>
+                <font>价格优先级：圈到机场一口价>圈对圈>市区价格>圈内点对点>服务区里程计价</font>
+              </p>
+              <p>
+                <span>3、</span>
+                <font>返程同价或者百分比不同价（包含车型加价）</font>
+              </p>
+              <p>
+                <span>4、</span>
+                <font>可以根据不同的车型设置方案价格</font>
+              </p>
+              <p>
+                <span>5、</span>
+                <font>当有一个点是交叉区域的时候，取的价格由设置决定。</font>
+              </p>
+            </div>
+            <div class="tips-text">
+              <p>
+                <span>1、</span>
+                <font>The start and end points must be located in different zones.</font>
+              </p>
+              <p>
+                <span>2、</span>
+                <font>Priority:Fixed Price Zones > Zone to Zone > Range Prices-Downtown Area >Point to point within the zone>Range Prices-Service Area</font>
+              </p>
+              <p>
+                <span>3、</span>
+                <font>Same price for return trip or different percentage (including model increase)</font>
+              </p>
+              <p>
+                <span>4、</span>
+                <font>Program prices can be set for different car models</font>
+              </p>
+              <p>
+                <span>5、</span>
+                <font>When there is a point that is a cross zone, the price taken is determined by the setting.</font>
+              </p>
+            </div>
+            <div class="tips-bg"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- after sign in tab -->
+      <div class="after-sign-in tr" id="after-sign-in" style="display: none">
+        <div class="top-bar" id="top-bar">
+          <div class="logo-and-version-env">
+            <div class="elife-logo" id="elife-logo"></div>
+            <div class="elife-partner hide" id="elife-partner"></div>
+            <div class="version"></div>
+          </div>
+          <div class="right-box">
+            <div class="user-info-entry" id="user-info-entry">
+              <span class="employee-name hide">
+                <!-- <span class="name">gangye</span> -->
+                <!-- <span>*</span> -->
+              </span>
+              <span class="fleet-email hide"></span>
+            </div>
+            <div class="lang-box">
+              <input type="text" class="input" readonly />
+              <i class="icon i-arrow-down"></i>
+            </div>
+          </div>
+        </div>
+        <div class="cnt-div" id="cnt-div">
+          <button
+            tr
+            class="svc-aea-edit-container-show-btn"
+            id="svc-aea-edit-container-show-btn"
+            style="color: #fff; background-color: rgb(251, 172, 120); border-radius: 4px; padding: 15px; border: none; z-index: 2; display: none"
+          >
+            Back to service area
+            <div style="width: 0; height: 0; border: 8px solid transparent; border-right-color: rgb(251, 172, 120); position: absolute; top: 50%; left: -16px; transform: translate(0, -50%)"></div>
+          </button>
+          <div class="side-bar" id="side-bar">
+            <div class="sidebar-title sidebar-item cur-sidebar-title" id="svc-aea-btn">
+              <div tr class="pl-30" id="svc-aea-btn">Service Area</div>
+            </div>
+            <div class="sidebar-title sidebar-item" id="vehicle-manage">
+              <div tr class="pl-30" id="vehicle-manage">Vehicle Management</div>
+            </div>
+            <div class="sidebar-title" id="partner-manage">
+              <div class="sidebar-item main-item">
+                <div class="pl-30"></div>
+                <div tr class="text" style="margin-right: 10px" id="partner-setting-btn">Partner</div>
+                <div class="icon i-arrow-down"></div>
+              </div>
+              <div class="box hide">
+                <div class="sidebar-item pl-60" id="partner-add-price-btn" style="display: none">Add price</div>
+                <div class="sidebar-item pl-60" id="partner-setting-area-btn">Setting area</div>
+                <div class="sidebar-item pl-60" id="partner-new-pricing">New Pricing</div>
+                <div class="sidebar-item pl-60" id="partner-preview-btn">Preview</div>
+                <div class="sidebar-item pl-60" id="partner-history-btn">History</div>
+              </div>
+            </div>
+            <!-- <div class="version"></div> -->
+          </div>
+          <div class="sidebar-tab hide" id="svc-aea-sidebar-tab">
+            <div class="sidebar-tab-titles-bar-box" id="sidebar-tab-titles-bar-box">
+              <div tr class="svc-aea-search-tab-title" style="padding: 10px">Service Area</div>
+              <div class="sidebar-tab-titles-bar" id="svc-aea-tab-titles-bar" style="position: absolute; left: 0; top: 0; background-color: #eee; display: none"></div>
+            </div>
+            <div class="sidebar-tab-detail" id="sidebar-tab-detail">
+              <div class="no-service-area-tab" id="no-service-area-tab" style="display: none">
+                <p class="no-service-area-notify" id="no-service-area-notify">You have no service area,please add one</p>
+                <div class="add-service-area-0" id="add-service-area-0">Add Service Area</div>
+              </div>
+              <div class="add-service-area-detail notranslate" id="add-service-area-detail">
+                <div class="service-area-route hide" id="service-area-route">
+                  <input type="text" class="input" value="Route" readonly="" autocomplete="off" />
+                  <i class="icon i-down" style="color: #000"></i>
+                </div>
+                <!-- <div class="service-area-search hide" id="service-area-search">Attribution Service Area<span class="icon i-a-Group1306"></span></div> -->
+                <div class="service-area-search-box" id="service-area-search-box">
+                  <div class="search-box">
+                    <input tr type="text" class="service-area-search-fld" id="service-area-search-fld" autocomplete="off" placeholder="Please enter service area or airport partial words" />
+                  </div>
+                  <div class="icon i-search"></div>
+                </div>
+                <div class="add-service-area" id="add-service-area">
+                  <div class="icon i-add-circle" id="add-svc-aea-icon"></div>
+                  <div tr class="add-service-area-text" id="add-service-area-text">Add Service Area</div>
+                </div>
+              </div>
+              <div class="svc-aea-edit-container hide" id="svc-aea-edit-container">
+                <div class="svc-aea-container-box">
+                  <div class="svc-aea-container-box-top">
+                    <!--  servicing-airports START -->
+                    <div class="servicing-airports hide notranslate hide" name="svc-aea-detail-tab" id="servicing-airports" data-tab-index="0">
+                      <div class="set-svc-name-box" id="set-svc-name-box">
+                        <input class="set-svcname-input" id="set-svcname-input" type="text" placeholder="Service area name *" />
+                        <div class="set-name-icon">
+                          <p class="icon i-icon-edit"></p>
+                        </div>
+                        <span></span>
+                      </div>
+                      <div class="map-box collapse" id="map-box" style="display: inline-block">
+                        <div class="map" id="map" style="width: 100%; height: 100%"></div>
+                        <div class="select-country-currency-box">
+                          <div class="country-title">Country</div>
+                          <div class="select-country" id="select-country">
+                            <input class="slt-country-input required-fld" id="slt-country-input" type="text" placeholder="Please select a country *" />
+                            <span class="icon i-down"></span>
+                          </div>
+                          <div class="select-currency" id="select-currency">
+                            <input class="slt-currency-input" id="slt-currency-input" type="text" placeholder="Currency" />
+                            <span class="icon i-down"></span>
+                          </div>
+                        </div>
+                        <div class="map-full-btn"><span class="icon i-full-screen"></span></div>
+                        <div class="map-edit-btn">
+                          <svg class="symbol" aria-hidden="true" style="font-size: 24px">
+                            <use xlink:href="#i-pen"></use>
+                          </svg>
+                          <input type="text" class="set-coordinate-string-input" id="set-coordinate-string-input" />
+                          <div class="draw-urban-area-btn" id="draw-urban-area-btn"></div>
+                        </div>
+                        <div class="map-edit-content-box hide">
+                          <div class="map-edit-item-box">
+                            <div class="edit-name">Downtown Area</div>
+                            <div class="shape-btn" id="urban-area-shape-btn"><span class="icon i-wubianxing"></span></div>
+                            <div class="delete-btn" id="urban-area-delete-btn"><span class="icon i-icon-delete"></span></div>
+                          </div>
+                        </div>
+                        <div class="map-set-airports-box" id="airports-roll-box">
+                          <div class="map-set-radius-box">
+                            <div class="set-radius-name">Radius</div>
+                            <div class="set-radius-content" id="set-radius-content">
+                              <input type="text" class="set-radius-input required-fld" id="set-radius-input" oninput="value=value.match(/^\d+(?:\.\d)?/)" placeholder="Please set radius *" />
+                              <div class="radius-unit" name="distance-unit">M</div>
+                              <span></span>
+                            </div>
+                          </div>
+                          <div class="add-airport-box">
+                            <div class="add-airport-title">Airport</div>
+                            <div class="add-airport-btn" id="airports-item-box-add"><span class="icon i-icon-minus"></span> Add Service Airport</div>
+                          </div>
+
+                          <div class="airports-item-box hide">
+                            <div class="select-airports-box">
+                              <input class="airport-input required-fld" autocomplete="off" placeholder="Please enter airport code *" type="text" />
+                              <span class="icon i-down"></span>
+                            </div>
+                            <div class="del-airport-btn">
+                              <span class="icon i-icon-delete"></span>
+                            </div>
+                          </div>
+                          <div class="airports-roll-box"></div>
+                        </div>
+                      </div>
+                      <div class="svc-airports-save-box" style="display: none">
+                        <div class="svc-airports-save-btn svc-airports-save-btn-allowed" id="svc-airports-save-btn">Save</div>
+                      </div>
+                    </div>
+                    <!--  servicing-airports END -->
+
+                    <!--  basic-pricing START -->
+                    <div class="basic-pricing prev-next-tab hide notranslate fix-price-content" name="svc-aea-detail-tab" id="basic-pricing" data-tab-index="1" style="position: relative">
+                      <div class="range-price-title">Range Prices</div>
+                      <div class="change-range-type">
+                        <div class="range-type-btn range-type-btn-activy" id="change-svc-area-btn" name="1">Service Area</div>
+                        <div class="range-type-btn" name="2" id="change-urban-area-btn">Downtown Areas</div>
+                        <div class="tab-underline"></div>
+                      </div>
+                      <div class="low-price-box">
+                        <div class="start-price-box">
+                          <div class="startprice-title">Start Price</div>
+                          <div class="startprice-num-box">
+                            <input class="startprice-num" id="start-price" type="number" placeholder="Please enter" step="0.01" />
+                            <div class="price-unit">USD</div>
+                          </div>
+                        </div>
+                        <div class="distance-range-box">
+                          <div class="distance-range-left-box">
+                            <div class="distance-range-title">Distance</div>
+                            <div class="distancerange-num-box">
+                              <input class="distancerange-num" id="low-price-start" value="0" disabled type="number" />
+                              <div class="range-unit">M</div>
+                            </div>
+                          </div>
+                          <div class="range-icon-box"><span class="icon"></span></div>
+                          <div class="endrange-num-box">
+                            <input class="distancerange-num" id="low-price-end" type="number" placeholder="0" oninput="value=value.match(/^\d+(?:\.\d{0,2})?/)" />
+                            <div class="range-unit">M</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="range-big-box">
+                        <div class="range-content-box">
+                          <div class="delta"></div>
+                          <div style="margin: 0 auto; max-width: 664px">
+                            <div class="range-title-box">
+                              <div class="range-title-left">Distance</div>
+                              <div class="range-title-right">Unit Price</div>
+                            </div>
+                            <div class="range-list-box">
+                              <div id="range-list">
+                                <!-- <div class="range-item-box">
+                                <div class="range-num-item-box">
+                                  <div class="range-input">
+                                    <input disabled class="range-item-startnum">
+                                    <div class="range-unit">M</div>
+                                  </div>
+                                  <div class="range-icon-box"><span class="icon"></span></div>
+                                  <div class="range-input">
+                                    <input placeholder="0" class="range-item-startnum range-item-endnum">
+                                    <div class="range-unit">M</div>
+                                  </div>
+                                </div>
+                                <div class="range-unit-box">
+                                  <div class="unitnum-box">
+                                    <input class="unit-num" placeholder="Please enter">
+                                    <div class="price-unit">USD</div>
+                                  </div>
+                                  <div class="del-item-box">
+                                    <span class="icon i-icon-delete"></span>
+                                  </div>
+                                </div>
+                              </div> -->
+                              </div>
+                              <div class="range-item-box" style="display: none">
+                                <div class="range-num-item-box">
+                                  <div class="range-input">
+                                    <input disabled class="range-item-startnum" oninput="value=value.match(/^\d+(?:\.\d{0,2})?/)" />
+                                    <div class="range-unit">M</div>
+                                  </div>
+                                  <div class="range-icon-box"><span class="icon"></span></div>
+                                  <div class="range-input">
+                                    <input placeholder="0" class="range-item-startnum range-item-endnum" oninput="value=value.match(/^\d+(?:\.\d{0,2})?/)" />
+                                    <div class="range-unit">M</div>
+                                  </div>
+                                </div>
+                                <div class="range-unit-box">
+                                  <div class="unitnum-box">
+                                    <input class="unit-num" placeholder="0" oninput="value=value.match(/^\d+(?:\.\d{0,2})?/)" />
+                                    <div class="price-unit">USD</div>
+                                  </div>
+                                  <div class="del-item-box">
+                                    <span class="icon i-icon-delete"></span>
+                                  </div>
+                                </div>
+                              </div>
+                              <!-- add btn -->
+                              <div id="add-range-button" class="add-item-btn">Add Distance and Price</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="counter-big-box">
+                        <div class="couter-left-box">
+                          <div class="Calculation-title">
+                            <svg class="symbol" aria-hidden="true" style="font-size: 24px; margin-right: 10px">
+                              <use xlink:href="#i-jisuanqi_danse"></use>
+                            </svg>
+
+                            <span>Calculation</span>
+                          </div>
+                          <div class="couter-tips">Calculating by the unit prices you had set</div>
+                          <div class="couter-import-box">
+                            <div class="couter-input-box">
+                              <div class="warp-box">
+                                <input class="couter-input" type="number" step="1" placeholder="Please enter" />
+                                <div class="range-unit">M</div>
+                              </div>
+                              <div class="calc-btn">Calc</div>
+                            </div>
+                          </div>
+                          <div class="line"></div>
+                        </div>
+                        <div class="couter-right-box">
+                          <div class="result-num">0</div>
+                          <div class="result-unit">USD</div>
+                        </div>
+                      </div>
+
+                      <div class="raising-cards-price-box hide">
+                        <div class="raising-cards-title">Meet And Greet</div>
+                        <div class="raisingcards-price-box">
+                          <input class="raisingcards-num" type="number" placeholder="Please enter" />
+                          <div class="price-unit">USD</div>
+                        </div>
+                      </div>
+                    </div>
+                    <!--  basic-pricing END -->
+
+                    <!-- hourly-Prices START -->
+                    <div class="hourly-pricing-wrapper hide" id="hourly-pricing-wrapper"></div>
+                    <!-- hourly-Prices END -->
+
+                    <!-- add-zones START -->
+                    <div class="add-zones prev-next-tab notranslate hide" name="svc-aea-detail-tab" id="add-zones" data-tab-index="3">
+                      <div class="add-zones-top">
+                        <div class="add-zones-title">
+                          <span id="svc-area-name"></span>(Special zone pricing:create fixed price for special zones)
+                          <div class="polygon-test">
+                            <input type="text" class="polygon-test-input" id="polygon-test-input" />
+                            <div class="polygon-test-btn" id="polygon-test-btn"></div>
+                          </div>
+                        </div>
+                        <div class="chart-preview-btn" id="show-chart-preview-btn">Chart Preview &gt;</div>
+                      </div>
+                      <div class="map-box" id="zones-map">
+                        <div class="map" id="map" style="width: 100%; height: 100%"></div>
+                        <div class="map-box-top-left">
+                          <div class="select-add-zone">
+                            <div class="zone-title">Fixed Price Zones</div>
+                            <div class="select-zone input-item" id="select-zone">
+                              <input tr class="zone-name" id="zone-name" type="text" placeholder="Please enter a name" />
+                              <span class="zone-count" id="zone-count"></span>
+                              <span class="icon i-down" id="select-zone-switch"></span>
+                            </div>
+                          </div>
+                          <div class="zone-reloc-box" id="zone-reloc-box">
+                            <div class="zone-reloc-fld-outer input-item">
+                              <input tr class="zone-reloc-fld" id="zone-reloc-fld" placeholder="Search area" />
+                              <span class="icon i-a-Group1306"></span>
+                              <input type="text" class="form-control" id="zone-reloc-addr" autocomplete="off" style="display: none" />
+                            </div>
+                            <div class="dropdown place-dropdown" id="zone-reloc-fld-dropdowns" style="display: none">
+                              <table class="table">
+                                <tbody>
+                                  <tr id="item-0" name="item" class="table-tr">
+                                    <td id="lbl-0" name="lbl" class="table-td"></td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="map-box-top-right">
+                          <div class="zone-zone map-btn" id="zone-zone">
+                            <svg class="symbol" aria-hidden="true">
+                              <use xlink:href="#i-zonetozone"></use>
+                            </svg>
+                          </div>
+                          <div class="map-edit map-btn" id="zone-edit">
+                            <svg class="symbol" aria-hidden="true" style="font-size: 24px">
+                              <use xlink:href="#i-pen"></use>
+                            </svg>
+                          </div>
+                          <div class="map-edit-content-box hide" id="zone-edit-box">
+                            <div class="map-edit-item-box">
+                              <div class="edit-name">Fixed Price Zones</div>
+                              <div class="edit-btn" id="zone-circle-btn"><span class="icon i-yikoujiaquan"></span></div>
+                              <div class="edit-btn" id="zone-pentagon-btn"><span class="icon i-wubianxing"></span></div>
+                              <div class="edit-btn" id="zone-delete-btn"><span class="icon i-icon-delete"></span></div>
+                            </div>
+                          </div>
+                          <div class="map-full map-btn" id="map-full"><span class="icon i-full-screen"></span></div>
+                        </div>
+                        <div class="zone-radius-block">
+                          <div class="zone-radius-outer">
+                            <div>Radius</div>
+                            <div class="zone-radius-item input-item">
+                              <input class="zone-radius" id="zone-radius" placeholder="" />
+                              <span class="zone-radius-unit" id="zone-radius-unit"></span>
+                            </div>
+                          </div>
+                          <div class="zone-lat-lng">
+                            <div id="zone-lat"></div>
+                            <div id="zone-lng"></div>
+                            <span class="icon i-pen1" id="zone-lat-lng"></span>
+                          </div>
+                          <div class="zone-lat-lng-box hide" id="zone-lat-lng-box">
+                            <div class="zone-lat-lng-box-top">
+                              <span>Positioning</span>
+                              <div class="zone-lat-lng-box-btn" id="zone-lat-lng-ok">OK</div>
+                            </div>
+                            <input class="zone-lng" oninput="value=value.replace(/[^-0-9.]/g, '')" id="zone-edit-lat" type="text" placeholder="Longitude" />
+                            <input class="zone-lat" oninput="value=value.replace(/[^-0-9.]/g, '')" id="zone-edit-lng" type="text" placeholder="Latitude" />
+                          </div>
+                        </div>
+                        <div class="map-box-bottom">
+                          <div class="zone-airports-prices">
+                            <div class="zone-airports-prices-title">Airports and Prices <span id="zone-currency"></span></div>
+                            <div class="zone-airports-prices-list hide">
+                              <div class="zone-airports-prices-item" id="zone-prices-item">
+                                <div class="item-top">
+                                  <div id="zone-airport"></div>
+                                  <span class="icon i-swap"></span>
+                                  <div id="zone-item-name"></div>
+                                </div>
+                                <div class="item-bottom">
+                                  <div class="item-input">
+                                    <label>Pick up</label>
+                                    <input id="zone-pickup" type="text" />
+                                  </div>
+                                  <div class="item-input">
+                                    <label>Drop off</label>
+                                    <input id="zone-dropoff" type="text" />
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="zone-airports-prices-list" id="zone-prices-list"></div>
+                            <div class="fixed-price">
+                              <label class="switch-btn" name="switch-btn">
+                                <input type="checkbox" id="zone-checkbox" />
+                                <span class="slider"></span>
+                              </label>
+                              <p>Use fixed price for mileage orders within this zone.</p>
+                              <div class="fixed-price-box" id="select-fixed-price">
+                                <span class="fixed-price-pick" id="fixed-price-pick">--</span>
+                                <span class="icon i-down" id="select-fixed-price-switch"></span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- add-zones END -->
+
+                    <!-- vehicles-pricing START -->
+                    <div class="vehicles-pricing prev-next-tab hide" id="vehicles-pricing">
+                      <div class="content-box">
+                        <div class="vehicle-pricing-top-bar" id="vehicle-pricing-top-bar" style="position: relative">
+                          <div class="left">
+                            <div class="currency-box">
+                              <span tr id="currency-title">Currency:</span>
+                              <span class="currency" style="font-weight: 600">USD</span>
+                            </div>
+                            <div class="vehicles-pricing-tip"><span>Left:Pick-up</span><span>Right:Drop-off</span></div>
+                            <!-- do not delete K's test START -->
+                            <div style="color: transparent; user-select: none">
+                              <botton id="to-up" class="to-up hide">to up</botton>
+                              <botton id="to-down" class="to-down hide">to down</botton>
+                              <botton id="to-left" class="to-left hide">to left</botton>
+                              <botton id="to-right" class="to-right hide">to right</botton>
+                            </div>
+                            <!-- do not delete K's test END -->
+                          </div>
+                          <div class="right">
+                            <div class="switch-btns">
+                              <span>Subscript</span>
+                              <label class="switch-box">
+                                <input type="checkbox" id="hide-red-btn" checked />
+                                <span class="slider"></span>
+                              </label>
+                            </div>
+                            <div class="filter" id="filter-x"><i class="icon i-filter1"></i>Filter X-axis</div>
+                            <div class="filter" id="filter-y"><i class="icon i-filter1"></i>Filter Y-axis</div>
+                            <div class="download-csv-btn"><i class="icon i-download1"></i>Price CSV</div>
+                            <div class="filter-template hide">
+                              <div class="all">
+                                <label class="switch-btn" name="switch-btn">
+                                  <input type="checkbox" id="all" checked />
+                                  <span class="slider"></span>
+                                </label>
+                                <div class="item-name">All X-axis terms</div>
+                              </div>
+                              <div class="items"></div>
+                              <div class="item hide">
+                                <label class="switch-btn" name="switch-btn">
+                                  <input type="checkbox" class="item-check" />
+                                  <span class="slider"></span>
+                                </label>
+                                <div class="item-name"></div>
+                              </div>
+                              <div class="btns">
+                                <div class="btn cancel">取消</div>
+                                <div class="btn submit">确定</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div id="vehicle-form" class="vehicles-pricing-from">
+                          <div class="item top-item-box hide">
+                            <div class="zone-from"></div>
+                            <div class="zone-list"></div>
+                          </div>
+                          <div class="item top-item-dropdown hide">
+                            <input type="text" class="input" readonly />
+                            <i class="icon i-arrow-down"></i>
+                          </div>
+                          <div class="item top-item-box top-item-hourly hide">
+                            <div class="zone-from">
+                              <input type="text" class="input ellipsis" />
+                              <i class="icon i-arrow-down"></i>
+                            </div>
+                            <div class="zone-list"></div>
+                          </div>
+
+                          <div class="vehicle-top">
+                            <div class="top-box">
+                              <div class="top"></div>
+                            </div>
+                          </div>
+                          <div class="content">
+                            <div class="item left-box-template" style="display: none">
+                              <div class="item-left">
+                                <input type="checkbox" class="checkbox" />
+                                <span class="vehicle-name"></span>
+                              </div>
+                              <div class="item-right">
+                                <input class="input" type="text" oninput="value=value.match(/^\d+(?:\.\d{0,2})?/)" />
+                                <span>%</span>
+                              </div>
+                            </div>
+                            <div class="item vehicle-price-item hide">
+                              <input class="input" oninput="value=value.match(/^\d+(?:\.\d{0,2})?/)" />
+                              <span class="red-triangle hide"></span>
+                              <div class="price-zero-tips hide">
+                                The price here is 0
+                                <div class="price-zero-tips-btn">OK</div>
+                              </div>
+                            </div>
+                            <div class="tip-box hide">
+                              <div class="triangle"></div>
+                              <div class="tip-content-box">
+                                <div class="tip-content-top">
+                                  <div class="cale-text">54+(-50)=4</div>
+                                  <div class="percent">92%</div>
+                                </div>
+                                <div class="tip-text">General + Delta = Final price</div>
+                              </div>
+                            </div>
+                            <div class="left-box"></div>
+                            <div class="right-box">
+                              <div class="move to-left hide">
+                                <i class="icon i-To_left"></i>
+                                <span>Updated</span>
+                              </div>
+                              <div class="move to-right hide">
+                                <span>Updated</span>
+                                <i class="icon i-To_left"></i>
+                              </div>
+                              <div class="move to-down hide">
+                                <span>Updated</span>
+                                <i class="icon i-To_left"></i>
+                              </div>
+                              <div class="move to-up hide">
+                                <span>Updated</span>
+                                <i class="icon i-To_left"></i>
+                              </div>
+                              <div class="right-content"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- vehicles-pricing END -->
+
+                    <!-- reserve-time START -->
+                    <div class="reserve-time-wrapper hide" id="reserve-time-wrapper"></div>
+                    <!-- reserve-time END -->
+
+                    <!-- service-time START  -->
+                    <div class="personalised-time prev-next-tab hide" name="svc-aea-detail-tab" id="personalised-time" data-tab-index="6">
+                      <div class="personalised-time-content">
+                        <div class="left">
+                          <div class="del-btn hide-scale">Delete</div>
+                          <div class="setting-del-btn hide-scale">Delete</div>
+                          <div class="top-box">
+                            <div class="select-box"></div>
+                            <div class="icon pointer i-add"></div>
+                          </div>
+                          <div class="selected-vehicles-cards" ondrop="drop_handler(event)" ondragover="dragover_handler(event)"></div>
+
+                          <input type="text" class="add-input hide" />
+                          <div class="dorpdown-box hide">
+                            <input type="text" class="input" readonly />
+                            <div class="icon i-arrow-down"></div>
+                          </div>
+
+                          <div class="hour-item hide">
+                            <div class="mask hide-scale">
+                              <div class="left-bg hide"></div>
+                            </div>
+                          </div>
+
+                          <div class="time-select-item hide">
+                            <div class="time"></div>
+                            <div class="week-select-box"></div>
+                          </div>
+
+                          <div class="k-test-persionalised-box">
+                            <div class="toup">toup</div>
+                            <div class="todown">todown</div>
+                            <div class="select-start">select-start</div>
+                            <div class="select-end">select-end</div>
+                            <div class="start-del-btn">start-del-btn</div>
+                            <div class="start-del-setting-btn">start-del-setting-btn</div>
+                          </div>
+                          <div class="time-select-box"></div>
+                        </div>
+                        <div class="cards-box hide">
+                          <div class="top">Small car</div>
+                          <div class="list">
+                            <div class="item hide" draggable="true">
+                              <div class="item-name"></div>
+                              <div class="del pointer hide">x</div>
+                              <div class="k-item-move"></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="right"></div>
+                      </div>
+                    </div>
+                    <!-- <div class="service-time-wrapper hide" id="service-time-wrapper"></div> -->
+                    <!-- service-time END  -->
+                    <!-- special-date START -->
+
+                    <div class="special-date-wrapper hide" id="special-date-wrapper"></div>
+                    <!-- special-date END -->
+
+                    <div class="svc-item amenity-wrapper hide" id="amenity-wrapper"></div>
+
+                    <!-- Additional option START -->
+                    <div class="additional-option hide" id="additional-option">
+                      <div class="option">
+                        <input type="checkbox" class="checkbox ap-checkbox" />
+                        <span>Additional prices do not overlap, use highest price rule</span>
+                      </div>
+                    </div>
+                    <!-- Additional option END -->
+
+                    <!-- save page START -->
+                    <div class="history hide" id="history">
+                      <div class="history-item hide">
+                        <div class="top">
+                          <div class="time-box">
+                            <span class="time"></span>
+                            <span style="color: #999">UTC</span>
+                            <span class="cur-ver hide">current Version</span>
+                          </div>
+                          <div class="operator">
+                            <span class="operator-title">Operator:</span>
+                            <span class="user-name"></span>
+                          </div>
+                        </div>
+                        <div class="note-box">
+                          <span class="nots-title">Note:</span>
+                          <div class="history-content-box">
+                            <span class="note-content"></span>
+                            <div class="history-save-btn pointer">Fill in this version data</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="history-list"></div>
+                    </div>
+                    <!-- save page END -->
+                  </div>
+                  <div class="prew-next-btn-box" id="prew-next-btn-box">
+                    <div tr class="prev-btn" id="prev-btn">Prev</div>
+                    <div tr class="next-btn" id="next-btn">Next</div>
+                  </div>
+                </div>
+                <!-- calculator START  -->
+                <div class="calculator prev-next-tab" name="svc-aea-detail-tab" id="calculator">
+                  <div class="row basic-top-bar" id="basic-top-bar" style="display: none">
+                    <div class="col-12">
+                      <div class="svc-aea-name-fld" id="svc-aea-name-fld"></div>
+                      Calculating by the unit prices you had set
+                    </div>
+                  </div>
+                  <div class="btn-box pointer">
+                    <botton class="com-btn btn-dis active">
+                      <div tr id="one-way" class="switch-left">One way</div>
+                    </botton>
+                    <botton class="com-btn btn-hourly">
+                      <div tr id="hourly-way" class="switch-right">Hourly way</div>
+                    </botton>
+                  </div>
+                  <div class="vehicle-price-calculator" id="vehicle-price-calculator">
+                    <div class="import-box" id="import-box">
+                      <div class="calc-info-switch-box">
+                        <div class="import-items" id="import-items">
+                          <div class="import-item" id="from-place-box">
+                            <label tr id="tr-from" class="place-lbl" for="">From</label>
+                            <div class="input-box">
+                              <input tr type="text" class="from-place place-fld" id="cal-from-place" placeholder="Default All Airports" />
+                            </div>
+                            <img
+                              src="https://elifelimo.s3.us-east-2.amazonaws.com/art/flt_mgr/error.png"
+                              alt=""
+                              class="error-icon"
+                              id="from-place-empty-warn-icon"
+                              style="position: absolute; right: 5px; top: 50%; transform: translateY(-50%); display: none; margin: 0"
+                            />
+                          </div>
+                          <i class="exchange icon i-exchange pointer"></i>
+                          <div class="import-item mb_10" id="to-place-box">
+                            <label tr id="tr-to" class="place-lbl" for="">To</label>
+                            <div class="input-box">
+                              <input tr type="text" class="to-place place-fld" id="cal-to-place" autocomplete="off" placeholder="Default All Buy It Now Regions" />
+                            </div>
+                            <img
+                              src="https://elifelimo.s3.us-east-2.amazonaws.com/art/flt_mgr/error.png"
+                              alt=""
+                              class="error-icon"
+                              id="to-place-empty-warn-icon"
+                              style="position: absolute; right: 5px; top: 50%; transform: translateY(-50%); display: none; margin: 0"
+                            />
+                          </div>
+                          <div class="import-item time-select-box mb_10" id="time-select-box" style="display: none">
+                            <div tr id="tr-duration" class="place-lbl duration-lbl" for="">PKG</div>
+                            <div class="time-select-right">
+                              <div class="dropdown-hourly-box">
+                                <input id="dropdown-hourly" type="text" oninput="value=''" style="z-index: 2 !important" placeholder="Hour" />
+                              </div>
+                              <div class="time-select-mile">
+                                <input type="text" class="input" placeholder="Mileage 25km/h" />
+                              </div>
+                            </div>
+                          </div>
+                          <div class="import-item mb_10 from-time-date">
+                            <span style="width: 42px; flex: 0 0 42px" tr id="tr-date">Date</span>
+                            <div class="select-date-box">
+                              <div class="icon i-calendar date-icon" id="from-date-icon"></div>
+                              <input type="text" class="input-field" placeholder="Select Date" id="cal-from-date" style="z-index: 1" autocomplete="off" readonly />
+                              <div class="cal-from-date-calendar calendar" id="cal-from-date-calendar" style="display: none"></div>
+                            </div>
+                            <div class="select-date-box select-time-box">
+                              <div class="icon i-icon-clock-circle"></div>
+                              <div class="hour">
+                                <input type="text" class="from-hour" id="from-hour" placeholder="00" autocomplete="off" readonly />
+                              </div>
+                              <span>:</span>
+                              <div class="minute">
+                                <input type="text" class="from-minute" id="from-minute" placeholder="00" autocomplete="off" readonly />
+                              </div>
+                            </div>
+                          </div>
+                          <div class="k-test-box-calculator">
+                            <div class="k-text-box">
+                              <input type="text" class="k-text-input" />
+                              <div class="k-text-submit">submit</div>
+                            </div>
+                            <div class="k-hours-box">
+                              <input type="text" class="k-text-input" />
+                              <div class="k-submit">submit</div>
+                            </div>
+
+                            <div class="k-minute-box">
+                              <input type="text" class="k-text-input" />
+                              <div class="k-submit">submit</div>
+                            </div>
+
+                            <div class="form-check" style="display: none">
+                              <input class="form-check-input" type="checkbox" id="from-daylight" autocomplete="off" />
+                              <label class="form-check-label" for="defaultCheck1">Daylight Saving</label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="localtime-partner-box">
+                          <div class="from-place-local-time-box" id="from-place-local-time-box">
+                            <div class="local-time" id="local-time">
+                              <span tr for="" id="time-location">Local Time:</span>
+                              &nbsp;
+                              <span for="" id="year" name="time-item"></span>
+                              <span for="">-</span>
+                              <span for="" id="month" name="time-item"></span>
+                              <span for="">-</span>
+                              <span for="" id="day" name="time-item"></span>
+                              &nbsp;
+                              <span for="" id="hour" name="time-item"></span>
+                              <span for="">:</span>
+                              <span for="" id="minute" name="time-item"></span>
+                            </div>
+                          </div>
+                          <div class="partner-input-box select-transfer-box">
+                            <input value="Transfer" id="select-transfer-input" class="pertner-select-box" type="text" />
+                            <span class="icon i-arrow-down partner-down-icon"></span>
+                          </div>
+                          <div class="partner-input-box" id="calc-partner-select">
+                            <input value="Partners" id="pertner-select-box" class="pertner-select-box" type="text" />
+                            <span class="icon i-arrow-down partner-down-icon"></span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="calc-info-switch-box-2" style="display: none">
+                        <div class="calc-info-title">
+                          <div class="from-and-to-box">
+                            <div class="fromto-data calc-from-data">San Francisco Airport Airport Airport Airport Airport</div>
+                            <div class="separate">-</div>
+                            <div class="fromto-data calc-to-data">Hilton Hotels Hunan Changs Changs Changs Changs Changs</div>
+                          </div>
+                          <div class="calc-switch-box"><span class="icon i-bianji"></span></div>
+                        </div>
+                        <div class="calc-times-box">
+                          <div class="calc-select-time">Time: 2023-02-21 00:09</div>
+                          <div class="calc-local-time" id="calc-local-time">
+                            <div class="local-time" id="local-time">
+                              <span tr for="" id="time-location">Local Time:</span>
+                              &nbsp;
+                              <span for="" id="year" name="time-item"></span>
+                              <span for="">-</span>
+                              <span for="" id="month" name="time-item"></span>
+                              <span for="">-</span>
+                              <span for="" id="day" name="time-item"></span>
+                              &nbsp;
+                              <span for="" id="hour" name="time-item"></span>
+                              <span for="">:</span>
+                              <span for="" id="minute" name="time-item"></span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="partnerinfo-status-box">
+                          <div class="partner-info-box">id Partnername +20%*</div>
+                          <div class="partner-status-box">
+                            <!-- <div class="status-icon"></div> -->
+                            <!-- <div class="status-name">Normal</div> -->
+                            <div class="status-details">Request</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="calc-btn-box btn-cursor" id="calc-btn-box">
+                        <div class="loading-box" id="calc-loading-box">
+                          <div class="com-loading calc-loading hide"></div>
+                          <div tr class="calc-btn pointer" id="calc-btn">Calc</div>
+                        </div>
+                        <div class="distance-box" id="distance-box">
+                          <span tr id="calc-distance-lbl" class="distance-lbl">Est:</span>
+                          <span class="distance-fld" id="distance-fld"></span>
+                          <span id="time-fld">30min</span>
+                        </div>
+                      </div>
+                      <div class="template">
+                        <span class="item-name"></span>
+                        <div class="item-currency-box">
+                          <span class="price item-currency"></span>
+                          <span class="price elife-price hide"></span>
+                          <div class="price average-price"></div>
+                          <div class="price item-range-box">
+                            <span class="item-amounts"></span>
+                            <span class="tips pointer fleet-range-tips" style="display: none">
+                              ?
+                              <span class="tips-title hide">Minimum price and maximum price</span>
+                            </span>
+                          </div>
+                          <div class="export-tips tip-top hide"></div>
+                        </div>
+                      </div>
+                      <div class="fixed-item hide" id="fixed-item">
+                        <div class="title">Fixed(Transfer)</div>
+                        <div class="export-item">
+                          <span class="export-item-left">Changsha-CSX</span>
+                          <span class="export-item-right">100</span>
+                        </div>
+                      </div>
+                      <div class="export-item hide" id="normal-item">
+                        <span class="export-item-left">Changsha-CSX</span>
+                        <span class="export-item-right">100</span>
+                      </div>
+                      <div class="export-item total-item hide" id="total-item">
+                        <span class="export-item-left">Total</span>
+                        <span class="export-item-right">100</span>
+                      </div>
+                      <!-- <div class="export-box" id="export-box"></div> -->
+                      <div class="to-down-arrow pointer hide">
+                        <div class="icon i-direction-down"></div>
+                      </div>
+                    </div>
+                    <div class="filter-vehicle-box">
+                      <div class="filter-control-box">
+                        <div class="control-title">Price Fluctuation</div>
+                        <div class="control-content">
+                          <!-- <div class="control-value">All</div> -->
+                          <input class="control-value" id="filter-vehicle" type="text" value="ALL" oninput="value=''" />
+                          <span class="icon i-arrow-down dow-icon"></span>
+                        </div>
+                      </div>
+                      <div class="result-full-btn">
+                        <div class="show-result">Results:30</div>
+                        <div class="go-full-table-btn">
+                          <span class="icon i-full-screen"></span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="nest-export-box">
+                      <div class="export-box export-template" id="export-box"></div>
+                      <div class="export-template" style="display: none">
+                        <div class="calc-table-clo calc-table-clo-title">
+                          <div class="title-td"></div>
+                        </div>
+                        <div class="calc-price-body">
+                          <div class="calc-table-clo calc-table-clo-title2">
+                            <div class="title-td vehicle-name-2">
+                              <span>23 passenger party Bus(28)</span>
+                            </div>
+                            <div class="title-td vehicle-Price-2"></div>
+                          </div>
+                          <div class="calc-table-clo calc-table-clo-content">
+                            <div class="title-td">Price</div>
+                            <div class="title-td"></div>
+                          </div>
+                          <div class="calc-table-clo calc-table-clo-content">
+                            <div class="title-td">Elife Price</div>
+                            =
+                            <div class="title-td">
+                              <span>56</span>
+                              <span>56</span>
+                              <span>56</span>
+                            </div>
+                          </div>
+                          <div class="calc-table-clo calc-table-clo-content">
+                            <div class="title-td">Average Price</div>
+                            <div class="title-td">
+                              <span>56</span>
+                              <span>56</span>
+                              <span>56</span>
+                            </div>
+                          </div>
+                          <div class="calc-table-clo calc-table-clo-content">
+                            <div class="title-td">Fleet Range</div>
+                            <div class="title-td">
+                              <span>56</span>
+                              <span>56</span>
+                              <span>56</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- <div class="export-box" id="export-box"></div> -->
+
+                    <div class="save-input-box">
+                      <input class="save-input not-allowed" readonly type="text" value="Calculator first, then save" />
+                    </div>
+                  </div>
+                </div>
+                <!-- calculator END  -->
+              </div>
+              <div class="service-area-route-wrapper hide" id="service-area-route-wrapper"></div>
+            </div>
+          </div>
+
+          <div class="sidebar-tab vehicle-manage-wrapper hide" id="vehicle-manage-wrapper"></div>
+
+          <!-- partner START -->
+          <div class="sidebar-tab hide" id="partner-wrapper">
+            <div class="sidebar-tab-detail hide" id="partner-add-price">
+              <div tr class="sidebar-tab-titles-bar" id="partner-price-setting-title-bar">Partner</div>
+              <div class="top-row" id="partner-search-row">
+                <div class="partner-search-box fld-btn-box" id="partner-search-box">
+                  <input type="text" class="partner-search-fld" id="partner-search-fld" autocomplete="off" placeholder="Please enter" />
+                </div>
+                <button
+                  tr
+                  id="add-partner"
+                  style="
+                    width: 200px;
+                    height: 56px;
+                    line-height: 56px;
+                    text-align: center;
+                    color: #fff;
+                    background-color: #fe7a1f;
+                    border-top-right-radius: 4px;
+                    border-bottom-right-radius: 4px;
+                    border: none;
+                  "
+                >
+                  Add partner
+                </button>
+              </div>
+              <div class="partner-price-setting-chart" id="partner-price-setting-chart">
+                <div class="top-row" id="top-row">
+                  <div tr class="partner-price-setting-chart-lbl" id="partner-id-lbl">ID</div>
+                  <div tr class="partner-price-setting-chart-lbl" id="partner-name-lbl">Partner</div>
+                  <div tr class="partner-price-setting-chart-lbl" id="partner-price-pct-lbl">Add on</div>
+                </div>
+                <section class="partner-price-setting-chart-body" id="partner-price-setting-chart-body">
+                  <div class="partner-price-setting-row" id="partner-price-setting-row-0" name="partner-price-setting-row">
+                    <div class="partner-name-fld" id="partner-id-fld"></div>
+                    <div class="partner-name-fld" id="partner-name-fld"></div>
+                    <div class="td-box partner-name-fld">
+                      <input type="text" class="partner-price-add-fld" id="partner-price-add-fld" autocomplete="off" />
+                      <span class="unit">%</span>
+                    </div>
+                  </div>
+                </section>
+              </div>
+              <button tr class="unclickable" id="partner-price-save-btn">Save</button>
+              <div class="save-verify-modal" id="save-verify-modal" style="display: none">
+                <h2 class="save-verify-title" id="save-verify-title">Confirm Save?</h2>
+                <p class="save-verify-statement" id="save-verify-statement">The price will take effect immediately after saving, please enter the verification code to confirm saving</p>
+                <div class="verify-num-box" id="verify-num-box" style="margin-bottom: 50px">
+                  <input type="text" class="verify-num-fld" id="verify-num-fld" placeholder="Verification Number" />
+                  <div class="verify-num-sign" id="verify-num-sign"></div>
+                </div>
+                <div class="cancel-save-btn btn-cursor" id="cancel-save-btn">Cancel</div>
+                <div class="confirm-save-btn btn-cursor" id="confirm-save-btn">Save</div>
+              </div>
+              <div
+                class="save-succ-modal"
+                id="save-succ-modal"
+                style="
+                  width: 300px;
+                  height: 200px;
+                  border-radius: 8px;
+                  box-shadow: rgba(0.3, 0.3, 0.3, 0.3) 0px 0px 15px;
+                  text-align: center;
+                  line-height: 200px;
+                  position: absolute;
+                  left: 50%;
+                  top: 50%;
+                  transform: translate(-50%, -50%);
+                  background-color: #fff;
+                  display: none;
+                "
+              >
+                Set successfully !
+              </div>
+            </div>
+
+            <!-- partner-Setting area -->
+
+            <div class="sidebar-tab-detail partner-edit hide" id="partner-set-svc">
+              <div class="partner-edit-title-box">
+                <div tr class="sidebar-tab-titles-bar" id="partner-set-svc-title-bar"></div>
+                <div class="partner-sort">
+                  <div class="sort-item active" type="ALL">ALL</div>
+                  <div class="sort-item" type="API">API</div>
+                  <div class="sort-item" type="manual">Non API</div>
+                </div>
+              </div>
+              <div class="partner-content" id="partner-content">
+                <div class="partner-content-left">
+                  <div class="partner-add-percent-box hide"></div>
+                  <div class="search-box partner-search-box">
+                    <input type="text" class="input" placeholder="Search partner" />
+                    <div class="icon i-search"></div>
+                  </div>
+                  <div class="search-box svc-search-box hide">
+                    <input type="text" class="input" placeholder="Please enter service area or airport" />
+                    <div class="icon i-search"></div>
+                  </div>
+                  <div class="item-box partner-item template hide">
+                    <div class="left">
+                      <div class="item item-partner-id"></div>
+                      <div class="item partner-sort-box">
+                        <div class="sort-item api hide-scale">API</div>
+                        <div class="sort-item na hide-scale">Non-adjustable</div>
+                      </div>
+                      <div class="item name-box">
+                        <div class="item-partner-name"></div>
+                        <div class="vm" to-index="5">
+                          <i class="icon i-model"></i>
+                          <span>Vehicle Mapping</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item icon-box">
+                      <div class="pointer to-setting-btn mr_25" to-index="1" id="to-svc-setting">Set service area</div>
+                      <div class="pointer to-setting-btn" to-index="2" id="to-svc-price-setting">Set percent</div>
+                      <div class="pointer to-setting-btn" to-index="4">Set vehicle class price</div>
+                      <div class="pointer to-setting-btn to-setting-btn-3" to-index="3">Amenity</div>
+                      <div class="pointer to-setting-btn" to-index="6">Sign in</div>
+                    </div>
+                  </div>
+                  <div class="item-box service-item template hide">
+                    <div class="item item-partner-name">Service area</div>
+                    <div class="item item-airport-code">Airport code</div>
+                    <div class="item item-add-on">Country/Code</div>
+                    <div class="item item-percent-box">Percent</div>
+                    <div class="item item-general hide">General</div>
+                    <div class="item item-delta hide">Delta</div>
+                    <div class="item item-final-price hide">Final price</div>
+                    <div class="item item-last icon i-minus-circle pointer"></div>
+                  </div>
+                  <div class="partner-list-box">
+                    <div class="item-box service-item first-itme"></div>
+                    <div class="partner-list"></div>
+                  </div>
+                </div>
+                <div class="partner-content-right hide">
+                  <div class="service-area-list"></div>
+                  <div class="foot-box">
+                    <form class="radio-box">
+                      <input class="radio" type="radio" id="inclusion-area" name="areaType" value="1" />
+                      <label for="inclusion-area">Inclusion area</label>
+                      <input class="radio" type="radio" id="exclusion-area" name="areaType" value="2" />
+                      <label for="exclusion-area">Exclusion area</label>
+                    </form>
+                    <div class="save-btn-box">
+                      <div class="com-main-btn not-allowed">Save</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="set-vehicle-price-content hide" id="set-vehicle-price-content">
+                <div class="svpc-left-box">
+                  <div class="svpc-partner-name">Booking</div>
+                  <div class="serch-svc-box">
+                    <input class="serch-svc-country-input" placeholder="Search service areas" type="text" />
+                    <span class="icon i-a-Group1306 serch-icon"></span>
+                  </div>
+                  <div class="country-svc-list" id="country-svc-list"></div>
+                  <div class="svpc-item-box svpc-item-box-template hide">
+                    <div class="svpc-country-box">China (CHN)</div>
+                    <div class="svc-list"></div>
+                  </div>
+                  <div class="svpc-svc-name-box hide">
+                    <span class="name ellipsis">Shanghai</span>
+                    <i class="icon i-shanchu pointer hide"></i>
+                  </div>
+                </div>
+                <div class="svpc-right-box">
+                  <div class="content-switch-box" style="height: 100%"></div>
+                  <div class="svpc-save-bottom-box hide">
+                    <button class="svpc-sabe-btn">Save</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- partner-Preview -->
+            <div class="sidebar-tab-detail partner-preview hide" id="partner-preview-content">
+              <div tr class="sidebar-tab-titles-bar" id="partner-pre-set-svc-title-bar"></div>
+              <div class="partner-content" id="partner-content">
+                <div class="partner-content-left">
+                  <div class="search-box partner-search-box">
+                    <input type="text" class="input" placeholder="Search partner" />
+                    <div class="icon i-search"></div>
+                  </div>
+                  <div class="item-box partner-item template hide">
+                    <div class="item item-partner-id"></div>
+                    <div class="item item-partner-name"></div>
+                    <div class="item item-add-on"></div>
+                    <div class="item icon-box operation-item">
+                      <div class="icon pointer to-setting-btn" to-index="4">view</div>
+                    </div>
+                  </div>
+                  <div class="item-box service-item template hide">
+                    <div class="item item-partner-name">Service area</div>
+                    <div class="item item-airport-code">Airport code</div>
+                    <div class="item item-add-on">Country/Code</div>
+                    <div class="item item-percent-box">Percent</div>
+                    <div class="item item-general hide">General</div>
+                    <div class="item item-delta hide">Delta</div>
+                    <div class="item item-final-price hide">Final price</div>
+                    <div class="item item-last icon i-minus-circle pointer"></div>
+                  </div>
+                  <div class="partner-list-box">
+                    <div class="item-box service-item first-itme"></div>
+                    <div class="partner-list"></div>
+                  </div>
+                  <div class="three-table-in-one-content-box hide">
+                    <div class="partner-name-box">Booking +20%</div>
+                    <div class="service-country-box">
+                      <div class="svc-country-num-box">
+                        <span class="icon i-huangsediqiu"></span>
+                        <span class="svc-country-num">Service country (1)</span>
+                      </div>
+                      <div class="svc-country-code-list">USA/CHN/FR...</div>
+                    </div>
+                    <div class="view-content-title">Specially set up countries/service areas</div>
+                    <div class="view-content-tips-box">
+                      <div class="view-tips-item">
+                        <span class="icon i-quanbu tips-icon" style="color: #04b472"></span>
+                        Open all service areas in the country
+                      </div>
+                      <div class="view-tips-item">
+                        <span class="icon i-bufen1 tips-icon" style="color: #1054ee"></span>
+                        Open some service areas in the country
+                      </div>
+                      <div class="view-tips-item">
+                        <span class="icon i-tichu tips-icon" style="color: #fe7a1f"></span>
+                        <span class="delete-line">Eliminate all service areas in the country</span>
+                      </div>
+                    </div>
+                    <div class="view-table-box">
+                      <div class="view-three-table-title-box">
+                        <div class="thr-table-country"></div>
+                        <div class="thr-table-title-item">Service area</div>
+                        <div class="thr-table-title-item">Airport Code</div>
+                        <div class="thr-table-title-item">Percent</div>
+                        <div class="thr-table-title-item">Meet and greet</div>
+                      </div>
+                      <div class="thr-table-info-item" id="thr-table-info-item"></div>
+                      <div class="thr-table-info-item thr-table-info-item-template hide">
+                        <div class="thr-tab-scv-item">
+                          <div class="thr-svc-name">
+                            <span class="icon i-quanbu" style="color: #04b472"></span>
+                            <span class="icon i-bufen1" style="color: #1054ee"></span>
+                            <span class="icon i-tichu" style="color: #fe7a1f"></span>
+                            <span class="thr-svc-name-info">United states（USA）</span>
+                          </div>
+                          <div class="thr-svc-info-item"></div>
+                          <div class="thr-svc-info-item"></div>
+                          <div class="thr-svc-info-item"></div>
+                          <div class="thr-svc-info-item"></div>
+                        </div>
+                        <div class="thr-tab-country-item">
+                          <div class="thr-country-name"></div>
+                          <div class="thr-country-info-item">San Francisco</div>
+                          <div class="thr-country-info-item">SFO</div>
+                          <div class="thr-country-info-item">10%</div>
+                          <div class="thr-country-info-item">+5 USD</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- <div class="partner-pagination-box" id="partner-pagination-box"></div> -->
+                </div>
+              </div>
+            </div>
+
+            <!-- partner-History -->
+            <div class="sidebar-tab-detail hide" id="partner-history-content">
+              <div class="sidebar-tab-title">History</div>
+              <div class="partner-content">
+                <div class="history-item hide">
+                  <div class="left">
+                    <div class="time-box">
+                      <span class="time"></span>
+                      <span style="color: #4c4b67">UTC</span>
+                      <span class="cur-ver hide">Current Version</span>
+                    </div>
+                    <div class="note-box">
+                      <span class="note-title">Note: <span class="note-content"></span></span>
+                    </div>
+                  </div>
+                  <div class="operator">
+                    <span class="operator-title">Operator:</span>
+                    <span class="user-name"></span>
+                  </div>
+                </div>
+                <div class="history-list"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- partner END -->
+        </div>
+      </div>
+    </div>
+
+  <!-- <div style="width: 1300px; height: 700px; overflow-x: scroll; border: 5px solid red; box-sizing: border-box">
+   
+  </div> -->
+
+  <div class="save-verify-modal-note hide" id="save-verify-modal-note">
+    <div class="content-box">
+      <strong tr class="save-title" id="save-title">Confirm Save</strong>
+      <div tr class="tip-box mb_20" id="save-tip">The price will take effect immediately after saving, please enter the
+        verification code to confirm saving</div>
+      <textarea tr id="save-textarea" class="textarea" rows="4" placeholder="Please enter note"></textarea>
+      <div class="input-box">
+        <input tr class="input" placeholder="Verification code" id="code-input" type="text" autocomplete="off" />
+        <span class="code"></span>
+      </div>
+      <!-- save success modal -->
+
+      <div class="svc-aea-set-succ-modal" id="svc-aea-set-succ-modal" style="display: none">Set successfully !</div>
+    </div>
+
+    <div class="save-verify-modal" id="save-verify-modal" style="display: none">
+      <h2 class="save-verify-title" id="save-verify-title">Confirm Save?</h2>
+      <p class="save-verify-statement" id="save-verify-statement">The price will take effect immediately after saving, please enter the verification code to confirm saving</p>
+      <div class="verify-num-box" id="verify-num-box" style="margin-bottom: 50px">
+        <input type="text" class="verify-num-fld" id="verify-num-fld" placeholder="Verification Number" />
+        <div class="verify-num-sign" id="verify-num-sign"></div>
+      </div>
+      <div class="cancel-save-btn btn-cursor" id="cancel-save-btn">Cancel</div>
+      <div class="confirm-save-btn btn-cursor" id="confirm-save-btn">Save</div>
+    </div>
+    <div
+      class="save-succ-modal"
+      id="save-succ-modal"
+      style="
+        width: 300px;
+        height: 200px;
+        border-radius: 8px;
+        box-shadow: rgba(0.3, 0.3, 0.3, 0.3) 0px 0px 15px;
+        text-align: center;
+        line-height: 200px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #fff;
+        display: none;
+      "
+    >
+      Set successfully !
+    </div>
+
+    <table id="table-template" style="display: none">
+      <th style="display: none" class="vehicle-class-relate smal th-template">
+        <input type="checkbox" class="validation" value="1" name="class" required />
+        <span class="vehicle-name"></span>
+      </th>
+      <td class="vehicle-class-relate smal tbody-percent-td-template" style="display: none">
+        <div class="td-box">
+          <input id="add-price-0" type="number" placeholder="0" value="0" autocomplete="off" class="add-price" style="display: none" />
+          <label class="td-percent-label" id="add-price-0-lbl" name="calc-method-item">%</label>
+        </div>
+      </td>
+      <td class="vehicle-class-relate tbody-price-td-template" style="display: none">
+        <div class="td-box">
+          <div class="restore-to-basic-price-btn" style="display: none"></div>
+          <input type="text" class="price-adjusted" placeholder="0" autocomplete="off" />
+          <label style="display: none" for="" name="class-cur-data"></label>
+          <div class="dropdown price-adjuster" name="price-adjuster" style="display: none">
+            <div class="price-adjuster-cnt">
+              <input type="text" class="price-adjuster-fld" value="0" />
+              <button
+                class="btn dropdown-toggle"
+                type="button"
+                id="price-adjuster-dropdown-toggle"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                style="font-size: 14px; outline: none; box-shadow: none; cursor: default; border: none; padding: 0; padding-bottom: 3px"
+              >
+                %
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="price-adjuster-dropdown-toggle">
+                <li>
+                  <a class="dropdown-item" name="pct-adjust-btn" style="background: none">%</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" name="plus-adjust-btn" style="background: none">+</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </td>
+    </table>
+
+    <!-- <div id="com-drawer-wrapper"></div> -->
+
+    <script>
+      async function initSigin() {
+        let data = await fetch(_path + '/svc-com-template.html');
+        let html = await data.text();
+        document.querySelector('.template').innerHTML = html;
+
+        await svcUtils.loadJsList(['d.js', 'utils/utils.js', 'svc_components.js', 'com-loading.js', 'svc-login/service_area_login.js', 'service_area.js', 'iconfont/iconfont.js']);
+
+        airportListCache('USA');
+      }
+
+      initSigin();
+    </script>
+
+    <!-- HERE Maps JavaScript API -->
+    <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-core.js"></script>
+    <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-service.js"></script>
+    <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-ui.js"></script>
+    <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-mapevents.js"></script>
+
+    <!-- GOOGLE Maps JavaScript API -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD9mzj4sfSNhPUOmfp605SpbSMmip6TtD4&libraries=places"></script>
+  </body>
+</html>

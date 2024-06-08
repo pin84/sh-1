@@ -1,2157 +1,4713 @@
-{
-<<<<<<< HEAD
-  "percent": "25",
-  "doNotDel": "doNotDel",
-  "service_areas": {
-    "sas_percent": [
-      {
-        "id": 137,
-        "percent": "30"
-      },
-      {
-        "id": 644,
-        "percent": "30"
-      },
-      {
-        "id": 645,
-        "percent": "30"
-      },
-      {
-        "id": 647,
-        "percent": "30"
-      },
-      {
-        "id": 140,
-        "percent": "30"
-      },
-      {
-        "id": 141,
-        "percent": "30"
-      },
-      {
-        "id": 139,
-        "percent": "30"
-      },
-      {
-        "id": 40174,
-        "percent": "30"
-      },
-      {
-        "id": 136,
-        "percent": "30"
-      },
-      {
-        "id": 138,
-        "percent": "30"
-      },
-      {
-        "id": 143,
-        "percent": "30"
-      },
-      {
-        "id": 1322,
-        "percent": "30"
-      },
-      {
-        "id": 142,
-        "percent": "30"
-      },
-      {
-        "id": 144,
-        "percent": "30"
-      },
-      {
-        "id": 145,
-        "percent": "30"
-      },
-      {
-        "id": 147,
-        "percent": "24"
-      },
-      {
-        "id": 151,
-        "percent": "24"
-      },
-      {
-        "id": 311,
-        "percent": "24"
-      },
-      {
-        "id": 274,
-        "percent": "24"
-      },
-      {
-        "id": 275,
-        "percent": "24"
-      },
-      {
-        "id": 272,
-        "percent": "24"
-      },
-      {
-        "id": 150,
-        "percent": "24"
-      },
-      {
-        "id": 323,
-        "percent": "40"
-      },
-      {
-        "id": "153",
-        "percent": "31",
-        "vcs": [
-          {
-            "id": "1",
-            "percent": "70"
-          },
-          {
-            "id": "2",
-            "percent": "200"
-          },
-          {
-            "id": "6",
-            "percent": "75"
-          },
-          {
-            "id": "3",
-            "percent": "53"
-          },
-          {
-            "id": "4",
-            "percent": "200"
-          }
-        ]
-      },
-      {
-        "id": "996",
-        "percent": "80"
-      },
-      {
-        "id": "995",
-        "percent": "100",
-        "vcs": [
-          {
-            "id": "1",
-            "percent": "70"
-          },
-          {
-            "id": "2",
-            "percent": "70"
-          },
-          {
-            "id": "6",
-            "percent": "70"
-          },
-          {
-            "id": "3",
-            "percent": "70"
-          },
-          {
-            "id": "4",
-            "percent": "70"
-          },
-          {
-            "id": "36",
-            "percent": "69"
-          },
-          {
-            "id": "5",
-            "percent": "70"
-          }
-        ]
-      },
-      {
-        "id": "341",
-        "percent": "100",
-        "vcs": [
-          {
-            "id": "1",
-            "percent": "100"
-          }
-        ]
-      },
-      {
-        "id": "152",
-        "percent": "31",
-        "vcs": [
-          {
-            "id": 1,
-            "percent": "35"
-          },
-          {
-            "id": 6,
-            "percent": "40"
-          },
-          {
-            "id": 3,
-            "percent": "43"
-          }
-        ]
-      },
-      {
-        "id": "1035",
-        "percent": "31"
-      },
-      {
-        "id": "1372",
-        "percent": "31"
-      },
-      {
-        "id": "461",
-        "percent": "31"
-      },
-      {
-        "id": "314",
-        "percent": "31"
-      },
-      {
-        "id": "1377",
-        "percent": "31"
-      },
-      {
-        "id": "1373",
-        "percent": "31"
-      },
-      {
-        "id": "983",
-        "percent": "31"
-      },
-      {
-        "id": "986",
-        "percent": "31"
-      },
-      {
-        "id": "904",
-        "percent": "31"
-      },
-      {
-        "id": "324",
-        "percent": "80"
-      },
-      {
-        "id": "132",
-        "percent": "31",
-        "vcs": [
-          {
-            "id": "1",
-            "percent": "36.9"
-          },
-          {
-            "id": "2",
-            "percent": "45"
-          },
-          {
-            "id": "6",
-            "percent": "56.77"
-          },
-          {
-            "id": "3",
-            "percent": "61.59"
-          },
-          {
-            "id": "4",
-            "percent": "45"
-          }
-        ]
-      },
-      {
-        "id": "118",
-        "percent": "40"
-      },
-      {
-        "id": "929",
-        "percent": "50"
-      },
-      {
-        "id": "48",
-        "percent": "50"
-      },
-      {
-        "id": "46",
-        "percent": "50"
-      },
-      {
-        "id": "45",
-        "percent": "50"
-      },
-      {
-        "id": "41",
-        "percent": "25",
-        "vcs": [
-          {
-            "id": "1",
-            "percent": "19.97"
-          },
-          {
-            "id": "3",
-            "percent": "27"
-          }
-        ]
-      },
-      {
-        "id": "109",
-        "percent": "35"
-      },
-      {
-        "id": "113",
-        "percent": "25",
-        "vcs": [
-          {
-            "id": "1",
-            "percent": "65.3"
-          },
-          {
-            "id": "2",
-            "percent": "35"
-          },
-          {
-            "id": "3",
-            "percent": "43.04"
-          },
-          {
-            "id": "4",
-            "percent": "35"
-          },
-          {
-            "id": "36",
-            "percent": "35"
-          }
-        ]
-      },
-      {
-        "id": "103",
-        "percent": "25",
-        "vcs": [
-          {
-            "id": "1",
-            "percent": "30"
-          },
-          {
-            "id": "2",
-            "percent": "35"
-          },
-          {
-            "id": "6",
-            "percent": "40"
-          },
-          {
-            "id": "3",
-            "percent": "50"
-          },
-          {
-            "id": "4",
-            "percent": "35"
-          },
-          {
-            "id": "36",
-            "percent": "35"
-          },
-          {
-            "id": "5",
-            "percent": "25"
-          },
-          {
-            "id": "9",
-            "percent": "25"
-          }
-        ]
-      },
-      {
-        "id": "1018",
-        "percent": "25",
-        "vcs": [
-          {
-            "id": "1",
-            "percent": "20"
-          },
-          {
-            "id": "2",
-            "percent": "35"
-          },
-          {
-            "id": "4",
-            "percent": "35"
-          },
-          {
-            "id": "36",
-            "percent": "35"
-          }
-        ]
-      },
-      {
-        "id": "117",
-        "percent": "25",
-        "vcs": [
-          {
-            "id": "1",
-            "percent": "81"
-          },
-          {
-            "id": "2",
-            "percent": "35"
-          },
-          {
-            "id": "3",
-            "percent": "45"
-          },
-          {
-            "id": "4",
-            "percent": "35"
-          },
-          {
-            "id": "36",
-            "percent": "35"
-          },
-          {
-            "id": "12",
-            "percent": "30"
-          }
-        ]
-      },
-      {
-        "id": "108",
-        "percent": "25",
-        "vcs": [
-          {
-            "id": "1",
-            "percent": "40"
-          },
-          {
-            "id": "2",
-            "percent": "35"
-          },
-          {
-            "id": "3",
-            "percent": "22.34"
-          },
-          {
-            "id": "4",
-            "percent": "35"
-          },
-          {
-            "id": "36",
-            "percent": "35"
-          },
-          {
-            "id": "5",
-            "percent": "35"
-          },
-          {
-            "id": "9",
-            "percent": "35"
-          },
-          {
-            "id": "12",
-            "percent": "30"
-          }
-        ]
-      },
-      {
-        "id": "111",
-        "percent": "25",
-        "vcs": [
-          {
-            "id": "1",
-            "percent": "32.46"
-          },
-          {
-            "id": "2",
-            "percent": "35"
-          },
-          {
-            "id": "4",
-            "percent": "35"
-          },
-          {
-            "id": "36",
-            "percent": "35"
-          }
-        ]
-      },
-      {
-        "id": "452",
-        "percent": "30"
-      },
-      {
-        "id": "1127",
-        "percent": "30",
-        "vcs": [
-          {
-            "id": "1",
-            "percent": "50"
-          },
-          {
-            "id": "2",
-            "percent": "33"
-          },
-          {
-            "id": "6",
-            "percent": "90"
-          },
-          {
-            "id": "3",
-            "percent": "85"
-          }
-        ]
-      },
-      {
-        "id": "1139",
-        "percent": "30",
-        "vcs": [
-          {
-            "id": "1",
-            "percent": "45"
-          },
-          {
-            "id": "2",
-            "percent": "12.8"
-          },
-          {
-            "id": "6",
-            "percent": "14"
-          },
-          {
-            "id": "3",
-            "percent": "15.5"
-          },
-          {
-            "id": "36",
-            "percent": "10"
-          },
-          {
-            "id": "12",
-            "percent": "13"
-          }
-        ]
-      },
-      {
-        "id": "1140",
-        "percent": "30",
-        "vcs": [
-          {
-            "id": "1",
-            "percent": "40"
-          },
-          {
-            "id": "2",
-            "percent": "25"
-          },
-          {
-            "id": "40",
-            "percent": "80"
-          },
-          {
-            "id": "6",
-            "percent": "80"
-          },
-          {
-            "id": "3",
-            "percent": "50"
-          },
-          {
-            "id": "36",
-            "percent": "80"
-          }
-        ]
-      },
-      {
-        "id": "276",
-        "percent": "30",
-        "vcs": [
-          {
-            "id": 1,
-            "percent": "19"
-          },
-          {
-            "id": 2,
-            "percent": "32"
-          },
-          {
-            "id": 6,
-            "percent": "15"
-          },
-          {
-            "id": 3,
-            "percent": "28"
-          },
-          {
-            "id": 36,
-            "percent": "28"
-          },
-          {
-            "id": 12,
-            "percent": "1"
-          }
-        ]
-      },
-      {
-        "id": "107",
-        "percent": "25"
-      },
-      {
-        "id": "105",
-        "percent": "30"
-      },
-      {
-        "id": "106",
-        "percent": "25"
-      },
-      {
-        "id": "50",
-        "percent": "40"
-      },
-      {
-        "id": "51",
-        "percent": "30",
-        "vcs": [
-          {
-            "id": 1,
-            "percent": "42.84"
-          },
-          {
-            "id": 2,
-            "percent": "50.35"
-          },
-          {
-            "id": 6,
-            "percent": "87.54"
-          },
-          {
-            "id": 3,
-            "percent": "20.8"
-          },
-          {
-            "id": 4,
-            "percent": "50.35"
-          },
-          {
-            "id": 5,
-            "percent": "127.89"
-          },
-          {
-            "id": 9,
-            "percent": "28.19"
-          },
-          {
-            "id": 10,
-            "percent": "40.55"
-          },
-          {
-            "id": 11,
-            "percent": "40.55"
-          },
-          {
-            "id": 12,
-            "percent": "3.97"
-          }
-        ]
-      },
-      {
-        "id": "125",
-        "percent": "30"
-      },
-      {
-        "id": "52",
-        "percent": "30",
-        "vcs": [
-          {
-            "id": "1",
-            "percent": "84"
-          },
-          {
-            "id": "2",
-            "percent": "126.8"
-          },
-          {
-            "id": "6",
-            "percent": "237.01"
-          },
-          {
-            "id": "3",
-            "percent": "66.65"
-          },
-          {
-            "id": "4",
-            "percent": "126.8"
-          },
-          {
-            "id": "5",
-            "percent": "132.88"
-          },
-          {
-            "id": "9",
-            "percent": "121.8"
-          },
-          {
-            "id": "10",
-            "percent": "44.21"
-          },
-          {
-            "id": "11",
-            "percent": "0"
-          },
-          {
-            "id": "12",
-            "percent": "49.53"
-          },
-          {
-            "id": "7",
-            "percent": "146.56"
-          },
-          {
-            "id": "8",
-            "percent": "72.47"
-          }
-        ]
-      },
-      {
-        "id": "49",
-        "percent": "30",
-        "vcs": [
-          {
-            "id": 1,
-            "percent": "54.76"
-          },
-          {
-            "id": 2,
-            "percent": "185.6"
-          },
-          {
-            "id": 6,
-            "percent": "44.13"
-          },
-          {
-            "id": 3,
-            "percent": "68.28"
-          },
-          {
-            "id": 4,
-            "percent": "111.29"
-          },
-          {
-            "id": 5,
-            "percent": "59.35"
-          },
-          {
-            "id": 9,
-            "percent": "28.48"
-          },
-          {
-            "id": 10,
-            "percent": "65.84"
-          },
-          {
-            "id": 11,
-            "percent": "65.84"
-          },
-          {
-            "id": 29,
-            "percent": "65.84"
-          },
-          {
-            "id": 30,
-            "percent": "65.84"
-          },
-          {
-            "id": 31,
-            "percent": "65.84"
-          },
-          {
-            "id": 32,
-            "percent": "65.84"
-          },
-          {
-            "id": 33,
-            "percent": "65.84"
-          },
-          {
-            "id": 34,
-            "percent": "65.84"
-          },
-          {
-            "id": 36,
-            "percent": "101.6"
-          },
-          {
-            "id": 12,
-            "percent": "23.18"
-          },
-          {
-            "id": 7,
-            "percent": "56.26"
-          },
-          {
-            "id": 8,
-            "percent": "56.26"
-          }
-        ]
-      },
-      {
-        "id": "43",
-        "percent": "35",
-        "vcs": [
-          {
-            "id": "9",
-            "percent": "-20"
-          }
-        ]
-      },
-      {
-        "id": "44",
-        "percent": "28",
-        "vcs": [
-          {
-            "id": "3",
-            "percent": "28"
-          },
-          {
-            "id": "9",
-            "percent": "-20"
-          }
-        ]
-      },
-      {
-        "id": "127",
-        "percent": "30"
-      },
-      {
-        "id": "126",
-        "percent": "26"
-      },
-      {
-        "id": "1060",
-        "percent": "25",
-        "vcs": [
-          {
-            "id": "12",
-            "percent": "24"
-          }
-        ]
-      },
-      {
-        "id": "128",
-        "percent": "28",
-        "vcs": [
-          {
-            "id": "1",
-            "percent": "22"
-          }
-        ]
-      },
-      {
-        "id": "1053",
-        "percent": "50"
-      },
-      {
-        "id": "1052",
-        "percent": "50"
-      },
-      {
-        "id": "1057",
-        "percent": "25"
-      },
-      {
-        "id": "37148",
-        "percent": "50"
-      },
-      {
-        "id": "1055",
-        "percent": "50"
-      },
-      {
-        "id": "129",
-        "percent": "28"
-      },
-      {
-        "id": "1056",
-        "percent": "50"
-      },
-      {
-        "id": "745",
-        "percent": "50"
-      },
-      {
-        "id": "1117",
-        "percent": "30"
-      },
-      {
-        "id": "1062",
-        "percent": "50"
-      },
-      {
-        "id": "1063",
-        "percent": "50"
-      },
-      {
-        "id": "130",
-        "percent": "50"
-      },
-      {
-        "id": "746",
-        "percent": "50"
-      },
-      {
-        "id": "16771",
-        "percent": "50"
-      },
-      {
-        "id": "16767",
-        "percent": "50"
-      },
-      {
-        "id": "69",
-        "percent": "60"
-      },
-      {
-        "id": "72",
-        "percent": "60"
-      },
-      {
-        "id": "1054",
-        "percent": "50"
-      },
-      {
-        "id": "1058",
-        "percent": "50"
-      },
-      {
-        "id": "15384",
-        "percent": "50"
-      },
-      {
-        "id": "1059",
-        "percent": "50"
-      },
-      {
-        "id": "1061",
-        "percent": "50"
-      },
-      {
-        "id": "38",
-        "percent": "25",
-        "vcs": [
-          {
-            "id": "1",
-            "percent": "55"
-          },
-          {
-            "id": "2",
-            "percent": "35"
-          },
-          {
-            "id": "6",
-            "percent": "40"
-          },
-          {
-            "id": "3",
-            "percent": "45"
-          },
-          {
-            "id": "12",
-            "percent": "28"
-          }
-        ]
-      },
-      {
-        "id": "37",
-        "percent": "25",
-        "vcs": [
-          {
-            "id": "1",
-            "percent": "39"
-          },
-          {
-            "id": "6",
-            "percent": "30"
-          },
-          {
-            "id": "3",
-            "percent": "30"
-          },
-          {
-            "id": "4",
-            "percent": "-5"
-          },
-          {
-            "id": "36",
-            "percent": "-5"
-          }
-        ]
-      },
-      {
-        "id": "40",
-        "percent": "25",
-        "vcs": [
-          {
-            "id": "1",
-            "percent": "42.18"
-          },
-          {
-            "id": "2",
-            "percent": "47.25"
-          },
-          {
-            "id": "4",
-            "percent": "21.47"
-          }
-        ]
-      }
-    ],
-    "mag_delta": [
-      {
-        "id": "40174",
-        "delta": 13,
-        "currency": "USD",
-        "switch": "on"
-      },
-      {
-        "id": "647",
-        "delta": 12,
-        "currency": "USD",
-        "switch": "on"
-      },
-      {
-        "id": "145",
-        "delta": 12,
-        "currency": "USD",
-        "switch": "on"
-      },
-      {
-        "id": "137",
-        "delta": 12,
-        "currency": "USD",
-        "switch": "on"
-      },
-      {
-        "id": "144",
-        "delta": 13,
-        "currency": "USD",
-        "switch": "on"
-      },
-      {
-        "id": "140",
-        "delta": 13,
-        "currency": "USD",
-        "switch": "on"
-      },
-      {
-        "id": "142",
-        "delta": 13,
-        "currency": "USD",
-        "switch": "on"
-      },
-      {
-        "id": "141",
-        "delta": 12,
-        "currency": "USD",
-        "switch": "on"
-      },
-      {
-        "id": "143",
-        "delta": 13,
-        "currency": "USD",
-        "switch": "on"
-      },
-      {
-        "id": "105",
-        "delta": "7",
-        "currency": "USD"
-      },
-      {
-        "id": "107",
-        "delta": "4",
-        "currency": "USD"
-      },
-      {
-        "id": "136",
-        "delta": 13,
-        "currency": "USD",
-        "switch": "on"
-      },
-      {
-        "id": "139",
-        "delta": 13,
-        "currency": "USD",
-        "switch": "on"
-      },
-      {
-        "id": "138",
-        "delta": 13,
-        "currency": "USD",
-        "switch": "on"
-      },
-      {
-        "id": "106",
-        "delta": "90",
-        "currency": "CNY"
-      },
-      {
-        "id": "40",
-        "delta": "15",
-        "currency": "USD"
-      },
-      {
-        "id": "37",
-        "delta": "10",
-        "currency": "USD",
-        "switch": "on"
-      },
-      {
-        "id": "38",
-        "delta": "10",
-        "currency": "USD",
-        "switch": "on"
-      },
-      {
-        "id": "62",
-        "delta": "10",
-        "currency": "USD",
-        "switch": "on"
-      },
-      {
-        "id": "75",
-        "delta": "15",
-        "currency": "USD",
-        "switch": "on"
-      },
-      {
-        "id": "58",
-        "delta": "10",
-        "currency": "USD",
-        "switch": "on"
-      },
-      {
-        "id": "125",
-        "delta": "8",
-        "currency": "USD",
-        "switch": "on"
-      },
-      {
-        "id": "49",
-        "delta": "4",
-        "currency": "USD",
-        "switch": "on"
-      },
-      {
-        "id": "52",
-        "delta": "4",
-        "currency": "USD",
-        "switch": "on"
-      },
-      {
-        "id": "51",
-        "delta": "4",
-        "currency": "USD",
-        "switch": "on"
-      },
-      {
-        "id": "50",
-        "delta": "4",
-        "currency": "USD",
-        "switch": "on"
-      },
-      {
-        "id": "276",
-        "delta": "10",
-        "currency": "USD",
-        "switch": "on"
-      },
-      {
-        "id": "150",
-        "delta": 0,
-        "currency": "USD",
-        "switch": "on"
-      },
-      {
-        "id": "43",
-        "delta": -5,
-        "currency": "USD",
-        "switch": "on"
-      },
-      {
-        "id": "44",
-        "delta": -5,
-        "currency": "USD",
-        "switch": "on"
-      },
-      {
-        "id": "274",
-        "delta": 0,
-        "currency": "USD",
-        "switch": "on"
-      },
-      {
-        "id": "275",
-        "delta": 0,
-        "currency": "USD",
-        "switch": "on"
-      },
-      {
-        "id": "272",
-        "delta": 0,
-        "currency": "USD",
-        "switch": "on"
-      },
-      {
-        "id": "311",
-        "delta": 0,
-        "currency": "USD",
-        "switch": "on"
-      },
-      {
-        "id": "151",
-        "delta": 0,
-        "currency": "USD",
-        "switch": "on"
-      },
-      {
-        "id": "147",
-        "delta": 0,
-        "currency": "USD",
-        "switch": "on"
-      },
-      {
-        "id": "645",
-        "delta": 12,
-        "currency": "USD",
-        "switch": "on"
-      },
-      {
-        "id": "644",
-        "delta": 4,
-        "currency": "USD",
-        "switch": "on"
-      },
-      {
-        "id": "1322",
-        "delta": 4,
-        "currency": "USD",
-        "switch": "on"
-      },
-      {
-        "id": "646",
-        "delta": 4,
-        "currency": "USD",
-        "switch": "on"
-      },
-      {
-        "id": "1315",
-        "delta": 4,
-        "currency": "USD",
-        "switch": "on"
-      },
-      {
-        "id": "1314",
-        "delta": -1,
-        "currency": "USD",
-        "switch": "on"
-      },
-      {
-        "id": "1838",
-        "delta": 4,
-        "currency": "USD",
-        "switch": "on"
-      },
-      {
-        "id": "18476",
-        "delta": 4,
-        "currency": "USD",
-        "switch": "on"
-      },
-      {
-        "id": "1313",
-        "delta": 4,
-        "currency": "USD",
-        "switch": "on"
-      }
-    ],
-    "ads_delta": [
-      {
-        "id": "37",
-        "infant": {
-          "delta": "-10",
-          "currency": "USD",
-          "switch": "on"
-        },
-        "toddler": {
-          "delta": "-10",
-          "currency": "USD",
-          "switch": "on"
-        },
-        "child": {
-          "delta": "-10",
-          "currency": "USD",
-          "switch": "on"
-        }
-      },
-      {
-        "id": "38",
-        "infant": {
-          "delta": "0",
-          "currency": "USD",
-          "switch": "on"
-        },
-        "toddler": {
-          "delta": "0",
-          "currency": "USD",
-          "switch": "on"
-        },
-        "child": {
-          "delta": "0",
-          "currency": "USD",
-          "switch": "on"
-        }
-      },
-      {
-        "id": "62",
-        "infant": {
-          "delta": "0",
-          "currency": "USD",
-          "switch": "on"
-        },
-        "toddler": {
-          "delta": "0",
-          "currency": "USD",
-          "switch": "on"
-        },
-        "child": {
-          "delta": "0",
-          "currency": "USD",
-          "switch": "on"
-        }
-      },
-      {
-        "id": "75",
-        "infant": {
-          "delta": "0",
-          "currency": "USD",
-          "switch": "on"
-        },
-        "toddler": {
-          "delta": "0",
-          "currency": "USD",
-          "switch": "on"
-        },
-        "child": {
-          "delta": "0",
-          "currency": "USD",
-          "switch": "on"
-        }
-      },
-      {
-        "id": "58",
-        "infant": {
-          "delta": "0",
-          "currency": "USD",
-          "switch": "on"
-        },
-        "toddler": {
-          "delta": "0",
-          "currency": "USD",
-          "switch": "on"
-        },
-        "child": {
-          "delta": "0",
-          "currency": "USD",
-          "switch": "on"
-        }
-      },
-      {
-        "id": "125",
-        "infant": {
-          "delta": "0",
-          "currency": "USD",
-          "switch": "on"
-        },
-        "toddler": {
-          "delta": "0",
-          "currency": "USD",
-          "switch": "on"
-        },
-        "child": {
-          "delta": "0",
-          "currency": "USD",
-          "switch": "on"
-        }
-      },
-      {
-        "id": "49",
-        "infant": {
-          "delta": "0",
-          "currency": "USD",
-          "switch": "on"
-        },
-        "toddler": {
-          "delta": "0",
-          "currency": "USD",
-          "switch": "on"
-        },
-        "child": {
-          "delta": "0",
-          "currency": "USD",
-          "switch": "on"
-        }
-      },
-      {
-        "id": "52",
-        "infant": {
-          "delta": "0",
-          "currency": "USD",
-          "switch": "on"
-        },
-        "toddler": {
-          "delta": "0",
-          "currency": "USD",
-          "switch": "on"
-        },
-        "child": {
-          "delta": "0",
-          "currency": "USD",
-          "switch": "on"
-        }
-      },
-      {
-        "id": "51",
-        "infant": {
-          "delta": "0",
-          "currency": "USD",
-          "switch": "on"
-        },
-        "toddler": {
-          "delta": "0",
-          "currency": "USD",
-          "switch": "on"
-        },
-        "child": {
-          "delta": "0",
-          "currency": "USD",
-          "switch": "on"
-        }
-      },
-      {
-        "id": "50",
-        "infant": {
-          "delta": "0",
-          "currency": "USD",
-          "switch": "on"
-        },
-        "toddler": {
-          "delta": "0",
-          "currency": "USD",
-          "switch": "on"
-        },
-        "child": {
-          "delta": "0",
-          "currency": "USD",
-          "switch": "on"
-        }
-      },
-      {
-        "id": "136",
-        "infant": {
-          "delta": 20,
-          "currency": "USD",
-          "switch": "on"
-        },
-        "toddler": {
-          "delta": 20,
-          "currency": "USD",
-          "switch": "on"
-        },
-        "child": {
-          "delta": 20,
-          "currency": "USD",
-          "switch": "on"
-        }
-      },
-      {
-        "id": "40174",
-        "infant": {
-          "delta": 20,
-          "currency": "USD",
-          "switch": "on"
-        },
-        "toddler": {
-          "delta": 20,
-          "currency": "USD",
-          "switch": "on"
-        },
-        "child": {
-          "delta": 20,
-          "currency": "USD",
-          "switch": "on"
-        }
-      },
-      {
-        "id": "647",
-        "infant": {
-          "delta": 20,
-          "currency": "USD",
-          "switch": "on"
-        },
-        "toddler": {
-          "delta": 20,
-          "currency": "USD",
-          "switch": "on"
-        },
-        "child": {
-          "delta": 20,
-          "currency": "USD",
-          "switch": "on"
-        }
-      },
-      {
-        "id": "141",
-        "infant": {
-          "delta": 20,
-          "currency": "USD",
-          "switch": "on"
-        },
-        "toddler": {
-          "delta": 20,
-          "currency": "USD",
-          "switch": "on"
-        },
-        "child": {
-          "delta": 20,
-          "currency": "USD",
-          "switch": "on"
-        }
-      },
-      {
-        "id": "140",
-        "infant": {
-          "delta": 20,
-          "currency": "USD",
-          "switch": "on"
-        },
-        "toddler": {
-          "delta": 20,
-          "currency": "USD",
-          "switch": "on"
-        },
-        "child": {
-          "delta": 20,
-          "currency": "USD",
-          "switch": "on"
-        }
-      },
-      {
-        "id": "139",
-        "infant": {
-          "delta": 20,
-          "currency": "USD",
-          "switch": "on"
-        },
-        "toddler": {
-          "delta": 20,
-          "currency": "USD",
-          "switch": "on"
-        },
-        "child": {
-          "delta": 20,
-          "currency": "USD",
-          "switch": "on"
-        }
-      },
-      {
-        "id": "138",
-        "infant": {
-          "delta": 20,
-          "currency": "USD",
-          "switch": "on"
-        },
-        "toddler": {
-          "delta": 20,
-          "currency": "USD",
-          "switch": "on"
-        },
-        "child": {
-          "delta": 20,
-          "currency": "USD",
-          "switch": "on"
-        }
-      },
-      {
-        "id": "137",
-        "infant": {
-          "delta": 20,
-          "currency": "USD",
-          "switch": "on"
-        },
-        "toddler": {
-          "delta": 20,
-          "currency": "USD",
-          "switch": "on"
-        },
-        "child": {
-          "delta": 20,
-          "currency": "USD",
-          "switch": "on"
-        }
-      },
-      {
-        "id": "276",
-        "infant": {
-          "delta": "0",
-          "currency": "USD",
-          "switch": "on"
-        },
-        "toddler": {
-          "delta": "0",
-          "currency": "USD",
-          "switch": "on"
-        },
-        "child": {
-          "delta": "0",
-          "currency": "USD",
-          "switch": "on"
-        }
-      },
-      {
-        "id": "142",
-        "infant": {
-          "delta": 20,
-          "currency": "USD",
-          "switch": "on"
-        },
-        "toddler": {
-          "delta": 20,
-          "currency": "USD",
-          "switch": "on"
-        },
-        "child": {
-          "delta": 20,
-          "currency": "USD",
-          "switch": "on"
-        }
-      },
-      {
-        "id": "150",
-        "infant": {
-          "delta": 20,
-          "currency": "USD",
-          "switch": "on"
-        },
-        "toddler": {
-          "delta": 20,
-          "currency": "USD",
-          "switch": "on"
-        },
-        "child": {
-          "delta": 20,
-          "currency": "USD",
-          "switch": "on"
-        }
-      },
-      {
-        "id": "43",
-        "infant": {
-          "delta": 0,
-          "currency": "USD",
-          "switch": "on"
-        },
-        "toddler": {
-          "delta": 0,
-          "currency": "USD",
-          "switch": "on"
-        },
-        "child": {
-          "delta": -5,
-          "currency": "USD",
-          "switch": "on"
-        }
-      },
-      {
-        "id": "44",
-        "infant": {
-          "delta": 0,
-          "currency": "USD",
-          "switch": "on"
-        },
-        "toddler": {
-          "delta": 0,
-          "currency": "USD",
-          "switch": "on"
-        },
-        "child": {
-          "delta": 0,
-          "currency": "USD",
-          "switch": "on"
-        }
-      },
-      {
-        "id": "274",
-        "infant": {
-          "delta": 20,
-          "currency": "USD",
-          "switch": "on"
-        },
-        "toddler": {
-          "delta": 20,
-          "currency": "USD",
-          "switch": "on"
-        },
-        "child": {
-          "delta": 20,
-          "currency": "USD",
-          "switch": "on"
-        }
-      },
-      {
-        "id": "275",
-        "infant": {
-          "delta": 19.99,
-          "currency": "USD",
-          "switch": "on"
-        },
-        "toddler": {
-          "delta": 19.99,
-          "currency": "USD",
-          "switch": "on"
-        },
-        "child": {
-          "delta": 19.99,
-          "currency": "USD",
-          "switch": "on"
-        }
-      },
-      {
-        "id": "272",
-        "infant": {
-          "delta": 22,
-          "currency": "USD",
-          "switch": "on"
-        },
-        "toddler": {
-          "delta": 22,
-          "currency": "USD",
-          "switch": "on"
-        },
-        "child": {
-          "delta": 22,
-          "currency": "USD",
-          "switch": "on"
-        }
-      },
-      {
-        "id": "311",
-        "infant": {
-          "delta": 20,
-          "currency": "USD",
-          "switch": "on"
-        },
-        "toddler": {
-          "delta": 20,
-          "currency": "USD",
-          "switch": "on"
-        },
-        "child": {
-          "delta": 20,
-          "currency": "USD",
-          "switch": "on"
-        }
-      },
-      {
-        "id": "151",
-        "infant": {
-          "delta": 20,
-          "currency": "USD",
-          "switch": "on"
-        },
-        "toddler": {
-          "delta": 20,
-          "currency": "USD",
-          "switch": "on"
-        },
-        "child": {
-          "delta": 20,
-          "currency": "USD",
-          "switch": "on"
-        }
-      },
-      {
-        "id": "147",
-        "infant": {
-          "delta": 20,
-          "currency": "USD",
-          "switch": "on"
-        },
-        "toddler": {
-          "delta": 20,
-          "currency": "USD",
-          "switch": "on"
-        },
-        "child": {
-          "delta": 20,
-          "currency": "USD",
-          "switch": "on"
-        }
-      },
-      {
-        "id": "645",
-        "infant": {
-          "delta": 20,
-          "currency": "USD",
-          "switch": "on"
-        },
-        "toddler": {
-          "delta": 20,
-          "currency": "USD",
-          "switch": "on"
-        },
-        "child": {
-          "delta": 20,
-          "currency": "USD",
-          "switch": "on"
-        }
-      },
-      {
-        "id": "644",
-        "infant": {
-          "delta": 20,
-          "currency": "USD",
-          "switch": "on"
-        },
-        "toddler": {
-          "delta": 20,
-          "currency": "USD",
-          "switch": "on"
-        },
-        "child": {
-          "delta": 20,
-          "currency": "USD",
-          "switch": "on"
-        }
-      },
-      {
-        "id": "143",
-        "infant": {
-          "delta": 20,
-          "currency": "USD",
-          "switch": "on"
-        },
-        "toddler": {
-          "delta": 20,
-          "currency": "USD",
-          "switch": "on"
-        },
-        "child": {
-          "delta": 20,
-          "currency": "USD",
-          "switch": "on"
-        }
-      },
-      {
-        "id": "144",
-        "infant": {
-          "delta": 20,
-          "currency": "USD",
-          "switch": "on"
-        },
-        "toddler": {
-          "delta": 20,
-          "currency": "USD",
-          "switch": "on"
-        },
-        "child": {
-          "delta": 20,
-          "currency": "USD",
-          "switch": "on"
-        }
-      },
-      {
-        "id": "145",
-        "infant": {
-          "delta": 20,
-          "currency": "USD",
-          "switch": "on"
-        },
-        "toddler": {
-          "delta": 20,
-          "currency": "USD",
-          "switch": "on"
-        },
-        "child": {
-          "delta": 20,
-          "currency": "USD",
-          "switch": "on"
-        }
-      },
-      {
-        "id": "1322",
-        "infant": {
-          "delta": 20,
-          "currency": "USD",
-          "switch": "on"
-        },
-        "toddler": {
-          "delta": 20,
-          "currency": "USD",
-          "switch": "on"
-        },
-        "child": {
-          "delta": 20,
-          "currency": "USD",
-          "switch": "on"
-        }
-      },
-      {
-        "id": "646",
-        "infant": {
-          "delta": 20,
-          "currency": "USD",
-          "switch": "on"
-        },
-        "toddler": {
-          "delta": 20,
-          "currency": "USD",
-          "switch": "on"
-        },
-        "child": {
-          "delta": 20,
-          "currency": "USD",
-          "switch": "on"
-        }
-      },
-      {
-        "id": "1315",
-        "infant": {
-          "delta": 20,
-          "currency": "USD",
-          "switch": "on"
-        },
-        "toddler": {
-          "delta": 20,
-          "currency": "USD",
-          "switch": "on"
-        },
-        "child": {
-          "delta": 20,
-          "currency": "USD",
-          "switch": "on"
-        }
-      },
-      {
-        "id": "1314",
-        "infant": {
-          "delta": 20,
-          "currency": "USD",
-          "switch": "on"
-        },
-        "toddler": {
-          "delta": 20,
-          "currency": "USD",
-          "switch": "on"
-        },
-        "child": {
-          "delta": 20,
-          "currency": "USD",
-          "switch": "on"
-        }
-      },
-      {
-        "id": "1838",
-        "infant": {
-          "delta": 20,
-          "currency": "USD",
-          "switch": "on"
-        },
-        "toddler": {
-          "delta": 20,
-          "currency": "USD",
-          "switch": "on"
-        },
-        "child": {
-          "delta": 20,
-          "currency": "USD",
-          "switch": "on"
-        }
-      },
-      {
-        "id": "18476",
-        "infant": {
-          "delta": 20,
-          "currency": "USD",
-          "switch": "on"
-        },
-        "toddler": {
-          "delta": 20,
-          "currency": "USD",
-          "switch": "on"
-        },
-        "child": {
-          "delta": 20,
-          "currency": "USD",
-          "switch": "on"
-        }
-      },
-      {
-        "id": "1313",
-        "infant": {
-          "delta": 20,
-          "currency": "USD",
-          "switch": "on"
-        },
-        "toddler": {
-          "delta": 20,
-          "currency": "USD",
-          "switch": "on"
-        },
-        "child": {
-          "delta": 20,
-          "currency": "USD",
-          "switch": "on"
-        }
-      }
-    ]
-  }
-=======
-  "results": [
-    {
-      "searchResultId": "d59c63a9-98ec-4e29-ab39-1e6671215592_1",
-      "transportCategory": "STANDARD",
-      "price": {
-        "salePriceMin": 11.33,
-        "salePriceMax": 11.33,
-        "currency": "USD"
-      },
-      "minPassengers": 1,
-      "maxPassengers": 3,
-      "features": [
-        {
-          "name": "noOfBags",
-          "value": 3
-        }
-      ],
-      "servicesAvailable": ["meetAndGreet"]
-    },
-    {
-      "searchResultId": "d2691492-7bf3-4e9d-9e47-0cd58d84e5e4_1",
-      "transportCategory": "EXECUTIVE",
-      "price": {
-        "salePriceMin": 42.85,
-        "salePriceMax": 42.85,
-        "currency": "USD"
-      },
-      "minPassengers": 1,
-      "maxPassengers": 3,
-      "features": [
-        {
-          "name": "noOfBags",
-          "value": 3
-        }
-      ],
-      "servicesAvailable": ["meetAndGreet"]
-    },
-    {
-      "searchResultId": "9b504de5-2a43-4b2f-8b22-3ac0d862aada_1",
-      "transportCategory": "PEOPLECARRIER",
-      "price": {
-        "salePriceMin": 24.43,
-        "salePriceMax": 24.43,
-        "currency": "USD"
-      },
-      "minPassengers": 1,
-      "maxPassengers": 4,
-      "features": [
-        {
-          "name": "noOfBags",
-          "value": 4
-        }
-      ],
-      "servicesAvailable": ["meetAndGreet"]
-    },
-    {
-      "searchResultId": "299df130-0e9e-4316-b89e-4cf4e7b284ec_1",
-      "transportCategory": "LARGEPEOPLECARRIER",
-      "price": {
-        "salePriceMin": 25.98,
-        "salePriceMax": 25.98,
-        "currency": "USD"
-      },
-      "minPassengers": 1,
-      "maxPassengers": 5,
-      "features": [
-        {
-          "name": "noOfBags",
-          "value": 5
-        }
-      ],
-      "servicesAvailable": ["meetAndGreet"]
-    },
-    {
-      "searchResultId": "8250ed22-9da7-4d59-be5a-202be3ea24cd_1",
-      "transportCategory": "EXECUTIVEPEOPLECARRIER",
-      "price": {
-        "salePriceMin": 80.0,
-        "salePriceMax": 80.0,
-        "currency": "USD"
-      },
-      "minPassengers": 1,
-      "maxPassengers": 5,
-      "features": [
-        {
-          "name": "noOfBags",
-          "value": 5
-        }
-      ],
-      "servicesAvailable": ["meetAndGreet"]
-    },
-    {
-      "searchResultId": "8ed43865-24cd-422f-87ff-d91d4ad885a7_1",
-      "transportCategory": "MINIBUS",
-      "price": {
-        "salePriceMin": 120.0,
-        "salePriceMax": 120.0,
-        "currency": "USD"
-      },
-      "minPassengers": 1,
-      "maxPassengers": 8,
-      "features": [
-        {
-          "name": "noOfBags",
-          "value": 8
-        }
-      ],
-      "servicesAvailable": ["meetAndGreet"]
-    },
-    {
-      "searchResultId": "74083fb4-3283-4ea7-b958-d509f872a80a_1",
-      "transportCategory": "ELECTRICSTANDARD",
-      "price": {
-        "salePriceMin": 17.03,
-        "salePriceMax": 17.03,
-        "currency": "USD"
-      },
-      "minPassengers": 1,
-      "maxPassengers": 3,
-      "features": [
-        {
-          "name": "noOfBags",
-          "value": 3
-        }
-      ],
-      "servicesAvailable": ["meetAndGreet"]
-    },
-    {
-      "searchResultId": "ed3b5fe7-4c9b-4a6f-8049-48ae228d3003_1",
-      "transportCategory": "LUXURY",
-      "price": {
-        "salePriceMin": 120.0,
-        "salePriceMax": 120.0,
-        "currency": "USD"
-      },
-      "minPassengers": 1,
-      "maxPassengers": 3,
-      "features": [
-        {
-          "name": "noOfBags",
-          "value": 3
-        }
-      ],
-      "servicesAvailable": ["meetAndGreet"]
-    }
-  ]
->>>>>>> 180d1906fd24e15367796cd3545259ee09cab870
+2024 - 06 - 06 T18: 48: 20.655 Z 2024 - 06 - 06 18: 48: 20, 655 - elife_log - INFO - Calling ride_quotes_post_proc...
+	2024 - 06 - 06 T18: 48: 20.655 Z 2024 - 06 - 06 18: 48: 20, 655 - elife_log - INFO - Payload: {
+		'partner': 'Klook',
+		'key': 'A1pCHdv3W8y7t5Ke...',
+		'request_id': '1717699700.6556478',
+		'from': {
+			'lat': '33.9416',
+			'lng': '-118.4085',
+			'name': 'Los Angeles International Airport'
+		},
+		'to': {
+			'lat': '34.0689',
+			'lng': '-118.4452',
+			'name': 'Westwood Plaza, Los Angeles, CA, USA (UCLA Meyer and Renee Luskin Conference Center)'
+		},
+		'time': 1721322900.0,
+		'currency': 'USD'
+	}
+2024 - 06 - 06 T18: 48: 20.655 Z select id, name, lat, lng, radius from fleet where name = % s;
+2024 - 06 - 06 T18: 48: 20.655 Z Param: ('Klook', )
+2024 - 06 - 06 T18: 48: 20.682 Z select id, name, lat, lng, radius from fleet where name = % s;
+2024 - 06 - 06 T18: 48: 20.682 Z Param: ('Elife', )
+2024 - 06 - 06 T18: 48: 20.684 Z select name, api_key_hash, api_key_salt, id, client_id, client_secret, client_salt,
+	fleet_id from partner where name = % s;
+2024 - 06 - 06 T18: 48: 20.684 Z Param: ('Klook', )
+2024 - 06 - 06 T18: 48: 20.702 Z select country from lat_lng_4_country where(lat, lng) in ((33, -118), (33.94, -118.4),
+	(33.9416, -118.4085));
+2024 - 06 - 06 T18: 48: 20.702 Z Param: ()
+2024 - 06 - 06 T18: 48: 20.704 Z select fleet.id as fleet_id, fleet.lat, fleet.lng, fleet.radius, fleet.parent_fleet_id,
+	parent_fleet.name as parent_fleet_name, fleet.service_area_pricing_id, service_area_pricing
+	.pricing from fleet inner join fleet parent_fleet on parent_fleet.id = fleet
+	.parent_fleet_id left join service_area_pricing on service_area_pricing.id = fleet
+	.service_area_pricing_id where fleet.lat < % s and fleet.lat > % s and fleet.lng < % s and fleet.lng > % s and fleet
+	.id in (select id from fleet where parent_fleet_id in (select %
+		s union select supply_fleet_id from fleet_supply_demand where demand_fleet_id = % s));
+2024 - 06 - 06 T18: 48: 20.704 Z Param: (37.08925185171862, 30.793948148281384, -114.6553726195862, -122.1616273804138,
+	15, 1771)
+
+2024 - 06 - 06 T18: 48: 21.023 Z 2024 - 06 - 06 18: 48: 21, 022 - elife_log - INFO -
+	function fleets_select_by_from_to takes 0.3205142021179199 sec
+2024 - 06 - 06 T18: 48: 21.023 Z 2024 - 06 - 06 18: 48: 21, 023 - elife_log - INFO - print fleet_ids_qry:
+	2024 - 06 - 06 T18: 48: 21.023 Z 2024 - 06 - 06 18: 48: 21, 023 - elife_log - INFO - [{
+		'fleet_id': 37,
+		'lat': 33.997389,
+		'lng': -117.981055,
+		'radius': 181855,
+		'parent_fleet_id': 15,
+		'parent_fleet_name': 'Elife',
+		'service_area_pricing_id': 166452
+	}]
+2024 - 06 - 06 T18: 48: 21.023 Z select service_area_pricing.id as id, service_area_id, pricing, effective_at,
+	expire_at, fleet
+	.service_area_pricing_id as fleet_service_area_pricing_id from service_area_pricing inner join fleet on fleet.id =
+	service_area_pricing.service_area_id where service_area_pricing.id in ( % s) order by service_area_pricing.id desc;
+2024 - 06 - 06 T18: 48: 21.023 Z Param: (166452, )
+
+2024 - 06 - 06 T18: 48: 22.563 Z before exchange partner_pricings: [{
+	'supply_fleet_id': 15,
+	'demand_fleet_id': 1771,
+	'json': {
+		'service_areas': {
+			'sas_percent': [{
+				'id': 132,
+				'percent': '',
+				'vcs': [{
+					'id': 1,
+					'percent': '8.12'
+				}, {
+					'id': 3,
+					'percent': '0.8'
+				}]
+			}, {
+				'id': 324,
+				'percent': '20'
+			}, {
+				'id': 341,
+				'percent': '60',
+				'vcs': [{
+					'id': 1,
+					'percent': '75.8'
+				}, {
+					'id': 6,
+					'percent': '113.8'
+				}, {
+					'id': 3,
+					'percent': '64.07'
+				}]
+			}, {
+				'id': 995,
+				'percent': '20',
+				'vcs': [{
+					'id': 1,
+					'percent': '31.1'
+				}, {
+					'id': 6,
+					'percent': '-13.3'
+				}, {
+					'id': 3,
+					'percent': '-15.81'
+				}, {
+					'id': 5,
+					'percent': '-8.02'
+				}]
+			}, {
+				'id': 1392,
+				'percent': ''
+			}, {
+				'id': 152,
+				'percent': '',
+				'vcs': [{
+					'id': 5,
+					'percent': '30'
+				}]
+			}, {
+				'id': 46977,
+				'percent': '10',
+				'vcs': [{
+					'id': 1,
+					'percent': '0'
+				}, {
+					'id': 2,
+					'percent': '0'
+				}, {
+					'id': 6,
+					'percent': '0'
+				}, {
+					'id': 3,
+					'percent': '0'
+				}]
+			}, {
+				'id': 46972,
+				'percent': '10',
+				'vcs': [{
+					'id': 1,
+					'percent': '20'
+				}, {
+					'id': 2,
+					'percent': '20'
+				}, {
+					'id': 6,
+					'percent': '20'
+				}, {
+					'id': 3,
+					'percent': '20'
+				}]
+			}, {
+				'id': 23250,
+				'percent': '10',
+				'vcs': [{
+					'id': 1,
+					'percent': '20'
+				}, {
+					'id': 2,
+					'percent': '20'
+				}, {
+					'id': 6,
+					'percent': '20'
+				}, {
+					'id': 3,
+					'percent': '20'
+				}]
+			}, {
+				'id': 40,
+				'percent': '10',
+				'vcs': [{
+					'id': 1,
+					'percent': '20'
+				}, {
+					'id': 2,
+					'percent': '20'
+				}, {
+					'id': 3,
+					'percent': '20'
+				}, {
+					'id': 6,
+					'percent': '20'
+				}]
+			}, {
+				'id': 1997,
+				'percent': '25'
+			}, {
+				'id': 368,
+				'percent': '10'
+			}, {
+				'id': 93,
+				'percent': '10'
+			}, {
+				'id': 391,
+				'percent': '10'
+			}, {
+				'id': 384,
+				'percent': '10'
+			}, {
+				'id': 97,
+				'percent': '10'
+			}, {
+				'id': 70,
+				'percent': '10'
+			}, {
+				'id': 67,
+				'percent': '10'
+			}, {
+				'id': 66,
+				'percent': '10'
+			}, {
+				'id': 92,
+				'percent': '10'
+			}, {
+				'id': 87,
+				'percent': '10'
+			}, {
+				'id': 88,
+				'percent': '10'
+			}, {
+				'id': 94,
+				'percent': '10'
+			}, {
+				'id': 366,
+				'percent': '10'
+			}, {
+				'id': 96,
+				'percent': '10'
+			}, {
+				'id': 390,
+				'percent': '5'
+			}, {
+				'id': 375,
+				'percent': '10'
+			}, {
+				'id': 76,
+				'percent': '10'
+			}, {
+				'id': 99,
+				'percent': '10'
+			}, {
+				'id': 65,
+				'percent': '10'
+			}, {
+				'id': 98,
+				'percent': '10'
+			}, {
+				'id': 64,
+				'percent': '10'
+			}, {
+				'id': 84,
+				'percent': '10'
+			}, {
+				'id': 367,
+				'percent': '10'
+			}, {
+				'id': 39,
+				'percent': '0'
+			}, {
+				'id': 77,
+				'percent': '25'
+			}, {
+				'id': 74,
+				'percent': '10'
+			}, {
+				'id': 73,
+				'percent': '10'
+			}, {
+				'id': 89,
+				'percent': '10'
+			}, {
+				'id': 68,
+				'percent': '5'
+			}, {
+				'id': 72,
+				'percent': '10'
+			}, {
+				'id': 69,
+				'percent': '20'
+			}, {
+				'id': 59,
+				'percent': '25',
+				'vcs': []
+			}, {
+				'id': 57,
+				'percent': '25'
+			}, {
+				'id': 58,
+				'percent': '25'
+			}, {
+				'id': 55,
+				'percent': '25'
+			}, {
+				'id': 56,
+				'percent': '25'
+			}, {
+				'id': 62,
+				'percent': '25',
+				'vcs': [{
+					'id': 1,
+					'percent': '10'
+				}, {
+					'id': 3,
+					'percent': '5'
+				}]
+			}, {
+				'id': 75,
+				'percent': '25'
+			}, {
+				'id': 38,
+				'percent': '25'
+			}, {
+				'id': 37,
+				'percent': '18',
+				'vcs': []
+			}, {
+				'id': 1077,
+				'percent': '25'
+			}, {
+				'id': 665,
+				'percent': '25'
+			}, {
+				'id': 460,
+				'percent': '25'
+			}, {
+				'id': 459,
+				'percent': '25'
+			}, {
+				'id': 673,
+				'percent': '25'
+			}, {
+				'id': 680,
+				'percent': '25'
+			}, {
+				'id': 681,
+				'percent': '25'
+			}, {
+				'id': 679,
+				'percent': '25'
+			}, {
+				'id': 273,
+				'percent': '25'
+			}, {
+				'id': 311,
+				'percent': '25'
+			}, {
+				'id': 670,
+				'percent': '25'
+			}, {
+				'id': 1099,
+				'percent': '25'
+			}, {
+				'id': 658,
+				'percent': '25'
+			}, {
+				'id': 1107,
+				'percent': '25'
+			}, {
+				'id': 148,
+				'percent': '25'
+			}, {
+				'id': 149,
+				'percent': '25'
+			}, {
+				'id': 1106,
+				'percent': '25'
+			}, {
+				'id': 275,
+				'percent': '25'
+			}, {
+				'id': 272,
+				'percent': '25'
+			}, {
+				'id': 274,
+				'percent': '25'
+			}, {
+				'id': 151,
+				'percent': '25'
+			}, {
+				'id': 147,
+				'percent': '25'
+			}, {
+				'id': 150,
+				'percent': '25'
+			}, {
+				'id': 1322,
+				'percent': '25'
+			}, {
+				'id': 144,
+				'percent': '25'
+			}, {
+				'id': 143,
+				'percent': '25'
+			}, {
+				'id': 142,
+				'percent': '25'
+			}, {
+				'id': 145,
+				'percent': '25'
+			}, {
+				'id': 1315,
+				'percent': '25'
+			}, {
+				'id': 1314,
+				'percent': '25'
+			}, {
+				'id': 1838,
+				'percent': '25'
+			}, {
+				'id': 18476,
+				'percent': '25'
+			}, {
+				'id': 1313,
+				'percent': '25'
+			}, {
+				'id': 646,
+				'percent': '25'
+			}, {
+				'id': 644,
+				'percent': '25'
+			}, {
+				'id': 137,
+				'percent': '25'
+			}, {
+				'id': 647,
+				'percent': '25'
+			}, {
+				'id': 645,
+				'percent': '25'
+			}, {
+				'id': 136,
+				'percent': '25'
+			}, {
+				'id': 40174,
+				'percent': '25'
+			}, {
+				'id': 140,
+				'percent': '25'
+			}, {
+				'id': 141,
+				'percent': '25'
+			}, {
+				'id': 139,
+				'percent': '25'
+			}, {
+				'id': 138,
+				'percent': '25'
+			}, {
+				'id': '1053',
+				'percent': '50'
+			}, {
+				'id': '1052',
+				'percent': '50'
+			}, {
+				'id': '1057',
+				'percent': '50'
+			}, {
+				'id': '1055',
+				'percent': '50'
+			}, {
+				'id': '129',
+				'percent': '50'
+			}, {
+				'id': '1056',
+				'percent': '50'
+			}, {
+				'id': '745',
+				'percent': '50'
+			}, {
+				'id': '1117',
+				'percent': '50'
+			}, {
+				'id': '1063',
+				'percent': '50'
+			}, {
+				'id': '1062',
+				'percent': '50'
+			}, {
+				'id': '130',
+				'percent': '50'
+			}, {
+				'id': '16767',
+				'percent': '50'
+			}, {
+				'id': '16771',
+				'percent': '50'
+			}, {
+				'id': '37148',
+				'percent': '50'
+			}, {
+				'id': '128',
+				'percent': '50'
+			}, {
+				'id': '746',
+				'percent': '50'
+			}, {
+				'id': '1060',
+				'percent': '50'
+			}, {
+				'id': '126',
+				'percent': '50'
+			}, {
+				'id': '127',
+				'percent': '50'
+			}, {
+				'id': '44',
+				'percent': '50'
+			}, {
+				'id': '43',
+				'percent': '50'
+			}, {
+				'id': '1054',
+				'percent': '50'
+			}, {
+				'id': '1058',
+				'percent': '50'
+			}, {
+				'id': '15384',
+				'percent': '50'
+			}, {
+				'id': '1059',
+				'percent': '50'
+			}, {
+				'id': '1061',
+				'percent': '50'
+			}],
+			'ads_delta': [{
+				'id': '125',
+				'toddler': {
+					'delta': -8,
+					'currency': 'USD',
+					'switch': 'off'
+				},
+				'children': {
+					'delta': -8,
+					'currency': 'USD',
+					'switch': 'off'
+				}
+			}, {
+				'id': '141',
+				'infant': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'toddler': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'children': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				}
+			}, {
+				'id': '140',
+				'infant': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'toddler': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'children': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				}
+			}, {
+				'id': '138',
+				'infant': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'toddler': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'children': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				}
+			}, {
+				'id': '18476',
+				'infant': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'toddler': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'children': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				}
+			}, {
+				'id': '40174',
+				'infant': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'toddler': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'children': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				}
+			}, {
+				'id': '139',
+				'infant': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'toddler': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'children': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				}
+			}, {
+				'id': '136',
+				'infant': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'toddler': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'children': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				}
+			}, {
+				'id': '645',
+				'infant': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'toddler': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'children': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				}
+			}, {
+				'id': '647',
+				'infant': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'toddler': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'children': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				}
+			}, {
+				'id': '644',
+				'infant': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'toddler': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'children': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				}
+			}, {
+				'id': '137',
+				'infant': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'toddler': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'children': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				}
+			}, {
+				'id': '145',
+				'infant': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'toddler': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'children': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				}
+			}, {
+				'id': '142',
+				'infant': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'toddler': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'children': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				}
+			}, {
+				'id': '143',
+				'infant': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'toddler': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'children': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				}
+			}, {
+				'id': '144',
+				'infant': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'toddler': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'children': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				}
+			}, {
+				'id': '1322',
+				'infant': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'toddler': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'children': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				}
+			}, {
+				'id': '75',
+				'infant': {
+					'delta': 10,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'toddler': {
+					'delta': 10,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'children': {
+					'delta': 10,
+					'currency': 'USD',
+					'switch': 'on'
+				}
+			}, {
+				'id': '38',
+				'infant': {
+					'delta': 10,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'toddler': {
+					'delta': 10,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'children': {
+					'delta': 10,
+					'currency': 'USD',
+					'switch': 'on'
+				}
+			}],
+			'mag_delta': [{
+				'id': '125',
+				'delta': 5,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '49',
+				'delta': 5,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '52',
+				'delta': 5,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '51',
+				'delta': 5,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '50',
+				'delta': 5,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '141',
+				'delta': 8,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '140',
+				'delta': 9,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '138',
+				'delta': 9,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '40174',
+				'delta': 9,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '139',
+				'delta': 9,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '136',
+				'delta': 9,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '645',
+				'delta': 8,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '647',
+				'delta': 9,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '644',
+				'delta': 9,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '137',
+				'delta': 8,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '145',
+				'delta': 8,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '142',
+				'delta': 9,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '143',
+				'delta': 9,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '144',
+				'delta': 9,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '1322',
+				'delta': 10,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '69',
+				'delta': 40,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '72',
+				'delta': 50,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '68',
+				'delta': 18,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '89',
+				'delta': 18,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '74',
+				'delta': 18,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '73',
+				'delta': 18,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '39',
+				'delta': 30,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '367',
+				'delta': 20,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '84',
+				'delta': 30,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '96',
+				'delta': 30,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '366',
+				'delta': 30,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '88',
+				'delta': 30,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '67',
+				'delta': 30,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '77',
+				'delta': 18,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '70',
+				'delta': 30,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '94',
+				'delta': 30,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '75',
+				'delta': 25,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '38',
+				'delta': 20,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '37',
+				'delta': 25,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '62',
+				'delta': 20,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '58',
+				'delta': 25,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '42758',
+				'delta': 25,
+				'currency': 'CAD',
+				'switch': 'on'
+			}, {
+				'id': '55',
+				'delta': 5,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '56',
+				'delta': 25,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '57',
+				'delta': 30,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '60',
+				'delta': 25,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '825',
+				'delta': 20,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '820',
+				'delta': 20,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '1284',
+				'delta': 20,
+				'currency': 'USD',
+				'switch': 'on'
+			}]
+		},
+		'doNotDel': 'doNotDel'
+	},
+	'version': None,
+	'login_id': 38
+}]
+2024 - 06 - 06 T18: 48: 22.564 Z 1 after exchange partner_pricings: [{
+	'supply_fleet_id': 15,
+	'demand_fleet_id': 1771,
+	'json': {
+		'service_areas': {
+			'sas_percent': [{
+				'id': 132,
+				'percent': '',
+				'vcs': [{
+					'id': 1,
+					'percent': '8.12'
+				}, {
+					'id': 3,
+					'percent': '0.8'
+				}]
+			}, {
+				'id': 324,
+				'percent': '20'
+			}, {
+				'id': 341,
+				'percent': '60',
+				'vcs': [{
+					'id': 1,
+					'percent': '75.8'
+				}, {
+					'id': 6,
+					'percent': '113.8'
+				}, {
+					'id': 3,
+					'percent': '64.07'
+				}]
+			}, {
+				'id': 995,
+				'percent': '20',
+				'vcs': [{
+					'id': 1,
+					'percent': '31.1'
+				}, {
+					'id': 6,
+					'percent': '-13.3'
+				}, {
+					'id': 3,
+					'percent': '-15.81'
+				}, {
+					'id': 5,
+					'percent': '-8.02'
+				}]
+			}, {
+				'id': 1392,
+				'percent': ''
+			}, {
+				'id': 152,
+				'percent': '',
+				'vcs': [{
+					'id': 5,
+					'percent': '30'
+				}]
+			}, {
+				'id': 46977,
+				'percent': '10',
+				'vcs': [{
+					'id': 1,
+					'percent': '0'
+				}, {
+					'id': 2,
+					'percent': '0'
+				}, {
+					'id': 6,
+					'percent': '0'
+				}, {
+					'id': 3,
+					'percent': '0'
+				}]
+			}, {
+				'id': 46972,
+				'percent': '10',
+				'vcs': [{
+					'id': 1,
+					'percent': '20'
+				}, {
+					'id': 2,
+					'percent': '20'
+				}, {
+					'id': 6,
+					'percent': '20'
+				}, {
+					'id': 3,
+					'percent': '20'
+				}]
+			}, {
+				'id': 23250,
+				'percent': '10',
+				'vcs': [{
+					'id': 1,
+					'percent': '20'
+				}, {
+					'id': 2,
+					'percent': '20'
+				}, {
+					'id': 6,
+					'percent': '20'
+				}, {
+					'id': 3,
+					'percent': '20'
+				}]
+			}, {
+				'id': 40,
+				'percent': '10',
+				'vcs': [{
+					'id': 1,
+					'percent': '20'
+				}, {
+					'id': 2,
+					'percent': '20'
+				}, {
+					'id': 3,
+					'percent': '20'
+				}, {
+					'id': 6,
+					'percent': '20'
+				}]
+			}, {
+				'id': 1997,
+				'percent': '25'
+			}, {
+				'id': 368,
+				'percent': '10'
+			}, {
+				'id': 93,
+				'percent': '10'
+			}, {
+				'id': 391,
+				'percent': '10'
+			}, {
+				'id': 384,
+				'percent': '10'
+			}, {
+				'id': 97,
+				'percent': '10'
+			}, {
+				'id': 70,
+				'percent': '10'
+			}, {
+				'id': 67,
+				'percent': '10'
+			}, {
+				'id': 66,
+				'percent': '10'
+			}, {
+				'id': 92,
+				'percent': '10'
+			}, {
+				'id': 87,
+				'percent': '10'
+			}, {
+				'id': 88,
+				'percent': '10'
+			}, {
+				'id': 94,
+				'percent': '10'
+			}, {
+				'id': 366,
+				'percent': '10'
+			}, {
+				'id': 96,
+				'percent': '10'
+			}, {
+				'id': 390,
+				'percent': '5'
+			}, {
+				'id': 375,
+				'percent': '10'
+			}, {
+				'id': 76,
+				'percent': '10'
+			}, {
+				'id': 99,
+				'percent': '10'
+			}, {
+				'id': 65,
+				'percent': '10'
+			}, {
+				'id': 98,
+				'percent': '10'
+			}, {
+				'id': 64,
+				'percent': '10'
+			}, {
+				'id': 84,
+				'percent': '10'
+			}, {
+				'id': 367,
+				'percent': '10'
+			}, {
+				'id': 39,
+				'percent': '0'
+			}, {
+				'id': 77,
+				'percent': '25'
+			}, {
+				'id': 74,
+				'percent': '10'
+			}, {
+				'id': 73,
+				'percent': '10'
+			}, {
+				'id': 89,
+				'percent': '10'
+			}, {
+				'id': 68,
+				'percent': '5'
+			}, {
+				'id': 72,
+				'percent': '10'
+			}, {
+				'id': 69,
+				'percent': '20'
+			}, {
+				'id': 59,
+				'percent': '25',
+				'vcs': []
+			}, {
+				'id': 57,
+				'percent': '25'
+			}, {
+				'id': 58,
+				'percent': '25'
+			}, {
+				'id': 55,
+				'percent': '25'
+			}, {
+				'id': 56,
+				'percent': '25'
+			}, {
+				'id': 62,
+				'percent': '25',
+				'vcs': [{
+					'id': 1,
+					'percent': '10'
+				}, {
+					'id': 3,
+					'percent': '5'
+				}]
+			}, {
+				'id': 75,
+				'percent': '25'
+			}, {
+				'id': 38,
+				'percent': '25'
+			}, {
+				'id': 37,
+				'percent': '18',
+				'vcs': []
+			}, {
+				'id': 1077,
+				'percent': '25'
+			}, {
+				'id': 665,
+				'percent': '25'
+			}, {
+				'id': 460,
+				'percent': '25'
+			}, {
+				'id': 459,
+				'percent': '25'
+			}, {
+				'id': 673,
+				'percent': '25'
+			}, {
+				'id': 680,
+				'percent': '25'
+			}, {
+				'id': 681,
+				'percent': '25'
+			}, {
+				'id': 679,
+				'percent': '25'
+			}, {
+				'id': 273,
+				'percent': '25'
+			}, {
+				'id': 311,
+				'percent': '25'
+			}, {
+				'id': 670,
+				'percent': '25'
+			}, {
+				'id': 1099,
+				'percent': '25'
+			}, {
+				'id': 658,
+				'percent': '25'
+			}, {
+				'id': 1107,
+				'percent': '25'
+			}, {
+				'id': 148,
+				'percent': '25'
+			}, {
+				'id': 149,
+				'percent': '25'
+			}, {
+				'id': 1106,
+				'percent': '25'
+			}, {
+				'id': 275,
+				'percent': '25'
+			}, {
+				'id': 272,
+				'percent': '25'
+			}, {
+				'id': 274,
+				'percent': '25'
+			}, {
+				'id': 151,
+				'percent': '25'
+			}, {
+				'id': 147,
+				'percent': '25'
+			}, {
+				'id': 150,
+				'percent': '25'
+			}, {
+				'id': 1322,
+				'percent': '25'
+			}, {
+				'id': 144,
+				'percent': '25'
+			}, {
+				'id': 143,
+				'percent': '25'
+			}, {
+				'id': 142,
+				'percent': '25'
+			}, {
+				'id': 145,
+				'percent': '25'
+			}, {
+				'id': 1315,
+				'percent': '25'
+			}, {
+				'id': 1314,
+				'percent': '25'
+			}, {
+				'id': 1838,
+				'percent': '25'
+			}, {
+				'id': 18476,
+				'percent': '25'
+			}, {
+				'id': 1313,
+				'percent': '25'
+			}, {
+				'id': 646,
+				'percent': '25'
+			}, {
+				'id': 644,
+				'percent': '25'
+			}, {
+				'id': 137,
+				'percent': '25'
+			}, {
+				'id': 647,
+				'percent': '25'
+			}, {
+				'id': 645,
+				'percent': '25'
+			}, {
+				'id': 136,
+				'percent': '25'
+			}, {
+				'id': 40174,
+				'percent': '25'
+			}, {
+				'id': 140,
+				'percent': '25'
+			}, {
+				'id': 141,
+				'percent': '25'
+			}, {
+				'id': 139,
+				'percent': '25'
+			}, {
+				'id': 138,
+				'percent': '25'
+			}, {
+				'id': '1053',
+				'percent': '50'
+			}, {
+				'id': '1052',
+				'percent': '50'
+			}, {
+				'id': '1057',
+				'percent': '50'
+			}, {
+				'id': '1055',
+				'percent': '50'
+			}, {
+				'id': '129',
+				'percent': '50'
+			}, {
+				'id': '1056',
+				'percent': '50'
+			}, {
+				'id': '745',
+				'percent': '50'
+			}, {
+				'id': '1117',
+				'percent': '50'
+			}, {
+				'id': '1063',
+				'percent': '50'
+			}, {
+				'id': '1062',
+				'percent': '50'
+			}, {
+				'id': '130',
+				'percent': '50'
+			}, {
+				'id': '16767',
+				'percent': '50'
+			}, {
+				'id': '16771',
+				'percent': '50'
+			}, {
+				'id': '37148',
+				'percent': '50'
+			}, {
+				'id': '128',
+				'percent': '50'
+			}, {
+				'id': '746',
+				'percent': '50'
+			}, {
+				'id': '1060',
+				'percent': '50'
+			}, {
+				'id': '126',
+				'percent': '50'
+			}, {
+				'id': '127',
+				'percent': '50'
+			}, {
+				'id': '44',
+				'percent': '50'
+			}, {
+				'id': '43',
+				'percent': '50'
+			}, {
+				'id': '1054',
+				'percent': '50'
+			}, {
+				'id': '1058',
+				'percent': '50'
+			}, {
+				'id': '15384',
+				'percent': '50'
+			}, {
+				'id': '1059',
+				'percent': '50'
+			}, {
+				'id': '1061',
+				'percent': '50'
+			}],
+			'ads_delta': [{
+				'id': '125',
+				'toddler': {
+					'delta': -8,
+					'currency': 'USD',
+					'switch': 'off'
+				},
+				'children': {
+					'delta': -8,
+					'currency': 'USD',
+					'switch': 'off'
+				}
+			}, {
+				'id': '141',
+				'infant': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'toddler': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'children': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				}
+			}, {
+				'id': '140',
+				'infant': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'toddler': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'children': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				}
+			}, {
+				'id': '138',
+				'infant': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'toddler': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'children': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				}
+			}, {
+				'id': '18476',
+				'infant': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'toddler': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'children': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				}
+			}, {
+				'id': '40174',
+				'infant': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'toddler': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'children': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				}
+			}, {
+				'id': '139',
+				'infant': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'toddler': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'children': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				}
+			}, {
+				'id': '136',
+				'infant': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'toddler': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'children': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				}
+			}, {
+				'id': '645',
+				'infant': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'toddler': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'children': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				}
+			}, {
+				'id': '647',
+				'infant': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'toddler': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'children': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				}
+			}, {
+				'id': '644',
+				'infant': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'toddler': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'children': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				}
+			}, {
+				'id': '137',
+				'infant': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'toddler': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'children': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				}
+			}, {
+				'id': '145',
+				'infant': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'toddler': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'children': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				}
+			}, {
+				'id': '142',
+				'infant': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'toddler': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'children': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				}
+			}, {
+				'id': '143',
+				'infant': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'toddler': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'children': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				}
+			}, {
+				'id': '144',
+				'infant': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'toddler': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'children': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				}
+			}, {
+				'id': '1322',
+				'infant': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'toddler': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'children': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				}
+			}, {
+				'id': '75',
+				'infant': {
+					'delta': 10,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'toddler': {
+					'delta': 10,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'children': {
+					'delta': 10,
+					'currency': 'USD',
+					'switch': 'on'
+				}
+			}, {
+				'id': '38',
+				'infant': {
+					'delta': 10,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'toddler': {
+					'delta': 10,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'children': {
+					'delta': 10,
+					'currency': 'USD',
+					'switch': 'on'
+				}
+			}],
+			'mag_delta': [{
+				'id': '125',
+				'delta': 5,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '49',
+				'delta': 5,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '52',
+				'delta': 5,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '51',
+				'delta': 5,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '50',
+				'delta': 5,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '141',
+				'delta': 8,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '140',
+				'delta': 9,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '138',
+				'delta': 9,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '40174',
+				'delta': 9,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '139',
+				'delta': 9,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '136',
+				'delta': 9,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '645',
+				'delta': 8,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '647',
+				'delta': 9,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '644',
+				'delta': 9,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '137',
+				'delta': 8,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '145',
+				'delta': 8,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '142',
+				'delta': 9,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '143',
+				'delta': 9,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '144',
+				'delta': 9,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '1322',
+				'delta': 10,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '69',
+				'delta': 40,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '72',
+				'delta': 50,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '68',
+				'delta': 18,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '89',
+				'delta': 18,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '74',
+				'delta': 18,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '73',
+				'delta': 18,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '39',
+				'delta': 30,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '367',
+				'delta': 20,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '84',
+				'delta': 30,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '96',
+				'delta': 30,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '366',
+				'delta': 30,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '88',
+				'delta': 30,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '67',
+				'delta': 30,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '77',
+				'delta': 18,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '70',
+				'delta': 30,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '94',
+				'delta': 30,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '75',
+				'delta': 25,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '38',
+				'delta': 20,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '37',
+				'delta': 25,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '62',
+				'delta': 20,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '58',
+				'delta': 25,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '42758',
+				'delta': 25,
+				'currency': 'CAD',
+				'switch': 'on'
+			}, {
+				'id': '55',
+				'delta': 5,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '56',
+				'delta': 25,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '57',
+				'delta': 30,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '60',
+				'delta': 25,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '825',
+				'delta': 20,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '820',
+				'delta': 20,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '1284',
+				'delta': 20,
+				'currency': 'USD',
+				'switch': 'on'
+			}]
+		},
+		'doNotDel': 'doNotDel'
+	},
+	'version': None,
+	'login_id': 38
+}]
+2024 - 06 - 06 T18: 48: 22.564 Z 1 partner_pricings: [{
+	'supply_fleet_id': 15,
+	'demand_fleet_id': 1771,
+	'json': {
+		'service_areas': {
+			'sas_percent': [{
+				'id': 132,
+				'percent': '',
+				'vcs': [{
+					'id': 1,
+					'percent': '8.12'
+				}, {
+					'id': 3,
+					'percent': '0.8'
+				}]
+			}, {
+				'id': 324,
+				'percent': '20'
+			}, {
+				'id': 341,
+				'percent': '60',
+				'vcs': [{
+					'id': 1,
+					'percent': '75.8'
+				}, {
+					'id': 6,
+					'percent': '113.8'
+				}, {
+					'id': 3,
+					'percent': '64.07'
+				}]
+			}, {
+				'id': 995,
+				'percent': '20',
+				'vcs': [{
+					'id': 1,
+					'percent': '31.1'
+				}, {
+					'id': 6,
+					'percent': '-13.3'
+				}, {
+					'id': 3,
+					'percent': '-15.81'
+				}, {
+					'id': 5,
+					'percent': '-8.02'
+				}]
+			}, {
+				'id': 1392,
+				'percent': ''
+			}, {
+				'id': 152,
+				'percent': '',
+				'vcs': [{
+					'id': 5,
+					'percent': '30'
+				}]
+			}, {
+				'id': 46977,
+				'percent': '10',
+				'vcs': [{
+					'id': 1,
+					'percent': '0'
+				}, {
+					'id': 2,
+					'percent': '0'
+				}, {
+					'id': 6,
+					'percent': '0'
+				}, {
+					'id': 3,
+					'percent': '0'
+				}]
+			}, {
+				'id': 46972,
+				'percent': '10',
+				'vcs': [{
+					'id': 1,
+					'percent': '20'
+				}, {
+					'id': 2,
+					'percent': '20'
+				}, {
+					'id': 6,
+					'percent': '20'
+				}, {
+					'id': 3,
+					'percent': '20'
+				}]
+			}, {
+				'id': 23250,
+				'percent': '10',
+				'vcs': [{
+					'id': 1,
+					'percent': '20'
+				}, {
+					'id': 2,
+					'percent': '20'
+				}, {
+					'id': 6,
+					'percent': '20'
+				}, {
+					'id': 3,
+					'percent': '20'
+				}]
+			}, {
+				'id': 40,
+				'percent': '10',
+				'vcs': [{
+					'id': 1,
+					'percent': '20'
+				}, {
+					'id': 2,
+					'percent': '20'
+				}, {
+					'id': 3,
+					'percent': '20'
+				}, {
+					'id': 6,
+					'percent': '20'
+				}]
+			}, {
+				'id': 1997,
+				'percent': '25'
+			}, {
+				'id': 368,
+				'percent': '10'
+			}, {
+				'id': 93,
+				'percent': '10'
+			}, {
+				'id': 391,
+				'percent': '10'
+			}, {
+				'id': 384,
+				'percent': '10'
+			}, {
+				'id': 97,
+				'percent': '10'
+			}, {
+				'id': 70,
+				'percent': '10'
+			}, {
+				'id': 67,
+				'percent': '10'
+			}, {
+				'id': 66,
+				'percent': '10'
+			}, {
+				'id': 92,
+				'percent': '10'
+			}, {
+				'id': 87,
+				'percent': '10'
+			}, {
+				'id': 88,
+				'percent': '10'
+			}, {
+				'id': 94,
+				'percent': '10'
+			}, {
+				'id': 366,
+				'percent': '10'
+			}, {
+				'id': 96,
+				'percent': '10'
+			}, {
+				'id': 390,
+				'percent': '5'
+			}, {
+				'id': 375,
+				'percent': '10'
+			}, {
+				'id': 76,
+				'percent': '10'
+			}, {
+				'id': 99,
+				'percent': '10'
+			}, {
+				'id': 65,
+				'percent': '10'
+			}, {
+				'id': 98,
+				'percent': '10'
+			}, {
+				'id': 64,
+				'percent': '10'
+			}, {
+				'id': 84,
+				'percent': '10'
+			}, {
+				'id': 367,
+				'percent': '10'
+			}, {
+				'id': 39,
+				'percent': '0'
+			}, {
+				'id': 77,
+				'percent': '25'
+			}, {
+				'id': 74,
+				'percent': '10'
+			}, {
+				'id': 73,
+				'percent': '10'
+			}, {
+				'id': 89,
+				'percent': '10'
+			}, {
+				'id': 68,
+				'percent': '5'
+			}, {
+				'id': 72,
+				'percent': '10'
+			}, {
+				'id': 69,
+				'percent': '20'
+			}, {
+				'id': 59,
+				'percent': '25',
+				'vcs': []
+			}, {
+				'id': 57,
+				'percent': '25'
+			}, {
+				'id': 58,
+				'percent': '25'
+			}, {
+				'id': 55,
+				'percent': '25'
+			}, {
+				'id': 56,
+				'percent': '25'
+			}, {
+				'id': 62,
+				'percent': '25',
+				'vcs': [{
+					'id': 1,
+					'percent': '10'
+				}, {
+					'id': 3,
+					'percent': '5'
+				}]
+			}, {
+				'id': 75,
+				'percent': '25'
+			}, {
+				'id': 38,
+				'percent': '25'
+			}, {
+				'id': 37,
+				'percent': '18',
+				'vcs': []
+			}, {
+				'id': 1077,
+				'percent': '25'
+			}, {
+				'id': 665,
+				'percent': '25'
+			}, {
+				'id': 460,
+				'percent': '25'
+			}, {
+				'id': 459,
+				'percent': '25'
+			}, {
+				'id': 673,
+				'percent': '25'
+			}, {
+				'id': 680,
+				'percent': '25'
+			}, {
+				'id': 681,
+				'percent': '25'
+			}, {
+				'id': 679,
+				'percent': '25'
+			}, {
+				'id': 273,
+				'percent': '25'
+			}, {
+				'id': 311,
+				'percent': '25'
+			}, {
+				'id': 670,
+				'percent': '25'
+			}, {
+				'id': 1099,
+				'percent': '25'
+			}, {
+				'id': 658,
+				'percent': '25'
+			}, {
+				'id': 1107,
+				'percent': '25'
+			}, {
+				'id': 148,
+				'percent': '25'
+			}, {
+				'id': 149,
+				'percent': '25'
+			}, {
+				'id': 1106,
+				'percent': '25'
+			}, {
+				'id': 275,
+				'percent': '25'
+			}, {
+				'id': 272,
+				'percent': '25'
+			}, {
+				'id': 274,
+				'percent': '25'
+			}, {
+				'id': 151,
+				'percent': '25'
+			}, {
+				'id': 147,
+				'percent': '25'
+			}, {
+				'id': 150,
+				'percent': '25'
+			}, {
+				'id': 1322,
+				'percent': '25'
+			}, {
+				'id': 144,
+				'percent': '25'
+			}, {
+				'id': 143,
+				'percent': '25'
+			}, {
+				'id': 142,
+				'percent': '25'
+			}, {
+				'id': 145,
+				'percent': '25'
+			}, {
+				'id': 1315,
+				'percent': '25'
+			}, {
+				'id': 1314,
+				'percent': '25'
+			}, {
+				'id': 1838,
+				'percent': '25'
+			}, {
+				'id': 18476,
+				'percent': '25'
+			}, {
+				'id': 1313,
+				'percent': '25'
+			}, {
+				'id': 646,
+				'percent': '25'
+			}, {
+				'id': 644,
+				'percent': '25'
+			}, {
+				'id': 137,
+				'percent': '25'
+			}, {
+				'id': 647,
+				'percent': '25'
+			}, {
+				'id': 645,
+				'percent': '25'
+			}, {
+				'id': 136,
+				'percent': '25'
+			}, {
+				'id': 40174,
+				'percent': '25'
+			}, {
+				'id': 140,
+				'percent': '25'
+			}, {
+				'id': 141,
+				'percent': '25'
+			}, {
+				'id': 139,
+				'percent': '25'
+			}, {
+				'id': 138,
+				'percent': '25'
+			}, {
+				'id': '1053',
+				'percent': '50'
+			}, {
+				'id': '1052',
+				'percent': '50'
+			}, {
+				'id': '1057',
+				'percent': '50'
+			}, {
+				'id': '1055',
+				'percent': '50'
+			}, {
+				'id': '129',
+				'percent': '50'
+			}, {
+				'id': '1056',
+				'percent': '50'
+			}, {
+				'id': '745',
+				'percent': '50'
+			}, {
+				'id': '1117',
+				'percent': '50'
+			}, {
+				'id': '1063',
+				'percent': '50'
+			}, {
+				'id': '1062',
+				'percent': '50'
+			}, {
+				'id': '130',
+				'percent': '50'
+			}, {
+				'id': '16767',
+				'percent': '50'
+			}, {
+				'id': '16771',
+				'percent': '50'
+			}, {
+				'id': '37148',
+				'percent': '50'
+			}, {
+				'id': '128',
+				'percent': '50'
+			}, {
+				'id': '746',
+				'percent': '50'
+			}, {
+				'id': '1060',
+				'percent': '50'
+			}, {
+				'id': '126',
+				'percent': '50'
+			}, {
+				'id': '127',
+				'percent': '50'
+			}, {
+				'id': '44',
+				'percent': '50'
+			}, {
+				'id': '43',
+				'percent': '50'
+			}, {
+				'id': '1054',
+				'percent': '50'
+			}, {
+				'id': '1058',
+				'percent': '50'
+			}, {
+				'id': '15384',
+				'percent': '50'
+			}, {
+				'id': '1059',
+				'percent': '50'
+			}, {
+				'id': '1061',
+				'percent': '50'
+			}],
+			'ads_delta': [{
+				'id': '125',
+				'toddler': {
+					'delta': -8,
+					'currency': 'USD',
+					'switch': 'off'
+				},
+				'children': {
+					'delta': -8,
+					'currency': 'USD',
+					'switch': 'off'
+				}
+			}, {
+				'id': '141',
+				'infant': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'toddler': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'children': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				}
+			}, {
+				'id': '140',
+				'infant': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'toddler': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'children': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				}
+			}, {
+				'id': '138',
+				'infant': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'toddler': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'children': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				}
+			}, {
+				'id': '18476',
+				'infant': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'toddler': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'children': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				}
+			}, {
+				'id': '40174',
+				'infant': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'toddler': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'children': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				}
+			}, {
+				'id': '139',
+				'infant': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'toddler': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'children': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				}
+			}, {
+				'id': '136',
+				'infant': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'toddler': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'children': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				}
+			}, {
+				'id': '645',
+				'infant': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'toddler': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'children': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				}
+			}, {
+				'id': '647',
+				'infant': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'toddler': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'children': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				}
+			}, {
+				'id': '644',
+				'infant': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'toddler': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'children': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				}
+			}, {
+				'id': '137',
+				'infant': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'toddler': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'children': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				}
+			}, {
+				'id': '145',
+				'infant': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'toddler': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'children': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				}
+			}, {
+				'id': '142',
+				'infant': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'toddler': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'children': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				}
+			}, {
+				'id': '143',
+				'infant': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'toddler': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'children': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				}
+			}, {
+				'id': '144',
+				'infant': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'toddler': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'children': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				}
+			}, {
+				'id': '1322',
+				'infant': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'toddler': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'children': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				}
+			}, {
+				'id': '75',
+				'infant': {
+					'delta': 10,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'toddler': {
+					'delta': 10,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'children': {
+					'delta': 10,
+					'currency': 'USD',
+					'switch': 'on'
+				}
+			}, {
+				'id': '38',
+				'infant': {
+					'delta': 10,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'toddler': {
+					'delta': 10,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'children': {
+					'delta': 10,
+					'currency': 'USD',
+					'switch': 'on'
+				}
+			}],
+			'mag_delta': [{
+				'id': '125',
+				'delta': 5,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '49',
+				'delta': 5,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '52',
+				'delta': 5,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '51',
+				'delta': 5,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '50',
+				'delta': 5,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '141',
+				'delta': 8,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '140',
+				'delta': 9,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '138',
+				'delta': 9,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '40174',
+				'delta': 9,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '139',
+				'delta': 9,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '136',
+				'delta': 9,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '645',
+				'delta': 8,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '647',
+				'delta': 9,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '644',
+				'delta': 9,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '137',
+				'delta': 8,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '145',
+				'delta': 8,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '142',
+				'delta': 9,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '143',
+				'delta': 9,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '144',
+				'delta': 9,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '1322',
+				'delta': 10,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '69',
+				'delta': 40,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '72',
+				'delta': 50,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '68',
+				'delta': 18,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '89',
+				'delta': 18,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '74',
+				'delta': 18,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '73',
+				'delta': 18,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '39',
+				'delta': 30,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '367',
+				'delta': 20,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '84',
+				'delta': 30,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '96',
+				'delta': 30,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '366',
+				'delta': 30,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '88',
+				'delta': 30,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '67',
+				'delta': 30,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '77',
+				'delta': 18,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '70',
+				'delta': 30,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '94',
+				'delta': 30,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '75',
+				'delta': 25,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '38',
+				'delta': 20,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '37',
+				'delta': 25,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '62',
+				'delta': 20,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '58',
+				'delta': 25,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '42758',
+				'delta': 25,
+				'currency': 'CAD',
+				'switch': 'on'
+			}, {
+				'id': '55',
+				'delta': 5,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '56',
+				'delta': 25,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '57',
+				'delta': 30,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '60',
+				'delta': 25,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '825',
+				'delta': 20,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '820',
+				'delta': 20,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '1284',
+				'delta': 20,
+				'currency': 'USD',
+				'switch': 'on'
+			}]
+		},
+		'doNotDel': 'doNotDel'
+	},
+	'version': None,
+	'login_id': 38
+}]
+2024 - 06 - 06 T18: 48: 22.564 Z 1 sas_percent_info: {
+	'id': 37,
+	'percent': '18',
+	'vcs': []
 }
+2024 - 06 - 06 T18: 48: 22.564 Z 2 sas_percent_info: {
+	'id': 37,
+	'percent': '18',
+	'vcs': []
+}
+2024 - 06 - 06 T18: 48: 22.564 Z 2 after exchange partner_pricings: [{
+	'supply_fleet_id': 15,
+	'demand_fleet_id': 1771,
+	'json': {
+		'service_areas': {
+			'sas_percent': [{
+				'id': 132,
+				'percent': '',
+				'vcs': [{
+					'id': 1,
+					'percent': '8.12'
+				}, {
+					'id': 3,
+					'percent': '0.8'
+				}]
+			}, {
+				'id': 324,
+				'percent': '20'
+			}, {
+				'id': 341,
+				'percent': '60',
+				'vcs': [{
+					'id': 1,
+					'percent': '75.8'
+				}, {
+					'id': 6,
+					'percent': '113.8'
+				}, {
+					'id': 3,
+					'percent': '64.07'
+				}]
+			}, {
+				'id': 995,
+				'percent': '20',
+				'vcs': [{
+					'id': 1,
+					'percent': '31.1'
+				}, {
+					'id': 6,
+					'percent': '-13.3'
+				}, {
+					'id': 3,
+					'percent': '-15.81'
+				}, {
+					'id': 5,
+					'percent': '-8.02'
+				}]
+			}, {
+				'id': 1392,
+				'percent': ''
+			}, {
+				'id': 152,
+				'percent': '',
+				'vcs': [{
+					'id': 5,
+					'percent': '30'
+				}]
+			}, {
+				'id': 46977,
+				'percent': '10',
+				'vcs': [{
+					'id': 1,
+					'percent': '0'
+				}, {
+					'id': 2,
+					'percent': '0'
+				}, {
+					'id': 6,
+					'percent': '0'
+				}, {
+					'id': 3,
+					'percent': '0'
+				}]
+			}, {
+				'id': 46972,
+				'percent': '10',
+				'vcs': [{
+					'id': 1,
+					'percent': '20'
+				}, {
+					'id': 2,
+					'percent': '20'
+				}, {
+					'id': 6,
+					'percent': '20'
+				}, {
+					'id': 3,
+					'percent': '20'
+				}]
+			}, {
+				'id': 23250,
+				'percent': '10',
+				'vcs': [{
+					'id': 1,
+					'percent': '20'
+				}, {
+					'id': 2,
+					'percent': '20'
+				}, {
+					'id': 6,
+					'percent': '20'
+				}, {
+					'id': 3,
+					'percent': '20'
+				}]
+			}, {
+				'id': 40,
+				'percent': '10',
+				'vcs': [{
+					'id': 1,
+					'percent': '20'
+				}, {
+					'id': 2,
+					'percent': '20'
+				}, {
+					'id': 3,
+					'percent': '20'
+				}, {
+					'id': 6,
+					'percent': '20'
+				}]
+			}, {
+				'id': 1997,
+				'percent': '25'
+			}, {
+				'id': 368,
+				'percent': '10'
+			}, {
+				'id': 93,
+				'percent': '10'
+			}, {
+				'id': 391,
+				'percent': '10'
+			}, {
+				'id': 384,
+				'percent': '10'
+			}, {
+				'id': 97,
+				'percent': '10'
+			}, {
+				'id': 70,
+				'percent': '10'
+			}, {
+				'id': 67,
+				'percent': '10'
+			}, {
+				'id': 66,
+				'percent': '10'
+			}, {
+				'id': 92,
+				'percent': '10'
+			}, {
+				'id': 87,
+				'percent': '10'
+			}, {
+				'id': 88,
+				'percent': '10'
+			}, {
+				'id': 94,
+				'percent': '10'
+			}, {
+				'id': 366,
+				'percent': '10'
+			}, {
+				'id': 96,
+				'percent': '10'
+			}, {
+				'id': 390,
+				'percent': '5'
+			}, {
+				'id': 375,
+				'percent': '10'
+			}, {
+				'id': 76,
+				'percent': '10'
+			}, {
+				'id': 99,
+				'percent': '10'
+			}, {
+				'id': 65,
+				'percent': '10'
+			}, {
+				'id': 98,
+				'percent': '10'
+			}, {
+				'id': 64,
+				'percent': '10'
+			}, {
+				'id': 84,
+				'percent': '10'
+			}, {
+				'id': 367,
+				'percent': '10'
+			}, {
+				'id': 39,
+				'percent': '0'
+			}, {
+				'id': 77,
+				'percent': '25'
+			}, {
+				'id': 74,
+				'percent': '10'
+			}, {
+				'id': 73,
+				'percent': '10'
+			}, {
+				'id': 89,
+				'percent': '10'
+			}, {
+				'id': 68,
+				'percent': '5'
+			}, {
+				'id': 72,
+				'percent': '10'
+			}, {
+				'id': 69,
+				'percent': '20'
+			}, {
+				'id': 59,
+				'percent': '25',
+				'vcs': []
+			}, {
+				'id': 57,
+				'percent': '25'
+			}, {
+				'id': 58,
+				'percent': '25'
+			}, {
+				'id': 55,
+				'percent': '25'
+			}, {
+				'id': 56,
+				'percent': '25'
+			}, {
+				'id': 62,
+				'percent': '25',
+				'vcs': [{
+					'id': 1,
+					'percent': '10'
+				}, {
+					'id': 3,
+					'percent': '5'
+				}]
+			}, {
+				'id': 75,
+				'percent': '25'
+			}, {
+				'id': 38,
+				'percent': '25'
+			}, {
+				'id': 37,
+				'percent': '18',
+				'vcs': []
+			}, {
+				'id': 1077,
+				'percent': '25'
+			}, {
+				'id': 665,
+				'percent': '25'
+			}, {
+				'id': 460,
+				'percent': '25'
+			}, {
+				'id': 459,
+				'percent': '25'
+			}, {
+				'id': 673,
+				'percent': '25'
+			}, {
+				'id': 680,
+				'percent': '25'
+			}, {
+				'id': 681,
+				'percent': '25'
+			}, {
+				'id': 679,
+				'percent': '25'
+			}, {
+				'id': 273,
+				'percent': '25'
+			}, {
+				'id': 311,
+				'percent': '25'
+			}, {
+				'id': 670,
+				'percent': '25'
+			}, {
+				'id': 1099,
+				'percent': '25'
+			}, {
+				'id': 658,
+				'percent': '25'
+			}, {
+				'id': 1107,
+				'percent': '25'
+			}, {
+				'id': 148,
+				'percent': '25'
+			}, {
+				'id': 149,
+				'percent': '25'
+			}, {
+				'id': 1106,
+				'percent': '25'
+			}, {
+				'id': 275,
+				'percent': '25'
+			}, {
+				'id': 272,
+				'percent': '25'
+			}, {
+				'id': 274,
+				'percent': '25'
+			}, {
+				'id': 151,
+				'percent': '25'
+			}, {
+				'id': 147,
+				'percent': '25'
+			}, {
+				'id': 150,
+				'percent': '25'
+			}, {
+				'id': 1322,
+				'percent': '25'
+			}, {
+				'id': 144,
+				'percent': '25'
+			}, {
+				'id': 143,
+				'percent': '25'
+			}, {
+				'id': 142,
+				'percent': '25'
+			}, {
+				'id': 145,
+				'percent': '25'
+			}, {
+				'id': 1315,
+				'percent': '25'
+			}, {
+				'id': 1314,
+				'percent': '25'
+			}, {
+				'id': 1838,
+				'percent': '25'
+			}, {
+				'id': 18476,
+				'percent': '25'
+			}, {
+				'id': 1313,
+				'percent': '25'
+			}, {
+				'id': 646,
+				'percent': '25'
+			}, {
+				'id': 644,
+				'percent': '25'
+			}, {
+				'id': 137,
+				'percent': '25'
+			}, {
+				'id': 647,
+				'percent': '25'
+			}, {
+				'id': 645,
+				'percent': '25'
+			}, {
+				'id': 136,
+				'percent': '25'
+			}, {
+				'id': 40174,
+				'percent': '25'
+			}, {
+				'id': 140,
+				'percent': '25'
+			}, {
+				'id': 141,
+				'percent': '25'
+			}, {
+				'id': 139,
+				'percent': '25'
+			}, {
+				'id': 138,
+				'percent': '25'
+			}, {
+				'id': '1053',
+				'percent': '50'
+			}, {
+				'id': '1052',
+				'percent': '50'
+			}, {
+				'id': '1057',
+				'percent': '50'
+			}, {
+				'id': '1055',
+				'percent': '50'
+			}, {
+				'id': '129',
+				'percent': '50'
+			}, {
+				'id': '1056',
+				'percent': '50'
+			}, {
+				'id': '745',
+				'percent': '50'
+			}, {
+				'id': '1117',
+				'percent': '50'
+			}, {
+				'id': '1063',
+				'percent': '50'
+			}, {
+				'id': '1062',
+				'percent': '50'
+			}, {
+				'id': '130',
+				'percent': '50'
+			}, {
+				'id': '16767',
+				'percent': '50'
+			}, {
+				'id': '16771',
+				'percent': '50'
+			}, {
+				'id': '37148',
+				'percent': '50'
+			}, {
+				'id': '128',
+				'percent': '50'
+			}, {
+				'id': '746',
+				'percent': '50'
+			}, {
+				'id': '1060',
+				'percent': '50'
+			}, {
+				'id': '126',
+				'percent': '50'
+			}, {
+				'id': '127',
+				'percent': '50'
+			}, {
+				'id': '44',
+				'percent': '50'
+			}, {
+				'id': '43',
+				'percent': '50'
+			}, {
+				'id': '1054',
+				'percent': '50'
+			}, {
+				'id': '1058',
+				'percent': '50'
+			}, {
+				'id': '15384',
+				'percent': '50'
+			}, {
+				'id': '1059',
+				'percent': '50'
+			}, {
+				'id': '1061',
+				'percent': '50'
+			}],
+			'ads_delta': [{
+				'id': '125',
+				'toddler': {
+					'delta': -8,
+					'currency': 'USD',
+					'switch': 'off'
+				},
+				'children': {
+					'delta': -8,
+					'currency': 'USD',
+					'switch': 'off'
+				}
+			}, {
+				'id': '141',
+				'infant': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'toddler': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'children': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				}
+			}, {
+				'id': '140',
+				'infant': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'toddler': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'children': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				}
+			}, {
+				'id': '138',
+				'infant': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'toddler': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'children': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				}
+			}, {
+				'id': '18476',
+				'infant': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'toddler': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'children': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				}
+			}, {
+				'id': '40174',
+				'infant': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'toddler': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'children': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				}
+			}, {
+				'id': '139',
+				'infant': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'toddler': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'children': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				}
+			}, {
+				'id': '136',
+				'infant': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'toddler': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'children': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				}
+			}, {
+				'id': '645',
+				'infant': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'toddler': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'children': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				}
+			}, {
+				'id': '647',
+				'infant': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'toddler': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'children': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				}
+			}, {
+				'id': '644',
+				'infant': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'toddler': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'children': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				}
+			}, {
+				'id': '137',
+				'infant': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'toddler': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'children': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				}
+			}, {
+				'id': '145',
+				'infant': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'toddler': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'children': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				}
+			}, {
+				'id': '142',
+				'infant': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'toddler': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'children': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				}
+			}, {
+				'id': '143',
+				'infant': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'toddler': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'children': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				}
+			}, {
+				'id': '144',
+				'infant': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'toddler': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'children': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				}
+			}, {
+				'id': '1322',
+				'infant': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'toddler': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'children': {
+					'delta': 15,
+					'currency': 'USD',
+					'switch': 'on'
+				}
+			}, {
+				'id': '75',
+				'infant': {
+					'delta': 10,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'toddler': {
+					'delta': 10,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'children': {
+					'delta': 10,
+					'currency': 'USD',
+					'switch': 'on'
+				}
+			}, {
+				'id': '38',
+				'infant': {
+					'delta': 10,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'toddler': {
+					'delta': 10,
+					'currency': 'USD',
+					'switch': 'on'
+				},
+				'children': {
+					'delta': 10,
+					'currency': 'USD',
+					'switch': 'on'
+				}
+			}],
+			'mag_delta': [{
+				'id': '125',
+				'delta': 5,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '49',
+				'delta': 5,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '52',
+				'delta': 5,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '51',
+				'delta': 5,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '50',
+				'delta': 5,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '141',
+				'delta': 8,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '140',
+				'delta': 9,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '138',
+				'delta': 9,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '40174',
+				'delta': 9,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '139',
+				'delta': 9,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '136',
+				'delta': 9,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '645',
+				'delta': 8,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '647',
+				'delta': 9,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '644',
+				'delta': 9,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '137',
+				'delta': 8,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '145',
+				'delta': 8,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '142',
+				'delta': 9,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '143',
+				'delta': 9,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '144',
+				'delta': 9,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '1322',
+				'delta': 10,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '69',
+				'delta': 40,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '72',
+				'delta': 50,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '68',
+				'delta': 18,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '89',
+				'delta': 18,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '74',
+				'delta': 18,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '73',
+				'delta': 18,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '39',
+				'delta': 30,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '367',
+				'delta': 20,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '84',
+				'delta': 30,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '96',
+				'delta': 30,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '366',
+				'delta': 30,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '88',
+				'delta': 30,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '67',
+				'delta': 30,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '77',
+				'delta': 18,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '70',
+				'delta': 30,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '94',
+				'delta': 30,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '75',
+				'delta': 25,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '38',
+				'delta': 20,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '37',
+				'delta': 25,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '62',
+				'delta': 20,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '58',
+				'delta': 25,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '42758',
+				'delta': 25,
+				'currency': 'CAD',
+				'switch': 'on'
+			}, {
+				'id': '55',
+				'delta': 5,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '56',
+				'delta': 25,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '57',
+				'delta': 30,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '60',
+				'delta': 25,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '825',
+				'delta': 20,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '820',
+				'delta': 20,
+				'currency': 'USD',
+				'switch': 'on'
+			}, {
+				'id': '1284',
+				'delta': 20,
+				'currency': 'USD',
+				'switch': 'on'
+			}]
+		},
+		'doNotDel': 'doNotDel',
+		'percent': '18'
+	},
+	'version': None,
+	'login_id': 38
+}]
+2024 - 06 - 06 T18: 48: 22.564 Z select country from lat_lng_4_country where(lat, lng) in ((34, -118), (34.06, -118.44),
+	(34.0689, -118.4452));
+2024 - 06 - 06 T18: 48: 22.564 Z Param: ()
+2024 - 06 - 06 T18: 48: 22.602 Z 2024 - 06 - 06 18: 48: 22, 602 - elife_log - INFO - from and to address is in
+	same country!
+	2024 - 06 - 06 T18: 48: 22.602 Z 2024 - 06 - 06 18: 48: 22, 602 - elife_log - INFO - from and to place is in
+	same country, begin calculate price.
+  
+2024 - 06 - 06 T18: 48: 24.205 Z 2024 - 06 - 06 18: 48: 24, 204 - elife_log - INFO - calculate_price_for_post price: [{
+	'zone_name': 'Beverly hills',
+	'price': 59.75,
+	'vehicle': 'Sedan',
+	'over_distance': None,
+	'price_detail': {
+		'base_pricing': {
+			'type': 'fixed',
+			'fix_price_type': 'Transfer',
+			'zone': 'Beverly hills',
+			'price': {
+				'amount': 59.75,
+				'currency': 'USD'
+			}
+		},
+		'special_pricing': []
+	}
+}, {
+	'zone_name': 'Beverly hills',
+	'price': 71.49,
+	'vehicle': 'Business Sedan',
+	'over_distance': None,
+	'price_detail': {
+		'base_pricing': {
+			'type': 'fixed',
+			'fix_price_type': 'Transfer',
+			'zone': 'Beverly hills',
+			'price': {
+				'amount': 71.49,
+				'currency': 'USD'
+			}
+		},
+		'special_pricing': []
+	}
+}, {
+	'zone_name': 'Beverly hills',
+	'price': 63.0,
+	'vehicle': 'MPV-4',
+	'over_distance': None,
+	'price_detail': {
+		'base_pricing': {
+			'type': 'fixed',
+			'fix_price_type': 'Transfer',
+			'zone': 'Beverly hills',
+			'price': {
+				'amount': 63.0,
+				'currency': 'USD'
+			}
+		},
+		'special_pricing': []
+	}
+}, {
+	'zone_name': 'Beverly hills',
+	'price': 65.75,
+	'vehicle': 'MPV-5',
+	'over_distance': None,
+	'price_detail': {
+		'base_pricing': {
+			'type': 'fixed',
+			'fix_price_type': 'Transfer',
+			'zone': 'Beverly hills',
+			'price': {
+				'amount': 65.75,
+				'currency': 'USD'
+			}
+		},
+		'special_pricing': []
+	}
+}, {
+	'zone_name': 'Beverly hills',
+	'price': 123.48,
+	'vehicle': 'Business MPV-5',
+	'over_distance': None,
+	'price_detail': {
+		'base_pricing': {
+			'type': 'fixed',
+			'fix_price_type': 'Transfer',
+			'zone': 'Beverly hills',
+			'price': {
+				'amount': 123.48,
+				'currency': 'USD'
+			}
+		},
+		'special_pricing': []
+	}
+}, {
+	'zone_name': 'Beverly hills',
+	'price': 199.01,
+	'vehicle': 'Minibus-8',
+	'over_distance': None,
+	'price_detail': {
+		'base_pricing': {
+			'type': 'fixed',
+			'fix_price_type': 'Transfer',
+			'zone': 'Beverly hills',
+			'price': {
+				'amount': 199.01,
+				'currency': 'USD'
+			}
+		},
+		'special_pricing': []
+	}
+}, {
+	'zone_name': 'Beverly hills',
+	'price': 199.05,
+	'vehicle': 'Minibus-10',
+	'over_distance': None,
+	'price_detail': {
+		'base_pricing': {
+			'type': 'fixed',
+			'fix_price_type': 'Transfer',
+			'zone': 'Beverly hills',
+			'price': {
+				'amount': 199.05,
+				'currency': 'USD'
+			}
+		},
+		'special_pricing': []
+	}
+}, {
+	'zone_name': 'Beverly hills',
+	'price': 199.11,
+	'vehicle': 'Minibus-12',
+	'over_distance': None,
+	'price_detail': {
+		'base_pricing': {
+			'type': 'fixed',
+			'fix_price_type': 'Transfer',
+			'zone': 'Beverly hills',
+			'price': {
+				'amount': 199.11,
+				'currency': 'USD'
+			}
+		},
+		'special_pricing': []
+	}
+}, {
+	'zone_name': 'Beverly hills',
+	'price': 480.0,
+	'vehicle': 'Minibus-14',
+	'over_distance': None,
+	'price_detail': {
+		'base_pricing': {
+			'type': 'fixed',
+			'fix_price_type': 'Transfer',
+			'zone': 'Beverly hills',
+			'price': {
+				'amount': 480.0,
+				'currency': 'USD'
+			}
+		},
+		'special_pricing': []
+	}
+}, {
+	'zone_name': 'Beverly hills',
+	'price': 123.48,
+	'vehicle': 'Business Van',
+	'over_distance': None,
+	'price_detail': {
+		'base_pricing': {
+			'type': 'fixed',
+			'fix_price_type': 'Transfer',
+			'zone': 'Beverly hills',
+			'price': {
+				'amount': 123.48,
+				'currency': 'USD'
+			}
+		},
+		'special_pricing': []
+	}
+}, {
+	'zone_name': 'Beverly hills',
+	'price': 550.0,
+	'vehicle': '6 Passenger Stretch Limo',
+	'over_distance': None,
+	'price_detail': {
+		'base_pricing': {
+			'type': 'fixed',
+			'fix_price_type': 'Transfer',
+			'zone': 'Beverly hills',
+			'price': {
+				'amount': 550.0,
+				'currency': 'USD'
+			}
+		},
+		'special_pricing': []
+	}
+}, {
+	'zone_name': 'Beverly hills',
+	'price': 600.0,
+	'vehicle': '8 Passenger Stretch Limo',
+	'over_distance': None,
+	'price_detail': {
+		'base_pricing': {
+			'type': 'fixed',
+			'fix_price_type': 'Transfer',
+			'zone': 'Beverly hills',
+			'price': {
+				'amount': 600.0,
+				'currency': 'USD'
+			}
+		},
+		'special_pricing': []
+	}
+}, {
+	'zone_name': 'Beverly hills',
+	'price': 700.0,
+	'vehicle': '10 Passenger Stretch Limo',
+	'over_distance': None,
+	'price_detail': {
+		'base_pricing': {
+			'type': 'fixed',
+			'fix_price_type': 'Transfer',
+			'zone': 'Beverly hills',
+			'price': {
+				'amount': 700.0,
+				'currency': 'USD'
+			}
+		},
+		'special_pricing': []
+	}
+}, {
+	'zone_name': 'Beverly hills',
+	'price': 800.0,
+	'vehicle': '12 Passenger Stretch Limo',
+	'over_distance': None,
+	'price_detail': {
+		'base_pricing': {
+			'type': 'fixed',
+			'fix_price_type': 'Transfer',
+			'zone': 'Beverly hills',
+			'price': {
+				'amount': 800.0,
+				'currency': 'USD'
+			}
+		},
+		'special_pricing': []
+	}
+}, {
+	'zone_name': 'Beverly hills',
+	'price': 950.0,
+	'vehicle': '16 Passenger Stretch Limo',
+	'over_distance': None,
+	'price_detail': {
+		'base_pricing': {
+			'type': 'fixed',
+			'fix_price_type': 'Transfer',
+			'zone': 'Beverly hills',
+			'price': {
+				'amount': 950.0,
+				'currency': 'USD'
+			}
+		},
+		'special_pricing': []
+	}
+}, {
+	'zone_name': 'Beverly hills',
+	'price': 780.0,
+	'vehicle': '16-seat Bus',
+	'over_distance': None,
+	'price_detail': {
+		'base_pricing': {
+			'type': 'fixed',
+			'fix_price_type': 'Transfer',
+			'zone': 'Beverly hills',
+			'price': {
+				'amount': 780.0,
+				'currency': 'USD'
+			}
+		},
+		'special_pricing': []
+	}
+}, {
+	'zone_name': 'Beverly hills',
+	'price': 950.0,
+	'vehicle': '20-seat Bus',
+	'over_distance': None,
+	'price_detail': {
+		'base_pricing': {
+			'type': 'fixed',
+			'fix_price_type': 'Transfer',
+			'zone': 'Beverly hills',
+			'price': {
+				'amount': 950.0,
+				'currency': 'USD'
+			}
+		},
+		'special_pricing': []
+	}
+}, {
+	'zone_name': 'Beverly hills',
+	'price': 1000.0,
+	'vehicle': '23-seat Bus',
+	'over_distance': None,
+	'price_detail': {
+		'base_pricing': {
+			'type': 'fixed',
+			'fix_price_type': 'Transfer',
+			'zone': 'Beverly hills',
+			'price': {
+				'amount': 1000.0,
+				'currency': 'USD'
+			}
+		},
+		'special_pricing': []
+	}
+}, {
+	'zone_name': 'Beverly hills',
+	'price': 1030.0,
+	'vehicle': '27-seat Bus',
+	'over_distance': None,
+	'price_detail': {
+		'base_pricing': {
+			'type': 'fixed',
+			'fix_price_type': 'Transfer',
+			'zone': 'Beverly hills',
+			'price': {
+				'amount': 1030.0,
+				'currency': 'USD'
+			}
+		},
+		'special_pricing': []
+	}
+}, {
+	'zone_name': 'Beverly hills',
+	'price': 1100.0,
+	'vehicle': '36-seat Bus',
+	'over_distance': None,
+	'price_detail': {
+		'base_pricing': {
+			'type': 'fixed',
+			'fix_price_type': 'Transfer',
+			'zone': 'Beverly hills',
+			'price': {
+				'amount': 1100.0,
+				'currency': 'USD'
+			}
+		},
+		'special_pricing': []
+	}
+}, {
+	'zone_name': 'Beverly hills',
+	'price': 1130.0,
+	'vehicle': '44-seat Coach Bus',
+	'over_distance': None,
+	'price_detail': {
+		'base_pricing': {
+			'type': 'fixed',
+			'fix_price_type': 'Transfer',
+			'zone': 'Beverly hills',
+			'price': {
+				'amount': 1130.0,
+				'currency': 'USD'
+			}
+		},
+		'special_pricing': []
+	}
+}, {
+	'zone_name': 'Beverly hills',
+	'price': 1150.0,
+	'vehicle': '55-seat Coach Bus',
+	'over_distance': None,
+	'price_detail': {
+		'base_pricing': {
+			'type': 'fixed',
+			'fix_price_type': 'Transfer',
+			'zone': 'Beverly hills',
+			'price': {
+				'amount': 1150.0,
+				'currency': 'USD'
+			}
+		},
+		'special_pricing': []
+	}
+}, {
+	'zone_name': 'Beverly hills',
+	'price': 190.0,
+	'vehicle': 'EV Sedan',
+	'over_distance': None,
+	'price_detail': {
+		'base_pricing': {
+			'type': 'fixed',
+			'fix_price_type': 'Transfer',
+			'zone': 'Beverly hills',
+			'price': {
+				'amount': 190.0,
+				'currency': 'USD'
+			}
+		},
+		'special_pricing': []
+	}
+}, {
+	'zone_name': 'Beverly hills',
+	'price': 260.0,
+	'vehicle': 'EV Business Sedan',
+	'over_distance': None,
+	'price_detail': {
+		'base_pricing': {
+			'type': 'fixed',
+			'fix_price_type': 'Transfer',
+			'zone': 'Beverly hills',
+			'price': {
+				'amount': 260.0,
+				'currency': 'USD'
+			}
+		},
+		'special_pricing': []
+	}
+}, {
+	'zone_name': 'Beverly hills',
+	'price': 300.0,
+	'vehicle': 'First Class',
+	'over_distance': None,
+	'price_detail': {
+		'base_pricing': {
+			'type': 'fixed',
+			'fix_price_type': 'Transfer',
+			'zone': 'Beverly hills',
+			'price': {
+				'amount': 300.0,
+				'currency': 'USD'
+			}
+		},
+		'special_pricing': []
+	}
+}, {
+	'zone_name': 'Beverly hills',
+	'price': 400.0,
+	'vehicle': 'EV First Class Sedan',
+	'over_distance': None,
+	'price_detail': {
+		'base_pricing': {
+			'type': 'fixed',
+			'fix_price_type': 'Transfer',
+			'zone': 'Beverly hills',
+			'price': {
+				'amount': 400.0,
+				'currency': 'USD'
+			}
+		},
+		'special_pricing': []
+	}
+}, {
+	'zone_name': 'Beverly hills',
+	'price': 350.0,
+	'vehicle': 'Wheelchair Van',
+	'over_distance': None,
+	'price_detail': {
+		'base_pricing': {
+			'type': 'fixed',
+			'fix_price_type': 'Transfer',
+			'zone': 'Beverly hills',
+			'price': {
+				'amount': 350.0,
+				'currency': 'USD'
+			}
+		},
+		'special_pricing': []
+	}
+}, {
+	'zone_name': 'Beverly hills',
+	'price': 70.0,
+	'vehicle': 'Comfort Sedan',
+	'over_distance': None,
+	'price_detail': {
+		'base_pricing': {
+			'type': 'fixed',
+			'fix_price_type': 'Transfer',
+			'zone': 'Beverly hills',
+			'price': {
+				'amount': 70.0,
+				'currency': 'USD'
+			}
+		},
+		'special_pricing': []
+	}
+}, {
+	'zone_name': 'Beverly hills',
+	'price': 210.0,
+	'vehicle': 'Luxury Sedan',
+	'over_distance': None,
+	'price_detail': {
+		'base_pricing': {
+			'type': 'fixed',
+			'fix_price_type': 'Transfer',
+			'zone': 'Beverly hills',
+			'price': {
+				'amount': 210.0,
+				'currency': 'USD'
+			}
+		},
+		'special_pricing': []
+	}
+}]
+2024 - 06 - 06 T18: 48: 24.324 Z 2024 - 06 - 06 18: 48: 24, 324 - elife_log - INFO -
+	Klook can 't wait for uploading result, so no upload is done
+2024 - 06 - 06 T18: 48: 24.382 Z 2024 - 06 - 06 18: 48: 24, 325 - elife_log - INFO -
+	End call to ride_quotes_post_proc in 3.6701862812042236 seconds.

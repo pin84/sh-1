@@ -5,38 +5,10 @@
   <meta charset="UTF-8">
   <!-- import CSS -->
   <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
-  <!-- <link rel="stylesheet" href="./airportToHotel.css"> -->
-
-  <!-- <style>
-    .box .addr {
-      display: flex;
-    }
-
-    .box .ex {
-      margin-top: 20px;
-    }
-  </style> -->
-
 </head>
 
 <body>
   <div id="app">
-    <!-- <div class="box">
-      <div class="addr">
-        <span>from:</span>
-        
-
-        <el-select v-model="placeId" placeholder="请选择" filterable remote :remote-method="toInput" @change="changeAddr">
-          <el-option v-for="item in options" :key="item.place_id" :label="item.description" :value="item.place_id">
-          </el-option>
-        </el-select>
-      </div>
-      <div class="addr">
-        <span>to:</span>
-        <textarea v-model="textareaValue" name="" id="" cols="150" rows="20"></textarea>
-      </div>
-      <el-button @click="exportCsv" class="ex">导出</el-button>
-    </div> -->
 
     <input ref="inputElm" type="file" accept=".xls,.xlsx,.csv" placeholder="请输入内容" />
     <el-button @click="exportCsv" class="ex">导出</el-button>

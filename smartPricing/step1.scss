@@ -1,0 +1,113 @@
+.main-body {
+  color: rgba(76, 75, 103, 1);
+  font-size: 14px;
+  .save {
+    width: 72px px;
+    height: 36px px;
+    padding: 7px 20px 7px 20px;
+    border-radius: 2px 0px 0px 0px;
+    background: rgba(254, 122, 31, 1);
+    color: #fff;
+  }
+  .top-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    .top-left {
+      .route{
+        margin-bottom: 10px;
+      }
+    }
+ 
+  }
+
+  .setting-box{
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    .setting-item{
+      display: flex;
+      // justify-content: space-between;
+      .setting-pricing-item{
+        position: relative;
+        display: flex;
+        align-items: center;
+        margin-right: 10px;
+        .input{
+          background-color: #f1f1f1;
+          border: none;
+          outline: none;
+          height: 32px;
+          border-radius: 1px;
+          padding: 0 10px;
+          box-sizing: border-box;
+          width: 120px;
+        }
+        .unit{
+          position: absolute;
+          right: 10px;
+        }
+      }
+    }
+    .top{
+      margin-bottom: 10px;
+      .top-right{
+        display: flex;
+      }
+    }
+    .setting-pricing{
+    }
+  }
+  .result-list{
+    display: flex;
+    flex-direction: column;
+
+    .result-item{
+      justify-content: space-between;
+      display: flex;
+      // margin-bottom: 20px;
+      padding: 10px 20px;
+      border-bottom: 1px solid rgba(235, 235, 235, 1);
+      .item{
+        display: flex;
+        flex-direction: column;
+        .item-top{
+          margin-bottom: 10px;
+          .price{
+            font-size: 24px;
+            color: #000;
+          }
+        }
+        .item-bottom{
+          .save-btn{
+            background: rgba(254, 122, 31, 1);
+            // height: 20px;
+            padding: 3px 10px;
+            color: #fff;
+          }
+        }
+        .item-bottom-confirm{
+          display: flex;
+          .icon{
+            font-size: 14px;
+            margin-left: 15px;
+            cursor: pointer;
+          }
+          .i-close{
+            color: rgba(255, 18, 18, 1);
+          }
+          .i-select{
+            color: rgba(4, 180, 114, 1)
+          }
+        }
+
+        .mr_10{
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+}
