@@ -1,0 +1,121 @@
+.main-body {
+  color: #4c4b67;
+  font-size: 14px;
+}
+
+.main-body .save {
+  width: 72px px;
+  height: 36px px;
+  padding: 7px 20px 7px 20px;
+  border-radius: 2px 0px 0px 0px;
+  background: #fe7a1f;
+  color: #fff;
+}
+
+.main-body .top-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.main-body .top-box .top-left .route {
+  margin-bottom: 10px;
+}
+
+.main-body .setting-box {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.main-body .setting-box .setting-item {
+  display: flex;
+}
+
+.main-body .setting-box .setting-item .setting-pricing-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.main-body .setting-box .setting-item .setting-pricing-item .input {
+  background-color: #f1f1f1;
+  border: none;
+  outline: none;
+  height: 32px;
+  border-radius: 1px;
+  padding: 0 10px;
+  box-sizing: border-box;
+  width: 120px;
+}
+
+.main-body .setting-box .setting-item .setting-pricing-item .unit {
+  position: absolute;
+  right: 10px;
+}
+
+.main-body .setting-box .top {
+  margin-bottom: 10px;
+}
+
+.main-body .setting-box .top .top-right {
+  display: flex;
+}
+
+.main-body .result-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-body .result-list .result-item {
+  justify-content: space-between;
+  display: flex;
+  padding: 10px 20px;
+  border-bottom: 1px solid #ebebeb;
+}
+
+.main-body .result-list .result-item .item {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-body .result-list .result-item .item .item-top {
+  margin-bottom: 10px;
+}
+
+.main-body .result-list .result-item .item .item-top .price {
+  font-size: 24px;
+  color: #000;
+}
+
+.main-body .result-list .result-item .item .item-bottom .save-btn {
+  background: #fe7a1f;
+  padding: 3px 10px;
+  color: #fff;
+}
+
+.main-body .result-list .result-item .item .item-bottom-confirm {
+  display: flex;
+}
+
+.main-body .result-list .result-item .item .item-bottom-confirm .icon {
+  font-size: 14px;
+  margin-left: 15px;
+  cursor: pointer;
+}
+
+.main-body .result-list .result-item .item .item-bottom-confirm .i-close {
+  color: #ff1212;
+}
+
+.main-body .result-list .result-item .item .item-bottom-confirm .i-select {
+  color: #04b472;
+}
+
+.main-body .result-list .result-item .item .mr_10 {
+  margin-right: 10px;
+}
