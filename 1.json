@@ -1,27 +1,26 @@
-
 // smart pricing pilot
 
-create table spp_route 
+create table spp_route
 (
     id            int unsigned auto_increment primary key,
-    from               varchar(256)                  null,
-    to                 varchar(256)                   null,
+    from_place               varchar(256)                  null,
+    to_place                 varchar(256)                   null,
     vehicle_class_id   tinyint unsigned                    null,
     cost           decimal(10,2)                        null,
     profit           decimal(10,2)                        null,
     inserted_at        timestamp default CURRENT_TIMESTAMP not null,
-    last_updated_at    timestamp default CURRENT_TIMESTAMP not null on update 
-
+    last_updated_at    timestamp default CURRENT_TIMESTAMP not null on update CURRENT_TIMESTAMP
 )
 // (price - cost) / price  * 100 = profit
 // WRONG : cost + cost * profit =  price
+
 create table spp_service_area_capacity
 (
     id            int unsigned auto_increment primary key,
     service_area_id               int                 null,
     capacity                 int                   null,
     inserted_at        timestamp default CURRENT_TIMESTAMP not null,
-    last_updated_at    timestamp default CURRENT_TIMESTAMP not null on update 
+    last_updated_at    timestamp default CURRENT_TIMESTAMP not null on update CURRENT_TIMESTAMP
 )
 
 create table spp_price_adj
@@ -32,28 +31,15 @@ create table spp_price_adj
     rate_by_computer           tinyint                        null,
     route_id      int unsigned                       null,
     inserted_at        timestamp default CURRENT_TIMESTAMP not null,
-    last_updated_at    timestamp default CURRENT_TIMESTAMP not null on update 
+    last_updated_at    timestamp default CURRENT_TIMESTAMP not null on update  CURRENT_TIMESTAMP,
 
-    constraint route_id_1  foreign key (route_id) references route (id),
+    constraint route_id_1  foreign key (route_id) references spp_route (id)
 )
 
 
-create table cost
-(
-    id            int unsigned auto_increment primary key,
-    routes_id      int unsigned                       null,
-    cost           decimal(10,2)                        null,
-    profit           decimal(10,2)                        null,
-    // target_type         tinyint(1)                          null
-    is_effective         tinyint(1)                          null,
-    inserted_at        timestamp default CURRENT_TIMESTAMP not null,
-    last_updated_at    timestamp default CURRENT_TIMESTAMP not null on update 
 
 
-    constraint routes_id_1  foreign key (routes_id) references routes (id),
-)
 
-//设置目标是整个服务区的，单条路线能不能判断有没有达到目标？
 
 
 
@@ -107,7 +93,8 @@ create table cost
 create table ride
 (
     id                 int unsigned auto_increment primary key,
-    cost               decimal(10,2)                        null,
+    cost               decimal(10,
+2)                        null,
     target_type         tinyint(1)                          null
 
     partner_tran_id    int unsigned                        null,
