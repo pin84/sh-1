@@ -14,6 +14,7 @@ create table spp_route
 // (price - cost) / price  * 100 = profit
 // WRONG : cost + cost * profit =  price
 
+
 create table spp_service_area_capacity
 (
     id            int unsigned auto_increment primary key,
@@ -38,12 +39,12 @@ create table spp_price_adj
 
 
 
+第一次修改价格加一个JSON,但不应用。
 
-
-
-
-
-
+需要三个表的授权
+修改价格时zones 和 vehicleClasses 字段里的加价没有对应关系
+用机器调价会更麻烦，没有办法定位
+只调接机/接送机一起
 
 
 
