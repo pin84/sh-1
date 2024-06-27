@@ -1,13 +1,84 @@
-
-UPDATE ride.spp_route t
-SET t.cost = {{price}}, t.profit = {{profit}}
-WHERE t.id = {{route_id}};
-
-
-INSERT INTO ride.spp_route (from_place, to_place, vehicle_class_id, cost, profit)
-VALUES ('{{from_place}}', '{{to_place}}', {{vehicle_class_id}}, {{cost}}, {{profit}});
-
-INSERT INTO ride.service_area_pricing (service_area_id, pricing, effective_at, expire_at,  login_id )
-VALUES ({{service_area_id}},
-        '{{pricing}}',
-        '2024-01-31 05:24:58', '2037-12-31 23:59:59',  40 );
+{
+  "numberOfPassengers": 1,
+  "passenger": [
+    {
+      "type": "main",
+      "title": "MRS",
+      "firstName": "LAURA MARGARET",
+      "lastName": "MC GANN",
+      "mobilePhone": "+353879749587",
+      "email": "TRAVEL.AT@REDBULL.COM",
+      "address": {
+        "addressLine": "OBERST-LEPPERDINGER-STRASSE 11-15",
+        "zip": "5071",
+        "city": "WALS BEI SALZBURG",
+        "country": "AT"
+      }
+    }
+  ],
+  "paymentMethod": "creditcard",
+  "pickup": {
+    "dateTime": "2024-06-12T10:30:00",
+    "iata": "ZRH",
+    "address": "Zurich Airport, Zurich",
+    "zip": "undefined",
+    "country": "CH",
+    "city": "Zurich",
+    "latitude": 47.45278,
+    "longitude": 8.56056
+  },
+  "dropoff": {
+    "address": "Reitlpromenade 3, 5640 Bad Gastein, Austria",
+    "zip": "5640",
+    "country": "AT",
+    "city": "Bad Gastein",
+    "latitude": 47.1173169,
+    "longitude": 13.1393544
+  },
+  "pnrRecordLocator": "QC63ZI",
+  "quotation": {
+    "quote": [
+      {
+        "quoteIdentifier": "1644c74d6899407daac8b3680dd29721-v1",
+        "type": "total",
+        "priceCurrencyCode": "EUR",
+        "priceDecimalPlaces": "2",
+        "priceAmount": "80897",
+        "currencyPriceAmount": 808.97
+      }
+    ]
+  },
+  "transferServiceType": "PRIVATE",
+  "vehicle": {
+    "seatsCapacity": 3,
+    "description": "A 3 seater SDN, Toyota Camry or Similar",
+    "bkgClass": "ST",
+    "category": "SDN"
+  },
+  "amadeusTransactionID": "1718091258520987620",
+  "flightNumber": "EI342",
+  "moto": true,
+  "amadeusOfficeID": "SZGL1213Z",
+  "passengerCategory": [{ "typeCode": "adult" }],
+  "pickup_arr": [
+    "pickup.latitude",
+    "pickup.longitude",
+    "pickup.iata",
+    "pickup.address",
+    "pickup.zip",
+    "pickup.country",
+    "pickup.city"
+  ],
+  "dropoff_arr": [
+    "dropoff.latitude",
+    "dropoff.longitude",
+    "dropoff.address",
+    "dropoff.zip",
+    "dropoff.country",
+    "dropoff.city"
+  ],
+  "time": 1718181000.0,
+  "vehicle_class": "Sedan",
+  "equipment": [],
+  "notes": ""
+}
