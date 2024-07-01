@@ -36,7 +36,7 @@
             </el-button>
             <el-dropdown-menu slot="dropdown">
               <el-dropdown-item v-for="(item,index) in routes" :key="index"
-                                :command="item">{{item.name}}</el-dropdown-item>
+                :command="item">{{item.name}}</el-dropdown-item>
             </el-dropdown-menu>
           </el-dropdown>
           <div class="vehicle">
@@ -46,7 +46,7 @@
               </el-button>
               <el-dropdown-menu slot="dropdown">
                 <el-dropdown-item v-for="(item,index) in vehicleList" :key="index"
-                                  :command="item">{{item.vehicle_name}}</el-dropdown-item>
+                  :command="item">{{item.vehicle_name}}</el-dropdown-item>
               </el-dropdown-menu>
             </el-dropdown>
           </div>
@@ -234,8 +234,6 @@
               "model_txt_id": null,
               "seq_front": 1
             },
-
-
             {
               "vehicle_id": 6,
               "vehicle_name": "MPV-4",
@@ -276,9 +274,6 @@
               "model_txt_id": null,
               "seq_front": 13
             }
-
-
-
           ],
           targetTypes: [
             {
@@ -292,7 +287,6 @@
             {
               price: 36.5,
               unit: 'USD',
-
             }
 
           ],
@@ -309,7 +303,7 @@
         let ses = 'vbrkSAyz6CCAztNt4Pu6HVFdCXquUPHcMwtg6LSZTNfmqrD6A5a3iAuOMZDKUUe9BKSIRMfohJqisplYXlImmlwIFTHMISHtuPKMsH5fl3zZkE3deNQwfLouWDzYGz42'
         this.url = `https://jqwys3p5nk.execute-api.us-east-2.amazonaws.com/dev/sql-template/run?ses=${ses}`
         if (this.stage == 'prod') {
-          ses = 'DC4lWiIQC2xtNUsTocgZTbgn5Rsc8HNXEvvfa95teVQM7qbiPzp6QlkTURNp5TtU2wSuS89iiADQXW7DrK5PPP0jMjiRDew49yThIUvlGMoj00v5KtqMDC4r0u7830SR'
+          ses = 'FQPcmPHl2THK4h96dW1Yy4SmE4QqwKkcfXpqWfGlpXH0Xf5ya6LsKHuARhXnS8lgBeY3q8452SE9KSrlsBynShHdqRt0ItzkC5xmcSbvKqw5UOgWi1WncpWPtFocjxSQ'
           this.url = `https://ujrfp99zs9.execute-api.us-east-2.amazonaws.com/upncoming/sql-templates/run?ses=${ses}`
         }
 
@@ -373,6 +367,11 @@
           let url = this.url
           let { id, service_area_id, json: { d_amt: field_d_amt, p_amt: field_p_amt } } = this.currentRoute
           let svcId = service_area_id
+          if (this.stage == 'dev') {
+            svcId = 26975
+          }
+
+          let {vehicle_id} = this.currentVehicle
 
           let promiseList = [
             // this.fetchData({ // update table spp_price_adj 
@@ -396,14 +395,16 @@
               },
               desc: 'get pricing json_id'
             }),
-            ]
+          ]
 
-            debugger
           let [ res2] = await Promise.all(promiseList)
-          let json = await this.getPricingJsonById(res2.results[0].service_area_pricing_id)
+
+          let jsonId = res2.results[0].service_area_pricing_id
+
+          let json = await this.getPricingJsonById(jsonId)
           let { vehicleClasses, zones } = json
-          console.log('----before---', json);
-          let index = vehicleClasses.findIndex(item => item.vehicle_class_id == this.currentVehicle.vehicle_id)
+          console.log('----before---', JSON.parse(JSON.stringify(json)));
+          let index = vehicleClasses.findIndex(item => item.vehicle_class_id == vehicle_id)
           if (index == -1) {
             this.$message({
               message: "cann't find vehicle",
@@ -412,36 +413,47 @@
             return
           }
 
-          debugger
-          for (let obj of vehicleClasses[index].percent_appendix) {
-            let { field, delta_amount } = obj
-
-            if (field == field_p_amt) {
-              let arr = field_d_amt.split('.')
-              let { p_amt, d_amt } = zones[arr[1]].prices[arr[3]]
-              debugger
-              obj['delta_amount'] = this.setCurrentPrice - p_amt || 0
-            }
-            if (field == field_d_amt) {
-              let arr = field_d_amt.split('.')
-              let { p_amt, d_amt } = zones[arr[1]].prices[arr[3]]
-              debugger
-              obj['delta_amount'] = this.setCurrentPrice - d_amt || 0
+          let percent_appendix = vehicleClasses[index].percent_appendix
+          let arr = field_p_amt.split('.')
+          let { p_amt, d_amt } = zones[arr[1]].prices[arr[3]]
+          if (!percent_appendix) {
+            vehicleClasses[index]['percent_appendix'] = [
+              {
+                "field": `${field_d_amt}`,
+                "delta_amount": Number(this.setCurrentPrice) - d_amt || 0,
+              },
+              {
+                "field": `${field_p_amt}`,
+                "delta_amount": Number(this.setCurrentPrice) - p_amt || 0,
+              },
+            ]
+          } else {
+            for (let obj of percent_appendix) {
+              let { field } = obj
+              if (field == field_p_amt) {
+                obj['delta_amount'] = Number(this.setCurrentPrice) - p_amt || 0
+              }
+              if (field == field_d_amt) {
+                obj['delta_amount'] = Number(this.setCurrentPrice) - d_amt || 0
+              }
             }
           }
+
+
           json['vehicleClasses'] = vehicleClasses
           console.log('--after---', json);
-          debugger
           //           INSERT INTO ride.service_area_pricing (service_area_id, pricing, effective_at, expire_at,  login_id )
           // VALUES ({{service_area_id}},'{{pricing}}','2024-01-31 05:24:58', '2037-12-31 23:59:59',  8340 );
+          // 8340
           let insertRes = await this.fetchData({
             url,
             method: 'POST',
             data: {
               sql: 134678887,
-              version: '1.0',
+              version: '1.1',
               service_area_id: svcId,
-              pricing: JSON.stringify(json)
+              pricing: JSON.stringify(json),
+              login_id:this.stage == 'dev' ? 40 : 8340
             }
           })
 

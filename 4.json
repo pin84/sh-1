@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
   "serviceArea": {
       "id": 52426,
@@ -11816,3 +11817,23 @@
       }
   ]
 }
+=======
+select @UNLIMITED_ACCESS:=if(count(*) = 0, 1, 0) from login l inner join employee e on l.employee_id = e.id and l.id = {{ login_id }}
+inner join employee_partner_access epa on epa.employee_id = e.id;
+
+select if(ap.partner & 1,partner.name,concat(substring(partner.name,1,1), "_", substring(partner.name,-1)))  as partner_name,
+partner.id as partner_id,
+supply_demand_pricing.json as pricing_json, partner.fleet_id,
+fleet_supply_demand.pricing_id as fpid
+from partner
+inner join fleet_supply_demand on fleet_supply_demand.demand_fleet_id=partner.fleet_id
+left join supply_demand_pricing on supply_demand_pricing.id=fleet_supply_demand.pricing_id
+inner join login on login.id={{ login_id }}
+left join employee_partner_access epa on epa.employee_id = login.employee_id and partner.id = epa.partner_id and epa.can_see = 1 and @UNLIMITED_ACCESS = 0
+join access_pass ap  on ap.id=login.access_pass_id 
+where fleet_supply_demand.supply_fleet_id in ({{ access_fleet_id }}, 51488) and ({{ access_fleet_id }} = {{ elife_fleet_id }} or {{ access_fleet_id }} = 51488)
+and 
+@UNLIMITED_ACCESS = 1 OR epa.partner_id is not null
+order by partner.id asc;
+
+>>>>>>> 2e8f7865df184072fd4f6641acbcd7967754a59a
