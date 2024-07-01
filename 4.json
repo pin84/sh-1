@@ -11,7 +11,8 @@ left join supply_demand_pricing on supply_demand_pricing.id=fleet_supply_demand.
 inner join login on login.id={{ login_id }}
 left join employee_partner_access epa on epa.employee_id = login.employee_id and partner.id = epa.partner_id and epa.can_see = 1 and @UNLIMITED_ACCESS = 0
 join access_pass ap  on ap.id=login.access_pass_id 
-where fleet_supply_demand.supply_fleet_id in ({{ access_fleet_id }} , 51488) and {{ access_fleet_id }} = {{ elife_fleet_id }} 
+where fleet_supply_demand.supply_fleet_id in ({{ access_fleet_id }}, 51488) and ({{ access_fleet_id }} = {{ elife_fleet_id }} or {{ access_fleet_id }} = 51488)
 and 
 @UNLIMITED_ACCESS = 1 OR epa.partner_id is not null
 order by partner.id asc;
+

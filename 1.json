@@ -10,9 +10,16 @@ create table spp_route
     profit           decimal(10,2)                        null,
     inserted_at        timestamp default CURRENT_TIMESTAMP not null,
     last_updated_at    timestamp default CURRENT_TIMESTAMP not null on update CURRENT_TIMESTAMP
+
+    service_area_id   int unsigned                   null,
+    json               varchar(256)                   null,
+    name               varchar(256)                   null, // mia->m
 )
 // (price - cost) / price  * 100 = profit
 // WRONG : cost + cost * profit =  price
+
+// alter table access_airport
+//     add aa int null;
 
 
 create table spp_service_area_capacity
@@ -33,6 +40,8 @@ create table spp_price_adj
     route_id      int unsigned                       null,
     inserted_at        timestamp default CURRENT_TIMESTAMP not null,
     last_updated_at    timestamp default CURRENT_TIMESTAMP not null on update  CURRENT_TIMESTAMP,
+
+    vehicle_class_id   tinyint unsigned                    null,
 
     constraint route_id_1  foreign key (route_id) references spp_route (id)
 )
