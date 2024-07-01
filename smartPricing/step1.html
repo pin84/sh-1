@@ -194,7 +194,7 @@
           targetType: 1,
 
           currentVehicle: {
-            "vehicle_id": 1044,
+            "vehicle_id": 1,
             "vehicle_name": "Sedan",
             "o_max_passenger": 3,
             "o_maker": "Toyota",
@@ -375,16 +375,16 @@
           let svcId = service_area_id
 
           let promiseList = [
-            this.fetchData({ // update table spp_price_adj 
-              url,
-              method: "POST",
-              data: {
-                sql: 134678885,
-                version: '1.0',
-                price: Number(this.setCurrentPrice),
-                route_id: id
-              }
-            }),
+            // this.fetchData({ // update table spp_price_adj 
+            //   url,
+            //   method: "POST",
+            //   data: {
+            //     sql: 134678885,
+            //     version: '1.0',
+            //     price: Number(this.setCurrentPrice),
+            //     route_id: id
+            //   }
+            // }),
 
             this.fetchData({ //get pricing json_id by svc_id'
               url,
@@ -399,7 +399,7 @@
             ]
 
             debugger
-          let [res1, res2] = await Promise.all(promiseList)
+          let [ res2] = await Promise.all(promiseList)
           let json = await this.getPricingJsonById(res2.results[0].service_area_pricing_id)
           let { vehicleClasses, zones } = json
           console.log('----before---', json);
@@ -432,7 +432,6 @@
           json['vehicleClasses'] = vehicleClasses
           console.log('--after---', json);
           debugger
-          return
           //           INSERT INTO ride.service_area_pricing (service_area_id, pricing, effective_at, expire_at,  login_id )
           // VALUES ({{service_area_id}},'{{pricing}}','2024-01-31 05:24:58', '2037-12-31 23:59:59',  8340 );
           let insertRes = await this.fetchData({
