@@ -300,10 +300,10 @@
 
       created() {
         //DEV
-        let ses = 'vbrkSAyz6CCAztNt4Pu6HVFdCXquUPHcMwtg6LSZTNfmqrD6A5a3iAuOMZDKUUe9BKSIRMfohJqisplYXlImmlwIFTHMISHtuPKMsH5fl3zZkE3deNQwfLouWDzYGz42'
+        let ses = 'UEc1L5eErGh7DFkDh6wrQ46IVQt0d8QYQfquN6udTq7t0ETpcA7lmlXrUXJC2t66teluAqg47qpGznRfaVc6d4b9OHAJilwsE1e3wMYhvDdkfEgCJzYAaCe59gRYg8Sm'
         this.url = `https://jqwys3p5nk.execute-api.us-east-2.amazonaws.com/dev/sql-template/run?ses=${ses}`
         if (this.stage == 'prod') {
-          ses = 'FQPcmPHl2THK4h96dW1Yy4SmE4QqwKkcfXpqWfGlpXH0Xf5ya6LsKHuARhXnS8lgBeY3q8452SE9KSrlsBynShHdqRt0ItzkC5xmcSbvKqw5UOgWi1WncpWPtFocjxSQ'
+          ses = 'YM9zkRVEF7DYYr1JFhgAyKobXMYWYgnfuBRqEX8y5ePR7hykxUVrSdXVM9rrIWXB9IwfUBQFMVeS7bCHMTwXNy0UqpSR9DFXnayZVBCkgGmXn0fGFhtNT8g729VBq4CO'
           this.url = `https://ujrfp99zs9.execute-api.us-east-2.amazonaws.com/upncoming/sql-templates/run?ses=${ses}`
         }
 
@@ -312,7 +312,6 @@
 
       methods: {
         selectVehicle(item) {
-          console.log(item);
           this.currentVehicle = item
         },
         selectRoute(item) {
@@ -374,16 +373,17 @@
           let {vehicle_id} = this.currentVehicle
 
           let promiseList = [
-            // this.fetchData({ // update table spp_price_adj 
-            //   url,
-            //   method: "POST",
-            //   data: {
-            //     sql: 134678885,
-            //     version: '1.0',
-            //     price: Number(this.setCurrentPrice),
-            //     route_id: id
-            //   }
-            // }),
+            this.fetchData({ // update table spp_price_adj 
+              url,
+              method: "POST",
+              data: {
+                sql: 134678885,
+                version: '1.1',
+                price: Number(this.setCurrentPrice),
+                route_id: id,
+                vehicle_id
+              }
+            }),
 
             this.fetchData({ //get pricing json_id by svc_id'
               url,
@@ -397,9 +397,11 @@
             }),
           ]
 
-          let [ res2] = await Promise.all(promiseList)
+          let [res1,res2] = await Promise.all(promiseList)
 
           let jsonId = res2.results[0].service_area_pricing_id
+
+          debugger
 
           let json = await this.getPricingJsonById(jsonId)
           let { vehicleClasses, zones } = json
@@ -445,14 +447,17 @@
           //           INSERT INTO ride.service_area_pricing (service_area_id, pricing, effective_at, expire_at,  login_id )
           // VALUES ({{service_area_id}},'{{pricing}}','2024-01-31 05:24:58', '2037-12-31 23:59:59',  8340 );
           // 8340
+
+          debugger
           let insertRes = await this.fetchData({
             url,
             method: 'POST',
             data: {
               sql: 134678887,
-              version: '1.1',
+              version: '1.2',
               service_area_id: svcId,
-              pricing: JSON.stringify(json),
+              pricing:JSON.stringify(json),
+              // note_id:1,
               login_id:this.stage == 'dev' ? 40 : 8340
             }
           })

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="btn" id="submit">submit</div>
+
+  <script>
+    let stage = 'prod' // prod dev
+
+
+    let submit = document.getElementById('submit')
+    submit.addEventListener('click', async () => {
+      let runURL = url
+      if (stage == 'dev') {
+        runURL = urlDev
+      }
+
+      for (let obj of d) {
+        let { id, from_place_lat_lng } = obj
+        // if(id == 2){
+          let res = await runSQL(runURL, id, from_place_lat_lng)
+          console.log(res);
+        // }
+      }
+
+
+
+    })
+
+    async function runSQL(url, id, from_place_lat_lng) {
+
+      let res = await fetchData({
+        url,
+        method: 'POST',
+        data: {
+          sql: 134678909,
+          id,
+          from_place_lat_lng:JSON.stringify(from_place_lat_lng),
+          version:'1.0'
+        }
+      })
+
+      return res
+    }
+
+    let d = [
+      {
+        id: 1,
+        from_place_lat_lng: {
+          "code3": "MIA",
+          "lat": 25.795872000,
+          "lng": -80.287051000,
+          "radius": 3000
+        }
+      },
+      {
+        id: 2,
+        from_place_lat_lng: {
+          "code3": "NRT",
+          "lat": 35.771347000,
+          "lng": 140.391664000,
+          "radius": 3000
+        }
+      },
+      {
+        id: 3,
+        from_place_lat_lng: {
+          "code3": "SFO",
+          "lat": "37.618197927",
+          "lng": "-122.384092496",
+          "radius": 3000
+        }
+      },
+      {
+        id: 4,
+        from_place_lat_lng: {
+          "code3": "MCO",
+          "lat": 28.431158000,
+          "lng": -81.308083000,
+          "radius": 3000
+        }
+      },
+      {
+        id: 5,
+        from_place_lat_lng: {
+          "code3": "CUZ",
+          "lat": -13.537429000,
+          "lng": -71.943319000,
+          "radius": 3000
+        }
+      },
+      {
+        id: 6,
+        from_place_lat_lng: {
+          "code3": "HNL",
+          "lat": 21.324513200,
+          "lng": -157.925073600,
+          "radius": 3000
+        }
+      },
+    ]
+
+    let ses = 'YM9zkRVEF7DYYr1JFhgAyKobXMYWYgnfuBRqEX8y5ePR7hykxUVrSdXVM9rrIWXB9IwfUBQFMVeS7bCHMTwXNy0UqpSR9DFXnayZVBCkgGmXn0fGFhtNT8g729VBq4CO'
+    let url = `https://ujrfp99zs9.execute-api.us-east-2.amazonaws.com/upncoming/sql-templates/run?ses=${ses}`
+
+    let sesDev = 'UEc1L5eErGh7DFkDh6wrQ46IVQt0d8QYQfquN6udTq7t0ETpcA7lmlXrUXJC2t66teluAqg47qpGznRfaVc6d4b9OHAJilwsE1e3wMYhvDdkfEgCJzYAaCe59gRYg8Sm'
+    let urlDev = `https://jqwys3p5nk.execute-api.us-east-2.amazonaws.com/dev/sql-template/run?ses=${sesDev}`
+
+    function fetchData({
+      url = '',
+      data = {},
+      method = 'GET',
+      // isShowLoading = true
+    } = {}) {
+      method = method.toUpperCase();
+      data['req_id'] = this.uuid()
+      if (method == 'GET') {
+        let dataStr = '';
+        Object.keys(data).forEach(key => {
+          dataStr += key + '=' + data[key] + '&';
+        })
+        if (dataStr !== '') {
+          dataStr = dataStr.substring(0, dataStr.lastIndexOf('&'));
+          url = url + '?' + dataStr;
+        }
+      }
+      let requestConfig = {
+        // credentials: 'same-origin',
+        method,
+        headers: {
+          'Accept': 'application/json',
+          // 'Content-method': 'application/json'
+        },
+        // mode: "cors", // same-origin，no-cors（default） cores;
+        // cache: "force-cache" // default 、 no-store 、 reload 、 no-cache 、 force-cache 、 only-if-cached 
+      }
+
+      if (method == 'POST') {
+        Object.defineProperty(requestConfig, 'body', {
+          value: JSON.stringify(data)
+        })
+      }
+      return fetch(url, requestConfig).then(async (response) => {
+        const data = await response.json()
+        if (response.ok && response.status === 200) {
+          return Promise.resolve(data)
+        } else {
+          let { errMsg } = data
+          this.$message(errMsg);
+          return Promise.reject(null)
+        }
+      })
+        .catch((error) => {
+          console.log(error);
+        })
+    }
+    function uuid() {
+      function S4() {
+        return (((1 + Math.random()) * 0x10000) | 0).toString(16).substring(1);
+      }
+      return S4() + S4() + '-' + S4() + '-' + S4() + '-' + S4() + '-' + S4() + S4() + S4();
+    }
+
+  </script>
+</body>
+
+</html>

@@ -1,93 +1,23 @@
-<<<<<<< HEAD
-
-{% if emp_access_id == 0 %}
-select @access_id:={{ access_id }};
-{% else %}
-select @access_id:={{ emp_access_id }};
-{% endif %}
-select fleet.id as fleet_id, fleet.name as service_area_name, airport_fleet.airport as airport,
-airport.ctry as country_code ,country.name as cname,country.alpha_3 as alpha_3, fleet.service_area_pricing_id
-from fleet
-inner join airport_fleet on airport_fleet.fleet_id=fleet.id
-left join airport on airport_fleet.airport = airport.code3
-inner join country on country.alpha_3=airport.ctry
-where fleet.parent_fleet_id={{ access_fleet_id }} 
-and
-(
-(
-( select count(*) from access_airport where access_id = @access_id ) = 0
-and
-( select count(*) from access_country where access_id = @access_id ) = 0
-)
-or
-(
-(
-( select count(*) from access_airport where access_id = @access_id ) > 0
-and
-( select count(*) from access_country where access_id = @access_id ) = 0
-)
-and
-fleet.id in
-(
-select airport_fleet.fleet_id
-from access_airport, airport_fleet
-where access_id = @access_id
-and access_airport.airport = airport_fleet.airport
-and airport_fleet.parent_fleet_id = {{ access_fleet_id }}
-)
-)
-or
-(
-(
-( select count(*) from access_airport where access_id = @access_id ) = 0
-and
-( select count(*) from access_country where access_id = @access_id ) > 0
-)
-and
-airport.ctry in (select airport_country from access_country where access_id = @access_id)
-)
-or
-(
-(
-( select count(*) from access_airport where access_id = @access_id ) > 0
-and
-( select count(*) from access_country where access_id = @access_id ) > 0
-)
-and
-(
-fleet.id in
-(
-select airport_fleet.fleet_id
-from access_airport, airport_fleet
-where access_id = @access_id
-and access_airport.airport = airport_fleet.airport
-and airport_fleet.parent_fleet_id = {{ access_fleet_id }}
-)
-or
-airport.ctry in (select airport_country from access_country where access_id = @access_id)
-)
-)
-)
-order by fleet.name, airport_fleet.airport
-{% if rows_to_fetch %}
-limit {{ rows_to_fetch }}
-{% endif %};
-=======
-select @UNLIMITED_ACCESS:=if(count(*) = 0, 1, 0) from login l inner join employee e on l.employee_id = e.id and l.id = {{ login_id }}
-inner join employee_partner_access epa on epa.employee_id = e.id;
-
-select if(ap.partner & 1,partner.name,concat(substring(partner.name,1,1), "_", substring(partner.name,-1)))  as partner_name,
-partner.id as partner_id,
-supply_demand_pricing.json as pricing_json, partner.fleet_id,
-fleet_supply_demand.pricing_id as fpid
-from partner
-inner join fleet_supply_demand on fleet_supply_demand.demand_fleet_id=partner.fleet_id
-left join supply_demand_pricing on supply_demand_pricing.id=fleet_supply_demand.pricing_id
-inner join login on login.id={{ login_id }}
-left join employee_partner_access epa on epa.employee_id = login.employee_id and partner.id = epa.partner_id and epa.can_see = 1 and @UNLIMITED_ACCESS = 0
-join access_pass ap  on ap.id=login.access_pass_id 
-where fleet_supply_demand.supply_fleet_id in ({{ access_fleet_id }} , 51488) and {{ access_fleet_id }} = {{ elife_fleet_id }} 
-and 
-@UNLIMITED_ACCESS = 1 OR epa.partner_id is not null
-order by partner.id asc;
->>>>>>> 2e8f7865df184072fd4f6641acbcd7967754a59a
+{
+  "percent": "7",
+  "service_areas": {
+    "sas_percent": [
+      { "id": 77, "percent": "25" },
+      { "id": 70, "percent": "15" },
+      { "id": 73, "percent": "12" },
+      { "id": 89, "percent": "12" },
+      { "id": 72, "percent": "20" },
+      { "id": 69, "percent": "20" },
+      { "id": 46977, "percent": "10" },
+      { "id": 46972, "percent": "10" },
+      { "id": 23250, "percent": "10" },
+      { "id": 40, "percent": "10" },
+      { "id": "1054", "percent": "50" },
+      { "id": "1058", "percent": "50" },
+      { "id": "15384", "percent": "50" },
+      { "id": "1059", "percent": "50" },
+      { "id": "1061", "percent": "50" }
+    ]
+  },
+  "doNotDel": "doNotDel"
+}

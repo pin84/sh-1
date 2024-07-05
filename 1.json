@@ -46,15 +46,20 @@ create table spp_price_adj
     constraint route_id_1  foreign key (route_id) references spp_route (id)
 )
 
+成本应该通过API从Supply Cost那里拿。运营现在在维护那个表。
 
 
-第一次修改价格加一个JSON,但不应用。
+CREATE TABLE `spp_cost` (
+  `id` int unsigned NOT NULL AUTO_INCREMENT primary key,
+  `route_id` tinyint unsigned DEFAULT NULL,
+  `vehicle_class_id` tinyint unsigned DEFAULT NULL,
+  `cost` decimal(10,2) DEFAULT NULL,
+  `profit` decimal(10,2) DEFAULT NULL,
+  `inserted_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `last_updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
 
-需要三个表的授权
-修改价格时zones 和 vehicleClasses 字段里的加价没有对应关系
-用机器调价会更麻烦，没有办法定位
-只调接机/接送机一起
-
+   constraint route_id_1  foreign key (route_id) references spp_route (id)
+) 
 
 
 

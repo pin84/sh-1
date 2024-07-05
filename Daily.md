@@ -1,12 +1,20 @@
+# 需要以下接口的日志权限
+distance-time
+sql-template-run-3
+s3-quotes-to-bigquery-post
+
+
+我们需要用upncoming吗？一起用prod可不可以？
+
+
+
 # 6-28
 计算器可以输入订单号，然后检验价格
-
 2977355 测试未验证车队能会不会从ride-pricing-get返回
 
 # 6-24
 能不能帮我开通查询日志的权限
 
-distance-time
 
 判断是同一个服务区，用机场。只有机场完全相同才会同步数据
 
