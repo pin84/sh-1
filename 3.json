@@ -1,30 +1,4 @@
-{
-  "origin": {
-    "latitude": 41.2628732,
-    "longitude": 28.7050148,
-    "name": "Istanbul Airport (IST), Tayakad\u0131n, Terminal Caddesi No:1, 34283 Arnavutk\u00f6y/\u0130stanbul, T\u00fcrkiye",
-    "city": "Airport",
-    "country": "TR",
-    "postcode": "34283",
-    "iata": "IST"
-  },
-  "destination": {
-    "latitude": 41.00921,
-    "longitude": 28.962875,
-    "name": "Edition Old City Hotel, Kemal Pa\u015fa, Ordu Cd. 17B, 34130 Fatih/\u0130stanbul, T\u00fcrkiye",
-    "city": "\u0130stanbul",
-    "country": "TR",
-    "postcode": "34130",
-    "iata": null
-  },
-  "pickupDateTime": "2024-12-05T09:00:00Z",
-  "pickupTimezone": "Europe/Istanbul",
-  "currency": null,
-  "customerCountry": null,
-  "customerLanguage": null,
-  "drivingDistanceInKm": 54.38,
-  "passengers": 2,
-  "supplierPickupId": null,
-  "service_area_id": 133,
-  "country": "TUR"
-}
+'user': 'admin',
+'password': '!fX65zyXLbRudRd9G!',
+'host': 'rideprod.c9y2b7qgnkr8.us-east-2.rds.amazonaws.com',
+'database': 'ride'
