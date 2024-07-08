@@ -15,6 +15,20 @@ create table spp_route
     json               varchar(256)                   null,
     name               varchar(256)                   null, // mia->m
 )
+
+
+create table strategy
+(
+    id            int unsigned auto_increment primary key,
+  
+    name           varchar(1024)                   null,
+    description    varchar(1024)                   null,
+    rules          varchar(1024)                   null,
+
+
+    inserted_at        timestamp default CURRENT_TIMESTAMP not null,
+    last_updated_at    timestamp default CURRENT_TIMESTAMP not null on update CURRENT_TIMESTAMP
+)
 // (price - cost) / price  * 100 = profit
 // WRONG : cost + cost * profit =  price
 
