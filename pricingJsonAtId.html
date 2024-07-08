@@ -51,23 +51,29 @@
         this.btnGet = document.getElementById('btn-get')
 
 
-        this.btnGet.addEventListener('click',()=>{
+        this.btnGet.addEventListener('click', () => {
           // 11835
           let airports = ['CSX']
 
-          
+
 
         })
 
+        let ids = [28233]
 
         this.btnAdd.addEventListener('click', async () => {
 
-          let pricingJsona = await getPricingJsonBySvcId(26975)
-          console.log(pricingJsona);
-          let jsonAddedId = this.addId(pricingJsona)
-          console.log(jsonAddedId);
+          for (let id of ids) {
+            let json = await getPricingJsonBySvcId(id)
+            console.log(json);
+            let jsonAddedId = this.addId(JSON.parse(JSON.stringify(json)))
+            console.log(jsonAddedId);
+            debugger
 
-          // let res = await insertAndUpdate(jsonAddedId, 26975)
+            let res = await insertAndUpdate(jsonAddedId, id)
+          }
+
+
         })
 
 
@@ -140,8 +146,7 @@
           'serviceArea', 'pricing.ranges', 'downtown_areas', 'zones', 'zone2zone.prices', 'vehicleClasses', 'notice_time_rules', 'pricing_schedule_sum', 'specific_date_surcharge', 'hourly_pricing', 'hpd.rules', 'hpd.over'
         ]
         let i = 1
-        let { parentFleetId, id } = json.serviceArea || {}
-
+        let { parent_fleet_id, id } = json.serviceArea || {}
         for (let path of pidKeys) {
           if (path == 'hourly_pricing') {
             let hourlyPricing = getValueByPath(json, path);
@@ -151,11 +156,11 @@
             if (rules) {
               let j = 1
               for (let rule of rules) {
-                rule['pid'] = `${parentFleetId}.${i}.${j}`
+                rule['pid'] = `${parent_fleet_id}.${i}.${j}`
                 j++
               }
             } else {
-              hourlyPricing['pid'] = `${parentFleetId}.${i}.1`
+              hourlyPricing['pid'] = `${parent_fleet_id}.${i}.1`
               i++
             }
             continue
@@ -164,11 +169,11 @@
           if (!value) continue
           let type = Object.prototype.toString.call(value)
           if (type == '[object Object]') {
-            value['pid'] = `${parentFleetId}.${i}.1`
+            value['pid'] = `${parent_fleet_id}.${i}.1`
           } else {
             let j = 1
             for (let obj of value) {
-              obj['pid'] = `${parentFleetId}.${i}.${j}`
+              obj['pid'] = `${parent_fleet_id}.${i}.${j}`
               j++
             }
           }
@@ -250,7 +255,7 @@
         data: updateD,
         desc: 'update json'
       })
-
+      debugger
       return res
     }
 
