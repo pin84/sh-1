@@ -59,7 +59,7 @@
 
         })
 
-        let ids = [28233]
+        let ids = [3471,11835,26975]
 
         this.btnAdd.addEventListener('click', async () => {
 
@@ -68,7 +68,6 @@
             console.log(json);
             let jsonAddedId = this.addId(JSON.parse(JSON.stringify(json)))
             console.log(jsonAddedId);
-            debugger
 
             let res = await insertAndUpdate(jsonAddedId, id)
           }
