@@ -186,7 +186,7 @@
 
       data: () => {
         return {
-          stage: 'prod', //dev, prod
+          stage: 'dev', //dev, prod
           setCurrentPrice: 0,
           email: 'ping@elifeteam.com',
           password: '6Pi785n03g',
@@ -332,6 +332,8 @@
 
           this.routes = results || []
           this.currentRoute = results[0]
+
+          debugger
           console.log(results);
         },
 
@@ -364,12 +366,16 @@
         },
         async savePrice() {
           let url = this.url
+
+
           let { id, service_area_id, json: { d_amt: field_d_amt, p_amt: field_p_amt } } = this.currentRoute
+
           let svcId = service_area_id
           if (this.stage == 'dev') {
             svcId = 26975
           }
 
+          // route_id
           let {vehicle_id} = this.currentVehicle
 
           let promiseList = [
@@ -444,11 +450,10 @@
 
           json['vehicleClasses'] = vehicleClasses
           console.log('--after---', json);
-          //           INSERT INTO ride.service_area_pricing (service_area_id, pricing, effective_at, expire_at,  login_id )
+          // INSERT INTO ride.service_area_pricing (service_area_id, pricing, effective_at, expire_at,  login_id )
           // VALUES ({{service_area_id}},'{{pricing}}','2024-01-31 05:24:58', '2037-12-31 23:59:59',  8340 );
           // 8340
 
-          debugger
           let insertRes = await this.fetchData({
             url,
             method: 'POST',

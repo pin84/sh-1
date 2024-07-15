@@ -59,7 +59,7 @@
 
         })
 
-        let ids = [3471,11835,26975]
+        let ids = [11835] //3471,26975
 
         this.btnAdd.addEventListener('click', async () => {
 
@@ -69,7 +69,7 @@
             let jsonAddedId = this.addId(JSON.parse(JSON.stringify(json)))
             console.log(jsonAddedId);
 
-            let res = await insertAndUpdate(jsonAddedId, id)
+            // let res = await insertAndUpdate(jsonAddedId, id)
           }
 
 
@@ -142,26 +142,30 @@
       addId(json) {
         let ignoreKeys = ['amount', 'min_amount', 'd_amt', 'p_amt', 'percent', 'delta_amount']
         let pidKeys = [
-          'serviceArea', 'pricing.ranges', 'downtown_areas', 'zones', 'zone2zone.prices', 'vehicleClasses', 'notice_time_rules', 'pricing_schedule_sum', 'specific_date_surcharge', 'hourly_pricing', 'hpd.rules', 'hpd.over'
+          'serviceArea', 'pricing.ranges', 'downtown_areas', 'zones', 'zone2zone.prices', 'vehicleClasses', 'notice_time_rules', 'pricing_schedule_sum', 'specific_date_surcharge', 'hourly_pricing', 'hpd.rules', 'hpd.over','notice_time_advance_time'
         ]
         let i = 1
         let { parent_fleet_id, id } = json.serviceArea || {}
+        let tem = []
         for (let path of pidKeys) {
           if (path == 'hourly_pricing') {
             let hourlyPricing = getValueByPath(json, path);
             if (!hourlyPricing) continue
-
+            
             let { rules } = hourlyPricing
             if (rules) {
               let j = 1
               for (let rule of rules) {
                 rule['pid'] = `${parent_fleet_id}.${i}.${j}`
+                tem.push(`${parent_fleet_id}.${i}.${j}`)
                 j++
               }
             } else {
               hourlyPricing['pid'] = `${parent_fleet_id}.${i}.1`
-              i++
+              tem.push(`${parent_fleet_id}.${i}.1`)
             }
+
+            i++
             continue
           }
           let value = getValueByPath(json, path);
@@ -169,16 +173,19 @@
           let type = Object.prototype.toString.call(value)
           if (type == '[object Object]') {
             value['pid'] = `${parent_fleet_id}.${i}.1`
+            tem.push(`${parent_fleet_id}.${i}.1`)
           } else {
             let j = 1
             for (let obj of value) {
               obj['pid'] = `${parent_fleet_id}.${i}.${j}`
+              tem.push(`${parent_fleet_id}.${i}.${j}`)
               j++
             }
           }
           i++
         }
-
+        console.log(tem);
+        
         return json
       }
 

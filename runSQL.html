@@ -22,10 +22,10 @@
       }
 
       for (let obj of d) {
-        let { id, from_place_lat_lng } = obj
+        let { id, cost, profit } = obj
         // if(id == 2){
-          let res = await runSQL(runURL, id, from_place_lat_lng)
-          console.log(res);
+        let res = await runSQL(runURL, id, cost, profit)
+        console.log(res);
         // }
       }
 
@@ -33,7 +33,7 @@
 
     })
 
-    async function runSQL(url, id, from_place_lat_lng) {
+    async function runSQL(url, id, cost, profit) {
 
       let res = await fetchData({
         url,
@@ -41,68 +41,54 @@
         data: {
           sql: 134678909,
           id,
-          from_place_lat_lng:JSON.stringify(from_place_lat_lng),
-          version:'1.0'
+          cost,
+          profit,
+          version: '1.1'
         }
       })
 
       return res
     }
 
+    let fromLatLng = [
+      {
+        id:
+        "code3": "MCO",
+        "lat": 28.431158000,
+        "lng": -81.308083000
+      }
+    ]
+
     let d = [
       {
         id: 1,
-        from_place_lat_lng: {
-          "code3": "MIA",
-          "lat": 25.795872000,
-          "lng": -80.287051000,
-          "radius": 3000
-        }
+        cost: 33,
+        profit: 0
       },
       {
         id: 2,
-        from_place_lat_lng: {
-          "code3": "NRT",
-          "lat": 35.771347000,
-          "lng": 140.391664000,
-          "radius": 3000
-        }
+        cost: 95,
+        profit: 0
       },
       {
         id: 3,
-        from_place_lat_lng: {
-          "code3": "SFO",
-          "lat": "37.618197927",
-          "lng": "-122.384092496",
-          "radius": 3000
-        }
+        cost: 40,
+        profit: 0
       },
       {
         id: 4,
-        from_place_lat_lng: {
-          "code3": "MCO",
-          "lat": 28.431158000,
-          "lng": -81.308083000,
-          "radius": 3000
-        }
+        cost: 25,
+        profit: 0.2
       },
       {
         id: 5,
-        from_place_lat_lng: {
-          "code3": "CUZ",
-          "lat": -13.537429000,
-          "lng": -71.943319000,
-          "radius": 3000
-        }
+        cost: 5,
+        profit: 0
       },
       {
         id: 6,
-        from_place_lat_lng: {
-          "code3": "HNL",
-          "lat": 21.324513200,
-          "lng": -157.925073600,
-          "radius": 3000
-        }
+        cost: 33.5,
+        profit: 0
       },
     ]
 
