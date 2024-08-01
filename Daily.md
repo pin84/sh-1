@@ -1,3 +1,8 @@
+
+# 7-30
+partner_id(路线根据不同的平台使用不用的策略)
+route_type（路线打标的内容）
+
 # 7-9
 同步通用设置，当一口价的名字修改了之后，会删除其他地方绑定的一口价
 zone2zong的高低价格会直接同步
@@ -162,6 +167,7 @@ Claire SGN不显示
 {
     "cross_countries": [
         ["USA", "CAN"],
+        ["HRV","MNE"],
         ["CHN", "HKG", "MAC"],
         ["SGP", "MYS"],
         ["AUT", "BEL", "HRV", "CZE", "DNK", "EST", "FIN", "FRA", "DEU", "GRC", "HUN", "ISL", "ITA", "LVA", "LIE", "LTU", "LUX", "MLT", "NLD", "NOR", "POL", "PRT", "SVK", "SVN", "ESP", "SWE", "CHE"]

@@ -1,4 +1,171 @@
-select  service_area_id,pricing from service_area_pricing where id in (
-    select f.service_area_pricing_id from airport_fleet af
-    left join fleet f on f.id = af.fleet_id
-where af.parent_fleet_id ={{parent_fleet_id}} and af.airport = '{{airport}}')
+START RequestId: 9616 f40a - abe3 - 4467 - 8510 - 273 abc8506dd Version: $LATEST
+2024 - 07 - 30 08: 15: 23, 563 - elife_log - INFO - /var/task / lambda_ride_pricings_get.py
+2024 - 07 - 30 08: 15: 23, 563 - elife_log - INFO - {
+	'resource': '/ride-pricings',
+	'path': '/ride-pricings',
+	'httpMethod': 'GET',
+	'headers': {
+		'accept': '*/*',
+		'Accept-Encoding': 'gzip, deflate, br',
+		'accept-language': 'en-US,en;q=0.9',
+		'cache-control': 'no-cache',
+		'Host': 'k3zdvi12m6.execute-api.us-east-2.amazonaws.com',
+		'origin': 'https://elifetransfer.s3.us-east-2.amazonaws.com',
+		'Postman-Token': 'afb9b746-a981-4a52-a3b0-3d50a9546543',
+		'pragma': 'no-cache',
+		'priority': 'u=1, i',
+		'referer': 'https://elifetransfer.s3.us-east-2.amazonaws.com/',
+		'sec-ch-ua': '"Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"',
+		'sec-ch-ua-mobile': '?0',
+		'sec-ch-ua-platform': '"Windows"',
+		'sec-fetch-dest': 'empty',
+		'sec-fetch-mode': 'cors',
+		'sec-fetch-site': 'cross-site',
+		'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36',
+		'X-Amzn-Trace-Id': 'Root=1-66a8a11b-6e0b2ffb070eb4a4109e6f37',
+		'X-Forwarded-For': '103.151.173.99',
+		'X-Forwarded-Port': '443',
+		'X-Forwarded-Proto': 'https'
+	},
+	'multiValueHeaders': {
+		'accept': ['*/*'],
+		'Accept-Encoding': ['gzip, deflate, br'],
+		'accept-language': ['en-US,en;q=0.9'],
+		'cache-control': ['no-cache'],
+		'Host': ['k3zdvi12m6.execute-api.us-east-2.amazonaws.com'],
+		'origin': ['https://elifetransfer.s3.us-east-2.amazonaws.com'],
+		'Postman-Token': ['afb9b746-a981-4a52-a3b0-3d50a9546543'],
+		'pragma': ['no-cache'],
+		'priority': ['u=1, i'],
+		'referer': ['https://elifetransfer.s3.us-east-2.amazonaws.com/'],
+		'sec-ch-ua': ['"Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"'],
+		'sec-ch-ua-mobile': ['?0'],
+		'sec-ch-ua-platform': ['"Windows"'],
+		'sec-fetch-dest': ['empty'],
+		'sec-fetch-mode': ['cors'],
+		'sec-fetch-site': ['cross-site'],
+		'User-Agent': [
+			'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36'
+		],
+		'X-Amzn-Trace-Id': ['Root=1-66a8a11b-6e0b2ffb070eb4a4109e6f37'],
+		'X-Forwarded-For': ['103.151.173.99'],
+		'X-Forwarded-Port': ['443'],
+		'X-Forwarded-Proto': ['https']
+	},
+	'queryStringParameters': {
+		'demand_fleet_id': '15',
+		'from_lat': '41.1763496',
+		'from_lng': '9.3888974',
+		'passenger_count': '3',
+		'req_id': 'ping-7-30-1',
+		'ses': 'qFCtbYDPc3wZyfHMlZNExNAPpmoEbDG62c0HB7YrQdT8kbJeloJO5NXFsEGwhknj...',
+		'time': '1725401340',
+		'to_lat': '40.899899',
+		'to_lng': '9.517714',
+		'vehicle_class_id': '1'
+	},
+	'multiValueQueryStringParameters': {
+		'demand_fleet_id': ['15'],
+		'from_lat': ['41.1763496'],
+		'from_lng': ['9.3888974'],
+		'passenger_count': ['3'],
+		'req_id': ['ping-7-30-1'],
+		'ses': ['qFCtbYDPc3wZyfHMlZNExNAPpmoEbDG62c0HB7YrQdT8kbJeloJO5NXFsEGwhknj...'],
+		'time': ['1725401340'],
+		'to_lat': ['40.899899'],
+		'to_lng': ['9.517714'],
+		'vehicle_class_id': ['1']
+	},
+	'pathParameters': None,
+	'stageVariables': None,
+	'requestContext': {
+		'resourceId': 'd7df9o',
+		'resourcePath': '/ride-pricings',
+		'httpMethod': 'GET',
+		'extendedRequestId': 'bt4cWHXTiYcEPjw=',
+		'requestTime': '30/Jul/2024:08:15:23 +0000',
+		'path': '/prod/ride-pricings',
+		'accountId': '064290855103',
+		'protocol': 'HTTP/1.1',
+		'stage': 'prod',
+		'domainPrefix': 'k3zdvi12m6',
+		'requestTimeEpoch': 1722327323548,
+		'requestId': 'b8c860ae-1dba-4f63-9d83-02bbc5035624',
+		'identity': {
+			'cognitoIdentityPoolId': None,
+			'accountId': None,
+			'cognitoIdentityId': None,
+			'caller': None,
+			'sourceIp': '103.151.173.99',
+			'principalOrgId': None,
+			'accessKey': None,
+			'cognitoAuthenticationType': None,
+			'cognitoAuthenticationProvider': None,
+			'userArn': None,
+			'userAgent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36',
+			'user': None
+		},
+		'domainName': 'k3zdvi12m6.execute-api.us-east-2.amazonaws.com',
+		'deploymentId': 'ittcd7',
+		'apiId': 'k3zdvi12m6'
+	},
+	'body': None,
+	'isBase64Encoded': False
+}
+2024 - 07 - 30 08: 15: 23, 564 - elife_log - INFO - None
+select login_session.login_session_hash, login_session.login_id, login_session.access, login.employee_id, login
+	.fleet_emp_id, login.fleet_driver_id, login.agency_emp_id, login.partner_emp_id, login.affiliate_emp_id, login
+	.corporate_emp_id, via.login_id as via_login_id from login_session inner join login on login.id = login_session
+	.login_id left join login_session via on via.id = login_session.via_login_session_id where login_session
+	.login_session_hash = % s;
+Param: ('5e701583fb0dee100c5ed4451c811e8a9e462d8151e5ddfff0f7923f8f9bea80', )
+select country from lat_lng_4_country where(lat, lng) in((41, 9), (41.17, 9.38), (41.1763, 9.3888));
+Param: ()
+select fleet.id as fleet_id, fleet.lat, fleet.lng, fleet.radius, fleet.parent_fleet_id, parent_fleet
+	.name as parent_fleet_name, fleet.service_area_pricing_id from fleet inner join fleet parent_fleet on parent_fleet
+	.id = fleet.parent_fleet_id where fleet.lat < % s and fleet.lat > % s and fleet.lng < % s and fleet.lng > %
+	s and fleet.id in (select id from fleet where parent_fleet_id in (select %
+		s union select supply_fleet_id from fleet_supply_demand where demand_fleet_id = % s));
+Param: (44.32400145171862, 38.02869774828138, 13.559565030262693, 5.218229769737305, 15, 15)
+2024 - 07 - 30 08: 15: 23, 763 - elife_log - INFO - function fleets_select_by_from_to takes 0.006827592849731445 sec
+2024 - 07 - 30 08: 15: 23, 763 - elife_log - INFO - print fleet_ids_qry:
+	2024 - 07 - 30 08: 15: 23, 763 - elife_log - INFO - [{
+		'fleet_id': 1133,
+		'lat': 41.502335,
+		'lng': 9.098381,
+		'radius': 99000,
+		'parent_fleet_id': 15,
+		'parent_fleet_name': 'Elife',
+		'service_area_pricing_id': 178516
+	}, {
+		'fleet_id': 59526,
+		'lat': 41.920217,
+		'lng': 8.794628,
+		'radius': 150000,
+		'parent_fleet_id': 9036,
+		'parent_fleet_name': 'Jennylimo',
+		'service_area_pricing_id': 175005
+	}]
+select service_area_pricing.id as id, service_area_id, pricing, effective_at, expire_at, fleet
+	.service_area_pricing_id as fleet_service_area_pricing_id from service_area_pricing inner join fleet on fleet.id =
+	service_area_pricing.service_area_id where service_area_pricing.id in ( % s, % s) order by service_area_pricing
+	.id desc;
+Param: (178516, 175005)
+2024 - 07 - 30 08: 15: 23, 765 - elife_log - INFO - start upload quote to s3
+2024 - 07 - 30 08: 15: 23, 812 - elife_log - INFO - 2024 - 07 / 07 d64f0c3d9048889a639314c0d9bcd0 - 1722327323 -
+	wb8vkzx5 - req.json upload status: 200
+2024 - 07 - 30 08: 15: 23, 812 - elife_log - INFO - upload stats: [True]
+2024 - 07 - 30 08: 15: 23, 813 - elife_log - INFO - upload result True
+2024 - 07 - 30 08: 15: 23, 813 - elife_log - INFO - Ride MySQL connection is closed
+2024 - 07 - 30 08: 15: 23, 814 - elife_log - INFO - {
+	"statusCode": 200,
+	"headers": {
+		"Access-Control-Allow-Origin": "*",
+		"Access-Control-Expose-Headers": "Date"
+	},
+	"body": "{\"fleets\": [], \"request_id\": \"07d64f0c3d9048889a639314c0d9bcd0\", \"distance\": 0.0}"
+}
+
+END RequestId: 9616 f40a - abe3 - 4467 - 8510 - 273 abc8506dd
+REPORT RequestId: 9616 f40a - abe3 - 4467 - 8510 - 273 abc8506dd Duration: 253.81 ms Billed Duration:
+	254 ms Memory Size: 10240 MB Max Memory Used: 134 MB
