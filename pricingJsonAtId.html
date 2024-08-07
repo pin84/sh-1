@@ -22,10 +22,10 @@
 
   <div id='btn-add' class="btn">addID</div>
 
-  <div id='btn-get' class="btn">getSamSvc</div>
+  <!-- <div id='btn-get' class="btn">getSamSvc</div>
 
 
-  <div id='btn-diff' class="btn">diff</div>
+  <div id='btn-diff' class="btn">diff</div> -->
 
 
 
@@ -47,19 +47,19 @@
 
       initElm() {
         this.btnAdd = document.getElementById('btn-add')
-        this.btnDiff = document.getElementById('btn-diff')
-        this.btnGet = document.getElementById('btn-get')
+        // this.btnDiff = document.getElementById('btn-diff')
+        // this.btnGet = document.getElementById('btn-get')
 
 
-        this.btnGet.addEventListener('click', () => {
-          // 11835
-          let airports = ['CSX']
+        // this.btnGet.addEventListener('click', () => {
+        //   // 11835
+        //   let airports = ['CSX']
 
 
 
-        })
+        // })
 
-        let ids = [11835] //3471,26975
+        let ids = [38] //3471,26975
 
         this.btnAdd.addEventListener('click', async () => {
 
@@ -76,118 +76,121 @@
         })
 
 
-        this.btnDiff.addEventListener('click', () => {
-          this.diffChange(this.jsonNew, jsonOld) //
-          console.log('diffChangeOrDelete----', this.diffChangeOrDelete);
-          this.diffDel(jsonNew, jsonOld) // check new obj delete some key
-          console.log('diff----', this.diff);
-
-        })
-      }
-
-      diffChange(obj1, obj2, keyPath = '') {
-        for (let [key, value] of Object.entries(obj1)) {
-          if (key == 'pid') continue
-          let type = Object.prototype.toString.call(value)
-          let currentPath = keyPath ? `${keyPath}.${key}` : key;
-          switch (type) {
-            case '[object Object]':
-              //pid
-              this.diffChange(value, obj2, currentPath, 'change')
-              break
-            case '[object Array]':
-              this.diffChange(value, obj2, currentPath, 'change')
-              break
-            default: //'[object String]' , '[object Number]':
-              let nv = getValueByPath(obj2, currentPath);
-              if (nv == undefined) {
-                this.diffChangeOrDelete.push(`undefined-->${currentPath}:${value}`)
-                break;
-              }
-              if (nv != value) {
-                this.diffChangeOrDelete.push(`${currentPath}:${nv}-->${currentPath}:${value}`)
-              }
-              currentPath = ''
-              break;
-          }
-        }
-      }
-
-      diffDel(obj1, obj2, keyPath = '') {
-        for (let [key, value] of Object.entries(obj2)) {
-          if (key == 'pid') continue
-          let type = Object.prototype.toString.call(value)
-          let currentPath = keyPath ? `${keyPath}.${key}` : key;
-          switch (type) {
-            case '[object Object]':
-              this.diffDel(obj1, value, currentPath)
-              break
-            case '[object Array]':
-              this.diffDel(obj1, value, currentPath)
-              break
-            default: //'[object String]' , '[object Number]':
-              let nv = getValueByPath(obj1, currentPath);
-              if (nv == undefined) {
-                this.diff.push(`${currentPath}:${value}-->delete`)
-                break;
-              }
-              currentPath = ''
-              break;
-          }
-        }
       }
 
 
 
       addId(json) {
-        let ignoreKeys = ['amount', 'min_amount', 'd_amt', 'p_amt', 'percent', 'delta_amount']
+        let ignoreKeys = ['amount', 'min_amount', 'd_amt', 'p_amt', 'percent', 'delta_amount'];
+        // let pidKeys = [
+        //   'serviceArea', 'pricing.ranges', 'downtown_areas', 'zones', 'zone2zone.prices', 'vehicleClasses', 'notice_time_rules', 'pricing_schedule_sum', 'specific_date_surcharge', 'hourly_pricing', 'hpd.rules', 'hpd.over', 'notice_time_advance_time'
+        // ]
         let pidKeys = [
-          'serviceArea', 'pricing.ranges', 'downtown_areas', 'zones', 'zone2zone.prices', 'vehicleClasses', 'notice_time_rules', 'pricing_schedule_sum', 'specific_date_surcharge', 'hourly_pricing', 'hpd.rules', 'hpd.over','notice_time_advance_time'
-        ]
-        let i = 1
-        let { parent_fleet_id, id } = json.serviceArea || {}
-        let tem = []
-        for (let path of pidKeys) {
+          {
+            path: 'serviceArea',
+            num: 1,
+          },
+          {
+            path: 'pricing.ranges',
+            num: 2,
+          },
+          {
+            path: 'downtown_areas',
+            num: 3,
+          },
+          {
+            path: 'zones',
+            num: 4,
+          },
+          {
+            path: 'zone2zone.prices',
+            num: 5,
+          },
+          {
+            path: 'notice_time_rules',
+            num: 6,
+          },
+          {
+            path: 'pricing_schedule_sum',
+            num: 7,
+          },
+          {
+            path: 'specific_date_surcharge',
+            num: 8,
+          },
+          {
+            path: 'hourly_pricing',
+            num: 9,
+          },
+          {
+            path: 'hpd.rules',
+            num: 10,
+          },
+          {
+            path: 'hpd.over',
+            num: 11,
+          },
+          {
+            path: 'notice_time_advance_time',
+            num: 12,
+          }
+        ];
+
+        let { parent_fleet_id, id } = json.serviceArea || {};
+        let tem = [];
+        for (let item of pidKeys) {
+          let { path, num } = item;
           if (path == 'hourly_pricing') {
-            let hourlyPricing = getValueByPath(json, path);
-            if (!hourlyPricing) continue
-            
-            let { rules } = hourlyPricing
+            let hourlyPricing = this.getValueByPath(json, path);
+            if (!hourlyPricing) continue;
+
+            let { rules } = hourlyPricing;
             if (rules) {
-              let j = 1
+              let j = 1;
               for (let rule of rules) {
-                rule['pid'] = `${parent_fleet_id}.${i}.${j}`
-                tem.push(`${parent_fleet_id}.${i}.${j}`)
-                j++
+                rule['pid'] = `${parent_fleet_id}.${num}.${j}`;
+                tem.push(`${parent_fleet_id}.${num}.${j}`);
+                j++;
               }
             } else {
-              hourlyPricing['pid'] = `${parent_fleet_id}.${i}.1`
-              tem.push(`${parent_fleet_id}.${i}.1`)
+              hourlyPricing['pid'] = `${parent_fleet_id}.${num}.1`;
+              tem.push(`${parent_fleet_id}.${num}.1`);
             }
-
-            i++
-            continue
+            continue;
           }
-          let value = getValueByPath(json, path);
-          if (!value) continue
-          let type = Object.prototype.toString.call(value)
+          let value = this.getValueByPath(json, path);
+          if (!value) continue;
+          let type = Object.prototype.toString.call(value);
           if (type == '[object Object]') {
-            value['pid'] = `${parent_fleet_id}.${i}.1`
-            tem.push(`${parent_fleet_id}.${i}.1`)
+            value['pid'] = `${parent_fleet_id}.${num}.1`;
+            tem.push(`${parent_fleet_id}.${num}.1`);
           } else {
-            let j = 1
+            let j = 1;
             for (let obj of value) {
-              obj['pid'] = `${parent_fleet_id}.${i}.${j}`
-              tem.push(`${parent_fleet_id}.${i}.${j}`)
-              j++
+              obj['pid'] = `${parent_fleet_id}.${num}.${j}`;
+              tem.push(`${parent_fleet_id}.${num}.${j}`);
+              j++;
             }
           }
-          i++
         }
         console.log(tem);
-        
-        return json
+        return json;
       }
+
+      getValueByPath(currentValue, path) {
+        const keys = path.split('.');
+        // let currentValue = JSON.parse(JSON.stringify(obj));
+        for (let key of keys) {
+          if (currentValue && key in currentValue) {
+            currentValue = currentValue[key];
+          } else {
+            return undefined;
+          }
+        }
+        return currentValue;
+      }
+
+
 
     }
 
@@ -200,27 +203,16 @@
 
 
 
-    function getValueByPath(currentValue, path) {
-      const keys = path.split('.');
-      // let currentValue = JSON.parse(JSON.stringify(obj));
-      for (let key of keys) {
-        if (currentValue && key in currentValue) {
-          currentValue = currentValue[key];
-        } else {
-          return undefined;
-        }
-      }
-      return currentValue;
-    }
+
 
 
     //PROD
-    // let prodSES = '8JIOKRSCYyWkgmDnsqJ1d0bqNP6U8RSopQfoxVd94V2jgZATfS4bvd1gFSDy4q575A1i42yIpBQ5wLGZLFbWRfnLwlbDX1Mw1ReYkrnnuR6RVdzoeqLlzcwjwfJRO89j'
-    // let url = `https://51y9xc7cuh.execute-api.us-east-2.amazonaws.com/upncoming/sql-templates/run?ses=${prodSES}`
+    let prodSES = '8JIOKRSCYyWkgmDnsqJ1d0bqNP6U8RSopQfoxVd94V2jgZATfS4bvd1gFSDy4q575A1i42yIpBQ5wLGZLFbWRfnLwlbDX1Mw1ReYkrnnuR6RVdzoeqLlzcwjwfJRO89j'
+    let url = `https://51y9xc7cuh.execute-api.us-east-2.amazonaws.com/upncoming/sql-templates/run?ses=${prodSES}`
 
     //DEV
-    let ses = 'vbrkSAyz6CCAztNt4Pu6HVFdCXquUPHcMwtg6LSZTNfmqrD6A5a3iAuOMZDKUUe9BKSIRMfohJqisplYXlImmlwIFTHMISHtuPKMsH5fl3zZkE3deNQwfLouWDzYGz42'
-    let url = `https://jqwys3p5nk.execute-api.us-east-2.amazonaws.com/dev/sql-template/run?ses=${ses}`
+    // let ses = 'vbrkSAyz6CCAztNt4Pu6HVFdCXquUPHcMwtg6LSZTNfmqrD6A5a3iAuOMZDKUUe9BKSIRMfohJqisplYXlImmlwIFTHMISHtuPKMsH5fl3zZkE3deNQwfLouWDzYGz42'
+    // let url = `https://jqwys3p5nk.execute-api.us-east-2.amazonaws.com/dev/sql-template/run?ses=${ses}`
 
 
 

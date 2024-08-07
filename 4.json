@@ -1,171 +1,425 @@
-START RequestId: 9616 f40a - abe3 - 4467 - 8510 - 273 abc8506dd Version: $LATEST
-2024 - 07 - 30 08: 15: 23, 563 - elife_log - INFO - /var/task / lambda_ride_pricings_get.py
-2024 - 07 - 30 08: 15: 23, 563 - elife_log - INFO - {
-	'resource': '/ride-pricings',
-	'path': '/ride-pricings',
-	'httpMethod': 'GET',
-	'headers': {
-		'accept': '*/*',
-		'Accept-Encoding': 'gzip, deflate, br',
-		'accept-language': 'en-US,en;q=0.9',
-		'cache-control': 'no-cache',
-		'Host': 'k3zdvi12m6.execute-api.us-east-2.amazonaws.com',
-		'origin': 'https://elifetransfer.s3.us-east-2.amazonaws.com',
-		'Postman-Token': 'afb9b746-a981-4a52-a3b0-3d50a9546543',
-		'pragma': 'no-cache',
-		'priority': 'u=1, i',
-		'referer': 'https://elifetransfer.s3.us-east-2.amazonaws.com/',
-		'sec-ch-ua': '"Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"',
-		'sec-ch-ua-mobile': '?0',
-		'sec-ch-ua-platform': '"Windows"',
-		'sec-fetch-dest': 'empty',
-		'sec-fetch-mode': 'cors',
-		'sec-fetch-site': 'cross-site',
-		'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36',
-		'X-Amzn-Trace-Id': 'Root=1-66a8a11b-6e0b2ffb070eb4a4109e6f37',
-		'X-Forwarded-For': '103.151.173.99',
-		'X-Forwarded-Port': '443',
-		'X-Forwarded-Proto': 'https'
-	},
-	'multiValueHeaders': {
-		'accept': ['*/*'],
-		'Accept-Encoding': ['gzip, deflate, br'],
-		'accept-language': ['en-US,en;q=0.9'],
-		'cache-control': ['no-cache'],
-		'Host': ['k3zdvi12m6.execute-api.us-east-2.amazonaws.com'],
-		'origin': ['https://elifetransfer.s3.us-east-2.amazonaws.com'],
-		'Postman-Token': ['afb9b746-a981-4a52-a3b0-3d50a9546543'],
-		'pragma': ['no-cache'],
-		'priority': ['u=1, i'],
-		'referer': ['https://elifetransfer.s3.us-east-2.amazonaws.com/'],
-		'sec-ch-ua': ['"Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"'],
-		'sec-ch-ua-mobile': ['?0'],
-		'sec-ch-ua-platform': ['"Windows"'],
-		'sec-fetch-dest': ['empty'],
-		'sec-fetch-mode': ['cors'],
-		'sec-fetch-site': ['cross-site'],
-		'User-Agent': [
-			'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36'
-		],
-		'X-Amzn-Trace-Id': ['Root=1-66a8a11b-6e0b2ffb070eb4a4109e6f37'],
-		'X-Forwarded-For': ['103.151.173.99'],
-		'X-Forwarded-Port': ['443'],
-		'X-Forwarded-Proto': ['https']
-	},
-	'queryStringParameters': {
-		'demand_fleet_id': '15',
-		'from_lat': '41.1763496',
-		'from_lng': '9.3888974',
-		'passenger_count': '3',
-		'req_id': 'ping-7-30-1',
-		'ses': 'qFCtbYDPc3wZyfHMlZNExNAPpmoEbDG62c0HB7YrQdT8kbJeloJO5NXFsEGwhknj...',
-		'time': '1725401340',
-		'to_lat': '40.899899',
-		'to_lng': '9.517714',
-		'vehicle_class_id': '1'
-	},
-	'multiValueQueryStringParameters': {
-		'demand_fleet_id': ['15'],
-		'from_lat': ['41.1763496'],
-		'from_lng': ['9.3888974'],
-		'passenger_count': ['3'],
-		'req_id': ['ping-7-30-1'],
-		'ses': ['qFCtbYDPc3wZyfHMlZNExNAPpmoEbDG62c0HB7YrQdT8kbJeloJO5NXFsEGwhknj...'],
-		'time': ['1725401340'],
-		'to_lat': ['40.899899'],
-		'to_lng': ['9.517714'],
-		'vehicle_class_id': ['1']
-	},
-	'pathParameters': None,
-	'stageVariables': None,
-	'requestContext': {
-		'resourceId': 'd7df9o',
-		'resourcePath': '/ride-pricings',
-		'httpMethod': 'GET',
-		'extendedRequestId': 'bt4cWHXTiYcEPjw=',
-		'requestTime': '30/Jul/2024:08:15:23 +0000',
-		'path': '/prod/ride-pricings',
-		'accountId': '064290855103',
-		'protocol': 'HTTP/1.1',
-		'stage': 'prod',
-		'domainPrefix': 'k3zdvi12m6',
-		'requestTimeEpoch': 1722327323548,
-		'requestId': 'b8c860ae-1dba-4f63-9d83-02bbc5035624',
-		'identity': {
-			'cognitoIdentityPoolId': None,
-			'accountId': None,
-			'cognitoIdentityId': None,
-			'caller': None,
-			'sourceIp': '103.151.173.99',
-			'principalOrgId': None,
-			'accessKey': None,
-			'cognitoAuthenticationType': None,
-			'cognitoAuthenticationProvider': None,
-			'userArn': None,
-			'userAgent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36',
-			'user': None
-		},
-		'domainName': 'k3zdvi12m6.execute-api.us-east-2.amazonaws.com',
-		'deploymentId': 'ittcd7',
-		'apiId': 'k3zdvi12m6'
-	},
-	'body': None,
-	'isBase64Encoded': False
-}
-2024 - 07 - 30 08: 15: 23, 564 - elife_log - INFO - None
-select login_session.login_session_hash, login_session.login_id, login_session.access, login.employee_id, login
-	.fleet_emp_id, login.fleet_driver_id, login.agency_emp_id, login.partner_emp_id, login.affiliate_emp_id, login
-	.corporate_emp_id, via.login_id as via_login_id from login_session inner join login on login.id = login_session
-	.login_id left join login_session via on via.id = login_session.via_login_session_id where login_session
-	.login_session_hash = % s;
-Param: ('5e701583fb0dee100c5ed4451c811e8a9e462d8151e5ddfff0f7923f8f9bea80', )
-select country from lat_lng_4_country where(lat, lng) in((41, 9), (41.17, 9.38), (41.1763, 9.3888));
-Param: ()
-select fleet.id as fleet_id, fleet.lat, fleet.lng, fleet.radius, fleet.parent_fleet_id, parent_fleet
-	.name as parent_fleet_name, fleet.service_area_pricing_id from fleet inner join fleet parent_fleet on parent_fleet
-	.id = fleet.parent_fleet_id where fleet.lat < % s and fleet.lat > % s and fleet.lng < % s and fleet.lng > %
-	s and fleet.id in (select id from fleet where parent_fleet_id in (select %
-		s union select supply_fleet_id from fleet_supply_demand where demand_fleet_id = % s));
-Param: (44.32400145171862, 38.02869774828138, 13.559565030262693, 5.218229769737305, 15, 15)
-2024 - 07 - 30 08: 15: 23, 763 - elife_log - INFO - function fleets_select_by_from_to takes 0.006827592849731445 sec
-2024 - 07 - 30 08: 15: 23, 763 - elife_log - INFO - print fleet_ids_qry:
-	2024 - 07 - 30 08: 15: 23, 763 - elife_log - INFO - [{
-		'fleet_id': 1133,
-		'lat': 41.502335,
-		'lng': 9.098381,
-		'radius': 99000,
-		'parent_fleet_id': 15,
-		'parent_fleet_name': 'Elife',
-		'service_area_pricing_id': 178516
-	}, {
-		'fleet_id': 59526,
-		'lat': 41.920217,
-		'lng': 8.794628,
-		'radius': 150000,
-		'parent_fleet_id': 9036,
-		'parent_fleet_name': 'Jennylimo',
-		'service_area_pricing_id': 175005
-	}]
-select service_area_pricing.id as id, service_area_id, pricing, effective_at, expire_at, fleet
-	.service_area_pricing_id as fleet_service_area_pricing_id from service_area_pricing inner join fleet on fleet.id =
-	service_area_pricing.service_area_id where service_area_pricing.id in ( % s, % s) order by service_area_pricing
-	.id desc;
-Param: (178516, 175005)
-2024 - 07 - 30 08: 15: 23, 765 - elife_log - INFO - start upload quote to s3
-2024 - 07 - 30 08: 15: 23, 812 - elife_log - INFO - 2024 - 07 / 07 d64f0c3d9048889a639314c0d9bcd0 - 1722327323 -
-	wb8vkzx5 - req.json upload status: 200
-2024 - 07 - 30 08: 15: 23, 812 - elife_log - INFO - upload stats: [True]
-2024 - 07 - 30 08: 15: 23, 813 - elife_log - INFO - upload result True
-2024 - 07 - 30 08: 15: 23, 813 - elife_log - INFO - Ride MySQL connection is closed
-2024 - 07 - 30 08: 15: 23, 814 - elife_log - INFO - {
-	"statusCode": 200,
-	"headers": {
-		"Access-Control-Allow-Origin": "*",
-		"Access-Control-Expose-Headers": "Date"
-	},
-	"body": "{\"fleets\": [], \"request_id\": \"07d64f0c3d9048889a639314c0d9bcd0\", \"distance\": 0.0}"
-}
-
-END RequestId: 9616 f40a - abe3 - 4467 - 8510 - 273 abc8506dd
-REPORT RequestId: 9616 f40a - abe3 - 4467 - 8510 - 273 abc8506dd Duration: 253.81 ms Billed Duration:
-	254 ms Memory Size: 10240 MB Max Memory Used: 134 MB
+[
+    {
+        "服务区\nService area(可以不填)": "Melbourne,FL,USA",
+        "服务区的机场code(只写一个就好)": "MLB",
+        "起点\nstarting point": "9050 Discovery Rd, Cape Canaveral, FL 32923",
+        "起点归属机场代码/一口价圈\nAirport code/Fixed Price zone": "MLB",
+        "终点\nend point": "MCO",
+        "终点归属机场代码/一口价圈\nAirport code/Fixed Price zone": "space to mco",
+        "Elife 车型\nElife Vehicles": "Sedan",
+        "Mozio 车型信息 类别/车型级别/人数 \nMozio model information Type/Class/Passanger": "Sedan/Standard/3",
+        "成本价\ncost price USD": 90,
+        "最低售价\nminimum price": 90,
+        "价格影响范围\nPrice impact date": "15-30days",
+        "备注 \nRemark": "运行中，已下架"
+    },
+    {
+        "服务区\nService area(可以不填)": "Melbourne,FL,USA",
+        "服务区的机场code(只写一个就好)": "MLB",
+        "起点\nstarting point": "9050 Discovery Rd, Cape Canaveral, FL 32924",
+        "起点归属机场代码/一口价圈\nAirport code/Fixed Price zone": "MLB",
+        "终点\nend point": "MCO",
+        "终点归属机场代码/一口价圈\nAirport code/Fixed Price zone": "space to mco",
+        "Elife 车型\nElife Vehicles": "MPV-5",
+        "Mozio 车型信息 类别/车型级别/人数 \nMozio model information Type/Class/Passanger": "Private Van/Standard/5",
+        "成本价\ncost price USD": 100,
+        "最低售价\nminimum price": 100,
+        "价格影响范围\nPrice impact date": "15-30days",
+        "备注 \nRemark": "运行中，已下架"
+    },
+    {
+        "服务区\nService area(可以不填)": "Melbourne,FL,USA",
+        "服务区的机场code(只写一个就好)": "MLB",
+        "起点\nstarting point": "9050 Discovery Rd, Cape Canaveral, FL 32925",
+        "起点归属机场代码/一口价圈\nAirport code/Fixed Price zone": "MLB",
+        "终点\nend point": "MCO",
+        "终点归属机场代码/一口价圈\nAirport code/Fixed Price zone": "space to mco",
+        "Elife 车型\nElife Vehicles": "23-seat Bus",
+        "Mozio 车型信息 类别/车型级别/人数 \nMozio model information Type/Class/Passanger": "Private Bus/Standard/23",
+        "成本价\ncost price USD": 400,
+        "最低售价\nminimum price": 400,
+        "价格影响范围\nPrice impact date": "15-30days",
+        "备注 \nRemark": "运行中，已下架"
+    },
+    {
+        "服务区\nService area(可以不填)": "Melbourne,FL,USA",
+        "服务区的机场code(只写一个就好)": "MLB",
+        "起点\nstarting point": "9050 Discovery Rd, Cape Canaveral, FL 32926",
+        "起点归属机场代码/一口价圈\nAirport code/Fixed Price zone": "MLB",
+        "终点\nend point": "MCO",
+        "终点归属机场代码/一口价圈\nAirport code/Fixed Price zone": "space to mco",
+        "Elife 车型\nElife Vehicles": "36-seat Bus",
+        "Mozio 车型信息 类别/车型级别/人数 \nMozio model information Type/Class/Passanger": "Private Bus/Standard/36",
+        "成本价\ncost price USD": 650,
+        "最低售价\nminimum price": 650,
+        "价格影响范围\nPrice impact date": "15-30days",
+        "备注 \nRemark": "运行中，已下架"
+    },
+    {
+        "服务区\nService area(可以不填)": "Melbourne,FL,USA",
+        "服务区的机场code(只写一个就好)": "MLB",
+        "起点\nstarting point": "9050 Discovery Rd, Cape Canaveral, FL 32925",
+        "起点归属机场代码/一口价圈\nAirport code/Fixed Price zone": "MLB",
+        "终点\nend point": "MCO",
+        "终点归属机场代码/一口价圈\nAirport code/Fixed Price zone": "space to mco",
+        "Elife 车型\nElife Vehicles": "55-seat Coach Bus",
+        "Mozio 车型信息 类别/车型级别/人数 \nMozio model information Type/Class/Passanger": "Private Bus/Standard/55",
+        "成本价\ncost price USD": 800,
+        "最低售价\nminimum price": 800,
+        "价格影响范围\nPrice impact date": "15-30days",
+        "备注 \nRemark": "运行中，已下架"
+    },
+    {
+        "服务区\nService area(可以不填)": "San francisco",
+        "服务区的机场code(只写一个就好)": "SFO",
+        "起点\nstarting point": "SFO Airport",
+        "起点归属机场代码/一口价圈\nAirport code/Fixed Price zone": "SFO",
+        "终点\nend point": "1 Washington Sq, San Jose, CA 95192",
+        "终点归属机场代码/一口价圈\nAirport code/Fixed Price zone": "san jose",
+        "Elife 车型\nElife Vehicles": "Sedan",
+        "Mozio 车型信息 类别/车型级别/人数 \nMozio model information Type/Class/Passanger": "Sedan/Standard/3",
+        "成本价\ncost price USD": 65,
+        "最低利润\nminimum profit %": 0.1,
+        "最低售价\nminimum price": 71.5,
+        "价格影响范围\nPrice impact date": "15-30days"
+    },
+    {
+        "服务区\nService area(可以不填)": "San francisco",
+        "服务区的机场code(只写一个就好)": "SFO",
+        "起点\nstarting point": "SFO Airport",
+        "起点归属机场代码/一口价圈\nAirport code/Fixed Price zone": "SFO",
+        "终点\nend point": "1 Washington Sq, San Jose, CA 95192",
+        "终点归属机场代码/一口价圈\nAirport code/Fixed Price zone": "san jose",
+        "Elife 车型\nElife Vehicles": "MPV-4",
+        "Mozio 车型信息 类别/车型级别/人数 \nMozio model information Type/Class/Passanger": "Private Van/Standard/4",
+        "成本价\ncost price USD": 70,
+        "最低售价\nminimum price": 70,
+        "价格影响范围\nPrice impact date": "15-30days"
+    },
+    {
+        "服务区\nService area(可以不填)": "Miami,USA",
+        "服务区的机场code(只写一个就好)": "MIA",
+        "起点\nstarting point": "MIA Airport",
+        "起点归属机场代码/一口价圈\nAirport code/Fixed Price zone": "MIA",
+        "终点\nend point": "100 Chopin Plaza, Miami, FL 33131",
+        "终点归属机场代码/一口价圈\nAirport code/Fixed Price zone": "downtown",
+        "Elife 车型\nElife Vehicles": "Sedan",
+        "Mozio 车型信息 类别/车型级别/人数 \nMozio model information Type/Class/Passanger": "Sedan/Standard/3",
+        "成本价\ncost price USD": 30,
+        "最低售价\nminimum price": 30,
+        "价格影响范围\nPrice impact date": "15-30days",
+        "备注 \nRemark": "运行中，已下架"
+    },
+    {
+        "服务区\nService area(可以不填)": "Miami,USA",
+        "服务区的机场code(只写一个就好)": "MIA",
+        "起点\nstarting point": "MIA Airport",
+        "起点归属机场代码/一口价圈\nAirport code/Fixed Price zone": "MIA",
+        "终点\nend point": "100 Chopin Plaza, Miami, FL 33132",
+        "终点归属机场代码/一口价圈\nAirport code/Fixed Price zone": "downtown",
+        "Elife 车型\nElife Vehicles": "MPV-4",
+        "Mozio 车型信息 类别/车型级别/人数 \nMozio model information Type/Class/Passanger": "Private Van/Standard/4",
+        "成本价\ncost price USD": 35,
+        "最低售价\nminimum price": 35,
+        "价格影响范围\nPrice impact date": "15-30days",
+        "备注 \nRemark": "运行中，已下架"
+    },
+    {
+        "服务区\nService area(可以不填)": "Miami,USA",
+        "服务区的机场code(只写一个就好)": "MIA",
+        "起点\nstarting point": "MIA Airport",
+        "起点归属机场代码/一口价圈\nAirport code/Fixed Price zone": "MIA",
+        "终点\nend point": "100 Chopin Plaza, Miami, FL 33133",
+        "终点归属机场代码/一口价圈\nAirport code/Fixed Price zone": "downtown",
+        "Elife 车型\nElife Vehicles": "MPV-5",
+        "Mozio 车型信息 类别/车型级别/人数 \nMozio model information Type/Class/Passanger": "Private Van/Standard/5",
+        "成本价\ncost price USD": 40,
+        "最低售价\nminimum price": 40,
+        "价格影响范围\nPrice impact date": "15-30days",
+        "备注 \nRemark": "运行中，已下架"
+    },
+    {
+        "服务区\nService area(可以不填)": "Los Angeles,USA",
+        "服务区的机场code(只写一个就好)": "LAX",
+        "起点\nstarting point": "LAX Airport",
+        "起点归属机场代码/一口价圈\nAirport code/Fixed Price zone": "LAX",
+        "终点\nend point": "Moxy Downtown Los Angeles",
+        "终点归属机场代码/一口价圈\nAirport code/Fixed Price zone": "los angeles",
+        "Elife 车型\nElife Vehicles": "Sedan",
+        "Mozio 车型信息 类别/车型级别/人数 \nMozio model information Type/Class/Passanger": "Sedan/Standard/3",
+        "成本价\ncost price USD": 42,
+        "最低利润\nminimum profit %": 0.25,
+        "最低售价\nminimum price": 52.5,
+        "价格影响范围\nPrice impact date": "15-30days",
+        "服务区订单上限（天）\nService Area Order Limit (day)": 20
+    },
+    {
+        "服务区\nService area(可以不填)": "Los Angeles,USA",
+        "服务区的机场code(只写一个就好)": "LAX",
+        "起点\nstarting point": "LAX Airport",
+        "起点归属机场代码/一口价圈\nAirport code/Fixed Price zone": "LAX",
+        "终点\nend point": "Moxy Downtown Los Angeles",
+        "终点归属机场代码/一口价圈\nAirport code/Fixed Price zone": "los angeles",
+        "Elife 车型\nElife Vehicles": "MPV-4",
+        "Mozio 车型信息 类别/车型级别/人数 \nMozio model information Type/Class/Passanger": "Private Van/Standard/4",
+        "成本价\ncost price USD": 48,
+        "最低利润\nminimum profit %": 0.25,
+        "最低售价\nminimum price": 60,
+        "价格影响范围\nPrice impact date": "15-30days",
+        "服务区订单上限（天）\nService Area Order Limit (day)": 20
+    },
+    {
+        "服务区\nService area(可以不填)": "Los Angeles,USA",
+        "服务区的机场code(只写一个就好)": "LAX",
+        "起点\nstarting point": "LAX Airport",
+        "起点归属机场代码/一口价圈\nAirport code/Fixed Price zone": "LAX",
+        "终点\nend point": "Moxy Downtown Los Angeles",
+        "终点归属机场代码/一口价圈\nAirport code/Fixed Price zone": "los angeles",
+        "Elife 车型\nElife Vehicles": "MPV-5",
+        "Mozio 车型信息 类别/车型级别/人数 \nMozio model information Type/Class/Passanger": "Private Van/Standard/5",
+        "成本价\ncost price USD": 55,
+        "最低利润\nminimum profit %": 0.25,
+        "最低售价\nminimum price": 68.75,
+        "价格影响范围\nPrice impact date": "15-30days",
+        "服务区订单上限（天）\nService Area Order Limit (day)": 20
+    },
+    {
+        "服务区\nService area(可以不填)": "Los Angeles,USA",
+        "服务区的机场code(只写一个就好)": "LAX",
+        "起点\nstarting point": "LAX Airport",
+        "起点归属机场代码/一口价圈\nAirport code/Fixed Price zone": "LAX",
+        "终点\nend point": "Universal Studios Hollywood",
+        "终点归属机场代码/一口价圈\nAirport code/Fixed Price zone": "Hollywood",
+        "Elife 车型\nElife Vehicles": "Sedan",
+        "Mozio 车型信息 类别/车型级别/人数 \nMozio model information Type/Class/Passanger": "Sedan/Standard/3",
+        "成本价\ncost price USD": 45,
+        "最低利润\nminimum profit %": 0.25,
+        "最低售价\nminimum price": 56.25,
+        "价格影响范围\nPrice impact date": "15-30days",
+        "服务区订单上限（天）\nService Area Order Limit (day)": 20
+    },
+    {
+        "服务区\nService area(可以不填)": "Los Angeles,USA",
+        "服务区的机场code(只写一个就好)": "LAX",
+        "起点\nstarting point": "LAX Airport",
+        "起点归属机场代码/一口价圈\nAirport code/Fixed Price zone": "LAX",
+        "终点\nend point": "Universal Studios Hollywood",
+        "终点归属机场代码/一口价圈\nAirport code/Fixed Price zone": "Hollywood",
+        "Elife 车型\nElife Vehicles": "MPV-4",
+        "Mozio 车型信息 类别/车型级别/人数 \nMozio model information Type/Class/Passanger": "Private Van/Standard/4",
+        "成本价\ncost price USD": 50,
+        "最低利润\nminimum profit %": 0.25,
+        "最低售价\nminimum price": 62.5,
+        "价格影响范围\nPrice impact date": "15-30days",
+        "服务区订单上限（天）\nService Area Order Limit (day)": 20
+    },
+    {
+        "服务区\nService area(可以不填)": "Los Angeles,USA",
+        "服务区的机场code(只写一个就好)": "LAX",
+        "起点\nstarting point": "LAX Airport",
+        "起点归属机场代码/一口价圈\nAirport code/Fixed Price zone": "LAX",
+        "终点\nend point": "Universal Studios Hollywood",
+        "终点归属机场代码/一口价圈\nAirport code/Fixed Price zone": "Hollywood",
+        "Elife 车型\nElife Vehicles": "MPV-5",
+        "Mozio 车型信息 类别/车型级别/人数 \nMozio model information Type/Class/Passanger": "Private Van/Standard/5",
+        "成本价\ncost price USD": 60,
+        "最低利润\nminimum profit %": 0.25,
+        "最低售价\nminimum price": 75,
+        "价格影响范围\nPrice impact date": "15-30days",
+        "服务区订单上限（天）\nService Area Order Limit (day)": 20
+    },
+    {
+        "服务区\nService area(可以不填)": "Los Angeles,USA",
+        "服务区的机场code(只写一个就好)": "LAX",
+        "起点\nstarting point": "LAX Airport",
+        "起点归属机场代码/一口价圈\nAirport code/Fixed Price zone": "LAX",
+        "终点\nend point": "Beverly Wilshire, A Four Seasons Hotel",
+        "终点归属机场代码/一口价圈\nAirport code/Fixed Price zone": "Beverly hills",
+        "Elife 车型\nElife Vehicles": "Sedan",
+        "Mozio 车型信息 类别/车型级别/人数 \nMozio model information Type/Class/Passanger": "Sedan/Standard/3",
+        "成本价\ncost price USD": 42,
+        "最低利润\nminimum profit %": 0.25,
+        "最低售价\nminimum price": 52.5,
+        "价格影响范围\nPrice impact date": "15-30days",
+        "服务区订单上限（天）\nService Area Order Limit (day)": 20
+    },
+    {
+        "服务区\nService area(可以不填)": "Los Angeles,USA",
+        "服务区的机场code(只写一个就好)": "LAX",
+        "起点\nstarting point": "LAX Airport",
+        "起点归属机场代码/一口价圈\nAirport code/Fixed Price zone": "LAX",
+        "终点\nend point": "Beverly Wilshire, A Four Seasons Hotel",
+        "终点归属机场代码/一口价圈\nAirport code/Fixed Price zone": "Beverly hills",
+        "Elife 车型\nElife Vehicles": "MPV-4",
+        "Mozio 车型信息 类别/车型级别/人数 \nMozio model information Type/Class/Passanger": "Private Van/Standard/4",
+        "成本价\ncost price USD": 48,
+        "最低利润\nminimum profit %": 0.25,
+        "最低售价\nminimum price": 60,
+        "价格影响范围\nPrice impact date": "15-30days",
+        "服务区订单上限（天）\nService Area Order Limit (day)": 20
+    },
+    {
+        "服务区\nService area(可以不填)": "Los Angeles,USA",
+        "服务区的机场code(只写一个就好)": "LAX",
+        "起点\nstarting point": "LAX Airport",
+        "起点归属机场代码/一口价圈\nAirport code/Fixed Price zone": "LAX",
+        "终点\nend point": "Beverly Wilshire, A Four Seasons Hotel",
+        "终点归属机场代码/一口价圈\nAirport code/Fixed Price zone": "Beverly hills",
+        "Elife 车型\nElife Vehicles": "MPV-5",
+        "Mozio 车型信息 类别/车型级别/人数 \nMozio model information Type/Class/Passanger": "Private Van/Standard/5",
+        "成本价\ncost price USD": 55,
+        "最低利润\nminimum profit %": 0.25,
+        "最低售价\nminimum price": 68.75,
+        "价格影响范围\nPrice impact date": "15-30days",
+        "服务区订单上限（天）\nService Area Order Limit (day)": 20
+    },
+    {
+        "服务区\nService area(可以不填)": "Los Angeles,USA",
+        "服务区的机场code(只写一个就好)": "BUR",
+        "起点\nstarting point": "BUR Airport",
+        "起点归属机场代码/一口价圈\nAirport code/Fixed Price zone": "BUR",
+        "终点\nend point": "Moxy Downtown Los Angeles",
+        "终点归属机场代码/一口价圈\nAirport code/Fixed Price zone": "los angeles",
+        "Elife 车型\nElife Vehicles": "Sedan",
+        "Mozio 车型信息 类别/车型级别/人数 \nMozio model information Type/Class/Passanger": "Sedan/Standard/3",
+        "成本价\ncost price USD": 65,
+        "最低利润\nminimum profit %": 0.25,
+        "最低售价\nminimum price": 81.25,
+        "价格影响范围\nPrice impact date": "15-30days",
+        "服务区订单上限（天）\nService Area Order Limit (day)": 20
+    },
+    {
+        "服务区\nService area(可以不填)": "Los Angeles,USA",
+        "服务区的机场code(只写一个就好)": "BUR",
+        "起点\nstarting point": "BUR Airport",
+        "起点归属机场代码/一口价圈\nAirport code/Fixed Price zone": "BUR",
+        "终点\nend point": "Moxy Downtown Los Angeles",
+        "终点归属机场代码/一口价圈\nAirport code/Fixed Price zone": "los angeles",
+        "Elife 车型\nElife Vehicles": "MPV-4",
+        "Mozio 车型信息 类别/车型级别/人数 \nMozio model information Type/Class/Passanger": "Private Van/Standard/4",
+        "成本价\ncost price USD": 90,
+        "最低利润\nminimum profit %": 0.25,
+        "最低售价\nminimum price": 112.5,
+        "价格影响范围\nPrice impact date": "15-30days",
+        "服务区订单上限（天）\nService Area Order Limit (day)": 20
+    },
+    {
+        "服务区\nService area(可以不填)": "Los Angeles,USA",
+        "服务区的机场code(只写一个就好)": "BUR",
+        "起点\nstarting point": "BUR Airport",
+        "起点归属机场代码/一口价圈\nAirport code/Fixed Price zone": "BUR",
+        "终点\nend point": "Moxy Downtown Los Angeles",
+        "终点归属机场代码/一口价圈\nAirport code/Fixed Price zone": "los angeles",
+        "Elife 车型\nElife Vehicles": "MPV-5",
+        "Mozio 车型信息 类别/车型级别/人数 \nMozio model information Type/Class/Passanger": "Private Van/Standard/5",
+        "成本价\ncost price USD": 100,
+        "最低利润\nminimum profit %": 0.25,
+        "最低售价\nminimum price": 125,
+        "价格影响范围\nPrice impact date": "15-30days",
+        "服务区订单上限（天）\nService Area Order Limit (day)": 20
+    },
+    {
+        "服务区\nService area(可以不填)": "Cusco,Peru",
+        "服务区的机场code(只写一个就好)": "CUZ",
+        "起点\nstarting point": "CUZ Airport",
+        "起点归属机场代码/一口价圈\nAirport code/Fixed Price zone": "CUZ",
+        "终点\nend point": "Cusco City",
+        "终点归属机场代码/一口价圈\nAirport code/Fixed Price zone": "Cusco City",
+        "Elife 车型\nElife Vehicles": "Sedan",
+        "Mozio 车型信息 类别/车型级别/人数 \nMozio model information Type/Class/Passanger": "Sedan/Standard/3",
+        "成本价\ncost price USD": 5,
+        "最低利润\nminimum profit %": 0,
+        "最低售价\nminimum price": 5,
+        "备注 \nRemark": "running"
+    },
+    {
+        "服务区\nService area(可以不填)": "Cusco,Peru",
+        "服务区的机场code(只写一个就好)": "CUZ",
+        "起点\nstarting point": "CUZ Airport",
+        "起点归属机场代码/一口价圈\nAirport code/Fixed Price zone": "CUZ",
+        "终点\nend point": "Cusco City",
+        "终点归属机场代码/一口价圈\nAirport code/Fixed Price zone": "Cusco",
+        "Elife 车型\nElife Vehicles": "MPV-4",
+        "Mozio 车型信息 类别/车型级别/人数 \nMozio model information Type/Class/Passanger": "Private Van/Standard/4",
+        "成本价\ncost price USD": 11,
+        "最低利润\nminimum profit %": 0,
+        "最低售价\nminimum price": 11
+    },
+    {
+        "服务区\nService area(可以不填)": "Cusco,Peru",
+        "服务区的机场code(只写一个就好)": "CUZ",
+        "起点\nstarting point": "CUZ Airport",
+        "起点归属机场代码/一口价圈\nAirport code/Fixed Price zone": "CUZ",
+        "终点\nend point": "Cusco City",
+        "终点归属机场代码/一口价圈\nAirport code/Fixed Price zone": "Cusco",
+        "Elife 车型\nElife Vehicles": "MPV-5",
+        "成本价\ncost price USD": 15,
+        "最低利润\nminimum profit %": 0,
+        "最低售价\nminimum price": 15
+    },
+    {
+        "服务区\nService area(可以不填)": "Cusco,Peru",
+        "服务区的机场code(只写一个就好)": "CUZ",
+        "起点\nstarting point": "CUZ Airport",
+        "起点归属机场代码/一口价圈\nAirport code/Fixed Price zone": "CUZ",
+        "终点\nend point": "Cusco City",
+        "终点归属机场代码/一口价圈\nAirport code/Fixed Price zone": "Cusco",
+        "Elife 车型\nElife Vehicles": "Business SUV",
+        "成本价\ncost price USD": 70,
+        "最低利润\nminimum profit %": 0,
+        "最低售价\nminimum price": 70
+    },
+    {
+        "服务区\nService area(可以不填)": "Santiago,Chile",
+        "服务区的机场code(只写一个就好)": "SCL",
+        "起点\nstarting point": "SCL  Airport",
+        "起点归属机场代码/一口价圈\nAirport code/Fixed Price zone": "SCL",
+        "终点归属机场代码/一口价圈\nAirport code/Fixed Price zone": "Providencia/ Santiago Centro",
+        "Elife 车型\nElife Vehicles": "Sedan",
+        "Mozio 车型信息 类别/车型级别/人数 \nMozio model information Type/Class/Passanger": "Sedan/Standard/3",
+        "成本价\ncost price USD": 23,
+        "最低利润\nminimum profit %": 0.2,
+        "最低售价\nminimum price": 27.6,
+        "服务区订单上限（天）\nService Area Order Limit (day)": 60
+    },
+    {
+        "服务区\nService area(可以不填)": "Santiago,Chile",
+        "服务区的机场code(只写一个就好)": "SCL",
+        "起点\nstarting point": "SCL  Airport",
+        "起点归属机场代码/一口价圈\nAirport code/Fixed Price zone": "SCL",
+        "终点归属机场代码/一口价圈\nAirport code/Fixed Price zone": "Las condes",
+        "Elife 车型\nElife Vehicles": "Sedan",
+        "Mozio 车型信息 类别/车型级别/人数 \nMozio model information Type/Class/Passanger": "Sedan/Standard/3",
+        "成本价\ncost price USD": 23,
+        "最低售价\nminimum price": 23,
+        "服务区订单上限（天）\nService Area Order Limit (day)": 60
+    },
+    {
+        "服务区\nService area(可以不填)": "Santiago,Chile",
+        "服务区的机场code(只写一个就好)": "SCL",
+        "起点\nstarting point": "SCL  Airport",
+        "起点归属机场代码/一口价圈\nAirport code/Fixed Price zone": "SCL",
+        "终点归属机场代码/一口价圈\nAirport code/Fixed Price zone": "Estacion central",
+        "Elife 车型\nElife Vehicles": "Sedan",
+        "Mozio 车型信息 类别/车型级别/人数 \nMozio model information Type/Class/Passanger": "Sedan/Standard/3",
+        "成本价\ncost price USD": 24,
+        "最低利润\nminimum profit %": 0.15,
+        "最低售价\nminimum price": 27.6,
+        "服务区订单上限（天）\nService Area Order Limit (day)": 60
+    },
+    {
+        "服务区\nService area(可以不填)": "Auckland,New Zealand",
+        "服务区的机场code(只写一个就好)": "AKL",
+        "起点\nstarting point": "Auckland  Airport",
+        "起点归属机场代码/一口价圈\nAirport code/Fixed Price zone": "AKL",
+        "终点\nend point": "New Zealand, Auckland, Auckland CBD, Vincent Street, 奥克兰千禧大酒店",
+        "终点归属机场代码/一口价圈\nAirport code/Fixed Price zone": "1-市区",
+        "Elife 车型\nElife Vehicles": "Sedan",
+        "Mozio 车型信息 类别/车型级别/人数 \nMozio model information Type/Class/Passanger": "Sedan/Standard/3",
+        "成本价\ncost price USD": 39,
+        "最低利润\nminimum profit %": 0.05,
+        "最低售价\nminimum price": 40.95,
+        "价格影响范围\nPrice impact date": "15-30days",
+        "服务区订单上限（天）\nService Area Order Limit (day)": 50
+    }
+]
