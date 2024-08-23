@@ -91,7 +91,6 @@
 
 
     async function getNewFleetId(oldFleetId) {
-
       // select  id  from fleet where name=(select name from fleet where id={{fleet_id}}) and parent_fleet_id = 51488
       let d = {
         sql: 134678775,
@@ -436,9 +435,7 @@
     }
 
 
-    function addVehiclePercent() {
-
-    }
+  
 
     function percentTranslate(p) {
       p = Number(p)

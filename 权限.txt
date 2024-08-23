@@ -1,0 +1,15 @@
+i18n
+vehicle_category_class
+vehicle_category
+fleet_to_ride_vehicle_mapping 
+agency
+corporate
+spp_strategy
+spp_cost
+spp_service_area_capacity
+
+
+# 需要以下接口的日志权限
+distance-time
+sql-template-run-3
+s3-quotes-to-bigquery-post

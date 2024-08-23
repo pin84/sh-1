@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./step1.css">
+  <link rel="stylesheet" href="./iconfont/iconfont.css">
+  <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+
+  <!-- import Vue before Element -->
+  <script src="https://unpkg.com/vue@2/dist/vue.js"></script>
+  <!-- import JavaScript -->
+  <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+  <script src="https://cdn.sheetjs.com/xlsx-0.20.2/package/dist/xlsx.full.min.js"></script>
+</head>
+
+
+<body>
+  <div id="app">
+
+    
+    <div>
+      TEST
+    </div>
+
+  </div>
+
+
+  <script src="./iconfont/iconfont.js"></script>
+
+  <script>
+    new Vue({
+      el: '#app',
+
+      data: () => {
+        return {
+          stage: 'dev', //dev, prod
+
+        }
+      },
+
+      created() {
+  
+
+      },
+
+      methods: {
+   
+
+        fetchData({
+          url = '',
+          data = {},
+          method = 'GET',
+          // isShowLoading = true
+        } = {}) {
+          method = method.toUpperCase();
+          data['req_id'] = this.uuid()
+          if (method == 'GET') {
+            let dataStr = '';
+            Object.keys(data).forEach(key => {
+              dataStr += key + '=' + data[key] + '&';
+            })
+            if (dataStr !== '') {
+              dataStr = dataStr.substring(0, dataStr.lastIndexOf('&'));
+              url = url + '?' + dataStr;
+            }
+          }
+          let requestConfig = {
+            // credentials: 'same-origin',
+            method,
+            headers: {
+              'Accept': 'application/json',
+              // 'Content-method': 'application/json'
+            },
+            // mode: "cors", // same-origin，no-cors（default） cores;
+            // cache: "force-cache" // default 、 no-store 、 reload 、 no-cache 、 force-cache 、 only-if-cached 
+          }
+
+          if (method == 'POST') {
+            Object.defineProperty(requestConfig, 'body', {
+              value: JSON.stringify(data)
+            })
+          }
+          return fetch(url, requestConfig).then(async (response) => {
+            const data = await response.json()
+            if (response.ok && response.status === 200) {
+              return Promise.resolve(data)
+            } else {
+              let { errMsg } = data
+              this.$message(errMsg);
+              return Promise.reject(null)
+            }
+          })
+            .catch((error) => {
+              console.log(error);
+            })
+        },
+        uuid() {
+          function S4() {
+            return (((1 + Math.random()) * 0x10000) | 0).toString(16).substring(1);
+          }
+          return S4() + S4() + '-' + S4() + '-' + S4() + '-' + S4() + '-' + S4() + S4() + S4();
+        }
+      }
+    })
+  </script>
+
+</body>
+
+</html>

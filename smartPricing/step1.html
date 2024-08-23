@@ -333,7 +333,6 @@
           this.routes = results || []
           this.currentRoute = results[0]
 
-          debugger
           console.log(results);
         },
 
@@ -407,7 +406,6 @@
 
           let jsonId = res2.results[0].service_area_pricing_id
 
-          debugger
 
           let json = await this.getPricingJsonById(jsonId)
           let { vehicleClasses, zones } = json

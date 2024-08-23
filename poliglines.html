@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* 
+ * Always set the map height explicitly to define the size of the div element
+ * that contains the map. 
+ */
+        #map {
+            height: 100%;
+        }
+
+        /* 
+ * Optional: Makes the sample page fill the window. 
+ */
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="copy">copy</div>
+    <div id="map"></div>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly"
+        defer></script>
+
+
+    <script>
+
+        let d = { }
+
+        let copy = document.querySelector('.copy')
+        copy.addEventListener('click',()=>{
+
+            let tem = []
+            let list =  d.flightPath.getPath().getArray()
+            for(let item of list){
+                tem.push(
+                    {
+                        lat:item.lat(),
+                        lng:item.lng(),
+                    }
+                )
+            }
+            console.log(tem);
+            
+        })
+
+        // This example creates a 2-pixel-wide red polyline showing the path of
+        // the first trans-Pacific flight between Oakland, CA, and Brisbane,
+        // Australia which was made by Charles Kingsford Smith.
+        function initMap() {
+
+            let latlngList = handlerLatLng()
+            const map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 10,
+                center: latlngList[0],
+                mapTypeId: "terrain",
+            });
+
+            const flightPlanCoordinates = latlngList
+            // [
+            //     { lat: 37.772, lng: -122.214 },
+            //     { lat: 21.291, lng: -157.821 },
+            //     { lat: -19.142, lng: 178.431 },
+            //     { lat: -27.467, lng: 153.027 },
+            // ];
+            const flightPath = new google.maps.Polyline({
+                path: flightPlanCoordinates,
+                geodesic: true,
+                strokeColor: "#FF0000",
+                strokeOpacity: 1.0,
+                strokeWeight: 2,
+                editable: true,
+                draggable: true,
+            });
+
+            flightPath.setMap(map);
+
+            d.flightPath = flightPath
+        }
+
+
+
+        function handlerLatLng() {
+            let list = [
+                // {
+                //     "a_lat": 21.19799017350279,
+                //     "a_lng": -86.70880885787703,
+                //     "a_cross": 0,
+                //     "b_lat": 21.2318645888616,
+                //     "b_lng": -86.74812558500743,
+                //     "b_cross": 0
+                // },
+                // {
+                //     "a_lat": 21.2318645888616,
+                //     "a_lng": -86.74812558500743,
+                //     "a_cross": 0,
+                //     "b_lat": 21.275571241748228,
+                //     "b_lng": -86.75536596401172,
+                //     "b_cross": 0
+                // },
+                // {
+                //     "a_lat": 20.888804,
+                //     "a_lng": -87.544745,
+                //     "a_cross": 1,
+                //     "b_lat": 21.355096,
+                //     "b_lng": -86.874579,
+                //     "b_cross": 0
+                // },
+                // {
+                //     "a_lat": 21.532425,
+                //     "a_lng": -87.65366,
+                //     "a_cross": 0,
+                //     "b_lat": 21.407,
+                //     "b_lng": -86.691847,
+                //     "b_cross": 0
+                // },
+                // {
+                //     "a_lat": 21.159093,
+                //     "a_lng": -86.804744,
+                //     "a_cross": 1,
+                //     "b_lat": 21.033963,
+                //     "b_lng": -86.787241,
+                //     "b_cross": 1
+                // },
+                // {
+                //     "a_lat": 20.988476,
+                //     "a_lng": -87.182826,
+                //     "a_cross": 1,
+                //     "b_lat": 20.846688,
+                //     "b_lng": -86.903658,
+                //     "b_cross": 1
+                // },
+                // {
+                //     "a_lat": 21.4503282,
+                //     "a_lng": -86.75318,
+                //     "a_cross": 0,
+                //     "b_lat": 21.19591298,
+                //     "b_lng": -86.765626,
+                //     "b_cross": 0
+                // },
+                {
+                    "a_lat": 21.19591298,
+                    "a_lng": -86.765626,
+                    "a_cross": 0,
+                    "b_lat": 21.1011195,
+                    "b_lng": -86.6245762,
+                    "b_cross": 0
+                }
+            ]
+
+            let tem = []
+            for (let item of list) {
+                tem.push(
+                    {
+                        lat: item.a_lat,
+                        lng: item.a_lng,
+                    },
+                    {
+                        lat: item.b_lat,
+                        lng: item.b_lng,
+                    }
+                )
+            }
+            console.log(tem);
+            
+            return tem
+
+        }
+
+        window.initMap = initMap;
+
+    </script>
+</body>
+
+</html>
