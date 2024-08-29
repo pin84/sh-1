@@ -1,1900 +1,238 @@
 {
-    "serviceArea": {
-        "id": 62523,
-        "parent_fleet_id": 61654,
-        "name": "Lima,Peru",
-        "lat": -11.900453866729555,
-        "lng": -76.793432484375,
-        "radius": 47000,
-        "parent_fleet_name": "chinaCtripAPI",
-        "pid": "61654.1.1"
-    },
-    "pricing": {
-        "ranges": [
-            {
-                "seq": 0,
-                "amount": 1.71,
-                "currency": "USD",
-                "distance": 15000,
-                "from": 5000,
-                "to": 20000,
-                "distanceIn": 5,
-                "per_unit": 1,
-                "pid": "61654.2.1"
-            },
-            {
-                "seq": 1,
-                "amount": 1.59,
-                "currency": "USD",
-                "distance": 20000,
-                "from": 20000,
-                "to": 40000,
-                "distanceIn": 20,
-                "per_unit": 1,
-                "pid": "61654.2.2"
-            },
-            {
-                "seq": 2,
-                "amount": 1.59,
-                "currency": "USD",
-                "distance": 20000,
-                "from": 40000,
-                "to": 60000,
-                "distanceIn": 50,
-                "per_unit": 1,
-                "pid": "61654.2.3"
-            },
-            {
-                "seq": 3,
-                "amount": 1.22,
-                "currency": "USD",
-                "distance": 140000,
-                "from": 60000,
-                "to": 200000,
-                "distanceIn": 400,
-                "per_unit": 1,
-                "pid": "61654.2.4"
+    [
+        {'zone_name': 'North hollywood', 'price': 69.70599999999999, 'vehicle': 'Sedan', 'over_distance': None, 'price_detail': {'base_pricing': {'type': 'fixed', 'rule': None, 'zone': 'North hollywood', 'fix_price_type': 'Transfer', 'price': {'amount': 53.62, 'currency': 'USD'
+                    }, 'fix_price_detail': {'from': 'LAX', 'to': 'North hollywood', 'from_type': 'Airport', 'to_type': 'Zone'
+                    }
+                }, 'special_pricing': [
+                    {'type': 'date', 'zone': None, 'percent': 30.0, 'currency': 'USD', 'rule': '8.28-8.31'
+                    }
+                ]
             }
-        ],
-        "min_amount": 20.37,
-        "currency": "USD",
-        "min_distance": 5000,
-        "meet_n_greet": 0
-    },
-    "zones": [
-        {
-            "name": "Lima,Peru",
-            "lat": -12.070069802354807,
-            "lng": -77.07744853630196,
-            "radius": 9000,
-            "prices": [
-                {
-                    "airport": "LIM",
-                    "amount": 20.37,
-                    "currency": "USD",
-                    "p_amt": 21.96,
-                    "d_amt": 21.96
-                }
-            ],
-            "p2p": "false",
-            "pid": "61654.4.1"
         },
-        {
-            "lat": -16.4090474,
-            "lng": -71.53745099999999,
-            "name": "Arequipa",
-            "p2p": "false",
-            "prices": [
-                {
-                    "airport": "LIM",
-                    "amount": 20.37,
-                    "currency": "USD",
-                    "p_amt": 585.6,
-                    "d_amt": 585.6
-                }
-            ],
-            "radius": 15000,
-            "pid": "61654.4.2"
-        },
-        {
-            "lat": -13.53195,
-            "lng": -71.96746259999999,
-            "name": "Cusco",
-            "p2p": "false",
-            "prices": [
-                {
-                    "airport": "LIM",
-                    "amount": 20.37,
-                    "currency": "USD",
-                    "p_amt": 732,
-                    "d_amt": 732
-                }
-            ],
-            "radius": 15000,
-            "pid": "61654.4.3"
-        }
-    ],
-    "airports": [
-        "LIM"
-    ],
-    "vehicleClasses": [
-        {
-            "vehicle_class_id": 1,
-            "delta_amount": 0,
-            "percent": 0,
-            "percent_appendix": [
-                {
-                    "field": "zones.0.prices.0.p_amt",
-                    "delta_amount": -4.88
-                },
-                {
-                    "field": "zones.0.prices.0.d_amt",
-                    "delta_amount": -4.88
-                },
-                {
-                    "field": "pricing.min_amount",
-                    "delta_amount": -2.71
-                },
-                {
-                    "field": "pricing.ranges.0",
-                    "delta_amount": 0.37
-                }
-            ],
-            "hourly_percent": 0,
-            "notice_time": [
-                {
-                    "time": 1440,
-                    "percent": 10,
-                    "allowance": 360
-                },
-                {
-                    "time": 1080,
-                    "percent": 20,
-                    "allowance": 360
-                },
-                {
-                    "time": 720,
-                    "percent": 30,
-                    "allowance": 360
-                }
-            ]
-        },
-        {
-            "vehicle_class_id": 2,
-            "delta_amount": 0,
-            "percent": 50,
-            "percent_appendix": [
-                {
-                    "field": "pricing.min_amount",
-                    "delta_amount": 25.6
-                },
-                {
-                    "field": "zones.0.prices.0.p_amt",
-                    "delta_amount": 19.5
-                },
-                {
-                    "field": "zones.0.prices.0.d_amt",
-                    "delta_amount": 19.5
-                },
-                {
-                    "field": "hourly_pricing.rules.0.min_amount",
-                    "delta_amount": 170.8
-                },
-                {
-                    "field": "hourly_pricing.rules.1.min_amount",
-                    "delta_amount": 170.8
-                },
-                {
-                    "field": "hourly_pricing.rules.0.ranges.0",
-                    "delta_amount": 36.6
-                },
-                {
-                    "field": "hourly_pricing.rules.1.ranges.0",
-                    "delta_amount": 36.6
-                },
-                {
-                    "field": "zones.2.prices.0.p_amt",
-                    "delta_amount": 219.6
-                },
-                {
-                    "field": "zones.2.prices.0.d_amt",
-                    "delta_amount": 219.6
-                }
-            ],
-            "hourly_percent": 50,
-            "notice_time": [
-                {
-                    "time": 1440,
-                    "percent": 15,
-                    "allowance": 720
-                },
-                {
-                    "time": 1080,
-                    "percent": 20,
-                    "allowance": 720
-                }
-            ]
-        },
-        {
-            "vehicle_class_id": 6,
-            "delta_amount": 0,
-            "percent": 10,
-            "percent_appendix": [
-                {
-                    "field": "pricing.min_amount",
-                    "delta_amount": 0.37
-                },
-                {
-                    "field": "pricing.ranges.0",
-                    "delta_amount": 0.49
-                },
-                {
-                    "field": "pricing.ranges.1",
-                    "delta_amount": 0.06,
-                    "curAmount": 0.95
-                },
-                {
-                    "field": "pricing.ranges.2",
-                    "delta_amount": 0.04,
-                    "curAmount": 0.83
-                },
-                {
-                    "field": "pricing.ranges.3",
-                    "delta_amount": 0.06,
-                    "curAmount": 0.75
-                },
-                {
-                    "field": "hourly_pricing.rules.0.min_amount",
-                    "delta_amount": 24.4
-                },
-                {
-                    "field": "hourly_pricing.rules.1.min_amount",
-                    "delta_amount": 24.4
-                },
-                {
-                    "field": "hourly_pricing.rules.0.ranges.0",
-                    "delta_amount": 12.2
-                },
-                {
-                    "field": "hourly_pricing.rules.1.ranges.0",
-                    "delta_amount": 12.2
-                },
-                {
-                    "field": "zones.1.prices.0.p_amt",
-                    "delta_amount": 161.04
-                },
-                {
-                    "field": "zones.1.prices.0.d_amt",
-                    "delta_amount": 161.04
-                },
-                {
-                    "field": "zones.0.prices.0.p_amt",
-                    "delta_amount": -4.45
-                },
-                {
-                    "field": "zones.0.prices.0.d_amt",
-                    "delta_amount": -4.45
-                }
-            ],
-            "hourly_percent": 10,
-            "notice_time": [
-                {
-                    "time": 1440,
-                    "percent": 10,
-                    "allowance": 360
-                },
-                {
-                    "time": 1080,
-                    "percent": 20,
-                    "allowance": 360
-                },
-                {
-                    "time": 720,
-                    "percent": 30,
-                    "allowance": 360
-                }
-            ]
-        },
-        {
-            "vehicle_class_id": 3,
-            "delta_amount": 0,
-            "percent": 50,
-            "percent_appendix": [
-                {
-                    "field": "pricing.min_amount",
-                    "delta_amount": 15.62
-                },
-                {
-                    "field": "zones.0.prices.0.p_amt",
-                    "delta_amount": 19.52
-                },
-                {
-                    "field": "zones.0.prices.0.d_amt",
-                    "delta_amount": 19.52
-                },
-                {
-                    "field": "hourly_pricing.rules.0.min_amount",
-                    "delta_amount": 48.8
-                },
-                {
-                    "field": "hourly_pricing.rules.1.min_amount",
-                    "delta_amount": 48.8
-                },
-                {
-                    "field": "hourly_pricing.rules.0.ranges.0",
-                    "delta_amount": 24.4
-                },
-                {
-                    "field": "hourly_pricing.rules.1.ranges.0",
-                    "delta_amount": 24.4
-                },
-                {
-                    "field": "zones.1.prices.0.p_amt",
-                    "delta_amount": 176.9
-                },
-                {
-                    "field": "zones.1.prices.0.d_amt",
-                    "delta_amount": 176.9
-                },
-                {
-                    "field": "zones.2.prices.0.p_amt",
-                    "delta_amount": 97.6
-                },
-                {
-                    "field": "zones.2.prices.0.d_amt",
-                    "delta_amount": 97.6
-                }
-            ],
-            "hourly_percent": 50,
-            "notice_time": [
-                {
-                    "time": 1440,
-                    "percent": 10,
-                    "allowance": 360
-                },
-                {
-                    "time": 1080,
-                    "percent": 20,
-                    "allowance": 360
-                },
-                {
-                    "time": 720,
-                    "percent": 30,
-                    "allowance": 360
-                }
-            ]
-        },
-        {
-            "vehicle_class_id": 4,
-            "delta_amount": 0,
-            "percent": 108,
-            "percent_appendix": [
-                {
-                    "field": "pricing.min_amount",
-                    "delta_amount": 110.78
-                },
-                {
-                    "field": "zones.0.prices.0.p_amt",
-                    "delta_amount": 111.25
-                },
-                {
-                    "field": "zones.0.prices.0.d_amt",
-                    "delta_amount": 111.25
-                },
-                {
-                    "field": "hourly_pricing.rules.0.min_amount",
-                    "delta_amount": 244
-                },
-                {
-                    "field": "hourly_pricing.rules.1.min_amount",
-                    "delta_amount": 244
-                },
-                {
-                    "field": "hourly_pricing.rules.0.ranges.0",
-                    "delta_amount": 70.76
-                },
-                {
-                    "field": "hourly_pricing.rules.1.ranges.0",
-                    "delta_amount": 70.76
-                },
-                {
-                    "field": "zones.1.prices.0.p_amt",
-                    "delta_amount": 762.5
-                },
-                {
-                    "field": "zones.1.prices.0.d_amt",
-                    "delta_amount": 762.5
-                },
-                {
-                    "field": "zones.2.prices.0.p_amt",
-                    "delta_amount": 616.1
-                },
-                {
-                    "field": "zones.2.prices.0.d_amt",
-                    "delta_amount": 616.1
-                }
-            ],
-            "hourly_percent": 108,
-            "notice_time": [
-                {
-                    "time": 1440,
-                    "percent": 15,
-                    "allowance": 720
-                },
-                {
-                    "time": 1080,
-                    "percent": 20,
-                    "allowance": 720
-                }
-            ]
-        },
-        {
-            "vehicle_class_id": 36,
-            "delta_amount": 0,
-            "percent": 60,
-            "percent_appendix": [
-                {
-                    "field": "pricing.min_amount",
-                    "delta_amount": 54.9
-                },
-                {
-                    "field": "zones.0.prices.0.p_amt",
-                    "delta_amount": 54.9
-                },
-                {
-                    "field": "zones.0.prices.0.d_amt",
-                    "delta_amount": 54.9
-                },
-                {
-                    "field": "hourly_pricing.rules.0.min_amount",
-                    "delta_amount": 268.4
-                },
-                {
-                    "field": "hourly_pricing.rules.1.min_amount",
-                    "delta_amount": 268.4
-                },
-                {
-                    "field": "hourly_pricing.rules.0.ranges.0",
-                    "delta_amount": 67.1
-                },
-                {
-                    "field": "hourly_pricing.rules.1.ranges.0",
-                    "delta_amount": 67.1
-                },
-                {
-                    "field": "zones.1.prices.0.p_amt",
-                    "delta_amount": 463.6
-                },
-                {
-                    "field": "zones.1.prices.0.d_amt",
-                    "delta_amount": 463.6
-                },
-                {
-                    "field": "zones.2.prices.0.p_amt",
-                    "delta_amount": 317.2
-                },
-                {
-                    "field": "zones.2.prices.0.d_amt",
-                    "delta_amount": 317.2
-                }
-            ],
-            "hourly_percent": 60,
-            "notice_time": [
-                {
-                    "time": 1440,
-                    "percent": 15,
-                    "allowance": 720
-                },
-                {
-                    "time": 1080,
-                    "percent": 20,
-                    "allowance": 720
-                }
-            ]
-        },
-        {
-            "vehicle_class_id": 5,
-            "delta_amount": 0,
-            "percent": 65,
-            "percent_appendix": [
-                {
-                    "field": "pricing.min_amount",
-                    "delta_amount": 23.55
-                },
-                {
-                    "field": "pricing.ranges.0",
-                    "delta_amount": 0.49,
-                    "curAmount": 1.4
-                },
-                {
-                    "field": "pricing.ranges.1",
-                    "delta_amount": 0.49,
-                    "curAmount": 1.3
-                },
-                {
-                    "field": "pricing.ranges.2",
-                    "delta_amount": 0.49,
-                    "curAmount": 1.2
-                },
-                {
-                    "field": "pricing.ranges.3",
-                    "delta_amount": 0.49,
-                    "curAmount": 1.1
-                },
-                {
-                    "field": "zones.0.prices.0.p_amt",
-                    "delta_amount": 17.08
-                },
-                {
-                    "field": "zones.0.prices.0.d_amt",
-                    "delta_amount": 17.08
-                },
-                {
-                    "field": "hourly_pricing.rules.0.min_amount",
-                    "delta_amount": 231.8
-                },
-                {
-                    "field": "hourly_pricing.rules.1.min_amount",
-                    "delta_amount": 231.8
-                },
-                {
-                    "field": "hourly_pricing.rules.0.ranges.0",
-                    "delta_amount": 61
-                },
-                {
-                    "field": "hourly_pricing.rules.1.ranges.0",
-                    "delta_amount": 61
-                },
-                {
-                    "field": "zones.1.prices.0.p_amt",
-                    "delta_amount": 322.08
-                },
-                {
-                    "field": "zones.1.prices.0.d_amt",
-                    "delta_amount": 322.08
-                },
-                {
-                    "field": "zones.2.prices.0.p_amt",
-                    "delta_amount": 322.08
-                },
-                {
-                    "field": "zones.2.prices.0.d_amt",
-                    "delta_amount": 322.08
-                }
-            ],
-            "hourly_percent": 65,
-            "notice_time": [
-                {
-                    "time": 1440,
-                    "percent": 25,
-                    "allowance": 720
-                },
-                {
-                    "time": 1080,
-                    "percent": 35,
-                    "allowance": 720
-                }
-            ]
-        },
-        {
-            "vehicle_class_id": 9,
-            "delta_amount": 0,
-            "percent": 60,
-            "percent_appendix": [
-                {
-                    "field": "pricing.min_amount",
-                    "delta_amount": 67.47
-                },
-                {
-                    "field": "pricing.ranges.0",
-                    "delta_amount": 1.95,
-                    "curAmount": 2.6
-                },
-                {
-                    "field": "pricing.ranges.1",
-                    "delta_amount": 1.88,
-                    "curAmount": 2.44
-                },
-                {
-                    "field": "pricing.ranges.2",
-                    "delta_amount": 1.81,
-                    "curAmount": 2.28
-                },
-                {
-                    "field": "pricing.ranges.3",
-                    "delta_amount": 1.73,
-                    "curAmount": 2.12
-                },
-                {
-                    "field": "zones.0.prices.0.d_amt",
-                    "delta_amount": 35.38
-                },
-                {
-                    "field": "hourly_pricing.rules.0.min_amount",
-                    "delta_amount": 256.2
-                },
-                {
-                    "field": "hourly_pricing.rules.1.min_amount",
-                    "delta_amount": 256.2
-                },
-                {
-                    "field": "hourly_pricing.rules.0.ranges.0",
-                    "delta_amount": 67.1
-                },
-                {
-                    "field": "hourly_pricing.rules.1.ranges.0",
-                    "delta_amount": 67.1
-                },
-                {
-                    "field": "zones.1.prices.0.p_amt",
-                    "delta_amount": 424.56
-                },
-                {
-                    "field": "zones.1.prices.0.d_amt",
-                    "delta_amount": 424.56
-                },
-                {
-                    "field": "zones.0.prices.0.p_amt",
-                    "delta_amount": 35.38
-                }
-            ],
-            "hourly_percent": 60,
-            "notice_time": [
-                {
-                    "time": 1440,
-                    "percent": 25,
-                    "allowance": 720
-                },
-                {
-                    "time": 1080,
-                    "percent": 35,
-                    "allowance": 720
-                }
-            ]
-        },
-        {
-            "vehicle_class_id": 10,
-            "delta_amount": 0,
-            "percent": 65,
-            "percent_appendix": [
-                {
-                    "field": "pricing.min_amount",
-                    "delta_amount": 49.17
-                },
-                {
-                    "field": "pricing.ranges.0",
-                    "delta_amount": 1.95,
-                    "curAmount": 2.6
-                },
-                {
-                    "field": "pricing.ranges.1",
-                    "delta_amount": 1.88,
-                    "curAmount": 2.44
-                },
-                {
-                    "field": "pricing.ranges.2",
-                    "delta_amount": 1.81,
-                    "curAmount": 2.28
-                },
-                {
-                    "field": "pricing.ranges.3",
-                    "delta_amount": 1.73,
-                    "curAmount": 2.12
-                },
-                {
-                    "field": "zones.0.prices.0.p_amt",
-                    "delta_amount": 46.21
-                },
-                {
-                    "field": "zones.0.prices.0.d_amt",
-                    "delta_amount": 46.21
-                },
-                {
-                    "field": "hourly_pricing.rules.0.min_amount",
-                    "delta_amount": 280.6
-                },
-                {
-                    "field": "hourly_pricing.rules.1.min_amount",
-                    "delta_amount": 280.6
-                },
-                {
-                    "field": "hourly_pricing.rules.0.ranges.0",
-                    "delta_amount": 79.3
-                },
-                {
-                    "field": "hourly_pricing.rules.1.ranges.0",
-                    "delta_amount": 79.3
-                },
-                {
-                    "field": "zones.1.prices.0.p_amt",
-                    "delta_amount": 517.28
-                },
-                {
-                    "field": "zones.1.prices.0.d_amt",
-                    "delta_amount": 517.28
-                },
-                {
-                    "field": "zones.2.prices.0.p_amt",
-                    "delta_amount": 610
-                },
-                {
-                    "field": "zones.2.prices.0.d_amt",
-                    "delta_amount": 610
-                }
-            ],
-            "hourly_percent": 65,
-            "notice_time": [
-                {
-                    "time": 1440,
-                    "percent": 25,
-                    "allowance": 720
-                },
-                {
-                    "time": 1080,
-                    "percent": 35,
-                    "allowance": 720
-                }
-            ]
-        },
-        {
-            "vehicle_class_id": 11,
-            "delta_amount": 0,
-            "percent": 66,
-            "percent_appendix": [
-                {
-                    "field": "pricing.min_amount",
-                    "delta_amount": 87.84
-                },
-                {
-                    "field": "pricing.ranges.0",
-                    "delta_amount": 1.95,
-                    "curAmount": 2.6
-                },
-                {
-                    "field": "pricing.ranges.1",
-                    "delta_amount": 1.88,
-                    "curAmount": 2.44
-                },
-                {
-                    "field": "pricing.ranges.2",
-                    "delta_amount": 1.81,
-                    "curAmount": 2.28
-                },
-                {
-                    "field": "pricing.ranges.3",
-                    "delta_amount": 1.73,
-                    "curAmount": 2.12
-                },
-                {
-                    "field": "zones.0.prices.0.p_amt",
-                    "delta_amount": 87.84
-                },
-                {
-                    "field": "zones.0.prices.0.d_amt",
-                    "delta_amount": 87.84
-                },
-                {
-                    "field": "hourly_pricing.rules.0.min_amount",
-                    "delta_amount": 305
-                },
-                {
-                    "field": "hourly_pricing.rules.1.min_amount",
-                    "delta_amount": 305
-                },
-                {
-                    "field": "hourly_pricing.rules.0.ranges.0",
-                    "delta_amount": 91.5
-                },
-                {
-                    "field": "hourly_pricing.rules.1.ranges.0",
-                    "delta_amount": 91.5
-                },
-                {
-                    "field": "zones.1.prices.0.p_amt",
-                    "delta_amount": 619.76
-                },
-                {
-                    "field": "zones.1.prices.0.d_amt",
-                    "delta_amount": 619.76
-                },
-                {
-                    "field": "zones.2.prices.0.p_amt",
-                    "delta_amount": 854
-                },
-                {
-                    "field": "zones.2.prices.0.d_amt",
-                    "delta_amount": 854
-                }
-            ],
-            "hourly_percent": 66,
-            "notice_time": [
-                {
-                    "time": 1440,
-                    "percent": 25,
-                    "allowance": 720
-                },
-                {
-                    "time": 1080,
-                    "percent": 35,
-                    "allowance": 720
-                }
-            ]
-        },
-        {
-            "vehicle_class_id": 29,
-            "delta_amount": 0,
-            "percent": 100,
-            "percent_appendix": [
-                {
-                    "field": "pricing.min_amount",
-                    "delta_amount": 102.48
-                },
-                {
-                    "field": "pricing.ranges.0",
-                    "delta_amount": 3.05,
-                    "curAmount": 3.5
-                },
-                {
-                    "field": "pricing.ranges.1",
-                    "delta_amount": 2.81,
-                    "curAmount": 3.2
-                },
-                {
-                    "field": "pricing.ranges.2",
-                    "delta_amount": 2.93,
-                    "curAmount": 3.2
-                },
-                {
-                    "field": "pricing.ranges.3",
-                    "delta_amount": 2.81,
-                    "curAmount": 3
-                },
-                {
-                    "field": "zones.0.prices.0.p_amt",
-                    "delta_amount": 97.6
-                },
-                {
-                    "field": "zones.0.prices.0.d_amt",
-                    "delta_amount": 97.6
-                },
-                {
-                    "field": "hourly_pricing.rules.0.min_amount",
-                    "delta_amount": 292.8
-                },
-                {
-                    "field": "hourly_pricing.rules.1.min_amount",
-                    "delta_amount": 292.8
-                },
-                {
-                    "field": "hourly_pricing.rules.0.ranges.0",
-                    "delta_amount": 96.38
-                },
-                {
-                    "field": "hourly_pricing.rules.1.ranges.0",
-                    "delta_amount": 96.38
-                },
-                {
-                    "field": "zones.1.prices.0.p_amt",
-                    "delta_amount": 878.4
-                },
-                {
-                    "field": "zones.1.prices.0.d_amt",
-                    "delta_amount": 878.4
-                },
-                {
-                    "field": "zones.2.prices.0.p_amt",
-                    "delta_amount": 1220
-                },
-                {
-                    "field": "zones.2.prices.0.d_amt",
-                    "delta_amount": 1220
-                }
-            ],
-            "hourly_percent": 100,
-            "notice_time": [
-                {
-                    "time": 1440,
-                    "percent": 20,
-                    "allowance": 720
-                },
-                {
-                    "time": 1080,
-                    "percent": 30,
-                    "allowance": 720
-                }
-            ]
-        },
-        {
-            "vehicle_class_id": 30,
-            "delta_amount": 0,
-            "percent": 105,
-            "percent_appendix": [
-                {
-                    "field": "pricing.min_amount",
-                    "delta_amount": 120.78
-                },
-                {
-                    "field": "pricing.ranges.0",
-                    "delta_amount": 3.17,
-                    "curAmount": 3.6
-                },
-                {
-                    "field": "pricing.ranges.1",
-                    "delta_amount": 3.05,
-                    "curAmount": 3.4
-                },
-                {
-                    "field": "pricing.ranges.2",
-                    "delta_amount": 3.05,
-                    "curAmount": 3.3
-                },
-                {
-                    "field": "pricing.ranges.3",
-                    "delta_amount": 2.93,
-                    "curAmount": 3.1
-                },
-                {
-                    "field": "zones.0.prices.0.p_amt",
-                    "delta_amount": 115.9
-                },
-                {
-                    "field": "zones.0.prices.0.d_amt",
-                    "delta_amount": 115.9
-                },
-                {
-                    "field": "hourly_pricing.rules.0.min_amount",
-                    "delta_amount": 353.8
-                },
-                {
-                    "field": "hourly_pricing.rules.1.min_amount",
-                    "delta_amount": 353.8
-                },
-                {
-                    "field": "hourly_pricing.rules.0.ranges.0",
-                    "delta_amount": 122
-                },
-                {
-                    "field": "hourly_pricing.rules.1.ranges.0",
-                    "delta_amount": 122
-                },
-                {
-                    "field": "zones.1.prices.0.p_amt",
-                    "delta_amount": 1366.4
-                },
-                {
-                    "field": "zones.1.prices.0.d_amt",
-                    "delta_amount": 1366.4
-                },
-                {
-                    "field": "zones.2.prices.0.p_amt",
-                    "delta_amount": 1525
-                },
-                {
-                    "field": "zones.2.prices.0.d_amt",
-                    "delta_amount": 1525
-                }
-            ],
-            "hourly_percent": 105,
-            "notice_time": [
-                {
-                    "time": 1440,
-                    "percent": 20,
-                    "allowance": 720
-                },
-                {
-                    "time": 1080,
-                    "percent": 30,
-                    "allowance": 720
-                }
-            ]
-        },
-        {
-            "vehicle_class_id": 31,
-            "delta_amount": 0,
-            "percent": 108,
-            "percent_appendix": [
-                {
-                    "field": "pricing.min_amount",
-                    "delta_amount": 126.88
-                },
-                {
-                    "field": "pricing.ranges.0",
-                    "delta_amount": 3.17,
-                    "curAmount": 3.6
-                },
-                {
-                    "field": "pricing.ranges.1",
-                    "delta_amount": 3.17,
-                    "curAmount": 3.5
-                },
-                {
-                    "field": "pricing.ranges.2",
-                    "delta_amount": 3.05,
-                    "curAmount": 3.3
-                },
-                {
-                    "field": "pricing.ranges.3",
-                    "delta_amount": 2.93,
-                    "curAmount": 3.1
-                },
-                {
-                    "field": "zones.0.prices.0.p_amt",
-                    "delta_amount": 122
-                },
-                {
-                    "field": "zones.0.prices.0.d_amt",
-                    "delta_amount": 122
-                },
-                {
-                    "field": "hourly_pricing.rules.0.min_amount",
-                    "delta_amount": 402.6
-                },
-                {
-                    "field": "hourly_pricing.rules.1.min_amount",
-                    "delta_amount": 402.6
-                },
-                {
-                    "field": "hourly_pricing.rules.0.ranges.0",
-                    "delta_amount": 128.1
-                },
-                {
-                    "field": "hourly_pricing.rules.1.ranges.0",
-                    "delta_amount": 128.1
-                },
-                {
-                    "field": "zones.1.prices.0.p_amt",
-                    "delta_amount": 1610.4
-                },
-                {
-                    "field": "zones.1.prices.0.d_amt",
-                    "delta_amount": 1610.4
-                },
-                {
-                    "field": "zones.2.prices.0.p_amt",
-                    "delta_amount": 1830
-                },
-                {
-                    "field": "zones.2.prices.0.d_amt",
-                    "delta_amount": 1830
-                }
-            ],
-            "hourly_percent": 108,
-            "notice_time": [
-                {
-                    "time": 1440,
-                    "percent": 20,
-                    "allowance": 720
-                },
-                {
-                    "time": 1080,
-                    "percent": 30,
-                    "allowance": 720
-                }
-            ]
-        },
-        {
-            "vehicle_class_id": 32,
-            "delta_amount": 0,
-            "percent": 115,
-            "percent_appendix": [
-                {
-                    "field": "pricing.min_amount",
-                    "delta_amount": 139.08
-                },
-                {
-                    "field": "pricing.ranges.0",
-                    "delta_amount": 3.66,
-                    "curAmount": 4
-                },
-                {
-                    "field": "pricing.ranges.1",
-                    "delta_amount": 3.54,
-                    "curAmount": 3.8
-                },
-                {
-                    "field": "pricing.ranges.2",
-                    "delta_amount": 3.42,
-                    "curAmount": 3.6
-                },
-                {
-                    "field": "pricing.ranges.3",
-                    "delta_amount": 3.17,
-                    "curAmount": 3.3
-                },
-                {
-                    "field": "zones.0.prices.0.p_amt",
-                    "delta_amount": 134.2
-                },
-                {
-                    "field": "zones.0.prices.0.d_amt",
-                    "delta_amount": 134.2
-                },
-                {
-                    "field": "hourly_pricing.rules.0.min_amount",
-                    "delta_amount": 439.2
-                },
-                {
-                    "field": "hourly_pricing.rules.1.min_amount",
-                    "delta_amount": 439.2
-                },
-                {
-                    "field": "hourly_pricing.rules.0.ranges.0",
-                    "delta_amount": 140.3
-                },
-                {
-                    "field": "hourly_pricing.rules.1.ranges.0",
-                    "delta_amount": 140.3
-                },
-                {
-                    "field": "zones.1.prices.0.p_amt",
-                    "delta_amount": 1854.4
-                },
-                {
-                    "field": "zones.1.prices.0.d_amt",
-                    "delta_amount": 1854.4
-                },
-                {
-                    "field": "zones.2.prices.0.p_amt",
-                    "delta_amount": 2440
-                },
-                {
-                    "field": "zones.2.prices.0.d_amt",
-                    "delta_amount": 2440
-                }
-            ],
-            "hourly_percent": 115,
-            "notice_time": [
-                {
-                    "time": 1440,
-                    "percent": 20,
-                    "allowance": 720
-                },
-                {
-                    "time": 1080,
-                    "percent": 30,
-                    "allowance": 720
-                }
-            ]
-        },
-        {
-            "vehicle_class_id": 33,
-            "delta_amount": 0,
-            "percent": 145,
-            "percent_appendix": [
-                {
-                    "field": "pricing.min_amount",
-                    "delta_amount": 157.38
-                },
-                {
-                    "field": "pricing.ranges.0",
-                    "delta_amount": 4.03,
-                    "curAmount": 4.3
-                },
-                {
-                    "field": "pricing.ranges.1",
-                    "delta_amount": 4.03,
-                    "curAmount": 4.2
-                },
-                {
-                    "field": "pricing.ranges.2",
-                    "delta_amount": 3.42,
-                    "curAmount": 3.6
-                },
-                {
-                    "field": "pricing.ranges.3",
-                    "delta_amount": 3.29,
-                    "curAmount": 3.4
-                },
-                {
-                    "field": "zones.0.prices.0.p_amt",
-                    "delta_amount": 152.57
-                },
-                {
-                    "field": "zones.0.prices.0.d_amt",
-                    "delta_amount": 152.57
-                },
-                {
-                    "field": "hourly_pricing.rules.0.min_amount",
-                    "delta_amount": 512.4
-                },
-                {
-                    "field": "hourly_pricing.rules.1.min_amount",
-                    "delta_amount": 512.4
-                },
-                {
-                    "field": "hourly_pricing.rules.0.ranges.0",
-                    "delta_amount": 164.7
-                },
-                {
-                    "field": "hourly_pricing.rules.1.ranges.0",
-                    "delta_amount": 164.7
-                },
-                {
-                    "field": "zones.1.prices.0.p_amt",
-                    "delta_amount": 2830.4
-                },
-                {
-                    "field": "zones.1.prices.0.d_amt",
-                    "delta_amount": 2830.4
-                },
-                {
-                    "field": "zones.2.prices.0.p_amt",
-                    "delta_amount": 3172
-                },
-                {
-                    "field": "zones.2.prices.0.d_amt",
-                    "delta_amount": 3172
-                }
-            ],
-            "hourly_percent": 145,
-            "notice_time": [
-                {
-                    "time": 1440,
-                    "percent": 20,
-                    "allowance": 720
-                },
-                {
-                    "time": 1080,
-                    "percent": 30,
-                    "allowance": 720
-                }
-            ]
-        },
-        {
-            "vehicle_class_id": 34,
-            "delta_amount": 0,
-            "percent": 155,
-            "percent_appendix": [
-                {
-                    "field": "pricing.min_amount",
-                    "delta_amount": 175.68
-                },
-                {
-                    "field": "pricing.ranges.0",
-                    "delta_amount": 4.33,
-                    "curAmount": 4.55
-                },
-                {
-                    "field": "pricing.ranges.1",
-                    "delta_amount": 4.15,
-                    "curAmount": 4.3
-                },
-                {
-                    "field": "pricing.ranges.2",
-                    "delta_amount": 3.9,
-                    "curAmount": 4
-                },
-                {
-                    "field": "pricing.ranges.3",
-                    "delta_amount": 3.9,
-                    "curAmount": 3.9
-                },
-                {
-                    "field": "zones.0.prices.0.p_amt",
-                    "delta_amount": 170.8
-                },
-                {
-                    "field": "zones.0.prices.0.d_amt",
-                    "delta_amount": 170.8
-                },
-                {
-                    "field": "hourly_pricing.rules.0.min_amount",
-                    "delta_amount": 561.2
-                },
-                {
-                    "field": "hourly_pricing.rules.1.min_amount",
-                    "delta_amount": 561.2
-                },
-                {
-                    "field": "hourly_pricing.rules.0.ranges.0",
-                    "delta_amount": 183
-                },
-                {
-                    "field": "hourly_pricing.rules.1.ranges.0",
-                    "delta_amount": 183
-                },
-                {
-                    "field": "zones.1.prices.0.p_amt",
-                    "delta_amount": 3806.4
-                },
-                {
-                    "field": "zones.1.prices.0.d_amt",
-                    "delta_amount": 3806.4
-                },
-                {
-                    "field": "zones.2.prices.0.p_amt",
-                    "delta_amount": 4392
-                },
-                {
-                    "field": "zones.2.prices.0.d_amt",
-                    "delta_amount": 4392
-                }
-            ],
-            "hourly_percent": 155,
-            "notice_time": [
-                {
-                    "time": 1440,
-                    "percent": 20,
-                    "allowance": 720
-                },
-                {
-                    "time": 1080,
-                    "percent": 30,
-                    "allowance": 720
-                }
-            ]
-        },
-        {
-            "vehicle_class_id": 35,
-            "delta_amount": 0,
-            "percent": 200,
-            "percent_appendix": [
-                {
-                    "field": "pricing.min_amount",
-                    "delta_amount": 224.48
-                },
-                {
-                    "field": "pricing.ranges.0",
-                    "delta_amount": 4.88,
-                    "curAmount": 5
-                },
-                {
-                    "field": "pricing.ranges.1",
-                    "delta_amount": 4.39,
-                    "curAmount": 4.5
-                },
-                {
-                    "field": "pricing.ranges.2",
-                    "delta_amount": 4.15,
-                    "curAmount": 4.2
-                },
-                {
-                    "field": "pricing.ranges.3",
-                    "delta_amount": 4.03,
-                    "curAmount": 4
-                },
-                {
-                    "field": "zones.0.prices.0.p_amt",
-                    "delta_amount": 219.6
-                },
-                {
-                    "field": "zones.0.prices.0.d_amt",
-                    "delta_amount": 219.6
-                },
-                {
-                    "field": "hourly_pricing.rules.0.min_amount",
-                    "delta_amount": 719.8
-                },
-                {
-                    "field": "hourly_pricing.rules.1.min_amount",
-                    "delta_amount": 719.8
-                },
-                {
-                    "field": "hourly_pricing.rules.0.ranges.0",
-                    "delta_amount": 231.8
-                },
-                {
-                    "field": "hourly_pricing.rules.1.ranges.0",
-                    "delta_amount": 231.8
-                },
-                {
-                    "field": "zones.1.prices.0.p_amt",
-                    "delta_amount": 4538.4
-                },
-                {
-                    "field": "zones.1.prices.0.d_amt",
-                    "delta_amount": 4538.4
-                },
-                {
-                    "field": "zones.2.prices.0.p_amt",
-                    "delta_amount": 5612
-                },
-                {
-                    "field": "zones.2.prices.0.d_amt",
-                    "delta_amount": 5612
-                }
-            ],
-            "hourly_percent": 200,
-            "notice_time": [
-                {
-                    "time": 1440,
-                    "percent": 20,
-                    "allowance": 720
-                },
-                {
-                    "time": 1080,
-                    "percent": 30,
-                    "allowance": 720
-                }
-            ]
-        },
-        {
-            "vehicle_class_id": 7,
-            "delta_amount": 0,
-            "percent": 0,
-            "hourly_percent": 0,
-            "hourly_delta": 0,
-            "percent_appendix": [
-                {
-                    "field": "zones.0.prices.0.p_amt",
-                    "delta_amount": 20.13
-                },
-                {
-                    "field": "zones.0.prices.0.d_amt",
-                    "delta_amount": 20.13
-                },
-                {
-                    "field": "pricing.min_amount",
-                    "delta_amount": 18.06
-                },
-                {
-                    "field": "pricing.ranges.0",
-                    "delta_amount": 1.22
-                },
-                {
-                    "field": "pricing.ranges.1",
-                    "delta_amount": 1.34
-                },
-                {
-                    "field": "pricing.ranges.2",
-                    "delta_amount": 1.34
-                },
-                {
-                    "field": "pricing.ranges.3",
-                    "delta_amount": 0.98
-                },
-                {
-                    "field": "hourly_pricing.rules.0.min_amount",
-                    "delta_amount": 73.2
-                },
-                {
-                    "field": "hourly_pricing.rules.1.min_amount",
-                    "delta_amount": 73.2
-                },
-                {
-                    "field": "hourly_pricing.rules.0.ranges.0",
-                    "delta_amount": 24.4
-                },
-                {
-                    "field": "hourly_pricing.rules.1.ranges.0",
-                    "delta_amount": 24.4
-                },
-                {
-                    "field": "zones.1.prices.0.p_amt",
-                    "delta_amount": 219.6
-                },
-                {
-                    "field": "zones.1.prices.0.d_amt",
-                    "delta_amount": 219.6
-                },
-                {
-                    "field": "zones.2.prices.0.p_amt",
-                    "delta_amount": 146.4
-                },
-                {
-                    "field": "zones.2.prices.0.d_amt",
-                    "delta_amount": 146.4
-                }
-            ],
-            "notice_time": [
-                {
-                    "time": 1440,
-                    "percent": 15,
-                    "allowance": 720
-                },
-                {
-                    "time": 1080,
-                    "percent": 20,
-                    "allowance": 720
-                }
-            ]
-        },
-        {
-            "vehicle_class_id": 8,
-            "delta_amount": 0,
-            "percent": 0,
-            "hourly_percent": 0,
-            "hourly_delta": 0,
-            "percent_appendix": [
-                {
-                    "field": "pricing.min_amount",
-                    "delta_amount": 23.55
-                },
-                {
-                    "field": "pricing.ranges.0",
-                    "delta_amount": 0.49
-                },
-                {
-                    "field": "pricing.ranges.1",
-                    "delta_amount": 0.49
-                },
-                {
-                    "field": "pricing.ranges.2",
-                    "delta_amount": 0.49
-                },
-                {
-                    "field": "pricing.ranges.3",
-                    "delta_amount": 0.49
-                },
-                {
-                    "field": "zones.0.prices.0.p_amt",
-                    "delta_amount": 20.74
-                },
-                {
-                    "field": "zones.0.prices.0.d_amt",
-                    "delta_amount": 20.74
-                },
-                {
-                    "field": "zones.1.prices.0.p_amt",
-                    "delta_amount": 322.08
-                },
-                {
-                    "field": "zones.1.prices.0.d_amt",
-                    "delta_amount": 322.08
-                },
-                {
-                    "field": "zones.2.prices.0.p_amt",
-                    "delta_amount": 322.08
-                },
-                {
-                    "field": "zones.2.prices.0.d_amt",
-                    "delta_amount": 322.08
-                },
-                {
-                    "field": "hourly_pricing.rules.0.min_amount",
-                    "delta_amount": 231.8
-                },
-                {
-                    "field": "hourly_pricing.rules.0.ranges.0",
-                    "delta_amount": 61
-                }
-            ]
-        }
-    ],
-    "countryCode": "PER",
-    "currencyCode": "USD",
-    "hint": [
-        {
-            "normal_reserve_value": 24,
-            "vehicles": [
-                2,
-                4,
-                36,
-                7
-            ],
-            "notice_time_hint": [
-                {
-                    "advance_time_start": 18,
-                    "advance_time_end": 24,
-                    "notice_time": {
-                        "time": 1440,
-                        "percent": 15,
-                        "allowance": 720
+        {'zone_name': 'North hollywood', 'price': 77.37, 'vehicle': 'Business Sedan', 'over_distance': None, 'price_detail': {'base_pricing': {'type': 'fixed', 'rule': None, 'zone': 'North hollywood', 'fix_price_type': 'Transfer', 'price': {'amount': 77.37, 'currency': 'USD'
+                    }, 'fix_price_detail': {'from': 'LAX', 'to': 'North hollywood', 'from_type': 'Airport', 'to_type': 'Zone'
                     }
-                },
-                {
-                    "advance_time_start": 12,
-                    "advance_time_end": 18,
-                    "notice_time": {
-                        "time": 1080,
-                        "percent": 20,
-                        "allowance": 720
-                    }
-                }
-            ]
-        },
-        {
-            "normal_reserve_value": 24,
-            "vehicles": [
-                29,
-                30,
-                31,
-                32,
-                33,
-                34,
-                35
-            ],
-            "notice_time_hint": [
-                {
-                    "advance_time_start": 18,
-                    "advance_time_end": 24,
-                    "notice_time": {
-                        "time": 1440,
-                        "percent": 20,
-                        "allowance": 720
-                    }
-                },
-                {
-                    "advance_time_start": 12,
-                    "advance_time_end": 18,
-                    "notice_time": {
-                        "time": 1080,
-                        "percent": 30,
-                        "allowance": 720
-                    }
-                }
-            ]
-        },
-        {
-            "normal_reserve_value": 24,
-            "vehicles": [
-                5,
-                9,
-                10,
-                11
-            ],
-            "notice_time_hint": [
-                {
-                    "advance_time_start": 18,
-                    "advance_time_end": 24,
-                    "notice_time": {
-                        "time": 1440,
-                        "percent": 25,
-                        "allowance": 720
-                    }
-                },
-                {
-                    "advance_time_start": 12,
-                    "advance_time_end": 18,
-                    "notice_time": {
-                        "time": 1080,
-                        "percent": 35,
-                        "allowance": 720
-                    }
-                }
-            ]
-        },
-        {
-            "normal_reserve_value": 24,
-            "vehicles": [
-                1,
-                6,
-                3
-            ],
-            "notice_time_hint": [
-                {
-                    "advance_time_start": 18,
-                    "advance_time_end": 24,
-                    "notice_time": {
-                        "time": 1440,
-                        "percent": 10,
-                        "allowance": 360
-                    }
-                },
-                {
-                    "advance_time_start": 12,
-                    "advance_time_end": 18,
-                    "notice_time": {
-                        "time": 1080,
-                        "percent": 20,
-                        "allowance": 360
-                    }
-                },
-                {
-                    "advance_time_start": 6,
-                    "advance_time_end": 12,
-                    "notice_time": {
-                        "time": 720,
-                        "percent": 30,
-                        "allowance": 360
-                    }
-                }
-            ]
-        }
-    ],
-    "pricing_schedule_sum": [
-        {
-            "notice_time_hint": [
-                "null",
-                "null",
-                "null",
-                "null",
-                "null",
-                "null",
-                "null"
-            ],
-            "vehicles": [],
-            "pid": "61654.7.1"
-        }
-    ],
-    "date_surcharge_method": "sum",
-    "hourly_pricing": {
-        "currency": "USD",
-        "rules": [
-            {
-                "io": 1,
-                "name": "Rule 1",
-                "zones": [
-                    "serviceArea"
-                ],
-                "max_distance": 200,
-                "min_amount": 73.2,
-                "min_duration": 3,
-                "currency": "USD",
-                "ranges": [
-                    {
-                        "seq": 0,
-                        "amount": 24.4,
-                        "currency": "USD",
-                        "duration": 9,
-                        "from": 3,
-                        "to": 12
-                    }
-                ],
-                "pid": "61654.9.1"
-            },
-            {
-                "io": 0,
-                "name": "Rule 2",
-                "zones": [
-                    "serviceArea"
-                ],
-                "max_distance": 200,
-                "min_amount": 73.2,
-                "min_duration": 3,
-                "currency": "USD",
-                "ranges": [
-                    {
-                        "seq": 0,
-                        "amount": 24.4,
-                        "currency": "USD",
-                        "duration": 9,
-                        "from": 3,
-                        "to": 12
-                    }
-                ],
-                "pid": "61654.9.2"
+                }, 'special_pricing': []
             }
-        ]
-    },
-    "req_id": "6af94696-e95a-3eee-eccb-bb7f7a7ebd97",
-    "tz": {
-        "dos": 0,
-        "ros": -18000,
-        "tzid": "America/Lima"
-    },
-    "notice_time_rules": [
-        {
-            "zones": [
-                "serviceArea",
-                "Lima,Peru",
-                "Arequipa",
-                "Cusco"
-            ],
-            "ps": [
-                {
-                    "vc_ids": [
-                        2,
-                        4,
-                        36
-                    ],
-                    "notice_time": [
-                        {
-                            "percent": 50,
-                            "time": 960
-                        }
-                    ],
-                    "allowance": 720
-                },
-                {
-                    "vc_ids": [
-                        29,
-                        30,
-                        31,
-                        32,
-                        33,
-                        34,
-                        35
-                    ],
-                    "notice_time": [
-                        {
-                            "percent": 20,
-                            "time": 1440
-                        },
-                        {
-                            "percent": 30,
-                            "time": 1080
-                        }
-                    ],
-                    "allowance": 720
-                },
-                {
-                    "vc_ids": [
-                        5,
-                        9,
-                        10,
-                        11
-                    ],
-                    "notice_time": [
-                        {
-                            "percent": 25,
-                            "time": 720
-                        },
-                        {
-                            "percent": 50,
-                            "time": 600
-                        }
-                    ],
-                    "allowance": 480
-                },
-                {
-                    "vc_ids": [
-                        1,
-                        3
-                    ],
-                    "notice_time": [
-                        {
-                            "percent": 23,
-                            "time": 720
-                        },
-                        {
-                            "percent": 50,
-                            "time": 600
-                        }
-                    ],
-                    "allowance": 480
-                },
-                {
-                    "vc_ids": [
-                        6,
-                        8
-                    ],
-                    "notice_time": [
-                        {
-                            "percent": 18,
-                            "time": 720
-                        },
-                        {
-                            "percent": 50,
-                            "time": 600
-                        }
-                    ],
-                    "allowance": 480
-                }
-            ],
-            "pid": "61654.6.1"
+        },
+        {'zone_name': 'North hollywood', 'price': 70.343, 'vehicle': 'MPV-4', 'over_distance': None, 'price_detail': {'base_pricing': {'type': 'fixed', 'rule': None, 'zone': 'North hollywood', 'fix_price_type': 'Transfer', 'price': {'amount': 54.11, 'currency': 'USD'
+                    }, 'fix_price_detail': {'from': 'LAX', 'to': 'North hollywood', 'from_type': 'Airport', 'to_type': 'Zone'
+                    }
+                }, 'special_pricing': [
+                    {'type': 'date', 'zone': None, 'percent': 30.0, 'currency': 'USD', 'rule': '8.28-8.31'
+                    }
+                ]
+            }
+        },
+        {'zone_name': 'North hollywood', 'price': 76.336, 'vehicle': 'MPV-5', 'over_distance': None, 'price_detail': {'base_pricing': {'type': 'fixed', 'rule': None, 'zone': 'North hollywood', 'fix_price_type': 'Transfer', 'price': {'amount': 58.72, 'currency': 'USD'
+                    }, 'fix_price_detail': {'from': 'LAX', 'to': 'North hollywood', 'from_type': 'Airport', 'to_type': 'Zone'
+                    }
+                }, 'special_pricing': [
+                    {'type': 'date', 'zone': None, 'percent': 30.0, 'currency': 'USD', 'rule': '8.28-8.31'
+                    }
+                ]
+            }
+        },
+        {'zone_name': 'North hollywood', 'price': 110.69, 'vehicle': 'Business MPV-5', 'over_distance': None, 'price_detail': {'base_pricing': {'type': 'fixed', 'rule': None, 'zone': 'North hollywood', 'fix_price_type': 'Transfer', 'price': {'amount': 110.69, 'currency': 'USD'
+                    }, 'fix_price_detail': {'from': 'LAX', 'to': 'North hollywood', 'from_type': 'Airport', 'to_type': 'Zone'
+                    }
+                }, 'special_pricing': []
+            }
+        },
+        {'zone_name': 'North hollywood', 'price': 254.6, 'vehicle': 'Minibus-8', 'over_distance': None, 'price_detail': {'base_pricing': {'type': 'fixed', 'rule': None, 'zone': 'North hollywood', 'fix_price_type': 'Transfer', 'price': {'amount': 254.6, 'currency': 'USD'
+                    }, 'fix_price_detail': {'from': 'LAX', 'to': 'North hollywood', 'from_type': 'Airport', 'to_type': 'Zone'
+                    }
+                }, 'special_pricing': []
+            }
+        },
+        {'zone_name': 'North hollywood', 'price': 259.98, 'vehicle': 'Minibus-10', 'over_distance': None, 'price_detail': {'base_pricing': {'type': 'fixed', 'rule': None, 'zone': 'North hollywood', 'fix_price_type': 'Transfer', 'price': {'amount': 259.98, 'currency': 'USD'
+                    }, 'fix_price_detail': {'from': 'LAX', 'to': 'North hollywood', 'from_type': 'Airport', 'to_type': 'Zone'
+                    }
+                }, 'special_pricing': []
+            }
+        },
+        {'zone_name': 'North hollywood', 'price': 380.0, 'vehicle': 'Minibus-12', 'over_distance': None, 'price_detail': {'base_pricing': {'type': 'fixed', 'rule': None, 'zone': 'North hollywood', 'fix_price_type': 'Transfer', 'price': {'amount': 380.0, 'currency': 'USD'
+                    }, 'fix_price_detail': {'from': 'LAX', 'to': 'North hollywood', 'from_type': 'Airport', 'to_type': 'Zone'
+                    }
+                }, 'special_pricing': []
+            }
+        },
+        {'zone_name': 'North hollywood', 'price': 383.0, 'vehicle': 'Minibus-14', 'over_distance': None, 'price_detail': {'base_pricing': {'type': 'fixed', 'rule': None, 'zone': 'North hollywood', 'fix_price_type': 'Transfer', 'price': {'amount': 383.0, 'currency': 'USD'
+                    }, 'fix_price_detail': {'from': 'LAX', 'to': 'North hollywood', 'from_type': 'Airport', 'to_type': 'Zone'
+                    }
+                }, 'special_pricing': []
+            }
+        },
+        {'zone_name': 'North hollywood', 'price': 140.86, 'vehicle': 'Business Van', 'over_distance': None, 'price_detail': {'base_pricing': {'type': 'fixed', 'rule': None, 'zone': 'North hollywood', 'fix_price_type': 'Transfer', 'price': {'amount': 140.86, 'currency': 'USD'
+                    }, 'fix_price_detail': {'from': 'LAX', 'to': 'North hollywood', 'from_type': 'Airport', 'to_type': 'Zone'
+                    }
+                }, 'special_pricing': []
+            }
+        },
+        {'zone_name': 'North hollywood', 'price': 1275.0, 'vehicle': '6 Passenger Stretch Limo', 'over_distance': None, 'price_detail': {'base_pricing': {'type': 'fixed', 'rule': None, 'zone': 'North hollywood', 'fix_price_type': 'Transfer', 'price': {'amount': 850.0, 'currency': 'USD'
+                    }, 'fix_price_detail': {'from': 'LAX', 'to': 'North hollywood', 'from_type': 'Airport', 'to_type': 'Zone'
+                    }
+                }, 'special_pricing': [
+                    {'type': 'reserve', 'zone': 'serviceArea', 'percent': 50.0, 'currency': 'USD'
+                    }
+                ]
+            }
+        },
+        {'zone_name': 'North hollywood', 'price': 1650.0, 'vehicle': '8 Passenger Stretch Limo', 'over_distance': None, 'price_detail': {'base_pricing': {'type': 'fixed', 'rule': None, 'zone': 'North hollywood', 'fix_price_type': 'Transfer', 'price': {'amount': 1100.0, 'currency': 'USD'
+                    }, 'fix_price_detail': {'from': 'LAX', 'to': 'North hollywood', 'from_type': 'Airport', 'to_type': 'Zone'
+                    }
+                }, 'special_pricing': [
+                    {'type': 'reserve', 'zone': 'serviceArea', 'percent': 50.0, 'currency': 'USD'
+                    }
+                ]
+            }
+        },
+        {'zone_name': 'North hollywood', 'price': 1950.0, 'vehicle': '10 Passenger Stretch Limo', 'over_distance': None, 'price_detail': {'base_pricing': {'type': 'fixed', 'rule': None, 'zone': 'North hollywood', 'fix_price_type': 'Transfer', 'price': {'amount': 1300.0, 'currency': 'USD'
+                    }, 'fix_price_detail': {'from': 'LAX', 'to': 'North hollywood', 'from_type': 'Airport', 'to_type': 'Zone'
+                    }
+                }, 'special_pricing': [
+                    {'type': 'reserve', 'zone': 'serviceArea', 'percent': 50.0, 'currency': 'USD'
+                    }
+                ]
+            }
+        },
+        {'zone_name': 'North hollywood', 'price': 2100.0, 'vehicle': '12 Passenger Stretch Limo', 'over_distance': None, 'price_detail': {'base_pricing': {'type': 'fixed', 'rule': None, 'zone': 'North hollywood', 'fix_price_type': 'Transfer', 'price': {'amount': 1400.0, 'currency': 'USD'
+                    }, 'fix_price_detail': {'from': 'LAX', 'to': 'North hollywood', 'from_type': 'Airport', 'to_type': 'Zone'
+                    }
+                }, 'special_pricing': [
+                    {'type': 'reserve', 'zone': 'serviceArea', 'percent': 50.0, 'currency': 'USD'
+                    }
+                ]
+            }
+        },
+        {'zone_name': 'North hollywood', 'price': 2325.0, 'vehicle': '16 Passenger Stretch Limo', 'over_distance': None, 'price_detail': {'base_pricing': {'type': 'fixed', 'rule': None, 'zone': 'North hollywood', 'fix_price_type': 'Transfer', 'price': {'amount': 1550.0, 'currency': 'USD'
+                    }, 'fix_price_detail': {'from': 'LAX', 'to': 'North hollywood', 'from_type': 'Airport', 'to_type': 'Zone'
+                    }
+                }, 'special_pricing': [
+                    {'type': 'reserve', 'zone': 'serviceArea', 'percent': 50.0, 'currency': 'USD'
+                    }
+                ]
+            }
+        },
+        {'zone_name': 'North hollywood', 'price': 1170.0, 'vehicle': '16-seat Bus', 'over_distance': None, 'price_detail': {'base_pricing': {'type': 'fixed', 'rule': None, 'zone': 'North hollywood', 'fix_price_type': 'Transfer', 'price': {'amount': 780.0, 'currency': 'USD'
+                    }, 'fix_price_detail': {'from': 'LAX', 'to': 'North hollywood', 'from_type': 'Airport', 'to_type': 'Zone'
+                    }
+                }, 'special_pricing': [
+                    {'type': 'reserve', 'zone': 'serviceArea', 'percent': 50.0, 'currency': 'USD'
+                    }
+                ]
+            }
+        },
+        {'zone_name': 'North hollywood', 'price': 1425.0, 'vehicle': '20-seat Bus', 'over_distance': None, 'price_detail': {'base_pricing': {'type': 'fixed', 'rule': None, 'zone': 'North hollywood', 'fix_price_type': 'Transfer', 'price': {'amount': 950.0, 'currency': 'USD'
+                    }, 'fix_price_detail': {'from': 'LAX', 'to': 'North hollywood', 'from_type': 'Airport', 'to_type': 'Zone'
+                    }
+                }, 'special_pricing': [
+                    {'type': 'reserve', 'zone': 'serviceArea', 'percent': 50.0, 'currency': 'USD'
+                    }
+                ]
+            }
+        },
+        {'zone_name': 'North hollywood', 'price': 1500.0, 'vehicle': '23-seat Bus', 'over_distance': None, 'price_detail': {'base_pricing': {'type': 'fixed', 'rule': None, 'zone': 'North hollywood', 'fix_price_type': 'Transfer', 'price': {'amount': 1000.0, 'currency': 'USD'
+                    }, 'fix_price_detail': {'from': 'LAX', 'to': 'North hollywood', 'from_type': 'Airport', 'to_type': 'Zone'
+                    }
+                }, 'special_pricing': [
+                    {'type': 'reserve', 'zone': 'serviceArea', 'percent': 50.0, 'currency': 'USD'
+                    }
+                ]
+            }
+        },
+        {'zone_name': 'North hollywood', 'price': 1545.0, 'vehicle': '27-seat Bus', 'over_distance': None, 'price_detail': {'base_pricing': {'type': 'fixed', 'rule': None, 'zone': 'North hollywood', 'fix_price_type': 'Transfer', 'price': {'amount': 1030.0, 'currency': 'USD'
+                    }, 'fix_price_detail': {'from': 'LAX', 'to': 'North hollywood', 'from_type': 'Airport', 'to_type': 'Zone'
+                    }
+                }, 'special_pricing': [
+                    {'type': 'reserve', 'zone': 'serviceArea', 'percent': 50.0, 'currency': 'USD'
+                    }
+                ]
+            }
+        },
+        {'zone_name': 'North hollywood', 'price': 1650.0, 'vehicle': '36-seat Bus', 'over_distance': None, 'price_detail': {'base_pricing': {'type': 'fixed', 'rule': None, 'zone': 'North hollywood', 'fix_price_type': 'Transfer', 'price': {'amount': 1100.0, 'currency': 'USD'
+                    }, 'fix_price_detail': {'from': 'LAX', 'to': 'North hollywood', 'from_type': 'Airport', 'to_type': 'Zone'
+                    }
+                }, 'special_pricing': [
+                    {'type': 'reserve', 'zone': 'serviceArea', 'percent': 50.0, 'currency': 'USD'
+                    }
+                ]
+            }
+        },
+        {'zone_name': 'North hollywood', 'price': 1695.0, 'vehicle': '44-seat Coach Bus', 'over_distance': None, 'price_detail': {'base_pricing': {'type': 'fixed', 'rule': None, 'zone': 'North hollywood', 'fix_price_type': 'Transfer', 'price': {'amount': 1130.0, 'currency': 'USD'
+                    }, 'fix_price_detail': {'from': 'LAX', 'to': 'North hollywood', 'from_type': 'Airport', 'to_type': 'Zone'
+                    }
+                }, 'special_pricing': [
+                    {'type': 'reserve', 'zone': 'serviceArea', 'percent': 50.0, 'currency': 'USD'
+                    }
+                ]
+            }
+        },
+        {'zone_name': 'North hollywood', 'price': 1725.0, 'vehicle': '55-seat Coach Bus', 'over_distance': None, 'price_detail': {'base_pricing': {'type': 'fixed', 'rule': None, 'zone': 'North hollywood', 'fix_price_type': 'Transfer', 'price': {'amount': 1150.0, 'currency': 'USD'
+                    }, 'fix_price_detail': {'from': 'LAX', 'to': 'North hollywood', 'from_type': 'Airport', 'to_type': 'Zone'
+                    }
+                }, 'special_pricing': [
+                    {'type': 'reserve', 'zone': 'serviceArea', 'percent': 50.0, 'currency': 'USD'
+                    }
+                ]
+            }
+        },
+        {'zone_name': 'North hollywood', 'price': 190.0, 'vehicle': 'EV Sedan', 'over_distance': None, 'price_detail': {'base_pricing': {'type': 'fixed', 'rule': None, 'zone': 'North hollywood', 'fix_price_type': 'Transfer', 'price': {'amount': 190.0, 'currency': 'USD'
+                    }, 'fix_price_detail': {'from': 'LAX', 'to': 'North hollywood', 'from_type': 'Airport', 'to_type': 'Zone'
+                    }
+                }, 'special_pricing': []
+            }
+        },
+        {'zone_name': 'North hollywood', 'price': 260.0, 'vehicle': 'EV Business Sedan', 'over_distance': None, 'price_detail': {'base_pricing': {'type': 'fixed', 'rule': None, 'zone': 'North hollywood', 'fix_price_type': 'Transfer', 'price': {'amount': 260.0, 'currency': 'USD'
+                    }, 'fix_price_detail': {'from': 'LAX', 'to': 'North hollywood', 'from_type': 'Airport', 'to_type': 'Zone'
+                    }
+                }, 'special_pricing': []
+            }
+        },
+        {'zone_name': 'North hollywood', 'price': 300.0, 'vehicle': 'First Class', 'over_distance': None, 'price_detail': {'base_pricing': {'type': 'fixed', 'rule': None, 'zone': 'North hollywood', 'fix_price_type': 'Transfer', 'price': {'amount': 300.0, 'currency': 'USD'
+                    }, 'fix_price_detail': {'from': 'LAX', 'to': 'North hollywood', 'from_type': 'Airport', 'to_type': 'Zone'
+                    }
+                }, 'special_pricing': []
+            }
+        },
+        {'zone_name': 'North hollywood', 'price': 400.0, 'vehicle': 'EV First Class Sedan', 'over_distance': None, 'price_detail': {'base_pricing': {'type': 'fixed', 'rule': None, 'zone': 'North hollywood', 'fix_price_type': 'Transfer', 'price': {'amount': 400.0, 'currency': 'USD'
+                    }, 'fix_price_detail': {'from': 'LAX', 'to': 'North hollywood', 'from_type': 'Airport', 'to_type': 'Zone'
+                    }
+                }, 'special_pricing': []
+            }
+        },
+        {'zone_name': 'North hollywood', 'price': 975.0, 'vehicle': 'Wheelchair Van', 'over_distance': None, 'price_detail': {'base_pricing': {'type': 'fixed', 'rule': None, 'zone': 'North hollywood', 'fix_price_type': 'Transfer', 'price': {'amount': 650.0, 'currency': 'USD'
+                    }, 'fix_price_detail': {'from': 'LAX', 'to': 'North hollywood', 'from_type': 'Airport', 'to_type': 'Zone'
+                    }
+                }, 'special_pricing': [
+                    {'type': 'reserve', 'zone': 'serviceArea', 'percent': 50.0, 'currency': 'USD'
+                    }
+                ]
+            }
+        },
+        {'zone_name': 'North hollywood', 'price': 54.25, 'vehicle': 'Comfort Sedan', 'over_distance': None, 'price_detail': {'base_pricing': {'type': 'fixed', 'rule': None, 'zone': 'North hollywood', 'fix_price_type': 'Transfer', 'price': {'amount': 54.25, 'currency': 'USD'
+                    }, 'fix_price_detail': {'from': 'LAX', 'to': 'North hollywood', 'from_type': 'Airport', 'to_type': 'Zone'
+                    }
+                }, 'special_pricing': []
+            }
+        },
+        {'zone_name': 'North hollywood', 'price': 245.0, 'vehicle': 'Luxury Sedan', 'over_distance': None, 'price_detail': {'base_pricing': {'type': 'fixed', 'rule': None, 'zone': 'North hollywood', 'fix_price_type': 'Transfer', 'price': {'amount': 245.0, 'currency': 'USD'
+                    }, 'fix_price_detail': {'from': 'LAX', 'to': 'North hollywood', 'from_type': 'Airport', 'to_type': 'Zone'
+                    }
+                }, 'special_pricing': []
+            }
+        },
+        {'zone_name': 'North hollywood', 'price': 1100.0, 'vehicle': '', 'over_distance': None, 'price_detail': {'base_pricing': {'type': 'fixed', 'rule': None, 'zone': 'North hollywood', 'fix_price_type': 'Transfer', 'price': {'amount': 1100.0, 'currency': 'USD'
+                    }, 'fix_price_detail': {'from': 'LAX', 'to': 'North hollywood', 'from_type': 'Airport', 'to_type': 'Zone'
+                    }
+                }, 'special_pricing': []
+            }
+        },
+        {'zone_name': 'North hollywood', 'price': 1100.0, 'vehicle': '', 'over_distance': None, 'price_detail': {'base_pricing': {'type': 'fixed', 'rule': None, 'zone': 'North hollywood', 'fix_price_type': 'Transfer', 'price': {'amount': 1100.0, 'currency': 'USD'
+                    }, 'fix_price_detail': {'from': 'LAX', 'to': 'North hollywood', 'from_type': 'Airport', 'to_type': 'Zone'
+                    }
+                }, 'special_pricing': []
+            }
         }
-    ],
-    "specific_date_surcharge": [
-        {
-            "from_date": "2024-07-27",
-            "to_date": "2024-07-30",
-            "currency": "USD",
-            "vehicle_classes": [
-                {
-                    "vehicle_class_ids": [
-                        1,
-                        2,
-                        6,
-                        3,
-                        7,
-                        4,
-                        36,
-                        8,
-                        5,
-                        9,
-                        11,
-                        10,
-                        29,
-                        30,
-                        31,
-                        32,
-                        33,
-                        34,
-                        35
-                    ],
-                    "percent": 25,
-                    "delta_amount": 0
-                }
-            ],
-            "zones": [
-                "Lima,Peru",
-                "Cusco",
-                "Arequipa"
-            ],
-            "name": "Rule 1",
-            "pid": "61654.8.1"
-        }
-    ],
-    "service_area_pricing_id": null
+    ]
 }

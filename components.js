@@ -1,3 +1,5 @@
+
+
 async function getPricingJsonBySvcId(url, id) {
   //  select pricing from fleet left join service_area_pricing s on  s.id = fleet.service_area_pricing_id where fleet.id = {{svc_id}}
   let d = {
@@ -15,6 +17,29 @@ async function getPricingJsonBySvcId(url, id) {
   return JSON.parse(res.pricing)
 }
 
+
+
+
+function exportCSV(title, jsonData) {
+  let str = ``;
+  for (let i of title) {
+    let nameStr = i.toString().replace(/\,/g, ' ');
+    str += nameStr + ',';
+  }
+  str += '\n';
+  for (let item of jsonData) {
+    for (let el in item) {
+      str += `${item[el] + '\t'},`;
+    }
+    str += '\n';
+  }
+  const url = 'data:text/csv;charset=utf-8,\ufeff' + encodeURIComponent(str);
+  const link = document.createElement('a');
+  link.href = url;
+  let dateName = new Date().getTime();
+  link.download = dateName + '.csv';
+  link.click();
+}
 
 
 
@@ -343,6 +368,25 @@ async function insertAndUpdate(url, svcJson, newFleetId) {
 
 
 
+async function getOtherFleetSvcId(url, svcId, parent_fleet_id = 15) {
+  // select * from airport_fleet where  airport in (select  airport from airport_fleet where fleet_id = {{svcId}} ) and parent_fleet_id = {{parent_fleet_id}}
+  let d = {
+    sql: 134678983,
+    version: '1.0',
+    svcId,
+    parent_fleet_id
+  }
+
+  let res = await fetchData({
+    url,
+    method: "POST",
+    data: d
+  })
+
+  return res.fleet_id
+
+}
+
 function fetchData({
   url = '',
   data = {},
@@ -396,3 +440,10 @@ function uuid() {
   }
   return S4() + S4() + '-' + S4() + '-' + S4() + '-' + S4() + '-' + S4() + S4() + S4();
 }
+
+
+let ses = 'YM9zkRVEF7DYYr1JFhgAyKobXMYWYgnfuBRqEX8y5ePR7hykxUVrSdXVM9rrIWXB9IwfUBQFMVeS7bCHMTwXNy0UqpSR9DFXnayZVBCkgGmXn0fGFhtNT8g729VBq4CO'
+let urlProd = `https://ujrfp99zs9.execute-api.us-east-2.amazonaws.com/upncoming/sql-templates/run?ses=${ses}`
+
+let sesDev = 'UEc1L5eErGh7DFkDh6wrQ46IVQt0d8QYQfquN6udTq7t0ETpcA7lmlXrUXJC2t66teluAqg47qpGznRfaVc6d4b9OHAJilwsE1e3wMYhvDdkfEgCJzYAaCe59gRYg8Sm'
+let urlDev = `https://jqwys3p5nk.execute-api.us-east-2.amazonaws.com/dev/sql-template/run?ses=${sesDev}`
