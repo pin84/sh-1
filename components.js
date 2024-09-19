@@ -17,10 +17,22 @@ async function getPricingJsonBySvcId(url, id) {
   return JSON.parse(res.pricing)
 }
 
+ async function getAirportInfo(url, code) {
+  // select a.code3,ad.lat,ad.lng,a.radius from address ad left join airport a on code3 = '{{airport_code}}' where ad.id = a.address_id
+  let res = await fetchData({
+    url,
+    method: 'POST',
+    data: {
+      sql: 134678945,
+      version: '1.0',
+      airport_code: code
+    }
+  })
+  return res
+}
 
 
-
-function exportCSV(title, jsonData) {
+function exportCSV(title, jsonData, dateName =  new Date().getTime() ) {
   let str = ``;
   for (let i of title) {
     let nameStr = i.toString().replace(/\,/g, ' ');
@@ -33,12 +45,45 @@ function exportCSV(title, jsonData) {
     }
     str += '\n';
   }
-  const url = 'data:text/csv;charset=utf-8,\ufeff' + encodeURIComponent(str);
+  // const url = 'data:text/csv;charset=utf-8,\ufeff' + encodeURIComponent(str);
+  const url = 'data:text/csv;charset=utf-8,\ufeff' + encodeURI(str);
   const link = document.createElement('a');
   link.href = url;
-  let dateName = new Date().getTime();
   link.download = dateName + '.csv';
   link.click();
+}
+
+function isMSbrowser() {
+  const userAgent = window.navigator.userAgent
+  return userAgent.indexOf('Edge') !== -1 || userAgent.indexOf('Trident') !== -1
+}
+
+function format(data) {
+  return String(data).replace(/"/g, '""').replace(/(^[\s\S]*$)/, '"$1"')
+}
+
+function saveCSV(title, head, data) {
+  let wordSeparator = ','
+  let lineSeparator = '\n'
+
+  let reTitle = title + '.csv'
+  let headBOM = '\ufeff'
+  let headStr = head ? head.map(item => format(item)).join(wordSeparator) + lineSeparator : ''
+  let dataStr = data ? data.map(row => row.map(item => format(item)).join(wordSeparator)).join(lineSeparator) : ''
+
+  return isMSbrowser()
+    ? new Promise(resolve => { // Edge、IE11
+      let blob = new Blob([headBOM + headStr + dataStr], { type: 'text/plain;charset=utf-8' })
+      window.navigator.msSaveBlob(blob, reTitle)
+      resolve()
+    })
+    : new Promise(resolve => { // Chrome、Firefox
+      let a = document.createElement('a')
+      a.href = 'data:text/csv;charset=utf-8,' + headBOM + encodeURIComponent(headStr + dataStr)
+      a.download = reTitle
+      a.click()
+      resolve()
+    })
 }
 
 
@@ -384,7 +429,6 @@ async function getOtherFleetSvcId(url, svcId, parent_fleet_id = 15) {
   })
 
   return res.fleet_id
-
 }
 
 function fetchData({

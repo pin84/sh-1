@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    .btn-box {
+      display: flex;
+    }
+
+    .btn-box .btn {
+      width: 250px;
+      height: 42px;
+      border: 1px solid #ccc;
+      text-align: center;
+      line-height: 42px;
+      cursor: pointer;
+      margin: 10px;
+      box-sizing: border-box;
+    }
+
+    .btn-box .btn:hover {
+      background-color: bisque;
+      /* color: #fff; */
+    }
+
+    .hide {
+      display: none;
+    }
+  </style>
+
+  <script src="../components.js"></script>
+  <script src="./data.js"></script>
+</head>
+
+<body>
+
+  <div class="btn-box">
+    <div class="submit btn">submit</div>
+    <!-- <div class="updateFromAddrAndToAddr btn hde">updateFromAddrAndToAddr</div>
+    <div class="updateFromLatLngAndToLatLng btn hide">updateFromLatLngAndToLatLng</div>
+    <div class="platformNameSvcidElife btn hide">platformNameSvcidElife</div>
+    <div class="addRouteTop200 btn ">addRouteTop200</div>
+
+    <div class="multiplePartner btn hide">multiplePartner</div>
+    <div class="downloadCSV btn hide">downloadCSV</div>
+    <div class="update btn hide">update</div>
+    <div class="changeStrategyId btn">changeStrategyId</div> -->
+  </div>
+
+
+
+
+  <script>
+
+    class addRoute {
+      constructor() {
+        this.stage = 'DEV' // PROD
+
+        this.noInsertList = []
+        this.doneList = []
+        this.initUi()
+        let submit = document.querySelector('.submit')
+        submit.addEventListener('click', async () => {
+          // this.add()
+          // this.addRouteTop200Price()
+          // this.addRouteTop200()
+          this.updateRoute()
+
+        })
+
+
+
+      }
+
+
+      async addRouteTop200Price() {
+        let url = true ? urlProd : urlDev    // urlDev,urlProd
+        let noFixedPriceZone = []
+        let noVehicle = []
+        let noRoute = []
+        let doneList = []
+        let vehicles = [
+          'Sedan',
+          'Comfort Sedan',
+          'Business Sedan',
+          'MPV-4',
+          'MPV-5',
+          'Business Minivan',
+          'Business SUV',
+          'Minibus-8',
+          'Minibus-10',
+          'Minibus-12',
+          'Minibus-14'
+        ]
+
+
+        let cStr = ' Cost'
+        let pStr = ' min profit'
+
+
+        let partnerId = 3
+
+        let parentFleetId = 15
+        switch (partnerId) {
+          case 2621:
+            parentFleetId = 61654
+            break;
+          case 3:
+            parentFleetId = 51488
+            break;
+          default:
+            break;
+        }
+
+        for (let obj of tem) {
+          let { from_zone, to_zone, service_area_id, from_address, to_address, } = obj
+
+
+          let { id: routeId } = await this.getRoute(urlProd, from_zone, to_zone, partnerId)
+          if (!routeId) {
+            noRoute.push(obj)
+            continue
+          }
+
+
+          let curFleetId = await getOtherFleetSvcId(urlProd, service_area_id, parentFleetId) //ctrip:61654,mozio:51488
+          let pricingJson = await getPricingJsonBySvcId(urlProd, curFleetId)
+
+
+          for (let v of vehicles) {
+            let cost = obj[`${v}${cStr}`]
+            let profit = obj[`${v}${pStr}`]
+            if (!cost) {
+              noVehicle.push(`${service_area_id}-${curFleetId}-${v}`)
+              continue
+            }
+            cost = Number(cost.replace(/\$/g, ''))
+            if (!profit) {
+              profit = '0'
+            }
+            profit = Number(profit.replace(/\%/g, '')) / 100
+
+            let vid = vehicleList.find(vehicle => vehicle.vehicle_name == v).vehicle_id
+            let jsonHandled = await this.jsonHandler2(pricingJson, from_zone, to_zone, vid)
+            if (!jsonHandled) {
+              obj['note-1'] = 'no Fixed Price Zone'
+              this.noInsertList.push(obj)
+              continue
+            }
+            let { pAmt } = jsonHandled
+            console.log(service_area_id, '--', routeId, '--', v, '--', vid, '----', cost, '---', profit, '--', pAmt);
+
+            if (pAmt && cost) {
+              let insertCostRes = await this.insertCost(url, routeId, vid, cost, profit)
+              let insertAdjRes = await this.insertAdj(url, pAmt, routeId, vid)
+            }
+
+            doneList.push(routeId)
+          }
+        }
+
+        console.log('--noRoute--', noRoute);
+        console.log('--noVehicle--', noVehicle);
+        let dones = Array.from(new Set(doneList))
+        console.log('--doneList--', dones);
+
+      }
+      async addRouteTop200() {
+        let url = true ? urlProd : urlDev    // urlDev,urlProd
+
+        let insertError = []
+
+        let ignoreList = []
+
+        let partnerId = 3 //Booking,Ctrip,Mozio
+
+
+        let parentFleetId = 15
+        let partnerInfo = {
+          platform_name: 'Booking', //China Ctrip API,Mozio
+          partner_id: 2,
+        }
+
+        switch (partnerId) {
+          case 3:
+            parentFleetId = 51488
+            partnerInfo = {
+              platform_name: 'Mozio',
+              partner_id: 3,
+            }
+            break;
+          case 2621:
+            parentFleetId = 61654
+            partnerInfo = {
+              platform_name: 'China Ctrip API',
+              partner_id: 2621,
+            }
+            break;
+          default:
+            break;
+        }
+
+
+        debugger
+        let i = 0
+
+        for (let item of tem) {
+          let { from_zone, to_zone, service_area_id, to_address, from_address } = item
+
+          if (ignoreList.includes(Number(service_area_id))) {
+            item['note'] = 'no profit'
+            this.noInsertList.push(item)
+            continue
+          }
+
+          // let obj = top200Route.find(o => o.from_zone == from_zone && o.to_zone == to_zone)
+          // if (!obj) {
+          //   item['note'] = 'No detailed address'
+          //   this.noInsertList.push(item)
+          //   continue
+          // }
+          // let { from_address, to_address } = obj
+
+
+          let curFleetId = await getOtherFleetSvcId(urlProd, service_area_id, parentFleetId)
+          let { id: routeId } = await this.getRoute(url, from_zone, to_zone, partnerId)
+
+
+          let pricingJson = await getPricingJsonBySvcId(urlProd, curFleetId)
+
+          let jsonHandled = await this.jsonHandler2(pricingJson, from_zone, to_zone)
+          if (!jsonHandled) {
+            item['note'] = 'no Fixed Price Zone'
+            this.noInsertList.push(item)
+            continue
+          }
+
+
+          let { adjJson, from_place_lat_lng, to_place_lat_lng } = jsonHandled
+
+          console.log(adjJson, from_place_lat_lng, to_place_lat_lng);
+          console.log(`-----${i}------`);
+          i++
+
+
+          let route = {
+            from_place: from_zone,
+            to_place: to_zone,
+            service_area_id: curFleetId,
+
+            json: JSON.stringify(adjJson),
+            name: `${from_zone}-${to_zone}`,
+            from_place_lat_lng: JSON.stringify(from_place_lat_lng),
+            to_place_lat_lng: JSON.stringify(to_place_lat_lng),
+
+
+            service_area_id_elife: service_area_id,
+            from_address,
+            to_address,
+
+            strategy_id: 1,
+            batch: 2,
+            is_active: 99
+          }
+
+          route = Object.assign({}, route, partnerInfo)
+          debugger
+          if (!routeId) {
+            let res = await this.insertSppRouteV2(url, route, insertError)
+          } else {
+            route['id'] = routeId
+            let insertRes = await this.updateRouteV2(url, route, insertError)
+          }
+          this.doneList.push(item)
+        }
+
+        console.log('--noInsertList--', this.noInsertList);
+        console.log('--insertError--', insertError);
+
+        let title = []
+        let jsonData = []
+        let doneTitle = []
+        let doneJsonData = []
+        let j = 0
+        let k = 0
+        for (let item of this.noInsertList) {
+          let tem = []
+          for (let [key, value] of Object.entries(item)) {
+            // console.log(key, '--', value);
+            if (j == 0) {
+              title.push(key)
+            }
+
+            let v = value
+            tem.push(value)
+          }
+          jsonData.push(tem)
+          j++
+        }
+
+        for (let item of this.doneList) {
+          let tem = []
+          for (let [key, value] of Object.entries(item)) {
+            // console.log(key, '--', value);
+            if (k == 0) {
+              doneTitle.push(key)
+            }
+
+            let v = value
+            tem.push(value)
+          }
+          doneJsonData.push(tem)
+          k++
+        }
+
+
+
+        saveCSV('noInsertList', title, jsonData)
+        saveCSV('doneTitle', doneTitle, doneJsonData)
+
+
+
+      }
+
+
+
+
+
+
+      async insertSppRouteV2(url, route, insertError) {
+        // INSERT INTO ride.spp_route (from_place, to_place, service_area_id, json, name,from_place_lat_lng, to_place_lat_lng, strategy_id, platform_name, partner_id, service_area_id_elife,from_address,to_address)VALUES ('{{from_place}}', '{{to_place}}',  {{service_area_id}}, '{{json}}', '{{name}}', '{{from_place_lat_lng}}', '{{to_place_lat_lng}}', {{strategy_id}}, '{{platform_name}}', {{partner_id}}, {{service_area_id_elife}},'{{from_address}}','{{to_address}}') limit 1;
+
+        let d = Object.assign({}, {
+          sql: 134678935,
+          version: '1.2',
+        },
+          route
+        )
+
+        console.log(d);
+
+        let res = await fetchData({
+          url,
+          method: "POST",
+          data: d
+        })
+
+
+        let row = res['Affected rows']
+        if (row == 0) {
+          insertError.push(item)
+        }
+      }
+
+
+      downloadCSVError(errorList) {
+        let title = ['id', 'airport', 'from_place', 'to_place', 'platform_name']
+        let jsonData = []
+        for (let item of errorList) {
+          let { id, from_place, to_place, platform_name } = item
+          jsonData.push([
+            id,
+            from_place,
+            from_place,
+            to_place,
+            platform_name
+          ])
+        }
+        exportCSV(title, jsonData)
+      }
+
+
+
+
+
+      async updateRouteV2(url, route, insertError) {
+
+        let d = Object.assign({}, {
+          sql: 134678978,
+          version: '1.7'
+        },
+          route
+        )
+
+        let res = await fetchData({
+          url,
+          method: "POST",
+          data: d
+        })
+
+
+        // let row = res['Affected rows']
+        // if (row == 0) {
+        //   insertError.push(route)
+        // }
+
+      }
+
+
+      async jsonHandler2(pricing, from_place, to_place, vid) {
+        let { zones, vehicleClasses } = pricing
+        if (!zones) return
+
+        let { prices } = zones[0]
+        let fromAirportInfo = await getAirportInfo(urlProd, from_place)
+        let toAirportInfo = await getAirportInfo(urlProd, to_place)
+
+        let flag = fromAirportInfo.code3 ? true : false // from place is airport : true 
+
+
+
+        let index = zones.findIndex(item => item.name == (flag ? to_place : from_place))
+        let idx = prices.findIndex(o => o.airport == (flag ? from_place : to_place))
+
+        if (index == -1 || idx == -1) {
+          return
+        }
+
+        let adjJson = {}
+        if (flag) {
+          adjJson['p_amt'] = `zones.${index}.prices.${idx}.p_amt`
+        } else {
+          adjJson['d_amt'] = `zones.${index}.prices.${idx}.d_amt`
+        }
+        let zone = zones[index]
+
+        let pAmt = null
+        if (vid) {
+          let { p_amt, d_amt } = zones[index].prices[idx]
+          let pa = vehicleClasses.find(item => item.vehicle_class_id == vid)
+
+          if (pa) {
+            let percent_appendix = pa?.percent_appendix || []
+            let percent = pa?.percent_appendix || 0
+            let field = percent_appendix.find(item => item.field == `zones.${index}.prices.${idx}.p_amt`)
+            let delta_amount = field?.delta_amount || 0
+
+            let n = Number(flag ? p_amt : d_amt)
+            if (!field) {
+              let percent = pa?.percent || 0
+              pAmt = Number((n + n * (percent / 100)).toFixed(2))
+            } else {
+              pAmt = Number((n + Number(delta_amount)).toFixed(2))
+            }
+          }
+        }
+
+        let res = {
+          adjJson,
+          from_place_lat_lng: flag ? fromAirportInfo : zone,
+          to_place_lat_lng: flag ? zone : toAirportInfo,
+        }
+
+        if (pAmt) {
+          res['pAmt'] = pAmt
+        }
+        return res
+      }
+
+
+      async changeStrategyId() {
+        for (let item of m51) {
+          let { route_id } = item
+
+          let d = {
+            sql: 134678978,
+            version: '1.4',
+            strategy_id: 2,
+            id: route_id
+          }
+          let res = await fetchData({
+            url: urlProd,
+            method: "POST",
+            data: d
+          })
+
+
+
+        }
+      }
+
+      async insertAdj(url, pAmt, routeId, vid) {
+        //INSERT INTO spp_price_adj (price,route_id, vehicle_class_id) VALUES ({{pAmt}},  {{routeId}},  {{vid}});
+        let res = await fetchData({
+          url,
+          method: "POST",
+          data: {
+            sql: 134678950,
+            version: '1.1',
+            pAmt,
+            routeId,
+            vid
+          }
+        })
+
+        return res
+
+      }
+
+      async insertCost(url, routeId, vid, cost, profit) {
+        //INSERT INTO ride.spp_cost (route_id, vehicle_class_id, cost, profit) VALUES ({{routeId}}, {{vid}}, {{cost}}, {{profit}});
+        let res = await fetchData({
+          url,
+          method: 'POST',
+          data: {
+            sql: 134678953,
+            version: '1.0',
+            routeId,
+            vid,
+            cost,
+            profit
+          }
+        })
+
+        return res
+      }
+
+
+      //       async platformNameSvcidElife() {
+      //         let failList = []
+
+      //         let url = this.stage == 'DEV' ? urlDev : urlProd
+      //         for (let item of routes) {
+
+      //           let { id, service_area_id } = item
+      //           let fleetId = await this.getOtherFleetSvcId(urlProd, service_area_id)
+
+      //           // UPDATE ride.spp_route t SET t.platform_name  = '{{platform_name}}',t.partner_id  = {{partner_id}},t.service_area_id_elife = {{service_area_id_elife}} WHERE t.id = {{id}};
+      //           let d = {
+      //             sql: 134678978,
+      //             version: '3.0',
+      //             platform_name: 'mozio',
+      //             partner_id: '3',
+      //             service_area_id_elife: fleetId,
+      //             id: 999
+      //           }
+      //           // let res = await fetchData({
+      //           //   url,
+      //           //   method: 'POST',
+      //           //   data: d
+      //           // })
+
+      //           // let row = res['Affected rows']
+      //           // if (row == 0) {
+      //           //   failList.push(item)
+      //           // }
+      //         }
+      //       }
+
+
+
+
+      //       async updateFromLatLngAndToLatLng() {
+      //         // let url = this.stage == 'DEV' ? urlDev : urlProd
+      //         let url = urlProd
+      //         for (let item of routes) {
+
+      //           let { id, from_place, to_place, service_area_id } = item
+      //           let airportInfo = await this.getAirportInfo(urlProd, from_place)
+
+      //           let pricingJson = await this.getPricingJsonBySvcId(urlProd, service_area_id)
+      //           let zones = pricingJson.zones || []
+      //           let toPlace = zones.find(obj => obj.name == to_place)
+
+      //           //v1.0
+      //           //  UPDATE ride.spp_route t SET t.from_place_lat_lng = '{{from_place_lat_lng}}', t.to_place_lat_lng   = '{{to_place_lat_lng}}' WHERE t.id = {{id}} limit 1;
+
+      //           let d = {
+      //             sql: 134678978,
+      //             version: '1.0',
+      //             from_place_lat_lng: JSON.stringify(airportInfo),
+      //             to_place_lat_lng: JSON.stringify(toPlace),
+      //             id
+      //           }
+
+      //           let res = await fetchData({
+      //             url,
+      //             method: 'POST',
+      //             data: d
+      //           })
+      //         }
+      //       }
+
+
+
+      //       async updateFromAddrAndToAddr() {
+      //         // let url = this.stage == 'DEV' ? urlDev : urlProd
+      //         let url = urlProd
+
+      //         for (let route of updateRoute) {
+
+      //           let { from_address, to_address, id } = route
+      //           if (!from_address || !to_address) {
+      //             continue
+      //           }
+      //           let d = {
+      //             sql: 134678978,
+      //             version: '1.6',
+      //             from_address: from_address,
+      //             to_address: to_address,
+      //             id
+      //           }
+
+      //           console.log(d);
+      //           let res = await fetchData({
+      //             url,
+      //             method: 'POST',
+      //             data: d
+      //           })
+
+      //         }
+      //       }
+
+
+
+      async updateRoute() {
+        let url = urlProd   // urlDev,urlProd
+        let insertError = []
+        let d = {
+          sql: 134679330,
+          version: '1.1',
+          is_active_no: 99,
+          ids: '279',
+        }
+        let res = await fetchData({
+          url,
+          method: 'POST',
+          data: d
+        })
+
+        let row = res['Affected rows']
+        if (row == 0) {
+          insertError.push(item)
+        }
+
+
+
+      }
+
+
+      //       async getPricingJsonBySvcId(url, id) {
+      //         //  select pricing from fleet left join service_area_pricing s on  s.id = fleet.service_area_pricing_id where fleet.id = {{svc_id}}
+      //         let d = {
+      //           sql: 134678865,
+      //           version: '1.1',
+      //           svc_id: id
+      //         }
+
+      //         let res = await fetchData({
+      //           url,
+      //           method: 'POST',
+      //           data: d,
+      //           desc: 'get pricing json_id'
+      //         })
+
+      //         return JSON.parse(res.pricing)
+      //       }
+
+      //       async add() {
+      //         let routes = []
+      //         let i = 0
+
+      //         let d1 = csvData['Popular routes热门']
+      //         // let d1 = handlerD
+      //         for (let obj of d1) {
+      //           if (!obj['服务区\nService area(可以不填)']) continue
+      //           obj['idx'] = i
+      //           routes.push(obj)
+      //           i++
+      //         }
+      //         console.log(routes);
+      //         let addedList = []
+      //         let noFixedPriceZone = []
+      //         let newRoutes = []
+      //         let newCosts = []
+      //         let url = urlProd  // urlDev,urlProd
+
+      //         // routes = routes.slice(0,1)
+
+      //         for (let route of routes) {
+      //           let airportCode = route['服务区的机场code(只写一个就好)']
+      //           let from = route['起点归属机场代码\/一口价圈\nAirport code\/Fixed Price zone']
+      //           let to = route['终点归属机场代码\/一口价圈\nAirport code\/Fixed Price zone']
+      //           let vehicleName = route['Elife 车型\nElife Vehicles']
+      //           let cost = route['成本价\ncost price USD']
+      //           let profit = route['最低利润\nminimum profit %'] || 0
+
+
+
+      //           let pricing = await this.getSvc(urlProd, airportCode, 51488)
+      //           let { serviceArea: { id: svcId } } = pricing
+
+      //           let vid = this.getVehicleIdByName(vehicleName)
+      //           let { id: routeId } = await this.getRoute(url, from, to, svcId)
+      //           let json = await this.jsonHandler(pricing, from, to, vid)
+      //           if (!json) {
+      //             noFixedPriceZone.push(route)
+      //             continue
+      //           }
+
+      //           let { fromDetail,
+      //             toDetail,
+      //             adjJson, pAmt } = json
+
+      //           if (routeId) {
+      //             let { id: costId } = await this.getCost(url, routeId, vid)
+      //             if (!costId) {
+      //               let insertCostRes = await this.insertCost(url, routeId, vid, cost, profit)
+      //               let insertAdjRes = await this.insertAdj(url, pAmt, routeId, vid)
+
+      //               newCosts.push(route)
+      //             } else {
+      //               route['wrong'] = 'route has added'
+      //               addedList.push(route)
+      //             }
+
+      //           } else {
+
+
+      //             let obj = {
+      //               from,
+      //               to,
+      //               svcId,
+      //               json: JSON.stringify(adjJson),
+      //               name: `${from}-${to}`,
+      //               fromPlace: JSON.stringify(fromDetail),
+      //               toPlace: JSON.stringify(toDetail),
+      //               strategyId: 1,
+
+      //               vid,
+      //               cost,
+      //               profit
+      //             }
+
+      //             let { id } = await this.insertSppRoute(url, obj)
+      //             let { id: costId } = await this.insertAdj(url, pAmt, id, vid)
+
+      //             newRoutes.push(route)
+
+      //           }
+      //         }
+      //         console.log('--noFixedPriceZone---', noFixedPriceZone);
+      //         console.log('--addedList---', addedList);
+      //         console.log('--newRoutes---', newRoutes);
+      //         console.log('--newCosts---', newCosts);
+      //       }
+
+      //       async insertSppRoute(url, obj) {
+      //         //  INSERT INTO ride.spp_route (from_place, to_place, service_area_id, json, name, from_place_lat_lng, to_place_lat_lng, strategy_id) VALUES ('{{from}}', '{{to}}', {{svcId}}, '{{json}}', '{{name}}', '{{fromPlace}}', '{{toPlace}}', {{strategyId}});
+      //         // INSERT INTO ride.spp_cost (route_id, vehicle_class_id, cost, profit) VALUES (last_insert_id(), {{vid}}, {{cost}}, {{profit}});
+      //         // select id from spp_route order by id desc limit 1;
+      //         let d = Object.assign({}, {
+      //           sql: 134678935,
+      //           version: '1.0'
+      //         }, obj)
+
+      //         let res = await fetchData({
+      //           url,
+      //           method: "POST",
+      //           data: d
+      //         })
+      //         return res
+      //       }
+
+      //       async jsonHandler(pricing, from, to, vid) {
+      //         console.log(pricing);
+      //         let { zones, vehicleClasses, serviceArea: { id } } = pricing
+      //         if (!zones) return
+      //         let { prices } = zones[0]
+
+      //         let index = zones.findIndex(item => item.name == to)
+      //         // let airportCode = from
+      //         let airportDetail = {}
+      //         let fromDetail = {}
+      //         let toDetail = {}
+      //         let idx = undefined
+
+      //         // if (index == -1) { //from is airport
+      //         fromDetail = await this.getAirportInfo(urlProd, from)
+      //         index = zones.findIndex(item => item.name == to)
+      //         if (index == -1) {
+      //           return
+      //         }
+      //         toDetail = zones[index]
+      //         idx = prices.findIndex(o => o.airport == from)
+
+      //         let adjJson = {
+      //           pamt: `zones.${index}.prices.${idx}.p_amt`,
+      //           damt: `zones.${index}.prices.${idx}.d_amt`,
+      //         }
+
+      //         let { p_amt, d_amt } = zones[index].prices[idx]
+
+      //         let { percent_appendix } = vehicleClasses.find(item => item.vehicle_class_id == vid)
+      //         if (!percent_appendix) {
+      //           return
+      //         }
+      //         let field = percent_appendix.find(item => item.field == `zones.${index}.prices.${idx}.p_amt`)
+
+      //         let delta_amount = field?.delta_amount || 0
+
+      //         let pAmt = Number((Number(p_amt) + Number(delta_amount)).toFixed(2))
+      //         return {
+      //           fromDetail,
+      //           toDetail,
+      //           adjJson,
+      //           pAmt
+      //         }
+      //       }
+
+
+
+
+      //       async getCost(url, routeId, vid) {
+      //         // select * from spp_cost where route_id = {{routeId}} and vehicle_class_id = {{vid}}
+      //         let res = await fetchData({
+      //           url,
+      //           method: "POST",
+      //           data: {
+      //             sql: 134678952,
+      //             version: '1.1',
+      //             routeId,
+      //             vid
+      //           }
+      //         })
+      //         if (!res) return
+      //         return res
+      //       }
+
+
+      //       getVehicleIdByName(vehicleName) {
+
+      //         let obj = vehicleList.find(item => item.vehicle_name == vehicleName)
+      //         if (!obj) return
+      //         return obj.vehicle_id
+
+      //       }
+
+      async getRoute(url, from, to, partner_id) {
+        // select * from spp_route where from_place='{{from}}' and to_place='{{to}}' and service_area_id={{svcId}}
+        //v1.1
+        // select * from spp_route where from_place='{{from}}' and to_place='{{to}}' and partner_id={{partner_id}}
+        let res = await fetchData({
+          url,
+          method: 'POST',
+          data: {
+            sql: 134678933,
+            version: '1.1',
+            from,
+            to,
+            partner_id
+          }
+        })
+
+        return res
+      }
+
+      initUi() {
+
+
+      }
+
+      async getSvc(url, airport, parent_fleet_id) {
+        let { pricing } = await fetchData({
+          url,
+          method: "POST",
+          data: {
+            sql: 134678913,
+            version: '1.1',
+            airport,
+            parent_fleet_id
+          }
+        })
+
+        let res = JSON.parse(pricing)
+        return res
+      }
+
+
+    }
+
+    new addRoute()
+
+
+
+
+
+
+
+  </script>
+</body>
+
+</html>

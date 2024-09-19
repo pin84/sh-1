@@ -1,12 +1,16 @@
-create table spp_price_predicted 
-(
-    id                 int unsigned auto_increment primary key,
-    route_id           int unsigned                        null,
-    pre_price           decimal(10, 2)                  null,
-    adj_price           decimal(10, 2)                  null,
-    
-    inserted_at        timestamp default CURRENT_TIMESTAMP not null,
-    last_updated_at    timestamp default CURRENT_TIMESTAMP not null on update CURRENT_TIMESTAMP,
-    constraint ride_ibfk_1
-        foreign key (route_id) references spp_route (id)
-);
+{
+    "id": 286,
+    "from_place": "CSX",
+    "to_place": "The first lap was a great lap",
+    "service_area_id": 11835,
+    "strategy_id": 2,
+    "platform_name": "Mozio",
+    "partner_id": 3,
+    "service_area_id_elife": 11835,
+    "vehicle_class_id": 1,
+    "country_code": "CHN",
+    "country_name": "China",
+    "service_area_name": "长沙-CSX",
+    "cost": 35.00,
+    "profit": 0.00
+  },
