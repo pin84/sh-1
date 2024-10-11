@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    .btn-box {
+      display: flex;
+    }
+
+    .btn-box .btn {
+      width: 250px;
+      height: 42px;
+      border: 1px solid #ccc;
+      text-align: center;
+      line-height: 42px;
+      cursor: pointer;
+      margin: 10px;
+      box-sizing: border-box;
+    }
+
+    .btn-box .btn:hover {
+      background-color: bisque;
+      /* color: #fff; */
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="btn-box">
+    <div class='btn copy' class="btn">Copy</div>
+    <!-- <div class='btn addPercentToSvc' class="btn">addPercentToSvc</div> -->
+  </div>
+
+  <script src="./components.js"></script>
+  <script src="./copyFleet.js"></script>
+  <script>
+    let copy = document.querySelector('.copy')
+    let addPercentToSvc = document.querySelector('.addPercentToSvc')
+
+
+
+    let noPricingIds = []
+    let completedIds = []
+    let errorList = []
+
+    let stage = 'PROD'
+    let fleetsInfo = {
+      2692: {
+        parent_fleet_id: stage == 'DEV' ? 62294 : 67743,
+        parent_fleet_name: 'emergingTravelGroup'
+      }
+    }
+
+    copy.addEventListener('click', async () => {
+      let { parent_fleet_id, parent_fleet_name, } = fleetsInfo['2692']
+      let url = stage == 'DEV' ? urlDev : urlProd  //urlDev,urlProd
+      let i = 0
+
+      for (let fleet of noPricingJsonFleets) {
+        console.log(`--- i ++------`, i++);
+        if(i < 72) continue
+        debugger
+        let { id, name, service_area_pricing_id, radius } = fleet
+        if (radius == 1) continue
+
+
+        fleet.name = fleet.name.replace(/\'/g, '\\\'')
+        let LastFleetId = await this.getFleetIdByName(url, fleet.name, parent_fleet_id)
+        if (!LastFleetId) {
+          let { LastrowId } = await this.insertFleet(url, fleet, parent_fleet_id)
+          LastFleetId = LastrowId
+        }
+        if (!LastFleetId) {
+          errorList.push(fleet)
+          continue
+        }
+
+        let json = null
+        if (service_area_pricing_id) {
+          json = await getPricingJsonBySvcId(url, id)
+          
+        } else {
+          json = await getLatPricingJsonAndFleeNotJsonId(url, id)
+
+        }
+        if(!json){
+          errorList.push(fleet)
+          continue
+        }
+        console.log('---before----', json);
+
+        let { polygons } = json.serviceArea
+        if (polygons) {
+          let { AffectedRows } = await this.insertSvcAttr(url, LastFleetId, polygons)
+          if (!AffectedRows) {
+            errorList.push(fleet)
+            continue
+          }
+        }
+
+        let airports = json.airports || []
+        if (airports.length) {
+          for (let airport of airports) {
+            let { AffectedRows } = await this.insertAirportFleet(url, parent_fleet_id, LastFleetId, [airport])
+            if (!AffectedRows) {
+              errorList.push(fleet)
+              continue
+            }
+          }
+        }
+
+        let jsonHandled = await jsonHandler(JSON.parse(JSON.stringify(json)), json)
+
+        jsonHandled.serviceArea['parent_fleet_id'] = parent_fleet_id
+        jsonHandled.serviceArea['parent_fleet_name'] = parent_fleet_name
+        jsonHandled.serviceArea['id'] = LastFleetId
+        jsonHandled['service_area_pricing_id'] = null
+
+        console.log('---after----', jsonHandled);
+
+        let pricingStr = JSON.stringify(jsonHandled).replace(/\'/g, '\\\'')
+
+
+        let res = null
+        if (service_area_pricing_id) {
+          res = await insertAndUpdate(url, pricingStr, LastFleetId)
+
+        } else {
+          res = await insertServiceAreaPricing(url, pricingStr, LastFleetId)
+        }
+        if (!res) {
+          errorList.push(fleet)
+        }
+
+      }
+
+      console.log('---noPricingIds---', noPricingIds);
+      console.log('---completedIds---', completedIds);
+      console.log('---errorList---', errorList);
+    })
+
+    async function getLatPricingJsonAndFleeNotJsonId(url,svcId){
+      // select * from service_area_pricing where service_area_id = {{svcId}} order by  id desc
+      let d = {
+        sql: 134679330,
+        version: '1.11',
+        svcId
+      }
+
+      let {pricing} = await fetchData({
+        url,
+        method: 'POST',
+        data: d,
+      })
+
+      if(pricing){
+        return JSON.parse(pricing)
+      } else {
+        return 
+      }
+    }
+    async function insertServiceAreaPricing(url, pricing_str, LastFleetId) {
+      // insert into service_area_pricing (service_area_id,pricing,effective_at,expire_at) values  ({{new_fleet_id}},'{{pricing_str}}','2024-04-08 05:05:00','2037-12-31 23:59:59' );
+      let d = {
+        sql: 134679330,
+        version: '3.3',
+        new_fleet_id: LastFleetId,
+        pricing_str
+      }
+
+      let res = await this.runSqlInsert(url, d)
+      return res
+    }
+
+
+
+    async function getFleetIdByName(url, fleet_name, parent_fleet_id) {
+      let d = {
+        sql: 134679330,
+        version: '2.2',
+        fleet_name,
+        parent_fleet_id
+      }
+
+      let res = await fetchData({
+        url,
+        method: 'POST',
+        data: d,
+      })
+
+      return res.id || 0
+    }
+
+    async function insertSvcAttr(url, fleetId, polygons) {
+      //INSERT INTO ride.service_area_attr (fleet_id, polygons) VALUES ({{fleet_id}}, '{{polygons}}');
+      //{(29.014186,115.609944),(30.086226,114.520844),(30.853213,111.046256),(29.023794,111.033816),(26.969368,111.090202),(26.988949,115.575531)}
+      let arr = []
+      for (let item of polygons) {
+        let str = `(${item.lat},${item.lng})`
+        arr.push(str)
+      }
+      let polygonsStr = `{${arr.join(',')}}`
+      let d = {
+        sql: 134679330,
+        version: '3.2',
+        fleet_id: fleetId,
+        polygons: polygonsStr,
+      }
+      let res = await this.runSqlInsert(url, d)
+      return res
+    }
+
+    async function insertAirportFleet(url, parent_fleet_id, fleet_id, airports = []) {
+      let d = {
+        sql: 134679330,
+        version: '3.1',
+        parent_fleet_id,
+        airports,
+        fleet_id
+      }
+
+      let res = await this.runSqlInsert(url, d)
+      return res
+    }
+
+    async function insertFleet(url, fleet, parent_fleet_id) {
+      //  INSERT INTO ride.fleet (parent_fleet_id, name, radius, lng, lat, bidding, unverified, in_blacklist)VALUES ({{parent_fleet_id}}, '{{name}}', {{radius}}, {{lng}}, {{lat}}, {{bidding}}, {{unverified}},{{in_blacklist}});
+      let { name,
+        radius,
+        lng,
+        lat,
+        bidding,
+        unverified,
+        in_blacklist } = fleet
+
+
+      let d = {
+        sql: 134679330,
+        version: '3.0',
+        parent_fleet_id,
+        name,
+        lng,
+        lat
+      }
+
+      if (radius !== null) {
+        d['radius'] = radius
+      }
+      if (bidding !== null) {
+        d['bidding'] = bidding
+      }
+      if (unverified !== null) {
+        d['unverified'] = unverified
+      }
+      if (in_blacklist !== null) {
+        d['in_blacklist'] = in_blacklist
+      }
+
+      let res = await this.runSqlInsert(url, d)
+      return res
+    }
+
+
+    async function runSqlInsert(url, d) {
+      let res = await fetchData({
+        url,
+        method: 'POST',
+        data: d
+      })
+      if (!res) {
+        return {}
+      }
+      let AffectedRows = res['Affected rows'] || res['total_affected_rows'] || 0
+      if (!AffectedRows) {
+        return {}
+      }
+      return {
+        AffectedRows,
+        LastrowId: res['Lastrow id']
+      }
+    }
+
+    async function jsonHandler(svcJson, oldJson) {
+
+      let partnerJson = partner.json
+
+      let mag_delta = partnerJson.service_areas?.mag_delta || []
+      let ads_delta = partnerJson.service_areas?.ads_delta || []
+      let sas_percent = partnerJson.service_areas?.sas_percent || []
+      let { serviceArea: { id: svcId } } = svcJson
+
+
+      let partnerPercent = 0
+
+      let sas = sas_percent.find(item => item.id == svcId)
+      let vcs = sas?.vcs || []
+      let percent = sas?.percent || 0
+      let svcPercent = percent || partnerPercent
+
+      { // meet_n_greet
+        let mng = mag_delta.find(item => item.id == svcId)
+        let { switch: isClose, delta } = mng || {}
+        let meet_n_greet = svcJson.pricing?.meet_n_greet || 0
+
+        if (isClose != 'on') {
+          delta = 0
+        }
+        svcJson.pricing.meet_n_greet = addPicies(Number(meet_n_greet) + Number(delta), svcPercent)
+
+      }
+
+      { //add_service
+        let { is_p, ts_p, cs_p } = svcJson.add_service || {}
+        let ads = ads_delta.find(item => item.id == svcId)
+
+        if (is_p != undefined) {
+          // let { infant: { delta, switch: isClose } } = ads
+          let delta = ads?.infant?.delta || 0
+          let isClose = ads?.infant?.switch || 'off'
+
+          if (isClose != 'on') {
+            delta = 0
+          }
+          // svcJson.add_service.is_p = (Number(is_p) + Number(delta)) * partnerPercent
+          svcJson.add_service.is_p = addPicies(Number(is_p) + Number(delta), svcPercent)
+        }
+        if (ts_p != undefined) {
+          // let { toddler: { delta, switch: isClose } } = ads
+          let delta = ads?.toddler?.delta || 0
+          let isClose = ads?.toddler?.switch || 'off'
+
+          if (isClose != 'on') {
+            delta = 0
+          }
+          // svcJson.add_service.ts_p = (Number(ts_p) + Number(delta)) * partnerPercent
+          svcJson.add_service.ts_p = addPicies(Number(ts_p) + Number(delta), svcPercent)
+        }
+        if (cs_p != undefined) {
+          // let { child: { delta, switch: isClose } } = ads
+          let delta = ads?.child?.delta || 0
+          let isClose = ads?.child?.switch || 'off'
+          if (isClose != 'on') {
+            delta = 0
+          }
+          // svcJson.add_service.cs_p = (Number(cs_p) + Number(delta)) * partnerPercent
+          svcJson.add_service.cs_p = addPicies(Number(cs_p) + Number(delta), svcPercent)
+        }
+      }
+
+
+
+      { // sas_percent
+
+
+        { // pricing
+          let { ranges, meet_n_greet, min_amount } = svcJson.pricing || {}
+          // if (meet_n_greet != undefined) {
+          //   svcJson.pricing.meet_n_greet = addPicies(meet_n_greet, svcPercent)
+          // }
+          if (min_amount != undefined) {
+            svcJson.pricing.min_amount = addPicies(min_amount, svcPercent)
+          }
+
+          for (let rang of (ranges || [])) {
+            rang.amount = addPicies(rang.amount, svcPercent)
+          }
+        }
+
+        { // downtown_areas
+          let { ranges, min_amount } = svcJson.downtown_areas || {}
+          if (min_amount != undefined) {
+            svcJson.downtown_areas.min_amount = addPicies(min_amount, svcPercent)
+          }
+          for (let rang of (ranges || [])) {
+            rang.amount = addPicies(rang.amount, svcPercent)
+          }
+        }
+
+        { //hourly_pricing
+
+          let min_amount = svcJson.hourly_pricing?.min_amount || undefined
+          if (min_amount != undefined) {
+            svcJson.hourly_pricing.min_amount = addPicies(min_amount, svcPercent)
+          }
+
+
+
+          let rules = svcJson.hourly_pricing?.rules || []
+          let ranges = svcJson.hourly_pricing?.ranges || []
+          for (let r of ranges) {
+            let amount = r.amount
+            r.amount = addPicies(amount, svcPercent)
+          }
+
+          for (let r of rules) {
+            let { min_amount, ranges } = r
+            r.min_amount = addPicies(min_amount, svcPercent)
+
+            for (let range of (ranges || [])) {
+              range.amount = addPicies(range.amount, svcPercent)
+            }
+          }
+        }
+
+
+        { // zones
+          let zones = svcJson.zones || []
+          for (let z of zones) {
+            for (let p of (z.prices || [])) {
+              let { p_amt, d_amt, amount } = p
+              if (p_amt && d_amt) {
+                p.p_amt = addPicies(p_amt, svcPercent)
+                p.d_amt = addPicies(d_amt, svcPercent)
+              }
+
+              if (amount) {
+                p.amount = addPicies(amount, svcPercent)
+              }
+            }
+          }
+        }
+
+        { //zone2zone
+          let zone2zone = svcJson.zone2zone?.prices || []
+          for (let item of zone2zone) {
+            let { amount, reverse } = item
+            item.amount = addPicies(amount, svcPercent)
+          }
+        }
+
+
+        { //notice_time_rules
+          let noticeTime = svcJson.notice_time_rules || []
+          for (let item of noticeTime) {
+            let ps = item.ps || []
+            for (let p of ps) {
+              let notice_time = p.notice_time || []
+              for (let n of notice_time) {
+
+                let { delta_amount, percent } = n
+                if (delta_amount != undefined) {
+                  n['delta_amount'] = addPicies(n['delta_amount'], svcPercent)
+                } else {
+                }
+              }
+            }
+          }
+
+        }
+
+        { // pricing_schedule_sum
+          let pricingScheduleSum = svcJson.pricing_schedule_sum || []
+          for (let item of pricingScheduleSum) {
+            let noticeTimeHint = item.notice_time_hint || []
+
+            for (let n of noticeTimeHint) {
+              if (n == 'null') continue
+              for (let o of n) {
+                let { delta_amount, percent } = o
+                if (delta_amount != undefined) {
+                  o.delta_amount = addPicies(o.delta_amount, svcPercent)
+                } else {
+                }
+              }
+
+            }
+          }
+        }
+
+        { //specific_date_surcharge
+          let specificDateSurcharge = svcJson.specific_date_surcharge || []
+          for (let item of specificDateSurcharge) {
+            let vehicleClasses = item.vehicle_classes || []
+            for (let v of vehicleClasses) {
+              let { percent, delta_amount } = v
+              if (delta_amount != 0) {
+                v.delta_amount = addPicies(v.delta_amount, svcPercent)
+              } else {
+              }
+            }
+          }
+        }
+
+
+        {//add_service
+          let add_service = svcJson.add_service || {}
+          let keys = Object.keys(add_service)
+          for (let k of keys) {
+            add_service[k] = addPicies(add_service[k], svcPercent)
+          }
+        }
+
+        { //vehicleClasses
+          let vehicleClasses = svcJson.vehicleClasses || []
+          for (let v of vehicleClasses) {
+            let percent_appendix = v.percent_appendix || []
+            for (let p of percent_appendix) {
+              let { delta_amount } = p
+              if (!delta_amount) continue
+              p.delta_amount = addPicies(delta_amount, svcPercent)
+            }
+            let { vehicle_class_id, percent: svcVehiclePercent } = v
+
+            let partnerVehiclePercent = (vcs.find(o => o.id == vehicle_class_id) || {}).percent || undefined
+            if (partnerVehiclePercent == undefined) {
+              continue
+            }
+
+            partnerVehiclePercent = Number(partnerVehiclePercent)
+
+
+            v['percent'] = addPercent_2(partnerVehiclePercent, svcVehiclePercent, svcPercent)
+            v['hourly_percent'] = addPercent_2(partnerVehiclePercent, svcVehiclePercent, svcPercent)
+            let i = 0
+            for (let p of percent_appendix) {
+              let { delta_amount, field } = p
+              if (!delta_amount) {
+                i++
+                continue
+              }
+
+              let oldVal = 0
+              switch (field) {
+                case "pricing.min_amount":
+                  oldVal = oldJson.pricing?.min_amount || 0
+                  break;
+                case "downtown_areas.min_amount":
+                  oldVal = oldJson.downtown_areas?.min_amount || 0
+                  break;
+                default:
+                  let oField = JSON.stringify(field)
+                  let keyArr = field.split('.')
+                  let getValueByKey = (oldJson, keyArr) => {
+                    let k = keyArr.shift()
+                    let val = oldJson[k]
+                    if (!val) {
+                      return
+                    }
+                    if (keyArr.length) {
+                      return getValueByKey(val, keyArr)
+                    }
+                    return val
+                  }
+
+                  let amountOrObj = getValueByKey(oldJson, keyArr)
+                  if (amountOrObj == undefined) {
+                    continue
+                  }
+                  let { amount } = amountOrObj
+                  oldVal = amount || amountOrObj
+                  break;
+              }
+              // (52.97 + 11 ) * 1.0 - 52.97  * 1.1 = 5.703
+              oldVal = Number(oldVal)
+              let oldVehicleClasses = oldJson['vehicleClasses'].find(v => v.vehicle_class_id == vehicle_class_id)
+              let { delta_amount: oldDeltaAmount } = oldVehicleClasses['percent_appendix'].find(p => p.field == field)
+
+              let newDeltaAmount = (oldVal + Number(oldDeltaAmount)) * percentTranslate(partnerVehiclePercent) - oldVal * percentTranslate(svcPercent)
+
+              p.delta_amount = Number(newDeltaAmount.toFixed(2))
+              i++
+            }
+
+          }
+        }
+
+
+      }
+
+      return svcJson
+    }
+
+
+    function percentTranslate(p) {
+      p = Number(p)
+      let v = (p + 100) / 100
+      return v
+    }
+
+    function addPicies(val, percent) {
+      val = Number(val)
+      percent = Number(percent)
+      let v = (val + val * percent / 100).toFixed(2)
+      return Number(v) || 0
+    }
+
+    //     old vehicle percentage = OVP
+    // partner vehicle percentage = PVP
+    // New vehicle percentage = (OVP + 100) * (100 + PVP)/100 - 100
+    // function addPercent(val, percent) {
+    //   val = Number(val)
+    //   percent = Number(percent)
+    //   let v1 = (val + 100) / 100
+    //   let v2 = (percent + 100) / 100
+    //   let v3 = (v1 * v2) * 100 - 100
+    //   let v = Number(v3.toFixed(0)) || 0
+    //   // let vn = (val + 100) * (100 + percent) / 100 - 100
+    //   // console.log(val,'---',percent);
+    //   return v
+    // }
+
+    function addPercent_2(partnerVehiclePercent, svcVehiclePercent, partnerSvcPercent) {
+      let v1 = Number(partnerVehiclePercent) + 100
+      let v2 = Number(svcVehiclePercent) + 100
+      let v3 = Number(partnerSvcPercent) + 100
+
+      let v = ((v1 * v2) / v3) - 100
+      v = Number(v.toFixed(2))
+      // if(v < 0 ){
+      //   v = 0
+      // }
+      return v
+    }
+  </script>
+</body>
+
+</html>

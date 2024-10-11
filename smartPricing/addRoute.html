@@ -40,15 +40,6 @@
 
   <div class="btn-box">
     <div class="submit btn">submit</div>
-    <!-- <div class="updateFromAddrAndToAddr btn hde">updateFromAddrAndToAddr</div>
-    <div class="updateFromLatLngAndToLatLng btn hide">updateFromLatLngAndToLatLng</div>
-    <div class="platformNameSvcidElife btn hide">platformNameSvcidElife</div>
-    <div class="addRouteTop200 btn ">addRouteTop200</div>
-
-    <div class="multiplePartner btn hide">multiplePartner</div>
-    <div class="downloadCSV btn hide">downloadCSV</div>
-    <div class="update btn hide">update</div>
-    <div class="changeStrategyId btn">changeStrategyId</div> -->
   </div>
 
 
@@ -68,27 +59,824 @@
 
 
         this.i = 0
-        this.initUi()
         let submit = document.querySelector('.submit')
         submit.addEventListener('click', async () => {
           // this.add()
-          this.addRouteTop200Price()
+          // this.addRouteTop200Price()
           // this.addRouteTop200()
           // this.updateRoute()
           // this.copyToOtherPatner()
 
           // this.download()
+
+          // this.update()
+          this.updateCostAndPrice()
         })
       }
+
+
 
       download() {
         this.downLoadCSV(d, 'no insert routes')
       }
 
+      async updateIsActiveAndBatch(url, id, is_active = -1, batch = 0) {
+        let res = await fetchData({
+          url,
+          method: "POST",
+          data: {
+            sql: 134679330,
+            version: '1.5',
+            is_active,
+            batch,
+            id
+          }
+        })
+        return res
+      }
+
+      async update() {
+        let url = true ? urlProd : urlDev    // urlDev,urlProd
+        let i = 0
+        for (let item of tem1_92) {
+
+          let { id, from_place, to_place, service_area_id, service_area_id_elife, from_address, to_address, strategy_id, batch,
+            is_active, partner_id
+          } = item
+
+          from_address = from_address.replace(/\'/g, "\\\'")
+          to_address = to_address.replace(/\'/g, "\\\'")
+          from_place = from_place.replace(/\'/g, "\\\'")
+          to_place = to_place.replace(/\'/g, "\\\'")
+
+          if (!batch) {
+            batch = 0
+          }
+          if (!is_active) {
+            is_active = 0
+          }
+
+          let pricingJson = await getPricingJsonBySvcId(urlProd, service_area_id)
+
+          let airportInfoObj = await this.getAirport(from_place, to_place)
+          let { isPickup, airportInfo } = airportInfoObj
+
+
+          let jsonHandled = this.jsonHandler3(pricingJson, from_place, to_place, isPickup, airportInfo)
+          if (!jsonHandled) {
+            this.noInsertList.push(item)
+            is_active = -1
+            batch = 0
+            let res = await this.updateIsActiveAndBatch(url, id, is_active, batch)
+            continue
+          }
+
+          let { adjJson, from_place_lat_lng, to_place_lat_lng } = jsonHandled
+
+          let route = {
+            from_place,
+            to_place,
+            service_area_id,
+
+            json: JSON.stringify(adjJson),
+            name: `${from_place}-${to_place}`,
+            from_place_lat_lng: JSON.stringify(from_place_lat_lng),
+            to_place_lat_lng: JSON.stringify(to_place_lat_lng),
+
+
+            service_area_id_elife,
+            from_address,
+            to_address,
+
+            strategy_id,
+            id,
+            batch,
+            is_active
+          }
+
+          let { partnerInfo } = this.getPatnerInfo(partner_id)
+
+          route = Object.assign({}, route, partnerInfo)
 
 
 
 
+
+          console.log(route);
+          console.log(`------------${i++}-----------`);
+          let insertRes = await this.updateRouteV2(url, route)
+
+          this.doneList.push(item)
+
+
+        }
+
+        console.log('-- this.noInsertList---', this.noInsertList);
+        console.log('-- this.doneList---', this.doneList);
+
+
+      }
+
+
+      async updateCostAndPrice() {
+
+        let routes = [
+          {
+            "id": 1,
+            "service_area_id": 52314,
+            "from_place": "MIA",
+            "to_place": "Miami beach"
+          },
+          {
+            "id": 4,
+            "service_area_id": 52426,
+            "from_place": "MCO",
+            "to_place": "Orlando"
+          },
+          {
+            "id": 8,
+            "service_area_id": 52427,
+            "from_place": "KIX",
+            "to_place": "大阪"
+          },
+          {
+            "id": 12,
+            "service_area_id": 52157,
+            "from_place": "KUL",
+            "to_place": "吉隆坡市区"
+          },
+          {
+            "id": 15,
+            "service_area_id": 52423,
+            "from_place": "AUA",
+            "to_place": "Aruba Downtown"
+          },
+          {
+            "id": 16,
+            "service_area_id": 52640,
+            "from_place": "SCL",
+            "to_place": "Las condes"
+          },
+          {
+            "id": 22,
+            "service_area_id": 52655,
+            "from_place": "SEA",
+            "to_place": "Seattle"
+          },
+          {
+            "id": 23,
+            "service_area_id": 52384,
+            "from_place": "MSY",
+            "to_place": "New Orleans"
+          },
+          {
+            "id": 42,
+            "service_area_id": 52258,
+            "from_place": "MAD",
+            "to_place": "madrid 3"
+          },
+          {
+            "id": 43,
+            "service_area_id": 52426,
+            "from_place": "MCO",
+            "to_place": "disney world"
+          },
+          {
+            "id": 92,
+            "service_area_id": 52423,
+            "from_place": "Aruba Downtown",
+            "to_place": "AUA"
+          },
+          {
+            "id": 93,
+            "service_area_id": 52215,
+            "from_place": "LIM",
+            "to_place": "Lima,Peru"
+          },
+          {
+            "id": 94,
+            "service_area_id": 52426,
+            "from_place": "Orlando",
+            "to_place": "MCO"
+          },
+          {
+            "id": 96,
+            "service_area_id": 52215,
+            "from_place": "Lima,Peru",
+            "to_place": "LIM"
+          },
+          {
+            "id": 98,
+            "service_area_id": 52460,
+            "from_place": "CDG",
+            "to_place": "Paris"
+          },
+          {
+            "id": 99,
+            "service_area_id": 52313,
+            "from_place": "MEX",
+            "to_place": "Mexico city mid"
+          },
+          {
+            "id": 102,
+            "service_area_id": 52021,
+            "from_place": "Waikiki",
+            "to_place": "HNL"
+          },
+          {
+            "id": 105,
+            "service_area_id": 52769,
+            "from_place": "HND",
+            "to_place": "东京2"
+          },
+          {
+            "id": 107,
+            "service_area_id": 52427,
+            "from_place": "大阪",
+            "to_place": "KIX"
+          },
+          {
+            "id": 111,
+            "service_area_id": 52258,
+            "from_place": "madrid 3",
+            "to_place": "MAD"
+          },
+          {
+            "id": 112,
+            "service_area_id": 52313,
+            "from_place": "Mexico city mid",
+            "to_place": "MEX"
+          },
+          {
+            "id": 115,
+            "service_area_id": 52665,
+            "from_place": "PVG",
+            "to_place": "上海市区左"
+          },
+          {
+            "id": 116,
+            "service_area_id": 51630,
+            "from_place": "BCN",
+            "to_place": "Barcelona"
+          },
+          {
+            "id": 119,
+            "service_area_id": 52347,
+            "from_place": "BOM",
+            "to_place": "Mumbai Airport"
+          },
+          {
+            "id": 120,
+            "service_area_id": 51621,
+            "from_place": "BKK",
+            "to_place": "市区中心"
+          },
+          {
+            "id": 121,
+            "service_area_id": 52623,
+            "from_place": "san francisco",
+            "to_place": "SFO"
+          },
+          {
+            "id": 123,
+            "service_area_id": 52347,
+            "from_place": "Mumbai Airport",
+            "to_place": "BOM"
+          },
+          {
+            "id": 124,
+            "service_area_id": 52038,
+            "from_place": "HYD- Madhapur",
+            "to_place": "HYD"
+          },
+          {
+            "id": 125,
+            "service_area_id": 52769,
+            "from_place": "东京2",
+            "to_place": "HND"
+          },
+          {
+            "id": 126,
+            "service_area_id": 52157,
+            "from_place": "吉隆坡市区",
+            "to_place": "KUL"
+          },
+          {
+            "id": 127,
+            "service_area_id": 52384,
+            "from_place": "New Orleans",
+            "to_place": "MSY"
+          },
+          {
+            "id": 129,
+            "service_area_id": 52645,
+            "from_place": "GRU",
+            "to_place": "Centro"
+          },
+          {
+            "id": 130,
+            "service_area_id": 51656,
+            "from_place": "BER",
+            "to_place": "Berlin"
+          },
+          {
+            "id": 132,
+            "service_area_id": 52084,
+            "from_place": "JNB",
+            "to_place": "3Sandton"
+          },
+          {
+            "id": 133,
+            "service_area_id": 52314,
+            "from_place": "Miami beach",
+            "to_place": "MIA"
+          },
+          {
+            "id": 134,
+            "service_area_id": 51630,
+            "from_place": "Barcelona",
+            "to_place": "BCN"
+          },
+          {
+            "id": 135,
+            "service_area_id": 52297,
+            "from_place": "MRU",
+            "to_place": "Reservoir Road*"
+          },
+          {
+            "id": 136,
+            "service_area_id": 52084,
+            "from_place": "3Sandton",
+            "to_place": "JNB"
+          },
+          {
+            "id": 137,
+            "service_area_id": 51874,
+            "from_place": "DXB",
+            "to_place": "1Dubai1"
+          },
+          {
+            "id": 142,
+            "service_area_id": 51621,
+            "from_place": "市区中心",
+            "to_place": "BKK"
+          },
+          {
+            "id": 143,
+            "service_area_id": 52665,
+            "from_place": "上海市区左",
+            "to_place": "PVG"
+          },
+          {
+            "id": 146,
+            "service_area_id": 52472,
+            "from_place": "PEN",
+            "to_place": "乔治城新"
+          },
+          {
+            "id": 148,
+            "service_area_id": 51682,
+            "from_place": "BOG",
+            "to_place": "Bogota"
+          },
+          {
+            "id": 149,
+            "service_area_id": 52655,
+            "from_place": "Seattle",
+            "to_place": "SEA"
+          },
+          {
+            "id": 150,
+            "service_area_id": 52513,
+            "from_place": "OPO",
+            "to_place": "Porto"
+          },
+          {
+            "id": 152,
+            "service_area_id": 51739,
+            "from_place": "CUN",
+            "to_place": "Cancun"
+          },
+          {
+            "id": 153,
+            "service_area_id": 52814,
+            "from_place": "USH",
+            "to_place": "Ushuaia"
+          },
+          {
+            "id": 154,
+            "service_area_id": 52683,
+            "from_place": "SIN",
+            "to_place": "新加坡市区"
+          },
+          {
+            "id": 156,
+            "service_area_id": 52534,
+            "from_place": "Punta Mita",
+            "to_place": "PVR"
+          },
+          {
+            "id": 157,
+            "service_area_id": 52640,
+            "from_place": "Las condes",
+            "to_place": "SCL"
+          },
+          {
+            "id": 158,
+            "service_area_id": 51973,
+            "from_place": "CAN",
+            "to_place": "天河"
+          },
+          {
+            "id": 159,
+            "service_area_id": 52314,
+            "from_place": "MIA",
+            "to_place": "miami airport"
+          },
+          {
+            "id": 160,
+            "service_area_id": 52314,
+            "from_place": "miami airport",
+            "to_place": "MIA"
+          },
+          {
+            "id": 161,
+            "service_area_id": 51656,
+            "from_place": "Berlin",
+            "to_place": "BER"
+          },
+          {
+            "id": 163,
+            "service_area_id": 52814,
+            "from_place": "Ushuaia",
+            "to_place": "USH"
+          },
+          {
+            "id": 164,
+            "service_area_id": 52308,
+            "from_place": "MDZ",
+            "to_place": "Mendoza"
+          },
+          {
+            "id": 165,
+            "service_area_id": 52315,
+            "from_place": "Milan",
+            "to_place": "MXP"
+          },
+          {
+            "id": 166,
+            "service_area_id": 52769,
+            "from_place": "HND",
+            "to_place": "东京1"
+          },
+          {
+            "id": 167,
+            "service_area_id": 52308,
+            "from_place": "Mendoza",
+            "to_place": "MDZ"
+          },
+          {
+            "id": 169,
+            "service_area_id": 52513,
+            "from_place": "Porto",
+            "to_place": "OPO"
+          },
+          {
+            "id": 170,
+            "service_area_id": 52297,
+            "from_place": "Reservoir Road*",
+            "to_place": "MRU"
+          },
+          {
+            "id": 171,
+            "service_area_id": 51812,
+            "from_place": "Copenhagen",
+            "to_place": "CPH"
+          },
+          {
+            "id": 173,
+            "service_area_id": 52534,
+            "from_place": "PVR",
+            "to_place": "Puerto Vallarta"
+          },
+          {
+            "id": 175,
+            "service_area_id": 52282,
+            "from_place": "Manzanillo",
+            "to_place": "ZLO"
+          },
+          {
+            "id": 176,
+            "service_area_id": 52282,
+            "from_place": "ZLO",
+            "to_place": "Manzanillo"
+          },
+          {
+            "id": 177,
+            "service_area_id": 51711,
+            "from_place": "BUD",
+            "to_place": "Budapest"
+          },
+          {
+            "id": 180,
+            "service_area_id": 52427,
+            "from_place": "KIX",
+            "to_place": "京都"
+          },
+          {
+            "id": 181,
+            "service_area_id": 52460,
+            "from_place": "ORY",
+            "to_place": "Paris"
+          },
+          {
+            "id": 185,
+            "service_area_id": 52482,
+            "from_place": "Phnom Penh",
+            "to_place": "PNH"
+          },
+          {
+            "id": 186,
+            "service_area_id": 52279,
+            "from_place": "MNL",
+            "to_place": "8-Barangay"
+          },
+          {
+            "id": 187,
+            "service_area_id": 51973,
+            "from_place": "CAN",
+            "to_place": "荔湾"
+          },
+          {
+            "id": 188,
+            "service_area_id": 51682,
+            "from_place": "Bogota",
+            "to_place": "BOG"
+          },
+          {
+            "id": 190,
+            "service_area_id": 52680,
+            "from_place": "Siem Reap",
+            "to_place": "SAI"
+          },
+          {
+            "id": 191,
+            "service_area_id": 52619,
+            "from_place": "SAT",
+            "to_place": "San Antonio"
+          },
+          {
+            "id": 192,
+            "service_area_id": 52426,
+            "from_place": "disney world",
+            "to_place": "MCO"
+          },
+          {
+            "id": 194,
+            "service_area_id": 51739,
+            "from_place": "Cancun",
+            "to_place": "CUN"
+          },
+          {
+            "id": 196,
+            "service_area_id": 51874,
+            "from_place": "1Dubai1",
+            "to_place": "DXB"
+          },
+          {
+            "id": 197,
+            "service_area_id": 52426,
+            "from_place": "MCO",
+            "to_place": "Four coners"
+          },
+          {
+            "id": 198,
+            "service_area_id": 52427,
+            "from_place": "京都",
+            "to_place": "KIX"
+          },
+          {
+            "id": 199,
+            "service_area_id": 52279,
+            "from_place": "MNL",
+            "to_place": "2-市区"
+          },
+          {
+            "id": 200,
+            "service_area_id": 52472,
+            "from_place": "乔治城新",
+            "to_place": "PEN"
+          },
+          {
+            "id": 201,
+            "service_area_id": 52095,
+            "from_place": "EBB",
+            "to_place": "Kampala"
+          },
+          {
+            "id": 202,
+            "service_area_id": 52095,
+            "from_place": "Kampala",
+            "to_place": "EBB"
+          },
+          {
+            "id": 203,
+            "service_area_id": 52460,
+            "from_place": "CDG",
+            "to_place": "迪士尼"
+          },
+          {
+            "id": 204,
+            "service_area_id": 52534,
+            "from_place": "Puerto Vallarta",
+            "to_place": "PVR"
+          },
+          {
+            "id": 206,
+            "service_area_id": 51708,
+            "from_place": "BRU",
+            "to_place": "Brussels"
+          },
+          {
+            "id": 207,
+            "service_area_id": 51935,
+            "from_place": "FNC",
+            "to_place": "Funchal"
+          },
+          {
+            "id": 208,
+            "service_area_id": 52619,
+            "from_place": "San Antonio",
+            "to_place": "SAT"
+          },
+          {
+            "id": 209,
+            "service_area_id": 52151,
+            "from_place": "Ao Nang",
+            "to_place": "KBV"
+          },
+          {
+            "id": 211,
+            "service_area_id": 51886,
+            "from_place": "EDI",
+            "to_place": "Edinburgh"
+          },
+          {
+            "id": 213,
+            "service_area_id": 51991,
+            "from_place": "HAM",
+            "to_place": "Hamburg"
+          },
+          {
+            "id": 215,
+            "service_area_id": 52665,
+            "from_place": "PVG",
+            "to_place": "上海市区右"
+          },
+          {
+            "id": 218,
+            "service_area_id": 52769,
+            "from_place": "东京2",
+            "to_place": "NRT"
+          },
+          {
+            "id": 219,
+            "service_area_id": 52314,
+            "from_place": "port",
+            "to_place": "MIA"
+          },
+          {
+            "id": 220,
+            "service_area_id": 51935,
+            "from_place": "Funchal",
+            "to_place": "FNC"
+          },
+          {
+            "id": 221,
+            "service_area_id": 52426,
+            "from_place": "Four coners",
+            "to_place": "MCO"
+          },
+          {
+            "id": 222,
+            "service_area_id": 52176,
+            "from_place": "LAP",
+            "to_place": "La Paz"
+          },
+          {
+            "id": 225,
+            "service_area_id": 52022,
+            "from_place": "Houston",
+            "to_place": "IAH"
+          },
+          {
+            "id": 226,
+            "service_area_id": 51653,
+            "from_place": "Starefossen",
+            "to_place": "BGO"
+          },
+          {
+            "id": 228,
+            "service_area_id": 52460,
+            "from_place": "Paris",
+            "to_place": "ORY"
+          },
+          {
+            "id": 231,
+            "service_area_id": 52683,
+            "from_place": "新加坡市区",
+            "to_place": "SIN"
+          },
+          {
+            "id": 232,
+            "service_area_id": 51711,
+            "from_place": "Budapest",
+            "to_place": "BUD"
+          },
+          {
+            "id": 233,
+            "service_area_id": 52811,
+            "from_place": "6Nungwi",
+            "to_place": "ZNZ"
+          },
+          {
+            "id": 236,
+            "service_area_id": 52298,
+            "from_place": "Marina Mazatlán",
+            "to_place": "MZT"
+          },
+          {
+            "id": 237,
+            "service_area_id": 52811,
+            "from_place": "ZNZ",
+            "to_place": "6Nungwi"
+          },
+          {
+            "id": 238,
+            "service_area_id": 52176,
+            "from_place": "La Paz",
+            "to_place": "LAP"
+          },
+          {
+            "id": 239,
+            "service_area_id": 52690,
+            "from_place": "SOF",
+            "to_place": "Sofia"
+          },
+          {
+            "id": 337,
+            "service_area_id": 52134,
+            "from_place": "USM",
+            "to_place": "11-查汶2"
+          },
+          {
+            "id": 339,
+            "service_area_id": 51715,
+            "from_place": "BUF",
+            "to_place": "Niagara Falls"
+          }
+        ]
+
+        let url = urlProd
+        let i = 0
+        for (let item of routes) {
+          let { id, service_area_id, from_place, to_place } = item
+
+          let pricingJson = await getPricingJsonBySvcId(url, service_area_id)
+
+          let airportInfoObj = await this.getAirport(from_place, to_place)
+          if (!airportInfoObj) {
+            item['note'] = 'No  airport'
+            continue
+          }
+          let { isPickup, airportInfo } = airportInfoObj
+
+
+          let costs = await this.getCostProfit(url, id)
+          for (let cost of costs.results) {
+            let { vehicle_class_id } = cost
+
+            let jsonHandled = this.jsonHandler3(pricingJson, from_place, to_place, isPickup, airportInfo, vehicle_class_id)
+
+            if (!jsonHandled) {
+              item['note'] = 'no Fixed Price Zone'
+              this.noInsertList.push(item)
+              continue
+            }
+            let { pAmt } = jsonHandled
+
+            console.log(vehicle_class_id, pAmt);
+            let insertAdjRes = await this.insertAdj(url, pAmt, id, vehicle_class_id)
+            debugger
+          }
+
+          console.log(`-----${i++}-------------`);
+          
+          
+        }
+        console.log( this.noInsertList);
+
+      }
 
 
       async copyToOtherPatner() {
@@ -119,7 +907,6 @@
 
 
 
-          debugger
           from_address = from_address.replace(/\'/g, "\\\'")
           to_address = to_address.replace(/\'/g, "\\\'")
           from_place = from_place.replace(/\'/g, "\\\'")
@@ -169,7 +956,6 @@
           route['id'] = id
           console.log(`-----------${this.i}------------`);
           console.log(route);
-          debugger
           let insertRes = await this.updateRouteV2(url, route)
 
           // let res = await this.insertSppRouteV2(url, route)
@@ -273,11 +1059,11 @@
         let doneList = []
         let vehicles = this.getVehicles()
 
-        let list = tem
+        let list = mozio_9_28
+
         let cStr = ' Cost'
         let pStr = ' min profit'
 
-        debugger
         let partnerId = 3
 
         let parentFleetId = 15
@@ -293,28 +1079,38 @@
         }
 
         console.log(list);
-
-
-        for (let obj of list) {
-          let { from_zone, to_zone, service_area_id, from_address, to_address, } = obj
-
-
+        let i = 0
+        for (let item of list) {
+          let { from_zone, to_zone, service_area_id, from_address, to_address, } = item
           let { id: routeId } = await this.getRoute(urlProd, from_zone, to_zone, partnerId)
           if (!routeId) {
-            obj['note'] = 'no route'
-            this.noInsertList.push(obj)
+            item['note'] = 'no route'
+            this.noInsertList.push(item)
             continue
           }
 
+          let airportInfoObj = await this.getAirport(from_zone, to_zone)
+          if (!airportInfoObj) {
+            item['note'] = 'No  airport'
+            continue
+          }
+          let { isPickup, airportInfo } = airportInfoObj
+          let airportCode = isPickup ? from_zone : to_zone
 
-          let curFleetId = await getOtherFleetSvcId(urlProd, service_area_id, parentFleetId)
-          let pricingJson = await getPricingJsonBySvcId(urlProd, curFleetId)
+          let fleetInfo = await this.getFleetIdAndPricingByAirport(urlProd, airportCode, parentFleetId)
+          if (!fleetInfo) {
+            item['note'] = 'NO fleet'
+            this.noInsertList.push(item)
+            continue
+          }
+          let { fleet_id, pricing, pricing_id } = fleetInfo
+          let pricingJson = JSON.parse(pricing)
 
           for (let v of vehicles) {
-            let cost = obj[`${v}${cStr}`]
-            let profit = obj[`${v}${pStr}`]
+            let cost = item[`${v}${cStr}`]
+            let profit = item[`${v}${pStr}`]
             if (!cost) {
-              noVehicle.push(`${service_area_id}-${curFleetId}-${v}`)
+              // noVehicle.push(`${service_area_id}-${curFleetId}-${v}`)
               continue
             }
             cost = Number(cost.replace(/\$/g, ''))
@@ -324,22 +1120,29 @@
             profit = Number(profit.replace(/\%/g, '')) / 100
 
             let vid = vehicleList.find(vehicle => vehicle.vehicle_name == v).vehicle_id
-            let jsonHandled = await this.jsonHandler2(pricingJson, from_zone, to_zone, vid)
+
+            let jsonHandled = this.jsonHandler3(pricingJson, from_zone, to_zone, isPickup, airportInfo, vid)
             if (!jsonHandled) {
-              obj['note'] = 'no Fixed Price Zone'
-              this.noInsertList.push(obj)
+              item['note'] = 'no Fixed Price Zone'
+              this.noInsertList.push(item)
               continue
             }
+
+
+
             let { pAmt } = jsonHandled
             console.log(service_area_id, '--', routeId, '--', v, '--', vid, '----', cost, '---', profit, '--', pAmt);
 
+
+
             if (pAmt && cost) {
-              // let insertCostRes = await this.insertCost(url, routeId, vid, cost, profit)
-              // let insertAdjRes = await this.insertAdj(url, pAmt, routeId, vid)
+              let insertCostRes = await this.insertCost(url, routeId, vid, cost, profit)
+              let insertAdjRes = await this.insertAdj(url, pAmt, routeId, vid)
             }
 
             doneList.push(routeId)
           }
+          console.log(`-------${i++}--------`);
         }
 
         console.log('--this.noInsertList--', this.noInsertList);
@@ -354,14 +1157,12 @@
 
       async addRouteTop200() {
         let url = true ? urlProd : urlDev    // urlDev,urlProd
-        let partnerId = 2 //Booking,Ctrip,Mozio
-        let batch = 3
-        let list = tem
+        let partnerId = 3 //Booking,Ctrip,Mozio
+        let batch = 0
+        let is_active = 98
+        let strategy_id = 1
 
-        let is_active = 99
-
-
-        let strategy_id = 4
+        let list = mozio_9_28
         // switch (partnerId) {
         //   case 2:
         //     strategy_id = 4
@@ -381,50 +1182,59 @@
         let { parentFleetId, partnerInfo } = this.getPatnerInfo(partnerId)
         let i = 0
         for (let item of list) {
-          let { from_zone, to_zone, service_area_id, from_detail_address, to_detail_address } = item
+
+          let { from_zone, to_zone, from_detail_address, to_detail_address } = item
           from_zone = from_zone.trim()
           to_zone = to_zone.trim()
-
           let obj = top200Route.find(o => o.from_zone == from_zone && o.to_zone == to_zone)
-
-          let from_address = obj?.from_address || from_detail_address || null
-          let to_address = obj?.to_address || to_detail_address || null
-
+          let from_address = from_detail_address || obj?.from_address || null
+          let to_address = to_detail_address || obj?.to_address || null
           if (!from_address || !to_address) {
             item['note'] = 'No detailed address'
             this.noInsertList.push(item)
             continue
           }
 
-
-
           from_address = from_address.replace(/\'/g, "\\\'")
           to_address = to_address.replace(/\'/g, "\\\'")
           from_zone = from_zone.replace(/\'/g, "\\\'")
           to_zone = to_zone.replace(/\'/g, "\\\'")
 
+          let airportInfoObj = await this.getAirport(from_zone, to_zone)
+          if (!airportInfoObj) {
+            item['note'] = 'No  airport'
+            continue
+          }
+          let { isPickup, airportInfo } = airportInfoObj
 
-          let curFleetId = await getOtherFleetSvcId(urlProd, service_area_id, parentFleetId)
-          let { id: routeId } = await this.getRoute(url, from_zone, to_zone, partnerId)
+          let airportCode = isPickup ? from_zone : to_zone
 
-          let pricingJson = await getPricingJsonBySvcId(urlProd, curFleetId)
+          let fleetInfo = await this.getFleetIdAndPricingByAirport(urlProd, airportCode, parentFleetId)
+          if (!fleetInfo) {
+            item['note'] = 'NO fleet'
+            this.noInsertList.push(item)
+            continue
+          }
+          let { fleet_id, pricing, pricing_id } = fleetInfo
+          let pricingJson = JSON.parse(pricing)
 
-          let jsonHandled = await this.jsonHandler2(pricingJson, from_zone, to_zone)
+
+
+
+          let jsonHandled = this.jsonHandler3(pricingJson, from_zone, to_zone, isPickup, airportInfo)
           if (!jsonHandled) {
             item['note'] = 'no Fixed Price Zone'
             this.noInsertList.push(item)
             continue
           }
-
-
           let { adjJson, from_place_lat_lng, to_place_lat_lng } = jsonHandled
+          let { id: routeId } = await this.getRoute(url, from_zone, to_zone, partnerId)
+          let elifefleet = await this.getFleetIdByAirport(url, airportCode, 15)
 
-
-          i++
           let route = {
             from_place: from_zone,
             to_place: to_zone,
-            service_area_id: curFleetId,
+            service_area_id: fleet_id,
 
             json: JSON.stringify(adjJson),
             name: `${from_zone}-${to_zone}`,
@@ -432,7 +1242,7 @@
             to_place_lat_lng: JSON.stringify(to_place_lat_lng),
 
 
-            service_area_id_elife: service_area_id,
+            service_area_id_elife: elifefleet.fleet_id,
             from_address,
             to_address,
 
@@ -443,6 +1253,7 @@
 
           route = Object.assign({}, route, partnerInfo)
           console.log(route);
+          i++
           console.log(`-----${i}------`);
           if (!routeId) {
             let res = await this.insertSppRouteV2(url, route)
@@ -453,7 +1264,7 @@
             this.newRouteIds.push(routeId)
           } else {
             route['id'] = routeId
-            let insertRes = await this.updateRouteV2(url, route)
+            // let insertRes = await this.updateRouteV2(url, route)
             this.existsIds.push(routeId)
           }
 
@@ -466,6 +1277,38 @@
 
         this.downLoadCSV(this.noInsertList, 'ctrip no insert list')
       }
+
+
+
+
+      async getFleetIdAndPricingByAirport(url, airport, parent_fleet_id) {
+        let res = await fetchData({
+          url,
+          method: "POST",
+          data: {
+            sql: 134679330,
+            version: '1.9',
+            airport,
+            parent_fleet_id,
+          }
+        })
+        return res
+      }
+
+      async getFleetIdByAirport(url, airport, parent_fleet_id) {
+        let res = await fetchData({
+          url,
+          method: "POST",
+          data: {
+            sql: 134679330,
+            version: '2.0',
+            airport,
+            parent_fleet_id,
+          }
+        })
+        return res
+      }
+
 
       downLoadCSV(jsonData = [], fileName = 'TEST') {
         let i = 0
@@ -615,7 +1458,6 @@
 
       jsonHandler3(pricing, from_place, to_place, isPickup, airportInfo, vid) {
         let { zones, vehicleClasses } = pricing
-
         if (!zones) return
         let { prices } = zones[0]
 
@@ -633,7 +1475,6 @@
           adjJson['d_amt'] = `zones.${index}.prices.${idx}.d_amt`
         }
         let zone = zones[index]
-
         let pAmt = null
         if (vid) {
           let { p_amt, d_amt } = zones[index].prices[idx]
@@ -642,7 +1483,8 @@
           if (pa) {
             let percent_appendix = pa?.percent_appendix || []
             let percent = pa?.percent_appendix || 0
-            let field = percent_appendix.find(item => item.field == `zones.${index}.prices.${idx}.p_amt`)
+            let pamtOrDamt = isPickup ? 'p_amt' : 'd_amt'
+            let field = percent_appendix.find(item => item.field == `zones.${index}.prices.${idx}.${pamtOrDamt}`)
             let delta_amount = field?.delta_amount || 0
 
             let n = Number(isPickup ? p_amt : d_amt)
@@ -669,70 +1511,9 @@
 
 
 
-      async jsonHandler2(pricing, from_place, to_place, vid,) {
-        let { zones, vehicleClasses } = pricing
-        if (!zones) return
-        let { prices } = zones[0]
-        let fromAirportInfo = await getAirportInfo(urlProd, from_place)
-        let toAirportInfo = await getAirportInfo(urlProd, to_place)
-
-        let flag = fromAirportInfo.code3 ? true : false // from place is airport : true 
-
-        from_place = from_place.trim()
-        to_place = to_place.trim()
-
-
-        let index = zones.findIndex(item => (String(item.name).trim()) == (flag ? to_place : from_place))
-        let idx = prices.findIndex(o => o.airport == (flag ? from_place : to_place))
-
-        if (index == -1 || idx == -1) {
-          return
-        }
-
-        let adjJson = {}
-        if (flag) {
-          adjJson['p_amt'] = `zones.${index}.prices.${idx}.p_amt`
-        } else {
-          adjJson['d_amt'] = `zones.${index}.prices.${idx}.d_amt`
-        }
-        let zone = zones[index]
-
-        let pAmt = null
-        if (vid) {
-          let { p_amt, d_amt } = zones[index].prices[idx]
-          let pa = vehicleClasses.find(item => item.vehicle_class_id == vid)
-
-          if (pa) {
-            let percent_appendix = pa?.percent_appendix || []
-            let percent = pa?.percent_appendix || 0
-            let field = percent_appendix.find(item => item.field == `zones.${index}.prices.${idx}.p_amt`)
-            let delta_amount = field?.delta_amount || 0
-
-            let n = Number(flag ? p_amt : d_amt)
-            if (!field) {
-              let percent = pa?.percent || 0
-              pAmt = Number((n + n * (percent / 100)).toFixed(2))
-            } else {
-              pAmt = Number((n + Number(delta_amount)).toFixed(2))
-            }
-          }
-        }
-
-        //mng
 
 
 
-        let res = {
-          adjJson,
-          from_place_lat_lng: flag ? fromAirportInfo : zone,
-          to_place_lat_lng: flag ? zone : toAirportInfo,
-        }
-
-        if (pAmt) {
-          res['pAmt'] = pAmt
-        }
-        return res
-      }
 
 
       async changeStrategyId() {
@@ -757,7 +1538,6 @@
       }
 
       async insertAdj(url, pAmt, routeId, vid) {
-        //INSERT INTO spp_price_adj (price,route_id, vehicle_class_id) VALUES ({{pAmt}},  {{routeId}},  {{vid}});
         let res = await fetchData({
           url,
           method: "POST",
@@ -794,20 +1574,19 @@
 
 
       async updateRoute() {
-
-
-        let ids = []
-        for (let item of batch_0) {
-          ids.push(item.id)
-        }
-        debugger
+        let ids = [117, 140, 184, 323, 735, 736]
+        // for (let item of mozio_9_28) {
+        //   ids.push(item.id)
+        // }
         let idsStr = ids.join(',')
+        console.log(idsStr);
         let url = urlProd   // urlDev,urlProd
-        let insertError = []
         let d = {
           sql: 134679330,
-          version: '1.2',
-          batch: 3,
+          version: '1.8',
+          batch: 0,
+          is_active: -2,
+          strategy_id: 1,
           ids: idsStr,
         }
         let res = await fetchData({
@@ -815,12 +1594,6 @@
           method: 'POST',
           data: d
         })
-
-
-        // let row = res['Affected rows']
-        // if (row == 0) {
-        //   insertError.push(item)
-        // }
 
       }
 
@@ -845,26 +1618,23 @@
         return res
       }
 
-      initUi() {
 
 
-      }
+      // async getSvc(url, airport, parent_fleet_id) {
+      //   let { pricing } = await fetchData({
+      //     url,
+      //     method: "POST",
+      //     data: {
+      //       sql: 134678913,
+      //       version: '1.1',
+      //       airport,
+      //       parent_fleet_id
+      //     }
+      //   })
 
-      async getSvc(url, airport, parent_fleet_id) {
-        let { pricing } = await fetchData({
-          url,
-          method: "POST",
-          data: {
-            sql: 134678913,
-            version: '1.1',
-            airport,
-            parent_fleet_id
-          }
-        })
-
-        let res = JSON.parse(pricing)
-        return res
-      }
+      //   let res = JSON.parse(pricing)
+      //   return res
+      // }
 
 
       getVehicles() {

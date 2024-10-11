@@ -1,2082 +1,1795 @@
-[
-    {
-        "service_area_id": "37",
-        "from_zone": "LAX",
-        "to_zone": "anaheim",
-        "operator": "JoeChloe",
-        "Sedan\nCost": "",
-        "Sedan\r\nmin profit %": "",
-        "Sedan\r\nmin price": "$0.00",
-        "Comfort Sedan\nCost": "",
-        "Comfort Sedan\nmin profit %": "",
-        "Comfort Sedan\nmin price": "$0.00",
-        "Business Sedan\nCost": "",
-        "Business Sedan\nmin profit %": "",
-        "Business Sedan\nmin price": "$0.00",
-        "MPV4\nCost": "",
-        "MPV4\nmin profit %": "",
-        "MPV4\nmin price": "$0.00",
-        "MPV5\nCost": "",
-        "MPV5\nmin profit %": "",
-        "MPV5\nmin price": "$0.00",
-        " Business MINIVAN\nCost": "",
-        "Business MINIVAN\nmin profit %": "",
-        "Business MINIVAN\nmin price": "$0.00",
-        "Business SUV\nCost": "",
-        "Business SUV\nmin profit %": "",
-        "Business SUV\nmin price": "$0.00",
-        "Minibus-8\nCost": "",
-        "Minibus-8\nmin profit %": "",
-        "Minibus-8\nmin price": "$0.00",
-        "Minibus-10\nCost": "",
-        "Minibus-10\nmin profit %": "",
-        "Minibus-10\nmin price": "$0.00",
-        "Minibus-12\nCost": "",
-        "Minibus-12\nmin profit %": "",
-        "Minibus-12\nmin price": "$0.00",
-        "Minibus-14\nCost": "",
-        "Minibus-14\nmin profit %": "",
-        "Minibus-14\nmin price": "$0.00",
-        "备注": ""
+{
+    "serviceArea": {
+        "id": 1283,
+        "parent_fleet_id": 15,
+        "name": "London,Canada",
+        "lat": 43.028551,
+        "lng": -81.149864,
+        "radius": 170000,
+        "parent_fleet_name": "Elife"
     },
-    {
-        "service_area_id": "37",
-        "from_zone": "LAX",
-        "to_zone": "North hollywood",
-        "operator": "JoeChloe",
-        "Sedan\nCost": "",
-        "Sedan\r\nmin profit %": "",
-        "Sedan\r\nmin price": "$0.00",
-        "Comfort Sedan\nCost": "",
-        "Comfort Sedan\nmin profit %": "",
-        "Comfort Sedan\nmin price": "$0.00",
-        "Business Sedan\nCost": "",
-        "Business Sedan\nmin profit %": "",
-        "Business Sedan\nmin price": "$0.00",
-        "MPV4\nCost": "",
-        "MPV4\nmin profit %": "",
-        "MPV4\nmin price": "$0.00",
-        "MPV5\nCost": "",
-        "MPV5\nmin profit %": "",
-        "MPV5\nmin price": "$0.00",
-        " Business MINIVAN\nCost": "",
-        "Business MINIVAN\nmin profit %": "",
-        "Business MINIVAN\nmin price": "$0.00",
-        "Business SUV\nCost": "",
-        "Business SUV\nmin profit %": "",
-        "Business SUV\nmin price": "$0.00",
-        "Minibus-8\nCost": "",
-        "Minibus-8\nmin profit %": "",
-        "Minibus-8\nmin price": "$0.00",
-        "Minibus-10\nCost": "",
-        "Minibus-10\nmin profit %": "",
-        "Minibus-10\nmin price": "$0.00",
-        "Minibus-12\nCost": "",
-        "Minibus-12\nmin profit %": "",
-        "Minibus-12\nmin price": "$0.00",
-        "Minibus-14\nCost": "",
-        "Minibus-14\nmin profit %": "",
-        "Minibus-14\nmin price": "$0.00",
-        "备注": ""
+    "pricing": {
+        "ranges": [
+            {
+                "seq": 0,
+                "amount": 3.4,
+                "currency": "USD",
+                "distance": 20000,
+                "from": 10000,
+                "to": 30000,
+                "distanceIn": 20,
+                "per_unit": 1
+            },
+            {
+                "seq": 1,
+                "amount": 3.3,
+                "currency": "USD",
+                "distance": 470000,
+                "from": 30000,
+                "to": 500000,
+                "distanceIn": 470,
+                "per_unit": 1
+            }
+        ],
+        "min_amount": 120,
+        "currency": "USD",
+        "min_distance": 10000
     },
-    {
-        "service_area_id": "37",
-        "from_zone": "LAX",
-        "to_zone": "long beach",
-        "operator": "JoeChloe",
-        "Sedan\nCost": "",
-        "Sedan\r\nmin profit %": "",
-        "Sedan\r\nmin price": "$0.00",
-        "Comfort Sedan\nCost": "",
-        "Comfort Sedan\nmin profit %": "",
-        "Comfort Sedan\nmin price": "$0.00",
-        "Business Sedan\nCost": "",
-        "Business Sedan\nmin profit %": "",
-        "Business Sedan\nmin price": "$0.00",
-        "MPV4\nCost": "",
-        "MPV4\nmin profit %": "",
-        "MPV4\nmin price": "$0.00",
-        "MPV5\nCost": "",
-        "MPV5\nmin profit %": "",
-        "MPV5\nmin price": "$0.00",
-        " Business MINIVAN\nCost": "",
-        "Business MINIVAN\nmin profit %": "",
-        "Business MINIVAN\nmin price": "$0.00",
-        "Business SUV\nCost": "",
-        "Business SUV\nmin profit %": "",
-        "Business SUV\nmin price": "$0.00",
-        "Minibus-8\nCost": "",
-        "Minibus-8\nmin profit %": "",
-        "Minibus-8\nmin price": "$0.00",
-        "Minibus-10\nCost": "",
-        "Minibus-10\nmin profit %": "",
-        "Minibus-10\nmin price": "$0.00",
-        "Minibus-12\nCost": "",
-        "Minibus-12\nmin profit %": "",
-        "Minibus-12\nmin price": "$0.00",
-        "Minibus-14\nCost": "",
-        "Minibus-14\nmin profit %": "",
-        "Minibus-14\nmin price": "$0.00",
-        "备注": ""
+    "zones": [
+        {
+            "name": "London",
+            "lat": 42.98291411636263,
+            "lng": -81.23566205259964,
+            "radius": 8299,
+            "prices": [
+                {
+                    "airport": "YXU",
+                    "amount": 120,
+                    "currency": "USD",
+                    "p_amt": 120,
+                    "d_amt": 120
+                },
+                {
+                    "airport": "YYZ",
+                    "amount": 250,
+                    "currency": "USD",
+                    "p_amt": 250,
+                    "d_amt": 250
+                }
+            ]
+        },
+        {
+            "name": "toronto",
+            "lat": 43.71292483978279,
+            "lng": -79.43810238444327,
+            "radius": 27184,
+            "prices": [
+                {
+                    "airport": "YXU",
+                    "amount": 450,
+                    "currency": "USD",
+                    "p_amt": 450,
+                    "d_amt": 450
+                },
+                {
+                    "airport": "YYZ",
+                    "amount": 278,
+                    "currency": "USD",
+                    "p_amt": 278,
+                    "d_amt": 278
+                }
+            ]
+        }
+    ],
+    "airports": [
+        "YXU",
+        "YYZ"
+    ],
+    "vehicleClasses": [
+        {
+            "vehicle_class_id": 1,
+            "delta_amount": 0,
+            "percent": 0,
+            "hourly_percent": 0,
+            "surcharge_schedule": [
+                [
+                    {
+                        "from": "00:00",
+                        "to": "06:30",
+                        "break": "false",
+                        "percent": 50
+                    },
+                    {
+                        "from": "22:00",
+                        "to": "23:59",
+                        "break": "false",
+                        "percent": 50
+                    }
+                ],
+                [
+                    {
+                        "from": "00:00",
+                        "to": "06:30",
+                        "break": "false",
+                        "percent": 50
+                    },
+                    {
+                        "from": "22:00",
+                        "to": "23:59",
+                        "break": "false",
+                        "percent": 50
+                    }
+                ],
+                [
+                    {
+                        "from": "00:00",
+                        "to": "06:30",
+                        "break": "false",
+                        "percent": 50
+                    },
+                    {
+                        "from": "22:00",
+                        "to": "23:59",
+                        "break": "false",
+                        "percent": 50
+                    }
+                ],
+                [
+                    {
+                        "from": "00:00",
+                        "to": "06:30",
+                        "break": "false",
+                        "percent": 50
+                    },
+                    {
+                        "from": "22:00",
+                        "to": "23:59",
+                        "break": "false",
+                        "percent": 50
+                    }
+                ],
+                [
+                    {
+                        "from": "00:00",
+                        "to": "06:30",
+                        "break": "false",
+                        "percent": 50
+                    },
+                    {
+                        "from": "22:00",
+                        "to": "23:59",
+                        "break": "false",
+                        "percent": 50
+                    }
+                ],
+                [
+                    {
+                        "from": "00:00",
+                        "to": "06:30",
+                        "break": "false",
+                        "percent": 50
+                    },
+                    {
+                        "from": "22:00",
+                        "to": "23:59",
+                        "break": "false",
+                        "percent": 50
+                    }
+                ],
+                [
+                    {
+                        "from": "00:00",
+                        "to": "06:30",
+                        "break": "false",
+                        "percent": 50
+                    },
+                    {
+                        "from": "22:00",
+                        "to": "23:59",
+                        "break": "false",
+                        "percent": 50
+                    }
+                ]
+            ],
+            "percent_appendix": [
+                {
+                    "field": "hourly_pricing.min_amount",
+                    "delta_amount": 0
+                },
+                {
+                    "field": "zones.1.prices.1.p_amt",
+                    "delta_amount": 172
+                },
+                {
+                    "field": "zones.1.prices.1.d_amt",
+                    "delta_amount": 172
+                },
+                {
+                    "field": "zones.1.prices.0.p_amt",
+                    "delta_amount": -172
+                },
+                {
+                    "field": "zones.1.prices.0.d_amt",
+                    "delta_amount": -172
+                },
+                {
+                    "field": "zones.0.prices.1.p_amt",
+                    "delta_amount": 200
+                },
+                {
+                    "field": "zones.0.prices.1.d_amt",
+                    "delta_amount": 200
+                }
+            ],
+            "notice_time": [
+                {
+                    "time": 1440,
+                    "percent": 15,
+                    "allowance": 540
+                },
+                {
+                    "time": 720,
+                    "percent": 50,
+                    "allowance": 540
+                }
+            ]
+        },
+        {
+            "vehicle_class_id": 2,
+            "delta_amount": 0,
+            "percent": 20,
+            "hourly_percent": 20,
+            "surcharge_schedule": [
+                [
+                    {
+                        "from": "00:00",
+                        "to": "06:30",
+                        "break": "false",
+                        "percent": 50
+                    },
+                    {
+                        "from": "22:00",
+                        "to": "23:59",
+                        "break": "false",
+                        "percent": 50
+                    }
+                ],
+                [
+                    {
+                        "from": "00:00",
+                        "to": "06:30",
+                        "break": "false",
+                        "percent": 50
+                    },
+                    {
+                        "from": "22:00",
+                        "to": "23:59",
+                        "break": "false",
+                        "percent": 50
+                    }
+                ],
+                [
+                    {
+                        "from": "00:00",
+                        "to": "06:30",
+                        "break": "false",
+                        "percent": 50
+                    },
+                    {
+                        "from": "22:00",
+                        "to": "23:59",
+                        "break": "false",
+                        "percent": 50
+                    }
+                ],
+                [
+                    {
+                        "from": "00:00",
+                        "to": "06:30",
+                        "break": "false",
+                        "percent": 50
+                    },
+                    {
+                        "from": "22:00",
+                        "to": "23:59",
+                        "break": "false",
+                        "percent": 50
+                    }
+                ],
+                [
+                    {
+                        "from": "00:00",
+                        "to": "06:30",
+                        "break": "false",
+                        "percent": 50
+                    },
+                    {
+                        "from": "22:00",
+                        "to": "23:59",
+                        "break": "false",
+                        "percent": 50
+                    }
+                ],
+                [
+                    {
+                        "from": "00:00",
+                        "to": "06:30",
+                        "break": "false",
+                        "percent": 50
+                    },
+                    {
+                        "from": "22:00",
+                        "to": "23:59",
+                        "break": "false",
+                        "percent": 50
+                    }
+                ],
+                [
+                    {
+                        "from": "00:00",
+                        "to": "06:30",
+                        "break": "false",
+                        "percent": 50
+                    },
+                    {
+                        "from": "22:00",
+                        "to": "23:59",
+                        "break": "false",
+                        "percent": 50
+                    }
+                ]
+            ],
+            "percent_appendix": [
+                {
+                    "field": "hourly_pricing.ranges.0",
+                    "delta_amount": 16
+                },
+                {
+                    "field": "hourly_pricing.min_amount",
+                    "delta_amount": 170
+                },
+                {
+                    "field": "zones.0.prices.1.p_amt",
+                    "delta_amount": 225
+                },
+                {
+                    "field": "zones.0.prices.1.d_amt",
+                    "delta_amount": 225
+                },
+                {
+                    "field": "zones.1.prices.1.p_amt",
+                    "delta_amount": 262
+                },
+                {
+                    "field": "zones.1.prices.1.d_amt",
+                    "delta_amount": 262
+                },
+                {
+                    "field": "zones.1.prices.0.p_amt",
+                    "delta_amount": -117
+                },
+                {
+                    "field": "zones.1.prices.0.d_amt",
+                    "delta_amount": -117
+                }
+            ],
+            "notice_time": [
+                {
+                    "time": 1440,
+                    "percent": 15,
+                    "allowance": 540
+                },
+                {
+                    "time": 720,
+                    "percent": 50,
+                    "allowance": 540
+                }
+            ]
+        },
+        {
+            "vehicle_class_id": 6,
+            "delta_amount": 0,
+            "percent": 34,
+            "hourly_percent": 34,
+            "surcharge_schedule": [
+                [
+                    {
+                        "from": "00:00",
+                        "to": "06:30",
+                        "break": "false",
+                        "percent": 50
+                    },
+                    {
+                        "from": "22:00",
+                        "to": "23:59",
+                        "break": "false",
+                        "percent": 50
+                    }
+                ],
+                [
+                    {
+                        "from": "00:00",
+                        "to": "06:30",
+                        "break": "false",
+                        "percent": 50
+                    },
+                    {
+                        "from": "22:00",
+                        "to": "23:59",
+                        "break": "false",
+                        "percent": 50
+                    }
+                ],
+                [
+                    {
+                        "from": "00:00",
+                        "to": "06:30",
+                        "break": "false",
+                        "percent": 50
+                    },
+                    {
+                        "from": "22:00",
+                        "to": "23:59",
+                        "break": "false",
+                        "percent": 50
+                    }
+                ],
+                [
+                    {
+                        "from": "00:00",
+                        "to": "06:30",
+                        "break": "false",
+                        "percent": 50
+                    },
+                    {
+                        "from": "22:00",
+                        "to": "23:59",
+                        "break": "false",
+                        "percent": 50
+                    }
+                ],
+                [
+                    {
+                        "from": "00:00",
+                        "to": "06:30",
+                        "break": "false",
+                        "percent": 50
+                    },
+                    {
+                        "from": "22:00",
+                        "to": "23:59",
+                        "break": "false",
+                        "percent": 50
+                    }
+                ],
+                [
+                    {
+                        "from": "00:00",
+                        "to": "06:30",
+                        "break": "false",
+                        "percent": 50
+                    },
+                    {
+                        "from": "22:00",
+                        "to": "23:59",
+                        "break": "false",
+                        "percent": 50
+                    }
+                ],
+                [
+                    {
+                        "from": "00:00",
+                        "to": "06:30",
+                        "break": "false",
+                        "percent": 50
+                    },
+                    {
+                        "from": "22:00",
+                        "to": "23:59",
+                        "break": "false",
+                        "percent": 50
+                    }
+                ]
+            ],
+            "percent_appendix": [
+                {
+                    "field": "hourly_pricing.min_amount",
+                    "delta_amount": 0
+                },
+                {
+                    "field": "zones.1.prices.0.p_amt",
+                    "delta_amount": -65
+                },
+                {
+                    "field": "zones.1.prices.0.d_amt",
+                    "delta_amount": -65
+                },
+                {
+                    "field": "zones.1.prices.1.p_amt",
+                    "delta_amount": 222
+                },
+                {
+                    "field": "zones.1.prices.1.d_amt",
+                    "delta_amount": 222
+                },
+                {
+                    "field": "zones.0.prices.1.p_amt",
+                    "delta_amount": 250
+                },
+                {
+                    "field": "zones.0.prices.1.d_amt",
+                    "delta_amount": 250
+                }
+            ],
+            "notice_time": [
+                {
+                    "time": 1440,
+                    "percent": 15,
+                    "allowance": 540
+                },
+                {
+                    "time": 720,
+                    "percent": 50,
+                    "allowance": 540
+                }
+            ]
+        },
+        {
+            "vehicle_class_id": 3,
+            "delta_amount": 0,
+            "percent": 35,
+            "hourly_percent": 35,
+            "surcharge_schedule": [
+                [
+                    {
+                        "from": "00:00",
+                        "to": "06:30",
+                        "break": "false",
+                        "percent": 50
+                    },
+                    {
+                        "from": "22:00",
+                        "to": "23:59",
+                        "break": "false",
+                        "percent": 50
+                    }
+                ],
+                [
+                    {
+                        "from": "00:00",
+                        "to": "06:30",
+                        "break": "false",
+                        "percent": 50
+                    },
+                    {
+                        "from": "22:00",
+                        "to": "23:59",
+                        "break": "false",
+                        "percent": 50
+                    }
+                ],
+                [
+                    {
+                        "from": "00:00",
+                        "to": "06:30",
+                        "break": "false",
+                        "percent": 50
+                    },
+                    {
+                        "from": "22:00",
+                        "to": "23:59",
+                        "break": "false",
+                        "percent": 50
+                    }
+                ],
+                [
+                    {
+                        "from": "00:00",
+                        "to": "06:30",
+                        "break": "false",
+                        "percent": 50
+                    },
+                    {
+                        "from": "22:00",
+                        "to": "23:59",
+                        "break": "false",
+                        "percent": 50
+                    }
+                ],
+                [
+                    {
+                        "from": "00:00",
+                        "to": "06:30",
+                        "break": "false",
+                        "percent": 50
+                    },
+                    {
+                        "from": "22:00",
+                        "to": "23:59",
+                        "break": "false",
+                        "percent": 50
+                    }
+                ],
+                [
+                    {
+                        "from": "00:00",
+                        "to": "06:30",
+                        "break": "false",
+                        "percent": 50
+                    },
+                    {
+                        "from": "22:00",
+                        "to": "23:59",
+                        "break": "false",
+                        "percent": 50
+                    }
+                ],
+                [
+                    {
+                        "from": "00:00",
+                        "to": "06:30",
+                        "break": "false",
+                        "percent": 50
+                    },
+                    {
+                        "from": "22:00",
+                        "to": "23:59",
+                        "break": "false",
+                        "percent": 50
+                    }
+                ]
+            ],
+            "percent_appendix": [
+                {
+                    "field": "hourly_pricing.min_amount",
+                    "delta_amount": 0
+                },
+                {
+                    "field": "zones.1.prices.0.p_amt",
+                    "delta_amount": -62
+                },
+                {
+                    "field": "zones.1.prices.0.d_amt",
+                    "delta_amount": -62
+                },
+                {
+                    "field": "zones.1.prices.1.p_amt",
+                    "delta_amount": 232
+                },
+                {
+                    "field": "zones.1.prices.1.d_amt",
+                    "delta_amount": 232
+                },
+                {
+                    "field": "zones.0.prices.1.p_amt",
+                    "delta_amount": 260
+                },
+                {
+                    "field": "zones.0.prices.1.d_amt",
+                    "delta_amount": 260
+                }
+            ],
+            "notice_time": [
+                {
+                    "time": 1440,
+                    "percent": 15,
+                    "allowance": 540
+                },
+                {
+                    "time": 720,
+                    "percent": 50,
+                    "allowance": 540
+                }
+            ]
+        },
+        {
+            "vehicle_class_id": 4,
+            "delta_amount": 0,
+            "percent": 50,
+            "hourly_percent": 50,
+            "surcharge_schedule": [
+                [
+                    {
+                        "from": "00:00",
+                        "to": "06:30",
+                        "break": "false",
+                        "percent": 50
+                    },
+                    {
+                        "from": "22:00",
+                        "to": "23:59",
+                        "break": "false",
+                        "percent": 50
+                    }
+                ],
+                [
+                    {
+                        "from": "00:00",
+                        "to": "06:30",
+                        "break": "false",
+                        "percent": 50
+                    },
+                    {
+                        "from": "22:00",
+                        "to": "23:59",
+                        "break": "false",
+                        "percent": 50
+                    }
+                ],
+                [
+                    {
+                        "from": "00:00",
+                        "to": "06:30",
+                        "break": "false",
+                        "percent": 50
+                    },
+                    {
+                        "from": "22:00",
+                        "to": "23:59",
+                        "break": "false",
+                        "percent": 50
+                    }
+                ],
+                [
+                    {
+                        "from": "00:00",
+                        "to": "06:30",
+                        "break": "false",
+                        "percent": 50
+                    },
+                    {
+                        "from": "22:00",
+                        "to": "23:59",
+                        "break": "false",
+                        "percent": 50
+                    }
+                ],
+                [
+                    {
+                        "from": "00:00",
+                        "to": "06:30",
+                        "break": "false",
+                        "percent": 50
+                    },
+                    {
+                        "from": "22:00",
+                        "to": "23:59",
+                        "break": "false",
+                        "percent": 50
+                    }
+                ],
+                [
+                    {
+                        "from": "00:00",
+                        "to": "06:30",
+                        "break": "false",
+                        "percent": 50
+                    },
+                    {
+                        "from": "22:00",
+                        "to": "23:59",
+                        "break": "false",
+                        "percent": 50
+                    }
+                ],
+                [
+                    {
+                        "from": "00:00",
+                        "to": "06:30",
+                        "break": "false",
+                        "percent": 50
+                    },
+                    {
+                        "from": "22:00",
+                        "to": "23:59",
+                        "break": "false",
+                        "percent": 50
+                    }
+                ]
+            ],
+            "percent_appendix": [
+                {
+                    "field": "hourly_pricing.min_amount",
+                    "delta_amount": 100
+                },
+                {
+                    "field": "zones.1.prices.0.p_amt",
+                    "delta_amount": 7
+                },
+                {
+                    "field": "zones.1.prices.0.d_amt",
+                    "delta_amount": 7
+                },
+                {
+                    "field": "zones.1.prices.1.p_amt",
+                    "delta_amount": 472
+                },
+                {
+                    "field": "zones.1.prices.1.d_amt",
+                    "delta_amount": 472
+                },
+                {
+                    "field": "zones.0.prices.1.p_amt",
+                    "delta_amount": 450
+                },
+                {
+                    "field": "zones.0.prices.1.d_amt",
+                    "delta_amount": 450
+                }
+            ],
+            "notice_time": [
+                {
+                    "time": 1440,
+                    "percent": 15,
+                    "allowance": 540
+                },
+                {
+                    "time": 720,
+                    "percent": 50,
+                    "allowance": 540
+                }
+            ]
+        },
+        {
+            "vehicle_class_id": 36,
+            "delta_amount": 0,
+            "percent": 50,
+            "hourly_percent": 50,
+            "surcharge_schedule": [
+                [
+                    {
+                        "from": "00:00",
+                        "to": "06:30",
+                        "break": "false",
+                        "percent": 50
+                    },
+                    {
+                        "from": "22:00",
+                        "to": "23:59",
+                        "break": "false",
+                        "percent": 50
+                    }
+                ],
+                [
+                    {
+                        "from": "00:00",
+                        "to": "06:30",
+                        "break": "false",
+                        "percent": 50
+                    },
+                    {
+                        "from": "22:00",
+                        "to": "23:59",
+                        "break": "false",
+                        "percent": 50
+                    }
+                ],
+                [
+                    {
+                        "from": "00:00",
+                        "to": "06:30",
+                        "break": "false",
+                        "percent": 50
+                    },
+                    {
+                        "from": "22:00",
+                        "to": "23:59",
+                        "break": "false",
+                        "percent": 50
+                    }
+                ],
+                [
+                    {
+                        "from": "00:00",
+                        "to": "06:30",
+                        "break": "false",
+                        "percent": 50
+                    },
+                    {
+                        "from": "22:00",
+                        "to": "23:59",
+                        "break": "false",
+                        "percent": 50
+                    }
+                ],
+                [
+                    {
+                        "from": "00:00",
+                        "to": "06:30",
+                        "break": "false",
+                        "percent": 50
+                    },
+                    {
+                        "from": "22:00",
+                        "to": "23:59",
+                        "break": "false",
+                        "percent": 50
+                    }
+                ],
+                [
+                    {
+                        "from": "00:00",
+                        "to": "06:30",
+                        "break": "false",
+                        "percent": 50
+                    },
+                    {
+                        "from": "22:00",
+                        "to": "23:59",
+                        "break": "false",
+                        "percent": 50
+                    }
+                ],
+                [
+                    {
+                        "from": "00:00",
+                        "to": "06:30",
+                        "break": "false",
+                        "percent": 50
+                    },
+                    {
+                        "from": "22:00",
+                        "to": "23:59",
+                        "break": "false",
+                        "percent": 50
+                    }
+                ]
+            ],
+            "percent_appendix": [
+                {
+                    "field": "hourly_pricing.min_amount",
+                    "delta_amount": 100
+                },
+                {
+                    "field": "zones.1.prices.0.p_amt",
+                    "delta_amount": 8
+                },
+                {
+                    "field": "zones.1.prices.0.d_amt",
+                    "delta_amount": 8
+                },
+                {
+                    "field": "zones.1.prices.1.p_amt",
+                    "delta_amount": 472
+                },
+                {
+                    "field": "zones.1.prices.1.d_amt",
+                    "delta_amount": 472
+                },
+                {
+                    "field": "zones.0.prices.1.p_amt",
+                    "delta_amount": 450
+                },
+                {
+                    "field": "zones.0.prices.1.d_amt",
+                    "delta_amount": 450
+                }
+            ],
+            "notice_time": [
+                {
+                    "time": 1440,
+                    "percent": 15,
+                    "allowance": 540
+                },
+                {
+                    "time": 720,
+                    "percent": 50,
+                    "allowance": 540
+                }
+            ]
+        },
+        {
+            "vehicle_class_id": 5,
+            "delta_amount": 0,
+            "percent": 125,
+            "percent_appendix": [
+                {
+                    "field": "pricing.min_amount",
+                    "delta_amount": 66,
+                    "curAmount": 186
+                },
+                {
+                    "field": "zones.0.prices.0.p_amt",
+                    "delta_amount": 66
+                },
+                {
+                    "field": "zones.0.prices.0.d_amt",
+                    "delta_amount": 66
+                },
+                {
+                    "field": "hourly_pricing.min_amount",
+                    "delta_amount": 500
+                },
+                {
+                    "field": "zones.1.prices.0.p_amt",
+                    "delta_amount": 562.5
+                },
+                {
+                    "field": "zones.1.prices.0.d_amt",
+                    "delta_amount": 562.5
+                },
+                {
+                    "field": "zones.1.prices.1.p_amt",
+                    "delta_amount": -78
+                },
+                {
+                    "field": "zones.1.prices.1.d_amt",
+                    "delta_amount": -78
+                },
+                {
+                    "field": "zones.0.prices.1.p_amt",
+                    "delta_amount": 765
+                },
+                {
+                    "field": "zones.0.prices.1.d_amt",
+                    "delta_amount": 765
+                }
+            ],
+            "hourly_percent": 125,
+            "surcharge_schedule": [
+                [
+                    {
+                        "from": "00:00",
+                        "to": "06:30",
+                        "break": "false",
+                        "percent": 50
+                    },
+                    {
+                        "from": "22:00",
+                        "to": "23:59",
+                        "break": "false",
+                        "percent": 50
+                    }
+                ],
+                [
+                    {
+                        "from": "00:00",
+                        "to": "06:30",
+                        "break": "false",
+                        "percent": 50
+                    },
+                    {
+                        "from": "22:00",
+                        "to": "23:59",
+                        "break": "false",
+                        "percent": 50
+                    }
+                ],
+                [
+                    {
+                        "from": "00:00",
+                        "to": "06:30",
+                        "break": "false",
+                        "percent": 50
+                    },
+                    {
+                        "from": "22:00",
+                        "to": "23:59",
+                        "break": "false",
+                        "percent": 50
+                    }
+                ],
+                [
+                    {
+                        "from": "00:00",
+                        "to": "06:30",
+                        "break": "false",
+                        "percent": 50
+                    },
+                    {
+                        "from": "22:00",
+                        "to": "23:59",
+                        "break": "false",
+                        "percent": 50
+                    }
+                ],
+                [
+                    {
+                        "from": "00:00",
+                        "to": "06:30",
+                        "break": "false",
+                        "percent": 50
+                    },
+                    {
+                        "from": "22:00",
+                        "to": "23:59",
+                        "break": "false",
+                        "percent": 50
+                    }
+                ],
+                [
+                    {
+                        "from": "00:00",
+                        "to": "06:30",
+                        "break": "false",
+                        "percent": 50
+                    },
+                    {
+                        "from": "22:00",
+                        "to": "23:59",
+                        "break": "false",
+                        "percent": 50
+                    }
+                ],
+                [
+                    {
+                        "from": "00:00",
+                        "to": "06:30",
+                        "break": "false",
+                        "percent": 50
+                    },
+                    {
+                        "from": "22:00",
+                        "to": "23:59",
+                        "break": "false",
+                        "percent": 50
+                    }
+                ]
+            ],
+            "notice_time": [
+                {
+                    "time": 1440,
+                    "percent": 15,
+                    "allowance": 540
+                },
+                {
+                    "time": 720,
+                    "percent": 50,
+                    "allowance": 540
+                }
+            ]
+        },
+        {
+            "vehicle_class_id": 9,
+            "delta_amount": 0,
+            "percent": 130,
+            "percent_appendix": [
+                {
+                    "field": "pricing.min_amount",
+                    "delta_amount": 68.41,
+                    "curAmount": 188.41
+                },
+                {
+                    "field": "zones.0.prices.0.p_amt",
+                    "delta_amount": 68.41
+                },
+                {
+                    "field": "zones.0.prices.0.d_amt",
+                    "delta_amount": 68.41
+                },
+                {
+                    "field": "zones.1.prices.1.p_amt",
+                    "delta_amount": -78
+                },
+                {
+                    "field": "zones.1.prices.1.d_amt",
+                    "delta_amount": -78
+                },
+                {
+                    "field": "zones.0.prices.1.p_amt",
+                    "delta_amount": 800
+                },
+                {
+                    "field": "zones.0.prices.1.d_amt",
+                    "delta_amount": 800
+                }
+            ],
+            "hourly_percent": 130,
+            "surcharge_schedule": [
+                [
+                    {
+                        "from": "00:00",
+                        "to": "06:30",
+                        "break": "false",
+                        "percent": 50
+                    },
+                    {
+                        "from": "22:00",
+                        "to": "23:59",
+                        "break": "false",
+                        "percent": 50
+                    }
+                ],
+                [
+                    {
+                        "from": "00:00",
+                        "to": "06:30",
+                        "break": "false",
+                        "percent": 50
+                    },
+                    {
+                        "from": "22:00",
+                        "to": "23:59",
+                        "break": "false",
+                        "percent": 50
+                    }
+                ],
+                [
+                    {
+                        "from": "00:00",
+                        "to": "06:30",
+                        "break": "false",
+                        "percent": 50
+                    },
+                    {
+                        "from": "22:00",
+                        "to": "23:59",
+                        "break": "false",
+                        "percent": 50
+                    }
+                ],
+                [
+                    {
+                        "from": "00:00",
+                        "to": "06:30",
+                        "break": "false",
+                        "percent": 50
+                    },
+                    {
+                        "from": "22:00",
+                        "to": "23:59",
+                        "break": "false",
+                        "percent": 50
+                    }
+                ],
+                [
+                    {
+                        "from": "00:00",
+                        "to": "06:30",
+                        "break": "false",
+                        "percent": 50
+                    },
+                    {
+                        "from": "22:00",
+                        "to": "23:59",
+                        "break": "false",
+                        "percent": 50
+                    }
+                ],
+                [
+                    {
+                        "from": "00:00",
+                        "to": "06:30",
+                        "break": "false",
+                        "percent": 50
+                    },
+                    {
+                        "from": "22:00",
+                        "to": "23:59",
+                        "break": "false",
+                        "percent": 50
+                    }
+                ],
+                [
+                    {
+                        "from": "00:00",
+                        "to": "06:30",
+                        "break": "false",
+                        "percent": 50
+                    },
+                    {
+                        "from": "22:00",
+                        "to": "23:59",
+                        "break": "false",
+                        "percent": 50
+                    }
+                ]
+            ],
+            "notice_time": [
+                {
+                    "time": 1440,
+                    "percent": 15,
+                    "allowance": 540
+                },
+                {
+                    "time": 720,
+                    "percent": 50,
+                    "allowance": 540
+                }
+            ]
+        },
+        {
+            "vehicle_class_id": 10,
+            "delta_amount": 0,
+            "percent": 150,
+            "hourly_percent": 150,
+            "surcharge_schedule": [
+                [
+                    {
+                        "from": "00:00",
+                        "to": "06:30",
+                        "break": "false",
+                        "percent": 50
+                    },
+                    {
+                        "from": "22:00",
+                        "to": "23:59",
+                        "break": "false",
+                        "percent": 50
+                    }
+                ],
+                [
+                    {
+                        "from": "00:00",
+                        "to": "06:30",
+                        "break": "false",
+                        "percent": 50
+                    },
+                    {
+                        "from": "22:00",
+                        "to": "23:59",
+                        "break": "false",
+                        "percent": 50
+                    }
+                ],
+                [
+                    {
+                        "from": "00:00",
+                        "to": "06:30",
+                        "break": "false",
+                        "percent": 50
+                    },
+                    {
+                        "from": "22:00",
+                        "to": "23:59",
+                        "break": "false",
+                        "percent": 50
+                    }
+                ],
+                [
+                    {
+                        "from": "00:00",
+                        "to": "06:30",
+                        "break": "false",
+                        "percent": 50
+                    },
+                    {
+                        "from": "22:00",
+                        "to": "23:59",
+                        "break": "false",
+                        "percent": 50
+                    }
+                ],
+                [
+                    {
+                        "from": "00:00",
+                        "to": "06:30",
+                        "break": "false",
+                        "percent": 50
+                    },
+                    {
+                        "from": "22:00",
+                        "to": "23:59",
+                        "break": "false",
+                        "percent": 50
+                    }
+                ],
+                [
+                    {
+                        "from": "00:00",
+                        "to": "06:30",
+                        "break": "false",
+                        "percent": 50
+                    },
+                    {
+                        "from": "22:00",
+                        "to": "23:59",
+                        "break": "false",
+                        "percent": 50
+                    }
+                ],
+                [
+                    {
+                        "from": "00:00",
+                        "to": "06:30",
+                        "break": "false",
+                        "percent": 50
+                    },
+                    {
+                        "from": "22:00",
+                        "to": "23:59",
+                        "break": "false",
+                        "percent": 50
+                    }
+                ]
+            ],
+            "percent_appendix": [
+                {
+                    "field": "zones.1.prices.1.p_amt",
+                    "delta_amount": -28
+                },
+                {
+                    "field": "zones.1.prices.1.d_amt",
+                    "delta_amount": -28
+                },
+                {
+                    "field": "zones.0.prices.1.p_amt",
+                    "delta_amount": 1000
+                },
+                {
+                    "field": "zones.0.prices.1.d_amt",
+                    "delta_amount": 1000
+                }
+            ],
+            "notice_time": [
+                {
+                    "time": 1440,
+                    "percent": 15,
+                    "allowance": 540
+                },
+                {
+                    "time": 720,
+                    "percent": 50,
+                    "allowance": 540
+                }
+            ]
+        },
+        {
+            "vehicle_class_id": 11,
+            "delta_amount": 0,
+            "percent": 160,
+            "hourly_percent": 160,
+            "surcharge_schedule": [
+                [
+                    {
+                        "from": "00:00",
+                        "to": "06:30",
+                        "break": "false",
+                        "percent": 50
+                    },
+                    {
+                        "from": "22:00",
+                        "to": "23:59",
+                        "break": "false",
+                        "percent": 50
+                    }
+                ],
+                [
+                    {
+                        "from": "00:00",
+                        "to": "06:30",
+                        "break": "false",
+                        "percent": 50
+                    },
+                    {
+                        "from": "22:00",
+                        "to": "23:59",
+                        "break": "false",
+                        "percent": 50
+                    }
+                ],
+                [
+                    {
+                        "from": "00:00",
+                        "to": "06:30",
+                        "break": "false",
+                        "percent": 50
+                    },
+                    {
+                        "from": "22:00",
+                        "to": "23:59",
+                        "break": "false",
+                        "percent": 50
+                    }
+                ],
+                [
+                    {
+                        "from": "00:00",
+                        "to": "06:30",
+                        "break": "false",
+                        "percent": 50
+                    },
+                    {
+                        "from": "22:00",
+                        "to": "23:59",
+                        "break": "false",
+                        "percent": 50
+                    }
+                ],
+                [
+                    {
+                        "from": "00:00",
+                        "to": "06:30",
+                        "break": "false",
+                        "percent": 50
+                    },
+                    {
+                        "from": "22:00",
+                        "to": "23:59",
+                        "break": "false",
+                        "percent": 50
+                    }
+                ],
+                [
+                    {
+                        "from": "00:00",
+                        "to": "06:30",
+                        "break": "false",
+                        "percent": 50
+                    },
+                    {
+                        "from": "22:00",
+                        "to": "23:59",
+                        "break": "false",
+                        "percent": 50
+                    }
+                ],
+                [
+                    {
+                        "from": "00:00",
+                        "to": "06:30",
+                        "break": "false",
+                        "percent": 50
+                    },
+                    {
+                        "from": "22:00",
+                        "to": "23:59",
+                        "break": "false",
+                        "percent": 50
+                    }
+                ]
+            ],
+            "percent_appendix": [
+                {
+                    "field": "zones.1.prices.1.p_amt",
+                    "delta_amount": -28
+                },
+                {
+                    "field": "zones.1.prices.1.d_amt",
+                    "delta_amount": -28
+                },
+                {
+                    "field": "zones.0.prices.1.p_amt",
+                    "delta_amount": 1050
+                },
+                {
+                    "field": "zones.0.prices.1.d_amt",
+                    "delta_amount": 1050
+                }
+            ],
+            "notice_time": [
+                {
+                    "time": 1440,
+                    "percent": 15,
+                    "allowance": 540
+                },
+                {
+                    "time": 720,
+                    "percent": 50,
+                    "allowance": 540
+                }
+            ]
+        }
+    ],
+    "countryCode": "CAN",
+    "currencyCode": "USD",
+    "hint": [
+        {
+            "normal_reserve_value": 24,
+            "vehicles": [
+                1,
+                2,
+                6,
+                3,
+                4,
+                5,
+                9,
+                10,
+                11,
+                36
+            ],
+            "notice_time_hint": [
+                {
+                    "advance_time_start": 12,
+                    "advance_time_end": 24,
+                    "notice_time": {
+                        "time": 1440,
+                        "percent": 15,
+                        "allowance": 540
+                    }
+                },
+                {
+                    "advance_time_start": 9,
+                    "advance_time_end": 12,
+                    "notice_time": {
+                        "time": 720,
+                        "percent": 50,
+                        "allowance": 540
+                    }
+                }
+            ]
+        }
+    ],
+    "pricing_schedule_sum": [
+        {
+            "notice_time_hint": [
+                [
+                    {
+                        "from": "00:00",
+                        "to": "06:30",
+                        "break": "false",
+                        "percent": 50
+                    },
+                    {
+                        "from": "22:00",
+                        "to": "23:59",
+                        "break": "false",
+                        "percent": 50
+                    }
+                ],
+                [
+                    {
+                        "from": "00:00",
+                        "to": "06:30",
+                        "break": "false",
+                        "percent": 50
+                    },
+                    {
+                        "from": "22:00",
+                        "to": "23:59",
+                        "break": "false",
+                        "percent": 50
+                    }
+                ],
+                [
+                    {
+                        "from": "00:00",
+                        "to": "06:30",
+                        "break": "false",
+                        "percent": 50
+                    },
+                    {
+                        "from": "22:00",
+                        "to": "23:59",
+                        "break": "false",
+                        "percent": 50
+                    }
+                ],
+                [
+                    {
+                        "from": "00:00",
+                        "to": "06:30",
+                        "break": "false",
+                        "percent": 50
+                    },
+                    {
+                        "from": "22:00",
+                        "to": "23:59",
+                        "break": "false",
+                        "percent": 50
+                    }
+                ],
+                [
+                    {
+                        "from": "00:00",
+                        "to": "06:30",
+                        "break": "false",
+                        "percent": 50
+                    },
+                    {
+                        "from": "22:00",
+                        "to": "23:59",
+                        "break": "false",
+                        "percent": 50
+                    }
+                ],
+                [
+                    {
+                        "from": "00:00",
+                        "to": "06:30",
+                        "break": "false",
+                        "percent": 50
+                    },
+                    {
+                        "from": "22:00",
+                        "to": "23:59",
+                        "break": "false",
+                        "percent": 50
+                    }
+                ],
+                [
+                    {
+                        "from": "00:00",
+                        "to": "06:30",
+                        "break": "false",
+                        "percent": 50
+                    },
+                    {
+                        "from": "22:00",
+                        "to": "23:59",
+                        "break": "false",
+                        "percent": 50
+                    }
+                ]
+            ],
+            "vehicles": [
+                1,
+                2,
+                40,
+                6,
+                3,
+                4,
+                5,
+                9,
+                10,
+                11,
+                41,
+                42,
+                43,
+                48,
+                49,
+                50,
+                51,
+                52,
+                36,
+                21,
+                22,
+                23,
+                24,
+                27,
+                44,
+                45,
+                46,
+                47,
+                25,
+                26,
+                28,
+                29,
+                30,
+                31,
+                32,
+                33,
+                34,
+                35,
+                56,
+                57,
+                58,
+                59,
+                60,
+                61,
+                64,
+                62,
+                63
+            ]
+        }
+    ],
+    "hourly_pricing": {
+        "min_amount": 400,
+        "min_duration": 4,
+        "currency": "USD",
+        "ranges": [
+            {
+                "seq": 0,
+                "amount": 80,
+                "currency": "USD",
+                "duration": 4,
+                "from": 4,
+                "to": 8
+            },
+            {
+                "seq": 1,
+                "amount": 75,
+                "currency": "USD",
+                "duration": 4,
+                "from": 8,
+                "to": 12
+            }
+        ]
     },
-    {
-        "service_area_id": "37",
-        "from_zone": "LAX",
-        "to_zone": "los angeles",
-        "operator": "JoeChloe",
-        "Sedan\nCost": "",
-        "Sedan\r\nmin profit %": "",
-        "Sedan\r\nmin price": "$0.00",
-        "Comfort Sedan\nCost": "",
-        "Comfort Sedan\nmin profit %": "",
-        "Comfort Sedan\nmin price": "$0.00",
-        "Business Sedan\nCost": "",
-        "Business Sedan\nmin profit %": "",
-        "Business Sedan\nmin price": "$0.00",
-        "MPV4\nCost": "",
-        "MPV4\nmin profit %": "",
-        "MPV4\nmin price": "$0.00",
-        "MPV5\nCost": "",
-        "MPV5\nmin profit %": "",
-        "MPV5\nmin price": "$0.00",
-        " Business MINIVAN\nCost": "",
-        "Business MINIVAN\nmin profit %": "",
-        "Business MINIVAN\nmin price": "$0.00",
-        "Business SUV\nCost": "",
-        "Business SUV\nmin profit %": "",
-        "Business SUV\nmin price": "$0.00",
-        "Minibus-8\nCost": "",
-        "Minibus-8\nmin profit %": "",
-        "Minibus-8\nmin price": "$0.00",
-        "Minibus-10\nCost": "",
-        "Minibus-10\nmin profit %": "",
-        "Minibus-10\nmin price": "$0.00",
-        "Minibus-12\nCost": "",
-        "Minibus-12\nmin profit %": "",
-        "Minibus-12\nmin price": "$0.00",
-        "Minibus-14\nCost": "",
-        "Minibus-14\nmin profit %": "",
-        "Minibus-14\nmin price": "$0.00",
-        "备注": ""
-    },
-    {
-        "service_area_id": "37",
-        "from_zone": "LAX",
-        "to_zone": "Manhattan beach",
-        "operator": "JoeChloe",
-        "Sedan\nCost": "",
-        "Sedan\r\nmin profit %": "",
-        "Sedan\r\nmin price": "$0.00",
-        "Comfort Sedan\nCost": "",
-        "Comfort Sedan\nmin profit %": "",
-        "Comfort Sedan\nmin price": "$0.00",
-        "Business Sedan\nCost": "",
-        "Business Sedan\nmin profit %": "",
-        "Business Sedan\nmin price": "$0.00",
-        "MPV4\nCost": "",
-        "MPV4\nmin profit %": "",
-        "MPV4\nmin price": "$0.00",
-        "MPV5\nCost": "",
-        "MPV5\nmin profit %": "",
-        "MPV5\nmin price": "$0.00",
-        " Business MINIVAN\nCost": "",
-        "Business MINIVAN\nmin profit %": "",
-        "Business MINIVAN\nmin price": "$0.00",
-        "Business SUV\nCost": "",
-        "Business SUV\nmin profit %": "",
-        "Business SUV\nmin price": "$0.00",
-        "Minibus-8\nCost": "",
-        "Minibus-8\nmin profit %": "",
-        "Minibus-8\nmin price": "$0.00",
-        "Minibus-10\nCost": "",
-        "Minibus-10\nmin profit %": "",
-        "Minibus-10\nmin price": "$0.00",
-        "Minibus-12\nCost": "",
-        "Minibus-12\nmin profit %": "",
-        "Minibus-12\nmin price": "$0.00",
-        "Minibus-14\nCost": "",
-        "Minibus-14\nmin profit %": "",
-        "Minibus-14\nmin price": "$0.00",
-        "备注": ""
-    },
-    {
-        "service_area_id": "37",
-        "from_zone": "anaheim",
-        "to_zone": "LAX",
-        "operator": "JoeChloe",
-        "Sedan\nCost": "",
-        "Sedan\r\nmin profit %": "",
-        "Sedan\r\nmin price": "$0.00",
-        "Comfort Sedan\nCost": "",
-        "Comfort Sedan\nmin profit %": "",
-        "Comfort Sedan\nmin price": "$0.00",
-        "Business Sedan\nCost": "",
-        "Business Sedan\nmin profit %": "",
-        "Business Sedan\nmin price": "$0.00",
-        "MPV4\nCost": "",
-        "MPV4\nmin profit %": "",
-        "MPV4\nmin price": "$0.00",
-        "MPV5\nCost": "",
-        "MPV5\nmin profit %": "",
-        "MPV5\nmin price": "$0.00",
-        " Business MINIVAN\nCost": "",
-        "Business MINIVAN\nmin profit %": "",
-        "Business MINIVAN\nmin price": "$0.00",
-        "Business SUV\nCost": "",
-        "Business SUV\nmin profit %": "",
-        "Business SUV\nmin price": "$0.00",
-        "Minibus-8\nCost": "",
-        "Minibus-8\nmin profit %": "",
-        "Minibus-8\nmin price": "$0.00",
-        "Minibus-10\nCost": "",
-        "Minibus-10\nmin profit %": "",
-        "Minibus-10\nmin price": "$0.00",
-        "Minibus-12\nCost": "",
-        "Minibus-12\nmin profit %": "",
-        "Minibus-12\nmin price": "$0.00",
-        "Minibus-14\nCost": "",
-        "Minibus-14\nmin profit %": "",
-        "Minibus-14\nmin price": "$0.00",
-        "备注": ""
-    },
-    {
-        "service_area_id": "37",
-        "from_zone": "North hollywood",
-        "to_zone": "LAX",
-        "operator": "JoeChloe",
-        "Sedan\nCost": "",
-        "Sedan\r\nmin profit %": "",
-        "Sedan\r\nmin price": "$0.00",
-        "Comfort Sedan\nCost": "",
-        "Comfort Sedan\nmin profit %": "",
-        "Comfort Sedan\nmin price": "$0.00",
-        "Business Sedan\nCost": "",
-        "Business Sedan\nmin profit %": "",
-        "Business Sedan\nmin price": "$0.00",
-        "MPV4\nCost": "",
-        "MPV4\nmin profit %": "",
-        "MPV4\nmin price": "$0.00",
-        "MPV5\nCost": "",
-        "MPV5\nmin profit %": "",
-        "MPV5\nmin price": "$0.00",
-        " Business MINIVAN\nCost": "",
-        "Business MINIVAN\nmin profit %": "",
-        "Business MINIVAN\nmin price": "$0.00",
-        "Business SUV\nCost": "",
-        "Business SUV\nmin profit %": "",
-        "Business SUV\nmin price": "$0.00",
-        "Minibus-8\nCost": "",
-        "Minibus-8\nmin profit %": "",
-        "Minibus-8\nmin price": "$0.00",
-        "Minibus-10\nCost": "",
-        "Minibus-10\nmin profit %": "",
-        "Minibus-10\nmin price": "$0.00",
-        "Minibus-12\nCost": "",
-        "Minibus-12\nmin profit %": "",
-        "Minibus-12\nmin price": "$0.00",
-        "Minibus-14\nCost": "",
-        "Minibus-14\nmin profit %": "",
-        "Minibus-14\nmin price": "$0.00",
-        "备注": ""
-    },
-    {
-        "service_area_id": "37",
-        "from_zone": "long beach",
-        "to_zone": "LAX",
-        "operator": "JoeChloe",
-        "Sedan\nCost": "",
-        "Sedan\r\nmin profit %": "",
-        "Sedan\r\nmin price": "$0.00",
-        "Comfort Sedan\nCost": "",
-        "Comfort Sedan\nmin profit %": "",
-        "Comfort Sedan\nmin price": "$0.00",
-        "Business Sedan\nCost": "",
-        "Business Sedan\nmin profit %": "",
-        "Business Sedan\nmin price": "$0.00",
-        "MPV4\nCost": "",
-        "MPV4\nmin profit %": "",
-        "MPV4\nmin price": "$0.00",
-        "MPV5\nCost": "",
-        "MPV5\nmin profit %": "",
-        "MPV5\nmin price": "$0.00",
-        " Business MINIVAN\nCost": "",
-        "Business MINIVAN\nmin profit %": "",
-        "Business MINIVAN\nmin price": "$0.00",
-        "Business SUV\nCost": "",
-        "Business SUV\nmin profit %": "",
-        "Business SUV\nmin price": "$0.00",
-        "Minibus-8\nCost": "",
-        "Minibus-8\nmin profit %": "",
-        "Minibus-8\nmin price": "$0.00",
-        "Minibus-10\nCost": "",
-        "Minibus-10\nmin profit %": "",
-        "Minibus-10\nmin price": "$0.00",
-        "Minibus-12\nCost": "",
-        "Minibus-12\nmin profit %": "",
-        "Minibus-12\nmin price": "$0.00",
-        "Minibus-14\nCost": "",
-        "Minibus-14\nmin profit %": "",
-        "Minibus-14\nmin price": "$0.00",
-        "备注": ""
-    },
-    {
-        "service_area_id": "37",
-        "from_zone": "Manhattan beach",
-        "to_zone": "LAX",
-        "operator": "JoeChloe",
-        "Sedan\nCost": "",
-        "Sedan\r\nmin profit %": "",
-        "Sedan\r\nmin price": "$0.00",
-        "Comfort Sedan\nCost": "",
-        "Comfort Sedan\nmin profit %": "",
-        "Comfort Sedan\nmin price": "$0.00",
-        "Business Sedan\nCost": "",
-        "Business Sedan\nmin profit %": "",
-        "Business Sedan\nmin price": "$0.00",
-        "MPV4\nCost": "",
-        "MPV4\nmin profit %": "",
-        "MPV4\nmin price": "$0.00",
-        "MPV5\nCost": "",
-        "MPV5\nmin profit %": "",
-        "MPV5\nmin price": "$0.00",
-        " Business MINIVAN\nCost": "",
-        "Business MINIVAN\nmin profit %": "",
-        "Business MINIVAN\nmin price": "$0.00",
-        "Business SUV\nCost": "",
-        "Business SUV\nmin profit %": "",
-        "Business SUV\nmin price": "$0.00",
-        "Minibus-8\nCost": "",
-        "Minibus-8\nmin profit %": "",
-        "Minibus-8\nmin price": "$0.00",
-        "Minibus-10\nCost": "",
-        "Minibus-10\nmin profit %": "",
-        "Minibus-10\nmin price": "$0.00",
-        "Minibus-12\nCost": "",
-        "Minibus-12\nmin profit %": "",
-        "Minibus-12\nmin price": "$0.00",
-        "Minibus-14\nCost": "",
-        "Minibus-14\nmin profit %": "",
-        "Minibus-14\nmin price": "$0.00",
-        "备注": ""
-    },
-    {
-        "service_area_id": "37",
-        "from_zone": "los angeles",
-        "to_zone": "LAX",
-        "operator": "JoeChloe",
-        "Sedan\nCost": "",
-        "Sedan\r\nmin profit %": "",
-        "Sedan\r\nmin price": "$0.00",
-        "Comfort Sedan\nCost": "",
-        "Comfort Sedan\nmin profit %": "",
-        "Comfort Sedan\nmin price": "$0.00",
-        "Business Sedan\nCost": "",
-        "Business Sedan\nmin profit %": "",
-        "Business Sedan\nmin price": "$0.00",
-        "MPV4\nCost": "",
-        "MPV4\nmin profit %": "",
-        "MPV4\nmin price": "$0.00",
-        "MPV5\nCost": "",
-        "MPV5\nmin profit %": "",
-        "MPV5\nmin price": "$0.00",
-        " Business MINIVAN\nCost": "",
-        "Business MINIVAN\nmin profit %": "",
-        "Business MINIVAN\nmin price": "$0.00",
-        "Business SUV\nCost": "",
-        "Business SUV\nmin profit %": "",
-        "Business SUV\nmin price": "$0.00",
-        "Minibus-8\nCost": "",
-        "Minibus-8\nmin profit %": "",
-        "Minibus-8\nmin price": "$0.00",
-        "Minibus-10\nCost": "",
-        "Minibus-10\nmin profit %": "",
-        "Minibus-10\nmin price": "$0.00",
-        "Minibus-12\nCost": "",
-        "Minibus-12\nmin profit %": "",
-        "Minibus-12\nmin price": "$0.00",
-        "Minibus-14\nCost": "",
-        "Minibus-14\nmin profit %": "",
-        "Minibus-14\nmin price": "$0.00",
-        "备注": ""
-    },
-    {
-        "service_area_id": "38",
-        "from_zone": "SFO",
-        "to_zone": "san francisco",
-        "operator": "JoeChloe",
-        "Sedan\nCost": "",
-        "Sedan\r\nmin profit %": "",
-        "Sedan\r\nmin price": "$0.00",
-        "Comfort Sedan\nCost": "",
-        "Comfort Sedan\nmin profit %": "",
-        "Comfort Sedan\nmin price": "$0.00",
-        "Business Sedan\nCost": "",
-        "Business Sedan\nmin profit %": "",
-        "Business Sedan\nmin price": "$0.00",
-        "MPV4\nCost": "",
-        "MPV4\nmin profit %": "",
-        "MPV4\nmin price": "$0.00",
-        "MPV5\nCost": "",
-        "MPV5\nmin profit %": "",
-        "MPV5\nmin price": "$0.00",
-        " Business MINIVAN\nCost": "",
-        "Business MINIVAN\nmin profit %": "",
-        "Business MINIVAN\nmin price": "$0.00",
-        "Business SUV\nCost": "",
-        "Business SUV\nmin profit %": "",
-        "Business SUV\nmin price": "$0.00",
-        "Minibus-8\nCost": "",
-        "Minibus-8\nmin profit %": "",
-        "Minibus-8\nmin price": "$0.00",
-        "Minibus-10\nCost": "",
-        "Minibus-10\nmin profit %": "",
-        "Minibus-10\nmin price": "$0.00",
-        "Minibus-12\nCost": "",
-        "Minibus-12\nmin profit %": "",
-        "Minibus-12\nmin price": "$0.00",
-        "Minibus-14\nCost": "",
-        "Minibus-14\nmin profit %": "",
-        "Minibus-14\nmin price": "$0.00",
-        "备注": ""
-    },
-    {
-        "service_area_id": "38",
-        "from_zone": "san francisco",
-        "to_zone": "SFO",
-        "operator": "JoeChloe",
-        "Sedan\nCost": "",
-        "Sedan\r\nmin profit %": "",
-        "Sedan\r\nmin price": "$0.00",
-        "Comfort Sedan\nCost": "",
-        "Comfort Sedan\nmin profit %": "",
-        "Comfort Sedan\nmin price": "$0.00",
-        "Business Sedan\nCost": "",
-        "Business Sedan\nmin profit %": "",
-        "Business Sedan\nmin price": "$0.00",
-        "MPV4\nCost": "",
-        "MPV4\nmin profit %": "",
-        "MPV4\nmin price": "$0.00",
-        "MPV5\nCost": "",
-        "MPV5\nmin profit %": "",
-        "MPV5\nmin price": "$0.00",
-        " Business MINIVAN\nCost": "",
-        "Business MINIVAN\nmin profit %": "",
-        "Business MINIVAN\nmin price": "$0.00",
-        "Business SUV\nCost": "",
-        "Business SUV\nmin profit %": "",
-        "Business SUV\nmin price": "$0.00",
-        "Minibus-8\nCost": "",
-        "Minibus-8\nmin profit %": "",
-        "Minibus-8\nmin price": "$0.00",
-        "Minibus-10\nCost": "",
-        "Minibus-10\nmin profit %": "",
-        "Minibus-10\nmin price": "$0.00",
-        "Minibus-12\nCost": "",
-        "Minibus-12\nmin profit %": "",
-        "Minibus-12\nmin price": "$0.00",
-        "Minibus-14\nCost": "",
-        "Minibus-14\nmin profit %": "",
-        "Minibus-14\nmin price": "$0.00",
-        "备注": ""
-    },
-    {
-        "service_area_id": "39",
-        "from_zone": "SEA",
-        "to_zone": "Seattle",
-        "operator": "JoeChloe",
-        "Sedan\nCost": "$45.00",
-        "Sedan\r\nmin profit %": "20.00%",
-        "Sedan\r\nmin price": "$54.00",
-        "Comfort Sedan\nCost": "$50.00",
-        "Comfort Sedan\nmin profit %": "10.00%",
-        "Comfort Sedan\nmin price": "$55.00",
-        "Business Sedan\nCost": "$60.00",
-        "Business Sedan\nmin profit %": "10.00%",
-        "Business Sedan\nmin price": "$66.00",
-        "MPV4\nCost": "$50.00",
-        "MPV4\nmin profit %": "10.00%",
-        "MPV4\nmin price": "$55.00",
-        "MPV5\nCost": "$55.00",
-        "MPV5\nmin profit %": "10.00%",
-        "MPV5\nmin price": "$60.50",
-        " Business MINIVAN\nCost": "$85.00",
-        "Business MINIVAN\nmin profit %": "10.00%",
-        "Business MINIVAN\nmin price": "$93.50",
-        "Business SUV\nCost": "$85.00",
-        "Business SUV\nmin profit %": "10.00%",
-        "Business SUV\nmin price": "$93.50",
-        "Minibus-8\nCost": "$160.00",
-        "Minibus-8\nmin profit %": "25.00%",
-        "Minibus-8\nmin price": "$200.00",
-        "Minibus-10\nCost": "$160.00",
-        "Minibus-10\nmin profit %": "25.00%",
-        "Minibus-10\nmin price": "$200.00",
-        "Minibus-12\nCost": "$160.00",
-        "Minibus-12\nmin profit %": "25.00%",
-        "Minibus-12\nmin price": "$200.00",
-        "Minibus-14\nCost": "$160.00",
-        "Minibus-14\nmin profit %": "25.00%",
-        "Minibus-14\nmin price": "$200.00",
-        "备注": ""
-    },
-    {
-        "service_area_id": "39",
-        "from_zone": "Seattle",
-        "to_zone": "SEA",
-        "operator": "JoeChloe",
-        "Sedan\nCost": "$40.00",
-        "Sedan\r\nmin profit %": "20.00%",
-        "Sedan\r\nmin price": "$48.00",
-        "Comfort Sedan\nCost": "$45.00",
-        "Comfort Sedan\nmin profit %": "10.00%",
-        "Comfort Sedan\nmin price": "$49.50",
-        "Business Sedan\nCost": "$55.00",
-        "Business Sedan\nmin profit %": "10.00%",
-        "Business Sedan\nmin price": "$60.50",
-        "MPV4\nCost": "$45.00",
-        "MPV4\nmin profit %": "10.00%",
-        "MPV4\nmin price": "$49.50",
-        "MPV5\nCost": "$50.00",
-        "MPV5\nmin profit %": "10.00%",
-        "MPV5\nmin price": "$55.00",
-        " Business MINIVAN\nCost": "$80.00",
-        "Business MINIVAN\nmin profit %": "10.00%",
-        "Business MINIVAN\nmin price": "$88.00",
-        "Business SUV\nCost": "$80.00",
-        "Business SUV\nmin profit %": "10.00%",
-        "Business SUV\nmin price": "$88.00",
-        "Minibus-8\nCost": "$160.00",
-        "Minibus-8\nmin profit %": "25.00%",
-        "Minibus-8\nmin price": "$200.00",
-        "Minibus-10\nCost": "$160.00",
-        "Minibus-10\nmin profit %": "25.00%",
-        "Minibus-10\nmin price": "$200.00",
-        "Minibus-12\nCost": "$160.00",
-        "Minibus-12\nmin profit %": "25.00%",
-        "Minibus-12\nmin price": "$200.00",
-        "Minibus-14\nCost": "$160.00",
-        "Minibus-14\nmin profit %": "25.00%",
-        "Minibus-14\nmin price": "$200.00",
-        "备注": ""
-    },
-    {
-        "service_area_id": "40",
-        "from_zone": "JFK",
-        "to_zone": "曼哈顿",
-        "operator": "JoeChloe",
-        "Sedan\nCost": "",
-        "Sedan\r\nmin profit %": "",
-        "Sedan\r\nmin price": "$0.00",
-        "Comfort Sedan\nCost": "",
-        "Comfort Sedan\nmin profit %": "",
-        "Comfort Sedan\nmin price": "$0.00",
-        "Business Sedan\nCost": "",
-        "Business Sedan\nmin profit %": "",
-        "Business Sedan\nmin price": "$0.00",
-        "MPV4\nCost": "",
-        "MPV4\nmin profit %": "",
-        "MPV4\nmin price": "$0.00",
-        "MPV5\nCost": "",
-        "MPV5\nmin profit %": "",
-        "MPV5\nmin price": "$0.00",
-        " Business MINIVAN\nCost": "",
-        "Business MINIVAN\nmin profit %": "",
-        "Business MINIVAN\nmin price": "$0.00",
-        "Business SUV\nCost": "",
-        "Business SUV\nmin profit %": "",
-        "Business SUV\nmin price": "$0.00",
-        "Minibus-8\nCost": "",
-        "Minibus-8\nmin profit %": "",
-        "Minibus-8\nmin price": "$0.00",
-        "Minibus-10\nCost": "",
-        "Minibus-10\nmin profit %": "",
-        "Minibus-10\nmin price": "$0.00",
-        "Minibus-12\nCost": "",
-        "Minibus-12\nmin profit %": "",
-        "Minibus-12\nmin price": "$0.00",
-        "Minibus-14\nCost": "",
-        "Minibus-14\nmin profit %": "",
-        "Minibus-14\nmin price": "$0.00",
-        "备注": ""
-    },
-    {
-        "service_area_id": "40",
-        "from_zone": "LGA",
-        "to_zone": "曼哈顿",
-        "operator": "JoeChloe",
-        "Sedan\nCost": "",
-        "Sedan\r\nmin profit %": "",
-        "Sedan\r\nmin price": "$0.00",
-        "Comfort Sedan\nCost": "",
-        "Comfort Sedan\nmin profit %": "",
-        "Comfort Sedan\nmin price": "$0.00",
-        "Business Sedan\nCost": "",
-        "Business Sedan\nmin profit %": "",
-        "Business Sedan\nmin price": "$0.00",
-        "MPV4\nCost": "",
-        "MPV4\nmin profit %": "",
-        "MPV4\nmin price": "$0.00",
-        "MPV5\nCost": "",
-        "MPV5\nmin profit %": "",
-        "MPV5\nmin price": "$0.00",
-        " Business MINIVAN\nCost": "",
-        "Business MINIVAN\nmin profit %": "",
-        "Business MINIVAN\nmin price": "$0.00",
-        "Business SUV\nCost": "",
-        "Business SUV\nmin profit %": "",
-        "Business SUV\nmin price": "$0.00",
-        "Minibus-8\nCost": "",
-        "Minibus-8\nmin profit %": "",
-        "Minibus-8\nmin price": "$0.00",
-        "Minibus-10\nCost": "",
-        "Minibus-10\nmin profit %": "",
-        "Minibus-10\nmin price": "$0.00",
-        "Minibus-12\nCost": "",
-        "Minibus-12\nmin profit %": "",
-        "Minibus-12\nmin price": "$0.00",
-        "Minibus-14\nCost": "",
-        "Minibus-14\nmin profit %": "",
-        "Minibus-14\nmin price": "$0.00",
-        "备注": ""
-    },
-    {
-        "service_area_id": "40",
-        "from_zone": "曼哈顿",
-        "to_zone": "JFK",
-        "operator": "JoeChloe",
-        "Sedan\nCost": "",
-        "Sedan\r\nmin profit %": "",
-        "Sedan\r\nmin price": "$0.00",
-        "Comfort Sedan\nCost": "",
-        "Comfort Sedan\nmin profit %": "",
-        "Comfort Sedan\nmin price": "$0.00",
-        "Business Sedan\nCost": "",
-        "Business Sedan\nmin profit %": "",
-        "Business Sedan\nmin price": "$0.00",
-        "MPV4\nCost": "",
-        "MPV4\nmin profit %": "",
-        "MPV4\nmin price": "$0.00",
-        "MPV5\nCost": "",
-        "MPV5\nmin profit %": "",
-        "MPV5\nmin price": "$0.00",
-        " Business MINIVAN\nCost": "",
-        "Business MINIVAN\nmin profit %": "",
-        "Business MINIVAN\nmin price": "$0.00",
-        "Business SUV\nCost": "",
-        "Business SUV\nmin profit %": "",
-        "Business SUV\nmin price": "$0.00",
-        "Minibus-8\nCost": "",
-        "Minibus-8\nmin profit %": "",
-        "Minibus-8\nmin price": "$0.00",
-        "Minibus-10\nCost": "",
-        "Minibus-10\nmin profit %": "",
-        "Minibus-10\nmin price": "$0.00",
-        "Minibus-12\nCost": "",
-        "Minibus-12\nmin profit %": "",
-        "Minibus-12\nmin price": "$0.00",
-        "Minibus-14\nCost": "",
-        "Minibus-14\nmin profit %": "",
-        "Minibus-14\nmin price": "$0.00",
-        "备注": ""
-    },
-    {
-        "service_area_id": "40",
-        "from_zone": "曼哈顿",
-        "to_zone": "LGA",
-        "operator": "JoeChloe",
-        "Sedan\nCost": "",
-        "Sedan\r\nmin profit %": "",
-        "Sedan\r\nmin price": "$0.00",
-        "Comfort Sedan\nCost": "",
-        "Comfort Sedan\nmin profit %": "",
-        "Comfort Sedan\nmin price": "$0.00",
-        "Business Sedan\nCost": "",
-        "Business Sedan\nmin profit %": "",
-        "Business Sedan\nmin price": "$0.00",
-        "MPV4\nCost": "",
-        "MPV4\nmin profit %": "",
-        "MPV4\nmin price": "$0.00",
-        "MPV5\nCost": "",
-        "MPV5\nmin profit %": "",
-        "MPV5\nmin price": "$0.00",
-        " Business MINIVAN\nCost": "",
-        "Business MINIVAN\nmin profit %": "",
-        "Business MINIVAN\nmin price": "$0.00",
-        "Business SUV\nCost": "",
-        "Business SUV\nmin profit %": "",
-        "Business SUV\nmin price": "$0.00",
-        "Minibus-8\nCost": "",
-        "Minibus-8\nmin profit %": "",
-        "Minibus-8\nmin price": "$0.00",
-        "Minibus-10\nCost": "",
-        "Minibus-10\nmin profit %": "",
-        "Minibus-10\nmin price": "$0.00",
-        "Minibus-12\nCost": "",
-        "Minibus-12\nmin profit %": "",
-        "Minibus-12\nmin price": "$0.00",
-        "Minibus-14\nCost": "",
-        "Minibus-14\nmin profit %": "",
-        "Minibus-14\nmin price": "$0.00",
-        "备注": ""
-    },
-    {
-        "service_area_id": "55",
-        "from_zone": "YVR",
-        "to_zone": "Downtown",
-        "operator": "JoeChloe",
-        "Sedan\nCost": "",
-        "Sedan\r\nmin profit %": "",
-        "Sedan\r\nmin price": "$0.00",
-        "Comfort Sedan\nCost": "",
-        "Comfort Sedan\nmin profit %": "",
-        "Comfort Sedan\nmin price": "$0.00",
-        "Business Sedan\nCost": "",
-        "Business Sedan\nmin profit %": "",
-        "Business Sedan\nmin price": "$0.00",
-        "MPV4\nCost": "",
-        "MPV4\nmin profit %": "",
-        "MPV4\nmin price": "$0.00",
-        "MPV5\nCost": "",
-        "MPV5\nmin profit %": "",
-        "MPV5\nmin price": "$0.00",
-        " Business MINIVAN\nCost": "",
-        "Business MINIVAN\nmin profit %": "",
-        "Business MINIVAN\nmin price": "$0.00",
-        "Business SUV\nCost": "",
-        "Business SUV\nmin profit %": "",
-        "Business SUV\nmin price": "$0.00",
-        "Minibus-8\nCost": "",
-        "Minibus-8\nmin profit %": "",
-        "Minibus-8\nmin price": "$0.00",
-        "Minibus-10\nCost": "",
-        "Minibus-10\nmin profit %": "",
-        "Minibus-10\nmin price": "$0.00",
-        "Minibus-12\nCost": "",
-        "Minibus-12\nmin profit %": "",
-        "Minibus-12\nmin price": "$0.00",
-        "Minibus-14\nCost": "",
-        "Minibus-14\nmin profit %": "",
-        "Minibus-14\nmin price": "$0.00",
-        "备注": ""
-    },
-    {
-        "service_area_id": "55",
-        "from_zone": "Downtown",
-        "to_zone": "YVR",
-        "operator": "JoeChloe",
-        "Sedan\nCost": "",
-        "Sedan\r\nmin profit %": "",
-        "Sedan\r\nmin price": "$0.00",
-        "Comfort Sedan\nCost": "",
-        "Comfort Sedan\nmin profit %": "",
-        "Comfort Sedan\nmin price": "$0.00",
-        "Business Sedan\nCost": "",
-        "Business Sedan\nmin profit %": "",
-        "Business Sedan\nmin price": "$0.00",
-        "MPV4\nCost": "",
-        "MPV4\nmin profit %": "",
-        "MPV4\nmin price": "$0.00",
-        "MPV5\nCost": "",
-        "MPV5\nmin profit %": "",
-        "MPV5\nmin price": "$0.00",
-        " Business MINIVAN\nCost": "",
-        "Business MINIVAN\nmin profit %": "",
-        "Business MINIVAN\nmin price": "$0.00",
-        "Business SUV\nCost": "",
-        "Business SUV\nmin profit %": "",
-        "Business SUV\nmin price": "$0.00",
-        "Minibus-8\nCost": "",
-        "Minibus-8\nmin profit %": "",
-        "Minibus-8\nmin price": "$0.00",
-        "Minibus-10\nCost": "",
-        "Minibus-10\nmin profit %": "",
-        "Minibus-10\nmin price": "$0.00",
-        "Minibus-12\nCost": "",
-        "Minibus-12\nmin profit %": "",
-        "Minibus-12\nmin price": "$0.00",
-        "Minibus-14\nCost": "",
-        "Minibus-14\nmin profit %": "",
-        "Minibus-14\nmin price": "$0.00",
-        "备注": ""
-    },
-    {
-        "service_area_id": "56",
-        "from_zone": "YYZ",
-        "to_zone": "Downtown",
-        "operator": "JoeChloe",
-        "Sedan\nCost": "",
-        "Sedan\r\nmin profit %": "",
-        "Sedan\r\nmin price": "$0.00",
-        "Comfort Sedan\nCost": "",
-        "Comfort Sedan\nmin profit %": "",
-        "Comfort Sedan\nmin price": "$0.00",
-        "Business Sedan\nCost": "",
-        "Business Sedan\nmin profit %": "",
-        "Business Sedan\nmin price": "$0.00",
-        "MPV4\nCost": "",
-        "MPV4\nmin profit %": "",
-        "MPV4\nmin price": "$0.00",
-        "MPV5\nCost": "",
-        "MPV5\nmin profit %": "",
-        "MPV5\nmin price": "$0.00",
-        " Business MINIVAN\nCost": "",
-        "Business MINIVAN\nmin profit %": "",
-        "Business MINIVAN\nmin price": "$0.00",
-        "Business SUV\nCost": "",
-        "Business SUV\nmin profit %": "",
-        "Business SUV\nmin price": "$0.00",
-        "Minibus-8\nCost": "",
-        "Minibus-8\nmin profit %": "",
-        "Minibus-8\nmin price": "$0.00",
-        "Minibus-10\nCost": "",
-        "Minibus-10\nmin profit %": "",
-        "Minibus-10\nmin price": "$0.00",
-        "Minibus-12\nCost": "",
-        "Minibus-12\nmin profit %": "",
-        "Minibus-12\nmin price": "$0.00",
-        "Minibus-14\nCost": "",
-        "Minibus-14\nmin profit %": "",
-        "Minibus-14\nmin price": "$0.00",
-        "备注": ""
-    },
-    {
-        "service_area_id": "56",
-        "from_zone": "Downtown",
-        "to_zone": "YYZ",
-        "operator": "JoeChloe",
-        "Sedan\nCost": "",
-        "Sedan\r\nmin profit %": "",
-        "Sedan\r\nmin price": "$0.00",
-        "Comfort Sedan\nCost": "",
-        "Comfort Sedan\nmin profit %": "",
-        "Comfort Sedan\nmin price": "$0.00",
-        "Business Sedan\nCost": "",
-        "Business Sedan\nmin profit %": "",
-        "Business Sedan\nmin price": "$0.00",
-        "MPV4\nCost": "",
-        "MPV4\nmin profit %": "",
-        "MPV4\nmin price": "$0.00",
-        "MPV5\nCost": "",
-        "MPV5\nmin profit %": "",
-        "MPV5\nmin price": "$0.00",
-        " Business MINIVAN\nCost": "",
-        "Business MINIVAN\nmin profit %": "",
-        "Business MINIVAN\nmin price": "$0.00",
-        "Business SUV\nCost": "",
-        "Business SUV\nmin profit %": "",
-        "Business SUV\nmin price": "$0.00",
-        "Minibus-8\nCost": "",
-        "Minibus-8\nmin profit %": "",
-        "Minibus-8\nmin price": "$0.00",
-        "Minibus-10\nCost": "",
-        "Minibus-10\nmin profit %": "",
-        "Minibus-10\nmin price": "$0.00",
-        "Minibus-12\nCost": "",
-        "Minibus-12\nmin profit %": "",
-        "Minibus-12\nmin price": "$0.00",
-        "Minibus-14\nCost": "",
-        "Minibus-14\nmin profit %": "",
-        "Minibus-14\nmin price": "$0.00",
-        "备注": ""
-    },
-    {
-        "service_area_id": "57",
-        "from_zone": "YUL",
-        "to_zone": "Montreal",
-        "operator": "JoeChloe",
-        "Sedan\nCost": "",
-        "Sedan\r\nmin profit %": "",
-        "Sedan\r\nmin price": "$0.00",
-        "Comfort Sedan\nCost": "",
-        "Comfort Sedan\nmin profit %": "",
-        "Comfort Sedan\nmin price": "$0.00",
-        "Business Sedan\nCost": "",
-        "Business Sedan\nmin profit %": "",
-        "Business Sedan\nmin price": "$0.00",
-        "MPV4\nCost": "",
-        "MPV4\nmin profit %": "",
-        "MPV4\nmin price": "$0.00",
-        "MPV5\nCost": "",
-        "MPV5\nmin profit %": "",
-        "MPV5\nmin price": "$0.00",
-        " Business MINIVAN\nCost": "",
-        "Business MINIVAN\nmin profit %": "",
-        "Business MINIVAN\nmin price": "$0.00",
-        "Business SUV\nCost": "",
-        "Business SUV\nmin profit %": "",
-        "Business SUV\nmin price": "$0.00",
-        "Minibus-8\nCost": "",
-        "Minibus-8\nmin profit %": "",
-        "Minibus-8\nmin price": "$0.00",
-        "Minibus-10\nCost": "",
-        "Minibus-10\nmin profit %": "",
-        "Minibus-10\nmin price": "$0.00",
-        "Minibus-12\nCost": "",
-        "Minibus-12\nmin profit %": "",
-        "Minibus-12\nmin price": "$0.00",
-        "Minibus-14\nCost": "",
-        "Minibus-14\nmin profit %": "",
-        "Minibus-14\nmin price": "$0.00",
-        "备注": ""
-    },
-    {
-        "service_area_id": "57",
-        "from_zone": "Montreal",
-        "to_zone": "YUL",
-        "operator": "JoeChloe",
-        "Sedan\nCost": "",
-        "Sedan\r\nmin profit %": "",
-        "Sedan\r\nmin price": "$0.00",
-        "Comfort Sedan\nCost": "",
-        "Comfort Sedan\nmin profit %": "",
-        "Comfort Sedan\nmin price": "$0.00",
-        "Business Sedan\nCost": "",
-        "Business Sedan\nmin profit %": "",
-        "Business Sedan\nmin price": "$0.00",
-        "MPV4\nCost": "",
-        "MPV4\nmin profit %": "",
-        "MPV4\nmin price": "$0.00",
-        "MPV5\nCost": "",
-        "MPV5\nmin profit %": "",
-        "MPV5\nmin price": "$0.00",
-        " Business MINIVAN\nCost": "",
-        "Business MINIVAN\nmin profit %": "",
-        "Business MINIVAN\nmin price": "$0.00",
-        "Business SUV\nCost": "",
-        "Business SUV\nmin profit %": "",
-        "Business SUV\nmin price": "$0.00",
-        "Minibus-8\nCost": "",
-        "Minibus-8\nmin profit %": "",
-        "Minibus-8\nmin price": "$0.00",
-        "Minibus-10\nCost": "",
-        "Minibus-10\nmin profit %": "",
-        "Minibus-10\nmin price": "$0.00",
-        "Minibus-12\nCost": "",
-        "Minibus-12\nmin profit %": "",
-        "Minibus-12\nmin price": "$0.00",
-        "Minibus-14\nCost": "",
-        "Minibus-14\nmin profit %": "",
-        "Minibus-14\nmin price": "$0.00",
-        "备注": ""
-    },
-    {
-        "service_area_id": "62",
-        "from_zone": "LAS",
-        "to_zone": "Las vegas stripe",
-        "operator": "JoeChloe",
-        "Sedan\nCost": "",
-        "Sedan\r\nmin profit %": "",
-        "Sedan\r\nmin price": "$0.00",
-        "Comfort Sedan\nCost": "",
-        "Comfort Sedan\nmin profit %": "",
-        "Comfort Sedan\nmin price": "$0.00",
-        "Business Sedan\nCost": "",
-        "Business Sedan\nmin profit %": "",
-        "Business Sedan\nmin price": "$0.00",
-        "MPV4\nCost": "",
-        "MPV4\nmin profit %": "",
-        "MPV4\nmin price": "$0.00",
-        "MPV5\nCost": "",
-        "MPV5\nmin profit %": "",
-        "MPV5\nmin price": "$0.00",
-        " Business MINIVAN\nCost": "",
-        "Business MINIVAN\nmin profit %": "",
-        "Business MINIVAN\nmin price": "$0.00",
-        "Business SUV\nCost": "",
-        "Business SUV\nmin profit %": "",
-        "Business SUV\nmin price": "$0.00",
-        "Minibus-8\nCost": "",
-        "Minibus-8\nmin profit %": "",
-        "Minibus-8\nmin price": "$0.00",
-        "Minibus-10\nCost": "",
-        "Minibus-10\nmin profit %": "",
-        "Minibus-10\nmin price": "$0.00",
-        "Minibus-12\nCost": "",
-        "Minibus-12\nmin profit %": "",
-        "Minibus-12\nmin price": "$0.00",
-        "Minibus-14\nCost": "",
-        "Minibus-14\nmin profit %": "",
-        "Minibus-14\nmin price": "$0.00",
-        "备注": ""
-    },
-    {
-        "service_area_id": "62",
-        "from_zone": "Las vegas stripe",
-        "to_zone": "LAS",
-        "operator": "JoeChloe",
-        "Sedan\nCost": "",
-        "Sedan\r\nmin profit %": "",
-        "Sedan\r\nmin price": "$0.00",
-        "Comfort Sedan\nCost": "",
-        "Comfort Sedan\nmin profit %": "",
-        "Comfort Sedan\nmin price": "$0.00",
-        "Business Sedan\nCost": "",
-        "Business Sedan\nmin profit %": "",
-        "Business Sedan\nmin price": "$0.00",
-        "MPV4\nCost": "",
-        "MPV4\nmin profit %": "",
-        "MPV4\nmin price": "$0.00",
-        "MPV5\nCost": "",
-        "MPV5\nmin profit %": "",
-        "MPV5\nmin price": "$0.00",
-        " Business MINIVAN\nCost": "",
-        "Business MINIVAN\nmin profit %": "",
-        "Business MINIVAN\nmin price": "$0.00",
-        "Business SUV\nCost": "",
-        "Business SUV\nmin profit %": "",
-        "Business SUV\nmin price": "$0.00",
-        "Minibus-8\nCost": "",
-        "Minibus-8\nmin profit %": "",
-        "Minibus-8\nmin price": "$0.00",
-        "Minibus-10\nCost": "",
-        "Minibus-10\nmin profit %": "",
-        "Minibus-10\nmin price": "$0.00",
-        "Minibus-12\nCost": "",
-        "Minibus-12\nmin profit %": "",
-        "Minibus-12\nmin price": "$0.00",
-        "Minibus-14\nCost": "",
-        "Minibus-14\nmin profit %": "",
-        "Minibus-14\nmin price": "$0.00",
-        "备注": ""
-    },
-    {
-        "service_area_id": "65",
-        "from_zone": "SAT",
-        "to_zone": "San Antonio",
-        "operator": "JoeChloe",
-        "Sedan\nCost": "$60.00",
-        "Sedan\r\nmin profit %": "10.00%",
-        "Sedan\r\nmin price": "$66.00",
-        "Comfort Sedan\nCost": "$65.00",
-        "Comfort Sedan\nmin profit %": "10.00%",
-        "Comfort Sedan\nmin price": "$71.50",
-        "Business Sedan\nCost": "$75.00",
-        "Business Sedan\nmin profit %": "10.00%",
-        "Business Sedan\nmin price": "$82.50",
-        "MPV4\nCost": "$65.00",
-        "MPV4\nmin profit %": "10.00%",
-        "MPV4\nmin price": "$71.50",
-        "MPV5\nCost": "$80.00",
-        "MPV5\nmin profit %": "5.00%",
-        "MPV5\nmin price": "$84.00",
-        " Business MINIVAN\nCost": "$90.00",
-        "Business MINIVAN\nmin profit %": "20.00%",
-        "Business MINIVAN\nmin price": "$108.00",
-        "Business SUV\nCost": "$90.00",
-        "Business SUV\nmin profit %": "20.00%",
-        "Business SUV\nmin price": "$108.00",
-        "Minibus-8\nCost": "$250.00",
-        "Minibus-8\nmin profit %": "20.00%",
-        "Minibus-8\nmin price": "$300.00",
-        "Minibus-10\nCost": "$250.00",
-        "Minibus-10\nmin profit %": "20.00%",
-        "Minibus-10\nmin price": "$300.00",
-        "Minibus-12\nCost": "$320.00",
-        "Minibus-12\nmin profit %": "15.00%",
-        "Minibus-12\nmin price": "$368.00",
-        "Minibus-14\nCost": "$320.00",
-        "Minibus-14\nmin profit %": "15.00%",
-        "Minibus-14\nmin price": "$368.00",
-        "备注": ""
-    },
-    {
-        "service_area_id": "65",
-        "from_zone": "San Antonio",
-        "to_zone": "SAT",
-        "operator": "JoeChloe",
-        "Sedan\nCost": "$55.00",
-        "Sedan\r\nmin profit %": "10.00%",
-        "Sedan\r\nmin price": "$60.50",
-        "Comfort Sedan\nCost": "$60.00",
-        "Comfort Sedan\nmin profit %": "10.00%",
-        "Comfort Sedan\nmin price": "$66.00",
-        "Business Sedan\nCost": "$70.00",
-        "Business Sedan\nmin profit %": "10.00%",
-        "Business Sedan\nmin price": "$77.00",
-        "MPV4\nCost": "$60.00",
-        "MPV4\nmin profit %": "10.00%",
-        "MPV4\nmin price": "$66.00",
-        "MPV5\nCost": "$75.00",
-        "MPV5\nmin profit %": "5.00%",
-        "MPV5\nmin price": "$78.75",
-        " Business MINIVAN\nCost": "$90.00",
-        "Business MINIVAN\nmin profit %": "20.00%",
-        "Business MINIVAN\nmin price": "$108.00",
-        "Business SUV\nCost": "$90.00",
-        "Business SUV\nmin profit %": "20.00%",
-        "Business SUV\nmin price": "$108.00",
-        "Minibus-8\nCost": "$250.00",
-        "Minibus-8\nmin profit %": "20.00%",
-        "Minibus-8\nmin price": "$300.00",
-        "Minibus-10\nCost": "$250.00",
-        "Minibus-10\nmin profit %": "20.00%",
-        "Minibus-10\nmin price": "$300.00",
-        "Minibus-12\nCost": "$320.00",
-        "Minibus-12\nmin profit %": "15.00%",
-        "Minibus-12\nmin price": "$368.00",
-        "Minibus-14\nCost": "$320.00",
-        "Minibus-14\nmin profit %": "15.00%",
-        "Minibus-14\nmin price": "$368.00",
-        "备注": ""
-    },
-    {
-        "service_area_id": "68",
-        "from_zone": "ORD",
-        "to_zone": "Chicago",
-        "operator": "JoeChloe",
-        "Sedan\nCost": "$55.00",
-        "Sedan\r\nmin profit %": "2.00%",
-        "Sedan\r\nmin price": "$56.10",
-        "Comfort Sedan\nCost": "$60.00",
-        "Comfort Sedan\nmin profit %": "1.00%",
-        "Comfort Sedan\nmin price": "$60.60",
-        "Business Sedan\nCost": "$70.00",
-        "Business Sedan\nmin profit %": "3.00%",
-        "Business Sedan\nmin price": "$72.10",
-        "MPV4\nCost": "$60.00",
-        "MPV4\nmin profit %": "1.00%",
-        "MPV4\nmin price": "$60.60",
-        "MPV5\nCost": "$70.00",
-        "MPV5\nmin profit %": "0.00%",
-        "MPV5\nmin price": "$70.00",
-        " Business MINIVAN\nCost": "$85.00",
-        "Business MINIVAN\nmin profit %": "8.00%",
-        "Business MINIVAN\nmin price": "$91.80",
-        "Business SUV\nCost": "$85.00",
-        "Business SUV\nmin profit %": "8.00%",
-        "Business SUV\nmin price": "$91.80",
-        "Minibus-8\nCost": "$160.00",
-        "Minibus-8\nmin profit %": "20.00%",
-        "Minibus-8\nmin price": "$192.00",
-        "Minibus-10\nCost": "$160.00",
-        "Minibus-10\nmin profit %": "20.00%",
-        "Minibus-10\nmin price": "$192.00",
-        "Minibus-12\nCost": "$180.00",
-        "Minibus-12\nmin profit %": "20.00%",
-        "Minibus-12\nmin price": "$216.00",
-        "Minibus-14\nCost": "$180.00",
-        "Minibus-14\nmin profit %": "20.00%",
-        "Minibus-14\nmin price": "$216.00",
-        "备注": "2621"
-    },
-    {
-        "service_area_id": "68",
-        "from_zone": "Chicago",
-        "to_zone": "ORD",
-        "operator": "JoeChloe",
-        "Sedan\nCost": "$50.00",
-        "Sedan\r\nmin profit %": "2.00%",
-        "Sedan\r\nmin price": "$51.00",
-        "Comfort Sedan\nCost": "$55.00",
-        "Comfort Sedan\nmin profit %": "1.00%",
-        "Comfort Sedan\nmin price": "$55.55",
-        "Business Sedan\nCost": "$65.00",
-        "Business Sedan\nmin profit %": "3.00%",
-        "Business Sedan\nmin price": "$66.95",
-        "MPV4\nCost": "$55.00",
-        "MPV4\nmin profit %": "1.00%",
-        "MPV4\nmin price": "$55.55",
-        "MPV5\nCost": "$65.00",
-        "MPV5\nmin profit %": "0.00%",
-        "MPV5\nmin price": "$65.00",
-        " Business MINIVAN\nCost": "$80.00",
-        "Business MINIVAN\nmin profit %": "8.00%",
-        "Business MINIVAN\nmin price": "$86.40",
-        "Business SUV\nCost": "$80.00",
-        "Business SUV\nmin profit %": "8.00%",
-        "Business SUV\nmin price": "$86.40",
-        "Minibus-8\nCost": "$160.00",
-        "Minibus-8\nmin profit %": "20.00%",
-        "Minibus-8\nmin price": "$192.00",
-        "Minibus-10\nCost": "$160.00",
-        "Minibus-10\nmin profit %": "20.00%",
-        "Minibus-10\nmin price": "$192.00",
-        "Minibus-12\nCost": "$180.00",
-        "Minibus-12\nmin profit %": "20.00%",
-        "Minibus-12\nmin price": "$216.00",
-        "Minibus-14\nCost": "$180.00",
-        "Minibus-14\nmin profit %": "20.00%",
-        "Minibus-14\nmin price": "$216.00",
-        "备注": "2621"
-    },
-    {
-        "service_area_id": "69",
-        "from_zone": "MIA",
-        "to_zone": "Miami beach",
-        "operator": "JoeChloe",
-        "Sedan\nCost": "$33.00",
-        "Sedan\r\nmin profit %": "0.00%",
-        "Sedan\r\nmin price": "$33.00",
-        "Comfort Sedan\nCost": "$38.00",
-        "Comfort Sedan\nmin profit %": "0.00%",
-        "Comfort Sedan\nmin price": "$38.00",
-        "Business Sedan\nCost": "$50.00",
-        "Business Sedan\nmin profit %": "0.00%",
-        "Business Sedan\nmin price": "$50.00",
-        "MPV4\nCost": "$38.00",
-        "MPV4\nmin profit %": "0.00%",
-        "MPV4\nmin price": "$38.00",
-        "MPV5\nCost": "$45.00",
-        "MPV5\nmin profit %": "0.00%",
-        "MPV5\nmin price": "$45.00",
-        " Business MINIVAN\nCost": "$65.00",
-        "Business MINIVAN\nmin profit %": "0.00%",
-        "Business MINIVAN\nmin price": "$65.00",
-        "Business SUV\nCost": "$65.00",
-        "Business SUV\nmin profit %": "0.00%",
-        "Business SUV\nmin price": "$65.00",
-        "Minibus-8\nCost": "$100.00",
-        "Minibus-8\nmin profit %": "5.00%",
-        "Minibus-8\nmin price": "$105.00",
-        "Minibus-10\nCost": "$100.00",
-        "Minibus-10\nmin profit %": "5.00%",
-        "Minibus-10\nmin price": "$105.00",
-        "Minibus-12\nCost": "$140.00",
-        "Minibus-12\nmin profit %": "20.00%",
-        "Minibus-12\nmin price": "$168.00",
-        "Minibus-14\nCost": "$140.00",
-        "Minibus-14\nmin profit %": "20.00%",
-        "Minibus-14\nmin price": "$168.00",
-        "备注": ""
-    },
-    {
-        "service_area_id": "69",
-        "from_zone": "MIA",
-        "to_zone": "Down town miami",
-        "operator": "JoeChloe",
-        "Sedan\nCost": "$30.00",
-        "Sedan\r\nmin profit %": "0.00%",
-        "Sedan\r\nmin price": "$30.00",
-        "Comfort Sedan\nCost": "$33.00",
-        "Comfort Sedan\nmin profit %": "0.00%",
-        "Comfort Sedan\nmin price": "$33.00",
-        "Business Sedan\nCost": "$42.00",
-        "Business Sedan\nmin profit %": "0.00%",
-        "Business Sedan\nmin price": "$42.00",
-        "MPV4\nCost": "$33.00",
-        "MPV4\nmin profit %": "0.00%",
-        "MPV4\nmin price": "$33.00",
-        "MPV5\nCost": "$42.00",
-        "MPV5\nmin profit %": "0.00%",
-        "MPV5\nmin price": "$42.00",
-        " Business MINIVAN\nCost": "$65.00",
-        "Business MINIVAN\nmin profit %": "0.00%",
-        "Business MINIVAN\nmin price": "$65.00",
-        "Business SUV\nCost": "$65.00",
-        "Business SUV\nmin profit %": "0.00%",
-        "Business SUV\nmin price": "$65.00",
-        "Minibus-8\nCost": "$95.00",
-        "Minibus-8\nmin profit %": "5.00%",
-        "Minibus-8\nmin price": "$99.75",
-        "Minibus-10\nCost": "$95.00",
-        "Minibus-10\nmin profit %": "5.00%",
-        "Minibus-10\nmin price": "$99.75",
-        "Minibus-12\nCost": "$140.00",
-        "Minibus-12\nmin profit %": "20.00%",
-        "Minibus-12\nmin price": "$168.00",
-        "Minibus-14\nCost": "$140.00",
-        "Minibus-14\nmin profit %": "20.00%",
-        "Minibus-14\nmin price": "$168.00",
-        "备注": ""
-    },
-    {
-        "service_area_id": "69",
-        "from_zone": "MIA",
-        "to_zone": "miami airport",
-        "operator": "JoeChloe",
-        "Sedan\nCost": "$30.00",
-        "Sedan\r\nmin profit %": "0.00%",
-        "Sedan\r\nmin price": "$30.00",
-        "Comfort Sedan\nCost": "$33.00",
-        "Comfort Sedan\nmin profit %": "0.00%",
-        "Comfort Sedan\nmin price": "$33.00",
-        "Business Sedan\nCost": "$42.00",
-        "Business Sedan\nmin profit %": "0.00%",
-        "Business Sedan\nmin price": "$42.00",
-        "MPV4\nCost": "$33.00",
-        "MPV4\nmin profit %": "0.00%",
-        "MPV4\nmin price": "$33.00",
-        "MPV5\nCost": "$42.00",
-        "MPV5\nmin profit %": "0.00%",
-        "MPV5\nmin price": "$42.00",
-        " Business MINIVAN\nCost": "$65.00",
-        "Business MINIVAN\nmin profit %": "0.00%",
-        "Business MINIVAN\nmin price": "$65.00",
-        "Business SUV\nCost": "$65.00",
-        "Business SUV\nmin profit %": "0.00%",
-        "Business SUV\nmin price": "$65.00",
-        "Minibus-8\nCost": "$95.00",
-        "Minibus-8\nmin profit %": "5.00%",
-        "Minibus-8\nmin price": "$99.75",
-        "Minibus-10\nCost": "$95.00",
-        "Minibus-10\nmin profit %": "5.00%",
-        "Minibus-10\nmin price": "$99.75",
-        "Minibus-12\nCost": "$140.00",
-        "Minibus-12\nmin profit %": "20.00%",
-        "Minibus-12\nmin price": "$168.00",
-        "Minibus-14\nCost": "$140.00",
-        "Minibus-14\nmin profit %": "20.00%",
-        "Minibus-14\nmin price": "$168.00",
-        "备注": ""
-    },
-    {
-        "service_area_id": "69",
-        "from_zone": "Miami beach",
-        "to_zone": "MIA",
-        "operator": "JoeChloe",
-        "Sedan\nCost": "$32.00",
-        "Sedan\r\nmin profit %": "0.00%",
-        "Sedan\r\nmin price": "$32.00",
-        "Comfort Sedan\nCost": "$35.00",
-        "Comfort Sedan\nmin profit %": "0.00%",
-        "Comfort Sedan\nmin price": "$35.00",
-        "Business Sedan\nCost": "$45.00",
-        "Business Sedan\nmin profit %": "0.00%",
-        "Business Sedan\nmin price": "$45.00",
-        "MPV4\nCost": "$35.00",
-        "MPV4\nmin profit %": "0.00%",
-        "MPV4\nmin price": "$35.00",
-        "MPV5\nCost": "$40.00",
-        "MPV5\nmin profit %": "0.00%",
-        "MPV5\nmin price": "$40.00",
-        " Business MINIVAN\nCost": "$65.00",
-        "Business MINIVAN\nmin profit %": "0.00%",
-        "Business MINIVAN\nmin price": "$65.00",
-        "Business SUV\nCost": "$65.00",
-        "Business SUV\nmin profit %": "0.00%",
-        "Business SUV\nmin price": "$65.00",
-        "Minibus-8\nCost": "$100.00",
-        "Minibus-8\nmin profit %": "5.00%",
-        "Minibus-8\nmin price": "$105.00",
-        "Minibus-10\nCost": "$100.00",
-        "Minibus-10\nmin profit %": "5.00%",
-        "Minibus-10\nmin price": "$105.00",
-        "Minibus-12\nCost": "$140.00",
-        "Minibus-12\nmin profit %": "20.00%",
-        "Minibus-12\nmin price": "$168.00",
-        "Minibus-14\nCost": "$140.00",
-        "Minibus-14\nmin profit %": "20.00%",
-        "Minibus-14\nmin price": "$168.00",
-        "备注": ""
-    },
-    {
-        "service_area_id": "69",
-        "from_zone": "miami airport",
-        "to_zone": "MIA",
-        "operator": "JoeChloe",
-        "Sedan\nCost": "$28.00",
-        "Sedan\r\nmin profit %": "0.00%",
-        "Sedan\r\nmin price": "$28.00",
-        "Comfort Sedan\nCost": "$30.00",
-        "Comfort Sedan\nmin profit %": "0.00%",
-        "Comfort Sedan\nmin price": "$30.00",
-        "Business Sedan\nCost": "$42.00",
-        "Business Sedan\nmin profit %": "0.00%",
-        "Business Sedan\nmin price": "$42.00",
-        "MPV4\nCost": "$30.00",
-        "MPV4\nmin profit %": "0.00%",
-        "MPV4\nmin price": "$30.00",
-        "MPV5\nCost": "$37.50",
-        "MPV5\nmin profit %": "0.00%",
-        "MPV5\nmin price": "$37.50",
-        " Business MINIVAN\nCost": "$65.00",
-        "Business MINIVAN\nmin profit %": "0.00%",
-        "Business MINIVAN\nmin price": "$65.00",
-        "Business SUV\nCost": "$65.00",
-        "Business SUV\nmin profit %": "0.00%",
-        "Business SUV\nmin price": "$65.00",
-        "Minibus-8\nCost": "$95.00",
-        "Minibus-8\nmin profit %": "5.00%",
-        "Minibus-8\nmin price": "$99.75",
-        "Minibus-10\nCost": "$95.00",
-        "Minibus-10\nmin profit %": "5.00%",
-        "Minibus-10\nmin price": "$99.75",
-        "Minibus-12\nCost": "$140.00",
-        "Minibus-12\nmin profit %": "20.00%",
-        "Minibus-12\nmin price": "$168.00",
-        "Minibus-14\nCost": "$140.00",
-        "Minibus-14\nmin profit %": "20.00%",
-        "Minibus-14\nmin price": "$168.00",
-        "备注": ""
-    },
-    {
-        "service_area_id": "69",
-        "from_zone": "port",
-        "to_zone": "MIA",
-        "operator": "JoeChloe",
-        "Sedan\nCost": "$28.00",
-        "Sedan\r\nmin profit %": "0.00%",
-        "Sedan\r\nmin price": "$28.00",
-        "Comfort Sedan\nCost": "$30.00",
-        "Comfort Sedan\nmin profit %": "0.00%",
-        "Comfort Sedan\nmin price": "$30.00",
-        "Business Sedan\nCost": "$42.00",
-        "Business Sedan\nmin profit %": "0.00%",
-        "Business Sedan\nmin price": "$42.00",
-        "MPV4\nCost": "$30.00",
-        "MPV4\nmin profit %": "0.00%",
-        "MPV4\nmin price": "$30.00",
-        "MPV5\nCost": "$38.00",
-        "MPV5\nmin profit %": "0.00%",
-        "MPV5\nmin price": "$38.00",
-        " Business MINIVAN\nCost": "$65.00",
-        "Business MINIVAN\nmin profit %": "0.00%",
-        "Business MINIVAN\nmin price": "$65.00",
-        "Business SUV\nCost": "$65.00",
-        "Business SUV\nmin profit %": "0.00%",
-        "Business SUV\nmin price": "$65.00",
-        "Minibus-8\nCost": "$95.00",
-        "Minibus-8\nmin profit %": "5.00%",
-        "Minibus-8\nmin price": "$99.75",
-        "Minibus-10\nCost": "$95.00",
-        "Minibus-10\nmin profit %": "5.00%",
-        "Minibus-10\nmin price": "$99.75",
-        "Minibus-12\nCost": "$140.00",
-        "Minibus-12\nmin profit %": "20.00%",
-        "Minibus-12\nmin price": "$168.00",
-        "Minibus-14\nCost": "$140.00",
-        "Minibus-14\nmin profit %": "20.00%",
-        "Minibus-14\nmin price": "$168.00",
-        "备注": ""
-    },
-    {
-        "service_area_id": "72",
-        "from_zone": "MCO",
-        "to_zone": "Orlando",
-        "operator": "JoeChloe",
-        "Sedan\nCost": "$32.00",
-        "Sedan\r\nmin profit %": "0.00%",
-        "Sedan\r\nmin price": "$32.00",
-        "Comfort Sedan\nCost": "$35.00",
-        "Comfort Sedan\nmin profit %": "0.00%",
-        "Comfort Sedan\nmin price": "$35.00",
-        "Business Sedan\nCost": "$42.00",
-        "Business Sedan\nmin profit %": "0.00%",
-        "Business Sedan\nmin price": "$42.00",
-        "MPV4\nCost": "$37.00",
-        "MPV4\nmin profit %": "0.00%",
-        "MPV4\nmin price": "$37.00",
-        "MPV5\nCost": "$42.00",
-        "MPV5\nmin profit %": "0.00%",
-        "MPV5\nmin price": "$42.00",
-        " Business MINIVAN\nCost": "$60.00",
-        "Business MINIVAN\nmin profit %": "0.00%",
-        "Business MINIVAN\nmin price": "$60.00",
-        "Business SUV\nCost": "$60.00",
-        "Business SUV\nmin profit %": "0.00%",
-        "Business SUV\nmin price": "$60.00",
-        "Minibus-8\nCost": "$95.00",
-        "Minibus-8\nmin profit %": "5.00%",
-        "Minibus-8\nmin price": "$99.75",
-        "Minibus-10\nCost": "$95.00",
-        "Minibus-10\nmin profit %": "5.00%",
-        "Minibus-10\nmin price": "$99.75",
-        "Minibus-12\nCost": "$140.00",
-        "Minibus-12\nmin profit %": "15.00%",
-        "Minibus-12\nmin price": "$161.00",
-        "Minibus-14\nCost": "$140.00",
-        "Minibus-14\nmin profit %": "15.00%",
-        "Minibus-14\nmin price": "$161.00",
-        "备注": ""
-    },
-    {
-        "service_area_id": "72",
-        "from_zone": "MCO",
-        "to_zone": "disney world",
-        "operator": "JoeChloe",
-        "Sedan\nCost": "$38.00",
-        "Sedan\r\nmin profit %": "0.00%",
-        "Sedan\r\nmin price": "$38.00",
-        "Comfort Sedan\nCost": "$40.00",
-        "Comfort Sedan\nmin profit %": "0.00%",
-        "Comfort Sedan\nmin price": "$40.00",
-        "Business Sedan\nCost": "$45.00",
-        "Business Sedan\nmin profit %": "0.00%",
-        "Business Sedan\nmin price": "$45.00",
-        "MPV4\nCost": "$40.00",
-        "MPV4\nmin profit %": "0.00%",
-        "MPV4\nmin price": "$40.00",
-        "MPV5\nCost": "$45.00",
-        "MPV5\nmin profit %": "0.00%",
-        "MPV5\nmin price": "$45.00",
-        " Business MINIVAN\nCost": "$60.00",
-        "Business MINIVAN\nmin profit %": "0.00%",
-        "Business MINIVAN\nmin price": "$60.00",
-        "Business SUV\nCost": "$60.00",
-        "Business SUV\nmin profit %": "0.00%",
-        "Business SUV\nmin price": "$60.00",
-        "Minibus-8\nCost": "$100.00",
-        "Minibus-8\nmin profit %": "5.00%",
-        "Minibus-8\nmin price": "$105.00",
-        "Minibus-10\nCost": "$100.00",
-        "Minibus-10\nmin profit %": "5.00%",
-        "Minibus-10\nmin price": "$105.00",
-        "Minibus-12\nCost": "$140.00",
-        "Minibus-12\nmin profit %": "15.00%",
-        "Minibus-12\nmin price": "$161.00",
-        "Minibus-14\nCost": "$140.00",
-        "Minibus-14\nmin profit %": "15.00%",
-        "Minibus-14\nmin price": "$161.00",
-        "备注": ""
-    },
-    {
-        "service_area_id": "72",
-        "from_zone": "MCO",
-        "to_zone": "Four coners",
-        "operator": "JoeChloe",
-        "Sedan\nCost": "$42.00",
-        "Sedan\r\nmin profit %": "0.00%",
-        "Sedan\r\nmin price": "$42.00",
-        "Comfort Sedan\nCost": "$45.00",
-        "Comfort Sedan\nmin profit %": "0.00%",
-        "Comfort Sedan\nmin price": "$45.00",
-        "Business Sedan\nCost": "$50.00",
-        "Business Sedan\nmin profit %": "0.00%",
-        "Business Sedan\nmin price": "$50.00",
-        "MPV4\nCost": "$45.00",
-        "MPV4\nmin profit %": "0.00%",
-        "MPV4\nmin price": "$45.00",
-        "MPV5\nCost": "$50.00",
-        "MPV5\nmin profit %": "0.00%",
-        "MPV5\nmin price": "$50.00",
-        " Business MINIVAN\nCost": "$60.00",
-        "Business MINIVAN\nmin profit %": "0.00%",
-        "Business MINIVAN\nmin price": "$60.00",
-        "Business SUV\nCost": "$60.00",
-        "Business SUV\nmin profit %": "0.00%",
-        "Business SUV\nmin price": "$60.00",
-        "Minibus-8\nCost": "$110.00",
-        "Minibus-8\nmin profit %": "5.00%",
-        "Minibus-8\nmin price": "$115.50",
-        "Minibus-10\nCost": "$110.00",
-        "Minibus-10\nmin profit %": "5.00%",
-        "Minibus-10\nmin price": "$115.50",
-        "Minibus-12\nCost": "$140.00",
-        "Minibus-12\nmin profit %": "15.00%",
-        "Minibus-12\nmin price": "$161.00",
-        "Minibus-14\nCost": "$140.00",
-        "Minibus-14\nmin profit %": "15.00%",
-        "Minibus-14\nmin price": "$161.00",
-        "备注": ""
-    },
-    {
-        "service_area_id": "72",
-        "from_zone": "Orlando",
-        "to_zone": "MCO",
-        "operator": "JoeChloe",
-        "Sedan\nCost": "$30.00",
-        "Sedan\r\nmin profit %": "0.00%",
-        "Sedan\r\nmin price": "$30.00",
-        "Comfort Sedan\nCost": "$33.00",
-        "Comfort Sedan\nmin profit %": "0.00%",
-        "Comfort Sedan\nmin price": "$33.00",
-        "Business Sedan\nCost": "$42.00",
-        "Business Sedan\nmin profit %": "0.00%",
-        "Business Sedan\nmin price": "$42.00",
-        "MPV4\nCost": "$33.00",
-        "MPV4\nmin profit %": "0.00%",
-        "MPV4\nmin price": "$33.00",
-        "MPV5\nCost": "$40.00",
-        "MPV5\nmin profit %": "0.00%",
-        "MPV5\nmin price": "$40.00",
-        " Business MINIVAN\nCost": "$60.00",
-        "Business MINIVAN\nmin profit %": "0.00%",
-        "Business MINIVAN\nmin price": "$60.00",
-        "Business SUV\nCost": "$60.00",
-        "Business SUV\nmin profit %": "0.00%",
-        "Business SUV\nmin price": "$60.00",
-        "Minibus-8\nCost": "$95.00",
-        "Minibus-8\nmin profit %": "5.00%",
-        "Minibus-8\nmin price": "$99.75",
-        "Minibus-10\nCost": "$95.00",
-        "Minibus-10\nmin profit %": "5.00%",
-        "Minibus-10\nmin price": "$99.75",
-        "Minibus-12\nCost": "$140.00",
-        "Minibus-12\nmin profit %": "15.00%",
-        "Minibus-12\nmin price": "$161.00",
-        "Minibus-14\nCost": "$140.00",
-        "Minibus-14\nmin profit %": "15.00%",
-        "Minibus-14\nmin price": "$161.00",
-        "备注": ""
-    },
-    {
-        "service_area_id": "72",
-        "from_zone": "disney world",
-        "to_zone": "MCO",
-        "operator": "JoeChloe",
-        "Sedan\nCost": "$36.00",
-        "Sedan\r\nmin profit %": "0.00%",
-        "Sedan\r\nmin price": "$36.00",
-        "Comfort Sedan\nCost": "$38.00",
-        "Comfort Sedan\nmin profit %": "0.00%",
-        "Comfort Sedan\nmin price": "$38.00",
-        "Business Sedan\nCost": "$45.00",
-        "Business Sedan\nmin profit %": "0.00%",
-        "Business Sedan\nmin price": "$45.00",
-        "MPV4\nCost": "$38.00",
-        "MPV4\nmin profit %": "0.00%",
-        "MPV4\nmin price": "$38.00",
-        "MPV5\nCost": "$40.00",
-        "MPV5\nmin profit %": "0.00%",
-        "MPV5\nmin price": "$40.00",
-        " Business MINIVAN\nCost": "$60.00",
-        "Business MINIVAN\nmin profit %": "0.00%",
-        "Business MINIVAN\nmin price": "$60.00",
-        "Business SUV\nCost": "$60.00",
-        "Business SUV\nmin profit %": "0.00%",
-        "Business SUV\nmin price": "$60.00",
-        "Minibus-8\nCost": "$100.00",
-        "Minibus-8\nmin profit %": "5.00%",
-        "Minibus-8\nmin price": "$105.00",
-        "Minibus-10\nCost": "$100.00",
-        "Minibus-10\nmin profit %": "5.00%",
-        "Minibus-10\nmin price": "$105.00",
-        "Minibus-12\nCost": "$140.00",
-        "Minibus-12\nmin profit %": "15.00%",
-        "Minibus-12\nmin price": "$161.00",
-        "Minibus-14\nCost": "$140.00",
-        "Minibus-14\nmin profit %": "15.00%",
-        "Minibus-14\nmin price": "$161.00",
-        "备注": ""
-    },
-    {
-        "service_area_id": "72",
-        "from_zone": "Four coners",
-        "to_zone": "MCO",
-        "operator": "JoeChloe",
-        "Sedan\nCost": "$40.00",
-        "Sedan\r\nmin profit %": "0.00%",
-        "Sedan\r\nmin price": "$40.00",
-        "Comfort Sedan\nCost": "$42.00",
-        "Comfort Sedan\nmin profit %": "0.00%",
-        "Comfort Sedan\nmin price": "$42.00",
-        "Business Sedan\nCost": "$50.00",
-        "Business Sedan\nmin profit %": "0.00%",
-        "Business Sedan\nmin price": "$50.00",
-        "MPV4\nCost": "$42.00",
-        "MPV4\nmin profit %": "0.00%",
-        "MPV4\nmin price": "$42.00",
-        "MPV5\nCost": "$45.00",
-        "MPV5\nmin profit %": "0.00%",
-        "MPV5\nmin price": "$45.00",
-        " Business MINIVAN\nCost": "$60.00",
-        "Business MINIVAN\nmin profit %": "0.00%",
-        "Business MINIVAN\nmin price": "$60.00",
-        "Business SUV\nCost": "$60.00",
-        "Business SUV\nmin profit %": "0.00%",
-        "Business SUV\nmin price": "$60.00",
-        "Minibus-8\nCost": "$110.00",
-        "Minibus-8\nmin profit %": "5.00%",
-        "Minibus-8\nmin price": "$115.50",
-        "Minibus-10\nCost": "$110.00",
-        "Minibus-10\nmin profit %": "5.00%",
-        "Minibus-10\nmin price": "$115.50",
-        "Minibus-12\nCost": "$140.00",
-        "Minibus-12\nmin profit %": "15.00%",
-        "Minibus-12\nmin price": "$161.00",
-        "Minibus-14\nCost": "$140.00",
-        "Minibus-14\nmin profit %": "15.00%",
-        "Minibus-14\nmin price": "$161.00",
-        "备注": ""
-    },
-    {
-        "service_area_id": "74",
-        "from_zone": "BOS",
-        "to_zone": "bos Downtown",
-        "operator": "JoeChloe",
-        "Sedan\nCost": "$55.00",
-        "Sedan\r\nmin profit %": "0.00%",
-        "Sedan\r\nmin price": "$55.00",
-        "Comfort Sedan\nCost": "$60.00",
-        "Comfort Sedan\nmin profit %": "0.00%",
-        "Comfort Sedan\nmin price": "$60.00",
-        "Business Sedan\nCost": "$70.00",
-        "Business Sedan\nmin profit %": "0.00%",
-        "Business Sedan\nmin price": "$70.00",
-        "MPV4\nCost": "$60.00",
-        "MPV4\nmin profit %": "0.00%",
-        "MPV4\nmin price": "$60.00",
-        "MPV5\nCost": "$70.00",
-        "MPV5\nmin profit %": "0.00%",
-        "MPV5\nmin price": "$70.00",
-        " Business MINIVAN\nCost": "$85.00",
-        "Business MINIVAN\nmin profit %": "0.00%",
-        "Business MINIVAN\nmin price": "$85.00",
-        "Business SUV\nCost": "$85.00",
-        "Business SUV\nmin profit %": "0.00%",
-        "Business SUV\nmin price": "$85.00",
-        "Minibus-8\nCost": "$250.00",
-        "Minibus-8\nmin profit %": "20.00%",
-        "Minibus-8\nmin price": "$300.00",
-        "Minibus-10\nCost": "$250.00",
-        "Minibus-10\nmin profit %": "20.00%",
-        "Minibus-10\nmin price": "$300.00",
-        "Minibus-12\nCost": "$280.00",
-        "Minibus-12\nmin profit %": "20.00%",
-        "Minibus-12\nmin price": "$336.00",
-        "Minibus-14\nCost": "$280.00",
-        "Minibus-14\nmin profit %": "20.00%",
-        "Minibus-14\nmin price": "$336.00",
-        "备注": ""
-    },
-    {
-        "service_area_id": "74",
-        "from_zone": "bos Downtown",
-        "to_zone": "BOS",
-        "operator": "JoeChloe",
-        "Sedan\nCost": "$50.00",
-        "Sedan\r\nmin profit %": "0.00%",
-        "Sedan\r\nmin price": "$50.00",
-        "Comfort Sedan\nCost": "$55.00",
-        "Comfort Sedan\nmin profit %": "0.00%",
-        "Comfort Sedan\nmin price": "$55.00",
-        "Business Sedan\nCost": "$65.00",
-        "Business Sedan\nmin profit %": "0.00%",
-        "Business Sedan\nmin price": "$65.00",
-        "MPV4\nCost": "$55.00",
-        "MPV4\nmin profit %": "0.00%",
-        "MPV4\nmin price": "$55.00",
-        "MPV5\nCost": "$65.00",
-        "MPV5\nmin profit %": "0.00%",
-        "MPV5\nmin price": "$65.00",
-        " Business MINIVAN\nCost": "$80.00",
-        "Business MINIVAN\nmin profit %": "0.00%",
-        "Business MINIVAN\nmin price": "$80.00",
-        "Business SUV\nCost": "$80.00",
-        "Business SUV\nmin profit %": "0.00%",
-        "Business SUV\nmin price": "$80.00",
-        "Minibus-8\nCost": "$250.00",
-        "Minibus-8\nmin profit %": "20.00%",
-        "Minibus-8\nmin price": "$300.00",
-        "Minibus-10\nCost": "$250.00",
-        "Minibus-10\nmin profit %": "20.00%",
-        "Minibus-10\nmin price": "$300.00",
-        "Minibus-12\nCost": "$280.00",
-        "Minibus-12\nmin profit %": "20.00%",
-        "Minibus-12\nmin price": "$336.00",
-        "Minibus-14\nCost": "$280.00",
-        "Minibus-14\nmin profit %": "20.00%",
-        "Minibus-14\nmin price": "$336.00",
-        "备注": ""
-    },
-    {
-        "service_area_id": "75",
-        "from_zone": "SAN",
-        "to_zone": "SAN downtown",
-        "operator": "JoeChloe",
-        "Sedan\nCost": "",
-        "Sedan\r\nmin profit %": "",
-        "Sedan\r\nmin price": "$0.00",
-        "Comfort Sedan\nCost": "",
-        "Comfort Sedan\nmin profit %": "",
-        "Comfort Sedan\nmin price": "$0.00",
-        "Business Sedan\nCost": "",
-        "Business Sedan\nmin profit %": "",
-        "Business Sedan\nmin price": "$0.00",
-        "MPV4\nCost": "",
-        "MPV4\nmin profit %": "",
-        "MPV4\nmin price": "$0.00",
-        "MPV5\nCost": "",
-        "MPV5\nmin profit %": "",
-        "MPV5\nmin price": "$0.00",
-        " Business MINIVAN\nCost": "",
-        "Business MINIVAN\nmin profit %": "",
-        "Business MINIVAN\nmin price": "$0.00",
-        "Business SUV\nCost": "",
-        "Business SUV\nmin profit %": "",
-        "Business SUV\nmin price": "$0.00",
-        "Minibus-8\nCost": "",
-        "Minibus-8\nmin profit %": "",
-        "Minibus-8\nmin price": "$0.00",
-        "Minibus-10\nCost": "",
-        "Minibus-10\nmin profit %": "",
-        "Minibus-10\nmin price": "$0.00",
-        "Minibus-12\nCost": "",
-        "Minibus-12\nmin profit %": "",
-        "Minibus-12\nmin price": "$0.00",
-        "Minibus-14\nCost": "",
-        "Minibus-14\nmin profit %": "",
-        "Minibus-14\nmin price": "$0.00",
-        "备注": ""
-    },
-    {
-        "service_area_id": "89",
-        "from_zone": "HNL",
-        "to_zone": "Waikiki",
-        "operator": "JoeChloe",
-        "Sedan\nCost": "$33.00",
-        "Sedan\r\nmin profit %": "1.00%",
-        "Sedan\r\nmin price": "$33.33",
-        "Comfort Sedan\nCost": "$38.00",
-        "Comfort Sedan\nmin profit %": "1.00%",
-        "Comfort Sedan\nmin price": "$38.38",
-        "Business Sedan\nCost": "$60.00",
-        "Business Sedan\nmin profit %": "5.00%",
-        "Business Sedan\nmin price": "$63.00",
-        "MPV4\nCost": "$38.00",
-        "MPV4\nmin profit %": "1.00%",
-        "MPV4\nmin price": "$38.38",
-        "MPV5\nCost": "$42.00",
-        "MPV5\nmin profit %": "3.00%",
-        "MPV5\nmin price": "$43.26",
-        " Business MINIVAN\nCost": "$80.00",
-        "Business MINIVAN\nmin profit %": "0.00%",
-        "Business MINIVAN\nmin price": "$80.00",
-        "Business SUV\nCost": "$80.00",
-        "Business SUV\nmin profit %": "0.00%",
-        "Business SUV\nmin price": "$80.00",
-        "Minibus-8\nCost": "$100.00",
-        "Minibus-8\nmin profit %": "0.00%",
-        "Minibus-8\nmin price": "$100.00",
-        "Minibus-10\nCost": "$100.00",
-        "Minibus-10\nmin profit %": "0.00%",
-        "Minibus-10\nmin price": "$100.00",
-        "Minibus-12\nCost": "$110.00",
-        "Minibus-12\nmin profit %": "0.00%",
-        "Minibus-12\nmin price": "$110.00",
-        "Minibus-14\nCost": "$120.00",
-        "Minibus-14\nmin profit %": "0.00%",
-        "Minibus-14\nmin price": "$120.00",
-        "备注": "BG"
-    },
-    {
-        "service_area_id": "89",
-        "from_zone": "Waikiki",
-        "to_zone": "HNL",
-        "operator": "JoeChloe",
-        "Sedan\nCost": "$30.00",
-        "Sedan\r\nmin profit %": "0.00%",
-        "Sedan\r\nmin price": "$30.00",
-        "Comfort Sedan\nCost": "$33.00",
-        "Comfort Sedan\nmin profit %": "0.00%",
-        "Comfort Sedan\nmin price": "$33.00",
-        "Business Sedan\nCost": "$55.00",
-        "Business Sedan\nmin profit %": "5.00%",
-        "Business Sedan\nmin price": "$57.75",
-        "MPV4\nCost": "$33.00",
-        "MPV4\nmin profit %": "3.00%",
-        "MPV4\nmin price": "$33.99",
-        "MPV5\nCost": "$38.00",
-        "MPV5\nmin profit %": "5.50%",
-        "MPV5\nmin price": "$40.09",
-        " Business MINIVAN\nCost": "$75.00",
-        "Business MINIVAN\nmin profit %": "0.00%",
-        "Business MINIVAN\nmin price": "$75.00",
-        "Business SUV\nCost": "$75.00",
-        "Business SUV\nmin profit %": "0.00%",
-        "Business SUV\nmin price": "$75.00",
-        "Minibus-8\nCost": "$100.00",
-        "Minibus-8\nmin profit %": "0.00%",
-        "Minibus-8\nmin price": "$100.00",
-        "Minibus-10\nCost": "$100.00",
-        "Minibus-10\nmin profit %": "0.00%",
-        "Minibus-10\nmin price": "$100.00",
-        "Minibus-12\nCost": "$110.00",
-        "Minibus-12\nmin profit %": "0.00%",
-        "Minibus-12\nmin price": "$110.00",
-        "Minibus-14\nCost": "$120.00",
-        "Minibus-14\nmin profit %": "0.00%",
-        "Minibus-14\nmin price": "$120.00",
-        "备注": "BG"
-    },
-    {
-        "service_area_id": "99",
-        "from_zone": "Houston",
-        "to_zone": "IAH",
-        "operator": "JoeChloe",
-        "Sedan\nCost": "$50.00",
-        "Sedan\r\nmin profit %": "10.00%",
-        "Sedan\r\nmin price": "$55.00",
-        "Comfort Sedan\nCost": "$55.00",
-        "Comfort Sedan\nmin profit %": "10.00%",
-        "Comfort Sedan\nmin price": "$60.50",
-        "Business Sedan\nCost": "$65.00",
-        "Business Sedan\nmin profit %": "5.00%",
-        "Business Sedan\nmin price": "$68.25",
-        "MPV4\nCost": "$55.00",
-        "MPV4\nmin profit %": "10.00%",
-        "MPV4\nmin price": "$60.50",
-        "MPV5\nCost": "$65.00",
-        "MPV5\nmin profit %": "5.00%",
-        "MPV5\nmin price": "$68.25",
-        " Business MINIVAN\nCost": "$80.00",
-        "Business MINIVAN\nmin profit %": "10.00%",
-        "Business MINIVAN\nmin price": "$88.00",
-        "Business SUV\nCost": "$80.00",
-        "Business SUV\nmin profit %": "10.00%",
-        "Business SUV\nmin price": "$88.00",
-        "Minibus-8\nCost": "$250.00",
-        "Minibus-8\nmin profit %": "10.00%",
-        "Minibus-8\nmin price": "$275.00",
-        "Minibus-10\nCost": "$250.00",
-        "Minibus-10\nmin profit %": "10.00%",
-        "Minibus-10\nmin price": "$275.00",
-        "Minibus-12\nCost": "$250.00",
-        "Minibus-12\nmin profit %": "10.00%",
-        "Minibus-12\nmin price": "$275.00",
-        "Minibus-14\nCost": "$250.00",
-        "Minibus-14\nmin profit %": "10.00%",
-        "Minibus-14\nmin price": "$275.00",
-        "备注": ""
-    },
-    {
-        "service_area_id": "367",
-        "from_zone": "MSY",
-        "to_zone": "New Orleans",
-        "operator": "JoeChloe",
-        "Sedan\nCost": "$45.00",
-        "Sedan\r\nmin profit %": "10.00%",
-        "Sedan\r\nmin price": "$49.50",
-        "Comfort Sedan\nCost": "$50.00",
-        "Comfort Sedan\nmin profit %": "10.00%",
-        "Comfort Sedan\nmin price": "$55.00",
-        "Business Sedan\nCost": "$60.00",
-        "Business Sedan\nmin profit %": "5.00%",
-        "Business Sedan\nmin price": "$63.00",
-        "MPV4\nCost": "$50.00",
-        "MPV4\nmin profit %": "10.00%",
-        "MPV4\nmin price": "$55.00",
-        "MPV5\nCost": "$55.00",
-        "MPV5\nmin profit %": "0.00%",
-        "MPV5\nmin price": "$55.00",
-        " Business MINIVAN\nCost": "$75.00",
-        "Business MINIVAN\nmin profit %": "6.00%",
-        "Business MINIVAN\nmin price": "$79.50",
-        "Business SUV\nCost": "$75.00",
-        "Business SUV\nmin profit %": "6.00%",
-        "Business SUV\nmin price": "$79.50",
-        "Minibus-8\nCost": "$200.00",
-        "Minibus-8\nmin profit %": "25.00%",
-        "Minibus-8\nmin price": "$250.00",
-        "Minibus-10\nCost": "$200.00",
-        "Minibus-10\nmin profit %": "25.00%",
-        "Minibus-10\nmin price": "$250.00",
-        "Minibus-12\nCost": "$250.00",
-        "Minibus-12\nmin profit %": "20.00%",
-        "Minibus-12\nmin price": "$300.00",
-        "Minibus-14\nCost": "$250.00",
-        "Minibus-14\nmin profit %": "20.00%",
-        "Minibus-14\nmin price": "$300.00",
-        "备注": ""
-    },
-    {
-        "service_area_id": "367",
-        "from_zone": "New Orleans",
-        "to_zone": "MSY",
-        "operator": "JoeChloe",
-        "Sedan\nCost": "$40.00",
-        "Sedan\r\nmin profit %": "10.00%",
-        "Sedan\r\nmin price": "$44.00",
-        "Comfort Sedan\nCost": "$45.00",
-        "Comfort Sedan\nmin profit %": "10.00%",
-        "Comfort Sedan\nmin price": "$49.50",
-        "Business Sedan\nCost": "$55.00",
-        "Business Sedan\nmin profit %": "5.00%",
-        "Business Sedan\nmin price": "$57.75",
-        "MPV4\nCost": "$45.00",
-        "MPV4\nmin profit %": "10.00%",
-        "MPV4\nmin price": "$49.50",
-        "MPV5\nCost": "$50.00",
-        "MPV5\nmin profit %": "5.00%",
-        "MPV5\nmin price": "$52.50",
-        " Business MINIVAN\nCost": "$75.00",
-        "Business MINIVAN\nmin profit %": "6.00%",
-        "Business MINIVAN\nmin price": "$79.50",
-        "Business SUV\nCost": "$75.00",
-        "Business SUV\nmin profit %": "6.00%",
-        "Business SUV\nmin price": "$79.50",
-        "Minibus-8\nCost": "$200.00",
-        "Minibus-8\nmin profit %": "25.00%",
-        "Minibus-8\nmin price": "$250.00",
-        "Minibus-10\nCost": "$200.00",
-        "Minibus-10\nmin profit %": "25.00%",
-        "Minibus-10\nmin price": "$250.00",
-        "Minibus-12\nCost": "$250.00",
-        "Minibus-12\nmin profit %": "20.00%",
-        "Minibus-12\nmin price": "$300.00",
-        "Minibus-14\nCost": "$250.00",
-        "Minibus-14\nmin profit %": "20.00%",
-        "Minibus-14\nmin price": "$300.00",
-        "备注": ""
-    },
-    {
-        "service_area_id": "636",
-        "from_zone": "BOG",
-        "to_zone": "Bogota",
-        "operator": "JoeChloe",
-        "Sedan\nCost": "$15.00",
-        "Sedan\r\nmin profit %": "5.00%",
-        "Sedan\r\nmin price": "$15.75",
-        "Comfort Sedan\nCost": "$28.00",
-        "Comfort Sedan\nmin profit %": "5.00%",
-        "Comfort Sedan\nmin price": "$29.40",
-        "Business Sedan\nCost": "$30.00",
-        "Business Sedan\nmin profit %": "15.00%",
-        "Business Sedan\nmin price": "$34.50",
-        "MPV4\nCost": "$28.00",
-        "MPV4\nmin profit %": "5.00%",
-        "MPV4\nmin price": "$29.40",
-        "MPV5\nCost": "$30.00",
-        "MPV5\nmin profit %": "15.00%",
-        "MPV5\nmin price": "$34.50",
-        " Business MINIVAN\nCost": "$75.00",
-        "Business MINIVAN\nmin profit %": "20.00%",
-        "Business MINIVAN\nmin price": "$90.00",
-        "Business SUV\nCost": "$75.00",
-        "Business SUV\nmin profit %": "20.00%",
-        "Business SUV\nmin price": "$90.00",
-        "Minibus-8\nCost": "$40.00",
-        "Minibus-8\nmin profit %": "30.00%",
-        "Minibus-8\nmin price": "$52.00",
-        "Minibus-10\nCost": "$55.00",
-        "Minibus-10\nmin profit %": "25.00%",
-        "Minibus-10\nmin price": "$68.75",
-        "Minibus-12\nCost": "$60.00",
-        "Minibus-12\nmin profit %": "15.00%",
-        "Minibus-12\nmin price": "$69.00",
-        "Minibus-14\nCost": "$60.00",
-        "Minibus-14\nmin profit %": "25.00%",
-        "Minibus-14\nmin price": "$75.00",
-        "备注": ""
-    },
-    {
-        "service_area_id": "636",
-        "from_zone": "Bogota",
-        "to_zone": "BOG",
-        "operator": "JoeChloe",
-        "Sedan\nCost": "$13.00",
-        "Sedan\r\nmin profit %": "5.00%",
-        "Sedan\r\nmin price": "$13.65",
-        "Comfort Sedan\nCost": "$26.00",
-        "Comfort Sedan\nmin profit %": "5.00%",
-        "Comfort Sedan\nmin price": "$27.30",
-        "Business Sedan\nCost": "$30.00",
-        "Business Sedan\nmin profit %": "15.00%",
-        "Business Sedan\nmin price": "$34.50",
-        "MPV4\nCost": "$26.00",
-        "MPV4\nmin profit %": "5.00%",
-        "MPV4\nmin price": "$27.30",
-        "MPV5\nCost": "$30.00",
-        "MPV5\nmin profit %": "15.00%",
-        "MPV5\nmin price": "$34.50",
-        " Business MINIVAN\nCost": "$75.00",
-        "Business MINIVAN\nmin profit %": "20.00%",
-        "Business MINIVAN\nmin price": "$90.00",
-        "Business SUV\nCost": "$75.00",
-        "Business SUV\nmin profit %": "20.00%",
-        "Business SUV\nmin price": "$90.00",
-        "Minibus-8\nCost": "$40.00",
-        "Minibus-8\nmin profit %": "30.00%",
-        "Minibus-8\nmin price": "$52.00",
-        "Minibus-10\nCost": "$55.00",
-        "Minibus-10\nmin profit %": "25.00%",
-        "Minibus-10\nmin price": "$68.75",
-        "Minibus-12\nCost": "$60.00",
-        "Minibus-12\nmin profit %": "15.00%",
-        "Minibus-12\nmin price": "$69.00",
-        "Minibus-14\nCost": "$60.00",
-        "Minibus-14\nmin profit %": "25.00%",
-        "Minibus-14\nmin price": "$75.00",
-        "备注": ""
-    }
-]
+    "specific_date_surcharge": [
+        {
+            "currency": "USD",
+            "vehicle_classes": [
+                {
+                    "percent": 0,
+                    "delta_amount": 0,
+                    "inputValue": 0
+                }
+            ]
+        }
+    ],
+    "date_surcharge_method": "sum",
+    "add_service": {},
+    "service_area_pricing_id": 14499,
+    "req_id": "3ef4b88f-436a-4d51-9fe1-7d5e9d2aad45"
+}

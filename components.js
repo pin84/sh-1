@@ -389,11 +389,11 @@ function jsonAddPercent(svcJson, partnerJson = {}) {
 
 
 
-async function insertAndUpdate(url, svcJson, newFleetId) {
+async function insertAndUpdate(url, pricing_str, newFleetId) {
   let updateD = {
     sql: 134678780,
     version: '1.0',
-    pricing_str: JSON.stringify(svcJson),
+    pricing_str,
     new_fleet_id: newFleetId
   }
 

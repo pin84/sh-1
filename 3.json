@@ -1,1 +1,2705 @@
-INSERT INTO ride.spp_route (from_place, to_place, service_area_id, json, name,from_place_lat_lng, to_place_lat_lng, strategy_id, platform_name, partner_id, service_area_id_elife,from_address,to_address,batch,is_active)VALUES ('{{from_place}}', '{{to_place}}',  {{service_area_id}}, '{{json}}', '{{name}}', '{{from_place_lat_lng}}', '{{to_place_lat_lng}}', {{strategy_id}}, '{{platform_name}}', {{partner_id}}, {{service_area_id_elife}},'{{from_address}}','{{to_address}}',{{batch}},{{is_active}});
+{
+    "serviceArea": {
+        "id": 67988,
+        "parent_fleet_id": 67743,
+        "name": "Barcelona,Spain",
+        "lat": 41.297445,
+        "lng": 2.083294,
+        "radius": 150000,
+        "parent_fleet_name": "emergingTravelGroup",
+        "pid": "15.1.1"
+    },
+    "pricing": {
+        "ranges": [
+            {
+                "seq": 0,
+                "amount": 1.6,
+                "currency": "USD",
+                "distance": 20000,
+                "from": 10000,
+                "to": 30000,
+                "distanceIn": 80,
+                "per_unit": 1,
+                "pid": "15.2.1"
+            },
+            {
+                "seq": 1,
+                "amount": 1.5,
+                "currency": "USD",
+                "distance": 20000,
+                "from": 30000,
+                "to": 50000,
+                "distanceIn": 400,
+                "per_unit": 1,
+                "pid": "15.2.2"
+            },
+            {
+                "seq": 2,
+                "amount": 1.4,
+                "currency": "USD",
+                "distance": 50000,
+                "from": 50000,
+                "to": 100000,
+                "distanceIn": 500,
+                "per_unit": 1,
+                "pid": "15.2.3"
+            },
+            {
+                "seq": 3,
+                "amount": 1,
+                "currency": "USD",
+                "distance": 100000,
+                "from": 100000,
+                "to": 200000,
+                "distanceIn": 0,
+                "per_unit": 1,
+                "pid": "15.2.4"
+            },
+            {
+                "seq": 4,
+                "amount": 1,
+                "currency": "USD",
+                "distance": 300000,
+                "from": 200000,
+                "to": 500000,
+                "distanceIn": 0,
+                "per_unit": 1,
+                "pid": "15.2.5"
+            }
+        ],
+        "min_amount": 36.49,
+        "currency": "USD",
+        "min_distance": 10000,
+        "meet_n_greet": 5
+    },
+    "zones": [
+        {
+            "name": "Tarragona",
+            "lat": 41.1188827,
+            "lng": 1.2444909,
+            "radius": 5000,
+            "prices": [
+                {
+                    "airport": "BCN",
+                    "amount": 130,
+                    "currency": "USD",
+                    "p_amt": 130,
+                    "d_amt": 130
+                }
+            ],
+            "p2p": "false",
+            "pid": "15.4.1"
+        },
+        {
+            "lat": 41.448573130942954,
+            "lng": 2.242357272615691,
+            "name": "Badalona",
+            "p2p": "false",
+            "prices": [
+                {
+                    "airport": "BCN",
+                    "amount": 130,
+                    "currency": "USD",
+                    "p_amt": 38.18,
+                    "d_amt": 38.18
+                }
+            ],
+            "radius": 3000,
+            "pid": "15.4.2"
+        },
+        {
+            "lat": 41.23582967067835,
+            "lng": 1.8085467513427744,
+            "name": "Sitges",
+            "p2p": "false",
+            "prices": [
+                {
+                    "airport": "BCN",
+                    "amount": 130,
+                    "currency": "USD",
+                    "p_amt": 58.78,
+                    "d_amt": 58.78
+                }
+            ],
+            "radius": 2000,
+            "pid": "15.4.3"
+        },
+        {
+            "lat": 41.53425755274507,
+            "lng": 2.441307372460928,
+            "name": "Mataró",
+            "p2p": "false",
+            "prices": [
+                {
+                    "airport": "BCN",
+                    "amount": 130,
+                    "currency": "USD",
+                    "p_amt": 68.89,
+                    "d_amt": 68.89
+                }
+            ],
+            "radius": 4000,
+            "pid": "15.4.4"
+        },
+        {
+            "lat": 42.26002891270678,
+            "lng": 2.9554297815429686,
+            "name": "Figueres",
+            "p2p": "false",
+            "prices": [
+                {
+                    "airport": "BCN",
+                    "amount": 130,
+                    "currency": "USD",
+                    "p_amt": 185.09,
+                    "d_amt": 185.09
+                }
+            ],
+            "radius": 5000,
+            "pid": "15.4.5"
+        },
+        {
+            "lat": 40.883813710801626,
+            "lng": 0.8061722339797716,
+            "name": "L'Ametlla de Mar",
+            "p2p": "false",
+            "prices": [
+                {
+                    "airport": "BCN",
+                    "amount": 130,
+                    "currency": "USD",
+                    "p_amt": 170.15,
+                    "d_amt": 170.15
+                }
+            ],
+            "radius": 1000,
+            "pid": "15.4.6"
+        },
+        {
+            "lat": 41.9781243746273,
+            "lng": 2.817649822750239,
+            "name": "Girona",
+            "p2p": "false",
+            "prices": [
+                {
+                    "airport": "BCN",
+                    "amount": 130,
+                    "currency": "USD",
+                    "p_amt": 167.66,
+                    "d_amt": 167.66
+                }
+            ],
+            "radius": 5000,
+            "pid": "15.4.7"
+        },
+        {
+            "lat": 42.28418533875996,
+            "lng": 3.2826071571777327,
+            "name": "Cadaqués",
+            "p2p": "false",
+            "prices": [
+                {
+                    "airport": "BCN",
+                    "amount": 130,
+                    "currency": "USD",
+                    "p_amt": 249,
+                    "d_amt": 249
+                }
+            ],
+            "radius": 1000,
+            "pid": "15.4.8"
+        },
+        {
+            "lat": 41.2151504,
+            "lng": 1.727446,
+            "name": "Vilanova i la Geltrú",
+            "p2p": "false",
+            "prices": [
+                {
+                    "airport": "BCN",
+                    "amount": 130,
+                    "currency": "USD",
+                    "p_amt": 70.55,
+                    "d_amt": 70.55
+                }
+            ],
+            "radius": 2000,
+            "pid": "15.4.9"
+        },
+        {
+            "lat": 41.36472639737492,
+            "lng": 2.1713145820312585,
+            "name": "Barcelona",
+            "p2p": "false",
+            "prices": [
+                {
+                    "airport": "BCN",
+                    "amount": 130,
+                    "currency": "USD",
+                    "p_amt": 30.71,
+                    "d_amt": 30.71
+                }
+            ],
+            "radius": 8000,
+            "pid": "15.4.10"
+        },
+        {
+            "lat": 41.92788307634464,
+            "lng": 2.259926664062495,
+            "name": "Vic ",
+            "p2p": "false",
+            "prices": [
+                {
+                    "airport": "BCN",
+                    "amount": 130,
+                    "currency": "USD",
+                    "p_amt": 110.39,
+                    "d_amt": 110.39
+                }
+            ],
+            "radius": 5000,
+            "pid": "15.4.11"
+        },
+        {
+            "lat": 41.471427085797025,
+            "lng": 2.0784473152831984,
+            "name": "Sant Cugat del Vallès",
+            "p2p": "false",
+            "prices": [
+                {
+                    "airport": "BCN",
+                    "amount": 130,
+                    "currency": "USD",
+                    "p_amt": 39.01,
+                    "d_amt": 39.01
+                }
+            ],
+            "radius": 3000,
+            "pid": "15.4.12"
+        }
+    ],
+    "airports": [
+        "BCN"
+    ],
+    "vehicleClasses": [
+        {
+            "vehicle_class_id": 1,
+            "delta_amount": 0,
+            "percent": 0,
+            "hourly_percent": 0,
+            "percent_appendix": [
+                {
+                    "field": "hourly_pricing.min_amount",
+                    "delta_amount": -40
+                },
+                {
+                    "field": "pricing.min_amount",
+                    "delta_amount": 9.16
+                },
+                {
+                    "field": "pricing.ranges.0",
+                    "delta_amount": 0.2
+                },
+                {
+                    "field": "pricing.ranges.1",
+                    "delta_amount": 0.1
+                },
+                {
+                    "field": "pricing.ranges.2",
+                    "delta_amount": 0.45
+                },
+                {
+                    "field": "pricing.ranges.3",
+                    "delta_amount": 0.6
+                },
+                {
+                    "field": "zones.0.prices.0.d_amt",
+                    "delta_amount": 11
+                },
+                {
+                    "field": "zones.0.prices.0.p_amt",
+                    "delta_amount": 11
+                },
+                {
+                    "field": "zones.1.prices.0.d_amt",
+                    "delta_amount": 19.83
+                },
+                {
+                    "field": "zones.1.prices.0.p_amt",
+                    "delta_amount": 19.83
+                },
+                {
+                    "field": "zones.2.prices.0.d_amt",
+                    "delta_amount": 24.22
+                },
+                {
+                    "field": "zones.2.prices.0.p_amt",
+                    "delta_amount": 24.22
+                },
+                {
+                    "field": "zones.3.prices.0.d_amt",
+                    "delta_amount": 11.11
+                },
+                {
+                    "field": "zones.3.prices.0.p_amt",
+                    "delta_amount": 11.11
+                },
+                {
+                    "field": "zones.4.prices.0.d_amt",
+                    "delta_amount": 39.84
+                },
+                {
+                    "field": "zones.4.prices.0.p_amt",
+                    "delta_amount": 39.84
+                },
+                {
+                    "field": "zones.5.prices.0.d_amt",
+                    "delta_amount": 24.9
+                },
+                {
+                    "field": "zones.5.prices.0.p_amt",
+                    "delta_amount": 24.9
+                },
+                {
+                    "field": "zones.6.prices.0.d_amt",
+                    "delta_amount": 10.79
+                },
+                {
+                    "field": "zones.6.prices.0.p_amt",
+                    "delta_amount": 10.79
+                },
+                {
+                    "field": "zones.7.prices.0.d_amt",
+                    "delta_amount": 9.96
+                },
+                {
+                    "field": "zones.7.prices.0.p_amt",
+                    "delta_amount": 9.96
+                },
+                {
+                    "field": "zones.8.prices.0.d_amt",
+                    "delta_amount": 24.9
+                },
+                {
+                    "field": "zones.8.prices.0.p_amt",
+                    "delta_amount": 24.9
+                },
+                {
+                    "field": "zones.9.prices.0.d_amt",
+                    "delta_amount": 14.94
+                },
+                {
+                    "field": "zones.9.prices.0.p_amt",
+                    "delta_amount": 14.94
+                },
+                {
+                    "field": "zones.10.prices.0.d_amt",
+                    "delta_amount": 5.81
+                },
+                {
+                    "field": "zones.10.prices.0.p_amt",
+                    "delta_amount": 5.81
+                },
+                {
+                    "field": "zones.11.prices.0.d_amt",
+                    "delta_amount": 40.99
+                },
+                {
+                    "field": "zones.11.prices.0.p_amt",
+                    "delta_amount": 40.99
+                }
+            ],
+            "notice_time": [
+                {
+                    "time": 1200,
+                    "percent": 25,
+                    "allowance": 360
+                }
+            ]
+        },
+        {
+            "vehicle_class_id": 2,
+            "delta_amount": 0,
+            "percent": 60,
+            "percent_appendix": [
+                {
+                    "field": "hourly_pricing.min_amount",
+                    "delta_amount": -40
+                },
+                {
+                    "field": "pricing.min_amount",
+                    "delta_amount": 35.81
+                },
+                {
+                    "field": "zones.0.prices.0.d_amt",
+                    "delta_amount": 43
+                },
+                {
+                    "field": "zones.0.prices.0.p_amt",
+                    "delta_amount": 43
+                },
+                {
+                    "field": "zones.1.prices.0.d_amt",
+                    "delta_amount": 46.82
+                },
+                {
+                    "field": "zones.1.prices.0.p_amt",
+                    "delta_amount": 46.82
+                },
+                {
+                    "field": "zones.2.prices.0.d_amt",
+                    "delta_amount": 61.22
+                },
+                {
+                    "field": "zones.2.prices.0.p_amt",
+                    "delta_amount": 61.22
+                },
+                {
+                    "field": "zones.8.prices.0.d_amt",
+                    "delta_amount": 49.45
+                },
+                {
+                    "field": "zones.8.prices.0.p_amt",
+                    "delta_amount": 49.45
+                },
+                {
+                    "field": "zones.9.prices.0.d_amt",
+                    "delta_amount": 44.29
+                },
+                {
+                    "field": "zones.9.prices.0.p_amt",
+                    "delta_amount": 44.29
+                },
+                {
+                    "field": "zones.11.prices.0.d_amt",
+                    "delta_amount": 80.99
+                },
+                {
+                    "field": "zones.11.prices.0.p_amt",
+                    "delta_amount": 80.99
+                }
+            ],
+            "hourly_percent": 60,
+            "notice_time": [
+                {
+                    "time": 720,
+                    "percent": 30,
+                    "allowance": 240
+                },
+                {
+                    "time": 480,
+                    "percent": 60,
+                    "allowance": 240
+                },
+                {
+                    "time": 360,
+                    "percent": 200,
+                    "allowance": 240
+                }
+            ]
+        },
+        {
+            "vehicle_class_id": 40,
+            "delta_amount": 0,
+            "percent": 150,
+            "percent_appendix": [
+                {
+                    "field": "hourly_pricing.min_amount",
+                    "delta_amount": -40
+                },
+                {
+                    "field": "hourly_pricing.ranges.0",
+                    "delta_amount": 44
+                },
+                {
+                    "field": "pricing.min_amount",
+                    "delta_amount": 58.51
+                },
+                {
+                    "field": "pricing.ranges.0",
+                    "delta_amount": 1.7
+                },
+                {
+                    "field": "pricing.ranges.1",
+                    "delta_amount": 1.61
+                },
+                {
+                    "field": "pricing.ranges.2",
+                    "delta_amount": 1.53
+                },
+                {
+                    "field": "zones.0.prices.0.d_amt",
+                    "delta_amount": 78
+                },
+                {
+                    "field": "zones.0.prices.0.p_amt",
+                    "delta_amount": 78
+                },
+                {
+                    "field": "zones.1.prices.0.d_amt",
+                    "delta_amount": 32.43
+                },
+                {
+                    "field": "zones.1.prices.0.p_amt",
+                    "delta_amount": 32.43
+                },
+                {
+                    "field": "zones.2.prices.0.d_amt",
+                    "delta_amount": 149.22
+                },
+                {
+                    "field": "zones.2.prices.0.p_amt",
+                    "delta_amount": 149.22
+                },
+                {
+                    "field": "zones.8.prices.0.d_amt",
+                    "delta_amount": 89.45
+                },
+                {
+                    "field": "zones.8.prices.0.p_amt",
+                    "delta_amount": 89.45
+                },
+                {
+                    "field": "zones.9.prices.0.d_amt",
+                    "delta_amount": 68.29
+                },
+                {
+                    "field": "zones.9.prices.0.p_amt",
+                    "delta_amount": 68.29
+                },
+                {
+                    "field": "zones.11.prices.0.p_amt",
+                    "delta_amount": 120.99
+                },
+                {
+                    "field": "zones.11.prices.0.d_amt",
+                    "delta_amount": 120.99
+                }
+            ],
+            "hourly_percent": 150,
+            "notice_time": [
+                {
+                    "time": 720,
+                    "percent": 100,
+                    "allowance": 240
+                },
+                {
+                    "time": 480,
+                    "percent": 200,
+                    "allowance": 240
+                },
+                {
+                    "time": 360,
+                    "percent": 300,
+                    "allowance": 240
+                }
+            ]
+        },
+        {
+            "vehicle_class_id": 6,
+            "delta_amount": 0,
+            "percent": 34,
+            "percent_appendix": [
+                {
+                    "field": "hourly_pricing.min_amount",
+                    "delta_amount": -40
+                },
+                {
+                    "field": "hourly_pricing.ranges.0",
+                    "delta_amount": 8
+                },
+                {
+                    "field": "pricing.min_amount",
+                    "delta_amount": 24.51
+                },
+                {
+                    "field": "pricing.ranges.0",
+                    "delta_amount": 0.3
+                },
+                {
+                    "field": "pricing.ranges.1",
+                    "delta_amount": 0.9
+                },
+                {
+                    "field": "pricing.ranges.2",
+                    "delta_amount": 0.8
+                },
+                {
+                    "field": "pricing.ranges.3",
+                    "delta_amount": 1
+                },
+                {
+                    "field": "zones.0.prices.0.d_amt",
+                    "delta_amount": 14
+                },
+                {
+                    "field": "zones.0.prices.0.p_amt",
+                    "delta_amount": 14
+                },
+                {
+                    "field": "zones.1.prices.0.d_amt",
+                    "delta_amount": 32.82
+                },
+                {
+                    "field": "zones.1.prices.0.p_amt",
+                    "delta_amount": 32.82
+                },
+                {
+                    "field": "zones.2.prices.0.d_amt",
+                    "delta_amount": 26.22
+                },
+                {
+                    "field": "zones.2.prices.0.p_amt",
+                    "delta_amount": 26.22
+                },
+                {
+                    "field": "zones.3.prices.0.d_amt",
+                    "delta_amount": 16.11
+                },
+                {
+                    "field": "zones.3.prices.0.p_amt",
+                    "delta_amount": 16.11
+                },
+                {
+                    "field": "zones.4.prices.0.d_amt",
+                    "delta_amount": 69.91
+                },
+                {
+                    "field": "zones.4.prices.0.p_amt",
+                    "delta_amount": 69.91
+                },
+                {
+                    "field": "zones.5.prices.0.d_amt",
+                    "delta_amount": 37.35
+                },
+                {
+                    "field": "zones.5.prices.0.p_amt",
+                    "delta_amount": 37.35
+                },
+                {
+                    "field": "zones.6.prices.0.d_amt",
+                    "delta_amount": 27.39
+                },
+                {
+                    "field": "zones.6.prices.0.p_amt",
+                    "delta_amount": 27.39
+                },
+                {
+                    "field": "zones.7.prices.0.d_amt",
+                    "delta_amount": 14.94
+                },
+                {
+                    "field": "zones.7.prices.0.p_amt",
+                    "delta_amount": 14.94
+                },
+                {
+                    "field": "zones.8.prices.0.d_amt",
+                    "delta_amount": 27.45
+                },
+                {
+                    "field": "zones.8.prices.0.p_amt",
+                    "delta_amount": 27.45
+                },
+                {
+                    "field": "zones.9.prices.0.d_amt",
+                    "delta_amount": 20.29
+                },
+                {
+                    "field": "zones.9.prices.0.p_amt",
+                    "delta_amount": 20.29
+                },
+                {
+                    "field": "zones.10.prices.0.d_amt",
+                    "delta_amount": 19.61
+                },
+                {
+                    "field": "zones.10.prices.0.p_amt",
+                    "delta_amount": 19.61
+                },
+                {
+                    "field": "zones.11.prices.0.d_amt",
+                    "delta_amount": 45.99
+                },
+                {
+                    "field": "zones.11.prices.0.p_amt",
+                    "delta_amount": 45.99
+                }
+            ],
+            "hourly_percent": 34,
+            "notice_time": [
+                {
+                    "time": 1200,
+                    "percent": 25,
+                    "allowance": 360
+                }
+            ]
+        },
+        {
+            "vehicle_class_id": 3,
+            "delta_amount": 0,
+            "percent": 35,
+            "percent_appendix": [
+                {
+                    "field": "hourly_pricing.min_amount",
+                    "delta_amount": -40
+                },
+                {
+                    "field": "hourly_pricing.ranges.0",
+                    "delta_amount": 21
+                },
+                {
+                    "field": "pricing.min_amount",
+                    "delta_amount": 26.51
+                },
+                {
+                    "field": "pricing.ranges.0",
+                    "delta_amount": 0.3
+                },
+                {
+                    "field": "pricing.ranges.1",
+                    "delta_amount": 0.9
+                },
+                {
+                    "field": "pricing.ranges.2",
+                    "delta_amount": 0.8
+                },
+                {
+                    "field": "pricing.ranges.3",
+                    "delta_amount": 1
+                },
+                {
+                    "field": "zones.0.prices.0.d_amt",
+                    "delta_amount": 16.91
+                },
+                {
+                    "field": "zones.0.prices.0.p_amt",
+                    "delta_amount": 16.91
+                },
+                {
+                    "field": "zones.1.prices.0.d_amt",
+                    "delta_amount": 34.82
+                },
+                {
+                    "field": "zones.1.prices.0.p_amt",
+                    "delta_amount": 34.82
+                },
+                {
+                    "field": "zones.2.prices.0.d_amt",
+                    "delta_amount": 28.37
+                },
+                {
+                    "field": "zones.2.prices.0.p_amt",
+                    "delta_amount": 28.37
+                },
+                {
+                    "field": "zones.3.prices.0.d_amt",
+                    "delta_amount": 19.92
+                },
+                {
+                    "field": "zones.3.prices.0.p_amt",
+                    "delta_amount": 19.92
+                },
+                {
+                    "field": "zones.4.prices.0.d_amt",
+                    "delta_amount": 72.21
+                },
+                {
+                    "field": "zones.4.prices.0.p_amt",
+                    "delta_amount": 72.21
+                },
+                {
+                    "field": "zones.5.prices.0.d_amt",
+                    "delta_amount": 58.1
+                },
+                {
+                    "field": "zones.5.prices.0.p_amt",
+                    "delta_amount": 58.1
+                },
+                {
+                    "field": "zones.6.prices.0.d_amt",
+                    "delta_amount": 32.34
+                },
+                {
+                    "field": "zones.6.prices.0.p_amt",
+                    "delta_amount": 32.34
+                },
+                {
+                    "field": "zones.7.prices.0.d_amt",
+                    "delta_amount": 51
+                },
+                {
+                    "field": "zones.7.prices.0.p_amt",
+                    "delta_amount": 51
+                },
+                {
+                    "field": "zones.8.prices.0.d_amt",
+                    "delta_amount": 29.45
+                },
+                {
+                    "field": "zones.8.prices.0.p_amt",
+                    "delta_amount": 29.45
+                },
+                {
+                    "field": "zones.9.prices.0.d_amt",
+                    "delta_amount": 22.36
+                },
+                {
+                    "field": "zones.9.prices.0.p_amt",
+                    "delta_amount": 22.36
+                },
+                {
+                    "field": "zones.10.prices.0.d_amt",
+                    "delta_amount": 25.73
+                },
+                {
+                    "field": "zones.10.prices.0.p_amt",
+                    "delta_amount": 25.73
+                },
+                {
+                    "field": "zones.11.prices.0.d_amt",
+                    "delta_amount": 50.99
+                },
+                {
+                    "field": "zones.11.prices.0.p_amt",
+                    "delta_amount": 50.99
+                }
+            ],
+            "hourly_percent": 35,
+            "notice_time": [
+                {
+                    "time": 1200,
+                    "percent": 25,
+                    "allowance": 360
+                }
+            ]
+        },
+        {
+            "vehicle_class_id": 4,
+            "delta_amount": 0,
+            "percent": 108,
+            "percent_appendix": [
+                {
+                    "field": "hourly_pricing.min_amount",
+                    "delta_amount": -40
+                },
+                {
+                    "field": "hourly_pricing.ranges.0",
+                    "delta_amount": 26
+                },
+                {
+                    "field": "pricing.min_amount",
+                    "delta_amount": 48.51
+                },
+                {
+                    "field": "zones.2.prices.0.d_amt",
+                    "delta_amount": 41.48
+                },
+                {
+                    "field": "zones.2.prices.0.p_amt",
+                    "delta_amount": 41.48
+                },
+                {
+                    "field": "zones.3.prices.0.d_amt",
+                    "delta_amount": 24.4
+                },
+                {
+                    "field": "zones.3.prices.0.p_amt",
+                    "delta_amount": 24.4
+                },
+                {
+                    "field": "zones.4.prices.0.d_amt",
+                    "delta_amount": 99.9
+                },
+                {
+                    "field": "zones.4.prices.0.p_amt",
+                    "delta_amount": 99.9
+                },
+                {
+                    "field": "zones.5.prices.0.d_amt",
+                    "delta_amount": 83.76
+                },
+                {
+                    "field": "zones.5.prices.0.p_amt",
+                    "delta_amount": 83.76
+                },
+                {
+                    "field": "zones.7.prices.0.d_amt",
+                    "delta_amount": 68.92
+                },
+                {
+                    "field": "zones.7.prices.0.p_amt",
+                    "delta_amount": 68.92
+                },
+                {
+                    "field": "zones.8.prices.0.d_amt",
+                    "delta_amount": 74.45
+                },
+                {
+                    "field": "zones.8.prices.0.p_amt",
+                    "delta_amount": 74.45
+                },
+                {
+                    "field": "zones.9.prices.0.d_amt",
+                    "delta_amount": 73.78
+                },
+                {
+                    "field": "zones.9.prices.0.p_amt",
+                    "delta_amount": 73.78
+                },
+                {
+                    "field": "zones.10.prices.0.d_amt",
+                    "delta_amount": 39.22
+                },
+                {
+                    "field": "zones.10.prices.0.p_amt",
+                    "delta_amount": 39.22
+                },
+                {
+                    "field": "zones.11.prices.0.d_amt",
+                    "delta_amount": 72.91
+                },
+                {
+                    "field": "zones.11.prices.0.p_amt",
+                    "delta_amount": 72.91
+                }
+            ],
+            "hourly_percent": 108,
+            "notice_time": [
+                {
+                    "time": 720,
+                    "percent": 30,
+                    "allowance": 240
+                },
+                {
+                    "time": 480,
+                    "percent": 60,
+                    "allowance": 240
+                },
+                {
+                    "time": 360,
+                    "percent": 200,
+                    "allowance": 240
+                }
+            ]
+        },
+        {
+            "vehicle_class_id": 36,
+            "delta_amount": 0,
+            "percent": 110,
+            "percent_appendix": [
+                {
+                    "field": "hourly_pricing.min_amount",
+                    "delta_amount": -40
+                },
+                {
+                    "field": "hourly_pricing.ranges.0",
+                    "delta_amount": 62
+                },
+                {
+                    "field": "pricing.min_amount",
+                    "delta_amount": 51.51
+                },
+                {
+                    "field": "zones.1.prices.0.d_amt",
+                    "delta_amount": 57
+                },
+                {
+                    "field": "zones.1.prices.0.p_amt",
+                    "delta_amount": 57
+                },
+                {
+                    "field": "zones.3.prices.0.d_amt",
+                    "delta_amount": 45.78
+                },
+                {
+                    "field": "zones.3.prices.0.p_amt",
+                    "delta_amount": 45.78
+                },
+                {
+                    "field": "zones.4.prices.0.d_amt",
+                    "delta_amount": 103.6
+                },
+                {
+                    "field": "zones.4.prices.0.p_amt",
+                    "delta_amount": 103.6
+                },
+                {
+                    "field": "zones.5.prices.0.d_amt",
+                    "delta_amount": 87.16
+                },
+                {
+                    "field": "zones.5.prices.0.p_amt",
+                    "delta_amount": 87.16
+                },
+                {
+                    "field": "zones.6.prices.0.d_amt",
+                    "delta_amount": 134.43
+                },
+                {
+                    "field": "zones.6.prices.0.p_amt",
+                    "delta_amount": 134.43
+                },
+                {
+                    "field": "zones.7.prices.0.d_amt",
+                    "delta_amount": 173.9
+                },
+                {
+                    "field": "zones.7.prices.0.p_amt",
+                    "delta_amount": 173.9
+                },
+                {
+                    "field": "zones.9.prices.0.d_amt",
+                    "delta_amount": 73.78
+                },
+                {
+                    "field": "zones.9.prices.0.p_amt",
+                    "delta_amount": 73.78
+                },
+                {
+                    "field": "zones.10.prices.0.d_amt",
+                    "delta_amount": 91.43
+                },
+                {
+                    "field": "zones.10.prices.0.p_amt",
+                    "delta_amount": 91.43
+                },
+                {
+                    "field": "zones.11.prices.0.d_amt",
+                    "delta_amount": 72.91
+                },
+                {
+                    "field": "zones.11.prices.0.p_amt",
+                    "delta_amount": 72.91
+                }
+            ],
+            "hourly_percent": 110,
+            "notice_time": [
+                {
+                    "time": 720,
+                    "percent": 30,
+                    "allowance": 240
+                },
+                {
+                    "time": 480,
+                    "percent": 60,
+                    "allowance": 240
+                },
+                {
+                    "time": 360,
+                    "percent": 200,
+                    "allowance": 240
+                }
+            ]
+        },
+        {
+            "vehicle_class_id": 5,
+            "delta_amount": 0,
+            "percent": 40,
+            "percent_appendix": [
+                {
+                    "field": "hourly_pricing.min_amount",
+                    "delta_amount": -40
+                },
+                {
+                    "field": "hourly_pricing.ranges.0",
+                    "delta_amount": 24
+                },
+                {
+                    "field": "pricing.min_amount",
+                    "delta_amount": 34.89
+                },
+                {
+                    "field": "pricing.ranges.0",
+                    "delta_amount": 0.3
+                },
+                {
+                    "field": "pricing.ranges.1",
+                    "delta_amount": 0.9
+                },
+                {
+                    "field": "pricing.ranges.2",
+                    "delta_amount": 0.8
+                },
+                {
+                    "field": "pricing.ranges.3",
+                    "delta_amount": 1
+                },
+                {
+                    "field": "zones.0.prices.0.d_amt",
+                    "delta_amount": 44.3
+                },
+                {
+                    "field": "zones.0.prices.0.p_amt",
+                    "delta_amount": 44.3
+                },
+                {
+                    "field": "zones.1.prices.0.d_amt",
+                    "delta_amount": 40.67
+                },
+                {
+                    "field": "zones.1.prices.0.p_amt",
+                    "delta_amount": 40.67
+                },
+                {
+                    "field": "zones.2.prices.0.d_amt",
+                    "delta_amount": 32.52
+                },
+                {
+                    "field": "zones.2.prices.0.p_amt",
+                    "delta_amount": 32.52
+                },
+                {
+                    "field": "zones.3.prices.0.d_amt",
+                    "delta_amount": 42.33
+                },
+                {
+                    "field": "zones.3.prices.0.p_amt",
+                    "delta_amount": 42.33
+                },
+                {
+                    "field": "zones.4.prices.0.d_amt",
+                    "delta_amount": 88.81
+                },
+                {
+                    "field": "zones.4.prices.0.p_amt",
+                    "delta_amount": 88.81
+                },
+                {
+                    "field": "zones.5.prices.0.d_amt",
+                    "delta_amount": 83
+                },
+                {
+                    "field": "zones.5.prices.0.p_amt",
+                    "delta_amount": 83
+                },
+                {
+                    "field": "zones.6.prices.0.d_amt",
+                    "delta_amount": 58.93
+                },
+                {
+                    "field": "zones.6.prices.0.p_amt",
+                    "delta_amount": 58.93
+                },
+                {
+                    "field": "zones.7.prices.0.d_amt",
+                    "delta_amount": 66.4
+                },
+                {
+                    "field": "zones.7.prices.0.p_amt",
+                    "delta_amount": 66.4
+                },
+                {
+                    "field": "zones.8.prices.0.d_amt",
+                    "delta_amount": 32.37
+                },
+                {
+                    "field": "zones.8.prices.0.p_amt",
+                    "delta_amount": 32.37
+                },
+                {
+                    "field": "zones.9.prices.0.d_amt",
+                    "delta_amount": 39.05
+                },
+                {
+                    "field": "zones.9.prices.0.p_amt",
+                    "delta_amount": 39.05
+                },
+                {
+                    "field": "zones.10.prices.0.d_amt",
+                    "delta_amount": 35.69
+                },
+                {
+                    "field": "zones.10.prices.0.p_amt",
+                    "delta_amount": 35.69
+                },
+                {
+                    "field": "zones.11.prices.0.d_amt",
+                    "delta_amount": 57.99
+                },
+                {
+                    "field": "zones.11.prices.0.p_amt",
+                    "delta_amount": 57.99
+                }
+            ],
+            "hourly_percent": 40,
+            "notice_time": [
+                {
+                    "time": 720,
+                    "percent": 30,
+                    "allowance": 240
+                },
+                {
+                    "time": 480,
+                    "percent": 60,
+                    "allowance": 240
+                },
+                {
+                    "time": 360,
+                    "percent": 200,
+                    "allowance": 240
+                }
+            ]
+        },
+        {
+            "vehicle_class_id": 9,
+            "delta_amount": 0,
+            "percent": 125,
+            "percent_appendix": [
+                {
+                    "field": "hourly_pricing.min_amount",
+                    "delta_amount": -40
+                },
+                {
+                    "field": "hourly_pricing.ranges.0",
+                    "delta_amount": 25
+                },
+                {
+                    "field": "pricing.min_amount",
+                    "delta_amount": 158.51
+                },
+                {
+                    "field": "zones.0.prices.0.d_amt",
+                    "delta_amount": 127
+                },
+                {
+                    "field": "zones.0.prices.0.p_amt",
+                    "delta_amount": 127
+                },
+                {
+                    "field": "zones.1.prices.0.d_amt",
+                    "delta_amount": 218.82
+                },
+                {
+                    "field": "zones.1.prices.0.p_amt",
+                    "delta_amount": 218.82
+                },
+                {
+                    "field": "zones.2.prices.0.d_amt",
+                    "delta_amount": 198.22
+                },
+                {
+                    "field": "zones.2.prices.0.p_amt",
+                    "delta_amount": 198.22
+                },
+                {
+                    "field": "zones.3.prices.0.d_amt",
+                    "delta_amount": 188.11
+                },
+                {
+                    "field": "zones.3.prices.0.p_amt",
+                    "delta_amount": 188.11
+                },
+                {
+                    "field": "zones.5.prices.0.d_amt",
+                    "delta_amount": 246.3
+                },
+                {
+                    "field": "zones.5.prices.0.p_amt",
+                    "delta_amount": 246.3
+                },
+                {
+                    "field": "zones.8.prices.0.d_amt",
+                    "delta_amount": 306.69
+                },
+                {
+                    "field": "zones.8.prices.0.p_amt",
+                    "delta_amount": 306.69
+                },
+                {
+                    "field": "zones.9.prices.0.d_amt",
+                    "delta_amount": 179.29
+                },
+                {
+                    "field": "zones.9.prices.0.p_amt",
+                    "delta_amount": 179.29
+                },
+                {
+                    "field": "zones.10.prices.0.d_amt",
+                    "delta_amount": 209.37
+                },
+                {
+                    "field": "zones.10.prices.0.p_amt",
+                    "delta_amount": 209.37
+                },
+                {
+                    "field": "zones.11.prices.0.d_amt",
+                    "delta_amount": 155.99
+                },
+                {
+                    "field": "zones.11.prices.0.p_amt",
+                    "delta_amount": 155.99
+                }
+            ],
+            "hourly_percent": 125,
+            "notice_time": [
+                {
+                    "time": 720,
+                    "percent": 30,
+                    "allowance": 240
+                },
+                {
+                    "time": 480,
+                    "percent": 60,
+                    "allowance": 240
+                },
+                {
+                    "time": 360,
+                    "percent": 200,
+                    "allowance": 240
+                }
+            ]
+        },
+        {
+            "vehicle_class_id": 10,
+            "delta_amount": 0,
+            "percent": 130,
+            "percent_appendix": [
+                {
+                    "field": "hourly_pricing.min_amount",
+                    "delta_amount": -40
+                },
+                {
+                    "field": "hourly_pricing.ranges.0",
+                    "delta_amount": 99
+                },
+                {
+                    "field": "pricing.min_amount",
+                    "delta_amount": 173.51
+                },
+                {
+                    "field": "zones.0.prices.0.d_amt",
+                    "delta_amount": 137
+                },
+                {
+                    "field": "zones.0.prices.0.p_amt",
+                    "delta_amount": 137
+                },
+                {
+                    "field": "zones.1.prices.0.d_amt",
+                    "delta_amount": 228.82
+                },
+                {
+                    "field": "zones.1.prices.0.p_amt",
+                    "delta_amount": 228.82
+                },
+                {
+                    "field": "zones.2.prices.0.d_amt",
+                    "delta_amount": 208.22
+                },
+                {
+                    "field": "zones.2.prices.0.p_amt",
+                    "delta_amount": 208.22
+                },
+                {
+                    "field": "zones.3.prices.0.d_amt",
+                    "delta_amount": 198.11
+                },
+                {
+                    "field": "zones.3.prices.0.p_amt",
+                    "delta_amount": 198.11
+                },
+                {
+                    "field": "zones.5.prices.0.d_amt",
+                    "delta_amount": 255.56
+                },
+                {
+                    "field": "zones.5.prices.0.p_amt",
+                    "delta_amount": 255.56
+                },
+                {
+                    "field": "zones.8.prices.0.d_amt",
+                    "delta_amount": 315.07
+                },
+                {
+                    "field": "zones.8.prices.0.p_amt",
+                    "delta_amount": 315.07
+                },
+                {
+                    "field": "zones.9.prices.0.d_amt",
+                    "delta_amount": 189.29
+                },
+                {
+                    "field": "zones.9.prices.0.p_amt",
+                    "delta_amount": 189.29
+                },
+                {
+                    "field": "zones.10.prices.0.d_amt",
+                    "delta_amount": 214.89
+                },
+                {
+                    "field": "zones.10.prices.0.p_amt",
+                    "delta_amount": 214.89
+                },
+                {
+                    "field": "zones.11.prices.0.d_amt",
+                    "delta_amount": 170.99
+                },
+                {
+                    "field": "zones.11.prices.0.p_amt",
+                    "delta_amount": 170.99
+                }
+            ],
+            "hourly_percent": 130,
+            "notice_time": [
+                {
+                    "time": 720,
+                    "percent": 30,
+                    "allowance": 240
+                },
+                {
+                    "time": 480,
+                    "percent": 60,
+                    "allowance": 240
+                },
+                {
+                    "time": 360,
+                    "percent": 200,
+                    "allowance": 240
+                }
+            ]
+        },
+        {
+            "vehicle_class_id": 11,
+            "delta_amount": 0,
+            "percent": 133,
+            "percent_appendix": [
+                {
+                    "field": "hourly_pricing.min_amount",
+                    "delta_amount": -40
+                },
+                {
+                    "field": "hourly_pricing.ranges.0",
+                    "delta_amount": 105
+                },
+                {
+                    "field": "pricing.min_amount",
+                    "delta_amount": 193.51
+                },
+                {
+                    "field": "zones.0.prices.0.d_amt",
+                    "delta_amount": 187
+                },
+                {
+                    "field": "zones.0.prices.0.p_amt",
+                    "delta_amount": 187
+                },
+                {
+                    "field": "zones.1.prices.0.d_amt",
+                    "delta_amount": 278.82
+                },
+                {
+                    "field": "zones.1.prices.0.p_amt",
+                    "delta_amount": 278.82
+                },
+                {
+                    "field": "zones.2.prices.0.d_amt",
+                    "delta_amount": 258.22
+                },
+                {
+                    "field": "zones.2.prices.0.p_amt",
+                    "delta_amount": 258.22
+                },
+                {
+                    "field": "zones.3.prices.0.d_amt",
+                    "delta_amount": 248.11
+                },
+                {
+                    "field": "zones.3.prices.0.p_amt",
+                    "delta_amount": 248.11
+                },
+                {
+                    "field": "zones.4.prices.0.d_amt",
+                    "delta_amount": 244.91
+                },
+                {
+                    "field": "zones.4.prices.0.p_amt",
+                    "delta_amount": 244.91
+                },
+                {
+                    "field": "zones.5.prices.0.d_amt",
+                    "delta_amount": 259.85
+                },
+                {
+                    "field": "zones.5.prices.0.p_amt",
+                    "delta_amount": 259.85
+                },
+                {
+                    "field": "zones.8.prices.0.d_amt",
+                    "delta_amount": 320.1
+                },
+                {
+                    "field": "zones.8.prices.0.p_amt",
+                    "delta_amount": 320.1
+                },
+                {
+                    "field": "zones.9.prices.0.d_amt",
+                    "delta_amount": 199.29
+                },
+                {
+                    "field": "zones.9.prices.0.p_amt",
+                    "delta_amount": 199.29
+                },
+                {
+                    "field": "zones.10.prices.0.d_amt",
+                    "delta_amount": 218.2
+                },
+                {
+                    "field": "zones.10.prices.0.p_amt",
+                    "delta_amount": 218.2
+                },
+                {
+                    "field": "zones.11.prices.0.d_amt",
+                    "delta_amount": 190.99
+                },
+                {
+                    "field": "zones.11.prices.0.p_amt",
+                    "delta_amount": 190.99
+                }
+            ],
+            "hourly_percent": 133,
+            "notice_time": [
+                {
+                    "time": 720,
+                    "percent": 30,
+                    "allowance": 240
+                },
+                {
+                    "time": 480,
+                    "percent": 60,
+                    "allowance": 240
+                },
+                {
+                    "time": 360,
+                    "percent": 200,
+                    "allowance": 240
+                }
+            ]
+        },
+        {
+            "vehicle_class_id": 29,
+            "delta_amount": 0,
+            "percent": 200,
+            "percent_appendix": [
+                {
+                    "field": "hourly_pricing.min_amount",
+                    "delta_amount": -40
+                },
+                {
+                    "field": "hourly_pricing.ranges.0",
+                    "delta_amount": 58
+                },
+                {
+                    "field": "pricing.min_amount",
+                    "delta_amount": 353.51
+                },
+                {
+                    "field": "zones.0.prices.0.d_amt",
+                    "delta_amount": 192
+                },
+                {
+                    "field": "zones.0.prices.0.p_amt",
+                    "delta_amount": 192
+                },
+                {
+                    "field": "zones.1.prices.0.d_amt",
+                    "delta_amount": 283.82
+                },
+                {
+                    "field": "zones.1.prices.0.p_amt",
+                    "delta_amount": 283.82
+                },
+                {
+                    "field": "zones.2.prices.0.d_amt",
+                    "delta_amount": 263.22
+                },
+                {
+                    "field": "zones.2.prices.0.p_amt",
+                    "delta_amount": 263.22
+                },
+                {
+                    "field": "zones.3.prices.0.d_amt",
+                    "delta_amount": 253.11
+                },
+                {
+                    "field": "zones.3.prices.0.p_amt",
+                    "delta_amount": 253.11
+                },
+                {
+                    "field": "zones.4.prices.0.d_amt",
+                    "delta_amount": 584.91
+                },
+                {
+                    "field": "zones.4.prices.0.p_amt",
+                    "delta_amount": 584.91
+                },
+                {
+                    "field": "zones.5.prices.0.d_amt",
+                    "delta_amount": 599.85
+                },
+                {
+                    "field": "zones.5.prices.0.p_amt",
+                    "delta_amount": 599.85
+                },
+                {
+                    "field": "zones.8.prices.0.d_amt",
+                    "delta_amount": 323.45
+                },
+                {
+                    "field": "zones.8.prices.0.p_amt",
+                    "delta_amount": 323.45
+                },
+                {
+                    "field": "zones.9.prices.0.d_amt",
+                    "delta_amount": 359.29
+                },
+                {
+                    "field": "zones.9.prices.0.p_amt",
+                    "delta_amount": 359.29
+                },
+                {
+                    "field": "zones.10.prices.0.d_amt",
+                    "delta_amount": 350.99
+                },
+                {
+                    "field": "zones.10.prices.0.p_amt",
+                    "delta_amount": 350.99
+                },
+                {
+                    "field": "zones.11.prices.0.d_amt",
+                    "delta_amount": 350.99
+                },
+                {
+                    "field": "zones.11.prices.0.p_amt",
+                    "delta_amount": 350.99
+                }
+            ],
+            "hourly_percent": 200,
+            "notice_time": [
+                {
+                    "time": 720,
+                    "percent": 30,
+                    "allowance": 240
+                },
+                {
+                    "time": 480,
+                    "percent": 60,
+                    "allowance": 240
+                },
+                {
+                    "time": 360,
+                    "percent": 200,
+                    "allowance": 240
+                }
+            ]
+        },
+        {
+            "vehicle_class_id": 30,
+            "delta_amount": 0,
+            "percent": 240,
+            "percent_appendix": [
+                {
+                    "field": "hourly_pricing.min_amount",
+                    "delta_amount": 133.5
+                },
+                {
+                    "field": "hourly_pricing.ranges.0",
+                    "delta_amount": 133
+                },
+                {
+                    "field": "pricing.min_amount",
+                    "delta_amount": 363.51
+                },
+                {
+                    "field": "zones.0.prices.0.d_amt",
+                    "delta_amount": 237
+                },
+                {
+                    "field": "zones.0.prices.0.p_amt",
+                    "delta_amount": 237
+                },
+                {
+                    "field": "zones.1.prices.0.d_amt",
+                    "delta_amount": 328.82
+                },
+                {
+                    "field": "zones.1.prices.0.p_amt",
+                    "delta_amount": 328.82
+                },
+                {
+                    "field": "zones.2.prices.0.d_amt",
+                    "delta_amount": 308.22
+                },
+                {
+                    "field": "zones.2.prices.0.p_amt",
+                    "delta_amount": 308.22
+                },
+                {
+                    "field": "zones.3.prices.0.d_amt",
+                    "delta_amount": 298.11
+                },
+                {
+                    "field": "zones.3.prices.0.p_amt",
+                    "delta_amount": 298.11
+                },
+                {
+                    "field": "zones.4.prices.0.d_amt",
+                    "delta_amount": 614.91
+                },
+                {
+                    "field": "zones.4.prices.0.p_amt",
+                    "delta_amount": 614.91
+                },
+                {
+                    "field": "zones.5.prices.0.d_amt",
+                    "delta_amount": 629.85
+                },
+                {
+                    "field": "zones.5.prices.0.p_amt",
+                    "delta_amount": 629.85
+                },
+                {
+                    "field": "zones.8.prices.0.d_amt",
+                    "delta_amount": 365.37
+                },
+                {
+                    "field": "zones.8.prices.0.p_amt",
+                    "delta_amount": 365.37
+                },
+                {
+                    "field": "zones.9.prices.0.d_amt",
+                    "delta_amount": 369.29
+                },
+                {
+                    "field": "zones.9.prices.0.p_amt",
+                    "delta_amount": 369.29
+                },
+                {
+                    "field": "zones.10.prices.0.d_amt",
+                    "delta_amount": 360.99
+                },
+                {
+                    "field": "zones.10.prices.0.p_amt",
+                    "delta_amount": 360.99
+                },
+                {
+                    "field": "zones.11.prices.0.d_amt",
+                    "delta_amount": 360.99
+                },
+                {
+                    "field": "zones.11.prices.0.p_amt",
+                    "delta_amount": 360.99
+                }
+            ],
+            "hourly_percent": 240,
+            "notice_time": [
+                {
+                    "time": 960,
+                    "percent": 50,
+                    "allowance": 480
+                },
+                {
+                    "time": 720,
+                    "percent": 200,
+                    "allowance": 480
+                }
+            ]
+        },
+        {
+            "vehicle_class_id": 31,
+            "delta_amount": 0,
+            "percent": 250,
+            "percent_appendix": [
+                {
+                    "field": "hourly_pricing.min_amount",
+                    "delta_amount": 155.5
+                },
+                {
+                    "field": "hourly_pricing.ranges.0",
+                    "delta_amount": 155
+                },
+                {
+                    "field": "pricing.min_amount",
+                    "delta_amount": 373.51
+                },
+                {
+                    "field": "zones.0.prices.0.d_amt",
+                    "delta_amount": 246
+                },
+                {
+                    "field": "zones.0.prices.0.p_amt",
+                    "delta_amount": 246
+                },
+                {
+                    "field": "zones.1.prices.0.d_amt",
+                    "delta_amount": 337.82
+                },
+                {
+                    "field": "zones.1.prices.0.p_amt",
+                    "delta_amount": 337.82
+                },
+                {
+                    "field": "zones.2.prices.0.d_amt",
+                    "delta_amount": 317.22
+                },
+                {
+                    "field": "zones.2.prices.0.p_amt",
+                    "delta_amount": 317.22
+                },
+                {
+                    "field": "zones.3.prices.0.d_amt",
+                    "delta_amount": 307.11
+                },
+                {
+                    "field": "zones.3.prices.0.p_amt",
+                    "delta_amount": 307.11
+                },
+                {
+                    "field": "zones.4.prices.0.d_amt",
+                    "delta_amount": 664.91
+                },
+                {
+                    "field": "zones.4.prices.0.p_amt",
+                    "delta_amount": 664.91
+                },
+                {
+                    "field": "zones.5.prices.0.d_amt",
+                    "delta_amount": 679.85
+                },
+                {
+                    "field": "zones.5.prices.0.p_amt",
+                    "delta_amount": 679.85
+                },
+                {
+                    "field": "zones.8.prices.0.d_amt",
+                    "delta_amount": 368.72
+                },
+                {
+                    "field": "zones.8.prices.0.p_amt",
+                    "delta_amount": 368.72
+                },
+                {
+                    "field": "zones.9.prices.0.d_amt",
+                    "delta_amount": 379.29
+                },
+                {
+                    "field": "zones.9.prices.0.p_amt",
+                    "delta_amount": 379.29
+                },
+                {
+                    "field": "zones.10.prices.0.d_amt",
+                    "delta_amount": 370.99
+                },
+                {
+                    "field": "zones.10.prices.0.p_amt",
+                    "delta_amount": 370.99
+                },
+                {
+                    "field": "zones.11.prices.0.d_amt",
+                    "delta_amount": 370.99
+                },
+                {
+                    "field": "zones.11.prices.0.p_amt",
+                    "delta_amount": 370.99
+                }
+            ],
+            "hourly_percent": 250,
+            "notice_time": [
+                {
+                    "time": 960,
+                    "percent": 50,
+                    "allowance": 480
+                },
+                {
+                    "time": 720,
+                    "percent": 200,
+                    "allowance": 480
+                }
+            ]
+        },
+        {
+            "vehicle_class_id": 32,
+            "delta_amount": 0,
+            "percent": 290,
+            "percent_appendix": [
+                {
+                    "field": "hourly_pricing.min_amount",
+                    "delta_amount": 162
+                },
+                {
+                    "field": "hourly_pricing.ranges.0",
+                    "delta_amount": 156
+                },
+                {
+                    "field": "pricing.min_amount",
+                    "delta_amount": 383.51
+                },
+                {
+                    "field": "zones.0.prices.0.d_amt",
+                    "delta_amount": 262
+                },
+                {
+                    "field": "zones.0.prices.0.p_amt",
+                    "delta_amount": 262
+                },
+                {
+                    "field": "zones.1.prices.0.d_amt",
+                    "delta_amount": 381.82
+                },
+                {
+                    "field": "zones.1.prices.0.p_amt",
+                    "delta_amount": 381.82
+                },
+                {
+                    "field": "zones.2.prices.0.d_amt",
+                    "delta_amount": 361.22
+                },
+                {
+                    "field": "zones.2.prices.0.p_amt",
+                    "delta_amount": 361.22
+                },
+                {
+                    "field": "zones.3.prices.0.d_amt",
+                    "delta_amount": 351.11
+                },
+                {
+                    "field": "zones.3.prices.0.p_amt",
+                    "delta_amount": 351.11
+                },
+                {
+                    "field": "zones.4.prices.0.d_amt",
+                    "delta_amount": 694.91
+                },
+                {
+                    "field": "zones.4.prices.0.p_amt",
+                    "delta_amount": 694.91
+                },
+                {
+                    "field": "zones.5.prices.0.d_amt",
+                    "delta_amount": 709.85
+                },
+                {
+                    "field": "zones.5.prices.0.p_amt",
+                    "delta_amount": 709.85
+                },
+                {
+                    "field": "zones.8.prices.0.d_amt",
+                    "delta_amount": 432.43
+                },
+                {
+                    "field": "zones.8.prices.0.p_amt",
+                    "delta_amount": 432.43
+                },
+                {
+                    "field": "zones.9.prices.0.d_amt",
+                    "delta_amount": 389.29
+                },
+                {
+                    "field": "zones.9.prices.0.p_amt",
+                    "delta_amount": 389.29
+                },
+                {
+                    "field": "zones.10.prices.0.d_amt",
+                    "delta_amount": 380.99
+                },
+                {
+                    "field": "zones.10.prices.0.p_amt",
+                    "delta_amount": 380.99
+                },
+                {
+                    "field": "zones.11.prices.0.d_amt",
+                    "delta_amount": 380.99
+                },
+                {
+                    "field": "zones.11.prices.0.p_amt",
+                    "delta_amount": 380.99
+                }
+            ],
+            "hourly_percent": 290,
+            "notice_time": [
+                {
+                    "time": 960,
+                    "percent": 50,
+                    "allowance": 480
+                },
+                {
+                    "time": 720,
+                    "percent": 200,
+                    "allowance": 480
+                }
+            ]
+        },
+        {
+            "vehicle_class_id": 33,
+            "delta_amount": 0,
+            "percent": 600,
+            "percent_appendix": [
+                {
+                    "field": "hourly_pricing.min_amount",
+                    "delta_amount": 163.5
+                },
+                {
+                    "field": "hourly_pricing.ranges.0",
+                    "delta_amount": 163
+                },
+                {
+                    "field": "pricing.min_amount",
+                    "delta_amount": 393.51
+                },
+                {
+                    "field": "zones.0.prices.0.d_amt",
+                    "delta_amount": 287
+                },
+                {
+                    "field": "zones.0.prices.0.p_amt",
+                    "delta_amount": 287
+                },
+                {
+                    "field": "zones.1.prices.0.d_amt",
+                    "delta_amount": 391.82
+                },
+                {
+                    "field": "zones.1.prices.0.p_amt",
+                    "delta_amount": 391.82
+                },
+                {
+                    "field": "zones.2.prices.0.d_amt",
+                    "delta_amount": 371.22
+                },
+                {
+                    "field": "zones.2.prices.0.p_amt",
+                    "delta_amount": 371.22
+                },
+                {
+                    "field": "zones.3.prices.0.d_amt",
+                    "delta_amount": 361.11
+                },
+                {
+                    "field": "zones.3.prices.0.p_amt",
+                    "delta_amount": 361.11
+                },
+                {
+                    "field": "zones.4.prices.0.d_amt",
+                    "delta_amount": 714.91
+                },
+                {
+                    "field": "zones.4.prices.0.p_amt",
+                    "delta_amount": 714.91
+                },
+                {
+                    "field": "zones.5.prices.0.d_amt",
+                    "delta_amount": 729.85
+                },
+                {
+                    "field": "zones.5.prices.0.p_amt",
+                    "delta_amount": 729.85
+                },
+                {
+                    "field": "zones.8.prices.0.d_amt",
+                    "delta_amount": 437.46
+                },
+                {
+                    "field": "zones.8.prices.0.p_amt",
+                    "delta_amount": 437.46
+                },
+                {
+                    "field": "zones.9.prices.0.d_amt",
+                    "delta_amount": 399.29
+                },
+                {
+                    "field": "zones.9.prices.0.p_amt",
+                    "delta_amount": 399.29
+                },
+                {
+                    "field": "zones.10.prices.0.d_amt",
+                    "delta_amount": 390.99
+                },
+                {
+                    "field": "zones.10.prices.0.p_amt",
+                    "delta_amount": 390.99
+                },
+                {
+                    "field": "zones.11.prices.0.d_amt",
+                    "delta_amount": 390.99
+                },
+                {
+                    "field": "zones.11.prices.0.p_amt",
+                    "delta_amount": 390.99
+                }
+            ],
+            "hourly_percent": 600,
+            "notice_time": [
+                {
+                    "time": 960,
+                    "percent": 50,
+                    "allowance": 480
+                },
+                {
+                    "time": 720,
+                    "percent": 200,
+                    "allowance": 480
+                }
+            ]
+        },
+        {
+            "vehicle_class_id": 34,
+            "delta_amount": 0,
+            "percent": 630,
+            "percent_appendix": [
+                {
+                    "field": "hourly_pricing.min_amount",
+                    "delta_amount": 183.5
+                },
+                {
+                    "field": "hourly_pricing.ranges.0",
+                    "delta_amount": 1183
+                },
+                {
+                    "field": "pricing.min_amount",
+                    "delta_amount": 403.51
+                },
+                {
+                    "field": "zones.0.prices.0.d_amt",
+                    "delta_amount": 327
+                },
+                {
+                    "field": "zones.0.prices.0.p_amt",
+                    "delta_amount": 327
+                },
+                {
+                    "field": "zones.1.prices.0.d_amt",
+                    "delta_amount": 401.82
+                },
+                {
+                    "field": "zones.1.prices.0.p_amt",
+                    "delta_amount": 401.82
+                },
+                {
+                    "field": "zones.2.prices.0.d_amt",
+                    "delta_amount": 381.22
+                },
+                {
+                    "field": "zones.2.prices.0.p_amt",
+                    "delta_amount": 381.22
+                },
+                {
+                    "field": "zones.3.prices.0.d_amt",
+                    "delta_amount": 371.11
+                },
+                {
+                    "field": "zones.3.prices.0.p_amt",
+                    "delta_amount": 371.11
+                },
+                {
+                    "field": "zones.4.prices.0.d_amt",
+                    "delta_amount": 744.91
+                },
+                {
+                    "field": "zones.4.prices.0.p_amt",
+                    "delta_amount": 744.91
+                },
+                {
+                    "field": "zones.5.prices.0.d_amt",
+                    "delta_amount": 759.85
+                },
+                {
+                    "field": "zones.5.prices.0.p_amt",
+                    "delta_amount": 759.85
+                },
+                {
+                    "field": "zones.8.prices.0.d_amt",
+                    "delta_amount": 440.81
+                },
+                {
+                    "field": "zones.8.prices.0.p_amt",
+                    "delta_amount": 440.81
+                },
+                {
+                    "field": "zones.9.prices.0.d_amt",
+                    "delta_amount": 409.29
+                },
+                {
+                    "field": "zones.9.prices.0.p_amt",
+                    "delta_amount": 409.29
+                },
+                {
+                    "field": "zones.10.prices.0.d_amt",
+                    "delta_amount": 400.99
+                },
+                {
+                    "field": "zones.10.prices.0.p_amt",
+                    "delta_amount": 400.99
+                },
+                {
+                    "field": "zones.11.prices.0.d_amt",
+                    "delta_amount": 400.99
+                },
+                {
+                    "field": "zones.11.prices.0.p_amt",
+                    "delta_amount": 400.99
+                }
+            ],
+            "hourly_percent": 630,
+            "notice_time": [
+                {
+                    "time": 960,
+                    "percent": 50,
+                    "allowance": 480
+                },
+                {
+                    "time": 720,
+                    "percent": 200,
+                    "allowance": 480
+                }
+            ]
+        },
+        {
+            "vehicle_class_id": 35,
+            "delta_amount": 0,
+            "percent": 650,
+            "percent_appendix": [
+                {
+                    "field": "hourly_pricing.min_amount",
+                    "delta_amount": 196.5
+                },
+                {
+                    "field": "hourly_pricing.ranges.0",
+                    "delta_amount": 196
+                },
+                {
+                    "field": "pricing.min_amount",
+                    "delta_amount": 413.51
+                },
+                {
+                    "field": "zones.0.prices.0.d_amt",
+                    "delta_amount": 337
+                },
+                {
+                    "field": "zones.0.prices.0.p_amt",
+                    "delta_amount": 337
+                },
+                {
+                    "field": "zones.1.prices.0.d_amt",
+                    "delta_amount": 411.82
+                },
+                {
+                    "field": "zones.1.prices.0.p_amt",
+                    "delta_amount": 411.82
+                },
+                {
+                    "field": "zones.2.prices.0.d_amt",
+                    "delta_amount": 391.22
+                },
+                {
+                    "field": "zones.2.prices.0.p_amt",
+                    "delta_amount": 391.22
+                },
+                {
+                    "field": "zones.3.prices.0.d_amt",
+                    "delta_amount": 381.11
+                },
+                {
+                    "field": "zones.3.prices.0.p_amt",
+                    "delta_amount": 381.11
+                },
+                {
+                    "field": "zones.4.prices.0.d_amt",
+                    "delta_amount": 764.91
+                },
+                {
+                    "field": "zones.4.prices.0.p_amt",
+                    "delta_amount": 764.91
+                },
+                {
+                    "field": "zones.5.prices.0.d_amt",
+                    "delta_amount": 779.85
+                },
+                {
+                    "field": "zones.5.prices.0.p_amt",
+                    "delta_amount": 779.85
+                },
+                {
+                    "field": "zones.8.prices.0.d_amt",
+                    "delta_amount": 465.96
+                },
+                {
+                    "field": "zones.8.prices.0.p_amt",
+                    "delta_amount": 465.96
+                },
+                {
+                    "field": "zones.9.prices.0.d_amt",
+                    "delta_amount": 419.29
+                },
+                {
+                    "field": "zones.9.prices.0.p_amt",
+                    "delta_amount": 419.29
+                },
+                {
+                    "field": "zones.10.prices.0.d_amt",
+                    "delta_amount": 410.99
+                },
+                {
+                    "field": "zones.10.prices.0.p_amt",
+                    "delta_amount": 410.99
+                },
+                {
+                    "field": "zones.11.prices.0.d_amt",
+                    "delta_amount": 410.99
+                },
+                {
+                    "field": "zones.11.prices.0.p_amt",
+                    "delta_amount": 410.99
+                }
+            ],
+            "hourly_percent": 650,
+            "notice_time": [
+                {
+                    "time": 960,
+                    "percent": 50,
+                    "allowance": 480
+                },
+                {
+                    "time": 720,
+                    "percent": 200,
+                    "allowance": 480
+                }
+            ]
+        }
+    ],
+    "countryCode": "ESP",
+    "currencyCode": "USD",
+    "hint": [
+        {
+            "normal_reserve_value": 12,
+            "vehicles": [
+                2,
+                4,
+                5,
+                36,
+                50,
+                9,
+                11,
+                29,
+                11,
+                11,
+                10,
+                9
+            ],
+            "notice_time_hint": [
+                {
+                    "advance_time_start": 8,
+                    "advance_time_end": 12,
+                    "notice_time": {
+                        "time": 720,
+                        "percent": 30,
+                        "allowance": 240
+                    }
+                },
+                {
+                    "advance_time_start": 6,
+                    "advance_time_end": 8,
+                    "notice_time": {
+                        "time": 480,
+                        "percent": 60,
+                        "allowance": 240
+                    }
+                },
+                {
+                    "advance_time_start": 4,
+                    "advance_time_end": 6,
+                    "notice_time": {
+                        "time": 360,
+                        "percent": 200,
+                        "allowance": 240
+                    }
+                }
+            ]
+        },
+        {
+            "normal_reserve_value": 12,
+            "vehicles": [
+                40
+            ],
+            "notice_time_hint": [
+                {
+                    "advance_time_start": 8,
+                    "advance_time_end": 12,
+                    "notice_time": {
+                        "time": 720,
+                        "percent": 100,
+                        "allowance": 240
+                    }
+                },
+                {
+                    "advance_time_start": 6,
+                    "advance_time_end": 8,
+                    "notice_time": {
+                        "time": 480,
+                        "percent": 200,
+                        "allowance": 240
+                    }
+                },
+                {
+                    "advance_time_start": 4,
+                    "advance_time_end": 6,
+                    "notice_time": {
+                        "time": 360,
+                        "percent": 300,
+                        "allowance": 240
+                    }
+                }
+            ]
+        },
+        {
+            "normal_reserve_value": 16,
+            "vehicles": [
+                30,
+                31,
+                32,
+                33,
+                34,
+                35
+            ],
+            "notice_time_hint": [
+                {
+                    "advance_time_start": 12,
+                    "advance_time_end": 16,
+                    "notice_time": {
+                        "time": 960,
+                        "percent": 50,
+                        "allowance": 480
+                    }
+                },
+                {
+                    "advance_time_start": 8,
+                    "advance_time_end": 12,
+                    "notice_time": {
+                        "time": 720,
+                        "percent": 200,
+                        "allowance": 480
+                    }
+                }
+            ]
+        },
+        {
+            "normal_reserve_value": 20,
+            "vehicles": [
+                1,
+                6,
+                3
+            ],
+            "notice_time_hint": [
+                {
+                    "advance_time_start": 6,
+                    "advance_time_end": 20,
+                    "notice_time": {
+                        "time": 1200,
+                        "percent": 25,
+                        "allowance": 360
+                    }
+                }
+            ]
+        }
+    ],
+    "pricing_schedule_sum": [
+        {
+            "notice_time_hint": [
+                "null",
+                "null",
+                "null",
+                "null",
+                "null",
+                "null",
+                "null"
+            ],
+            "vehicles": [],
+            "pid": "15.7.1"
+        }
+    ],
+    "date_surcharge_method": "sum",
+    "hourly_pricing": {
+        "min_amount": 200,
+        "min_duration": 3,
+        "currency": "USD",
+        "ranges": [
+            {
+                "seq": 0,
+                "amount": 65,
+                "currency": "USD",
+                "duration": 5,
+                "from": 3,
+                "to": 8
+            },
+            {
+                "seq": 1,
+                "amount": 60,
+                "currency": "USD",
+                "duration": 4,
+                "from": 8,
+                "to": 12
+            }
+        ],
+        "pid": "15.9.1"
+    },
+    "service_area_pricing_id": null,
+    "req_id": "3e74c5a7-ffc7-f03a-b63c-b4056abca79f",
+    "specific_date_surcharge": [
+        {
+            "from_date": "2024-11-30",
+            "to_date": "2025-01-05",
+            "currency": "USD",
+            "vehicle_classes": [
+                {
+                    "vehicle_class_ids": [
+                        1,
+                        6,
+                        3,
+                        5
+                    ],
+                    "percent": 30,
+                    "delta_amount": 0
+                },
+                {
+                    "vehicle_class_ids": [
+                        2,
+                        40,
+                        4,
+                        9,
+                        10,
+                        11,
+                        36,
+                        29,
+                        30,
+                        31,
+                        32,
+                        33,
+                        34,
+                        35
+                    ],
+                    "percent": 30,
+                    "delta_amount": 0
+                }
+            ],
+            "zones": [
+                "serviceArea"
+            ],
+            "name": "Rule 1",
+            "pid": "15.8.1"
+        },
+        {
+            "from_date": "2024-07-12",
+            "to_date": "2024-07-15",
+            "currency": "USD",
+            "vehicle_classes": [
+                {
+                    "vehicle_class_ids": [
+                        1,
+                        2,
+                        40,
+                        6,
+                        3,
+                        4,
+                        36,
+                        5,
+                        9,
+                        10,
+                        11,
+                        29,
+                        30,
+                        31,
+                        32,
+                        33,
+                        34,
+                        35
+                    ],
+                    "percent": 30,
+                    "delta_amount": 0
+                }
+            ],
+            "zones": [
+                "serviceArea"
+            ],
+            "name": "Weekends",
+            "pid": "15.8.2"
+        }
+    ],
+    "tz": {
+        "dos": 0,
+        "ros": 3600,
+        "tzid": "Europe/Madrid"
+    },
+    "notice_time_rules": [
+        {
+            "zones": [
+                "serviceArea"
+            ],
+            "ps": [
+                {
+                    "vc_ids": [
+                        2,
+                        4,
+                        5,
+                        36,
+                        50,
+                        9,
+                        11,
+                        29,
+                        11,
+                        11,
+                        10,
+                        9,
+                        40
+                    ],
+                    "notice_time": [
+                        {
+                            "percent": 50,
+                            "time": 1440
+                        }
+                    ],
+                    "allowance": 600
+                },
+                {
+                    "vc_ids": [
+                        30,
+                        31,
+                        32,
+                        33,
+                        34,
+                        35
+                    ],
+                    "notice_time": [
+                        {
+                            "percent": 100,
+                            "time": 1440
+                        }
+                    ],
+                    "allowance": 1200
+                },
+                {
+                    "vc_ids": [
+                        1,
+                        6,
+                        3
+                    ],
+                    "notice_time": [
+                        {
+                            "percent": 30,
+                            "time": 1440
+                        }
+                    ],
+                    "allowance": 600
+                }
+            ],
+            "pid": "15.6.1"
+        }
+    ],
+    "notice_time_advance_time": {
+        "is_on": 0,
+        "duration": {
+            "from": "07:00",
+            "to": "18:00",
+            "min": 360,
+            "other": 600
+        },
+        "pid": "15.12.1"
+    }
+}
