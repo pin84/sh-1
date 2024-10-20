@@ -64,14 +64,266 @@
           // this.add()
           // this.addRouteTop200Price()
           // this.addRouteTop200()
-          // this.updateRoute()
+          this.updateRoute()
           // this.copyToOtherPatner()
 
           // this.download()
 
           // this.update()
-          this.updateCostAndPrice()
+          // this.updateCostAndPrice()
         })
+      }
+
+
+
+
+      async addRouteTop200Price() {
+        let url = true ? urlProd : urlDev    // urlDev,urlProd
+        let noFixedPriceZone = []
+        let noVehicle = []
+        let noRoute = []
+        let doneList = []
+        let vehicles = this.getVehicles()
+
+        let list = booking_10_19
+        let partnerId = 2
+
+        let cStr = ' Cost'
+        let pStr = ' min profit'
+
+
+        let parentFleetId = 15
+        switch (partnerId) {
+          case 2621:
+            parentFleetId = 61654
+            break;
+          case 3:
+            parentFleetId = 51488
+            break;
+          default:
+            break;
+        }
+
+        console.log(list);
+        let i = 0
+        for (let item of list) {
+          console.log(`-------${i++}--------`);
+          let { from_zone, to_zone, service_area_id, from_address, to_address, } = item
+          let { id: routeId } = await this.getRoute(urlProd, from_zone, to_zone, partnerId)
+          debugger
+          if (!routeId) {
+            item['note'] = 'no route'
+            this.noInsertList.push(item)
+            continue
+          }
+
+          let airportInfoObj = await this.getAirport(from_zone, to_zone)
+          if (!airportInfoObj) {
+            item['note'] = 'No  airport'
+            continue
+          }
+          let { isPickup, airportInfo } = airportInfoObj
+          let airportCode = isPickup ? from_zone : to_zone
+
+          let fleetInfo = await this.getFleetIdAndPricingByAirport(urlProd, airportCode, parentFleetId)
+          if (!fleetInfo) {
+            item['note'] = 'NO fleet'
+            this.noInsertList.push(item)
+            continue
+          }
+          let { fleet_id, pricing, pricing_id } = fleetInfo
+          let pricingJson = JSON.parse(pricing)
+
+          for (let v of vehicles) {
+            let cost = item[`${v}${cStr}`]
+            let profit = item[`${v}${pStr}`]
+            if (!cost) {
+              // noVehicle.push(`${service_area_id}-${curFleetId}-${v}`)
+              continue
+            }
+            cost = Number(cost.replace(/\$/g, ''))
+            if (!profit) {
+              profit = '0'
+            }
+            profit = Number(profit.replace(/\%/g, '')) / 100
+
+            let vid = vehicleList.find(vehicle => vehicle.vehicle_name == v).vehicle_id
+
+            let jsonHandled = this.jsonHandler3(pricingJson, from_zone, to_zone, isPickup, airportInfo, vid)
+            if (!jsonHandled) {
+              item['note'] = 'no Fixed Price Zone'
+              this.noInsertList.push(item)
+              continue
+            }
+            let { pAmt } = jsonHandled
+            console.log(service_area_id, '--', routeId, '--', v, '--', vid, '----', cost, '---', profit, '--', pAmt);
+
+            if (pAmt && cost) {
+              let insertCostRes = await this.insertCost(url, routeId, vid, cost, profit)
+              let insertAdjRes = await this.insertAdj(url, pAmt, routeId, vid)
+            }
+            doneList.push(routeId)
+          }
+        }
+
+        console.log('--this.noInsertList--', this.noInsertList);
+        console.log('--noVehicle--', noVehicle);
+        let dones = Array.from(new Set(doneList))
+        console.log('--doneList--', dones);
+
+        this.downLoadCSV(this.noInsertList, 'this.noInsertList')
+
+      }
+
+
+      async addRouteTop200() {
+        let url = true ? urlProd : urlDev    // urlDev,urlProd
+        let partnerId = 2 //Booking,Ctrip,Mozio
+        let batch = 0
+        let is_active = 98
+        let strategy_id = 1
+
+        let list = booking_10_19
+        // switch (partnerId) {
+        //   case 2:
+        //     strategy_id = 4
+        //     break;
+        //   case 2621:
+        //     strategy_id = 3
+        //     break;
+        //   case 3:
+        //     strategy_id = 2
+        //     break;
+        //   default:
+        //     break;
+        // }
+
+        console.log(list);
+        debugger
+        let { parentFleetId, partnerInfo } = this.getPatnerInfo(partnerId)
+        let i = 0
+        for (let item of list) {
+          debugger
+          let { from_zone: fromZone, to_zone: toZone, from_detail_address, to_detail_address, from_place: fromPlace, to_place: toPlace, from_address: fromAddress, to_address: toAddrEss } = item
+
+          let from_zone = fromZone || fromPlace
+          let to_zone = toZone || toPlace
+          from_zone = from_zone.trim()
+          to_zone = to_zone.trim()
+          // let obj = top200Route.find(o => o.from_zone == from_zone && o.to_zone == to_zone)
+
+          let from_address = from_detail_address || fromAddress || null
+          let to_address = to_detail_address || toAddrEss || null
+          if (!from_address || !to_address) {
+            item['note'] = 'No detailed address'
+            this.noInsertList.push(item)
+            continue
+          }
+
+          from_address = from_address.replace(/\'/g, "\\\'")
+          to_address = to_address.replace(/\'/g, "\\\'")
+          from_zone = from_zone.replace(/\'/g, "\\\'")
+          to_zone = to_zone.replace(/\'/g, "\\\'")
+
+          let airportInfoObj = await this.getAirport(from_zone, to_zone)
+          let { code: airportSearchResCode } = airportInfoObj
+          if (airportSearchResCode > 0) {
+            if (code == 1) {
+              item['note'] = 'No  airport'
+            } else {
+              item['note'] = 'From and to are both airports'
+            }
+            this.noInsertList.push(item)
+            continue
+          }
+          let { isPickup, airportInfo } = airportInfoObj
+          let airportCode = isPickup ? from_zone : to_zone
+
+          let fleetInfo = await this.getFleetIdAndPricingByAirport(urlProd, airportCode, parentFleetId)
+          if (!fleetInfo) {
+            item['note'] = 'NO fleet'
+            this.noInsertList.push(item)
+            continue
+          }
+          let { fleet_id, pricing, pricing_id } = fleetInfo
+          let pricingJson = JSON.parse(pricing)
+
+          let jsonHandled = this.jsonHandler3(pricingJson, from_zone, to_zone, isPickup, airportInfo)
+
+          let { adjJson, from_place_lat_lng, to_place_lat_lng, code } = jsonHandled
+
+          if (code > 0) {
+            if (code == 2) {
+              item['note'] = 'There is a crossover in the fixed price circle'
+              this.noInsertList.push(item)
+            } else {
+              item['note'] = 'no Fixed Price Zone'
+              this.noInsertList.push(item)
+            }
+            continue
+          }
+
+          let routeInfo = await this.getRoute(url, from_zone, to_zone, partnerId)
+          let { id: routeId } = routeInfo
+
+          let elifefleet = await this.getFleetIdByAirport(url, airportCode, 15)
+
+          let route = {
+            from_place: from_zone,
+            to_place: to_zone,
+            service_area_id: fleet_id,
+
+            json: JSON.stringify(adjJson),
+            name: `${from_zone}-${to_zone}`,
+            from_place_lat_lng: JSON.stringify(from_place_lat_lng),
+            to_place_lat_lng: JSON.stringify(to_place_lat_lng),
+
+
+            service_area_id_elife: elifefleet.fleet_id,
+            from_address,
+            to_address,
+
+            strategy_id,
+            batch,
+            is_active
+          }
+
+          route = Object.assign({}, route, partnerInfo)
+          console.log(route);
+          i++
+          console.log(`-----${i}------`);
+          if (!routeId) {
+            let res = await this.insertSppRouteV2(url, route)
+            if (res) {
+              let { lastId } = res
+              routeId = lastId
+            }
+            this.newRouteIds.push(routeId)
+          } else {
+            route['id'] = routeId
+            let { is_active, batch } = routeInfo
+            if (is_active < 0) {
+              route['is_active'] = 98
+              route['batch'] = 0
+              route['strategy_id'] = 1
+            } else {
+              delete route.strategy_id
+              delete route.batch
+              delete route.is_active
+            }
+            // debugger
+
+            let insertRes = await this.updateRouteV2(url, route)
+            this.existsIds.push(routeId)
+          }
+          this.doneList.push(item)
+        }
+        console.log('--noInsertList--', this.noInsertList);
+        console.log('--doneList--', this.doneList);
+        console.log('--this.existsIds--', this.existsIds);
+        console.log('--this.newRouteIds--', this.newRouteIds);
+
+        this.downLoadCSV(this.noInsertList, 'ctrip no insert list')
       }
 
 
@@ -95,753 +347,15 @@
         return res
       }
 
-      async update() {
-        let url = true ? urlProd : urlDev    // urlDev,urlProd
-        let i = 0
-        for (let item of tem1_92) {
 
-          let { id, from_place, to_place, service_area_id, service_area_id_elife, from_address, to_address, strategy_id, batch,
-            is_active, partner_id
-          } = item
-
-          from_address = from_address.replace(/\'/g, "\\\'")
-          to_address = to_address.replace(/\'/g, "\\\'")
-          from_place = from_place.replace(/\'/g, "\\\'")
-          to_place = to_place.replace(/\'/g, "\\\'")
-
-          if (!batch) {
-            batch = 0
-          }
-          if (!is_active) {
-            is_active = 0
-          }
-
-          let pricingJson = await getPricingJsonBySvcId(urlProd, service_area_id)
-
-          let airportInfoObj = await this.getAirport(from_place, to_place)
-          let { isPickup, airportInfo } = airportInfoObj
-
-
-          let jsonHandled = this.jsonHandler3(pricingJson, from_place, to_place, isPickup, airportInfo)
-          if (!jsonHandled) {
-            this.noInsertList.push(item)
-            is_active = -1
-            batch = 0
-            let res = await this.updateIsActiveAndBatch(url, id, is_active, batch)
-            continue
-          }
-
-          let { adjJson, from_place_lat_lng, to_place_lat_lng } = jsonHandled
-
-          let route = {
-            from_place,
-            to_place,
-            service_area_id,
-
-            json: JSON.stringify(adjJson),
-            name: `${from_place}-${to_place}`,
-            from_place_lat_lng: JSON.stringify(from_place_lat_lng),
-            to_place_lat_lng: JSON.stringify(to_place_lat_lng),
-
-
-            service_area_id_elife,
-            from_address,
-            to_address,
-
-            strategy_id,
-            id,
-            batch,
-            is_active
-          }
-
-          let { partnerInfo } = this.getPatnerInfo(partner_id)
-
-          route = Object.assign({}, route, partnerInfo)
-
-
-
-
-
-          console.log(route);
-          console.log(`------------${i++}-----------`);
-          let insertRes = await this.updateRouteV2(url, route)
-
-          this.doneList.push(item)
-
-
-        }
-
-        console.log('-- this.noInsertList---', this.noInsertList);
-        console.log('-- this.doneList---', this.doneList);
-
-
-      }
 
 
       async updateCostAndPrice() {
-
-        let routes = [
-          {
-            "id": 1,
-            "service_area_id": 52314,
-            "from_place": "MIA",
-            "to_place": "Miami beach"
-          },
-          {
-            "id": 4,
-            "service_area_id": 52426,
-            "from_place": "MCO",
-            "to_place": "Orlando"
-          },
-          {
-            "id": 8,
-            "service_area_id": 52427,
-            "from_place": "KIX",
-            "to_place": "大阪"
-          },
-          {
-            "id": 12,
-            "service_area_id": 52157,
-            "from_place": "KUL",
-            "to_place": "吉隆坡市区"
-          },
-          {
-            "id": 15,
-            "service_area_id": 52423,
-            "from_place": "AUA",
-            "to_place": "Aruba Downtown"
-          },
-          {
-            "id": 16,
-            "service_area_id": 52640,
-            "from_place": "SCL",
-            "to_place": "Las condes"
-          },
-          {
-            "id": 22,
-            "service_area_id": 52655,
-            "from_place": "SEA",
-            "to_place": "Seattle"
-          },
-          {
-            "id": 23,
-            "service_area_id": 52384,
-            "from_place": "MSY",
-            "to_place": "New Orleans"
-          },
-          {
-            "id": 42,
-            "service_area_id": 52258,
-            "from_place": "MAD",
-            "to_place": "madrid 3"
-          },
-          {
-            "id": 43,
-            "service_area_id": 52426,
-            "from_place": "MCO",
-            "to_place": "disney world"
-          },
-          {
-            "id": 92,
-            "service_area_id": 52423,
-            "from_place": "Aruba Downtown",
-            "to_place": "AUA"
-          },
-          {
-            "id": 93,
-            "service_area_id": 52215,
-            "from_place": "LIM",
-            "to_place": "Lima,Peru"
-          },
-          {
-            "id": 94,
-            "service_area_id": 52426,
-            "from_place": "Orlando",
-            "to_place": "MCO"
-          },
-          {
-            "id": 96,
-            "service_area_id": 52215,
-            "from_place": "Lima,Peru",
-            "to_place": "LIM"
-          },
-          {
-            "id": 98,
-            "service_area_id": 52460,
-            "from_place": "CDG",
-            "to_place": "Paris"
-          },
-          {
-            "id": 99,
-            "service_area_id": 52313,
-            "from_place": "MEX",
-            "to_place": "Mexico city mid"
-          },
-          {
-            "id": 102,
-            "service_area_id": 52021,
-            "from_place": "Waikiki",
-            "to_place": "HNL"
-          },
-          {
-            "id": 105,
-            "service_area_id": 52769,
-            "from_place": "HND",
-            "to_place": "东京2"
-          },
-          {
-            "id": 107,
-            "service_area_id": 52427,
-            "from_place": "大阪",
-            "to_place": "KIX"
-          },
-          {
-            "id": 111,
-            "service_area_id": 52258,
-            "from_place": "madrid 3",
-            "to_place": "MAD"
-          },
-          {
-            "id": 112,
-            "service_area_id": 52313,
-            "from_place": "Mexico city mid",
-            "to_place": "MEX"
-          },
-          {
-            "id": 115,
-            "service_area_id": 52665,
-            "from_place": "PVG",
-            "to_place": "上海市区左"
-          },
-          {
-            "id": 116,
-            "service_area_id": 51630,
-            "from_place": "BCN",
-            "to_place": "Barcelona"
-          },
-          {
-            "id": 119,
-            "service_area_id": 52347,
-            "from_place": "BOM",
-            "to_place": "Mumbai Airport"
-          },
-          {
-            "id": 120,
-            "service_area_id": 51621,
-            "from_place": "BKK",
-            "to_place": "市区中心"
-          },
-          {
-            "id": 121,
-            "service_area_id": 52623,
-            "from_place": "san francisco",
-            "to_place": "SFO"
-          },
-          {
-            "id": 123,
-            "service_area_id": 52347,
-            "from_place": "Mumbai Airport",
-            "to_place": "BOM"
-          },
-          {
-            "id": 124,
-            "service_area_id": 52038,
-            "from_place": "HYD- Madhapur",
-            "to_place": "HYD"
-          },
-          {
-            "id": 125,
-            "service_area_id": 52769,
-            "from_place": "东京2",
-            "to_place": "HND"
-          },
-          {
-            "id": 126,
-            "service_area_id": 52157,
-            "from_place": "吉隆坡市区",
-            "to_place": "KUL"
-          },
-          {
-            "id": 127,
-            "service_area_id": 52384,
-            "from_place": "New Orleans",
-            "to_place": "MSY"
-          },
-          {
-            "id": 129,
-            "service_area_id": 52645,
-            "from_place": "GRU",
-            "to_place": "Centro"
-          },
-          {
-            "id": 130,
-            "service_area_id": 51656,
-            "from_place": "BER",
-            "to_place": "Berlin"
-          },
-          {
-            "id": 132,
-            "service_area_id": 52084,
-            "from_place": "JNB",
-            "to_place": "3Sandton"
-          },
-          {
-            "id": 133,
-            "service_area_id": 52314,
-            "from_place": "Miami beach",
-            "to_place": "MIA"
-          },
-          {
-            "id": 134,
-            "service_area_id": 51630,
-            "from_place": "Barcelona",
-            "to_place": "BCN"
-          },
-          {
-            "id": 135,
-            "service_area_id": 52297,
-            "from_place": "MRU",
-            "to_place": "Reservoir Road*"
-          },
-          {
-            "id": 136,
-            "service_area_id": 52084,
-            "from_place": "3Sandton",
-            "to_place": "JNB"
-          },
-          {
-            "id": 137,
-            "service_area_id": 51874,
-            "from_place": "DXB",
-            "to_place": "1Dubai1"
-          },
-          {
-            "id": 142,
-            "service_area_id": 51621,
-            "from_place": "市区中心",
-            "to_place": "BKK"
-          },
-          {
-            "id": 143,
-            "service_area_id": 52665,
-            "from_place": "上海市区左",
-            "to_place": "PVG"
-          },
-          {
-            "id": 146,
-            "service_area_id": 52472,
-            "from_place": "PEN",
-            "to_place": "乔治城新"
-          },
-          {
-            "id": 148,
-            "service_area_id": 51682,
-            "from_place": "BOG",
-            "to_place": "Bogota"
-          },
-          {
-            "id": 149,
-            "service_area_id": 52655,
-            "from_place": "Seattle",
-            "to_place": "SEA"
-          },
-          {
-            "id": 150,
-            "service_area_id": 52513,
-            "from_place": "OPO",
-            "to_place": "Porto"
-          },
-          {
-            "id": 152,
-            "service_area_id": 51739,
-            "from_place": "CUN",
-            "to_place": "Cancun"
-          },
-          {
-            "id": 153,
-            "service_area_id": 52814,
-            "from_place": "USH",
-            "to_place": "Ushuaia"
-          },
-          {
-            "id": 154,
-            "service_area_id": 52683,
-            "from_place": "SIN",
-            "to_place": "新加坡市区"
-          },
-          {
-            "id": 156,
-            "service_area_id": 52534,
-            "from_place": "Punta Mita",
-            "to_place": "PVR"
-          },
-          {
-            "id": 157,
-            "service_area_id": 52640,
-            "from_place": "Las condes",
-            "to_place": "SCL"
-          },
-          {
-            "id": 158,
-            "service_area_id": 51973,
-            "from_place": "CAN",
-            "to_place": "天河"
-          },
-          {
-            "id": 159,
-            "service_area_id": 52314,
-            "from_place": "MIA",
-            "to_place": "miami airport"
-          },
-          {
-            "id": 160,
-            "service_area_id": 52314,
-            "from_place": "miami airport",
-            "to_place": "MIA"
-          },
-          {
-            "id": 161,
-            "service_area_id": 51656,
-            "from_place": "Berlin",
-            "to_place": "BER"
-          },
-          {
-            "id": 163,
-            "service_area_id": 52814,
-            "from_place": "Ushuaia",
-            "to_place": "USH"
-          },
-          {
-            "id": 164,
-            "service_area_id": 52308,
-            "from_place": "MDZ",
-            "to_place": "Mendoza"
-          },
-          {
-            "id": 165,
-            "service_area_id": 52315,
-            "from_place": "Milan",
-            "to_place": "MXP"
-          },
-          {
-            "id": 166,
-            "service_area_id": 52769,
-            "from_place": "HND",
-            "to_place": "东京1"
-          },
-          {
-            "id": 167,
-            "service_area_id": 52308,
-            "from_place": "Mendoza",
-            "to_place": "MDZ"
-          },
-          {
-            "id": 169,
-            "service_area_id": 52513,
-            "from_place": "Porto",
-            "to_place": "OPO"
-          },
-          {
-            "id": 170,
-            "service_area_id": 52297,
-            "from_place": "Reservoir Road*",
-            "to_place": "MRU"
-          },
-          {
-            "id": 171,
-            "service_area_id": 51812,
-            "from_place": "Copenhagen",
-            "to_place": "CPH"
-          },
-          {
-            "id": 173,
-            "service_area_id": 52534,
-            "from_place": "PVR",
-            "to_place": "Puerto Vallarta"
-          },
-          {
-            "id": 175,
-            "service_area_id": 52282,
-            "from_place": "Manzanillo",
-            "to_place": "ZLO"
-          },
-          {
-            "id": 176,
-            "service_area_id": 52282,
-            "from_place": "ZLO",
-            "to_place": "Manzanillo"
-          },
-          {
-            "id": 177,
-            "service_area_id": 51711,
-            "from_place": "BUD",
-            "to_place": "Budapest"
-          },
-          {
-            "id": 180,
-            "service_area_id": 52427,
-            "from_place": "KIX",
-            "to_place": "京都"
-          },
-          {
-            "id": 181,
-            "service_area_id": 52460,
-            "from_place": "ORY",
-            "to_place": "Paris"
-          },
-          {
-            "id": 185,
-            "service_area_id": 52482,
-            "from_place": "Phnom Penh",
-            "to_place": "PNH"
-          },
-          {
-            "id": 186,
-            "service_area_id": 52279,
-            "from_place": "MNL",
-            "to_place": "8-Barangay"
-          },
-          {
-            "id": 187,
-            "service_area_id": 51973,
-            "from_place": "CAN",
-            "to_place": "荔湾"
-          },
-          {
-            "id": 188,
-            "service_area_id": 51682,
-            "from_place": "Bogota",
-            "to_place": "BOG"
-          },
-          {
-            "id": 190,
-            "service_area_id": 52680,
-            "from_place": "Siem Reap",
-            "to_place": "SAI"
-          },
-          {
-            "id": 191,
-            "service_area_id": 52619,
-            "from_place": "SAT",
-            "to_place": "San Antonio"
-          },
-          {
-            "id": 192,
-            "service_area_id": 52426,
-            "from_place": "disney world",
-            "to_place": "MCO"
-          },
-          {
-            "id": 194,
-            "service_area_id": 51739,
-            "from_place": "Cancun",
-            "to_place": "CUN"
-          },
-          {
-            "id": 196,
-            "service_area_id": 51874,
-            "from_place": "1Dubai1",
-            "to_place": "DXB"
-          },
-          {
-            "id": 197,
-            "service_area_id": 52426,
-            "from_place": "MCO",
-            "to_place": "Four coners"
-          },
-          {
-            "id": 198,
-            "service_area_id": 52427,
-            "from_place": "京都",
-            "to_place": "KIX"
-          },
-          {
-            "id": 199,
-            "service_area_id": 52279,
-            "from_place": "MNL",
-            "to_place": "2-市区"
-          },
-          {
-            "id": 200,
-            "service_area_id": 52472,
-            "from_place": "乔治城新",
-            "to_place": "PEN"
-          },
-          {
-            "id": 201,
-            "service_area_id": 52095,
-            "from_place": "EBB",
-            "to_place": "Kampala"
-          },
-          {
-            "id": 202,
-            "service_area_id": 52095,
-            "from_place": "Kampala",
-            "to_place": "EBB"
-          },
-          {
-            "id": 203,
-            "service_area_id": 52460,
-            "from_place": "CDG",
-            "to_place": "迪士尼"
-          },
-          {
-            "id": 204,
-            "service_area_id": 52534,
-            "from_place": "Puerto Vallarta",
-            "to_place": "PVR"
-          },
-          {
-            "id": 206,
-            "service_area_id": 51708,
-            "from_place": "BRU",
-            "to_place": "Brussels"
-          },
-          {
-            "id": 207,
-            "service_area_id": 51935,
-            "from_place": "FNC",
-            "to_place": "Funchal"
-          },
-          {
-            "id": 208,
-            "service_area_id": 52619,
-            "from_place": "San Antonio",
-            "to_place": "SAT"
-          },
-          {
-            "id": 209,
-            "service_area_id": 52151,
-            "from_place": "Ao Nang",
-            "to_place": "KBV"
-          },
-          {
-            "id": 211,
-            "service_area_id": 51886,
-            "from_place": "EDI",
-            "to_place": "Edinburgh"
-          },
-          {
-            "id": 213,
-            "service_area_id": 51991,
-            "from_place": "HAM",
-            "to_place": "Hamburg"
-          },
-          {
-            "id": 215,
-            "service_area_id": 52665,
-            "from_place": "PVG",
-            "to_place": "上海市区右"
-          },
-          {
-            "id": 218,
-            "service_area_id": 52769,
-            "from_place": "东京2",
-            "to_place": "NRT"
-          },
-          {
-            "id": 219,
-            "service_area_id": 52314,
-            "from_place": "port",
-            "to_place": "MIA"
-          },
-          {
-            "id": 220,
-            "service_area_id": 51935,
-            "from_place": "Funchal",
-            "to_place": "FNC"
-          },
-          {
-            "id": 221,
-            "service_area_id": 52426,
-            "from_place": "Four coners",
-            "to_place": "MCO"
-          },
-          {
-            "id": 222,
-            "service_area_id": 52176,
-            "from_place": "LAP",
-            "to_place": "La Paz"
-          },
-          {
-            "id": 225,
-            "service_area_id": 52022,
-            "from_place": "Houston",
-            "to_place": "IAH"
-          },
-          {
-            "id": 226,
-            "service_area_id": 51653,
-            "from_place": "Starefossen",
-            "to_place": "BGO"
-          },
-          {
-            "id": 228,
-            "service_area_id": 52460,
-            "from_place": "Paris",
-            "to_place": "ORY"
-          },
-          {
-            "id": 231,
-            "service_area_id": 52683,
-            "from_place": "新加坡市区",
-            "to_place": "SIN"
-          },
-          {
-            "id": 232,
-            "service_area_id": 51711,
-            "from_place": "Budapest",
-            "to_place": "BUD"
-          },
-          {
-            "id": 233,
-            "service_area_id": 52811,
-            "from_place": "6Nungwi",
-            "to_place": "ZNZ"
-          },
-          {
-            "id": 236,
-            "service_area_id": 52298,
-            "from_place": "Marina Mazatlán",
-            "to_place": "MZT"
-          },
-          {
-            "id": 237,
-            "service_area_id": 52811,
-            "from_place": "ZNZ",
-            "to_place": "6Nungwi"
-          },
-          {
-            "id": 238,
-            "service_area_id": 52176,
-            "from_place": "La Paz",
-            "to_place": "LAP"
-          },
-          {
-            "id": 239,
-            "service_area_id": 52690,
-            "from_place": "SOF",
-            "to_place": "Sofia"
-          },
-          {
-            "id": 337,
-            "service_area_id": 52134,
-            "from_place": "USM",
-            "to_place": "11-查汶2"
-          },
-          {
-            "id": 339,
-            "service_area_id": 51715,
-            "from_place": "BUF",
-            "to_place": "Niagara Falls"
-          }
-        ]
-
         let url = urlProd
         let i = 0
-        for (let item of routes) {
+        for (let item of tem11) {
           let { id, service_area_id, from_place, to_place } = item
-
+          debugger
           let pricingJson = await getPricingJsonBySvcId(url, service_area_id)
 
           let airportInfoObj = await this.getAirport(from_place, to_place)
@@ -871,136 +385,15 @@
           }
 
           console.log(`-----${i++}-------------`);
-          
-          
+
+
         }
-        console.log( this.noInsertList);
+        console.log(this.noInsertList);
 
       }
 
 
-      async copyToOtherPatner() {
-        let url = true ? urlProd : urlDev    // urlDev,urlProd
-        this.noInsertList = []
-        this.doneList = []
-        let partnerId = 3
-        let csvFileName = '2621 route error'
 
-
-
-        for (let item of tem_1) {
-          let { from_place, to_place, from_address, to_address, service_area_id, service_area_id_elife, id } = item
-
-          let strategy_id = 1
-          let batch = 0
-          let is_active = -1
-
-          if (id == 94 || id == 140) {
-            batch = 3
-            is_active = 99
-          }
-
-          if (id == 229) {
-            batch = 1
-            is_active = 99
-          }
-
-
-
-          from_address = from_address.replace(/\'/g, "\\\'")
-          to_address = to_address.replace(/\'/g, "\\\'")
-          from_place = from_place.replace(/\'/g, "\\\'")
-          to_place = to_place.replace(/\'/g, "\\\'")
-
-          let { parentFleetId, partnerInfo } = this.getPatnerInfo(partnerId)
-          let curFleetId = await getOtherFleetSvcId(urlProd, service_area_id, parentFleetId)
-          let pricingJson = await getPricingJsonBySvcId(urlProd, curFleetId)
-
-          let airportInfoObj = await this.getAirport(from_place, to_place)
-          let { isPickup, airportInfo } = airportInfoObj
-
-          let jsonHandled = this.jsonHandler3(pricingJson, from_place, to_place, isPickup, airportInfo)
-
-          if (!jsonHandled) {
-            item['note'] = 'no Fixed Price Zone'
-            this.noInsertList.push(item)
-            continue
-          }
-          let { adjJson, from_place_lat_lng, to_place_lat_lng } = jsonHandled
-
-          let route = {
-            from_place,
-            to_place,
-            service_area_id: curFleetId,
-
-            json: JSON.stringify(adjJson),
-            name: `${from_place}-${to_place}`,
-            from_place_lat_lng: JSON.stringify(from_place_lat_lng),
-            to_place_lat_lng: JSON.stringify(to_place_lat_lng),
-
-            service_area_id_elife,
-            from_address,
-            to_address,
-
-            strategy_id,
-            batch,
-            is_active
-          }
-
-          route = Object.assign({}, route, partnerInfo)
-
-
-          this.i++
-
-
-          route['id'] = id
-          console.log(`-----------${this.i}------------`);
-          console.log(route);
-          let insertRes = await this.updateRouteV2(url, route)
-
-          // let res = await this.insertSppRouteV2(url, route)
-
-          // if (res) {
-          //   let { lastId } = res
-          //   let vehicles = this.getVehicles()
-          //   let routeId = id
-          //   let vehicleCostObj = await this.getCostProfit(url, routeId)
-          //   let vehicleCost = vehicleCostObj.results
-          //   let noSelectVehicles = []
-          //   for (let v of vehicleCost) {
-          //     let { cost, profit, vehicle_class_id } = v
-
-          //     let jsonHandled = this.jsonHandler3(pricingJson, from_place, to_place, isPickup, airportInfo, vehicle_class_id)
-          //     let pAmt = jsonHandled?.pAmt || undefined
-          //     if (pAmt) {
-
-          //       console.log(lastId, vehicle_class_id, cost, profit, pAmt);
-
-          //       let insertCostRes = await this.insertCost(url, lastId, vehicle_class_id, cost, profit)
-          //       let insertAdjRes = await this.insertAdj(url, pAmt, lastId, vehicle_class_id)
-          //     } else {
-          //       let vehicle = vehicleList.find(vehicle => vehicle.vehicle_id == vehicle_class_id)
-          //       let { vehicle_name } = vehicle
-
-          //       noSelectVehicles.push(vehicle_name)
-          //     }
-          //   }
-
-          //   if (noSelectVehicles.length) {
-          //     item['note'] = `${noSelectVehicles.join(',')} has not been select in the service area.`
-          //     this.noInsertList.push(item)
-          //     noSelectVehicles = []
-          //   }
-
-
-          // } else {
-          //   item['note'] = 'insert error'
-          //   this.noInsertList.push(item)
-          // }
-        }
-
-        this.downloadSvcData(csvFileName)
-      }
 
       async getCostProfit(url, routeId) {
         let res = await fetchData({
@@ -1049,236 +442,6 @@
           partnerInfo
         }
       }
-
-
-      async addRouteTop200Price() {
-        let url = true ? urlProd : urlDev    // urlDev,urlProd
-        let noFixedPriceZone = []
-        let noVehicle = []
-        let noRoute = []
-        let doneList = []
-        let vehicles = this.getVehicles()
-
-        let list = mozio_9_28
-
-        let cStr = ' Cost'
-        let pStr = ' min profit'
-
-        let partnerId = 3
-
-        let parentFleetId = 15
-        switch (partnerId) {
-          case 2621:
-            parentFleetId = 61654
-            break;
-          case 3:
-            parentFleetId = 51488
-            break;
-          default:
-            break;
-        }
-
-        console.log(list);
-        let i = 0
-        for (let item of list) {
-          let { from_zone, to_zone, service_area_id, from_address, to_address, } = item
-          let { id: routeId } = await this.getRoute(urlProd, from_zone, to_zone, partnerId)
-          if (!routeId) {
-            item['note'] = 'no route'
-            this.noInsertList.push(item)
-            continue
-          }
-
-          let airportInfoObj = await this.getAirport(from_zone, to_zone)
-          if (!airportInfoObj) {
-            item['note'] = 'No  airport'
-            continue
-          }
-          let { isPickup, airportInfo } = airportInfoObj
-          let airportCode = isPickup ? from_zone : to_zone
-
-          let fleetInfo = await this.getFleetIdAndPricingByAirport(urlProd, airportCode, parentFleetId)
-          if (!fleetInfo) {
-            item['note'] = 'NO fleet'
-            this.noInsertList.push(item)
-            continue
-          }
-          let { fleet_id, pricing, pricing_id } = fleetInfo
-          let pricingJson = JSON.parse(pricing)
-
-          for (let v of vehicles) {
-            let cost = item[`${v}${cStr}`]
-            let profit = item[`${v}${pStr}`]
-            if (!cost) {
-              // noVehicle.push(`${service_area_id}-${curFleetId}-${v}`)
-              continue
-            }
-            cost = Number(cost.replace(/\$/g, ''))
-            if (!profit) {
-              profit = '0'
-            }
-            profit = Number(profit.replace(/\%/g, '')) / 100
-
-            let vid = vehicleList.find(vehicle => vehicle.vehicle_name == v).vehicle_id
-
-            let jsonHandled = this.jsonHandler3(pricingJson, from_zone, to_zone, isPickup, airportInfo, vid)
-            if (!jsonHandled) {
-              item['note'] = 'no Fixed Price Zone'
-              this.noInsertList.push(item)
-              continue
-            }
-
-
-
-            let { pAmt } = jsonHandled
-            console.log(service_area_id, '--', routeId, '--', v, '--', vid, '----', cost, '---', profit, '--', pAmt);
-
-
-
-            if (pAmt && cost) {
-              let insertCostRes = await this.insertCost(url, routeId, vid, cost, profit)
-              let insertAdjRes = await this.insertAdj(url, pAmt, routeId, vid)
-            }
-
-            doneList.push(routeId)
-          }
-          console.log(`-------${i++}--------`);
-        }
-
-        console.log('--this.noInsertList--', this.noInsertList);
-        console.log('--noVehicle--', noVehicle);
-        let dones = Array.from(new Set(doneList))
-        console.log('--doneList--', dones);
-
-        this.downLoadCSV(this.noInsertList, 'this.noInsertList')
-
-      }
-
-
-      async addRouteTop200() {
-        let url = true ? urlProd : urlDev    // urlDev,urlProd
-        let partnerId = 3 //Booking,Ctrip,Mozio
-        let batch = 0
-        let is_active = 98
-        let strategy_id = 1
-
-        let list = mozio_9_28
-        // switch (partnerId) {
-        //   case 2:
-        //     strategy_id = 4
-        //     break;
-        //   case 2621:
-        //     strategy_id = 3
-        //     break;
-        //   case 3:
-        //     strategy_id = 2
-        //     break;
-        //   default:
-        //     break;
-        // }
-
-        console.log(list);
-
-        let { parentFleetId, partnerInfo } = this.getPatnerInfo(partnerId)
-        let i = 0
-        for (let item of list) {
-
-          let { from_zone, to_zone, from_detail_address, to_detail_address } = item
-          from_zone = from_zone.trim()
-          to_zone = to_zone.trim()
-          let obj = top200Route.find(o => o.from_zone == from_zone && o.to_zone == to_zone)
-          let from_address = from_detail_address || obj?.from_address || null
-          let to_address = to_detail_address || obj?.to_address || null
-          if (!from_address || !to_address) {
-            item['note'] = 'No detailed address'
-            this.noInsertList.push(item)
-            continue
-          }
-
-          from_address = from_address.replace(/\'/g, "\\\'")
-          to_address = to_address.replace(/\'/g, "\\\'")
-          from_zone = from_zone.replace(/\'/g, "\\\'")
-          to_zone = to_zone.replace(/\'/g, "\\\'")
-
-          let airportInfoObj = await this.getAirport(from_zone, to_zone)
-          if (!airportInfoObj) {
-            item['note'] = 'No  airport'
-            continue
-          }
-          let { isPickup, airportInfo } = airportInfoObj
-
-          let airportCode = isPickup ? from_zone : to_zone
-
-          let fleetInfo = await this.getFleetIdAndPricingByAirport(urlProd, airportCode, parentFleetId)
-          if (!fleetInfo) {
-            item['note'] = 'NO fleet'
-            this.noInsertList.push(item)
-            continue
-          }
-          let { fleet_id, pricing, pricing_id } = fleetInfo
-          let pricingJson = JSON.parse(pricing)
-
-
-
-
-          let jsonHandled = this.jsonHandler3(pricingJson, from_zone, to_zone, isPickup, airportInfo)
-          if (!jsonHandled) {
-            item['note'] = 'no Fixed Price Zone'
-            this.noInsertList.push(item)
-            continue
-          }
-          let { adjJson, from_place_lat_lng, to_place_lat_lng } = jsonHandled
-          let { id: routeId } = await this.getRoute(url, from_zone, to_zone, partnerId)
-          let elifefleet = await this.getFleetIdByAirport(url, airportCode, 15)
-
-          let route = {
-            from_place: from_zone,
-            to_place: to_zone,
-            service_area_id: fleet_id,
-
-            json: JSON.stringify(adjJson),
-            name: `${from_zone}-${to_zone}`,
-            from_place_lat_lng: JSON.stringify(from_place_lat_lng),
-            to_place_lat_lng: JSON.stringify(to_place_lat_lng),
-
-
-            service_area_id_elife: elifefleet.fleet_id,
-            from_address,
-            to_address,
-
-            strategy_id,
-            batch,
-            is_active
-          }
-
-          route = Object.assign({}, route, partnerInfo)
-          console.log(route);
-          i++
-          console.log(`-----${i}------`);
-          if (!routeId) {
-            let res = await this.insertSppRouteV2(url, route)
-            if (res) {
-              let { lastId } = res
-              routeId = lastId
-            }
-            this.newRouteIds.push(routeId)
-          } else {
-            route['id'] = routeId
-            // let insertRes = await this.updateRouteV2(url, route)
-            this.existsIds.push(routeId)
-          }
-
-          this.doneList.push(item)
-        }
-        console.log('--noInsertList--', this.noInsertList);
-        console.log('--doneList--', this.doneList);
-        console.log('--this.existsIds--', this.existsIds);
-        console.log('--this.newRouteIds--', this.newRouteIds);
-
-        this.downLoadCSV(this.noInsertList, 'ctrip no insert list')
-      }
-
-
 
 
       async getFleetIdAndPricingByAirport(url, airport, parent_fleet_id) {
@@ -1382,9 +545,6 @@
         },
           route
         )
-
-        console.log(d);
-
         let res = await fetchData({
           url,
           method: "POST",
@@ -1397,34 +557,19 @@
         if (row == 0) {
           return
         }
-
         return { lastId }
 
       }
 
 
-      downloadCSVError(errorList) {
-        let title = ['id', 'airport', 'from_place', 'to_place', 'platform_name']
-        let jsonData = []
-        for (let item of errorList) {
-          let { id, from_place, to_place, platform_name } = item
-          jsonData.push([
-            id,
-            from_place,
-            from_place,
-            to_place,
-            platform_name
-          ])
-        }
-        exportCSV(title, jsonData)
-      }
+
 
 
       async updateRouteV2(url, route) {
 
         let d = Object.assign({}, {
-          sql: 134678978,
-          version: '1.7'
+          sql: 134679330,
+          version: '1.82'
         },
           route
         )
@@ -1443,8 +588,13 @@
       async getAirport(from_place, to_place) {
         let fromAirportInfo = await getAirportInfo(urlProd, from_place)
         let toAirportInfo = await getAirportInfo(urlProd, to_place)
+
+        if (fromAirportInfo.code3 && toAirportInfo.code3) {
+          return { code: 2 }
+        }
+
         if (!fromAirportInfo.code3 && !toAirportInfo.code3) {
-          return
+          return { code: 1 }
         }
 
         let isPickup = fromAirportInfo.code3 ? true : false // from place is airport : true 
@@ -1453,21 +603,28 @@
         if (!isPickup) {
           airportInfo = toAirportInfo
         }
-        return { isPickup, airportInfo }
+        return { isPickup, airportInfo, code: 0 }
       }
 
       jsonHandler3(pricing, from_place, to_place, isPickup, airportInfo, vid) {
         let { zones, vehicleClasses } = pricing
-        if (!zones) return
+        if (!zones) return {
+          code: 1
+        }
+        let flag = polygonCheck(zones)
+        if (!flag) {
+          return {
+            code: 2
+          }
+        }
         let { prices } = zones[0]
-
         let index = zones.findIndex(item => item.name == (isPickup ? to_place : from_place))
         let idx = prices.findIndex(o => o.airport == (isPickup ? from_place : to_place))
-
         if (index == -1 || idx == -1) {
-          return
+          return {
+            code: 1
+          }
         }
-
         let adjJson = {}
         if (isPickup) {
           adjJson['p_amt'] = `zones.${index}.prices.${idx}.p_amt`
@@ -1501,6 +658,7 @@
           adjJson,
           from_place_lat_lng: isPickup ? airportInfo : zone,
           to_place_lat_lng: isPickup ? zone : airportInfo,
+          code: 0
         }
 
         if (pAmt) {
@@ -1508,13 +666,6 @@
         }
         return res
       }
-
-
-
-
-
-
-
 
       async changeStrategyId() {
         for (let item of m51) {
@@ -1574,19 +725,21 @@
 
 
       async updateRoute() {
-        let ids = [117, 140, 184, 323, 735, 736]
-        // for (let item of mozio_9_28) {
-        //   ids.push(item.id)
-        // }
+        let ids = []
+        for (let item of tem) {
+          ids.push(Number(item.ID))
+        }
         let idsStr = ids.join(',')
-        console.log(idsStr);
+        console.log(ids);
+        debugger
         let url = urlProd   // urlDev,urlProd
         let d = {
           sql: 134679330,
-          version: '1.8',
-          batch: 0,
-          is_active: -2,
-          strategy_id: 1,
+          version: '1.83',
+          // batch: 6,
+          // strategy_id: 1,
+          is_active: 99,
+          platform_name:'m.ctrip.com',
           ids: idsStr,
         }
         let res = await fetchData({
@@ -1597,20 +750,15 @@
 
       }
 
-
-
       async getRoute(url, from, to, partner_id) {
-        // select * from spp_route where from_place='{{from}}' and to_place='{{to}}' and service_area_id={{svcId}}
-        //v1.1
-        // select * from spp_route where from_place='{{from}}' and to_place='{{to}}' and partner_id={{partner_id}}
         let res = await fetchData({
           url,
           method: 'POST',
           data: {
-            sql: 134678933,
-            version: '1.1',
-            from,
-            to,
+            sql: 134679330,
+            version: '2.4',
+            from_place: from,
+            to_place: to,
             partner_id
           }
         })
@@ -1620,21 +768,87 @@
 
 
 
-      // async getSvc(url, airport, parent_fleet_id) {
-      //   let { pricing } = await fetchData({
-      //     url,
-      //     method: "POST",
-      //     data: {
-      //       sql: 134678913,
-      //       version: '1.1',
-      //       airport,
-      //       parent_fleet_id
-      //     }
-      //   })
+      async update() {
+        let url = true ? urlProd : urlDev    // urlDev,urlProd
+        let i = 0
+        for (let item of tem1_92) {
 
-      //   let res = JSON.parse(pricing)
-      //   return res
-      // }
+          let { id, from_place, to_place, service_area_id, service_area_id_elife, from_address, to_address, strategy_id, batch,
+            is_active, partner_id
+          } = item
+
+          from_address = from_address.replace(/\'/g, "\\\'")
+          to_address = to_address.replace(/\'/g, "\\\'")
+          from_place = from_place.replace(/\'/g, "\\\'")
+          to_place = to_place.replace(/\'/g, "\\\'")
+
+          if (!batch) {
+            batch = 0
+          }
+          if (!is_active) {
+            is_active = 0
+          }
+
+          let pricingJson = await getPricingJsonBySvcId(urlProd, service_area_id)
+
+          let airportInfoObj = await this.getAirport(from_place, to_place)
+          let { isPickup, airportInfo } = airportInfoObj
+
+
+          let jsonHandled = this.jsonHandler3(pricingJson, from_place, to_place, isPickup, airportInfo)
+          if (!jsonHandled) {
+            this.noInsertList.push(item)
+            is_active = -1
+            batch = 0
+            let res = await this.updateIsActiveAndBatch(url, id, is_active, batch)
+            continue
+          }
+
+          let { adjJson, from_place_lat_lng, to_place_lat_lng } = jsonHandled
+
+          let route = {
+            from_place,
+            to_place,
+            service_area_id,
+
+            json: JSON.stringify(adjJson),
+            name: `${from_place}-${to_place}`,
+            from_place_lat_lng: JSON.stringify(from_place_lat_lng),
+            to_place_lat_lng: JSON.stringify(to_place_lat_lng),
+
+
+            service_area_id_elife,
+            from_address,
+            to_address,
+
+            strategy_id,
+            id,
+            batch,
+            is_active
+          }
+
+          let { partnerInfo } = this.getPatnerInfo(partner_id)
+
+          route = Object.assign({}, route, partnerInfo)
+
+
+
+
+
+          console.log(route);
+          console.log(`------------${i++}-----------`);
+          let insertRes = await this.updateRouteV2(url, route)
+
+          this.doneList.push(item)
+
+
+        }
+
+        console.log('-- this.noInsertList---', this.noInsertList);
+        console.log('-- this.doneList---', this.doneList);
+
+
+      }
 
 
       getVehicles() {
@@ -1654,7 +868,1294 @@
 
         return vehicles
       }
+
+
+      // async copyToOtherPatner() {
+      //   let url = true ? urlProd : urlDev    // urlDev,urlProd
+      //   this.noInsertList = []
+      //   this.doneList = []
+      //   let partnerId = 3
+      //   let csvFileName = '2621 route error'
+
+
+
+      //   for (let item of tem_1) {
+      //     let { from_place, to_place, from_address, to_address, service_area_id, service_area_id_elife, id } = item
+
+      //     let strategy_id = 1
+      //     let batch = 0
+      //     let is_active = -1
+
+      //     if (id == 94 || id == 140) {
+      //       batch = 3
+      //       is_active = 99
+      //     }
+
+      //     if (id == 229) {
+      //       batch = 1
+      //       is_active = 99
+      //     }
+
+
+
+      //     from_address = from_address.replace(/\'/g, "\\\'")
+      //     to_address = to_address.replace(/\'/g, "\\\'")
+      //     from_place = from_place.replace(/\'/g, "\\\'")
+      //     to_place = to_place.replace(/\'/g, "\\\'")
+
+      //     let { parentFleetId, partnerInfo } = this.getPatnerInfo(partnerId)
+      //     let curFleetId = await getOtherFleetSvcId(urlProd, service_area_id, parentFleetId)
+      //     let pricingJson = await getPricingJsonBySvcId(urlProd, curFleetId)
+
+      //     let airportInfoObj = await this.getAirport(from_place, to_place)
+      //     let { isPickup, airportInfo } = airportInfoObj
+
+      //     let jsonHandled = this.jsonHandler3(pricingJson, from_place, to_place, isPickup, airportInfo)
+
+      //     if (!jsonHandled) {
+      //       item['note'] = 'no Fixed Price Zone'
+      //       this.noInsertList.push(item)
+      //       continue
+      //     }
+      //     let { adjJson, from_place_lat_lng, to_place_lat_lng } = jsonHandled
+
+      //     let route = {
+      //       from_place,
+      //       to_place,
+      //       service_area_id: curFleetId,
+
+      //       json: JSON.stringify(adjJson),
+      //       name: `${from_place}-${to_place}`,
+      //       from_place_lat_lng: JSON.stringify(from_place_lat_lng),
+      //       to_place_lat_lng: JSON.stringify(to_place_lat_lng),
+
+      //       service_area_id_elife,
+      //       from_address,
+      //       to_address,
+
+      //       strategy_id,
+      //       batch,
+      //       is_active
+      //     }
+
+      //     route = Object.assign({}, route, partnerInfo)
+
+
+      //     this.i++
+
+
+      //     route['id'] = id
+      //     console.log(`-----------${this.i}------------`);
+      //     console.log(route);
+      //     let insertRes = await this.updateRouteV2(url, route)
+
+      //     // let res = await this.insertSppRouteV2(url, route)
+
+      //     // if (res) {
+      //     //   let { lastId } = res
+      //     //   let vehicles = this.getVehicles()
+      //     //   let routeId = id
+      //     //   let vehicleCostObj = await this.getCostProfit(url, routeId)
+      //     //   let vehicleCost = vehicleCostObj.results
+      //     //   let noSelectVehicles = []
+      //     //   for (let v of vehicleCost) {
+      //     //     let { cost, profit, vehicle_class_id } = v
+
+      //     //     let jsonHandled = this.jsonHandler3(pricingJson, from_place, to_place, isPickup, airportInfo, vehicle_class_id)
+      //     //     let pAmt = jsonHandled?.pAmt || undefined
+      //     //     if (pAmt) {
+
+      //     //       console.log(lastId, vehicle_class_id, cost, profit, pAmt);
+
+      //     //       let insertCostRes = await this.insertCost(url, lastId, vehicle_class_id, cost, profit)
+      //     //       let insertAdjRes = await this.insertAdj(url, pAmt, lastId, vehicle_class_id)
+      //     //     } else {
+      //     //       let vehicle = vehicleList.find(vehicle => vehicle.vehicle_id == vehicle_class_id)
+      //     //       let { vehicle_name } = vehicle
+
+      //     //       noSelectVehicles.push(vehicle_name)
+      //     //     }
+      //     //   }
+
+      //     //   if (noSelectVehicles.length) {
+      //     //     item['note'] = `${noSelectVehicles.join(',')} has not been select in the service area.`
+      //     //     this.noInsertList.push(item)
+      //     //     noSelectVehicles = []
+      //     //   }
+
+
+      //     // } else {
+      //     //   item['note'] = 'insert error'
+      //     //   this.noInsertList.push(item)
+      //     // }
+      //   }
+
+      //   this.downloadSvcData(csvFileName)
+      // }
     }
+
+    let vehicleList = [
+      {
+        "vehicle_id": 1,
+        "vehicle_name": "Sedan",
+        "o_max_passenger": 3,
+        "o_maker": "Toyota",
+        "o_model": "Camry",
+        "o_image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/sedan.jpg",
+        "o_image_url_2": "https://elifelimo.s3.us-east-2.amazonaws.com/art/home/vehicle-classes/sedan.png",
+        "o_max_luggage": 3,
+        "vm_id": null,
+        "maker": null,
+        "model": null,
+        "max_passenger": null,
+        "max_luggage": null,
+        "image_url_1": null,
+        "image_url_2": null,
+        "maker_txt_id": null,
+        "model_txt_id": null,
+        "seq_front": 1
+      },
+      {
+        "vehicle_id": 12,
+        "vehicle_name": "Comfort Sedan",
+        "o_max_passenger": 3,
+        "o_maker": "Toyota",
+        "o_model": "Camry",
+        "o_image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/Toyota-Camry.jpg",
+        "o_image_url_2": "https://elifelimo.s3.us-east-2.amazonaws.com/art/home/vehicle-classes/Toyota-Camry.jpg",
+        "o_max_luggage": 3,
+        "vm_id": null,
+        "maker": null,
+        "model": null,
+        "max_passenger": null,
+        "max_luggage": null,
+        "image_url_1": null,
+        "image_url_2": null,
+        "maker_txt_id": null,
+        "model_txt_id": null,
+        "seq_front": 1
+      },
+      {
+        "vehicle_id": 41,
+        "vehicle_name": "EV Sedan",
+        "o_max_passenger": 3,
+        "o_maker": "Chevy",
+        "o_model": "Bolt EUV",
+        "o_image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/home/vehicle-classes/ev-sedan.png",
+        "o_image_url_2": "https://elifelimo.s3.us-east-2.amazonaws.com/art/home/vehicle-classes/ev-sedan.png",
+        "o_max_luggage": 3,
+        "vm_id": null,
+        "maker": null,
+        "model": null,
+        "max_passenger": null,
+        "max_luggage": null,
+        "image_url_1": null,
+        "image_url_2": null,
+        "maker_txt_id": null,
+        "model_txt_id": null,
+        "seq_front": 2
+      },
+      {
+        "vehicle_id": 2,
+        "vehicle_name": "Business Sedan",
+        "o_max_passenger": 3,
+        "o_maker": "Lincoln",
+        "o_model": "Continental",
+        "o_image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/besiness-sedan.jpg",
+        "o_image_url_2": "https://elifelimo.s3.us-east-2.amazonaws.com/art/home/vehicle-classes/businesssedan.png",
+        "o_max_luggage": 3,
+        "vm_id": null,
+        "maker": null,
+        "model": null,
+        "max_passenger": null,
+        "max_luggage": null,
+        "image_url_1": null,
+        "image_url_2": null,
+        "maker_txt_id": null,
+        "model_txt_id": null,
+        "seq_front": 3
+      },
+      {
+        "vehicle_id": 14,
+        "vehicle_name": "Luxury Sedan",
+        "o_max_passenger": 3,
+        "o_maker": "Mercedes Benz",
+        "o_model": "e350",
+        "o_image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/Luxury-Sedan.png",
+        "o_image_url_2": "https://elifelimo.s3.us-east-2.amazonaws.com/art/home/vehicle-classes/Luxury-Sedan.png",
+        "o_max_luggage": 3,
+        "vm_id": null,
+        "maker": null,
+        "model": null,
+        "max_passenger": null,
+        "max_luggage": null,
+        "image_url_1": null,
+        "image_url_2": null,
+        "maker_txt_id": null,
+        "model_txt_id": null,
+        "seq_front": 3
+      },
+      {
+        "vehicle_id": 42,
+        "vehicle_name": "EV Business Sedan",
+        "o_max_passenger": 3,
+        "o_maker": "Tesla",
+        "o_model": "Model 3",
+        "o_image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/home/vehicle-classes/ev-business-sedan.png",
+        "o_image_url_2": "https://elifelimo.s3.us-east-2.amazonaws.com/art/home/vehicle-classes/ev-business-sedan.png",
+        "o_max_luggage": 3,
+        "vm_id": null,
+        "maker": null,
+        "model": null,
+        "max_passenger": null,
+        "max_luggage": null,
+        "image_url_1": null,
+        "image_url_2": null,
+        "maker_txt_id": null,
+        "model_txt_id": null,
+        "seq_front": 4
+      },
+      {
+        "vehicle_id": 40,
+        "vehicle_name": "First Class Sedan",
+        "o_max_passenger": 3,
+        "o_maker": "Mercedes",
+        "o_model": "S550",
+        "o_image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/first-class.jpg",
+        "o_image_url_2": "https://elifelimo.s3.us-east-2.amazonaws.com/art/home/vehicle-classes/firstclass.png",
+        "o_max_luggage": 3,
+        "vm_id": null,
+        "maker": null,
+        "model": null,
+        "max_passenger": null,
+        "max_luggage": null,
+        "image_url_1": null,
+        "image_url_2": null,
+        "maker_txt_id": null,
+        "model_txt_id": null,
+        "seq_front": 5
+      },
+      {
+        "vehicle_id": 43,
+        "vehicle_name": "EV First Class Sedan",
+        "o_max_passenger": 3,
+        "o_maker": "Tesla",
+        "o_model": "Model S",
+        "o_image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/home/vehicle-classes/ev-firstclass.png",
+        "o_image_url_2": "https://elifelimo.s3.us-east-2.amazonaws.com/art/home/vehicle-classes/ev-firstclass.png",
+        "o_max_luggage": 3,
+        "vm_id": null,
+        "maker": null,
+        "model": null,
+        "max_passenger": null,
+        "max_luggage": null,
+        "image_url_1": null,
+        "image_url_2": null,
+        "maker_txt_id": null,
+        "model_txt_id": null,
+        "seq_front": 7
+      },
+      {
+        "vehicle_id": 44,
+        "vehicle_name": "Rolls Royce Ghost",
+        "o_max_passenger": 2,
+        "o_maker": "Rolls Royce",
+        "o_model": "Ghost",
+        "o_image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/rolls-royce-ghost.jpg",
+        "o_image_url_2": "https://elifelimo.s3.us-east-2.amazonaws.com/art/home/vehicle-classes/rolls-royce-ghost.png",
+        "o_max_luggage": 2,
+        "vm_id": null,
+        "maker": null,
+        "model": null,
+        "max_passenger": null,
+        "max_luggage": null,
+        "image_url_1": null,
+        "image_url_2": null,
+        "maker_txt_id": null,
+        "model_txt_id": null,
+        "seq_front": 8
+      },
+      {
+        "vehicle_id": 45,
+        "vehicle_name": "Rolls Royce Phantom",
+        "o_max_passenger": 2,
+        "o_maker": "Rolls Royce",
+        "o_model": "Phantom",
+        "o_image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/rolls-royce-phantom.jpg",
+        "o_image_url_2": "https://elifelimo.s3.us-east-2.amazonaws.com/art/home/vehicle-classes/rolls-royce-phantom.png",
+        "o_max_luggage": 2,
+        "vm_id": null,
+        "maker": null,
+        "model": null,
+        "max_passenger": null,
+        "max_luggage": null,
+        "image_url_1": null,
+        "image_url_2": null,
+        "maker_txt_id": null,
+        "model_txt_id": null,
+        "seq_front": 9
+      },
+      {
+        "vehicle_id": 46,
+        "vehicle_name": "Bentley",
+        "o_max_passenger": 2,
+        "o_maker": "Bentley",
+        "o_model": "Bentley",
+        "o_image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/bentley.jpg",
+        "o_image_url_2": "https://elifelimo.s3.us-east-2.amazonaws.com/art/home/vehicle-classes/bentley.png",
+        "o_max_luggage": 2,
+        "vm_id": null,
+        "maker": null,
+        "model": null,
+        "max_passenger": null,
+        "max_luggage": null,
+        "image_url_1": null,
+        "image_url_2": null,
+        "maker_txt_id": null,
+        "model_txt_id": null,
+        "seq_front": 10
+      },
+      {
+        "vehicle_id": 47,
+        "vehicle_name": "ClassicCar",
+        "o_max_passenger": 2,
+        "o_maker": "Classic",
+        "o_model": "Classic",
+        "o_image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/classic-car.jpg",
+        "o_image_url_2": "https://elifelimo.s3.us-east-2.amazonaws.com/art/home/vehicle-classes/classic-car.png",
+        "o_max_luggage": 2,
+        "vm_id": null,
+        "maker": null,
+        "model": null,
+        "max_passenger": null,
+        "max_luggage": null,
+        "image_url_1": null,
+        "image_url_2": null,
+        "maker_txt_id": null,
+        "model_txt_id": null,
+        "seq_front": 11
+      },
+      {
+        "vehicle_id": 6,
+        "vehicle_name": "MPV-4",
+        "o_max_passenger": 4,
+        "o_maker": "Toyota",
+        "o_model": "Highlander",
+        "o_image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/mpv-4.jpg",
+        "o_image_url_2": "https://elifelimo.s3.us-east-2.amazonaws.com/art/home/vehicle-classes/mpv4.png",
+        "o_max_luggage": 4,
+        "vm_id": null,
+        "maker": null,
+        "model": null,
+        "max_passenger": null,
+        "max_luggage": null,
+        "image_url_1": null,
+        "image_url_2": null,
+        "maker_txt_id": null,
+        "model_txt_id": null,
+        "seq_front": 12
+      },
+      {
+        "vehicle_id": 3,
+        "vehicle_name": "MPV-5",
+        "o_max_passenger": 5,
+        "o_maker": "Toyota",
+        "o_model": "Sienna",
+        "o_image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/mpv-5.jpg",
+        "o_image_url_2": "https://elifelimo.s3.us-east-2.amazonaws.com/art/home/vehicle-classes/mpv5.png",
+        "o_max_luggage": 5,
+        "vm_id": null,
+        "maker": null,
+        "model": null,
+        "max_passenger": null,
+        "max_luggage": null,
+        "image_url_1": null,
+        "image_url_2": null,
+        "maker_txt_id": null,
+        "model_txt_id": null,
+        "seq_front": 13
+      },
+      {
+        "vehicle_id": 7,
+        "vehicle_name": "MPV-6",
+        "o_max_passenger": 6,
+        "o_maker": "Toyota",
+        "o_model": "Sienna",
+        "o_image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/MPV-6.jpg",
+        "o_image_url_2": "https://elifelimo.s3.us-east-2.amazonaws.com/art/home/vehicle-classes/MPV-6.jpg",
+        "o_max_luggage": 6,
+        "vm_id": null,
+        "maker": null,
+        "model": null,
+        "max_passenger": null,
+        "max_luggage": null,
+        "image_url_1": null,
+        "image_url_2": null,
+        "maker_txt_id": null,
+        "model_txt_id": null,
+        "seq_front": 14
+      },
+      {
+        "vehicle_id": 13,
+        "vehicle_name": "Business MPV-4",
+        "o_max_passenger": 4,
+        "o_maker": "INFINITI",
+        "o_model": "QX60",
+        "o_image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/Business-MPV-4.png",
+        "o_image_url_2": "https://elifelimo.s3.us-east-2.amazonaws.com/art/home/vehicle-classes/Business-MPV-4.png",
+        "o_max_luggage": 4,
+        "vm_id": null,
+        "maker": null,
+        "model": null,
+        "max_passenger": null,
+        "max_luggage": null,
+        "image_url_1": null,
+        "image_url_2": null,
+        "maker_txt_id": null,
+        "model_txt_id": null,
+        "seq_front": 14
+      },
+      {
+        "vehicle_id": 48,
+        "vehicle_name": "EV SUV",
+        "o_max_passenger": 4,
+        "o_maker": "Tesla",
+        "o_model": "Model Y",
+        "o_image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/ev-suv.jpg",
+        "o_image_url_2": "https://elifelimo.s3.us-east-2.amazonaws.com/art/home/vehicle-classes/ev-suv.png",
+        "o_max_luggage": 4,
+        "vm_id": null,
+        "maker": null,
+        "model": null,
+        "max_passenger": null,
+        "max_luggage": null,
+        "image_url_1": null,
+        "image_url_2": null,
+        "maker_txt_id": null,
+        "model_txt_id": null,
+        "seq_front": 15
+      },
+      {
+        "vehicle_id": 49,
+        "vehicle_name": "EV Business SUV",
+        "o_max_passenger": 4,
+        "o_maker": "Tesla",
+        "o_model": "Model X",
+        "o_image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/ev-business-suv.jpg",
+        "o_image_url_2": "https://elifelimo.s3.us-east-2.amazonaws.com/art/home/vehicle-classes/ev-business-suv.png",
+        "o_max_luggage": 4,
+        "vm_id": null,
+        "maker": null,
+        "model": null,
+        "max_passenger": null,
+        "max_luggage": null,
+        "image_url_1": null,
+        "image_url_2": null,
+        "maker_txt_id": null,
+        "model_txt_id": null,
+        "seq_front": 16
+      },
+      {
+        "vehicle_id": 100,
+        "vehicle_name": "SUV",
+        "o_max_passenger": 4,
+        "o_maker": "Toyota",
+        "o_model": "RAV4",
+        "o_image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/SUV.png",
+        "o_image_url_2": "https://elifelimo.s3.us-east-2.amazonaws.com/art/home/vehicle-classes/SUV.png",
+        "o_max_luggage": 4,
+        "vm_id": null,
+        "maker": null,
+        "model": null,
+        "max_passenger": null,
+        "max_luggage": null,
+        "image_url_1": null,
+        "image_url_2": null,
+        "maker_txt_id": null,
+        "model_txt_id": null,
+        "seq_front": 17
+      },
+      {
+        "vehicle_id": 4,
+        "vehicle_name": "Business SUV",
+        "o_max_passenger": 5,
+        "o_maker": "Lincoln",
+        "o_model": "Navigator",
+        "o_image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/businessminivan.jpg",
+        "o_image_url_2": "https://elifelimo.s3.us-east-2.amazonaws.com/art/home/vehicle-classes/businessmpv.png",
+        "o_max_luggage": 5,
+        "vm_id": null,
+        "maker": null,
+        "model": null,
+        "max_passenger": null,
+        "max_luggage": null,
+        "image_url_1": null,
+        "image_url_2": null,
+        "maker_txt_id": null,
+        "model_txt_id": null,
+        "seq_front": 17
+      },
+      {
+        "vehicle_id": 20,
+        "vehicle_name": "Minivan",
+        "o_max_passenger": 5,
+        "o_maker": "Toyota",
+        "o_model": "Sienna",
+        "o_image_url": "",
+        "o_image_url_2": "",
+        "o_max_luggage": 5,
+        "vm_id": null,
+        "maker": null,
+        "model": null,
+        "max_passenger": null,
+        "max_luggage": null,
+        "image_url_1": null,
+        "image_url_2": null,
+        "maker_txt_id": null,
+        "model_txt_id": null,
+        "seq_front": 18
+      },
+      {
+        "vehicle_id": 36,
+        "vehicle_name": "Business Minivan",
+        "o_max_passenger": 5,
+        "o_maker": "Buick",
+        "o_model": "GL8",
+        "o_image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/businessminivan.jpg",
+        "o_image_url_2": "https://elifelimo.s3.us-east-2.amazonaws.com/art/home/vehicle-classes/businessminivan.png",
+        "o_max_luggage": 5,
+        "vm_id": null,
+        "maker": null,
+        "model": null,
+        "max_passenger": null,
+        "max_luggage": null,
+        "image_url_1": null,
+        "image_url_2": null,
+        "maker_txt_id": null,
+        "model_txt_id": null,
+        "seq_front": 19
+      },
+      {
+        "vehicle_id": 52,
+        "vehicle_name": "School Minivan",
+        "o_max_passenger": 4,
+        "o_maker": "Toyota",
+        "o_model": "Sienna",
+        "o_image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/school-minivan.jpg",
+        "o_image_url_2": "https://elifelimo.s3.us-east-2.amazonaws.com/art/home/vehicle-classes/school-minivan.png",
+        "o_max_luggage": 4,
+        "vm_id": null,
+        "maker": null,
+        "model": null,
+        "max_passenger": null,
+        "max_luggage": null,
+        "image_url_1": null,
+        "image_url_2": null,
+        "maker_txt_id": null,
+        "model_txt_id": null,
+        "seq_front": 20
+      },
+      {
+        "vehicle_id": 50,
+        "vehicle_name": "Wheelchair Van",
+        "o_max_passenger": 1,
+        "o_maker": "Toyota",
+        "o_model": "Sienna",
+        "o_image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/wheelchair-van.jpg",
+        "o_image_url_2": "https://elifelimo.s3.us-east-2.amazonaws.com/art/home/vehicle-classes/wheelchair-van.png",
+        "o_max_luggage": 1,
+        "vm_id": 316,
+        "maker": "Toyota",
+        "model": "Sienna",
+        "max_passenger": 1,
+        "max_luggage": 1,
+        "image_url_1": "",
+        "image_url_2": "",
+        "maker_txt_id": 1473,
+        "model_txt_id": 1474,
+        "seq_front": 22
+      },
+      {
+        "vehicle_id": 21,
+        "vehicle_name": "6 Passenger Stretch Sedan",
+        "o_max_passenger": 6,
+        "o_maker": "Liconln",
+        "o_model": "MKT or Chrsley",
+        "o_image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/stretch-limo-6.jpg",
+        "o_image_url_2": "https://elifelimo.s3.us-east-2.amazonaws.com/art/home/vehicle-classes/stretch-limo-6.png",
+        "o_max_luggage": 6,
+        "vm_id": null,
+        "maker": null,
+        "model": null,
+        "max_passenger": null,
+        "max_luggage": null,
+        "image_url_1": null,
+        "image_url_2": null,
+        "maker_txt_id": null,
+        "model_txt_id": null,
+        "seq_front": 23
+      },
+      {
+        "vehicle_id": 22,
+        "vehicle_name": "8 Passenger Stretch Sedan",
+        "o_max_passenger": 8,
+        "o_maker": "Liconln",
+        "o_model": "MKT or Chrsley",
+        "o_image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/stretch-limo-8.jpg",
+        "o_image_url_2": "https://elifelimo.s3.us-east-2.amazonaws.com/art/home/vehicle-classes/stretch-limo-8.png",
+        "o_max_luggage": 8,
+        "vm_id": null,
+        "maker": null,
+        "model": null,
+        "max_passenger": null,
+        "max_luggage": null,
+        "image_url_1": null,
+        "image_url_2": null,
+        "maker_txt_id": null,
+        "model_txt_id": null,
+        "seq_front": 24
+      },
+      {
+        "vehicle_id": 23,
+        "vehicle_name": "10 Passenger Stretch Sedan",
+        "o_max_passenger": 10,
+        "o_maker": "Liconln",
+        "o_model": "MKT or Chrsley",
+        "o_image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/stretch-limo-10.jpg",
+        "o_image_url_2": "https://elifelimo.s3.us-east-2.amazonaws.com/art/home/vehicle-classes/stretch-limo-10.png",
+        "o_max_luggage": 10,
+        "vm_id": 88,
+        "maker": "Liconln",
+        "model": "MKT ",
+        "max_passenger": 9,
+        "max_luggage": 8,
+        "image_url_1": "",
+        "image_url_2": "",
+        "maker_txt_id": 657,
+        "model_txt_id": 658,
+        "seq_front": 25
+      },
+      {
+        "vehicle_id": 24,
+        "vehicle_name": "12 Passenger Stretch SUV",
+        "o_max_passenger": 12,
+        "o_maker": "Liconln",
+        "o_model": "Navigator",
+        "o_image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/stretch-limo-12.jpg",
+        "o_image_url_2": "https://elifelimo.s3.us-east-2.amazonaws.com/art/home/vehicle-classes/stretch-limo-12.png",
+        "o_max_luggage": 12,
+        "vm_id": null,
+        "maker": null,
+        "model": null,
+        "max_passenger": null,
+        "max_luggage": null,
+        "image_url_1": null,
+        "image_url_2": null,
+        "maker_txt_id": null,
+        "model_txt_id": null,
+        "seq_front": 26
+      },
+      {
+        "vehicle_id": 27,
+        "vehicle_name": "16 Passenger Stretch Limo",
+        "o_max_passenger": 16,
+        "o_maker": "Hummer",
+        "o_model": "H2",
+        "o_image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/stretch-limo-16.jpg",
+        "o_image_url_2": "https://elifelimo.s3.us-east-2.amazonaws.com/art/home/vehicle-classes/stretch-limo-16.png",
+        "o_max_luggage": 16,
+        "vm_id": 15,
+        "maker": "Hummer",
+        "model": "H2",
+        "max_passenger": 15,
+        "max_luggage": 10,
+        "image_url_1": "",
+        "image_url_2": "",
+        "maker_txt_id": 113,
+        "model_txt_id": 114,
+        "seq_front": 27
+      },
+      {
+        "vehicle_id": 25,
+        "vehicle_name": "12 Passenger Party Bus",
+        "o_max_passenger": 12,
+        "o_maker": "Mercedes",
+        "o_model": "Sprinter",
+        "o_image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/party-bus-12.jpg",
+        "o_image_url_2": "https://elifelimo.s3.us-east-2.amazonaws.com/art/home/vehicle-classes/party-bus-12.png",
+        "o_max_luggage": 12,
+        "vm_id": null,
+        "maker": null,
+        "model": null,
+        "max_passenger": null,
+        "max_luggage": null,
+        "image_url_1": null,
+        "image_url_2": null,
+        "maker_txt_id": null,
+        "model_txt_id": null,
+        "seq_front": 28
+      },
+      {
+        "vehicle_id": 26,
+        "vehicle_name": "14 Passenger Party Bus",
+        "o_max_passenger": 14,
+        "o_maker": "Mercedes",
+        "o_model": "Sprinter",
+        "o_image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/party-bus-14.jpg",
+        "o_image_url_2": "https://elifelimo.s3.us-east-2.amazonaws.com/art/home/vehicle-classes/party-bus-14.png",
+        "o_max_luggage": 14,
+        "vm_id": null,
+        "maker": null,
+        "model": null,
+        "max_passenger": null,
+        "max_luggage": null,
+        "image_url_1": null,
+        "image_url_2": null,
+        "maker_txt_id": null,
+        "model_txt_id": null,
+        "seq_front": 29
+      },
+      {
+        "vehicle_id": 28,
+        "vehicle_name": "23 Passenger Party Bus",
+        "o_max_passenger": 23,
+        "o_maker": "Ford",
+        "o_model": "F-550",
+        "o_image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/party-bus-23.jpg",
+        "o_image_url_2": "https://elifelimo.s3.us-east-2.amazonaws.com/art/home/vehicle-classes/party-bus-23.png",
+        "o_max_luggage": 23,
+        "vm_id": null,
+        "maker": null,
+        "model": null,
+        "max_passenger": null,
+        "max_luggage": null,
+        "image_url_1": null,
+        "image_url_2": null,
+        "maker_txt_id": null,
+        "model_txt_id": null,
+        "seq_front": 30
+      },
+      {
+        "vehicle_id": 8,
+        "vehicle_name": "Minibus-7",
+        "o_max_passenger": 7,
+        "o_maker": "Ford",
+        "o_model": "Transit",
+        "o_image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/Minibus-7.jpg",
+        "o_image_url_2": "https://elifelimo.s3.us-east-2.amazonaws.com/art/home/vehicle-classes/Minibus-7.jpg",
+        "o_max_luggage": 7,
+        "vm_id": null,
+        "maker": null,
+        "model": null,
+        "max_passenger": null,
+        "max_luggage": null,
+        "image_url_1": null,
+        "image_url_2": null,
+        "maker_txt_id": null,
+        "model_txt_id": null,
+        "seq_front": 31
+      },
+      {
+        "vehicle_id": 5,
+        "vehicle_name": "Minibus-8",
+        "o_max_passenger": 8,
+        "o_maker": "Ford",
+        "o_model": "Transit",
+        "o_image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/minibus-8.jpg",
+        "o_image_url_2": "https://elifelimo.s3.us-east-2.amazonaws.com/art/home/vehicle-classes/minibus8.png",
+        "o_max_luggage": 8,
+        "vm_id": null,
+        "maker": null,
+        "model": null,
+        "max_passenger": null,
+        "max_luggage": null,
+        "image_url_1": null,
+        "image_url_2": null,
+        "maker_txt_id": null,
+        "model_txt_id": null,
+        "seq_front": 32
+      },
+      {
+        "vehicle_id": 9,
+        "vehicle_name": "Minibus-10",
+        "o_max_passenger": 10,
+        "o_maker": "Ford",
+        "o_model": "Ford",
+        "o_image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/minibus-10.jpg",
+        "o_image_url_2": "https://elifelimo.s3.us-east-2.amazonaws.com/art/home/vehicle-classes/minibus10.png",
+        "o_max_luggage": 10,
+        "vm_id": null,
+        "maker": null,
+        "model": null,
+        "max_passenger": null,
+        "max_luggage": null,
+        "image_url_1": null,
+        "image_url_2": null,
+        "maker_txt_id": null,
+        "model_txt_id": null,
+        "seq_front": 33
+      },
+      {
+        "vehicle_id": 11,
+        "vehicle_name": "Minibus-14",
+        "o_max_passenger": 14,
+        "o_maker": "Mercedes",
+        "o_model": "Sprinter",
+        "o_image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/minibus-14.jpg",
+        "o_image_url_2": "https://elifelimo.s3.us-east-2.amazonaws.com/art/home/vehicle-classes/minibus14.png",
+        "o_max_luggage": 14,
+        "vm_id": null,
+        "maker": null,
+        "model": null,
+        "max_passenger": null,
+        "max_luggage": null,
+        "image_url_1": null,
+        "image_url_2": null,
+        "maker_txt_id": null,
+        "model_txt_id": null,
+        "seq_front": 34
+      },
+      {
+        "vehicle_id": 10,
+        "vehicle_name": "Minibus-12",
+        "o_max_passenger": 12,
+        "o_maker": "Mercedes",
+        "o_model": "Sprinter",
+        "o_image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/minibus-12.jpg",
+        "o_image_url_2": "https://elifelimo.s3.us-east-2.amazonaws.com/art/home/vehicle-classes/minibus12.png",
+        "o_max_luggage": 12,
+        "vm_id": 87,
+        "maker": "Mercedes",
+        "model": "Sprinter",
+        "max_passenger": 11,
+        "max_luggage": 11,
+        "image_url_1": "",
+        "image_url_2": "",
+        "maker_txt_id": 649,
+        "model_txt_id": 650,
+        "seq_front": 34
+      },
+      {
+        "vehicle_id": 51,
+        "vehicle_name": "Wheelchair Minibus",
+        "o_max_passenger": 2,
+        "o_maker": "Ford",
+        "o_model": "Transit",
+        "o_image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/wheelchair-minibus.jpg",
+        "o_image_url_2": "https://elifelimo.s3.us-east-2.amazonaws.com/art/home/vehicle-classes/wheelchair-minibus.png",
+        "o_max_luggage": 2,
+        "vm_id": null,
+        "maker": null,
+        "model": null,
+        "max_passenger": null,
+        "max_luggage": null,
+        "image_url_1": null,
+        "image_url_2": null,
+        "maker_txt_id": null,
+        "model_txt_id": null,
+        "seq_front": 36
+      },
+      {
+        "vehicle_id": 56,
+        "vehicle_name": "9-School Minibus",
+        "o_max_passenger": 9,
+        "o_maker": "Titan School",
+        "o_model": "SRW 1",
+        "o_image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/school-minibus-9.jpg",
+        "o_image_url_2": "https://elifelimo.s3.us-east-2.amazonaws.com/art/home/vehicle-classes/school-minibus-9.png",
+        "o_max_luggage": 9,
+        "vm_id": null,
+        "maker": null,
+        "model": null,
+        "max_passenger": null,
+        "max_luggage": null,
+        "image_url_1": null,
+        "image_url_2": null,
+        "maker_txt_id": null,
+        "model_txt_id": null,
+        "seq_front": 37
+      },
+      {
+        "vehicle_id": 57,
+        "vehicle_name": "14-School Minibus",
+        "o_max_passenger": 14,
+        "o_maker": "Titan School",
+        "o_model": "SRW 1",
+        "o_image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/school-minibus-14.jpg",
+        "o_image_url_2": "https://elifelimo.s3.us-east-2.amazonaws.com/art/home/vehicle-classes/school-minibus-14.png",
+        "o_max_luggage": 14,
+        "vm_id": null,
+        "maker": null,
+        "model": null,
+        "max_passenger": null,
+        "max_luggage": null,
+        "image_url_1": null,
+        "image_url_2": null,
+        "maker_txt_id": null,
+        "model_txt_id": null,
+        "seq_front": 38
+      },
+      {
+        "vehicle_id": 29,
+        "vehicle_name": "16-seat Bus",
+        "o_max_passenger": 16,
+        "o_maker": "Ford",
+        "o_model": "E-450",
+        "o_image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/bus-16.jpg",
+        "o_image_url_2": "https://elifelimo.s3.us-east-2.amazonaws.com/art/home/vehicle-classes/bus-16.png",
+        "o_max_luggage": 16,
+        "vm_id": null,
+        "maker": null,
+        "model": null,
+        "max_passenger": null,
+        "max_luggage": null,
+        "image_url_1": null,
+        "image_url_2": null,
+        "maker_txt_id": null,
+        "model_txt_id": null,
+        "seq_front": 39
+      },
+      {
+        "vehicle_id": 30,
+        "vehicle_name": "20-seat Bus",
+        "o_max_passenger": 20,
+        "o_maker": "Ford",
+        "o_model": "E-450",
+        "o_image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/bus-20.jpg",
+        "o_image_url_2": "https://elifelimo.s3.us-east-2.amazonaws.com/art/home/vehicle-classes/bus-20.png",
+        "o_max_luggage": 20,
+        "vm_id": null,
+        "maker": null,
+        "model": null,
+        "max_passenger": null,
+        "max_luggage": null,
+        "image_url_1": null,
+        "image_url_2": null,
+        "maker_txt_id": null,
+        "model_txt_id": null,
+        "seq_front": 40
+      },
+      {
+        "vehicle_id": 31,
+        "vehicle_name": "23-seat Bus",
+        "o_max_passenger": 23,
+        "o_maker": "Ford",
+        "o_model": "F-550",
+        "o_image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/bus-23.jpg",
+        "o_image_url_2": "https://elifelimo.s3.us-east-2.amazonaws.com/art/home/vehicle-classes/bus-23.png",
+        "o_max_luggage": 23,
+        "vm_id": null,
+        "maker": null,
+        "model": null,
+        "max_passenger": null,
+        "max_luggage": null,
+        "image_url_1": null,
+        "image_url_2": null,
+        "maker_txt_id": null,
+        "model_txt_id": null,
+        "seq_front": 41
+      },
+      {
+        "vehicle_id": 32,
+        "vehicle_name": "27-seat Bus",
+        "o_max_passenger": 27,
+        "o_maker": "Ford",
+        "o_model": "F-550",
+        "o_image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/bus-27.jpg",
+        "o_image_url_2": "https://elifelimo.s3.us-east-2.amazonaws.com/art/home/vehicle-classes/bus-27.png",
+        "o_max_luggage": 27,
+        "vm_id": null,
+        "maker": null,
+        "model": null,
+        "max_passenger": null,
+        "max_luggage": null,
+        "image_url_1": null,
+        "image_url_2": null,
+        "maker_txt_id": null,
+        "model_txt_id": null,
+        "seq_front": 42
+      },
+      {
+        "vehicle_id": 38,
+        "vehicle_name": "30-seat Bus",
+        "o_max_passenger": 30,
+        "o_maker": "IVECO",
+        "o_model": "NEXT L9",
+        "o_image_url": "",
+        "o_image_url_2": "",
+        "o_max_luggage": 30,
+        "vm_id": null,
+        "maker": null,
+        "model": null,
+        "max_passenger": null,
+        "max_luggage": null,
+        "image_url_1": null,
+        "image_url_2": null,
+        "maker_txt_id": null,
+        "model_txt_id": null,
+        "seq_front": 43
+      },
+      {
+        "vehicle_id": 33,
+        "vehicle_name": "36-seat Bus",
+        "o_max_passenger": 36,
+        "o_maker": "Ford",
+        "o_model": "F-650 or smilar",
+        "o_image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/bus-36.jpg",
+        "o_image_url_2": "https://elifelimo.s3.us-east-2.amazonaws.com/art/home/vehicle-classes/bus-36.png",
+        "o_max_luggage": 36,
+        "vm_id": null,
+        "maker": null,
+        "model": null,
+        "max_passenger": null,
+        "max_luggage": null,
+        "image_url_1": null,
+        "image_url_2": null,
+        "maker_txt_id": null,
+        "model_txt_id": null,
+        "seq_front": 44
+      },
+      {
+        "vehicle_id": 37,
+        "vehicle_name": "40-seat Bus",
+        "o_max_passenger": 40,
+        "o_maker": "dont",
+        "o_model": "know",
+        "o_image_url": "",
+        "o_image_url_2": "",
+        "o_max_luggage": 40,
+        "vm_id": null,
+        "maker": null,
+        "model": null,
+        "max_passenger": null,
+        "max_luggage": null,
+        "image_url_1": null,
+        "image_url_2": null,
+        "maker_txt_id": null,
+        "model_txt_id": null,
+        "seq_front": 44
+      },
+      {
+        "vehicle_id": 53,
+        "vehicle_name": "50 pax bus ",
+        "o_max_passenger": 50,
+        "o_maker": "IRIZAR",
+        "o_model": "I6",
+        "o_image_url": null,
+        "o_image_url_2": "",
+        "o_max_luggage": 50,
+        "vm_id": null,
+        "maker": null,
+        "model": null,
+        "max_passenger": null,
+        "max_luggage": null,
+        "image_url_1": null,
+        "image_url_2": null,
+        "maker_txt_id": null,
+        "model_txt_id": null,
+        "seq_front": 45
+      },
+      {
+        "vehicle_id": 39,
+        "vehicle_name": "50-seat Bus",
+        "o_max_passenger": 50,
+        "o_maker": "IRIZAR",
+        "o_model": "I6",
+        "o_image_url": "",
+        "o_image_url_2": "",
+        "o_max_luggage": 50,
+        "vm_id": null,
+        "maker": null,
+        "model": null,
+        "max_passenger": null,
+        "max_luggage": null,
+        "image_url_1": null,
+        "image_url_2": null,
+        "maker_txt_id": null,
+        "model_txt_id": null,
+        "seq_front": 45
+      },
+      {
+        "vehicle_id": 34,
+        "vehicle_name": "44-seat Coach Bus",
+        "o_max_passenger": 44,
+        "o_maker": "Volvo",
+        "o_model": "Coach bus",
+        "o_image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/bus-44.jpg",
+        "o_image_url_2": "https://elifelimo.s3.us-east-2.amazonaws.com/art/home/vehicle-classes/bus-44.png",
+        "o_max_luggage": 44,
+        "vm_id": null,
+        "maker": null,
+        "model": null,
+        "max_passenger": null,
+        "max_luggage": null,
+        "image_url_1": null,
+        "image_url_2": null,
+        "maker_txt_id": null,
+        "model_txt_id": null,
+        "seq_front": 46
+      },
+      {
+        "vehicle_id": 35,
+        "vehicle_name": "55-seat Coach Bus",
+        "o_max_passenger": 55,
+        "o_maker": "Prevost",
+        "o_model": "Motorcoach or smilar",
+        "o_image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/bus-55.jpg",
+        "o_image_url_2": "https://elifelimo.s3.us-east-2.amazonaws.com/art/home/vehicle-classes/bus-55.png",
+        "o_max_luggage": 55,
+        "vm_id": null,
+        "maker": null,
+        "model": null,
+        "max_passenger": null,
+        "max_luggage": null,
+        "image_url_1": null,
+        "image_url_2": null,
+        "maker_txt_id": null,
+        "model_txt_id": null,
+        "seq_front": 47
+      },
+      {
+        "vehicle_id": 58,
+        "vehicle_name": "16-School Bus",
+        "o_max_passenger": 16,
+        "o_maker": "Titan School",
+        "o_model": "SRW 1",
+        "o_image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/school-bus-16.jpg",
+        "o_image_url_2": "https://elifelimo.s3.us-east-2.amazonaws.com/art/home/vehicle-classes/school-bus-16.png",
+        "o_max_luggage": 16,
+        "vm_id": null,
+        "maker": null,
+        "model": null,
+        "max_passenger": null,
+        "max_luggage": null,
+        "image_url_1": null,
+        "image_url_2": null,
+        "maker_txt_id": null,
+        "model_txt_id": null,
+        "seq_front": 48
+      },
+      {
+        "vehicle_id": 59,
+        "vehicle_name": "20-School Bus",
+        "o_max_passenger": 20,
+        "o_maker": "Titan School",
+        "o_model": "SRW 1",
+        "o_image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/school-bus-20.jpg",
+        "o_image_url_2": "https://elifelimo.s3.us-east-2.amazonaws.com/art/home/vehicle-classes/school-bus-20.png",
+        "o_max_luggage": 20,
+        "vm_id": null,
+        "maker": null,
+        "model": null,
+        "max_passenger": null,
+        "max_luggage": null,
+        "image_url_1": null,
+        "image_url_2": null,
+        "maker_txt_id": null,
+        "model_txt_id": null,
+        "seq_front": 49
+      },
+      {
+        "vehicle_id": 60,
+        "vehicle_name": "23-School Bus",
+        "o_max_passenger": 23,
+        "o_maker": "Titan School",
+        "o_model": "DRW 2",
+        "o_image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/school-bus-23.jpg",
+        "o_image_url_2": "https://elifelimo.s3.us-east-2.amazonaws.com/art/home/vehicle-classes/school-bus-23.png",
+        "o_max_luggage": 23,
+        "vm_id": null,
+        "maker": null,
+        "model": null,
+        "max_passenger": null,
+        "max_luggage": null,
+        "image_url_1": null,
+        "image_url_2": null,
+        "maker_txt_id": null,
+        "model_txt_id": null,
+        "seq_front": 50
+      },
+      {
+        "vehicle_id": 61,
+        "vehicle_name": "30-School Bus",
+        "o_max_passenger": 30,
+        "o_maker": "Titan School",
+        "o_model": "DRW 2",
+        "o_image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/school-bus-30.jpg",
+        "o_image_url_2": "https://elifelimo.s3.us-east-2.amazonaws.com/art/home/vehicle-classes/school-bus-30.png",
+        "o_max_luggage": 30,
+        "vm_id": null,
+        "maker": null,
+        "model": null,
+        "max_passenger": null,
+        "max_luggage": null,
+        "image_url_1": null,
+        "image_url_2": null,
+        "maker_txt_id": null,
+        "model_txt_id": null,
+        "seq_front": 51
+      },
+      {
+        "vehicle_id": 62,
+        "vehicle_name": "36-School Bus",
+        "o_max_passenger": 36,
+        "o_maker": "Micro Bird",
+        "o_model": "G5",
+        "o_image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/school-bus-36.jpg",
+        "o_image_url_2": "https://elifelimo.s3.us-east-2.amazonaws.com/art/home/vehicle-classes/school-bus-36.png",
+        "o_max_luggage": 36,
+        "vm_id": null,
+        "maker": null,
+        "model": null,
+        "max_passenger": null,
+        "max_luggage": null,
+        "image_url_1": null,
+        "image_url_2": null,
+        "maker_txt_id": null,
+        "model_txt_id": null,
+        "seq_front": 52
+      },
+      {
+        "vehicle_id": 63,
+        "vehicle_name": "44-School Bus",
+        "o_max_passenger": 44,
+        "o_maker": "Bluebird Version",
+        "o_model": "",
+        "o_image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/school-bus-44.jpg",
+        "o_image_url_2": "https://elifelimo.s3.us-east-2.amazonaws.com/art/home/vehicle-classes/school-bus-44.png",
+        "o_max_luggage": 44,
+        "vm_id": null,
+        "maker": null,
+        "model": null,
+        "max_passenger": null,
+        "max_luggage": null,
+        "image_url_1": null,
+        "image_url_2": null,
+        "maker_txt_id": null,
+        "model_txt_id": null,
+        "seq_front": 53
+      },
+      {
+        "vehicle_id": 64,
+        "vehicle_name": "72-School Bus",
+        "o_max_passenger": 72,
+        "o_maker": "International school bus",
+        "o_model": "",
+        "o_image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/school-bus-72.jpg",
+        "o_image_url_2": "https://elifelimo.s3.us-east-2.amazonaws.com/art/home/vehicle-classes/school-bus-72.png",
+        "o_max_luggage": 72,
+        "vm_id": null,
+        "maker": null,
+        "model": null,
+        "max_passenger": null,
+        "max_luggage": null,
+        "image_url_1": null,
+        "image_url_2": null,
+        "maker_txt_id": null,
+        "model_txt_id": null,
+        "seq_front": 54
+      }
+    ]
 
     new addRoute()
 

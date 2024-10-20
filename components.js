@@ -17,7 +17,7 @@ async function getPricingJsonBySvcId(url, id) {
   return JSON.parse(res.pricing)
 }
 
- async function getAirportInfo(url, code) {
+async function getAirportInfo(url, code) {
   // select a.code3,ad.lat,ad.lng,a.radius from address ad left join airport a on code3 = '{{airport_code}}' where ad.id = a.address_id
   let res = await fetchData({
     url,
@@ -32,26 +32,6 @@ async function getPricingJsonBySvcId(url, id) {
 }
 
 
-function exportCSV(title, jsonData, dateName =  new Date().getTime() ) {
-  let str = ``;
-  for (let i of title) {
-    let nameStr = i.toString().replace(/\,/g, ' ');
-    str += nameStr + ',';
-  }
-  str += '\n';
-  for (let item of jsonData) {
-    for (let el in item) {
-      str += `${item[el] + '\t'},`;
-    }
-    str += '\n';
-  }
-  // const url = 'data:text/csv;charset=utf-8,\ufeff' + encodeURIComponent(str);
-  const url = 'data:text/csv;charset=utf-8,\ufeff' + encodeURI(str);
-  const link = document.createElement('a');
-  link.href = url;
-  link.download = dateName + '.csv';
-  link.click();
-}
 
 function isMSbrowser() {
   const userAgent = window.navigator.userAgent
@@ -430,6 +410,71 @@ async function getOtherFleetSvcId(url, svcId, parent_fleet_id = 15) {
 
   return res.fleet_id
 }
+
+
+function isIntersect(p1, q1, p2, q2) {
+  // 辅助函数：计算向量 (p, q) 和 (r, s) 的叉积
+  function crossProduct(p, q, r) {
+    return (q.lat - p.lat) * (r.lng - p.lng) - (q.lng - p.lng) * (r.lat - p.lat);
+  }
+
+  // 检查 (p1, q1) 和 (p2, q2) 是否相交
+  const d1 = crossProduct(p2, q2, p1);
+  const d2 = crossProduct(p2, q2, q1);
+  const d3 = crossProduct(p1, q1, p2);
+  const d4 = crossProduct(p1, q1, q2);
+
+  // 检查是否跨越
+  if ((d1 * d2 < 0) && (d3 * d4 < 0)) {
+    return true;
+  }
+
+  // 检查是否共线重叠
+  function isOnSegment(p, q, r) {
+    return Math.min(p.lat, q.lat) <= r.lat && r.lat <= Math.max(p.lat, q.lat) &&
+      Math.min(p.lng, q.lng) <= r.lng && r.lng <= Math.max(p.lng, q.lng);
+  }
+
+  if (d1 === 0 && isOnSegment(p2, q2, p1)) return true;
+  if (d2 === 0 && isOnSegment(p2, q2, q1)) return true;
+  if (d3 === 0 && isOnSegment(p1, q1, p2)) return true;
+  if (d4 === 0 && isOnSegment(p1, q1, q2)) return true;
+
+  return false;
+}
+
+// 判断多边形是否有相交的边
+function hasSelfIntersect(polygon) {
+  const n = polygon.length;
+  for (let i = 0; i < n; i++) {
+    const p1 = polygon[i];
+    const q1 = polygon[(i + 1) % n];
+    for (let j = i + 1; j < n; j++) {
+      const p2 = polygon[j];
+      const q2 = polygon[(j + 1) % n];
+      // 忽略相邻边的相交
+      if (Math.abs(i - j) === 1 || (i === 0 && j === n - 1) || (i === n - 1 && j === 0)) {
+        continue;
+      }
+      if (isIntersect(p1, q1, p2, q2)) {
+        return true;
+      }
+    }
+  }
+  return false;
+}
+
+function polygonCheck(zones) {
+  for (let item of zones) {
+    let { polygons } = item
+    if (polygons) {
+      let flag = hasSelfIntersect(polygons)
+      if (flag) return
+    }
+  }
+  return true
+}
+
 
 function fetchData({
   url = '',
