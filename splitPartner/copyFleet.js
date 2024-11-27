@@ -1,4 +1,97 @@
-let originalFleets = [
+/**
+select id ,name,lat,lng,radius,bidding,parent_fleet_id,unverified,service_area_pricing_id  from fleet where parent_fleet_id = 15 and radius > 1
+
+select id ,name,lat,lng,radius,bidding,parent_fleet_id,unverified,service_area_pricing_id from fleet where parent_fleet_id = 15 and radius is null
+ */
+
+
+// let elifeFleets = [
+//   {
+//     "id": 11835,
+//     "parent_fleet_id": 40,
+//     "name": "长沙-CSX",
+//     "radius": null,
+//     "lng": 113.230588,
+//     "bidding": null,
+//     "unverified": null,
+//     "in_blacklist": null,
+//     "inserted_at": "2023-02-20 06:31:49",
+//     "last_updated_at": "2024-11-06 01:43:24",
+//     "service_area_pricing_id": 8740,
+//     "lat": 28.841313
+//   }
+// ]
+
+
+// let elifeFleets = [
+//   {
+//     "id": 38,
+//     "name": "San Francisco, USA",
+//     "lat": 37.817962,
+//     "lng": -122.211278,
+//     "radius": 144841,
+//     "bidding": null,
+//     "inserted_at": "2020-02-21 22:54:40",
+//     "last_updated_at": "2024-11-26 19:04:57",
+//     "parent_fleet_id": 15,
+//     "unverified": null,
+//     "service_area_pricing_id": 1348111
+//   },
+//   {
+//     "id": 41,
+//     "name": "Bangkok,Thailand",
+//     "lat": 13.997487,
+//     "lng": 100.839436,
+//     "radius": 150000,
+//     "bidding": null,
+//     "inserted_at": "2020-02-22 00:21:22",
+//     "last_updated_at": "2024-11-26 12:11:18",
+//     "parent_fleet_id": 15,
+//     "unverified": null,
+//     "service_area_pricing_id": 1331941
+//   },
+//   {
+//     "id": 43,
+//     "name": "Tokyo, Japan",
+//     "lat": 35.897797,
+//     "lng": 139.264891,
+//     "radius": 149000,
+//     "bidding": null,
+//     "inserted_at": "2020-02-22 00:36:46",
+//     "last_updated_at": "2024-11-22 05:03:10",
+//     "parent_fleet_id": 15,
+//     "unverified": null,
+//     "service_area_pricing_id": 1186655
+//   },
+//   {
+//     "id": 133,
+//     "name": "Istanbul,Turkey",
+//     "lat": 40.752299,
+//     "lng": 28.513496,
+//     "radius": null,
+//     "bidding": null,
+//     "inserted_at": "2020-02-26 23:38:04",
+//     "last_updated_at": "2024-11-26 15:18:35",
+//     "parent_fleet_id": 15,
+//     "unverified": null,
+//     "service_area_pricing_id": 1339369
+//   },
+//   {
+//     "id": 673,
+//     "name": "Changsha,CHN",
+//     "lat": 28.225512,
+//     "lng": 112.934996,
+//     "radius": 201000,
+//     "bidding": null,
+//     "inserted_at": "2020-10-21 22:53:55",
+//     "last_updated_at": "2024-09-28 03:21:11",
+//     "parent_fleet_id": 15,
+//     "unverified": null,
+//     "service_area_pricing_id": 217896
+//   }
+// ]
+
+let elifeFleets = [
   {
     "id": 1172,
     "name": "A Coruna,Spain",
@@ -19,7 +112,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 210637
+    "service_area_pricing_id": 451855
   },
   {
     "id": 1610,
@@ -30,7 +123,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 210639
+    "service_area_pricing_id": 414639
   },
   {
     "id": 42758,
@@ -46,13 +139,13 @@ let originalFleets = [
   {
     "id": 838,
     "name": "Aberdeen,UK",
-    "lat": 57.409449,
-    "lng": -2.837483,
-    "radius": 80467,
+    "lat": 57.149298,
+    "lng": -2.106681,
+    "radius": 16093,
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 168494
+    "service_area_pricing_id": 1360968
   },
   {
     "id": 1374,
@@ -85,7 +178,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 197387
+    "service_area_pricing_id": 666495
   },
   {
     "id": 1405,
@@ -107,7 +200,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 200496
+    "service_area_pricing_id": 253238
   },
   {
     "id": 1415,
@@ -118,7 +211,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 213266
+    "service_area_pricing_id": 260320
   },
   {
     "id": 917,
@@ -162,7 +255,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 209023
+    "service_area_pricing_id": 1221012
   },
   {
     "id": 1268,
@@ -184,7 +277,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 122893
+    "service_area_pricing_id": 1105278
   },
   {
     "id": 1704,
@@ -217,7 +310,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 42518
+    "service_area_pricing_id": 1016612
   },
   {
     "id": 747,
@@ -239,7 +332,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 201348
+    "service_area_pricing_id": 739919
   },
   {
     "id": 1122,
@@ -272,7 +365,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 207780
+    "service_area_pricing_id": 492598
   },
   {
     "id": 1853,
@@ -316,7 +409,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 147984
+    "service_area_pricing_id": 386794
   },
   {
     "id": 1386,
@@ -342,14 +435,14 @@ let originalFleets = [
   },
   {
     "id": 1376,
-    "name": "Al-Jawf  Saudi Arabia",
+    "name": "Al-Jawf, Saudi Arabia",
     "lat": 29.788502,
     "lng": 40.102021,
     "radius": 90000,
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 6511
+    "service_area_pricing_id": 504592
   },
   {
     "id": 1622,
@@ -459,7 +552,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 159855
+    "service_area_pricing_id": 264829
   },
   {
     "id": 1308,
@@ -481,7 +574,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 227860
+    "service_area_pricing_id": 845925
   },
   {
     "id": 1679,
@@ -508,13 +601,13 @@ let originalFleets = [
   {
     "id": 1001,
     "name": "Alor Setar, Malaysia",
-    "lat": 6.210512,
-    "lng": 100.551126,
-    "radius": 62000,
+    "lat": 6.101301,
+    "lng": 100.435831,
+    "radius": 59278,
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 123075
+    "service_area_pricing_id": 1119804
   },
   {
     "id": 37329,
@@ -525,7 +618,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 90414
+    "service_area_pricing_id": 499401
   },
   {
     "id": 1038,
@@ -541,13 +634,13 @@ let originalFleets = [
   {
     "id": 16893,
     "name": "amalfi",
-    "lat": 40.653018,
-    "lng": 14.677875,
-    "radius": 34000,
+    "lat": 40.823869,
+    "lng": 14.583444,
+    "radius": 35000,
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 249198
+    "service_area_pricing_id": 363119
   },
   {
     "id": 25362,
@@ -569,7 +662,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 143716
+    "service_area_pricing_id": 458149
   },
   {
     "id": 318,
@@ -580,7 +673,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 215606
+    "service_area_pricing_id": 1323710
   },
   {
     "id": 379,
@@ -591,7 +684,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 173708
+    "service_area_pricing_id": 805677
   },
   {
     "id": 873,
@@ -602,7 +695,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 163140
+    "service_area_pricing_id": 264841
   },
   {
     "id": 1695,
@@ -624,7 +717,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 180502
+    "service_area_pricing_id": 1370088
   },
   {
     "id": 37520,
@@ -646,7 +739,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 245394
+    "service_area_pricing_id": 1159849
   },
   {
     "id": 1269,
@@ -662,13 +755,13 @@ let originalFleets = [
   {
     "id": 134,
     "name": "Antalya,Turkey",
-    "lat": 36.750608,
-    "lng": 31.024952,
+    "lat": 36.735101,
+    "lng": 31.005962,
     "radius": 140000,
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 239982
+    "service_area_pricing_id": 1196761
   },
   {
     "id": 1339,
@@ -684,13 +777,13 @@ let originalFleets = [
   {
     "id": 848,
     "name": "Antigua,Antigua and Barbuda",
-    "lat": 17.141791,
-    "lng": -61.790564,
-    "radius": 22000,
+    "lat": 17.083909,
+    "lng": -61.783572,
+    "radius": 16000,
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 171423
+    "service_area_pricing_id": 329715
   },
   {
     "id": 1285,
@@ -719,11 +812,11 @@ let originalFleets = [
     "name": "Antwerp,Belgium",
     "lat": 51.237441,
     "lng": 4.373060,
-    "radius": 20000,
+    "radius": 100000,
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 213534
+    "service_area_pricing_id": 1189672
   },
   {
     "id": 1053,
@@ -734,7 +827,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 207781
+    "service_area_pricing_id": 492602
   },
   {
     "id": 786,
@@ -778,7 +871,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 216564
+    "service_area_pricing_id": 412162
   },
   {
     "id": 1824,
@@ -800,7 +893,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 152279
+    "service_area_pricing_id": 517082
   },
   {
     "id": 862,
@@ -844,18 +937,18 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 133055
+    "service_area_pricing_id": 493015
   },
   {
     "id": 1694,
-    "name": "Ashgabat Turkmenistan",
+    "name": "Ashgabat,Turkmenistan",
     "lat": 37.984513,
     "lng": 58.366511,
     "radius": 68797,
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 25955
+    "service_area_pricing_id": 391089
   },
   {
     "id": 1173,
@@ -877,7 +970,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 216579
+    "service_area_pricing_id": 321342
   },
   {
     "id": 978,
@@ -910,7 +1003,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 247871
+    "service_area_pricing_id": 1108452
   },
   {
     "id": 88,
@@ -921,7 +1014,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 240634
+    "service_area_pricing_id": 1370143
   },
   {
     "id": 787,
@@ -954,7 +1047,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 250148
+    "service_area_pricing_id": 1369621
   },
   {
     "id": 27380,
@@ -987,7 +1080,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 252953
+    "service_area_pricing_id": 1369656
   },
   {
     "id": 53520,
@@ -998,7 +1091,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 220540
+    "service_area_pricing_id": 474612
   },
   {
     "id": 1491,
@@ -1031,7 +1124,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 222998
+    "service_area_pricing_id": 599501
   },
   {
     "id": 881,
@@ -1053,18 +1146,18 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 199152
+    "service_area_pricing_id": 674319
   },
   {
     "id": 103,
     "name": "Bali,Indonesia",
-    "lat": -8.160959,
-    "lng": 115.261783,
+    "lat": -8.255368,
+    "lng": 115.218327,
     "radius": 90000,
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 212914
+    "service_area_pricing_id": 1191326
   },
   {
     "id": 1010,
@@ -1082,11 +1175,11 @@ let originalFleets = [
     "name": "Ballina,Australia",
     "lat": -28.516790,
     "lng": 153.460781,
-    "radius": 132000,
+    "radius": 177170,
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 171806
+    "service_area_pricing_id": 1225437
   },
   {
     "id": 27537,
@@ -1174,7 +1267,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 185972
+    "service_area_pricing_id": 414646
   },
   {
     "id": 41,
@@ -1185,7 +1278,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 250554
+    "service_area_pricing_id": 1364498
   },
   {
     "id": 788,
@@ -1207,7 +1300,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": null
+    "service_area_pricing_id": 367160
   },
   {
     "id": 1014,
@@ -1284,7 +1377,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 245155
+    "service_area_pricing_id": 1158608
   },
   {
     "id": 37336,
@@ -1306,7 +1399,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 206129
+    "service_area_pricing_id": 285497
   },
   {
     "id": 863,
@@ -1339,7 +1432,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 215269
+    "service_area_pricing_id": 403776
   },
   {
     "id": 1159,
@@ -1350,7 +1443,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 201728
+    "service_area_pricing_id": 405134
   },
   {
     "id": 1016,
@@ -1405,7 +1498,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 177211
+    "service_area_pricing_id": 1118332
   },
   {
     "id": 1066,
@@ -1427,7 +1520,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 252933
+    "service_area_pricing_id": 566307
   },
   {
     "id": 1165,
@@ -1465,13 +1558,13 @@ let originalFleets = [
   {
     "id": 841,
     "name": "Belfast,UK",
-    "lat": 54.661469,
-    "lng": -6.398665,
-    "radius": 80467,
+    "lat": 54.598276,
+    "lng": -5.908799,
+    "radius": 30154,
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 201052
+    "service_area_pricing_id": 1360969
   },
   {
     "id": 27549,
@@ -1493,18 +1586,18 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 193066
+    "service_area_pricing_id": 380608
   },
   {
     "id": 1198,
-    "name": "Belize City  Belize",
+    "name": "Belize City, Belize",
     "lat": 17.508567,
     "lng": -88.619506,
     "radius": 51312,
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": null
+    "service_area_pricing_id": 410793
   },
   {
     "id": 16431,
@@ -1537,7 +1630,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 204946
+    "service_area_pricing_id": 875245
   },
   {
     "id": 1124,
@@ -1548,7 +1641,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 178296
+    "service_area_pricing_id": 406310
   },
   {
     "id": 37334,
@@ -1570,7 +1663,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 217154
+    "service_area_pricing_id": 1327747
   },
   {
     "id": 622,
@@ -1680,7 +1773,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 192965
+    "service_area_pricing_id": 404940
   },
   {
     "id": 27558,
@@ -1724,7 +1817,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 206027
+    "service_area_pricing_id": 499285
   },
   {
     "id": 454,
@@ -1735,7 +1828,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 210372
+    "service_area_pricing_id": 931175
   },
   {
     "id": 1691,
@@ -1845,7 +1938,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 194677
+    "service_area_pricing_id": 1197324
   },
   {
     "id": 636,
@@ -1856,7 +1949,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 185642
+    "service_area_pricing_id": 469521
   },
   {
     "id": 389,
@@ -1889,7 +1982,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 196267
+    "service_area_pricing_id": 700235
   },
   {
     "id": 40175,
@@ -1900,7 +1993,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 136994
+    "service_area_pricing_id": 264843
   },
   {
     "id": 1846,
@@ -1915,14 +2008,14 @@ let originalFleets = [
   },
   {
     "id": 856,
-    "name": "Bonaire  Caribbean Netherlands",
-    "lat": 12.133385,
-    "lng": -68.276878,
+    "name": "Bonaire, Caribbean Netherlands",
+    "lat": 12.161015,
+    "lng": -68.268912,
     "radius": 26087,
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": null
+    "service_area_pricing_id": 373503
   },
   {
     "id": 110,
@@ -1944,7 +2037,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 193779
+    "service_area_pricing_id": 441002
   },
   {
     "id": 37326,
@@ -1966,18 +2059,18 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 249127
+    "service_area_pricing_id": 1370111
   },
   {
     "id": 828,
     "name": "Bournemouth,UK",
-    "lat": 50.802634,
-    "lng": -2.147691,
-    "radius": 48280,
+    "lat": 50.752436,
+    "lng": -1.891886,
+    "radius": 32187,
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 171502
+    "service_area_pricing_id": 527123
   },
   {
     "id": 896,
@@ -2021,7 +2114,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 98955
+    "service_area_pricing_id": 1043365
   },
   {
     "id": 1436,
@@ -2032,7 +2125,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 188089
+    "service_area_pricing_id": 840507
   },
   {
     "id": 1310,
@@ -2043,7 +2136,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 162483
+    "service_area_pricing_id": 264849
   },
   {
     "id": 1128,
@@ -2065,29 +2158,29 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 206068
+    "service_area_pricing_id": 662637
   },
   {
     "id": 139,
     "name": "Brisbane,Australia",
-    "lat": -27.425197,
-    "lng": 153.131388,
+    "lat": -27.546738,
+    "lng": 153.369075,
     "radius": 155000,
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 217841
+    "service_area_pricing_id": 1364994
   },
   {
     "id": 829,
     "name": "Bristol,UK",
-    "lat": 51.321130,
-    "lng": -2.632693,
-    "radius": 177027,
+    "lat": 51.358661,
+    "lng": -2.432907,
+    "radius": 179791,
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 197586
+    "service_area_pricing_id": 1361002
   },
   {
     "id": 1431,
@@ -2109,7 +2202,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 154965
+    "service_area_pricing_id": 517372
   },
   {
     "id": 1313,
@@ -2142,7 +2235,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 252606
+    "service_area_pricing_id": 1186647
   },
   {
     "id": 864,
@@ -2164,7 +2257,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 210651
+    "service_area_pricing_id": 712517
   },
   {
     "id": 316,
@@ -2175,7 +2268,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 220703
+    "service_area_pricing_id": 1364987
   },
   {
     "id": 1842,
@@ -2191,24 +2284,24 @@ let originalFleets = [
   {
     "id": 27454,
     "name": "Buenos Aires",
-    "lat": -34.595271,
-    "lng": -58.589731,
-    "radius": 21000,
+    "lat": -34.602230,
+    "lng": -58.467417,
+    "radius": 15000,
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 223386
+    "service_area_pricing_id": 1338537
   },
   {
     "id": 326,
     "name": "Buenos Aires,Argentina",
-    "lat": -35.751394,
-    "lng": -60.050900,
-    "radius": 200000,
+    "lat": -34.825549,
+    "lng": -58.568728,
+    "radius": 20000,
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 223410
+    "service_area_pricing_id": 1338844
   },
   {
     "id": 92,
@@ -2219,7 +2312,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 252957
+    "service_area_pricing_id": 1370171
   },
   {
     "id": 1696,
@@ -2285,7 +2378,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 220008
+    "service_area_pricing_id": 1155373
   },
   {
     "id": 107,
@@ -2296,7 +2389,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 185061
+    "service_area_pricing_id": 905301
   },
   {
     "id": 1209,
@@ -2351,7 +2444,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 237904
+    "service_area_pricing_id": 662635
   },
   {
     "id": 647,
@@ -2362,7 +2455,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 197416
+    "service_area_pricing_id": 304726
   },
   {
     "id": 323,
@@ -2373,7 +2466,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 220224
+    "service_area_pricing_id": 253003
   },
   {
     "id": 1828,
@@ -2406,7 +2499,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 194670
+    "service_area_pricing_id": 1368563
   },
   {
     "id": 885,
@@ -2472,29 +2565,29 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 230015
+    "service_area_pricing_id": 740850
   },
   {
     "id": 167,
     "name": "Cancun,Mexico",
-    "lat": 21.124156,
-    "lng": -87.795379,
+    "lat": 21.134250,
+    "lng": -87.799718,
     "radius": 110000,
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 250158
+    "service_area_pricing_id": 1335763
   },
   {
     "id": 1259,
-    "name": "Canouan  Saint Vincent and the Grenadines",
-    "lat": 12.711224,
-    "lng": -61.332887,
+    "name": "Canouan, Saint Vincent and the Grenadines",
+    "lat": 12.726935,
+    "lng": -61.325169,
     "radius": 4365,
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": null
+    "service_area_pricing_id": 479077
   },
   {
     "id": 1252,
@@ -2505,18 +2598,18 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 129244
+    "service_area_pricing_id": 450671
   },
   {
     "id": 995,
     "name": "Cape Town,South Africa",
-    "lat": -33.994676,
-    "lng": 18.609016,
+    "lat": -33.957188,
+    "lng": 18.563123,
     "radius": 92000,
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 252569
+    "service_area_pricing_id": 1362008
   },
   {
     "id": 44024,
@@ -2543,13 +2636,13 @@ let originalFleets = [
   {
     "id": 830,
     "name": "Cardiff,UK",
-    "lat": 51.980068,
-    "lng": -3.801583,
-    "radius": 80467,
+    "lat": 51.494931,
+    "lng": -3.207810,
+    "radius": 24140,
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 174909
+    "service_area_pricing_id": 571408
   },
   {
     "id": 640,
@@ -2571,7 +2664,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 176940
+    "service_area_pricing_id": 1105539
   },
   {
     "id": 1175,
@@ -2587,13 +2680,13 @@ let originalFleets = [
   {
     "id": 1232,
     "name": "Catania,Italy",
-    "lat": 37.467305,
-    "lng": 15.065775,
+    "lat": 37.490339,
+    "lng": 15.353508,
     "radius": 100000,
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 188320
+    "service_area_pricing_id": 462153
   },
   {
     "id": 1293,
@@ -2626,7 +2719,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 252532
+    "service_area_pricing_id": 1331931
   },
   {
     "id": 1130,
@@ -2644,11 +2737,11 @@ let originalFleets = [
     "name": "Chambery,France",
     "lat": 45.637929,
     "lng": 5.883871,
-    "radius": 87000,
+    "radius": 120000,
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 178307
+    "service_area_pricing_id": 910062
   },
   {
     "id": 1710,
@@ -2659,7 +2752,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 191832
+    "service_area_pricing_id": 1330895
   },
   {
     "id": 656,
@@ -2747,7 +2840,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 215886
+    "service_area_pricing_id": 1370152
   },
   {
     "id": 40923,
@@ -2780,7 +2873,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 243947
+    "service_area_pricing_id": 963287
   },
   {
     "id": 160,
@@ -2791,7 +2884,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 135224
+    "service_area_pricing_id": 398453
   },
   {
     "id": 1049,
@@ -2802,7 +2895,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 158131
+    "service_area_pricing_id": 491380
   },
   {
     "id": 1754,
@@ -2824,7 +2917,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 247932
+    "service_area_pricing_id": 1364900
   },
   {
     "id": 47,
@@ -2835,7 +2928,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 180829
+    "service_area_pricing_id": 387774
   },
   {
     "id": 68,
@@ -2846,7 +2939,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 252945
+    "service_area_pricing_id": 1311347
   },
   {
     "id": 1847,
@@ -2923,7 +3016,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 207936
+    "service_area_pricing_id": 324283
   },
   {
     "id": 143,
@@ -2934,7 +3027,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 250130
+    "service_area_pricing_id": 378300
   },
   {
     "id": 1316,
@@ -2989,7 +3082,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 29495
+    "service_area_pricing_id": 1016055
   },
   {
     "id": 1825,
@@ -3011,7 +3104,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 178308
+    "service_area_pricing_id": 406495
   },
   {
     "id": 85,
@@ -3033,18 +3126,18 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 245308
+    "service_area_pricing_id": 279348
   },
   {
     "id": 974,
-    "name": "Cochabamba  Bolivia",
+    "name": "Cochabamba, Bolivia",
     "lat": -17.417048,
     "lng": -66.178708,
-    "radius": 65462,
+    "radius": 65000,
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": null
+    "service_area_pricing_id": 857726
   },
   {
     "id": 1711,
@@ -3055,7 +3148,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 239559
+    "service_area_pricing_id": 739896
   },
   {
     "id": 1317,
@@ -3077,18 +3170,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 135228
-  },
-  {
-    "id": 1437,
-    "name": "Cologne/Bonn,Germany",
-    "lat": 54.365672,
-    "lng": 2.294456,
-    "radius": 1,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": 123267
+    "service_area_pricing_id": 901856
   },
   {
     "id": 132,
@@ -3099,7 +3181,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 252905
+    "service_area_pricing_id": 661233
   },
   {
     "id": 466,
@@ -3128,11 +3210,11 @@ let originalFleets = [
     "name": "Columbia, SC, USA",
     "lat": 33.941917,
     "lng": -81.122002,
-    "radius": 59546,
+    "radius": 160934,
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 144651
+    "service_area_pricing_id": 274078
   },
   {
     "id": 1799,
@@ -3220,7 +3302,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 216583
+    "service_area_pricing_id": 406590
   },
   {
     "id": 1471,
@@ -3242,7 +3324,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 171799
+    "service_area_pricing_id": 1284059
   },
   {
     "id": 1281,
@@ -3291,13 +3373,13 @@ let originalFleets = [
   {
     "id": 26303,
     "name": "Coventry",
-    "lat": 52.254868,
-    "lng": -1.127195,
-    "radius": 40234,
+    "lat": 52.405399,
+    "lng": -1.548666,
+    "radius": 44666,
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 128275
+    "service_area_pricing_id": 528564
   },
   {
     "id": 601,
@@ -3308,7 +3390,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 227593
+    "service_area_pricing_id": 747068
   },
   {
     "id": 37508,
@@ -3319,7 +3401,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 213758
+    "service_area_pricing_id": 373573
   },
   {
     "id": 1494,
@@ -3341,7 +3423,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 213273
+    "service_area_pricing_id": 771923
   },
   {
     "id": 886,
@@ -3418,7 +3500,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 136997
+    "service_area_pricing_id": 662641
   },
   {
     "id": 950,
@@ -3440,7 +3522,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 245391
+    "service_area_pricing_id": 1336191
   },
   {
     "id": 22665,
@@ -3462,7 +3544,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 158133
+    "service_area_pricing_id": 491376
   },
   {
     "id": 1401,
@@ -3487,17 +3569,6 @@ let originalFleets = [
     "service_area_pricing_id": 122894
   },
   {
-    "id": 329,
-    "name": "Dalaman, Turkey",
-    "lat": 36.857611,
-    "lng": 28.718539,
-    "radius": 130000,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": 235493
-  },
-  {
     "id": 1835,
     "name": "Dalat,Vietnam",
     "lat": 11.750342,
@@ -3506,7 +3577,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 176198
+    "service_area_pricing_id": 365077
   },
   {
     "id": 61661,
@@ -3539,7 +3610,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 240714
+    "service_area_pricing_id": 1370146
   },
   {
     "id": 27559,
@@ -3561,7 +3632,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 107719
+    "service_area_pricing_id": 1145044
   },
   {
     "id": 118,
@@ -3572,7 +3643,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 250182
+    "service_area_pricing_id": 1369121
   },
   {
     "id": 1068,
@@ -3599,13 +3670,13 @@ let originalFleets = [
   {
     "id": 1650,
     "name": "Darlington, Unite Kingdom",
-    "lat": 54.509324,
-    "lng": -1.427781,
-    "radius": 88514,
+    "lat": 54.524300,
+    "lng": -1.531442,
+    "radius": 26108,
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 206136
+    "service_area_pricing_id": 528484
   },
   {
     "id": 644,
@@ -3627,7 +3698,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 34537
+    "service_area_pricing_id": 458347
   },
   {
     "id": 1069,
@@ -3638,7 +3709,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 218007
+    "service_area_pricing_id": 365987
   },
   {
     "id": 22254,
@@ -3660,7 +3731,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 118650
+    "service_area_pricing_id": 464822
   },
   {
     "id": 1111,
@@ -3693,7 +3764,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 113039
+    "service_area_pricing_id": 272106
   },
   {
     "id": 638,
@@ -3726,7 +3797,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 220410
+    "service_area_pricing_id": 495688
   },
   {
     "id": 159,
@@ -3737,7 +3808,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 249658
+    "service_area_pricing_id": 1322008
   },
   {
     "id": 84,
@@ -3748,7 +3819,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 197165
+    "service_area_pricing_id": 1323711
   },
   {
     "id": 401,
@@ -3792,7 +3863,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 252954
+    "service_area_pricing_id": 1370166
   },
   {
     "id": 1355,
@@ -3869,7 +3940,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 178310
+    "service_area_pricing_id": 405180
   },
   {
     "id": 1208,
@@ -3935,18 +4006,18 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 197454
+    "service_area_pricing_id": 1183547
   },
   {
     "id": 831,
     "name": "Doncaster/Sheffield,UK",
-    "lat": 53.360673,
-    "lng": -0.912020,
-    "radius": 48280,
+    "lat": 53.497416,
+    "lng": -1.143908,
+    "radius": 32187,
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 137004
+    "service_area_pricing_id": 527131
   },
   {
     "id": 1858,
@@ -3968,7 +4039,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 180539
+    "service_area_pricing_id": 599494
   },
   {
     "id": 1331,
@@ -4012,7 +4083,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 229838
+    "service_area_pricing_id": 1282603
   },
   {
     "id": 328,
@@ -4023,7 +4094,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 210228
+    "service_area_pricing_id": 764162
   },
   {
     "id": 684,
@@ -4039,13 +4110,13 @@ let originalFleets = [
   {
     "id": 19281,
     "name": "Dundee",
-    "lat": 56.817705,
-    "lng": -3.413305,
-    "radius": 80467,
+    "lat": 56.464002,
+    "lng": -2.992785,
+    "radius": 16093,
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 162466
+    "service_area_pricing_id": 528486
   },
   {
     "id": 1322,
@@ -4089,7 +4160,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 248684
+    "service_area_pricing_id": 1156480
   },
   {
     "id": 1811,
@@ -4100,7 +4171,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 105522
+    "service_area_pricing_id": 799535
   },
   {
     "id": 445,
@@ -4111,7 +4182,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 227297
+    "service_area_pricing_id": 575457
   },
   {
     "id": 785,
@@ -4144,7 +4215,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 196359
+    "service_area_pricing_id": 384779
   },
   {
     "id": 60,
@@ -4155,7 +4226,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 149597
+    "service_area_pricing_id": 1368241
   },
   {
     "id": 1161,
@@ -4166,7 +4237,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 245037
+    "service_area_pricing_id": 914876
   },
   {
     "id": 979,
@@ -4188,7 +4259,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 108944
+    "service_area_pricing_id": 1016054
   },
   {
     "id": 980,
@@ -4222,17 +4293,6 @@ let originalFleets = [
     "parent_fleet_id": 15,
     "unverified": null,
     "service_area_pricing_id": 68005
-  },
-  {
-    "id": 22413,
-    "name": "elife-fallback-service-area",
-    "lat": 0.000000,
-    "lng": 0.000000,
-    "radius": 1,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
   },
   {
     "id": 21916,
@@ -4323,26 +4383,15 @@ let originalFleets = [
     "service_area_pricing_id": 90430
   },
   {
-    "id": 1806,
-    "name": "Everett,USA",
-    "lat": 47.907577,
-    "lng": -122.280853,
-    "radius": 1,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": 42676
-  },
-  {
     "id": 833,
     "name": "Exeter,UK",
-    "lat": 50.504184,
-    "lng": -4.508188,
-    "radius": 88514,
+    "lat": 50.703060,
+    "lng": -3.578976,
+    "radius": 64374,
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 170555
+    "service_area_pricing_id": 527133
   },
   {
     "id": 789,
@@ -4375,7 +4424,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 209147
+    "service_area_pricing_id": 571786
   },
   {
     "id": 2259,
@@ -4401,14 +4450,14 @@ let originalFleets = [
   },
   {
     "id": 1697,
-    "name": "Fergana  Uzbekistan",
+    "name": "Fergana, Uzbekistan",
     "lat": 40.375993,
     "lng": 71.751969,
     "radius": 79581,
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": null
+    "service_area_pricing_id": 739708
   },
   {
     "id": 1768,
@@ -4430,7 +4479,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 138526
+    "service_area_pricing_id": 1106172
   },
   {
     "id": 1133,
@@ -4441,7 +4490,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 242726
+    "service_area_pricing_id": 405037
   },
   {
     "id": 146,
@@ -4485,7 +4534,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 245617
+    "service_area_pricing_id": 1229837
   },
   {
     "id": 1843,
@@ -4525,11 +4574,11 @@ let originalFleets = [
     "name": "Florø, Norway",
     "lat": 61.585805,
     "lng": 5.024496,
-    "radius": 400000,
+    "radius": 20000,
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 90431
+    "service_area_pricing_id": 810602
   },
   {
     "id": 71,
@@ -4566,14 +4615,14 @@ let originalFleets = [
   },
   {
     "id": 953,
-    "name": "Foz do Iguacu  Brazil",
+    "name": "Foz do Iguacu, Brazil",
     "lat": -25.597709,
     "lng": -54.488513,
     "radius": 73438,
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": null
+    "service_area_pricing_id": 442277
   },
   {
     "id": 1411,
@@ -4606,7 +4655,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 202543
+    "service_area_pricing_id": 1328245
   },
   {
     "id": 1400,
@@ -4650,7 +4699,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 190804
+    "service_area_pricing_id": 392187
   },
   {
     "id": 128,
@@ -4661,7 +4710,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 240524
+    "service_area_pricing_id": 493930
   },
   {
     "id": 746,
@@ -4672,7 +4721,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 207779
+    "service_area_pricing_id": 492578
   },
   {
     "id": 1167,
@@ -4760,7 +4809,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 93065
+    "service_area_pricing_id": 347531
   },
   {
     "id": 1829,
@@ -4771,7 +4820,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 147530
+    "service_area_pricing_id": 412254
   },
   {
     "id": 1210,
@@ -4782,7 +4831,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 195079
+    "service_area_pricing_id": 386859
   },
   {
     "id": 919,
@@ -4804,18 +4853,18 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 181553
+    "service_area_pricing_id": 806046
   },
   {
     "id": 1311,
     "name": "Genoa,Italy",
-    "lat": 44.190742,
-    "lng": 8.681868,
+    "lat": 44.683164,
+    "lng": 8.473181,
     "radius": 80000,
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 170434
+    "service_area_pricing_id": 1037245
   },
   {
     "id": 1294,
@@ -4870,7 +4919,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 199537
+    "service_area_pricing_id": 930731
   },
   {
     "id": 17033,
@@ -4881,7 +4930,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 149256
+    "service_area_pricing_id": 507426
   },
   {
     "id": 1713,
@@ -4892,7 +4941,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 249655
+    "service_area_pricing_id": 634352
   },
   {
     "id": 954,
@@ -4914,7 +4963,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 217842
+    "service_area_pricing_id": 1364983
   },
   {
     "id": 42920,
@@ -4936,7 +4985,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 113778
+    "service_area_pricing_id": 386744
   },
   {
     "id": 1179,
@@ -5057,7 +5106,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 145933
+    "service_area_pricing_id": 600743
   },
   {
     "id": 1162,
@@ -5079,7 +5128,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 252124
+    "service_area_pricing_id": 271726
   },
   {
     "id": 169,
@@ -5090,7 +5139,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 200527
+    "service_area_pricing_id": 453744
   },
   {
     "id": 275,
@@ -5101,7 +5150,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 247752
+    "service_area_pricing_id": 1080386
   },
   {
     "id": 1199,
@@ -5145,7 +5194,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 207962
+    "service_area_pricing_id": 338174
   },
   {
     "id": 674,
@@ -5178,7 +5227,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 91146
+    "service_area_pricing_id": 495690
   },
   {
     "id": 27507,
@@ -5204,14 +5253,14 @@ let originalFleets = [
   },
   {
     "id": 1459,
-    "name": "Gyor  Hungary",
+    "name": "Gyor, Hungary",
     "lat": 47.623347,
     "lng": 17.804460,
     "radius": 102000,
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 6212
+    "service_area_pricing_id": 260903
   },
   {
     "id": 1500,
@@ -5233,7 +5282,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 169902
+    "service_area_pricing_id": 1369902
   },
   {
     "id": 1379,
@@ -5255,18 +5304,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 208031
-  },
-  {
-    "id": 1054,
-    "name": "Hakodate ,Japan",
-    "lat": 41.775704,
-    "lng": 140.815822,
-    "radius": 1,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": 112906
+    "service_area_pricing_id": 338139
   },
   {
     "id": 822,
@@ -5277,7 +5315,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 175518
+    "service_area_pricing_id": 1370109
   },
   {
     "id": 1362,
@@ -5300,17 +5338,6 @@ let originalFleets = [
     "parent_fleet_id": 15,
     "unverified": null,
     "service_area_pricing_id": 245113
-  },
-  {
-    "id": 101,
-    "name": "Hamilton, Canada",
-    "lat": 43.163226,
-    "lng": -79.926573,
-    "radius": 1,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": 109646
   },
   {
     "id": 37342,
@@ -5365,7 +5392,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 247876
+    "service_area_pricing_id": 1319552
   },
   {
     "id": 1441,
@@ -5376,7 +5403,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 209166
+    "service_area_pricing_id": 600739
   },
   {
     "id": 1423,
@@ -5398,7 +5425,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 226571
+    "service_area_pricing_id": 336742
   },
   {
     "id": 1998,
@@ -5421,17 +5448,6 @@ let originalFleets = [
     "parent_fleet_id": 15,
     "unverified": null,
     "service_area_pricing_id": 162602
-  },
-  {
-    "id": 376,
-    "name": "Hartford, USA",
-    "lat": 41.856584,
-    "lng": -72.943524,
-    "radius": 1,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": 113133
   },
   {
     "id": 1275,
@@ -5486,7 +5502,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 217884
+    "service_area_pricing_id": 338194
   },
   {
     "id": 447,
@@ -5497,7 +5513,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 218535
+    "service_area_pricing_id": 759875
   },
   {
     "id": 1472,
@@ -5508,7 +5524,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 200975
+    "service_area_pricing_id": 283802
   },
   {
     "id": 781,
@@ -5533,17 +5549,6 @@ let originalFleets = [
     "service_area_pricing_id": 208110
   },
   {
-    "id": 18312,
-    "name": "HHN,Frankfurt",
-    "lat": 54.365672,
-    "lng": 2.294456,
-    "radius": 1,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": 112609
-  },
-  {
     "id": 91,
     "name": "Hilo  HI  USA",
     "lat": 19.718834,
@@ -5563,7 +5568,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 207838
+    "service_area_pricing_id": 492856
   },
   {
     "id": 113,
@@ -5574,18 +5579,18 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 207631
+    "service_area_pricing_id": 740411
   },
   {
     "id": 645,
     "name": "Hobart,Australia",
-    "lat": -42.849276,
-    "lng": 147.402982,
+    "lat": -42.827609,
+    "lng": 147.352092,
     "radius": 80000,
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 197413
+    "service_area_pricing_id": 739831
   },
   {
     "id": 659,
@@ -5603,11 +5608,11 @@ let originalFleets = [
     "name": "Hong Kong,China",
     "lat": 22.298462,
     "lng": 114.099213,
-    "radius": 23000,
+    "radius": 21870,
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 248604
+    "service_area_pricing_id": 1369119
   },
   {
     "id": 37345,
@@ -5629,7 +5634,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 252964
+    "service_area_pricing_id": 1286945
   },
   {
     "id": 99,
@@ -5640,7 +5645,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 240665
+    "service_area_pricing_id": 1370163
   },
   {
     "id": 37588,
@@ -5805,7 +5810,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 220227
+    "service_area_pricing_id": 455744
   },
   {
     "id": 37594,
@@ -5816,7 +5821,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 99597
+    "service_area_pricing_id": 386795
   },
   {
     "id": 1716,
@@ -5827,7 +5832,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 239358
+    "service_area_pricing_id": 1188352
   },
   {
     "id": 22438,
@@ -5849,7 +5854,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 85699
+    "service_area_pricing_id": 278749
   },
   {
     "id": 1777,
@@ -5871,7 +5876,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 158166
+    "service_area_pricing_id": 493324
   },
   {
     "id": 1181,
@@ -5893,7 +5898,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 117410
+    "service_area_pricing_id": 464826
   },
   {
     "id": 1717,
@@ -5915,7 +5920,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 217687
+    "service_area_pricing_id": 1309935
   },
   {
     "id": 1718,
@@ -5953,13 +5958,13 @@ let originalFleets = [
   {
     "id": 840,
     "name": "Inverness,UK",
-    "lat": 57.541318,
-    "lng": -4.053039,
-    "radius": 62764,
+    "lat": 57.477296,
+    "lng": -4.223030,
+    "radius": 19118,
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 196221
+    "service_area_pricing_id": 527827
   },
   {
     "id": 1778,
@@ -5981,7 +5986,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 195522
+    "service_area_pricing_id": 1146167
   },
   {
     "id": 1749,
@@ -6003,7 +6008,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 199644
+    "service_area_pricing_id": 386798
   },
   {
     "id": 1359,
@@ -6014,7 +6019,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 222308
+    "service_area_pricing_id": 597214
   },
   {
     "id": 1158,
@@ -6039,17 +6044,6 @@ let originalFleets = [
     "service_area_pricing_id": 195582
   },
   {
-    "id": 133,
-    "name": "Istanbul,Turkey",
-    "lat": 40.768875,
-    "lng": 28.788388,
-    "radius": 150000,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": 252891
-  },
-  {
     "id": 1830,
     "name": "Ivalo-Inari, Finland",
     "lat": 68.608565,
@@ -6058,7 +6052,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 207635
+    "service_area_pricing_id": 516645
   },
   {
     "id": 908,
@@ -6069,7 +6063,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 194971
+    "service_area_pricing_id": 1172529
   },
   {
     "id": 27436,
@@ -6091,7 +6085,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 157857
+    "service_area_pricing_id": 293616
   },
   {
     "id": 1363,
@@ -6113,7 +6107,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 250558
+    "service_area_pricing_id": 629984
   },
   {
     "id": 27560,
@@ -6135,7 +6129,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 197852
+    "service_area_pricing_id": 1276562
   },
   {
     "id": 27543,
@@ -6190,7 +6184,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 194183
+    "service_area_pricing_id": 491378
   },
   {
     "id": 1182,
@@ -6201,7 +6195,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 234035
+    "service_area_pricing_id": 266522
   },
   {
     "id": 1157,
@@ -6326,14 +6320,14 @@ let originalFleets = [
   },
   {
     "id": 27377,
-    "name": "Jodhpur",
+    "name": "Jodhpur, India",
     "lat": 26.255365,
     "lng": 73.049821,
     "radius": 350000,
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 91126
+    "service_area_pricing_id": 1327751
   },
   {
     "id": 341,
@@ -6344,18 +6338,18 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 239759
+    "service_area_pricing_id": 1310315
   },
   {
     "id": 102,
     "name": "Johor Bahru,Malaysia",
-    "lat": 1.623864,
-    "lng": 103.715089,
+    "lat": 1.614255,
+    "lng": 103.661531,
     "radius": 19000,
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 195488
+    "service_area_pricing_id": 1113733
   },
   {
     "id": 37524,
@@ -6421,7 +6415,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 207785
+    "service_area_pricing_id": 492847
   },
   {
     "id": 375,
@@ -6432,7 +6426,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 199189
+    "service_area_pricing_id": 738615
   },
   {
     "id": 1653,
@@ -6476,7 +6470,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 140423
+    "service_area_pricing_id": 274744
   },
   {
     "id": 1744,
@@ -6531,7 +6525,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 222342
+    "service_area_pricing_id": 1369932
   },
   {
     "id": 1681,
@@ -6608,7 +6602,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 249193
+    "service_area_pricing_id": 772362
   },
   {
     "id": 1211,
@@ -6619,7 +6613,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 113144
+    "service_area_pricing_id": 499172
   },
   {
     "id": 1519,
@@ -6630,7 +6624,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 109799
+    "service_area_pricing_id": 517752
   },
   {
     "id": 1474,
@@ -6652,7 +6646,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 231023
+    "service_area_pricing_id": 1128809
   },
   {
     "id": 1475,
@@ -6696,7 +6690,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 190205
+    "service_area_pricing_id": 264439
   },
   {
     "id": 27417,
@@ -6707,7 +6701,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 220397
+    "service_area_pricing_id": 677053
   },
   {
     "id": 24861,
@@ -6718,7 +6712,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 124335
+    "service_area_pricing_id": 1369954
   },
   {
     "id": 1812,
@@ -6729,7 +6723,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 34562
+    "service_area_pricing_id": 799554
   },
   {
     "id": 1849,
@@ -6773,7 +6767,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 179554
+    "service_area_pricing_id": 1015740
   },
   {
     "id": 1258,
@@ -6784,7 +6778,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 171427
+    "service_area_pricing_id": 479087
   },
   {
     "id": 1320,
@@ -6831,17 +6825,6 @@ let originalFleets = [
     "service_area_pricing_id": 61570
   },
   {
-    "id": 1058,
-    "name": "Kitakyushu, Japan",
-    "lat": 33.839228,
-    "lng": 131.033337,
-    "radius": 1,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": 81783
-  },
-  {
     "id": 1623,
     "name": "Kittila, Finland",
     "lat": 67.694986,
@@ -6850,7 +6833,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 91316
+    "service_area_pricing_id": 516649
   },
   {
     "id": 1419,
@@ -6872,7 +6855,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 27361
+    "service_area_pricing_id": 517757
   },
   {
     "id": 845,
@@ -6905,7 +6888,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 248639
+    "service_area_pricing_id": 1364977
   },
   {
     "id": 129,
@@ -6916,7 +6899,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 200359
+    "service_area_pricing_id": 1369629
   },
   {
     "id": 22442,
@@ -6971,7 +6954,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 207835
+    "service_area_pricing_id": 492849
   },
   {
     "id": 390,
@@ -6982,7 +6965,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 182182
+    "service_area_pricing_id": 741104
   },
   {
     "id": 910,
@@ -7048,18 +7031,18 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 195510
+    "service_area_pricing_id": 733418
   },
   {
     "id": 50,
     "name": "Kota Kinabalu,Malaysia",
-    "lat": 6.209870,
-    "lng": 116.207461,
+    "lat": 5.985850,
+    "lng": 116.075668,
     "radius": 112000,
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 187971
+    "service_area_pricing_id": 904822
   },
   {
     "id": 1851,
@@ -7092,18 +7075,18 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 248681
+    "service_area_pricing_id": 1368901
   },
   {
     "id": 710,
     "name": "Krakow,Poland",
     "lat": 50.076978,
     "lng": 19.788119,
-    "radius": 600000,
+    "radius": 120000,
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 195081
+    "service_area_pricing_id": 463746
   },
   {
     "id": 1542,
@@ -7152,13 +7135,13 @@ let originalFleets = [
   {
     "id": 49,
     "name": "Kuala Lumpur, Malaysia",
-    "lat": 4.137807,
-    "lng": 102.558017,
-    "radius": 241000,
+    "lat": 3.151843,
+    "lng": 101.701701,
+    "radius": 111108,
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 252937
+    "service_area_pricing_id": 1369626
   },
   {
     "id": 1004,
@@ -7180,18 +7163,18 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 119743
+    "service_area_pricing_id": 733419
   },
   {
     "id": 1006,
     "name": "Kuching, Malaysia",
-    "lat": 1.487032,
-    "lng": 110.341606,
-    "radius": 94000,
+    "lat": 1.547436,
+    "lng": 110.369072,
+    "radius": 43894,
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 195521
+    "service_area_pricing_id": 1192751
   },
   {
     "id": 1813,
@@ -7202,18 +7185,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 34565
-  },
-  {
-    "id": 15384,
-    "name": "kumamoto,Japan",
-    "lat": 32.837290,
-    "lng": 130.857343,
-    "radius": 1,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": 111917
+    "service_area_pricing_id": 799567
   },
   {
     "id": 27460,
@@ -7328,13 +7300,13 @@ let originalFleets = [
   {
     "id": 45829,
     "name": "La Havana, Cuba",
-    "lat": 22.997745,
-    "lng": -82.407696,
-    "radius": 150000,
+    "lat": 23.077669,
+    "lng": -81.618514,
+    "radius": 170750,
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 178362
+    "service_area_pricing_id": 370446
   },
   {
     "id": 1183,
@@ -7349,14 +7321,14 @@ let originalFleets = [
   },
   {
     "id": 972,
-    "name": "La Paz  Bolivia",
+    "name": "La Paz, Bolivia",
     "lat": -16.510248,
     "lng": -68.188295,
     "radius": 87815,
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 16362
+    "service_area_pricing_id": 857725
   },
   {
     "id": 1862,
@@ -7400,7 +7372,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 122896
+    "service_area_pricing_id": 1106217
   },
   {
     "id": 1450,
@@ -7422,7 +7394,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 248668
+    "service_area_pricing_id": 1369918
   },
   {
     "id": 823,
@@ -7455,7 +7427,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 147670
+    "service_area_pricing_id": 662638
   },
   {
     "id": 51,
@@ -7466,7 +7438,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 196978
+    "service_area_pricing_id": 1034909
   },
   {
     "id": 1655,
@@ -7510,7 +7482,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 217887
+    "service_area_pricing_id": 365941
   },
   {
     "id": 988,
@@ -7554,7 +7526,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 222820
+    "service_area_pricing_id": 405141
   },
   {
     "id": 1178,
@@ -7583,11 +7555,11 @@ let originalFleets = [
     "name": "Las Vegas,USA",
     "lat": 36.084000,
     "lng": -115.153739,
-    "radius": 469927,
+    "radius": 120701,
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 247447
+    "service_area_pricing_id": 1360958
   },
   {
     "id": 702,
@@ -7614,13 +7586,13 @@ let originalFleets = [
   {
     "id": 834,
     "name": "Leeds/Bradford,UK",
-    "lat": 54.042901,
-    "lng": -1.648882,
-    "radius": 48280,
+    "lat": 53.859385,
+    "lng": -1.411867,
+    "radius": 30383,
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 197731
+    "service_area_pricing_id": 1360976
   },
   {
     "id": 22255,
@@ -7642,7 +7614,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 180529
+    "service_area_pricing_id": 599171
   },
   {
     "id": 37337,
@@ -7719,7 +7691,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 177377
+    "service_area_pricing_id": 500602
   },
   {
     "id": 1412,
@@ -7752,18 +7724,18 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 98729
+    "service_area_pricing_id": 733878
   },
   {
     "id": 1077,
     "name": "Lijiang,China",
-    "lat": 26.849889,
-    "lng": 100.254468,
+    "lat": 26.679116,
+    "lng": 100.177856,
     "radius": 133000,
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 218015
+    "service_area_pricing_id": 337182
   },
   {
     "id": 1137,
@@ -7796,7 +7768,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 250964
+    "service_area_pricing_id": 1335768
   },
   {
     "id": 1138,
@@ -7851,7 +7823,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 246136
+    "service_area_pricing_id": 1160399
   },
   {
     "id": 407,
@@ -7867,13 +7839,13 @@ let originalFleets = [
   {
     "id": 485,
     "name": "Livepool,UK",
-    "lat": 53.405109,
-    "lng": -3.653210,
-    "radius": 80467,
+    "lat": 53.494394,
+    "lng": -3.441327,
+    "radius": 89739,
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 205551
+    "service_area_pricing_id": 1360972
   },
   {
     "id": 1449,
@@ -7928,7 +7900,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 91299
+    "service_area_pricing_id": 499173
   },
   {
     "id": 883,
@@ -7961,7 +7933,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 65225
+    "service_area_pricing_id": 264495
   },
   {
     "id": 185,
@@ -7972,18 +7944,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 240490
-  },
-  {
-    "id": 842,
-    "name": "Londonderry,UK",
-    "lat": 54.889841,
-    "lng": -6.927724,
-    "radius": 32187,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": 168752
+    "service_area_pricing_id": 1314692
   },
   {
     "id": 1793,
@@ -8005,7 +7966,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 252936
+    "service_area_pricing_id": 1361541
   },
   {
     "id": 606,
@@ -8016,7 +7977,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 219412
+    "service_area_pricing_id": 1143467
   },
   {
     "id": 897,
@@ -8093,7 +8054,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 100087
+    "service_area_pricing_id": 499174
   },
   {
     "id": 1720,
@@ -8104,7 +8065,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 193739
+    "service_area_pricing_id": 260874
   },
   {
     "id": 27570,
@@ -8126,7 +8087,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 117259
+    "service_area_pricing_id": 806128
   },
   {
     "id": 1642,
@@ -8137,7 +8098,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 113786
+    "service_area_pricing_id": 517747
   },
   {
     "id": 1079,
@@ -8170,7 +8131,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 73876
+    "service_area_pricing_id": 771471
   },
   {
     "id": 486,
@@ -8181,7 +8142,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 190610
+    "service_area_pricing_id": 266033
   },
   {
     "id": 982,
@@ -8192,7 +8153,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 248699
+    "service_area_pricing_id": 1027756
   },
   {
     "id": 1139,
@@ -8203,7 +8164,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 201770
+    "service_area_pricing_id": 795782
   },
   {
     "id": 1163,
@@ -8269,7 +8230,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 223343
+    "service_area_pricing_id": 1159298
   },
   {
     "id": 1721,
@@ -8346,7 +8307,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 245304
+    "service_area_pricing_id": 775412
   },
   {
     "id": 912,
@@ -8368,18 +8329,18 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 177307
+    "service_area_pricing_id": 1191328
   },
   {
     "id": 1643,
     "name": "Malmo, Sweden",
-    "lat": 56.856922,
-    "lng": 14.217209,
-    "radius": 200000,
+    "lat": 55.561754,
+    "lng": 13.143052,
+    "radius": 50000,
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 156279
+    "service_area_pricing_id": 517577
   },
   {
     "id": 1021,
@@ -8450,13 +8411,13 @@ let originalFleets = [
   {
     "id": 291,
     "name": "Manchester,UK",
-    "lat": 53.502187,
-    "lng": -2.206493,
-    "radius": 160934,
+    "lat": 53.223382,
+    "lng": -1.616021,
+    "radius": 80467,
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 199817
+    "service_area_pricing_id": 926112
   },
   {
     "id": 1722,
@@ -8500,7 +8461,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 252579
+    "service_area_pricing_id": 1369624
   },
   {
     "id": 1780,
@@ -8571,13 +8532,13 @@ let originalFleets = [
   {
     "id": 783,
     "name": "Mar del Plata,Argentina",
-    "lat": -37.933205,
-    "lng": -57.581518,
+    "lat": -37.656603,
+    "lng": -58.933219,
     "radius": 200000,
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 96324
+    "service_area_pricing_id": 410573
   },
   {
     "id": 38708,
@@ -8588,7 +8549,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 158413
+    "service_area_pricing_id": 347402
   },
   {
     "id": 1488,
@@ -8610,7 +8571,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 194201
+    "service_area_pricing_id": 1105083
   },
   {
     "id": 983,
@@ -8621,7 +8582,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 248643
+    "service_area_pricing_id": 1319581
   },
   {
     "id": 1140,
@@ -8632,7 +8593,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 198829
+    "service_area_pricing_id": 440921
   },
   {
     "id": 853,
@@ -8654,7 +8615,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 34545
+    "service_area_pricing_id": 458348
   },
   {
     "id": 20426,
@@ -8676,7 +8637,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 158186
+    "service_area_pricing_id": 492438
   },
   {
     "id": 1325,
@@ -8769,13 +8730,13 @@ let originalFleets = [
   {
     "id": 140,
     "name": "Melbourne,Australia",
-    "lat": -37.967623,
-    "lng": 144.905636,
+    "lat": -37.632498,
+    "lng": 145.036201,
     "radius": 200000,
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 233525
+    "service_area_pricing_id": 1369612
   },
   {
     "id": 1809,
@@ -8786,7 +8747,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 227525
+    "service_area_pricing_id": 748514
   },
   {
     "id": 1443,
@@ -8819,7 +8780,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 216584
+    "service_area_pricing_id": 1197926
   },
   {
     "id": 1185,
@@ -8874,7 +8835,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 247808
+    "service_area_pricing_id": 1044489
   },
   {
     "id": 69,
@@ -8885,7 +8846,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 251343
+    "service_area_pricing_id": 1369314
   },
   {
     "id": 325,
@@ -8896,7 +8857,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 251749
+    "service_area_pricing_id": 1198710
   },
   {
     "id": 374,
@@ -8929,7 +8890,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 96155
+    "service_area_pricing_id": 1370103
   },
   {
     "id": 40547,
@@ -8940,7 +8901,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 246134
+    "service_area_pricing_id": 445102
   },
   {
     "id": 1478,
@@ -8966,25 +8927,14 @@ let originalFleets = [
   },
   {
     "id": 651,
-    "name": "Mobile  AL  USA",
+    "name": "Mobile, AL, USA",
     "lat": 30.692512,
     "lng": -88.245494,
     "radius": 200000,
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 6696
-  },
-  {
-    "id": 422,
-    "name": "Modesto, CA, USA",
-    "lat": 37.626995,
-    "lng": -120.956039,
-    "radius": 1,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": 61041
+    "service_area_pricing_id": 261057
   },
   {
     "id": 36335,
@@ -9017,7 +8967,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 248653
+    "service_area_pricing_id": 1187187
   },
   {
     "id": 1264,
@@ -9066,24 +9016,13 @@ let originalFleets = [
   {
     "id": 482,
     "name": "Montego Bay,Jamaica",
-    "lat": 18.398007,
-    "lng": -77.525036,
+    "lat": 18.405095,
+    "lng": -77.556628,
     "radius": 90000,
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 245655
-  },
-  {
-    "id": 377,
-    "name": "Monterey  CA  USA",
-    "lat": 36.587146,
-    "lng": -121.846232,
-    "radius": 1,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": 7612
+    "service_area_pricing_id": 1300212
   },
   {
     "id": 1770,
@@ -9099,13 +9038,13 @@ let originalFleets = [
   {
     "id": 168,
     "name": "Monterrey, Mexico",
-    "lat": 25.604565,
-    "lng": -100.124464,
-    "radius": 205000,
+    "lat": 25.749436,
+    "lng": -100.247779,
+    "radius": 50000,
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 252120
+    "service_area_pricing_id": 1336709
   },
   {
     "id": 777,
@@ -9116,7 +9055,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 133547
+    "service_area_pricing_id": 313133
   },
   {
     "id": 700,
@@ -9138,18 +9077,18 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 252561
+    "service_area_pricing_id": 1365499
   },
   {
     "id": 67384,
     "name": "Mopa",
-    "lat": 16.187627,
-    "lng": 74.333458,
+    "lat": 16.177048,
+    "lng": 74.091992,
     "radius": 150000,
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 252615
+    "service_area_pricing_id": 494326
   },
   {
     "id": 809,
@@ -9215,7 +9154,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 158140
+    "service_area_pricing_id": 491385
   },
   {
     "id": 1083,
@@ -9237,7 +9176,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 181528
+    "service_area_pricing_id": 403904
   },
   {
     "id": 2149,
@@ -9259,7 +9198,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 249228
+    "service_area_pricing_id": 771910
   },
   {
     "id": 340,
@@ -9270,7 +9209,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 230664
+    "service_area_pricing_id": 1327755
   },
   {
     "id": 1186,
@@ -9284,17 +9223,6 @@ let originalFleets = [
     "service_area_pricing_id": 190801
   },
   {
-    "id": 172,
-    "name": "Murmansk",
-    "lat": 68.784709,
-    "lng": 32.759041,
-    "radius": 130000,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
     "id": 1369,
     "name": "Muscat,Oman",
     "lat": 23.600936,
@@ -9303,7 +9231,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 111464
+    "service_area_pricing_id": 404838
   },
   {
     "id": 27571,
@@ -9336,7 +9264,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 248678
+    "service_area_pricing_id": 260884
   },
   {
     "id": 403,
@@ -9369,18 +9297,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 122899
-  },
-  {
-    "id": 1059,
-    "name": "Nagasaki  Japan",
-    "lat": 32.913643,
-    "lng": 129.918494,
-    "radius": 1,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": 12590
+    "service_area_pricing_id": 1105719
   },
   {
     "id": 127,
@@ -9391,7 +9308,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 220510
+    "service_area_pricing_id": 1360994
   },
   {
     "id": 1723,
@@ -9413,7 +9330,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 192703
+    "service_area_pricing_id": 1117169
   },
   {
     "id": 324,
@@ -9424,7 +9341,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 249132
+    "service_area_pricing_id": 1331934
   },
   {
     "id": 1382,
@@ -9501,7 +9418,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 207966
+    "service_area_pricing_id": 594563
   },
   {
     "id": 1142,
@@ -9512,7 +9429,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 178525
+    "service_area_pricing_id": 405137
   },
   {
     "id": 1084,
@@ -9528,13 +9445,13 @@ let originalFleets = [
   {
     "id": 1235,
     "name": "Naples,Italy",
-    "lat": 41.163321,
-    "lng": 14.228126,
+    "lat": 40.988332,
+    "lng": 14.299462,
     "radius": 70000,
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 249208
+    "service_area_pricing_id": 1261571
   },
   {
     "id": 27430,
@@ -9556,7 +9473,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 182508
+    "service_area_pricing_id": 1370161
   },
   {
     "id": 713,
@@ -9567,7 +9484,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 174776
+    "service_area_pricing_id": 1132833
   },
   {
     "id": 958,
@@ -9578,7 +9495,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 112273
+    "service_area_pricing_id": 442137
   },
   {
     "id": 1699,
@@ -9611,7 +9528,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 166132
+    "service_area_pricing_id": 1016047
   },
   {
     "id": 1782,
@@ -9666,7 +9583,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 231022
+    "service_area_pricing_id": 1129091
   },
   {
     "id": 367,
@@ -9677,7 +9594,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 236385
+    "service_area_pricing_id": 1370113
   },
   {
     "id": 40,
@@ -9688,7 +9605,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 252490
+    "service_area_pricing_id": 1345346
   },
   {
     "id": 795,
@@ -9704,35 +9621,35 @@ let originalFleets = [
   {
     "id": 835,
     "name": "Newcastle, UK",
-    "lat": 55.037295,
-    "lng": -1.709877,
-    "radius": 93342,
+    "lat": 54.974909,
+    "lng": -1.635801,
+    "radius": 40541,
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 170791
+    "service_area_pricing_id": 527301
   },
   {
     "id": 646,
     "name": "Newcastle,Australia",
-    "lat": -33.621692,
-    "lng": 151.670680,
-    "radius": 142000,
+    "lat": -32.863042,
+    "lng": 151.684496,
+    "radius": 79000,
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 171800
+    "service_area_pricing_id": 254157
   },
   {
     "id": 1651,
-    "name": "Newquay UK",
-    "lat": 50.440132,
-    "lng": -5.010163,
-    "radius": 160934,
+    "name": "Newquay,UK",
+    "lat": 50.416825,
+    "lng": -5.066588,
+    "radius": 16093,
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": null
+    "service_area_pricing_id": 528485
   },
   {
     "id": 114,
@@ -9743,7 +9660,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 208536
+    "service_area_pricing_id": 1369610
   },
   {
     "id": 1408,
@@ -9765,7 +9682,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 242109
+    "service_area_pricing_id": 1186651
   },
   {
     "id": 1117,
@@ -9776,7 +9693,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 184778
+    "service_area_pricing_id": 493006
   },
   {
     "id": 1143,
@@ -9787,7 +9704,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 178526
+    "service_area_pricing_id": 406591
   },
   {
     "id": 1085,
@@ -9835,25 +9752,25 @@ let originalFleets = [
   },
   {
     "id": 1468,
-    "name": "North Nicosia  Cyprus",
+    "name": "North Nicosia, Cyprus",
     "lat": 35.158773,
     "lng": 33.503990,
     "radius": 50000,
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 23575
+    "service_area_pricing_id": 354650
   },
   {
     "id": 836,
-    "name": "Norwich  UK",
-    "lat": 52.675629,
-    "lng": 1.283739,
-    "radius": 128747,
+    "name": "Norwich, UK",
+    "lat": 52.634934,
+    "lng": 1.292402,
+    "radius": 34603,
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 28465
+    "service_area_pricing_id": 527303
   },
   {
     "id": 1342,
@@ -9868,14 +9785,14 @@ let originalFleets = [
   },
   {
     "id": 832,
-    "name": "Nottingham UK",
-    "lat": 52.829374,
-    "lng": -1.332134,
-    "radius": 241401,
+    "name": "Nottingham,UK",
+    "lat": 52.945984,
+    "lng": -1.185317,
+    "radius": 40234,
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 28461
+    "service_area_pricing_id": 527132
   },
   {
     "id": 21743,
@@ -9908,7 +9825,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 146714
+    "service_area_pricing_id": 1192746
   },
   {
     "id": 1444,
@@ -9919,7 +9836,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 222823
+    "service_area_pricing_id": 278807
   },
   {
     "id": 706,
@@ -9930,7 +9847,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 195723
+    "service_area_pricing_id": 275963
   },
   {
     "id": 16771,
@@ -9941,7 +9858,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 185100
+    "service_area_pricing_id": 493016
   },
   {
     "id": 44861,
@@ -9988,17 +9905,6 @@ let originalFleets = [
     "service_area_pricing_id": 222887
   },
   {
-    "id": 1061,
-    "name": "Oita, Japan",
-    "lat": 33.478528,
-    "lng": 131.735963,
-    "radius": 1,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": 111913
-  },
-  {
     "id": 1062,
     "name": "Okayama, Japan",
     "lat": 34.658214,
@@ -10007,7 +9913,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 143244
+    "service_area_pricing_id": 492998
   },
   {
     "id": 386,
@@ -10029,7 +9935,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 201772
+    "service_area_pricing_id": 283826
   },
   {
     "id": 989,
@@ -10066,14 +9972,14 @@ let originalFleets = [
   },
   {
     "id": 1685,
-    "name": "Oral Kazakhstan",
+    "name": "Oral%EF%BC%8CKazakhstan",
     "lat": 51.153313,
     "lng": 51.538415,
     "radius": 81067,
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": null
+    "service_area_pricing_id": 455911
   },
   {
     "id": 1277,
@@ -10106,7 +10012,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 237985
+    "service_area_pricing_id": 1021370
   },
   {
     "id": 1086,
@@ -10139,7 +10045,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 252623
+    "service_area_pricing_id": 1364981
   },
   {
     "id": 44,
@@ -10150,7 +10056,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 220380
+    "service_area_pricing_id": 491392
   },
   {
     "id": 1693,
@@ -10194,7 +10100,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 195782
+    "service_area_pricing_id": 1239637
   },
   {
     "id": 1121,
@@ -10238,7 +10144,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 147839
+    "service_area_pricing_id": 1076846
   },
   {
     "id": 1328,
@@ -10260,7 +10166,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 122900
+    "service_area_pricing_id": 1105807
   },
   {
     "id": 1627,
@@ -10271,7 +10177,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 103949
+    "service_area_pricing_id": 516650
   },
   {
     "id": 1272,
@@ -10348,7 +10254,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 99584
+    "service_area_pricing_id": 517755
   },
   {
     "id": 1023,
@@ -10370,7 +10276,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 236833
+    "service_area_pricing_id": 1327216
   },
   {
     "id": 378,
@@ -10381,7 +10287,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 249155
+    "service_area_pricing_id": 254216
   },
   {
     "id": 404,
@@ -10436,7 +10342,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 197822
+    "service_area_pricing_id": 254258
   },
   {
     "id": 991,
@@ -10458,7 +10364,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 185361
+    "service_area_pricing_id": 1276046
   },
   {
     "id": 1319,
@@ -10491,7 +10397,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 204893
+    "service_area_pricing_id": 1016531
   },
   {
     "id": 1452,
@@ -10513,7 +10419,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 252960
+    "service_area_pricing_id": 1276054
   },
   {
     "id": 1238,
@@ -10524,7 +10430,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 171287
+    "service_area_pricing_id": 264847
   },
   {
     "id": 1348,
@@ -10579,7 +10485,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 198295
+    "service_area_pricing_id": 1361538
   },
   {
     "id": 1144,
@@ -10590,7 +10496,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 179396
+    "service_area_pricing_id": 405132
   },
   {
     "id": 1687,
@@ -10645,7 +10551,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 247816
+    "service_area_pricing_id": 1362935
   },
   {
     "id": 415,
@@ -10683,13 +10589,13 @@ let originalFleets = [
   {
     "id": 136,
     "name": "Perth,Australia",
-    "lat": -32.005575,
-    "lng": 115.669111,
+    "lat": -32.516581,
+    "lng": 115.003841,
     "radius": 150000,
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 233672
+    "service_area_pricing_id": 1251568
   },
   {
     "id": 1239,
@@ -10700,7 +10606,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 166993
+    "service_area_pricing_id": 353712
   },
   {
     "id": 1240,
@@ -10744,7 +10650,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 252605
+    "service_area_pricing_id": 308851
   },
   {
     "id": 111,
@@ -10755,7 +10661,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 252601
+    "service_area_pricing_id": 1331349
   },
   {
     "id": 67,
@@ -10777,7 +10683,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 203635
+    "service_area_pricing_id": 1187205
   },
   {
     "id": 45,
@@ -10788,18 +10694,18 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 252976
+    "service_area_pricing_id": 1318368
   },
   {
     "id": 1751,
     "name": "Piedras Negras, Mexico",
-    "lat": 28.629225,
-    "lng": -100.544552,
+    "lat": 28.411433,
+    "lng": -101.394867,
     "radius": 91000,
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 212317
+    "service_area_pricing_id": 382790
   },
   {
     "id": 1462,
@@ -10832,7 +10738,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 242600
+    "service_area_pricing_id": 661985
   },
   {
     "id": 371,
@@ -10865,7 +10771,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 250140
+    "service_area_pricing_id": 1165807
   },
   {
     "id": 1512,
@@ -10986,7 +10892,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 122890
+    "service_area_pricing_id": 474600
   },
   {
     "id": 1314,
@@ -11052,7 +10958,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 199129
+    "service_area_pricing_id": 626573
   },
   {
     "id": 960,
@@ -11096,7 +11002,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 222307
+    "service_area_pricing_id": 571785
   },
   {
     "id": 1489,
@@ -11118,18 +11024,18 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 154764
+    "service_area_pricing_id": 463747
   },
   {
     "id": 173,
     "name": "Prague, Czech Republic",
-    "lat": 50.101791,
-    "lng": 14.263181,
-    "radius": 50000,
+    "lat": 50.092922,
+    "lng": 14.260322,
+    "radius": 200000,
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 197020
+    "service_area_pricing_id": 1115337
   },
   {
     "id": 879,
@@ -11210,14 +11116,14 @@ let originalFleets = [
   },
   {
     "id": 1262,
-    "name": "Providenciales Turks and Caicos Islands",
-    "lat": 21.776346,
-    "lng": -72.271334,
-    "radius": 19000,
+    "name": "Providenciales,Turks and Caicos Islands",
+    "lat": 21.747276,
+    "lng": -72.265250,
+    "radius": 15000,
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 8096
+    "service_area_pricing_id": 496851
   },
   {
     "id": 1836,
@@ -11250,7 +11156,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 252145
+    "service_area_pricing_id": 253217
   },
   {
     "id": 1282,
@@ -11283,7 +11189,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 216581
+    "service_area_pricing_id": 406597
   },
   {
     "id": 10780,
@@ -11316,7 +11222,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 135364
+    "service_area_pricing_id": 1370083
   },
   {
     "id": 607,
@@ -11327,7 +11233,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 236768
+    "service_area_pricing_id": 915758
   },
   {
     "id": 899,
@@ -11371,18 +11277,18 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 234410
+    "service_area_pricing_id": 747063
   },
   {
     "id": 1299,
     "name": "Punta del Este, Uruguay",
-    "lat": -34.472573,
-    "lng": -55.241039,
-    "radius": 121000,
+    "lat": -34.796448,
+    "lng": -54.457613,
+    "radius": 100000,
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 129549
+    "service_area_pricing_id": 479223
   },
   {
     "id": 27458,
@@ -11492,7 +11398,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 159726
+    "service_area_pricing_id": 1369969
   },
   {
     "id": 145,
@@ -11503,7 +11409,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 250152
+    "service_area_pricing_id": 669709
   },
   {
     "id": 810,
@@ -11558,7 +11464,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 145851
+    "service_area_pricing_id": 1105870
   },
   {
     "id": 1803,
@@ -11602,7 +11508,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 144562
+    "service_area_pricing_id": 492867
   },
   {
     "id": 27540,
@@ -11613,7 +11519,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 45858
+    "service_area_pricing_id": 398451
   },
   {
     "id": 1318,
@@ -11635,7 +11541,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 120114
+    "service_area_pricing_id": 772957
   },
   {
     "id": 962,
@@ -11686,22 +11592,11 @@ let originalFleets = [
     "name": "Reykjavik,Iceland",
     "lat": 63.978603,
     "lng": -22.635036,
-    "radius": 300000,
+    "radius": 200000,
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 186062
-  },
-  {
-    "id": 811,
-    "name": "Reynosa, Mexico",
-    "lat": 25.244461,
-    "lng": -98.646039,
-    "radius": 100000,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": 232607
+    "service_area_pricing_id": 554846
   },
   {
     "id": 1480,
@@ -11734,7 +11629,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 194746
+    "service_area_pricing_id": 517756
   },
   {
     "id": 900,
@@ -11745,7 +11640,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 245272
+    "service_area_pricing_id": 846516
   },
   {
     "id": 1242,
@@ -11756,7 +11651,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 163177
+    "service_area_pricing_id": 278204
   },
   {
     "id": 963,
@@ -11789,7 +11684,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 208899
+    "service_area_pricing_id": 1370121
   },
   {
     "id": 894,
@@ -11921,7 +11816,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 213905
+    "service_area_pricing_id": 915338
   },
   {
     "id": 1861,
@@ -11987,7 +11882,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 148432
+    "service_area_pricing_id": 516647
   },
   {
     "id": 27556,
@@ -12025,24 +11920,13 @@ let originalFleets = [
   {
     "id": 1840,
     "name": "Sabah, Malaysia",
-    "lat": 4.587811,
-    "lng": 118.059387,
-    "radius": 93000,
+    "lat": 4.242769,
+    "lng": 117.900085,
+    "radius": 101537,
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 128994
-  },
-  {
-    "id": 63,
-    "name": "Sacramento,CA,USA",
-    "lat": 38.695085,
-    "lng": -121.590065,
-    "radius": 1,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": 59074
+    "service_area_pricing_id": 1107904
   },
   {
     "id": 1247,
@@ -12068,14 +11952,14 @@ let originalFleets = [
   },
   {
     "id": 1256,
-    "name": "Saint Kitts  Saint Kitts and Nevis",
+    "name": "Saint Kitts, Saint Kitts and Nevis",
     "lat": 17.311215,
     "lng": -62.714100,
     "radius": 19000,
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 9343
+    "service_area_pricing_id": 500599
   },
   {
     "id": 1246,
@@ -12101,14 +11985,14 @@ let originalFleets = [
   },
   {
     "id": 1798,
-    "name": "Saint-Pierre  Saint Pierre and Miquelon",
-    "lat": 46.890962,
-    "lng": -56.387167,
-    "radius": 29036,
+    "name": "Saint-Pierre, Saint Pierre and Miquelon",
+    "lat": 46.963885,
+    "lng": -56.415905,
+    "radius": 22000,
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": null
+    "service_area_pricing_id": 496960
   },
   {
     "id": 170,
@@ -12119,7 +12003,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 179321
+    "service_area_pricing_id": 492726
   },
   {
     "id": 1334,
@@ -12174,7 +12058,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 199155
+    "service_area_pricing_id": 1223748
   },
   {
     "id": 23660,
@@ -12190,13 +12074,13 @@ let originalFleets = [
   {
     "id": 1795,
     "name": "Saltillo, Mexico",
-    "lat": 25.548946,
-    "lng": -100.932195,
-    "radius": 88000,
+    "lat": 25.401057,
+    "lng": -100.994061,
+    "radius": 50000,
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 215263
+    "service_area_pricing_id": 340631
   },
   {
     "id": 965,
@@ -12218,7 +12102,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 222862
+    "service_area_pricing_id": 511631
   },
   {
     "id": 860,
@@ -12284,7 +12168,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 197766
+    "service_area_pricing_id": 470197
   },
   {
     "id": 865,
@@ -12295,7 +12179,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 216571
+    "service_area_pricing_id": 383990
   },
   {
     "id": 75,
@@ -12306,7 +12190,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 233082
+    "service_area_pricing_id": 1107862
   },
   {
     "id": 859,
@@ -12328,7 +12212,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 252611
+    "service_area_pricing_id": 1362023
   },
   {
     "id": 467,
@@ -12339,7 +12223,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 240291
+    "service_area_pricing_id": 1202087
   },
   {
     "id": 23662,
@@ -12361,7 +12245,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 227856
+    "service_area_pricing_id": 1017624
   },
   {
     "id": 812,
@@ -12394,7 +12278,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 37516
+    "service_area_pricing_id": 497095
   },
   {
     "id": 25734,
@@ -12416,18 +12300,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 248662
-  },
-  {
-    "id": 13047,
-    "name": "Santa Cruz",
-    "lat": 36.934261,
-    "lng": -121.787818,
-    "radius": 1,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": 59083
+    "service_area_pricing_id": 738606
   },
   {
     "id": 878,
@@ -12449,7 +12322,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 169372
+    "service_area_pricing_id": 857727
   },
   {
     "id": 641,
@@ -12461,17 +12334,6 @@ let originalFleets = [
     "parent_fleet_id": 15,
     "unverified": null,
     "service_area_pricing_id": 115608
-  },
-  {
-    "id": 419,
-    "name": "Santa Rosa,CA,USA",
-    "lat": 38.509231,
-    "lng": -122.813258,
-    "radius": 1,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": 51207
   },
   {
     "id": 1189,
@@ -12515,7 +12377,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 237905
+    "service_area_pricing_id": 1335767
   },
   {
     "id": 703,
@@ -12526,7 +12388,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 199048
+    "service_area_pricing_id": 372559
   },
   {
     "id": 866,
@@ -12537,7 +12399,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 248648
+    "service_area_pricing_id": 265429
   },
   {
     "id": 679,
@@ -12548,18 +12410,18 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 243953
+    "service_area_pricing_id": 335174
   },
   {
     "id": 966,
-    "name": "Sao Luis  Brazil",
+    "name": "Sao Luis, Brazil",
     "lat": -2.759228,
     "lng": -43.980782,
     "radius": 53359,
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 25347
+    "service_area_pricing_id": 442151
   },
   {
     "id": 343,
@@ -12570,7 +12432,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 206955
+    "service_area_pricing_id": 1370038
   },
   {
     "id": 1402,
@@ -12592,7 +12454,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 207768
+    "service_area_pricing_id": 796959
   },
   {
     "id": 1509,
@@ -12680,7 +12542,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 252931
+    "service_area_pricing_id": 620554
   },
   {
     "id": 37311,
@@ -12724,18 +12586,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 165480
-  },
-  {
-    "id": 105,
-    "name": "Seoul,Korean",
-    "lat": 37.351991,
-    "lng": 127.685269,
-    "radius": 134000,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": 205319
+    "service_area_pricing_id": 493004
   },
   {
     "id": 1309,
@@ -12790,7 +12641,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 252917
+    "service_area_pricing_id": 565444
   },
   {
     "id": 846,
@@ -12823,7 +12674,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 220217
+    "service_area_pricing_id": 488108
   },
   {
     "id": 330,
@@ -12835,17 +12686,6 @@ let originalFleets = [
     "parent_fleet_id": 15,
     "unverified": null,
     "service_area_pricing_id": 218552
-  },
-  {
-    "id": 311,
-    "name": "ShenZhen，China,SZX",
-    "lat": 22.672667,
-    "lng": 114.151620,
-    "radius": null,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": 221249
   },
   {
     "id": 9714,
@@ -12900,7 +12740,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 207778
+    "service_area_pricing_id": 491562
   },
   {
     "id": 1689,
@@ -12955,7 +12795,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 250580
+    "service_area_pricing_id": 1331354
   },
   {
     "id": 156,
@@ -12988,7 +12828,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 200752
+    "service_area_pricing_id": 1222701
   },
   {
     "id": 683,
@@ -13065,7 +12905,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 210984
+    "service_area_pricing_id": 601063
   },
   {
     "id": 1036,
@@ -13125,13 +12965,13 @@ let originalFleets = [
   {
     "id": 837,
     "name": "Southampton,UK",
-    "lat": 53.110118,
-    "lng": -1.264399,
-    "radius": 321868,
+    "lat": 50.945846,
+    "lng": -1.365737,
+    "radius": 49890,
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 192419
+    "service_area_pricing_id": 527305
   },
   {
     "id": 689,
@@ -13211,17 +13051,6 @@ let originalFleets = [
     "service_area_pricing_id": 199170
   },
   {
-    "id": 800,
-    "name": "ST PETERSBURG,USA",
-    "lat": 27.909867,
-    "lng": -82.688857,
-    "radius": 1,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": 50508
-  },
-  {
     "id": 985,
     "name": "St. Catherine, Egypt",
     "lat": 28.672287,
@@ -13245,14 +13074,14 @@ let originalFleets = [
   },
   {
     "id": 1306,
-    "name": "St. Jean  Saint Barthelemy",
-    "lat": 17.904187,
-    "lng": -62.841620,
-    "radius": 6250,
+    "name": "St. Jean, Saint Barthelemy",
+    "lat": 17.895250,
+    "lng": -62.837126,
+    "radius": 4000,
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": null
+    "service_area_pricing_id": 410787
   },
   {
     "id": 21304,
@@ -13274,7 +13103,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 116783
+    "service_area_pricing_id": 398450
   },
   {
     "id": 1149,
@@ -13285,7 +13114,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 193757
+    "service_area_pricing_id": 403771
   },
   {
     "id": 1445,
@@ -13296,7 +13125,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 245150
+    "service_area_pricing_id": 573764
   },
   {
     "id": 1837,
@@ -13318,7 +13147,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 171807
+    "service_area_pricing_id": 738618
   },
   {
     "id": 1028,
@@ -13367,13 +13196,13 @@ let originalFleets = [
   {
     "id": 141,
     "name": "Sydney,Australia",
-    "lat": -33.818142,
-    "lng": 151.417880,
+    "lat": -33.240367,
+    "lng": 151.571657,
     "radius": 178000,
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 233487
+    "service_area_pricing_id": 1311332
   },
   {
     "id": 1356,
@@ -13483,7 +13312,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 203706
+    "service_area_pricing_id": 400555
   },
   {
     "id": 658,
@@ -13516,7 +13345,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 161554
+    "service_area_pricing_id": 517748
   },
   {
     "id": 1416,
@@ -13560,7 +13389,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 240633
+    "service_area_pricing_id": 1370141
   },
   {
     "id": 1629,
@@ -13571,18 +13400,18 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 91313
+    "service_area_pricing_id": 516771
   },
   {
     "id": 813,
     "name": "Tampico,Mexico",
-    "lat": 22.029376,
-    "lng": -98.133940,
+    "lat": 22.080849,
+    "lng": -98.462457,
     "radius": 93000,
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 179137
+    "service_area_pricing_id": 358372
   },
   {
     "id": 1045,
@@ -13593,7 +13422,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 161919
+    "service_area_pricing_id": 1105959
   },
   {
     "id": 1030,
@@ -13659,7 +13488,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 164663
+    "service_area_pricing_id": 517750
   },
   {
     "id": 1743,
@@ -13671,6 +13500,17 @@ let originalFleets = [
     "parent_fleet_id": 15,
     "unverified": null,
     "service_area_pricing_id": 146822
+  },
+  {
+    "id": 70051,
+    "name": "Taurange/Rotorua",
+    "lat": -37.888626,
+    "lng": 176.362312,
+    "radius": 150000,
+    "bidding": null,
+    "parent_fleet_id": 15,
+    "unverified": null,
+    "service_area_pricing_id": 353791
   },
   {
     "id": 941,
@@ -13769,7 +13609,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 194403
+    "service_area_pricing_id": 1106066
   },
   {
     "id": 27613,
@@ -13791,7 +13631,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 194005
+    "service_area_pricing_id": 371551
   },
   {
     "id": 1484,
@@ -13802,7 +13642,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 198275
+    "service_area_pricing_id": 266006
   },
   {
     "id": 667,
@@ -13912,7 +13752,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 241798
+    "service_area_pricing_id": 1186655
   },
   {
     "id": 1344,
@@ -13956,7 +13796,18 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 246057
+    "service_area_pricing_id": 740404
+  },
+  {
+    "id": 74406,
+    "name": "Torp Sandefjord",
+    "lat": 59.182446,
+    "lng": 10.256912,
+    "radius": 40000,
+    "bidding": null,
+    "parent_fleet_id": 15,
+    "unverified": null,
+    "service_area_pricing_id": 832924
   },
   {
     "id": 815,
@@ -13989,7 +13840,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 178538
+    "service_area_pricing_id": 405129
   },
   {
     "id": 1152,
@@ -14033,7 +13884,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 186095
+    "service_area_pricing_id": 1162855
   },
   {
     "id": 1243,
@@ -14044,7 +13895,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 171180
+    "service_area_pricing_id": 662565
   },
   {
     "id": 14171,
@@ -14099,7 +13950,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 152959
+    "service_area_pricing_id": 279315
   },
   {
     "id": 37387,
@@ -14121,7 +13972,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 140391
+    "service_area_pricing_id": 499295
   },
   {
     "id": 1640,
@@ -14132,7 +13983,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 191760
+    "service_area_pricing_id": 516574
   },
   {
     "id": 394,
@@ -14198,7 +14049,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 250180
+    "service_area_pricing_id": 464945
   },
   {
     "id": 1788,
@@ -14223,26 +14074,15 @@ let originalFleets = [
     "service_area_pricing_id": 195184
   },
   {
-    "id": 744,
-    "name": "Turin,Italy",
-    "lat": 44.858493,
-    "lng": 7.757293,
-    "radius": 100000,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": 199937
-  },
-  {
     "id": 1741,
-    "name": "Turkmenabat  Turkmenistan",
+    "name": "Turkmenabat, Turkmenistan",
     "lat": 38.936835,
     "lng": 63.567634,
     "radius": 59751,
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": null
+    "service_area_pricing_id": 672683
   },
   {
     "id": 1740,
@@ -14253,7 +14093,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 34546
+    "service_area_pricing_id": 672684
   },
   {
     "id": 1630,
@@ -14264,7 +14104,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 140412
+    "service_area_pricing_id": 516770
   },
   {
     "id": 27614,
@@ -14280,13 +14120,13 @@ let originalFleets = [
   {
     "id": 816,
     "name": "Tuxtla Gutierrez, Mexico",
-    "lat": 16.559161,
-    "lng": -93.023166,
-    "radius": 83000,
+    "lat": 16.369734,
+    "lng": -93.071582,
+    "radius": 90000,
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 36023
+    "service_area_pricing_id": 383934
   },
   {
     "id": 1510,
@@ -14312,14 +14152,14 @@ let originalFleets = [
   },
   {
     "id": 707,
-    "name": "Udaipur, IN",
+    "name": "Udaipur, India",
     "lat": 24.619878,
     "lng": 73.890143,
     "radius": 450000,
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 114368
+    "service_area_pricing_id": 458148
   },
   {
     "id": 933,
@@ -14363,7 +14203,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 123989
+    "service_area_pricing_id": 517745
   },
   {
     "id": 904,
@@ -14429,7 +14269,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 148458
+    "service_area_pricing_id": 516783
   },
   {
     "id": 27443,
@@ -14495,18 +14335,29 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 203108
+    "service_area_pricing_id": 405039
   },
   {
     "id": 55,
     "name": "Vancouver,Canada",
-    "lat": 49.161279,
-    "lng": -122.691131,
+    "lat": 49.601359,
+    "lng": -122.910208,
     "radius": 126000,
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 252558
+    "service_area_pricing_id": 1370060
+  },
+  {
+    "id": 70151,
+    "name": "Varadero, Cuba",
+    "lat": 23.034311,
+    "lng": -81.437687,
+    "radius": 150000,
+    "bidding": null,
+    "parent_fleet_id": 15,
+    "unverified": null,
+    "service_area_pricing_id": 370569
   },
   {
     "id": 1726,
@@ -14517,7 +14368,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 239359
+    "service_area_pricing_id": 1336232
   },
   {
     "id": 37316,
@@ -14561,7 +14412,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 245834
+    "service_area_pricing_id": 1223751
   },
   {
     "id": 1518,
@@ -14588,13 +14439,13 @@ let originalFleets = [
   {
     "id": 1245,
     "name": "Verona,Italy",
-    "lat": 45.444950,
-    "lng": 10.942916,
-    "radius": 100000,
+    "lat": 45.209289,
+    "lng": 10.406803,
+    "radius": 130701,
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 212898
+    "service_area_pricing_id": 701989
   },
   {
     "id": 1424,
@@ -14605,7 +14456,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 178196
+    "service_area_pricing_id": 739684
   },
   {
     "id": 1284,
@@ -14627,7 +14478,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 245078
+    "service_area_pricing_id": 601061
   },
   {
     "id": 120,
@@ -14638,7 +14489,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 196394
+    "service_area_pricing_id": 464840
   },
   {
     "id": 599,
@@ -14715,7 +14566,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 195088
+    "service_area_pricing_id": 517754
   },
   {
     "id": 1725,
@@ -14814,18 +14665,18 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 183395
+    "service_area_pricing_id": 453638
   },
   {
     "id": 73,
     "name": "Washington DC",
-    "lat": 38.813300,
-    "lng": -76.060322,
-    "radius": 289681,
+    "lat": 38.975496,
+    "lng": -77.096270,
+    "radius": 96560,
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 248703
+    "service_area_pricing_id": 1033760
   },
   {
     "id": 1446,
@@ -14836,7 +14687,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 180637
+    "service_area_pricing_id": 705682
   },
   {
     "id": 1090,
@@ -14852,13 +14703,13 @@ let originalFleets = [
   {
     "id": 144,
     "name": "Wellington,New Zealand",
-    "lat": -41.318938,
-    "lng": 175.113767,
+    "lat": -41.220077,
+    "lng": 175.006623,
     "radius": 48000,
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 214830
+    "service_area_pricing_id": 813165
   },
   {
     "id": 1091,
@@ -14869,7 +14720,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 218027
+    "service_area_pricing_id": 272485
   },
   {
     "id": 820,
@@ -14913,7 +14764,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 108418
+    "service_area_pricing_id": 1019773
   },
   {
     "id": 802,
@@ -14957,7 +14808,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 181907
+    "service_area_pricing_id": 764151
   },
   {
     "id": 1219,
@@ -14968,7 +14819,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 195731
+    "service_area_pricing_id": 463838
   },
   {
     "id": 672,
@@ -15023,7 +14874,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 243902
+    "service_area_pricing_id": 306478
   },
   {
     "id": 680,
@@ -15111,7 +14962,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 158141
+    "service_area_pricing_id": 491387
   },
   {
     "id": 1097,
@@ -15123,17 +14974,6 @@ let originalFleets = [
     "parent_fleet_id": 15,
     "unverified": null,
     "service_area_pricing_id": 218032
-  },
-  {
-    "id": 1098,
-    "name": "Yanji,China",
-    "lat": 42.887669,
-    "lng": 129.504275,
-    "radius": null,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": 203441
   },
   {
     "id": 1099,
@@ -15199,7 +15039,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 218048
+    "service_area_pricing_id": 294493
   },
   {
     "id": 1031,
@@ -15265,7 +15105,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 198256
+    "service_area_pricing_id": 307590
   },
   {
     "id": 925,
@@ -15320,7 +15160,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 217889
+    "service_area_pricing_id": 505855
   },
   {
     "id": 682,
@@ -15342,7 +15182,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 250981
+    "service_area_pricing_id": 1143470
   },
   {
     "id": 1466,
@@ -15386,7 +15226,7 @@ let originalFleets = [
     "bidding": null,
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 210678
+    "service_area_pricing_id": 805692
   },
   {
     "id": 57867,
@@ -15401,5288 +15241,2100 @@ let originalFleets = [
   }
 ]
 
-
-let partner = {
-  "id": 19231,
-  "json": {
-    "service_areas": {
-      "sas_percent": [
-        {
-          "id": 1192,
-          "percent": "50"
-        },
-        {
-          "id": 26047,
-          "percent": "50"
-        },
-        {
-          "id": 126,
-          "percent": "0"
-        },
-        {
-          "id": 129,
-          "percent": "0"
-        },
-        {
-          "id": 1057,
-          "percent": "0"
-        },
-        {
-          "id": 128,
-          "percent": "0"
-        },
-        {
-          "id": 1060,
-          "percent": "0"
-        },
-        {
-          "id": 107,
-          "percent": "3"
-        },
-        {
-          "id": 125,
-          "percent": "0"
-        },
-        {
-          "id": 50,
-          "percent": "5"
-        },
-        {
-          "id": 51,
-          "percent": "3"
-        },
-        {
-          "id": 52,
-          "percent": "3",
-          "vcs": [
-            {
-              "id": 1,
-              "percent": "1.28"
-            },
-            {
-              "id": 2,
-              "percent": "14.8"
-            },
-            {
-              "id": 6,
-              "percent": "17.77"
-            },
-            {
-              "id": 4,
-              "percent": "14.43"
-            },
-            {
-              "id": 9,
-              "percent": "12.82"
-            },
-            {
-              "id": 11,
-              "percent": "9.94"
-            },
-            {
-              "id": 12,
-              "percent": "2.83"
-            },
-            {
-              "id": 7,
-              "percent": "12.82"
-            }
-          ]
-        },
-        {
-          "id": 49,
-          "percent": "0",
-          "vcs": [
-            {
-              "id": 1,
-              "percent": "14.8"
-            },
-            {
-              "id": 2,
-              "percent": "4.5"
-            },
-            {
-              "id": 6,
-              "percent": "20"
-            },
-            {
-              "id": 4,
-              "percent": "7.98"
-            },
-            {
-              "id": 5,
-              "percent": "4.95"
-            },
-            {
-              "id": 9,
-              "percent": "10"
-            },
-            {
-              "id": 10,
-              "percent": "4.99"
-            },
-            {
-              "id": 11,
-              "percent": "4"
-            },
-            {
-              "id": 12,
-              "percent": "3.35"
-            },
-            {
-              "id": 7,
-              "percent": "3.29"
-            }
-          ]
-        },
-        {
-          "id": 105,
-          "percent": "3"
-        },
-        {
-          "id": 44,
-          "percent": "0"
-        },
-        {
-          "id": 43,
-          "percent": "0"
-        },
-        {
-          "id": 670,
-          "percent": "3"
-        },
-        {
-          "id": 459,
-          "percent": "3"
-        },
-        {
-          "id": 1031,
-          "percent": "10"
-        },
-        {
-          "id": 1021,
-          "percent": "10"
-        },
-        {
-          "id": 1028,
-          "percent": "10"
-        },
-        {
-          "id": 1018,
-          "percent": "10"
-        },
-        {
-          "id": 103,
-          "percent": "10"
-        },
-        {
-          "id": 347,
-          "percent": "3"
-        },
-        {
-          "id": 1103,
-          "percent": "3"
-        },
-        {
-          "id": 660,
-          "percent": "3"
-        },
-        {
-          "id": 661,
-          "percent": "3"
-        },
-        {
-          "id": 671,
-          "percent": "3"
-        },
-        {
-          "id": 678,
-          "percent": "3"
-        },
-        {
-          "id": 138,
-          "percent": "10"
-        },
-        {
-          "id": 136,
-          "percent": "10"
-        },
-        {
-          "id": 145,
-          "percent": "10"
-        },
-        {
-          "id": 140,
-          "percent": "10"
-        },
-        {
-          "id": 141,
-          "percent": "10"
-        },
-        {
-          "id": 273,
-          "percent": "3"
-        },
-        {
-          "id": 1077,
-          "percent": "3"
-        },
-        {
-          "id": 675,
-          "percent": "3"
-        },
-        {
-          "id": 667,
-          "percent": "3"
-        },
-        {
-          "id": 680,
-          "percent": "3"
-        },
-        {
-          "id": 460,
-          "percent": "3"
-        },
-        {
-          "id": 679,
-          "percent": "3"
-        },
-        {
-          "id": 311,
-          "percent": "3"
-        },
-        {
-          "id": 151,
-          "percent": "3"
-        },
-        {
-          "id": 275,
-          "percent": "3"
-        },
-        {
-          "id": 272,
-          "percent": "3"
-        },
-        {
-          "id": 274,
-          "percent": "3"
-        },
-        {
-          "id": 150,
-          "percent": "3"
-        },
-        {
-          "id": 149,
-          "percent": "3"
-        },
-        {
-          "id": 147,
-          "percent": "3"
-        },
-        {
-          "id": 1248,
-          "percent": "-10"
-        },
-        {
-          "id": 713,
-          "percent": "-5"
-        },
-        {
-          "id": 482,
-          "percent": "-5"
-        },
-        {
-          "id": 166,
-          "percent": "-5"
-        },
-        {
-          "id": 859,
-          "percent": "-8"
-        },
-        {
-          "id": 865,
-          "percent": "-5"
-        },
-        {
-          "id": 1874,
-          "percent": "-5"
-        },
-        {
-          "id": 168,
-          "percent": "-10"
-        },
-        {
-          "id": 776,
-          "percent": "-8"
-        },
-        {
-          "id": 169,
-          "percent": "-5"
-        },
-        {
-          "id": 1827,
-          "percent": "-5"
-        },
-        {
-          "id": 709,
-          "percent": "-3"
-        },
-        {
-          "id": 1295,
-          "percent": "-5"
-        },
-        {
-          "id": 1305,
-          "percent": "-5"
-        },
-        {
-          "id": 467,
-          "percent": "-5"
-        },
-        {
-          "id": 895,
-          "percent": "-8"
-        },
-        {
-          "id": 372,
-          "percent": "-5"
-        },
-        {
-          "id": 620,
-          "percent": "-5"
-        },
-        {
-          "id": 320,
-          "percent": "-5"
-        },
-        {
-          "id": 167,
-          "percent": "-3"
-        },
-        {
-          "id": 858,
-          "percent": "-5"
-        },
-        {
-          "id": 621,
-          "percent": "-5"
-        },
-        {
-          "id": 652,
-          "percent": "-8"
-        },
-        {
-          "id": 703,
-          "percent": "-8"
-        },
-        {
-          "id": 326,
-          "percent": "-8"
-        },
-        {
-          "id": 27454,
-          "percent": "-8"
-        },
-        {
-          "id": 75,
-          "percent": "0"
-        },
-        {
-          "id": 58,
-          "percent": "0"
-        },
-        {
-          "id": 57,
-          "percent": "0"
-        },
-        {
-          "id": 56,
-          "percent": "0",
-          "vcs": [
-            {
-              "id": 2,
-              "percent": "-10"
-            }
-          ]
-        },
-        {
-          "id": 55,
-          "percent": "0",
-          "vcs": [
-            {
-              "id": 1,
-              "percent": "-10"
-            },
-            {
-              "id": 6,
-              "percent": "-11"
-            }
-          ]
-        },
-        {
-          "id": 62,
-          "percent": "0",
-          "vcs": [
-            {
-              "id": 1,
-              "percent": "29.5"
-            },
-            {
-              "id": 2,
-              "percent": "20"
-            },
-            {
-              "id": 40,
-              "percent": "100"
-            },
-            {
-              "id": 6,
-              "percent": "23"
-            },
-            {
-              "id": 3,
-              "percent": "29"
-            },
-            {
-              "id": 4,
-              "percent": "18"
-            },
-            {
-              "id": 36,
-              "percent": "55"
-            },
-            {
-              "id": 5,
-              "percent": "35"
-            },
-            {
-              "id": 9,
-              "percent": "35"
-            },
-            {
-              "id": 10,
-              "percent": "35"
-            },
-            {
-              "id": 11,
-              "percent": "35"
-            }
-          ]
-        },
-        {
-          "id": 73,
-          "percent": "0"
-        },
-        {
-          "id": 74,
-          "percent": "0",
-          "vcs": [
-            {
-              "id": 1,
-              "percent": "-4"
-            }
-          ]
-        },
-        {
-          "id": 38,
-          "percent": "5",
-          "vcs": [
-            {
-              "id": 2,
-              "percent": "0"
-            },
-            {
-              "id": 6,
-              "percent": "0"
-            },
-            {
-              "id": 3,
-              "percent": "0"
-            },
-            {
-              "id": 4,
-              "percent": "-2.5"
-            },
-            {
-              "id": 36,
-              "percent": "0"
-            },
-            {
-              "id": 5,
-              "percent": "2"
-            },
-            {
-              "id": 9,
-              "percent": "2"
-            },
-            {
-              "id": 10,
-              "percent": "2"
-            },
-            {
-              "id": 11,
-              "percent": "2"
-            },
-            {
-              "id": 29,
-              "percent": "2"
-            },
-            {
-              "id": 30,
-              "percent": "2"
-            },
-            {
-              "id": 31,
-              "percent": "2"
-            },
-            {
-              "id": 32,
-              "percent": "2"
-            },
-            {
-              "id": 33,
-              "percent": "2"
-            },
-            {
-              "id": 34,
-              "percent": "2"
-            },
-            {
-              "id": 35,
-              "percent": "2"
-            },
-            {
-              "id": 12,
-              "percent": "0"
-            }
-          ]
-        },
-        {
-          "id": 37,
-          "percent": "0",
-          "vcs": [
-            {
-              "id": 1,
-              "percent": "4"
-            }
-          ]
-        },
-        {
-          "id": 92,
-          "percent": "0"
-        },
-        {
-          "id": 87,
-          "percent": "0"
-        },
-        {
-          "id": 76,
-          "percent": "0"
-        },
-        {
-          "id": 88,
-          "percent": "0"
-        },
-        {
-          "id": 99,
-          "percent": "0",
-          "vcs": [
-            {
-              "id": 1,
-              "percent": "-5"
-            },
-            {
-              "id": 6,
-              "percent": "-2"
-            }
-          ]
-        },
-        {
-          "id": 68,
-          "percent": "0",
-          "vcs": [
-            {
-              "id": 1,
-              "percent": "-5"
-            },
-            {
-              "id": 2,
-              "percent": "-1"
-            },
-            {
-              "id": 6,
-              "percent": "-5"
-            },
-            {
-              "id": 4,
-              "percent": "-5"
-            },
-            {
-              "id": 36,
-              "percent": "-5"
-            },
-            {
-              "id": 12,
-              "percent": "-5"
-            }
-          ]
-        },
-        {
-          "id": 70,
-          "percent": "0"
-        },
-        {
-          "id": 39,
-          "percent": "0",
-          "vcs": [
-            {
-              "id": 1,
-              "percent": "0"
-            },
-            {
-              "id": 5,
-              "percent": "-15"
-            },
-            {
-              "id": 9,
-              "percent": "-15"
-            }
-          ]
-        },
-        {
-          "id": 367,
-          "percent": "0",
-          "vcs": [
-            {
-              "id": 2,
-              "percent": "-10"
-            },
-            {
-              "id": 4,
-              "percent": "-20"
-            }
-          ]
-        },
-        {
-          "id": 64,
-          "percent": "5"
-        },
-        {
-          "id": 84,
-          "percent": "5"
-        },
-        {
-          "id": 72,
-          "percent": "0",
-          "vcs": [
-            {
-              "id": 4,
-              "percent": "-1"
-            }
-          ]
-        },
-        {
-          "id": 89,
-          "percent": "0",
-          "vcs": [
-            {
-              "id": 1,
-              "percent": "20"
-            },
-            {
-              "id": 2,
-              "percent": "20"
-            },
-            {
-              "id": 6,
-              "percent": "20"
-            },
-            {
-              "id": 3,
-              "percent": "20"
-            },
-            {
-              "id": 12,
-              "percent": "20"
-            }
-          ]
-        },
-        {
-          "id": 69,
-          "percent": "2.5",
-          "vcs": [
-            {
-              "id": 1,
-              "percent": "15"
-            },
-            {
-              "id": 2,
-              "percent": "20"
-            },
-            {
-              "id": 6,
-              "percent": "20"
-            },
-            {
-              "id": 5,
-              "percent": "15"
-            },
-            {
-              "id": 9,
-              "percent": "15"
-            },
-            {
-              "id": 10,
-              "percent": "15"
-            },
-            {
-              "id": 11,
-              "percent": "15"
-            }
-          ]
-        },
-        {
-          "id": 40,
-          "percent": "0",
-          "vcs": [
-            {
-              "id": 1,
-              "percent": "0"
-            },
-            {
-              "id": 3,
-              "percent": "1"
-            },
-            {
-              "id": 6,
-              "percent": "9.39"
-            }
-          ]
-        },
-        {
-          "id": 1151,
-          "percent": "10",
-          "vcs": [
-            {
-              "id": 9,
-              "percent": "20"
-            },
-            {
-              "id": 10,
-              "percent": "20"
-            },
-            {
-              "id": 11,
-              "percent": "20"
-            },
-            {
-              "id": 29,
-              "percent": "20"
-            },
-            {
-              "id": 30,
-              "percent": "35"
-            },
-            {
-              "id": 31,
-              "percent": "35"
-            },
-            {
-              "id": 32,
-              "percent": "35"
-            },
-            {
-              "id": 33,
-              "percent": "35"
-            },
-            {
-              "id": 34,
-              "percent": "35"
-            },
-            {
-              "id": 35,
-              "percent": "35"
-            }
-          ]
-        },
-        {
-          "id": 1477,
-          "percent": "0"
-        },
-        {
-          "id": 1484,
-          "percent": "50"
-        },
-        {
-          "id": 435,
-          "percent": "",
-          "vcs": [
-            {
-              "id": 36,
-              "percent": "0"
-            }
-          ]
-        },
-        {
-          "id": 173,
-          "percent": ""
-        },
-        {
-          "id": 316,
-          "percent": ""
-        },
-        {
-          "id": 1123,
-          "percent": "5"
-        },
-        {
-          "id": 276,
-          "percent": "5",
-          "vcs": [
-            {
-              "id": 1,
-              "percent": "-1.8"
-            },
-            {
-              "id": 40,
-              "percent": "30"
-            },
-            {
-              "id": 6,
-              "percent": "5"
-            },
-            {
-              "id": 3,
-              "percent": "-6"
-            },
-            {
-              "id": 9,
-              "percent": "25"
-            },
-            {
-              "id": 10,
-              "percent": "25"
-            },
-            {
-              "id": 11,
-              "percent": "12"
-            },
-            {
-              "id": 29,
-              "percent": "20"
-            },
-            {
-              "id": 30,
-              "percent": "0"
-            },
-            {
-              "id": 31,
-              "percent": "25"
-            },
-            {
-              "id": 32,
-              "percent": "25"
-            },
-            {
-              "id": 33,
-              "percent": "25"
-            },
-            {
-              "id": 34,
-              "percent": "25"
-            },
-            {
-              "id": 35,
-              "percent": "25"
-            },
-            {
-              "id": 12,
-              "percent": "7"
-            },
-            {
-              "id": 7,
-              "percent": "-7.5"
-            }
-          ]
-        },
-        {
-          "id": 1476,
-          "percent": "15"
-        },
-        {
-          "id": 1482,
-          "percent": "15"
-        },
-        {
-          "id": 1469,
-          "percent": "5"
-        },
-        {
-          "id": 1149,
-          "percent": "0",
-          "vcs": [
-            {
-              "id": 1,
-              "percent": "5"
-            }
-          ]
-        },
-        {
-          "id": 328,
-          "percent": "0"
-        },
-        {
-          "id": 1143,
-          "percent": "0"
-        },
-        {
-          "id": 1480,
-          "percent": "15"
-        },
-        {
-          "id": 866,
-          "percent": "15"
-        },
-        {
-          "id": 1147,
-          "percent": "0"
-        },
-        {
-          "id": 1432,
-          "percent": "10"
-        },
-        {
-          "id": 1472,
-          "percent": "5"
-        },
-        {
-          "id": 449,
-          "percent": "10"
-        },
-        {
-          "id": 1127,
-          "percent": ""
-        },
-        {
-          "id": 22247,
-          "percent": "15"
-        },
-        {
-          "id": 446,
-          "percent": "0",
-          "vcs": []
-        },
-        {
-          "id": 1473,
-          "percent": "5"
-        },
-        {
-          "id": 452,
-          "percent": "0"
-        },
-        {
-          "id": 426,
-          "percent": "10",
-          "vcs": [
-            {
-              "id": 1,
-              "percent": "4.8"
-            },
-            {
-              "id": 2,
-              "percent": "-2.63"
-            },
-            {
-              "id": 40,
-              "percent": "15"
-            },
-            {
-              "id": 6,
-              "percent": "20"
-            },
-            {
-              "id": 3,
-              "percent": "15"
-            },
-            {
-              "id": 4,
-              "percent": "3"
-            },
-            {
-              "id": 36,
-              "percent": "4"
-            },
-            {
-              "id": 5,
-              "percent": "2"
-            },
-            {
-              "id": 9,
-              "percent": "0"
-            },
-            {
-              "id": 10,
-              "percent": "0"
-            },
-            {
-              "id": 11,
-              "percent": "0"
-            },
-            {
-              "id": 29,
-              "percent": "20"
-            },
-            {
-              "id": 30,
-              "percent": "20"
-            },
-            {
-              "id": 31,
-              "percent": "40"
-            },
-            {
-              "id": 32,
-              "percent": "40"
-            },
-            {
-              "id": 33,
-              "percent": "40"
-            },
-            {
-              "id": 34,
-              "percent": "40"
-            },
-            {
-              "id": 35,
-              "percent": "40"
-            },
-            {
-              "id": 12,
-              "percent": "0.2"
-            },
-            {
-              "id": 8,
-              "percent": "-0.5"
-            }
-          ]
-        },
-        {
-          "id": 132,
-          "percent": "",
-          "vcs": [
-            {
-              "id": 1,
-              "percent": "15"
-            },
-            {
-              "id": 2,
-              "percent": "-18"
-            },
-            {
-              "id": 5,
-              "percent": "-1"
-            },
-            {
-              "id": 9,
-              "percent": "-1"
-            }
-          ]
-        },
-        {
-          "id": 986,
-          "percent": "",
-          "vcs": [
-            {
-              "id": 1,
-              "percent": "-5"
-            }
-          ]
-        },
-        {
-          "id": 171,
-          "percent": "0",
-          "vcs": [
-            {
-              "id": 1,
-              "percent": "10"
-            },
-            {
-              "id": 6,
-              "percent": "5"
-            }
-          ]
-        },
-        {
-          "id": 1693,
-          "percent": "30"
-        },
-        {
-          "id": 1691,
-          "percent": "30"
-        },
-        {
-          "id": 152,
-          "percent": "0",
-          "vcs": [
-            {
-              "id": 1,
-              "percent": "5"
-            },
-            {
-              "id": 6,
-              "percent": "5"
-            },
-            {
-              "id": 3,
-              "percent": "5"
-            },
-            {
-              "id": 5,
-              "percent": "10"
-            }
-          ]
-        },
-        {
-          "id": 1372,
-          "percent": "10"
-        },
-        {
-          "id": 930,
-          "percent": "30"
-        },
-        {
-          "id": 929,
-          "percent": ""
-        },
-        {
-          "id": 933,
-          "percent": "30"
-        },
-        {
-          "id": 14171,
-          "percent": "30"
-        },
-        {
-          "id": 694,
-          "percent": "30"
-        },
-        {
-          "id": 1837,
-          "percent": "30"
-        },
-        {
-          "id": 24858,
-          "percent": "30"
-        },
-        {
-          "id": 695,
-          "percent": "30"
-        },
-        {
-          "id": 24861,
-          "percent": "30"
-        },
-        {
-          "id": 48,
-          "percent": ""
-        },
-        {
-          "id": 41,
-          "percent": "18",
-          "vcs": [
-            {
-              "id": 1,
-              "percent": "5"
-            },
-            {
-              "id": 6,
-              "percent": "-5"
-            },
-            {
-              "id": 3,
-              "percent": "5"
-            },
-            {
-              "id": 5,
-              "percent": "8"
-            },
-            {
-              "id": 12,
-              "percent": "4"
-            }
-          ]
-        },
-        {
-          "id": 1701,
-          "percent": "35"
-        },
-        {
-          "id": 1046,
-          "percent": "100"
-        },
-        {
-          "id": 1045,
-          "percent": "100"
-        },
-        {
-          "id": 1044,
-          "percent": "100"
-        },
-        {
-          "id": 1043,
-          "percent": "100"
-        },
-        {
-          "id": 1042,
-          "percent": "100"
-        },
-        {
-          "id": 1154,
-          "percent": "100"
-        },
-        {
-          "id": 1041,
-          "percent": "100"
-        },
-        {
-          "id": 1153,
-          "percent": "100"
-        },
-        {
-          "id": 1039,
-          "percent": "100"
-        },
-        {
-          "id": 1409,
-          "percent": "50"
-        },
-        {
-          "id": 924,
-          "percent": "30"
-        },
-        {
-          "id": 1336,
-          "percent": "30"
-        },
-        {
-          "id": 1308,
-          "percent": "30"
-        },
-        {
-          "id": 975,
-          "percent": "30"
-        },
-        {
-          "id": 1415,
-          "percent": "30",
-          "vcs": [
-            {
-              "id": 1,
-              "percent": "0"
-            },
-            {
-              "id": 6,
-              "percent": "10"
-            },
-            {
-              "id": 3,
-              "percent": "10"
-            }
-          ]
-        },
-        {
-          "id": 1362,
-          "percent": "30"
-        },
-        {
-          "id": 1417,
-          "percent": "30"
-        },
-        {
-          "id": 623,
-          "percent": "30",
-          "vcs": [
-            {
-              "id": 1,
-              "percent": "10"
-            },
-            {
-              "id": 6,
-              "percent": "10"
-            },
-            {
-              "id": 3,
-              "percent": "10"
-            }
-          ]
-        },
-        {
-          "id": 25058,
-          "percent": "30"
-        },
-        {
-          "id": 1456,
-          "percent": "30"
-        },
-        {
-          "id": 1394,
-          "percent": "30"
-        },
-        {
-          "id": 1367,
-          "percent": "30"
-        },
-        {
-          "id": 15053,
-          "percent": "30"
-        },
-        {
-          "id": 1009,
-          "percent": "30"
-        },
-        {
-          "id": 1207,
-          "percent": "30"
-        },
-        {
-          "id": 1811,
-          "percent": "30"
-        },
-        {
-          "id": 1424,
-          "percent": "30"
-        },
-        {
-          "id": 1346,
-          "percent": "30"
-        },
-        {
-          "id": 1374,
-          "percent": "30"
-        },
-        {
-          "id": 923,
-          "percent": "5",
-          "vcs": [
-            {
-              "id": 2,
-              "percent": "30"
-            },
-            {
-              "id": 4,
-              "percent": "30"
-            },
-            {
-              "id": 36,
-              "percent": "30"
-            }
-          ]
-        },
-        {
-          "id": 108,
-          "percent": "10",
-          "vcs": [
-            {
-              "id": 2,
-              "percent": "30"
-            },
-            {
-              "id": 4,
-              "percent": "30"
-            },
-            {
-              "id": 36,
-              "percent": "30"
-            }
-          ]
-        },
-        {
-          "id": 109,
-          "percent": "5",
-          "vcs": [
-            {
-              "id": 2,
-              "percent": "30"
-            },
-            {
-              "id": 4,
-              "percent": "30"
-            },
-            {
-              "id": 36,
-              "percent": "30"
-            }
-          ]
-        },
-        {
-          "id": 1743,
-          "percent": "30",
-          "vcs": [
-            {
-              "id": 2,
-              "percent": "30"
-            },
-            {
-              "id": 4,
-              "percent": "30"
-            },
-            {
-              "id": 36,
-              "percent": "30"
-            }
-          ]
-        },
-        {
-          "id": 1403,
-          "percent": "30",
-          "vcs": [
-            {
-              "id": 2,
-              "percent": "30"
-            },
-            {
-              "id": 4,
-              "percent": "30"
-            },
-            {
-              "id": 36,
-              "percent": "30"
-            }
-          ]
-        },
-        {
-          "id": 146,
-          "percent": "30",
-          "vcs": [
-            {
-              "id": 2,
-              "percent": "30"
-            },
-            {
-              "id": 4,
-              "percent": "29"
-            }
-          ]
-        },
-        {
-          "id": 1450,
-          "percent": "30",
-          "vcs": [
-            {
-              "id": 2,
-              "percent": "30"
-            },
-            {
-              "id": 4,
-              "percent": "30"
-            },
-            {
-              "id": 36,
-              "percent": "30"
-            }
-          ]
-        },
-        {
-          "id": 1323,
-          "percent": "30",
-          "vcs": [
-            {
-              "id": 2,
-              "percent": "30"
-            },
-            {
-              "id": 4,
-              "percent": "30"
-            },
-            {
-              "id": 36,
-              "percent": "30"
-            }
-          ]
-        },
-        {
-          "id": 1397,
-          "percent": "30",
-          "vcs": [
-            {
-              "id": 2,
-              "percent": "30"
-            },
-            {
-              "id": 4,
-              "percent": "30"
-            },
-            {
-              "id": 36,
-              "percent": "30"
-            }
-          ]
-        },
-        {
-          "id": 1040,
-          "percent": "100",
-          "vcs": [
-            {
-              "id": 2,
-              "percent": "30"
-            },
-            {
-              "id": 4,
-              "percent": "30"
-            },
-            {
-              "id": 36,
-              "percent": "30"
-            },
-            {
-              "id": 40,
-              "percent": "30"
-            }
-          ]
-        },
-        {
-          "id": 155,
-          "percent": "30",
-          "vcs": [
-            {
-              "id": 2,
-              "percent": "30"
-            },
-            {
-              "id": 4,
-              "percent": "30"
-            },
-            {
-              "id": 36,
-              "percent": "30"
-            }
-          ]
-        },
-        {
-          "id": 1378,
-          "percent": "30",
-          "vcs": [
-            {
-              "id": 2,
-              "percent": "30"
-            },
-            {
-              "id": 4,
-              "percent": "30"
-            },
-            {
-              "id": 36,
-              "percent": "30"
-            }
-          ]
-        },
-        {
-          "id": 314,
-          "percent": "10",
-          "vcs": [
-            {
-              "id": 2,
-              "percent": "30"
-            },
-            {
-              "id": 4,
-              "percent": "30"
-            },
-            {
-              "id": 36,
-              "percent": "30"
-            }
-          ]
-        },
-        {
-          "id": 461,
-          "percent": "10",
-          "vcs": [
-            {
-              "id": 2,
-              "percent": "30"
-            },
-            {
-              "id": 4,
-              "percent": "30"
-            }
-          ]
-        },
-        {
-          "id": 1373,
-          "percent": "10",
-          "vcs": [
-            {
-              "id": 2,
-              "percent": "30"
-            },
-            {
-              "id": 4,
-              "percent": "30"
-            },
-            {
-              "id": 36,
-              "percent": "30"
-            },
-            {
-              "id": 40,
-              "percent": "30"
-            }
-          ]
-        },
-        {
-          "id": 997,
-          "percent": "30",
-          "vcs": [
-            {
-              "id": 2,
-              "percent": "30"
-            },
-            {
-              "id": 4,
-              "percent": "29"
-            },
-            {
-              "id": 36,
-              "percent": "30"
-            }
-          ]
-        },
-        {
-          "id": 1835,
-          "percent": "10",
-          "vcs": [
-            {
-              "id": 2,
-              "percent": "30"
-            },
-            {
-              "id": 4,
-              "percent": "30"
-            }
-          ]
-        },
-        {
-          "id": 120,
-          "percent": "10",
-          "vcs": [
-            {
-              "id": 2,
-              "percent": "30"
-            },
-            {
-              "id": 4,
-              "percent": "30"
-            },
-            {
-              "id": 12,
-              "percent": "30"
-            },
-            {
-              "id": 36,
-              "percent": "30"
-            }
-          ]
-        },
-        {
-          "id": 18710,
-          "percent": "10"
-        },
-        {
-          "id": 116,
-          "percent": "10",
-          "vcs": [
-            {
-              "id": 2,
-              "percent": "30"
-            },
-            {
-              "id": 4,
-              "percent": "30"
-            },
-            {
-              "id": 36,
-              "percent": "30"
-            }
-          ]
-        },
-        {
-          "id": 114,
-          "percent": "10",
-          "vcs": [
-            {
-              "id": 2,
-              "percent": "30"
-            },
-            {
-              "id": 4,
-              "percent": "30"
-            },
-            {
-              "id": 36,
-              "percent": "30"
-            }
-          ]
-        },
-        {
-          "id": 118,
-          "percent": "10",
-          "vcs": [
-            {
-              "id": 2,
-              "percent": "30"
-            },
-            {
-              "id": 4,
-              "percent": "30"
-            },
-            {
-              "id": 36,
-              "percent": "30"
-            }
-          ]
-        },
-        {
-          "id": 113,
-          "percent": "10",
-          "vcs": [
-            {
-              "id": 2,
-              "percent": "30"
-            },
-            {
-              "id": 4,
-              "percent": "30"
-            },
-            {
-              "id": 36,
-              "percent": "30"
-            }
-          ]
-        },
-        {
-          "id": 117,
-          "percent": "10",
-          "vcs": [
-            {
-              "id": 2,
-              "percent": "30"
-            },
-            {
-              "id": 6,
-              "percent": "5"
-            },
-            {
-              "id": 4,
-              "percent": "30"
-            },
-            {
-              "id": 36,
-              "percent": "30"
-            }
-          ]
-        },
-        {
-          "id": 45,
-          "percent": "30",
-          "vcs": [
-            {
-              "id": 1,
-              "percent": "-3"
-            },
-            {
-              "id": 2,
-              "percent": "30"
-            },
-            {
-              "id": 3,
-              "percent": "5.5"
-            },
-            {
-              "id": 4,
-              "percent": "30"
-            },
-            {
-              "id": 5,
-              "percent": "21"
-            },
-            {
-              "id": 6,
-              "percent": "-2"
-            },
-            {
-              "id": 36,
-              "percent": "30"
-            },
-            {
-              "id": 12,
-              "percent": "8"
-            },
-            {
-              "id": 40,
-              "percent": "30"
-            }
-          ]
-        },
-        {
-          "id": 46,
-          "percent": "10",
-          "vcs": [
-            {
-              "id": 2,
-              "percent": "30"
-            },
-            {
-              "id": 4,
-              "percent": "30"
-            },
-            {
-              "id": 36,
-              "percent": "30"
-            },
-            {
-              "id": 12,
-              "percent": "30"
-            }
-          ]
-        },
-        {
-          "id": 133,
-          "percent": "10",
-          "vcs": [
-            {
-              "id": 6,
-              "percent": "15"
-            },
-            {
-              "id": 3,
-              "percent": "10"
-            },
-            {
-              "id": 36,
-              "percent": "10"
-            },
-            {
-              "id": 5,
-              "percent": "10"
-            },
-            {
-              "id": 9,
-              "percent": "10"
-            },
-            {
-              "id": 10,
-              "percent": "10"
-            },
-            {
-              "id": 11,
-              "percent": "10"
-            },
-            {
-              "id": 29,
-              "percent": "10"
-            },
-            {
-              "id": 8,
-              "percent": "10"
-            },
-            {
-              "id": 1,
-              "percent": "5"
-            },
-            {
-              "id": 2,
-              "percent": "10"
-            }
-          ]
-        },
-        {
-          "id": 157,
-          "percent": ""
-        },
-        {
-          "id": 1716,
-          "percent": "",
-          "vcs": [
-            {
-              "id": 1,
-              "percent": "10"
-            },
-            {
-              "id": 6,
-              "percent": "10"
-            },
-            {
-              "id": 3,
-              "percent": "10"
-            },
-            {
-              "id": 4,
-              "percent": "10"
-            }
-          ]
-        },
-        {
-          "id": 158,
-          "percent": "",
-          "vcs": [
-            {
-              "id": 1,
-              "percent": "0"
-            },
-            {
-              "id": 6,
-              "percent": "15"
-            },
-            {
-              "id": 3,
-              "percent": "10"
-            },
-            {
-              "id": 4,
-              "percent": "10"
-            },
-            {
-              "id": 10,
-              "percent": "15"
-            }
-          ]
-        },
-        {
-          "id": 159,
-          "percent": "",
-          "vcs": [
-            {
-              "id": 2,
-              "percent": "30"
-            },
-            {
-              "id": 6,
-              "percent": "15"
-            },
-            {
-              "id": 3,
-              "percent": "13"
-            },
-            {
-              "id": 4,
-              "percent": "20"
-            },
-            {
-              "id": 100,
-              "percent": "10"
-            },
-            {
-              "id": 36,
-              "percent": "20"
-            },
-            {
-              "id": 46,
-              "percent": "1000"
-            }
-          ]
-        },
-        {
-          "id": 431,
-          "percent": "0",
-          "vcs": [
-            {
-              "id": 1,
-              "percent": "-5"
-            },
-            {
-              "id": 2,
-              "percent": "20"
-            },
-            {
-              "id": 6,
-              "percent": "5"
-            },
-            {
-              "id": 3,
-              "percent": "10"
-            },
-            {
-              "id": 8,
-              "percent": "10"
-            },
-            {
-              "id": 7,
-              "percent": "10"
-            },
-            {
-              "id": 5,
-              "percent": "10"
-            },
-            {
-              "id": 36,
-              "percent": "10"
-            },
-            {
-              "id": 9,
-              "percent": "5"
-            },
-            {
-              "id": 10,
-              "percent": "5"
-            },
-            {
-              "id": 11,
-              "percent": "5"
-            }
-          ]
-        },
-        {
-          "id": 322,
-          "percent": "7"
-        },
-        {
-          "id": 710,
-          "percent": "7"
-        }
-      ],
-      "ads_delta": [
-        {
-          "id": "38",
-          "infant": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "on"
-          },
-          "toddler": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "on"
-          },
-          "children": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "on"
-          },
-          "meal": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "lodge": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          }
-        },
-        {
-          "id": "62",
-          "infant": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "on"
-          },
-          "toddler": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "on"
-          },
-          "children": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "on"
-          }
-        },
-        {
-          "id": "75",
-          "infant": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "on"
-          },
-          "toddler": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "on"
-          },
-          "children": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "on"
-          }
-        },
-        {
-          "id": "1997",
-          "infant": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "toddler": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "children": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          }
-        },
-        {
-          "id": "56",
-          "infant": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "on"
-          },
-          "toddler": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "on"
-          },
-          "children": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "on"
-          }
-        },
-        {
-          "id": "55",
-          "infant": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "toddler": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "children": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          }
-        },
-        {
-          "id": "57",
-          "infant": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "toddler": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "children": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          }
-        },
-        {
-          "id": "58",
-          "infant": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "on"
-          },
-          "toddler": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "on"
-          },
-          "children": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "on"
-          }
-        },
-        {
-          "id": "59",
-          "infant": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "toddler": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "children": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          }
-        },
-        {
-          "id": "40",
-          "infant": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "toddler": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "children": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          }
-        },
-        {
-          "id": "74",
-          "infant": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "on"
-          },
-          "toddler": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "on"
-          },
-          "children": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "on"
-          }
-        },
-        {
-          "id": "73",
-          "infant": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "on"
-          },
-          "toddler": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "on"
-          },
-          "children": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "on"
-          }
-        },
-        {
-          "id": "37",
-          "infant": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "on"
-          },
-          "toddler": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "on"
-          },
-          "children": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "on"
-          },
-          "meal": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "lodge": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          }
-        },
-        {
-          "id": "89",
-          "infant": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "on"
-          },
-          "toddler": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "on"
-          },
-          "children": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "on"
-          }
-        },
-        {
-          "id": "39",
-          "infant": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "on"
-          },
-          "toddler": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "on"
-          },
-          "children": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "on"
-          },
-          "meal": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "lodge": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          }
-        },
-        {
-          "id": "69",
-          "infant": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "on"
-          },
-          "toddler": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "on"
-          },
-          "children": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "on"
-          }
-        },
-        {
-          "id": "72",
-          "infant": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "on"
-          },
-          "toddler": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "on"
-          },
-          "children": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "on"
-          }
-        },
-        {
-          "id": "367",
-          "infant": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "on"
-          },
-          "toddler": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "on"
-          },
-          "children": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "on"
-          }
-        },
-        {
-          "id": "84",
-          "infant": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "on"
-          },
-          "toddler": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "on"
-          },
-          "children": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "on"
-          }
-        },
-        {
-          "id": "375",
-          "infant": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "toddler": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "children": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          }
-        },
-        {
-          "id": "390",
-          "infant": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "on"
-          },
-          "toddler": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "on"
-          },
-          "children": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "on"
-          }
-        },
-        {
-          "id": "70",
-          "infant": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "on"
-          },
-          "toddler": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "on"
-          },
-          "children": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "on"
-          }
-        },
-        {
-          "id": "64",
-          "infant": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "on"
-          },
-          "toddler": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "on"
-          },
-          "children": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "on"
-          }
-        },
-        {
-          "id": "66",
-          "infant": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "on"
-          },
-          "toddler": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "on"
-          },
-          "children": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "on"
-          }
-        },
-        {
-          "id": "96",
-          "infant": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "toddler": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "children": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          }
-        },
-        {
-          "id": "86",
-          "infant": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "on"
-          },
-          "toddler": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "on"
-          },
-          "children": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "on"
-          }
-        },
-        {
-          "id": "391",
-          "infant": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "toddler": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "children": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          }
-        },
-        {
-          "id": "85",
-          "infant": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "toddler": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "children": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          }
-        },
-        {
-          "id": "99",
-          "infant": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "on"
-          },
-          "toddler": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "on"
-          },
-          "children": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "on"
-          }
-        },
-        {
-          "id": "76",
-          "infant": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "on"
-          },
-          "toddler": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "on"
-          },
-          "children": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "on"
-          }
-        },
-        {
-          "id": "98",
-          "infant": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "on"
-          },
-          "toddler": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "on"
-          },
-          "children": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "on"
-          }
-        },
-        {
-          "id": "65",
-          "infant": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "on"
-          },
-          "toddler": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "on"
-          },
-          "children": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "on"
-          }
-        },
-        {
-          "id": "379",
-          "infant": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "toddler": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "children": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          }
-        },
-        {
-          "id": "68",
-          "infant": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "on"
-          },
-          "toddler": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "on"
-          },
-          "children": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "on"
-          },
-          "meal": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "lodge": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          }
-        },
-        {
-          "id": "77",
-          "infant": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "on"
-          },
-          "toddler": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "on"
-          },
-          "children": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "on"
-          }
-        },
-        {
-          "id": "92",
-          "infant": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "on"
-          },
-          "toddler": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "on"
-          },
-          "children": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "on"
-          }
-        },
-        {
-          "id": "67",
-          "infant": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "toddler": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "children": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          }
-        },
-        {
-          "id": "404",
-          "infant": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "toddler": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "children": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          }
-        },
-        {
-          "id": "88",
-          "infant": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "on"
-          },
-          "toddler": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "on"
-          },
-          "children": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "on"
-          }
-        },
-        {
-          "id": "87",
-          "infant": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "on"
-          },
-          "toddler": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "on"
-          },
-          "children": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "on"
-          }
-        },
-        {
-          "id": "94",
-          "infant": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "on"
-          },
-          "toddler": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "on"
-          },
-          "children": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "on"
-          }
-        },
-        {
-          "id": "107",
-          "infant": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "toddler": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "children": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "meal": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "lodge": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          }
-        },
-        {
-          "id": "49",
-          "infant": {
-            "delta": -8,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "toddler": {
-            "delta": -5,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "children": {
-            "delta": -7,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "meal": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "lodge": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          }
-        },
-        {
-          "id": "52",
-          "infant": {
-            "delta": -8,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "toddler": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "children": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "meal": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "lodge": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          }
-        },
-        {
-          "id": "51",
-          "infant": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "toddler": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "children": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "meal": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "lodge": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          }
-        },
-        {
-          "id": "50",
-          "infant": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "toddler": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "children": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "meal": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "lodge": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          }
-        },
-        {
-          "id": "125",
-          "infant": {
-            "delta": -8,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "toddler": {
-            "delta": -8,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "children": {
-            "delta": -8,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "meal": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "lodge": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          }
-        },
-        {
-          "id": "43",
-          "infant": {
-            "delta": -5,
-            "currency": "USD",
-            "switch": "on"
-          },
-          "toddler": {
-            "delta": -5,
-            "currency": "USD",
-            "switch": "on"
-          },
-          "children": {
-            "delta": -7,
-            "currency": "USD",
-            "switch": "on"
-          },
-          "meal": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "lodge": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          }
-        },
-        {
-          "id": "44",
-          "infant": {
-            "delta": -5,
-            "currency": "USD",
-            "switch": "on"
-          },
-          "toddler": {
-            "delta": -5,
-            "currency": "USD",
-            "switch": "on"
-          },
-          "children": {
-            "delta": 5,
-            "currency": "USD",
-            "switch": "on"
-          },
-          "meal": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "lodge": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          }
-        },
-        {
-          "id": "105",
-          "infant": {
-            "delta": -9,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "toddler": {
-            "delta": -9,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "children": {
-            "delta": -9,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "meal": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "lodge": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          }
-        },
-        {
-          "id": "150",
-          "infant": {
-            "delta": -15,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "toddler": {
-            "delta": -15,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "children": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "on"
-          }
-        },
-        {
-          "id": "274",
-          "infant": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "toddler": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "children": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "on"
-          }
-        },
-        {
-          "id": "272",
-          "infant": {
-            "delta": -15,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "toddler": {
-            "delta": -15,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "children": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "on"
-          }
-        },
-        {
-          "id": "275",
-          "infant": {
-            "delta": -15,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "toddler": {
-            "delta": -15,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "children": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "on"
-          }
-        },
-        {
-          "id": "151",
-          "infant": {
-            "delta": -15,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "toddler": {
-            "delta": -15,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "children": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "on"
-          }
-        },
-        {
-          "id": "311",
-          "infant": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "toddler": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "children": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "on"
-          }
-        },
-        {
-          "id": "147",
-          "infant": {
-            "delta": -15,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "toddler": {
-            "delta": -15,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "children": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "on"
-          }
-        },
-        {
-          "id": "679",
-          "infant": {
-            "delta": -15,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "toddler": {
-            "delta": -15,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "children": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "on"
-          }
-        },
-        {
-          "id": "459",
-          "infant": {
-            "delta": -15,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "toddler": {
-            "delta": -15,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "children": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "on"
-          }
-        },
-        {
-          "id": "670",
-          "infant": {
-            "delta": -15,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "toddler": {
-            "delta": -15,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "children": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "on"
-          }
-        },
-        {
-          "id": "460",
-          "infant": {
-            "delta": -15,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "toddler": {
-            "delta": -15,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "children": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "on"
-          }
-        },
-        {
-          "id": "680",
-          "infant": {
-            "delta": -15,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "toddler": {
-            "delta": -15,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "children": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "on"
-          }
-        },
-        {
-          "id": "667",
-          "infant": {
-            "delta": -15,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "toddler": {
-            "delta": -15,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "children": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "on"
-          }
-        },
-        {
-          "id": "675",
-          "infant": {
-            "delta": -15,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "toddler": {
-            "delta": -15,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "children": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "on"
-          }
-        },
-        {
-          "id": "1077",
-          "infant": {
-            "delta": -15,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "toddler": {
-            "delta": -15,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "children": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "on"
-          }
-        },
-        {
-          "id": "141",
-          "infant": {
-            "delta": 20,
-            "currency": "USD",
-            "switch": "on"
-          },
-          "toddler": {
-            "delta": 20,
-            "currency": "USD",
-            "switch": "on"
-          },
-          "children": {
-            "delta": 20,
-            "currency": "USD",
-            "switch": "on"
-          }
-        },
-        {
-          "id": "140",
-          "infant": {
-            "delta": 20,
-            "currency": "USD",
-            "switch": "on"
-          },
-          "toddler": {
-            "delta": 20,
-            "currency": "USD",
-            "switch": "on"
-          },
-          "children": {
-            "delta": 20,
-            "currency": "USD",
-            "switch": "on"
-          }
-        },
-        {
-          "id": "139",
-          "infant": {
-            "delta": 20,
-            "currency": "USD",
-            "switch": "on"
-          },
-          "toddler": {
-            "delta": 20,
-            "currency": "USD",
-            "switch": "on"
-          },
-          "children": {
-            "delta": 20,
-            "currency": "USD",
-            "switch": "on"
-          }
-        },
-        {
-          "id": "40174",
-          "infant": {
-            "delta": 20,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "toddler": {
-            "delta": 20,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "children": {
-            "delta": 20,
-            "currency": "USD",
-            "switch": "off"
-          }
-        },
-        {
-          "id": "136",
-          "infant": {
-            "delta": 20,
-            "currency": "USD",
-            "switch": "on"
-          },
-          "toddler": {
-            "delta": 20,
-            "currency": "USD",
-            "switch": "on"
-          },
-          "children": {
-            "delta": 20,
-            "currency": "USD",
-            "switch": "on"
-          }
-        },
-        {
-          "id": "138",
-          "infant": {
-            "delta": 20,
-            "currency": "USD",
-            "switch": "on"
-          },
-          "toddler": {
-            "delta": 20,
-            "currency": "USD",
-            "switch": "on"
-          },
-          "children": {
-            "delta": 20,
-            "currency": "USD",
-            "switch": "on"
-          }
-        },
-        {
-          "id": "647",
-          "infant": {
-            "delta": 20,
-            "currency": "USD",
-            "switch": "on"
-          },
-          "toddler": {
-            "delta": 20,
-            "currency": "USD",
-            "switch": "on"
-          },
-          "children": {
-            "delta": 20,
-            "currency": "USD",
-            "switch": "on"
-          }
-        },
-        {
-          "id": "645",
-          "infant": {
-            "delta": 20,
-            "currency": "USD",
-            "switch": "on"
-          },
-          "toddler": {
-            "delta": 20,
-            "currency": "USD",
-            "switch": "on"
-          },
-          "children": {
-            "delta": 20,
-            "currency": "USD",
-            "switch": "on"
-          }
-        },
-        {
-          "id": "644",
-          "infant": {
-            "delta": 20,
-            "currency": "USD",
-            "switch": "on"
-          },
-          "toddler": {
-            "delta": 20,
-            "currency": "USD",
-            "switch": "on"
-          },
-          "children": {
-            "delta": 20,
-            "currency": "USD",
-            "switch": "on"
-          }
-        },
-        {
-          "id": "137",
-          "infant": {
-            "delta": 20,
-            "currency": "USD",
-            "switch": "on"
-          },
-          "toddler": {
-            "delta": 20,
-            "currency": "USD",
-            "switch": "on"
-          },
-          "children": {
-            "delta": 20,
-            "currency": "USD",
-            "switch": "on"
-          }
-        },
-        {
-          "id": "646",
-          "infant": {
-            "delta": 20,
-            "currency": "USD",
-            "switch": "on"
-          },
-          "toddler": {
-            "delta": 20,
-            "currency": "USD",
-            "switch": "on"
-          },
-          "children": {
-            "delta": 20,
-            "currency": "USD",
-            "switch": "on"
-          }
-        },
-        {
-          "id": "1313",
-          "infant": {
-            "delta": 20,
-            "currency": "USD",
-            "switch": "on"
-          },
-          "toddler": {
-            "delta": 20,
-            "currency": "USD",
-            "switch": "on"
-          },
-          "children": {
-            "delta": 20,
-            "currency": "USD",
-            "switch": "on"
-          }
-        },
-        {
-          "id": "18476",
-          "infant": {
-            "delta": 20,
-            "currency": "USD",
-            "switch": "on"
-          },
-          "toddler": {
-            "delta": 20,
-            "currency": "USD",
-            "switch": "on"
-          },
-          "children": {
-            "delta": 20,
-            "currency": "USD",
-            "switch": "on"
-          }
-        },
-        {
-          "id": "1838",
-          "infant": {
-            "delta": 20,
-            "currency": "USD",
-            "switch": "on"
-          },
-          "toddler": {
-            "delta": 20,
-            "currency": "USD",
-            "switch": "on"
-          },
-          "children": {
-            "delta": 20,
-            "currency": "USD",
-            "switch": "on"
-          }
-        },
-        {
-          "id": "1314",
-          "infant": {
-            "delta": 20,
-            "currency": "USD",
-            "switch": "on"
-          },
-          "toddler": {
-            "delta": 20,
-            "currency": "USD",
-            "switch": "on"
-          },
-          "children": {
-            "delta": 20,
-            "currency": "USD",
-            "switch": "on"
-          }
-        },
-        {
-          "id": "1315",
-          "infant": {
-            "delta": 20,
-            "currency": "USD",
-            "switch": "on"
-          },
-          "toddler": {
-            "delta": 20,
-            "currency": "USD",
-            "switch": "on"
-          },
-          "children": {
-            "delta": 20,
-            "currency": "USD",
-            "switch": "on"
-          }
-        },
-        {
-          "id": "145",
-          "infant": {
-            "delta": 20,
-            "currency": "USD",
-            "switch": "on"
-          },
-          "toddler": {
-            "delta": 20,
-            "currency": "USD",
-            "switch": "on"
-          },
-          "children": {
-            "delta": 20,
-            "currency": "USD",
-            "switch": "on"
-          }
-        },
-        {
-          "id": "142",
-          "infant": {
-            "delta": 20,
-            "currency": "USD",
-            "switch": "on"
-          },
-          "toddler": {
-            "delta": 20,
-            "currency": "USD",
-            "switch": "on"
-          },
-          "children": {
-            "delta": 20,
-            "currency": "USD",
-            "switch": "on"
-          }
-        },
-        {
-          "id": "143",
-          "infant": {
-            "delta": 20,
-            "currency": "USD",
-            "switch": "on"
-          },
-          "toddler": {
-            "delta": 20,
-            "currency": "USD",
-            "switch": "on"
-          },
-          "children": {
-            "delta": 20,
-            "currency": "USD",
-            "switch": "on"
-          }
-        },
-        {
-          "id": "144",
-          "infant": {
-            "delta": 20,
-            "currency": "USD",
-            "switch": "on"
-          },
-          "toddler": {
-            "delta": 20,
-            "currency": "USD",
-            "switch": "on"
-          },
-          "children": {
-            "delta": 20,
-            "currency": "USD",
-            "switch": "on"
-          }
-        },
-        {
-          "id": "1322",
-          "infant": {
-            "delta": 20,
-            "currency": "USD",
-            "switch": "on"
-          },
-          "toddler": {
-            "delta": 20,
-            "currency": "USD",
-            "switch": "on"
-          },
-          "children": {
-            "delta": 20,
-            "currency": "USD",
-            "switch": "on"
-          }
-        },
-        {
-          "id": "674",
-          "infant": {
-            "delta": -15,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "toddler": {
-            "delta": -15,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "children": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "on"
-          }
-        },
-        {
-          "id": "661",
-          "infant": {
-            "delta": -15,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "toddler": {
-            "delta": -15,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "children": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "on"
-          }
-        },
-        {
-          "id": "682",
-          "infant": {
-            "delta": -15,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "toddler": {
-            "delta": -15,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "children": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "on"
-          }
-        },
-        {
-          "id": "660",
-          "infant": {
-            "delta": -15,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "toddler": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "on"
-          },
-          "children": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "on"
-          }
-        },
-        {
-          "id": "678",
-          "infant": {
-            "delta": -15,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "toddler": {
-            "delta": -15,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "children": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "on"
-          }
-        },
-        {
-          "id": "1097",
-          "infant": {
-            "delta": -15,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "toddler": {
-            "delta": -15,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "children": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "on"
-          }
-        },
-        {
-          "id": "672",
-          "infant": {
-            "delta": -15,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "toddler": {
-            "delta": -15,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "children": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "on"
-          }
-        },
-        {
-          "id": "665",
-          "infant": {
-            "delta": -15,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "toddler": {
-            "delta": -15,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "children": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "on"
-          }
-        },
-        {
-          "id": "948",
-          "infant": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "toddler": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "children": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          }
-        },
-        {
-          "id": "343",
-          "infant": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "toddler": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "children": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          }
-        },
-        {
-          "id": "966",
-          "infant": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "toddler": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "children": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          }
-        },
-        {
-          "id": "344",
-          "infant": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "toddler": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "children": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          }
-        },
-        {
-          "id": "60",
-          "infant": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "toddler": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "children": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          }
-        },
-        {
-          "id": "825",
-          "infant": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "toddler": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "children": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          }
-        },
-        {
-          "id": "1284",
-          "infant": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "toddler": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "children": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          }
-        },
-        {
-          "id": "964",
-          "infant": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "toddler": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "children": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          }
-        },
-        {
-          "id": "942",
-          "infant": {
-            "delta": 0,
-            "switch": "off"
-          },
-          "toddler": {
-            "delta": 0,
-            "switch": "off"
-          },
-          "children": {
-            "delta": 0,
-            "switch": "off"
-          }
-        },
-        {
-          "id": "943",
-          "infant": {
-            "delta": 0,
-            "switch": "off"
-          },
-          "toddler": {
-            "delta": 0,
-            "switch": "off"
-          },
-          "children": {
-            "delta": 0,
-            "switch": "off"
-          }
-        },
-        {
-          "id": "944",
-          "infant": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "toddler": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "children": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          }
-        },
-        {
-          "id": "945",
-          "infant": {
-            "delta": 0,
-            "switch": "off"
-          },
-          "toddler": {
-            "delta": 0,
-            "switch": "off"
-          },
-          "children": {
-            "delta": 0,
-            "switch": "off"
-          }
-        },
-        {
-          "id": "1846",
-          "infant": {
-            "delta": 0,
-            "switch": "off"
-          },
-          "toddler": {
-            "delta": 0,
-            "switch": "off"
-          },
-          "children": {
-            "delta": 0,
-            "switch": "off"
-          }
-        },
-        {
-          "id": "946",
-          "infant": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "toddler": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "children": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          }
-        },
-        {
-          "id": "1750",
-          "infant": {
-            "delta": 0,
-            "switch": "off"
-          },
-          "toddler": {
-            "delta": 0,
-            "switch": "off"
-          },
-          "children": {
-            "delta": 0,
-            "switch": "off"
-          }
-        },
-        {
-          "id": "947",
-          "infant": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "toddler": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "children": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          }
-        },
-        {
-          "id": "949",
-          "infant": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "toddler": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "children": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          }
-        },
-        {
-          "id": "950",
-          "infant": {
-            "delta": 0,
-            "currency": "BRL",
-            "switch": "off"
-          },
-          "toddler": {
-            "delta": 0,
-            "currency": "BRL",
-            "switch": "off"
-          },
-          "children": {
-            "delta": 0,
-            "currency": "BRL",
-            "switch": "off"
-          }
-        },
-        {
-          "id": "1768",
-          "infant": {
-            "delta": 0,
-            "switch": "off"
-          },
-          "toddler": {
-            "delta": 0,
-            "switch": "off"
-          },
-          "children": {
-            "delta": 0,
-            "switch": "off"
-          }
-        },
-        {
-          "id": "951",
-          "infant": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "toddler": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "children": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          }
-        },
-        {
-          "id": "954",
-          "infant": {
-            "delta": 0,
-            "switch": "off"
-          },
-          "toddler": {
-            "delta": 0,
-            "switch": "off"
-          },
-          "children": {
-            "delta": 0,
-            "switch": "off"
-          }
-        },
-        {
-          "id": "955",
-          "infant": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "toddler": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "children": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          }
-        },
-        {
-          "id": "956",
-          "infant": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "toddler": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "children": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          }
-        },
-        {
-          "id": "957",
-          "infant": {
-            "delta": 0,
-            "currency": "BRL",
-            "switch": "off"
-          },
-          "toddler": {
-            "delta": 0,
-            "currency": "BRL",
-            "switch": "off"
-          },
-          "children": {
-            "delta": 0,
-            "currency": "BRL",
-            "switch": "off"
-          }
-        },
-        {
-          "id": "958",
-          "infant": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "toddler": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "children": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          }
-        },
-        {
-          "id": "959",
-          "infant": {
-            "delta": 0,
-            "switch": "off"
-          },
-          "toddler": {
-            "delta": 0,
-            "switch": "off"
-          },
-          "children": {
-            "delta": 0,
-            "switch": "off"
-          }
-        },
-        {
-          "id": "960",
-          "infant": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "toddler": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "children": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          }
-        },
-        {
-          "id": "961",
-          "infant": {
-            "delta": 0,
-            "switch": "off"
-          },
-          "toddler": {
-            "delta": 0,
-            "switch": "off"
-          },
-          "children": {
-            "delta": 0,
-            "switch": "off"
-          }
-        },
-        {
-          "id": "962",
-          "infant": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "toddler": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "children": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          }
-        },
-        {
-          "id": "963",
-          "infant": {
-            "delta": 0,
-            "switch": "off"
-          },
-          "toddler": {
-            "delta": 0,
-            "switch": "off"
-          },
-          "children": {
-            "delta": 0,
-            "switch": "off"
-          }
-        },
-        {
-          "id": "965",
-          "infant": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "toddler": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "children": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          }
-        },
-        {
-          "id": "1108",
-          "infant": {
-            "delta": 0,
-            "switch": "off"
-          },
-          "toddler": {
-            "delta": 0,
-            "switch": "off"
-          },
-          "children": {
-            "delta": 0,
-            "switch": "off"
-          }
-        },
-        {
-          "id": "968",
-          "infant": {
-            "delta": 0,
-            "switch": "off"
-          },
-          "toddler": {
-            "delta": 0,
-            "switch": "off"
-          },
-          "children": {
-            "delta": 0,
-            "switch": "off"
-          }
-        },
-        {
-          "id": "347",
-          "infant": {
-            "delta": -15,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "toddler": {
-            "delta": -15,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "children": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "on"
-          }
-        },
-        {
-          "id": "1103",
-          "infant": {
-            "delta": -15,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "toddler": {
-            "delta": -15,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "children": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "on"
-          }
-        },
-        {
-          "id": "671",
-          "infant": {
-            "delta": -15,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "toddler": {
-            "delta": -15,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "children": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "on"
-          }
-        },
-        {
-          "id": "149",
-          "infant": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "toddler": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          },
-          "children": {
-            "delta": 0,
-            "currency": "USD",
-            "switch": "off"
-          }
-        }
-      ],
-      "mag_delta": [
-        {
-          "id": "38",
-          "delta": 12.5,
-          "currency": "USD",
-          "switch": "on"
-        },
-        {
-          "id": "62",
-          "delta": 0,
-          "currency": "USD",
-          "switch": "off"
-        },
-        {
-          "id": "75",
-          "delta": 40,
-          "currency": "USD",
-          "switch": "on"
-        },
-        {
-          "id": "1997",
-          "delta": 20,
-          "currency": "USD",
-          "switch": "on"
-        },
-        {
-          "id": "56",
-          "delta": 10,
-          "currency": "USD",
-          "switch": "on"
-        },
-        {
-          "id": "55",
-          "delta": 0,
-          "currency": "USD",
-          "switch": "on"
-        },
-        {
-          "id": "57",
-          "delta": 20,
-          "currency": "USD",
-          "switch": "on"
-        },
-        {
-          "id": "58",
-          "delta": 20,
-          "currency": "USD",
-          "switch": "on"
-        },
-        {
-          "id": "59",
-          "delta": 20,
-          "currency": "USD",
-          "switch": "on"
-        },
-        {
-          "id": "40",
-          "delta": 10,
-          "currency": "USD",
-          "switch": "on"
-        },
-        {
-          "id": "74",
-          "delta": 0,
-          "currency": "USD",
-          "switch": "off"
-        },
-        {
-          "id": "73",
-          "delta": 0,
-          "currency": "USD",
-          "switch": "off"
-        },
-        {
-          "id": "37",
-          "delta": 7.5,
-          "currency": "USD",
-          "switch": "on"
-        },
-        {
-          "id": "89",
-          "delta": 3.9,
-          "currency": "USD",
-          "switch": "on"
-        },
-        {
-          "id": "39",
-          "delta": 10,
-          "currency": "USD",
-          "switch": "on"
-        },
-        {
-          "id": "69",
-          "delta": 5,
-          "currency": "USD",
-          "switch": "on"
-        },
-        {
-          "id": "72",
-          "delta": 10,
-          "currency": "USD",
-          "switch": "on"
-        },
-        {
-          "id": "367",
-          "delta": 9.5,
-          "currency": "USD",
-          "switch": "on"
-        },
-        {
-          "id": "84",
-          "delta": 15,
-          "currency": "USD",
-          "switch": "on"
-        },
-        {
-          "id": "375",
-          "delta": 10,
-          "currency": "USD",
-          "switch": "on"
-        },
-        {
-          "id": "390",
-          "delta": 10,
-          "currency": "USD",
-          "switch": "on"
-        },
-        {
-          "id": "70",
-          "delta": 0,
-          "currency": "USD",
-          "switch": "off"
-        },
-        {
-          "id": "64",
-          "delta": 0,
-          "currency": "USD",
-          "switch": "off"
-        },
-        {
-          "id": "66",
-          "delta": 0,
-          "currency": "USD",
-          "switch": "off"
-        },
-        {
-          "id": "96",
-          "delta": 15,
-          "currency": "USD",
-          "switch": "on"
-        },
-        {
-          "id": "86",
-          "delta": 30,
-          "currency": "USD",
-          "switch": "on"
-        },
-        {
-          "id": "391",
-          "delta": 10,
-          "currency": "USD",
-          "switch": "on"
-        },
-        {
-          "id": "85",
-          "delta": 30,
-          "currency": "USD",
-          "switch": "on"
-        },
-        {
-          "id": "99",
-          "delta": 0,
-          "currency": "USD",
-          "switch": "off"
-        },
-        {
-          "id": "76",
-          "delta": 15,
-          "currency": "USD",
-          "switch": "on"
-        },
-        {
-          "id": "98",
-          "delta": 15,
-          "currency": "USD",
-          "switch": "on"
-        },
-        {
-          "id": "65",
-          "delta": 0,
-          "currency": "USD",
-          "switch": "off"
-        },
-        {
-          "id": "379",
-          "delta": 20,
-          "currency": "USD",
-          "switch": "on"
-        },
-        {
-          "id": "68",
-          "delta": 10,
-          "currency": "USD",
-          "switch": "on"
-        },
-        {
-          "id": "77",
-          "delta": 8,
-          "currency": "USD",
-          "switch": "on"
-        },
-        {
-          "id": "92",
-          "delta": 15,
-          "currency": "USD",
-          "switch": "on"
-        },
-        {
-          "id": "67",
-          "delta": 0,
-          "currency": "USD",
-          "switch": "off"
-        },
-        {
-          "id": "404",
-          "delta": 30,
-          "currency": "USD",
-          "switch": "on"
-        },
-        {
-          "id": "88",
-          "delta": 15,
-          "currency": "USD",
-          "switch": "on"
-        },
-        {
-          "id": "87",
-          "delta": 30,
-          "currency": "USD",
-          "switch": "on"
-        },
-        {
-          "id": "94",
-          "delta": 15,
-          "currency": "USD",
-          "switch": "on"
-        },
-        {
-          "id": "107",
-          "delta": -2,
-          "currency": "USD",
-          "switch": "on"
-        },
-        {
-          "id": "49",
-          "delta": 3,
-          "currency": "USD",
-          "switch": "on"
-        },
-        {
-          "id": "52",
-          "delta": 3,
-          "currency": "USD",
-          "switch": "on"
-        },
-        {
-          "id": "51",
-          "delta": 3,
-          "currency": "USD",
-          "switch": "on"
-        },
-        {
-          "id": "50",
-          "delta": 3,
-          "currency": "USD",
-          "switch": "on"
-        },
-        {
-          "id": "125",
-          "delta": 3,
-          "currency": "USD",
-          "switch": "on"
-        },
-        {
-          "id": "43",
-          "delta": -10,
-          "currency": "USD",
-          "switch": "off"
-        },
-        {
-          "id": "44",
-          "delta": -15,
-          "currency": "USD",
-          "switch": "off"
-        },
-        {
-          "id": "105",
-          "delta": -2,
-          "currency": "USD",
-          "switch": "on"
-        },
-        {
-          "id": "150",
-          "delta": 3,
-          "currency": "USD",
-          "switch": "on"
-        },
-        {
-          "id": "274",
-          "delta": 3,
-          "currency": "USD",
-          "switch": "on"
-        },
-        {
-          "id": "272",
-          "delta": 3,
-          "currency": "USD",
-          "switch": "on"
-        },
-        {
-          "id": "275",
-          "delta": 3,
-          "currency": "USD",
-          "switch": "on"
-        },
-        {
-          "id": "151",
-          "delta": 0,
-          "currency": "USD",
-          "switch": "on"
-        },
-        {
-          "id": "311",
-          "delta": 3,
-          "currency": "USD",
-          "switch": "on"
-        },
-        {
-          "id": "147",
-          "delta": 3,
-          "currency": "USD",
-          "switch": "on"
-        },
-        {
-          "id": "679",
-          "delta": 3,
-          "currency": "USD",
-          "switch": "on"
-        },
-        {
-          "id": "459",
-          "delta": 2,
-          "currency": "USD",
-          "switch": "on"
-        },
-        {
-          "id": "670",
-          "delta": 1,
-          "currency": "USD",
-          "switch": "on"
-        },
-        {
-          "id": "460",
-          "delta": 3,
-          "currency": "USD",
-          "switch": "on"
-        },
-        {
-          "id": "680",
-          "delta": 3,
-          "currency": "USD",
-          "switch": "on"
-        },
-        {
-          "id": "667",
-          "delta": 3,
-          "currency": "USD",
-          "switch": "on"
-        },
-        {
-          "id": "675",
-          "delta": 3,
-          "currency": "USD",
-          "switch": "on"
-        },
-        {
-          "id": "1077",
-          "delta": 3,
-          "currency": "USD",
-          "switch": "on"
-        },
-        {
-          "id": "141",
-          "delta": 5,
-          "currency": "USD",
-          "switch": "on"
-        },
-        {
-          "id": "140",
-          "delta": 5,
-          "currency": "USD",
-          "switch": "on"
-        },
-        {
-          "id": "139",
-          "delta": 5,
-          "currency": "USD",
-          "switch": "on"
-        },
-        {
-          "id": "40174",
-          "delta": 5,
-          "currency": "USD",
-          "switch": "on"
-        },
-        {
-          "id": "136",
-          "delta": 5,
-          "currency": "USD",
-          "switch": "on"
-        },
-        {
-          "id": "138",
-          "delta": 5,
-          "currency": "USD",
-          "switch": "on"
-        },
-        {
-          "id": "647",
-          "delta": 5,
-          "currency": "USD",
-          "switch": "on"
-        },
-        {
-          "id": "645",
-          "delta": 5,
-          "currency": "USD",
-          "switch": "on"
-        },
-        {
-          "id": "644",
-          "delta": 5,
-          "currency": "USD",
-          "switch": "on"
-        },
-        {
-          "id": "137",
-          "delta": 5,
-          "currency": "USD",
-          "switch": "on"
-        },
-        {
-          "id": "646",
-          "delta": 5,
-          "currency": "USD",
-          "switch": "on"
-        },
-        {
-          "id": "1313",
-          "delta": -5,
-          "currency": "USD",
-          "switch": "on"
-        },
-        {
-          "id": "18476",
-          "delta": -5,
-          "currency": "USD",
-          "switch": "on"
-        },
-        {
-          "id": "1838",
-          "delta": -5,
-          "currency": "USD",
-          "switch": "on"
-        },
-        {
-          "id": "1314",
-          "delta": -10,
-          "currency": "USD",
-          "switch": "on"
-        },
-        {
-          "id": "1315",
-          "delta": -5,
-          "currency": "USD",
-          "switch": "on"
-        },
-        {
-          "id": "145",
-          "delta": 5,
-          "currency": "USD",
-          "switch": "on"
-        },
-        {
-          "id": "142",
-          "delta": 5,
-          "currency": "USD",
-          "switch": "on"
-        },
-        {
-          "id": "143",
-          "delta": 5,
-          "currency": "USD",
-          "switch": "on"
-        },
-        {
-          "id": "144",
-          "delta": 5,
-          "currency": "USD",
-          "switch": "on"
-        },
-        {
-          "id": "1322",
-          "delta": 5,
-          "currency": "USD",
-          "switch": "on"
-        },
-        {
-          "id": "674",
-          "delta": 3,
-          "currency": "USD",
-          "switch": "on"
-        },
-        {
-          "id": "661",
-          "delta": 3,
-          "currency": "USD",
-          "switch": "on"
-        },
-        {
-          "id": "682",
-          "delta": 3,
-          "currency": "USD",
-          "switch": "on"
-        },
-        {
-          "id": "660",
-          "delta": 3,
-          "currency": "USD",
-          "switch": "on"
-        },
-        {
-          "id": "678",
-          "delta": 3,
-          "currency": "USD",
-          "switch": "on"
-        },
-        {
-          "id": "1097",
-          "delta": 3,
-          "currency": "USD",
-          "switch": "on"
-        },
-        {
-          "id": "672",
-          "delta": 3,
-          "currency": "USD",
-          "switch": "on"
-        },
-        {
-          "id": "665",
-          "delta": 3,
-          "currency": "USD",
-          "switch": "on"
-        },
-        {
-          "id": "948",
-          "delta": -10,
-          "currency": "USD",
-          "switch": "on"
-        },
-        {
-          "id": "343",
-          "delta": 10,
-          "currency": "USD",
-          "switch": "on"
-        },
-        {
-          "id": "966",
-          "delta": -10,
-          "currency": "USD",
-          "switch": "on"
-        },
-        {
-          "id": "344",
-          "delta": 10,
-          "currency": "USD",
-          "switch": "on"
-        },
-        {
-          "id": "60",
-          "delta": 30,
-          "currency": "USD",
-          "switch": "on"
-        },
-        {
-          "id": "825",
-          "delta": 25,
-          "currency": "USD",
-          "switch": "on"
-        },
-        {
-          "id": "1284",
-          "delta": 25,
-          "currency": "USD",
-          "switch": "on"
-        },
-        {
-          "id": "964",
-          "delta": 6,
-          "currency": "USD",
-          "switch": "on"
-        },
-        {
-          "id": "942",
-          "delta": 80,
-          "switch": "on"
-        },
-        {
-          "id": "943",
-          "delta": 80,
-          "switch": "on"
-        },
-        {
-          "id": "944",
-          "delta": 6,
-          "currency": "USD",
-          "switch": "on"
-        },
-        {
-          "id": "945",
-          "delta": 80,
-          "switch": "on"
-        },
-        {
-          "id": "1846",
-          "delta": 90,
-          "switch": "on"
-        },
-        {
-          "id": "946",
-          "delta": -10,
-          "currency": "USD",
-          "switch": "on"
-        },
-        {
-          "id": "1750",
-          "delta": 95,
-          "switch": "on"
-        },
-        {
-          "id": "947",
-          "delta": 10,
-          "currency": "USD",
-          "switch": "on"
-        },
-        {
-          "id": "949",
-          "delta": 9,
-          "currency": "USD",
-          "switch": "on"
-        },
-        {
-          "id": "950",
-          "delta": 100,
-          "currency": "BRL",
-          "switch": "on"
-        },
-        {
-          "id": "1768",
-          "delta": 95,
-          "switch": "on"
-        },
-        {
-          "id": "951",
-          "delta": 9,
-          "currency": "USD",
-          "switch": "on"
-        },
-        {
-          "id": "954",
-          "delta": 30,
-          "switch": "on"
-        },
-        {
-          "id": "955",
-          "delta": 10,
-          "currency": "USD",
-          "switch": "on"
-        },
-        {
-          "id": "956",
-          "delta": 9,
-          "currency": "USD",
-          "switch": "on"
-        },
-        {
-          "id": "957",
-          "delta": 80,
-          "currency": "BRL",
-          "switch": "on"
-        },
-        {
-          "id": "958",
-          "delta": 9,
-          "currency": "USD",
-          "switch": "on"
-        },
-        {
-          "id": "959",
-          "delta": 80,
-          "switch": "on"
-        },
-        {
-          "id": "960",
-          "delta": -10,
-          "currency": "USD",
-          "switch": "on"
-        },
-        {
-          "id": "961",
-          "delta": 80,
-          "switch": "on"
-        },
-        {
-          "id": "962",
-          "delta": 9,
-          "currency": "USD",
-          "switch": "on"
-        },
-        {
-          "id": "963",
-          "delta": 80,
-          "switch": "on"
-        },
-        {
-          "id": "965",
-          "delta": 9,
-          "currency": "USD",
-          "switch": "on"
-        },
-        {
-          "id": "1108",
-          "delta": 85,
-          "switch": "on"
-        },
-        {
-          "id": "968",
-          "delta": 80,
-          "switch": "on"
-        },
-        {
-          "id": "347",
-          "delta": 3,
-          "currency": "USD",
-          "switch": "on"
-        },
-        {
-          "id": "1103",
-          "delta": 3,
-          "currency": "USD",
-          "switch": "on"
-        },
-        {
-          "id": "671",
-          "delta": 3,
-          "currency": "USD",
-          "switch": "on"
-        },
-        {
-          "id": "149",
-          "delta": 3,
-          "currency": "USD",
-          "switch": "on"
-        }
-      ]
-    },
-    "doNotDel": "doNotDel"
+let elifeFleetsNotRadius = [
+  {
+    "id": 329,
+    "name": "Dalaman, Turkey",
+    "lat": 37.162864,
+    "lng": 28.763040,
+    "radius": null,
+    "bidding": null,
+    "parent_fleet_id": 15,
+    "unverified": null,
+    "service_area_pricing_id": 1197325
   },
-  "supply_fleet_id": 15,
-  "demand_fleet_id": 57395,
-  "version": null,
-  "login_id": 8220,
-  "inserted_at": "2024-10-08 07:52:37",
-  "last_updated_at": "2024-10-08 07:52:37"
+  {
+    "id": 133,
+    "name": "Istanbul,Turkey",
+    "lat": 40.752299,
+    "lng": 28.513496,
+    "radius": null,
+    "bidding": null,
+    "parent_fleet_id": 15,
+    "unverified": null,
+    "service_area_pricing_id": 1339369
+  },
+  {
+    "id": 842,
+    "name": "Londonderry,UK",
+    "lat": 54.976666,
+    "lng": -7.237052,
+    "radius": null,
+    "bidding": null,
+    "parent_fleet_id": 15,
+    "unverified": null,
+    "service_area_pricing_id": 528482
+  },
+  {
+    "id": 105,
+    "name": "Seoul,Korean",
+    "lat": 36.502780,
+    "lng": 127.828198,
+    "radius": null,
+    "bidding": null,
+    "parent_fleet_id": 15,
+    "unverified": null,
+    "service_area_pricing_id": 508862
+  },
+  {
+    "id": 311,
+    "name": "ShenZhen,China",
+    "lat": 22.672667,
+    "lng": 114.151620,
+    "radius": null,
+    "bidding": null,
+    "parent_fleet_id": 15,
+    "unverified": null,
+    "service_area_pricing_id": 1156450
+  },
+  {
+    "id": 744,
+    "name": "Turin,Italy",
+    "lat": 45.021223,
+    "lng": 8.490428,
+    "radius": null,
+    "bidding": null,
+    "parent_fleet_id": 15,
+    "unverified": null,
+    "service_area_pricing_id": 1146712
+  },
+  {
+    "id": 1098,
+    "name": "Yanji,China",
+    "lat": 42.887669,
+    "lng": 129.504275,
+    "radius": null,
+    "bidding": null,
+    "parent_fleet_id": 15,
+    "unverified": null,
+    "service_area_pricing_id": 367265
+  }
+]
+
+
+
+let partnerJson = {
+  "service_areas": {
+    "sas_percent": [
+      {
+        "id": 1840,
+        "percent": "6"
+      },
+      {
+        "id": 1006,
+        "percent": "6"
+      },
+      {
+        "id": 1005,
+        "percent": "6"
+      },
+      {
+        "id": 1004,
+        "percent": "6"
+      },
+      {
+        "id": 1003,
+        "percent": "6"
+      },
+      {
+        "id": 1001,
+        "percent": "6"
+      },
+      {
+        "id": 102,
+        "percent": "6"
+      },
+      {
+        "id": 106,
+        "percent": "30"
+      },
+      {
+        "id": 107,
+        "percent": "10",
+        "vcs": [
+          {
+            "id": 2,
+            "percent": "35"
+          },
+          {
+            "id": 6,
+            "percent": "35"
+          }
+        ]
+      },
+      {
+        "id": 105,
+        "percent": "7",
+        "vcs": [
+          {
+            "id": 2,
+            "percent": "20"
+          },
+          {
+            "id": 6,
+            "percent": "10"
+          },
+          {
+            "id": 5,
+            "percent": "250"
+          },
+          {
+            "id": 9,
+            "percent": "250"
+          }
+        ]
+      },
+      {
+        "id": 460,
+        "percent": "6"
+      },
+      {
+        "id": 459,
+        "percent": "6"
+      },
+      {
+        "id": 675,
+        "percent": "6"
+      },
+      {
+        "id": 674,
+        "percent": "6"
+      },
+      {
+        "id": 673,
+        "percent": "6"
+      },
+      {
+        "id": 672,
+        "percent": "6"
+      },
+      {
+        "id": 670,
+        "percent": "6"
+      },
+      {
+        "id": 667,
+        "percent": "6"
+      },
+      {
+        "id": 665,
+        "percent": "6"
+      },
+      {
+        "id": 662,
+        "percent": "6"
+      },
+      {
+        "id": 661,
+        "percent": "6"
+      },
+      {
+        "id": 660,
+        "percent": "6"
+      },
+      {
+        "id": 147,
+        "percent": "6"
+      },
+      {
+        "id": 151,
+        "percent": "6"
+      },
+      {
+        "id": 311,
+        "percent": "6"
+      },
+      {
+        "id": 275,
+        "percent": "6"
+      },
+      {
+        "id": 272,
+        "percent": "6"
+      },
+      {
+        "id": 274,
+        "percent": "6"
+      },
+      {
+        "id": 150,
+        "percent": "6"
+      },
+      {
+        "id": 1002,
+        "percent": "5"
+      },
+      {
+        "id": 50,
+        "percent": "5"
+      },
+      {
+        "id": 51,
+        "percent": "5"
+      },
+      {
+        "id": 52,
+        "percent": "5"
+      },
+      {
+        "id": 125,
+        "percent": "5"
+      },
+      {
+        "id": 49,
+        "percent": "5"
+      },
+      {
+        "id": "1053",
+        "percent": "50"
+      },
+      {
+        "id": "37148",
+        "percent": "50"
+      },
+      {
+        "id": "1062",
+        "percent": "50"
+      },
+      {
+        "id": "1117",
+        "percent": "50"
+      },
+      {
+        "id": "126",
+        "percent": ""
+      },
+      {
+        "id": "43",
+        "percent": "0",
+        "vcs": [
+          {
+            "id": 2,
+            "percent": "90"
+          },
+          {
+            "id": 4,
+            "percent": "90"
+          },
+          {
+            "id": 5,
+            "percent": "50"
+          },
+          {
+            "id": 9,
+            "percent": "50"
+          },
+          {
+            "id": 10,
+            "percent": "50"
+          }
+        ]
+      },
+      {
+        "id": "44",
+        "percent": ""
+      },
+      {
+        "id": "1060",
+        "percent": ""
+      },
+      {
+        "id": "128",
+        "percent": ""
+      },
+      {
+        "id": "130",
+        "percent": "50"
+      },
+      {
+        "id": "16767",
+        "percent": "50"
+      },
+      {
+        "id": "1052",
+        "percent": "50"
+      },
+      {
+        "id": "746",
+        "percent": "50"
+      },
+      {
+        "id": "1057",
+        "percent": "50"
+      },
+      {
+        "id": "1056",
+        "percent": "50"
+      },
+      {
+        "id": "745",
+        "percent": "50"
+      },
+      {
+        "id": "127",
+        "percent": ""
+      },
+      {
+        "id": "16771",
+        "percent": "50"
+      },
+      {
+        "id": 37508,
+        "percent": "",
+        "vcs": [
+          {
+            "id": 1,
+            "percent": "-2"
+          },
+          {
+            "id": 2,
+            "percent": "-3"
+          },
+          {
+            "id": 8,
+            "percent": "-12"
+          }
+        ]
+      },
+      {
+        "id": 62,
+        "percent": "",
+        "vcs": [
+          {
+            "id": 1,
+            "percent": "15"
+          },
+          {
+            "id": 2,
+            "percent": "10"
+          },
+          {
+            "id": 6,
+            "percent": "15"
+          },
+          {
+            "id": 3,
+            "percent": "15"
+          },
+          {
+            "id": 4,
+            "percent": "10"
+          }
+        ]
+      },
+      {
+        "id": 37,
+        "percent": "",
+        "vcs": [
+          {
+            "id": 1,
+            "percent": "-4"
+          },
+          {
+            "id": 2,
+            "percent": "-1.1"
+          },
+          {
+            "id": 4,
+            "percent": "-1.6"
+          }
+        ]
+      },
+      {
+        "id": 822,
+        "percent": "1"
+      },
+      {
+        "id": 88,
+        "percent": "",
+        "vcs": [
+          {
+            "id": 2,
+            "percent": "5"
+          }
+        ]
+      },
+      {
+        "id": 99,
+        "percent": ""
+      },
+      {
+        "id": 68,
+        "percent": "",
+        "vcs": [
+          {
+            "id": 1,
+            "percent": "-1.5"
+          }
+        ]
+      },
+      {
+        "id": 39,
+        "percent": "",
+        "vcs": [
+          {
+            "id": 1,
+            "percent": "-6"
+          },
+          {
+            "id": 2,
+            "percent": "-10"
+          },
+          {
+            "id": 6,
+            "percent": "7"
+          },
+          {
+            "id": 3,
+            "percent": "7"
+          },
+          {
+            "id": 4,
+            "percent": "-15"
+          }
+        ]
+      },
+      {
+        "id": 367,
+        "percent": "",
+        "vcs": [
+          {
+            "id": 1,
+            "percent": "30"
+          },
+          {
+            "id": 6,
+            "percent": "25"
+          },
+          {
+            "id": 3,
+            "percent": "25"
+          }
+        ]
+      },
+      {
+        "id": 89,
+        "percent": "5"
+      },
+      {
+        "id": 72,
+        "percent": "10",
+        "vcs": [
+          {
+            "id": 1,
+            "percent": "8"
+          }
+        ]
+      },
+      {
+        "id": 69,
+        "percent": "10",
+        "vcs": [
+          {
+            "id": 1,
+            "percent": "10"
+          },
+          {
+            "id": 6,
+            "percent": "20"
+          },
+          {
+            "id": 3,
+            "percent": "20"
+          }
+        ]
+      },
+      {
+        "id": 40,
+        "percent": "10",
+        "vcs": [
+          {
+            "id": 1,
+            "percent": "19"
+          },
+          {
+            "id": 3,
+            "percent": "32"
+          },
+          {
+            "id": 6,
+            "percent": "25"
+          }
+        ]
+      },
+      {
+        "id": 38,
+        "percent": "5"
+      },
+      {
+        "id": 113,
+        "percent": "",
+        "vcs": [
+          {
+            "id": 6,
+            "percent": "8"
+          }
+        ]
+      },
+      {
+        "id": 114,
+        "percent": ""
+      },
+      {
+        "id": 117,
+        "percent": "",
+        "vcs": [
+          {
+            "id": 1,
+            "percent": "15"
+          },
+          {
+            "id": 6,
+            "percent": "2"
+          }
+        ]
+      },
+      {
+        "id": 118,
+        "percent": "",
+        "vcs": [
+          {
+            "id": 1,
+            "percent": "44"
+          },
+          {
+            "id": 6,
+            "percent": "25"
+          },
+          {
+            "id": 3,
+            "percent": "20"
+          },
+          {
+            "id": 5,
+            "percent": "26"
+          },
+          {
+            "id": 9,
+            "percent": "30"
+          }
+        ]
+      },
+      {
+        "id": 45,
+        "percent": "",
+        "vcs": [
+          {
+            "id": 1,
+            "percent": "4"
+          },
+          {
+            "id": 6,
+            "percent": "9"
+          }
+        ]
+      },
+      {
+        "id": 929,
+        "percent": "",
+        "vcs": [
+          {
+            "id": 1,
+            "percent": "-5"
+          },
+          {
+            "id": 5,
+            "percent": "-5"
+          }
+        ]
+      },
+      {
+        "id": 48,
+        "percent": "",
+        "vcs": [
+          {
+            "id": 1,
+            "percent": "28"
+          },
+          {
+            "id": 6,
+            "percent": "30"
+          },
+          {
+            "id": 3,
+            "percent": "35"
+          }
+        ]
+      },
+      {
+        "id": 41,
+        "percent": "",
+        "vcs": [
+          {
+            "id": 1,
+            "percent": "25"
+          },
+          {
+            "id": 6,
+            "percent": "16.2"
+          },
+          {
+            "id": 3,
+            "percent": "0"
+          },
+          {
+            "id": 5,
+            "percent": "-5"
+          },
+          {
+            "id": 9,
+            "percent": "30"
+          }
+        ]
+      },
+      {
+        "id": 39613,
+        "percent": ""
+      },
+      {
+        "id": 1119,
+        "percent": ""
+      },
+      {
+        "id": 1471,
+        "percent": ""
+      },
+      {
+        "id": 1477,
+        "percent": ""
+      },
+      {
+        "id": 866,
+        "percent": ""
+      },
+      {
+        "id": 446,
+        "percent": "",
+        "vcs": [
+          {
+            "id": 1,
+            "percent": "-8.6"
+          },
+          {
+            "id": 6,
+            "percent": "-5.6"
+          }
+        ]
+      },
+      {
+        "id": 173,
+        "percent": "",
+        "vcs": [
+          {
+            "id": 1,
+            "percent": "-2.12"
+          }
+        ]
+      },
+      {
+        "id": 435,
+        "percent": "",
+        "vcs": [
+          {
+            "id": 1,
+            "percent": "3"
+          },
+          {
+            "id": 5,
+            "percent": "-8"
+          },
+          {
+            "id": 6,
+            "percent": "-1.2"
+          }
+        ]
+      },
+      {
+        "id": 316,
+        "percent": ""
+      },
+      {
+        "id": 1139,
+        "percent": "",
+        "vcs": [
+          {
+            "id": 1,
+            "percent": "6.84"
+          },
+          {
+            "id": 5,
+            "percent": "5.35"
+          }
+        ]
+      },
+      {
+        "id": 1127,
+        "percent": "",
+        "vcs": [
+          {
+            "id": 1,
+            "percent": "-0.83"
+          },
+          {
+            "id": 6,
+            "percent": "20"
+          },
+          {
+            "id": 3,
+            "percent": "20"
+          }
+        ]
+      },
+      {
+        "id": 1140,
+        "percent": "",
+        "vcs": [
+          {
+            "id": 1,
+            "percent": "6.25"
+          },
+          {
+            "id": 6,
+            "percent": "42.59"
+          },
+          {
+            "id": 5,
+            "percent": "5.66"
+          }
+        ]
+      },
+      {
+        "id": 452,
+        "percent": "",
+        "vcs": [
+          {
+            "id": 1,
+            "percent": "-0.73"
+          },
+          {
+            "id": 6,
+            "percent": "17.7"
+          }
+        ]
+      },
+      {
+        "id": 449,
+        "percent": "",
+        "vcs": [
+          {
+            "id": 1,
+            "percent": "19"
+          },
+          {
+            "id": 6,
+            "percent": "20"
+          },
+          {
+            "id": 5,
+            "percent": "5"
+          }
+        ]
+      },
+      {
+        "id": 328,
+        "percent": "",
+        "vcs": [
+          {
+            "id": 2,
+            "percent": "25"
+          },
+          {
+            "id": 6,
+            "percent": "90"
+          },
+          {
+            "id": 3,
+            "percent": "92"
+          },
+          {
+            "id": 7,
+            "percent": "75"
+          }
+        ]
+      },
+      {
+        "id": 426,
+        "percent": "",
+        "vcs": [
+          {
+            "id": 1,
+            "percent": "4"
+          },
+          {
+            "id": 6,
+            "percent": "10"
+          },
+          {
+            "id": 3,
+            "percent": "10"
+          },
+          {
+            "id": 5,
+            "percent": "-19.9"
+          },
+          {
+            "id": 8,
+            "percent": "-16.7"
+          }
+        ]
+      },
+      {
+        "id": 276,
+        "percent": "",
+        "vcs": [
+          {
+            "id": 1,
+            "percent": "-2"
+          },
+          {
+            "id": 2,
+            "percent": "-5.5"
+          },
+          {
+            "id": 6,
+            "percent": "-10"
+          },
+          {
+            "id": 3,
+            "percent": "-5"
+          },
+          {
+            "id": 4,
+            "percent": "-10"
+          },
+          {
+            "id": 36,
+            "percent": "-10"
+          },
+          {
+            "id": 5,
+            "percent": "-8.2"
+          },
+          {
+            "id": 7,
+            "percent": "-4"
+          },
+          {
+            "id": 8,
+            "percent": "-15.23"
+          }
+        ]
+      },
+      {
+        "id": "1054",
+        "percent": "50"
+      },
+      {
+        "id": "1058",
+        "percent": "50"
+      },
+      {
+        "id": "15384",
+        "percent": "50"
+      },
+      {
+        "id": "1059",
+        "percent": "50"
+      },
+      {
+        "id": "1061",
+        "percent": "50"
+      }
+    ],
+    "ads_delta": [
+      {
+        "id": "69",
+        "infant": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "on"
+        },
+        "toddler": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "on"
+        },
+        "children": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "on"
+        },
+        "meal": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "off"
+        },
+        "lodge": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "off"
+        }
+      },
+      {
+        "id": "72",
+        "infant": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "on"
+        },
+        "toddler": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "on"
+        },
+        "children": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "on"
+        },
+        "meal": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "off"
+        },
+        "lodge": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "off"
+        }
+      },
+      {
+        "id": "89",
+        "infant": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "on"
+        },
+        "toddler": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "on"
+        },
+        "children": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "on"
+        },
+        "meal": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "off"
+        },
+        "lodge": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "off"
+        }
+      },
+      {
+        "id": "99",
+        "infant": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "on"
+        },
+        "toddler": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "on"
+        },
+        "children": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "on"
+        },
+        "meal": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "off"
+        },
+        "lodge": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "off"
+        }
+      },
+      {
+        "id": "68",
+        "infant": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "on"
+        },
+        "toddler": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "on"
+        },
+        "children": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "on"
+        },
+        "meal": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "off"
+        },
+        "lodge": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "off"
+        }
+      },
+      {
+        "id": "37",
+        "infant": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "on"
+        },
+        "toddler": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "on"
+        },
+        "children": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "on"
+        },
+        "meal": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "off"
+        },
+        "lodge": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "off"
+        }
+      },
+      {
+        "id": "62",
+        "infant": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "on"
+        },
+        "toddler": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "on"
+        },
+        "children": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "on"
+        },
+        "meal": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "off"
+        },
+        "lodge": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "off"
+        }
+      },
+      {
+        "id": "87",
+        "infant": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "on"
+        },
+        "toddler": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "on"
+        },
+        "children": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "on"
+        },
+        "meal": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "off"
+        },
+        "lodge": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "off"
+        }
+      },
+      {
+        "id": "88",
+        "infant": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "on"
+        },
+        "toddler": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "on"
+        },
+        "children": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "on"
+        },
+        "meal": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "off"
+        },
+        "lodge": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "off"
+        }
+      },
+      {
+        "id": "39",
+        "infant": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "on"
+        },
+        "toddler": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "on"
+        },
+        "children": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "on"
+        },
+        "meal": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "off"
+        },
+        "lodge": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "off"
+        }
+      },
+      {
+        "id": "84",
+        "infant": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "on"
+        },
+        "toddler": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "on"
+        },
+        "children": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "on"
+        },
+        "meal": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "off"
+        },
+        "lodge": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "off"
+        }
+      },
+      {
+        "id": "70",
+        "infant": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "on"
+        },
+        "toddler": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "on"
+        },
+        "children": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "on"
+        },
+        "meal": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "off"
+        },
+        "lodge": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "off"
+        }
+      },
+      {
+        "id": "40",
+        "infant": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "on"
+        },
+        "toddler": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "on"
+        },
+        "children": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "on"
+        },
+        "meal": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "off"
+        },
+        "lodge": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "off"
+        }
+      },
+      {
+        "id": "73",
+        "infant": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "on"
+        },
+        "toddler": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "on"
+        },
+        "children": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "on"
+        },
+        "meal": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "off"
+        },
+        "lodge": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "off"
+        }
+      },
+      {
+        "id": "74",
+        "infant": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "on"
+        },
+        "toddler": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "on"
+        },
+        "children": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "on"
+        },
+        "meal": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "off"
+        },
+        "lodge": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "off"
+        }
+      },
+      {
+        "id": "390",
+        "infant": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "on"
+        },
+        "toddler": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "on"
+        },
+        "children": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "on"
+        },
+        "meal": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "off"
+        },
+        "lodge": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "off"
+        }
+      },
+      {
+        "id": "76",
+        "infant": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "on"
+        },
+        "toddler": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "on"
+        },
+        "children": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "on"
+        },
+        "meal": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "off"
+        },
+        "lodge": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "off"
+        }
+      },
+      {
+        "id": "94",
+        "infant": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "on"
+        },
+        "toddler": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "on"
+        },
+        "children": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "on"
+        },
+        "meal": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "off"
+        },
+        "lodge": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "off"
+        }
+      },
+      {
+        "id": "65",
+        "infant": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "on"
+        },
+        "toddler": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "on"
+        },
+        "children": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "on"
+        },
+        "meal": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "off"
+        },
+        "lodge": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "off"
+        }
+      },
+      {
+        "id": "98",
+        "infant": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "on"
+        },
+        "toddler": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "on"
+        },
+        "children": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "on"
+        },
+        "meal": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "off"
+        },
+        "lodge": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "off"
+        }
+      },
+      {
+        "id": "77",
+        "infant": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "on"
+        },
+        "toddler": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "on"
+        },
+        "children": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "on"
+        },
+        "meal": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "off"
+        },
+        "lodge": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "off"
+        }
+      },
+      {
+        "id": "38",
+        "infant": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "on"
+        },
+        "toddler": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "on"
+        },
+        "children": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "on"
+        },
+        "meal": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "off"
+        },
+        "lodge": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "off"
+        }
+      },
+      {
+        "id": "56",
+        "infant": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "on"
+        },
+        "toddler": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "on"
+        },
+        "children": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "on"
+        },
+        "meal": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "off"
+        },
+        "lodge": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "off"
+        }
+      },
+      {
+        "id": "58",
+        "infant": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "on"
+        },
+        "toddler": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "on"
+        },
+        "children": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "on"
+        },
+        "meal": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "off"
+        },
+        "lodge": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "off"
+        }
+      },
+      {
+        "id": "55",
+        "infant": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "off"
+        },
+        "toddler": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "off"
+        },
+        "children": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "off"
+        },
+        "meal": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "off"
+        },
+        "lodge": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "off"
+        }
+      },
+      {
+        "id": "57",
+        "infant": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "off"
+        },
+        "toddler": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "off"
+        },
+        "children": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "off"
+        },
+        "meal": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "off"
+        },
+        "lodge": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "off"
+        }
+      },
+      {
+        "id": "92",
+        "infant": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "on"
+        },
+        "toddler": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "on"
+        },
+        "children": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "on"
+        },
+        "meal": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "off"
+        },
+        "lodge": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "off"
+        }
+      },
+      {
+        "id": "96",
+        "infant": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "off"
+        },
+        "toddler": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "off"
+        },
+        "children": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "off"
+        },
+        "meal": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "off"
+        },
+        "lodge": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "off"
+        }
+      },
+      {
+        "id": "384",
+        "infant": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "off"
+        },
+        "toddler": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "off"
+        },
+        "children": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "off"
+        },
+        "meal": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "off"
+        },
+        "lodge": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "off"
+        }
+      },
+      {
+        "id": "85",
+        "infant": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "off"
+        },
+        "toddler": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "off"
+        },
+        "children": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "off"
+        },
+        "meal": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "off"
+        },
+        "lodge": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "off"
+        }
+      },
+      {
+        "id": "86",
+        "infant": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "on"
+        },
+        "toddler": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "on"
+        },
+        "children": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "on"
+        },
+        "meal": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "off"
+        },
+        "lodge": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "off"
+        }
+      },
+      {
+        "id": "67",
+        "infant": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "off"
+        },
+        "toddler": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "off"
+        },
+        "children": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "off"
+        },
+        "meal": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "off"
+        },
+        "lodge": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "off"
+        }
+      },
+      {
+        "id": "60",
+        "infant": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "off"
+        },
+        "toddler": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "off"
+        },
+        "children": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "off"
+        },
+        "meal": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "off"
+        },
+        "lodge": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "off"
+        }
+      },
+      {
+        "id": "391",
+        "infant": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "off"
+        },
+        "toddler": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "off"
+        },
+        "children": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "off"
+        },
+        "meal": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "off"
+        },
+        "lodge": {
+          "delta": 0,
+          "currency": "USD",
+          "switch": "off"
+        }
+      }
+    ],
+    "mag_delta": [
+      {
+        "id": "69",
+        "delta": 0,
+        "currency": "USD",
+        "switch": "off"
+      },
+      {
+        "id": "72",
+        "delta": 0,
+        "currency": "USD",
+        "switch": "off"
+      },
+      {
+        "id": "89",
+        "delta": 0,
+        "currency": "USD",
+        "switch": "off"
+      },
+      {
+        "id": "99",
+        "delta": 0,
+        "currency": "USD",
+        "switch": "off"
+      },
+      {
+        "id": "68",
+        "delta": 0,
+        "currency": "USD",
+        "switch": "off"
+      },
+      {
+        "id": "37",
+        "delta": 0,
+        "currency": "USD",
+        "switch": "off"
+      },
+      {
+        "id": "62",
+        "delta": 0,
+        "currency": "USD",
+        "switch": "off"
+      },
+      {
+        "id": "87",
+        "delta": 0,
+        "currency": "USD",
+        "switch": "off"
+      },
+      {
+        "id": "88",
+        "delta": 0,
+        "currency": "USD",
+        "switch": "off"
+      },
+      {
+        "id": "39",
+        "delta": 0,
+        "currency": "USD",
+        "switch": "off"
+      },
+      {
+        "id": "84",
+        "delta": 0,
+        "currency": "USD",
+        "switch": "off"
+      },
+      {
+        "id": "70",
+        "delta": 0,
+        "currency": "USD",
+        "switch": "off"
+      },
+      {
+        "id": "40",
+        "delta": 0,
+        "currency": "USD",
+        "switch": "off"
+      },
+      {
+        "id": "73",
+        "delta": 0,
+        "currency": "USD",
+        "switch": "off"
+      },
+      {
+        "id": "74",
+        "delta": 0,
+        "currency": "USD",
+        "switch": "off"
+      },
+      {
+        "id": "390",
+        "delta": 0,
+        "currency": "USD",
+        "switch": "off"
+      },
+      {
+        "id": "76",
+        "delta": 0,
+        "currency": "USD",
+        "switch": "off"
+      },
+      {
+        "id": "94",
+        "delta": 0,
+        "currency": "USD",
+        "switch": "off"
+      },
+      {
+        "id": "65",
+        "delta": 0,
+        "currency": "USD",
+        "switch": "off"
+      },
+      {
+        "id": "98",
+        "delta": 0,
+        "currency": "USD",
+        "switch": "off"
+      },
+      {
+        "id": "77",
+        "delta": -12,
+        "currency": "USD",
+        "switch": "off"
+      },
+      {
+        "id": "38",
+        "delta": 0,
+        "currency": "USD",
+        "switch": "off"
+      },
+      {
+        "id": "56",
+        "delta": 0,
+        "currency": "USD",
+        "switch": "off"
+      },
+      {
+        "id": "58",
+        "delta": 0,
+        "currency": "USD",
+        "switch": "off"
+      },
+      {
+        "id": "55",
+        "delta": 0,
+        "currency": "USD",
+        "switch": "off"
+      },
+      {
+        "id": "57",
+        "delta": 0,
+        "currency": "USD",
+        "switch": "off"
+      },
+      {
+        "id": "92",
+        "delta": 0,
+        "currency": "USD",
+        "switch": "off"
+      },
+      {
+        "id": "96",
+        "delta": 0,
+        "currency": "USD",
+        "switch": "off"
+      },
+      {
+        "id": "384",
+        "delta": -5,
+        "currency": "USD",
+        "switch": "off"
+      },
+      {
+        "id": "85",
+        "delta": 0,
+        "currency": "USD",
+        "switch": "off"
+      },
+      {
+        "id": "86",
+        "delta": 0,
+        "currency": "USD",
+        "switch": "off"
+      },
+      {
+        "id": "67",
+        "delta": 0,
+        "currency": "USD",
+        "switch": "off"
+      },
+      {
+        "id": "60",
+        "delta": 0,
+        "currency": "USD",
+        "switch": "off"
+      },
+      {
+        "id": "391",
+        "delta": -5,
+        "currency": "USD",
+        "switch": "off"
+      }
+    ]
+  },
+  "doNotDel": "doNotDel"
 }
 
-let error = [
+
+
+
+
+
+
+
+
+
+let aleadyInserta = [
   {
     "id": 1707,
     "name": "Aurangabad, India",
@@ -20690,1138 +17342,26 @@ let error = [
     "lng": 75.395796,
     "radius": 250000,
     "bidding": null,
+    "inserted_at": "2020-12-17 17:55:42",
+    "last_updated_at": "2024-02-17 14:57:48",
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 124600
+    "service_area_pricing_id": 124600,
+    "note": "airport has aleady exist"
   },
-
   {
-    "id": 27380,
-    "name": "Aug",
-    "lat": 19.867355,
-    "lng": 75.395796,
-    "radius": 150000,
+    "id": 673,
+    "name": "Changsha,CHN",
+    "lat": 28.225512,
+    "lng": 112.934996,
+    "radius": 201000,
     "bidding": null,
+    "inserted_at": "2020-10-21 22:53:55",
+    "last_updated_at": "2024-09-28 03:21:11",
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": 93868
-  },
-]
-
-let originalFleetsErrorList = [
-
-  {
-    "id": 445,
-    "name": "Dusseldorf, Germany",
-    "lat": 51.287615,
-    "lng": 6.766791,
-    "radius": 100000,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": 227297
-  },
-
-  {
-    "id": 1379,
-    "name": "Ha'il, Saudi Arabia",
-    "lat": 27.438251,
-    "lng": 41.690178,
-    "radius": 62000,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": 150939
-  },
-  {
-    "id": 376,
-    "name": "Hartford, USA",
-    "lat": 41.856584,
-    "lng": -72.943524,
-    "radius": 1,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": 113133
-  },
-  {
-    "id": 18312,
-    "name": "HHN,Frankfurt",
-    "lat": 54.365672,
-    "lng": 2.294456,
-    "radius": 1,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": 112609
-  },
-  {
-    "id": 1116,
-    "name": "Huai'an,China",
-    "lat": 33.736988,
-    "lng": 119.127669,
-    "radius": 104000,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": 150792
-  },
-
-  {
-    "id": 1836,
-    "name": "Pu'er City,Yunnan,China",
-    "lat": 22.793523,
-    "lng": 100.962887,
-    "radius": 74000,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": 151129
-  },
-
-  {
-    "id": 63,
-    "name": "Sacramento,CA,USA",
-    "lat": 38.695085,
-    "lng": -121.590065,
-    "radius": 1,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": 59074
-  },
-  {
-    "id": 39,
-    "name": "Seattle,USA",
-    "lat": 47.409879,
-    "lng": -122.099895,
-    "radius": 144841,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": 252931
-  },
-
-  {
-    "id": 1384,
-    "name": "Ta'if, Saudi Arabia",
-    "lat": 21.480649,
-    "lng": 40.552691,
-    "radius": 88000,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": 150944
-  },
-  {
-    "id": 70,
-    "name": "Tampa,USA",
-    "lat": 27.785242,
-    "lng": -82.566552,
-    "radius": 80467,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": 240633
-  },
-  {
-    "id": 56,
-    "name": "Toronto,Canada",
-    "lat": 43.367114,
-    "lng": -79.996821,
-    "radius": 81000,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": 246057
-  },
-
-  {
-    "id": 670,
-    "name": "Xi'An,China",
-    "lat": 34.265699,
-    "lng": 108.955693,
-    "radius": 102000,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": 243902
-  },
-
-
-  {
-    "id": 72,
-    "name": "Orlando,USA",
-    "lat": 28.431158,
-    "lng": -81.308083,
-    "radius": 241401,
-    "bidding": null,
-    "inserted_at": "2020-02-23 03:14:45",
-    "last_updated_at": "2024-10-10 15:20:04",
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": 262119
-  },
-  {
-    "id": 74,
-    "name": "Boston, USA",
-    "lat": 42.351387,
-    "lng": -71.087511,
-    "radius": 128747,
-    "bidding": null,
-    "inserted_at": "2020-02-25 04:56:11",
-    "last_updated_at": "2024-10-09 16:20:37",
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": 256048
-  },
-  {
-    "id": 145,
-    "name": "Queenstown,New Zealand",
-    "lat": -44.955660,
-    "lng": 169.187999,
-    "radius": 116000,
-    "bidding": null,
-    "inserted_at": "2020-02-27 03:02:42",
-    "last_updated_at": "2024-10-08 13:00:48",
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": 250152
-  },
-  {
-    "id": 277,
-    "name": "Barcelona,Spain",
-    "lat": 41.297445,
-    "lng": 2.083294,
-    "radius": 150000,
-    "bidding": null,
-    "inserted_at": "2020-06-08 20:54:25",
-    "last_updated_at": "2024-10-10 06:04:09",
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": 260289
-  },
-  {
-    "id": 327,
-    "name": "Venice,Italy",
-    "lat": 45.711877,
-    "lng": 12.118111,
-    "radius": 110000,
-    "bidding": null,
-    "inserted_at": "2020-06-22 22:09:10",
-    "last_updated_at": "2024-10-07 14:58:08",
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": 245834
-  },
-  {
-    "id": 393,
-    "name": "Spokane,WA,USA",
-    "lat": 47.621748,
-    "lng": -117.534812,
-    "radius": 321868,
-    "bidding": null,
-    "inserted_at": "2020-06-29 21:26:16",
-    "last_updated_at": "2024-09-04 01:17:27",
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": 196277
-  },
-  {
-    "id": 417,
-    "name": "ST Johns, Canada",
-    "lat": 47.621210,
-    "lng": -52.742443,
-    "radius": 200000,
-    "bidding": null,
-    "inserted_at": "2020-06-29 23:13:06",
-    "last_updated_at": "2023-09-21 01:26:30",
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": 65246
-  },
-  {
-    "id": 429,
-    "name": "Palma,Spain",
-    "lat": 39.551741,
-    "lng": 2.736165,
-    "radius": 68000,
-    "bidding": null,
-    "inserted_at": "2020-07-01 17:55:59",
-    "last_updated_at": "2024-09-10 11:13:52",
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": 198858
-  },
-  {
-    "id": 451,
-    "name": "Alicante, Spain",
-    "lat": 38.285483,
-    "lng": -0.560056,
-    "radius": 89000,
-    "bidding": null,
-    "inserted_at": "2020-07-02 21:36:30",
-    "last_updated_at": "2024-10-01 13:31:06",
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": 227860
-  },
-  {
-    "id": 995,
-    "name": "Cape Town,South Africa",
-    "lat": -33.994676,
-    "lng": 18.609016,
-    "radius": 92000,
-    "bidding": null,
-    "inserted_at": "2020-11-27 00:32:52",
-    "last_updated_at": "2024-10-10 01:44:21",
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": 257993
-  },
-  {
-    "id": 1161,
-    "name": "Eindhoven,Netherlands",
-    "lat": 51.450745,
-    "lng": 5.377595,
-    "radius": 50000,
-    "bidding": null,
-    "inserted_at": "2020-12-01 21:01:54",
-    "last_updated_at": "2024-10-07 08:18:21",
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": 245037
-  },
-  {
-    "id": 1492,
-    "name": "Cluj-Napoca, Romania",
-    "lat": 46.782507,
-    "lng": 23.688025,
-    "radius": 150000,
-    "bidding": null,
-    "inserted_at": "2020-12-11 01:27:12",
-    "last_updated_at": "2024-10-07 10:02:48",
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": 245308
-  },
-  {
-    "id": 2046,
-    "name": "Ogdensburg, NY, USA",
-    "lat": 44.682093,
-    "lng": -75.476830,
-    "radius": 41843,
-    "bidding": null,
-    "inserted_at": "2021-05-20 17:55:31",
-    "last_updated_at": "2024-09-11 07:10:33",
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": 199347
-  },
-  {
-    "id": 27582,
-    "name": "Dhanbad",
-    "lat": 23.833949,
-    "lng": 86.426007,
-    "radius": 150000,
-    "bidding": null,
-    "inserted_at": "2023-07-29 18:39:29",
-    "last_updated_at": "2023-07-29 18:49:32",
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": 45925
-  }
-
-]
-
-let originalFleetsErrorList_1 = [
-  // {
-  //   "id": 445,
-  //   "name": "Dusseldorf, Germany",
-  //   "lat": 51.287615,
-  //   "lng": 6.766791,
-  //   "radius": 100000,
-  //   "bidding": null,
-  //   "parent_fleet_id": 15,
-  //   "unverified": null,
-  //   "service_area_pricing_id": 227297
-  // },
-  // {
-  //   "id": 70,
-  //   "name": "Tampa,USA",
-  //   "lat": 27.785242,
-  //   "lng": -82.566552,
-  //   "radius": 80467,
-  //   "bidding": null,
-  //   "parent_fleet_id": 15,
-  //   "unverified": null,
-  //   "service_area_pricing_id": 240633
-  // },
-
-  // {
-  //   "id": 72,
-  //   "name": "Orlando,USA",
-  //   "lat": 28.431158,
-  //   "lng": -81.308083,
-  //   "radius": 241401,
-  //   "bidding": null,
-  //   "inserted_at": "2020-02-23 03:14:45",
-  //   "last_updated_at": "2024-10-10 15:20:04",
-  //   "parent_fleet_id": 15,
-  //   "unverified": null,
-  //   "service_area_pricing_id": 262119
-  // },
-  // {
-  //   "id": 74,
-  //   "name": "Boston, USA",
-  //   "lat": 42.351387,
-  //   "lng": -71.087511,
-  //   "radius": 128747,
-  //   "bidding": null,
-  //   "inserted_at": "2020-02-25 04:56:11",
-  //   "last_updated_at": "2024-10-09 16:20:37",
-  //   "parent_fleet_id": 15,
-  //   "unverified": null,
-  //   "service_area_pricing_id": 256048
-  // },
-  // {
-  //   "id": 145,
-  //   "name": "Queenstown,New Zealand",
-  //   "lat": -44.95566,
-  //   "lng": 169.187999,
-  //   "radius": 116000,
-  //   "bidding": null,
-  //   "inserted_at": "2020-02-27 03:02:42",
-  //   "last_updated_at": "2024-10-08 13:00:48",
-  //   "parent_fleet_id": 15,
-  //   "unverified": null,
-  //   "service_area_pricing_id": 250152
-  // },
-  // {
-  //   "id": 277,
-  //   "name": "Barcelona,Spain",
-  //   "lat": 41.297445,
-  //   "lng": 2.083294,
-  //   "radius": 150000,
-  //   "bidding": null,
-  //   "inserted_at": "2020-06-08 20:54:25",
-  //   "last_updated_at": "2024-10-10 06:04:09",
-  //   "parent_fleet_id": 15,
-  //   "unverified": null,
-  //   "service_area_pricing_id": 260289
-  // },
-  // {
-  //   "id": 327,
-  //   "name": "Venice,Italy",
-  //   "lat": 45.711877,
-  //   "lng": 12.118111,
-  //   "radius": 110000,
-  //   "bidding": null,
-  //   "inserted_at": "2020-06-22 22:09:10",
-  //   "last_updated_at": "2024-10-07 14:58:08",
-  //   "parent_fleet_id": 15,
-  //   "unverified": null,
-  //   "service_area_pricing_id": 245834
-  // },
-  // {
-  //   "id": 393,
-  //   "name": "Spokane,WA,USA",
-  //   "lat": 47.621748,
-  //   "lng": -117.534812,
-  //   "radius": 321868,
-  //   "bidding": null,
-  //   "inserted_at": "2020-06-29 21:26:16",
-  //   "last_updated_at": "2024-09-04 01:17:27",
-  //   "parent_fleet_id": 15,
-  //   "unverified": null,
-  //   "service_area_pricing_id": 196277
-  // },
-  // {
-  //   "id": 417,
-  //   "name": "ST Johns, Canada",
-  //   "lat": 47.62121,
-  //   "lng": -52.742443,
-  //   "radius": 200000,
-  //   "bidding": null,
-  //   "inserted_at": "2020-06-29 23:13:06",
-  //   "last_updated_at": "2023-09-21 01:26:30",
-  //   "parent_fleet_id": 15,
-  //   "unverified": null,
-  //   "service_area_pricing_id": 65246
-  // },
-  // {
-  //   "id": 429,
-  //   "name": "Palma,Spain",
-  //   "lat": 39.551741,
-  //   "lng": 2.736165,
-  //   "radius": 68000,
-  //   "bidding": null,
-  //   "inserted_at": "2020-07-01 17:55:59",
-  //   "last_updated_at": "2024-09-10 11:13:52",
-  //   "parent_fleet_id": 15,
-  //   "unverified": null,
-  //   "service_area_pricing_id": 198858
-  // },
-  // {
-  //   "id": 451,
-  //   "name": "Alicante, Spain",
-  //   "lat": 38.285483,
-  //   "lng": -0.560056,
-  //   "radius": 89000,
-  //   "bidding": null,
-  //   "inserted_at": "2020-07-02 21:36:30",
-  //   "last_updated_at": "2024-10-01 13:31:06",
-  //   "parent_fleet_id": 15,
-  //   "unverified": null,
-  //   "service_area_pricing_id": 227860
-  // },
-  // {
-  //   "id": 995,
-  //   "name": "Cape Town,South Africa",
-  //   "lat": -33.994676,
-  //   "lng": 18.609016,
-  //   "radius": 92000,
-  //   "bidding": null,
-  //   "inserted_at": "2020-11-27 00:32:52",
-  //   "last_updated_at": "2024-10-10 01:44:21",
-  //   "parent_fleet_id": 15,
-  //   "unverified": null,
-  //   "service_area_pricing_id": 257993
-  // },
-  // {
-  //   "id": 1161,
-  //   "name": "Eindhoven,Netherlands",
-  //   "lat": 51.450745,
-  //   "lng": 5.377595,
-  //   "radius": 50000,
-  //   "bidding": null,
-  //   "inserted_at": "2020-12-01 21:01:54",
-  //   "last_updated_at": "2024-10-07 08:18:21",
-  //   "parent_fleet_id": 15,
-  //   "unverified": null,
-  //   "service_area_pricing_id": 245037
-  // },
-  // {
-  //   "id": 1492,
-  //   "name": "Cluj-Napoca, Romania",
-  //   "lat": 46.782507,
-  //   "lng": 23.688025,
-  //   "radius": 150000,
-  //   "bidding": null,
-  //   "inserted_at": "2020-12-11 01:27:12",
-  //   "last_updated_at": "2024-10-07 10:02:48",
-  //   "parent_fleet_id": 15,
-  //   "unverified": null,
-  //   "service_area_pricing_id": 245308
-  // },
-  // {
-  //   "id": 2046,
-  //   "name": "Ogdensburg, NY, USA",
-  //   "lat": 44.682093,
-  //   "lng": -75.47683,
-  //   "radius": 41843,
-  //   "bidding": null,
-  //   "inserted_at": "2021-05-20 17:55:31",
-  //   "last_updated_at": "2024-09-11 07:10:33",
-  //   "parent_fleet_id": 15,
-  //   "unverified": null,
-  //   "service_area_pricing_id": 199347
-  // },
-  // {
-  //   "id": 27582,
-  //   "name": "Dhanbad",
-  //   "lat": 23.833949,
-  //   "lng": 86.426007,
-  //   "radius": 150000,
-  //   "bidding": null,
-  //   "inserted_at": "2023-07-29 18:39:29",
-  //   "last_updated_at": "2023-07-29 18:49:32",
-  //   "parent_fleet_id": 15,
-  //   "unverified": null,
-  //   "service_area_pricing_id": 45925
-  // }
-]
-
-let e_2 = [
-  {
-    "id": 56,
-    "name": "Toronto,Canada",
-    "lat": 43.367114,
-    "lng": -79.996821,
-    "radius": 81000,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": 246057
-  },
-]
-
-let e_3 = [
-  {
-    "id": 172,
-    "name": "Murmansk",
-    "lat": 68.784709,
-    "lng": 32.759041,
-    "radius": 130000,
-    "bidding": null,
-    "inserted_at": "2020-02-28 04:01:15",
-    "last_updated_at": "2021-09-24 16:04:44",
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  }]
-
-
-let noPricingJsonFleets = [
-  {
-    "id": 1374,
-    "name": "Abha Saudi Arabia",
-    "lat": 18.234816,
-    "lng": 42.657733,
-    "radius": 91526,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1357,
-    "name": "Addu City Maldives",
-    "lat": -0.674989,
-    "lng": 73.073281,
-    "radius": 11326,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1677,
-    "name": "Aktau Kazakhstan",
-    "lat": 43.856809,
-    "lng": 51.086945,
-    "radius": 121209,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1678,
-    "name": "Aktobe  Kazakhstan",
-    "lat": 50.248757,
-    "lng": 57.210795,
-    "radius": 105719,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1386,
-    "name": "Al Ain  United Arab Emirates",
-    "lat": 24.656035,
-    "lng": 55.078362,
-    "radius": 109493,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1769,
-    "name": "Albacete Spain",
-    "lat": 38.945425,
-    "lng": -1.880315,
-    "radius": 190000,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1160,
-    "name": "Alderney  Guernsey",
-    "lat": 49.707396,
-    "lng": -2.190232,
-    "radius": 3930,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1695,
-    "name": "Andijan Uzbekistan",
-    "lat": 40.739175,
-    "lng": 72.313218,
-    "radius": 76873,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1269,
-    "name": "Annaba  Algeria",
-    "lat": 36.824058,
-    "lng": 7.821569,
-    "radius": 87201,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1285,
-    "name": "Antofagasta  Chile",
-    "lat": -23.448436,
-    "lng": -70.440731,
-    "radius": 147052,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1340,
-    "name": "Antsiranana  Madagascar",
-    "lat": -12.560302,
-    "lng": 49.360085,
-    "radius": 98854,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 942,
-    "name": "Aracaju  Brazil",
-    "lat": -10.986988,
-    "lng": -37.07262,
-    "radius": 256018,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1680,
-    "name": "Atyrau  Kazakhstan",
-    "lat": 47.122449,
-    "lng": 51.830449,
-    "radius": 98265,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1491,
-    "name": "Bacau  Romania",
-    "lat": 46.53105,
-    "lng": 26.910705,
-    "radius": 61779,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1033,
-    "name": "Banda Aceh Indonesia",
-    "lat": 5.518381,
-    "lng": 95.417085,
-    "radius": 70000,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1013,
-    "name": "Bandung-KJT Indonesia",
-    "lat": -6.65163,
-    "lng": 108.158524,
-    "radius": 76000,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1508,
-    "name": "Banja Luka Bosnia and Herzegovina",
-    "lat": 44.933629,
-    "lng": 17.30379,
-    "radius": 50000,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1014,
-    "name": "Banjarmasin Indonesia",
-    "lat": -3.436853,
-    "lng": 114.760618,
-    "radius": 76247,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 857,
-    "name": "Barahona  Dominican Republic",
-    "lat": 18.24912,
-    "lng": -71.123381,
-    "radius": 59292,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 937,
-    "name": "Batumi  Georgia",
-    "lat": 41.606789,
-    "lng": 41.610851,
-    "radius": 82234,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1271,
-    "name": "Bejaia  Algeria",
-    "lat": 36.715378,
-    "lng": 5.071289,
-    "radius": 68872,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 943,
-    "name": "Belem  Brazil",
-    "lat": -1.513856,
-    "lng": -48.197372,
-    "radius": 66200,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1198,
-    "name": "Belize City  Belize",
-    "lat": 17.508567,
-    "lng": -88.619506,
-    "radius": 51312,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1017,
-    "name": "Biak Indonesia",
-    "lat": -1.189494,
-    "lng": 136.108492,
-    "radius": 78000,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 2310,
-    "name": "Bloomington  IL  USD",
-    "lat": 40.480185,
-    "lng": -88.918934,
-    "radius": 32186,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1280,
-    "name": "Bluefields Nicaragua",
-    "lat": 11.991944,
-    "lng": -83.7725,
-    "radius": 73029,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 945,
-    "name": "Boa Vista  Brazil",
-    "lat": 2.841198,
-    "lng": -60.692197,
-    "radius": 77178,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1352,
-    "name": "Bobo-Dioulasso  Burkina Faso",
-    "lat": 11.156043,
-    "lng": -4.333395,
-    "radius": 83597,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1846,
-    "name": "Bom Jesus Da Lapa  Brazil",
-    "lat": -13.261065,
-    "lng": -43.411525,
-    "radius": 121720,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 856,
-    "name": "Bonaire  Caribbean Netherlands",
-    "lat": 12.133385,
-    "lng": -68.276878,
-    "radius": 26087,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 896,
-    "name": "Brac  Croatia",
-    "lat": 43.281407,
-    "lng": 16.661457,
-    "radius": 22388,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1255,
-    "name": "Brades  Montserrat",
-    "lat": 16.79143,
-    "lng": -62.193331,
-    "radius": 13996,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1842,
-    "name": "Buenaventura  Colombia",
-    "lat": 3.820876,
-    "lng": -76.993193,
-    "radius": 103387,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1750,
-    "name": "Cabo Frio  Brazil",
-    "lat": -22.925909,
-    "lng": -42.07926,
-    "radius": 74710,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1828,
-    "name": "Calama Chile",
-    "lat": -22.49511,
-    "lng": -68.907904,
-    "radius": 200000,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1845,
-    "name": "Calapan  Philippines",
-    "lat": 13.534693,
-    "lng": 121.145345,
-    "radius": 44648,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1259,
-    "name": "Canouan  Saint Vincent and the Grenadines",
-    "lat": 12.711224,
-    "lng": -61.332887,
-    "radius": 4365,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1293,
-    "name": "Cayenne  French Guiana",
-    "lat": 4.822225,
-    "lng": -52.363898,
-    "radius": 78639,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 855,
-    "name": "Cayman Brac  Cayman Islands",
-    "lat": 19.702873,
-    "lng": -79.74484,
-    "radius": 19342,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1754,
-    "name": "Chetumal  Mexico",
-    "lat": 18.506395,
-    "lng": -88.324296,
-    "radius": 83633,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1470,
-    "name": "Chios Island  Greece",
-    "lat": 38.386309,
-    "lng": 25.936543,
-    "radius": 27821,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1273,
-    "name": "Chlef  Algeria",
-    "lat": 36.217444,
-    "lng": 1.324707,
-    "radius": 103281,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1316,
-    "name": "Christmas Island",
-    "lat": -10.47978,
-    "lng": 105.633462,
-    "radius": 12567,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 849,
-    "name": "Chub Cay  Bahamas",
-    "lat": 25.431719,
-    "lng": -77.883649,
-    "radius": 6299,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 974,
-    "name": "Cochabamba  Bolivia",
-    "lat": -17.417048,
-    "lng": -66.178708,
-    "radius": 65462,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1317,
-    "name": "Cocos (Keeling) Islands",
-    "lat": -12.187951,
-    "lng": 96.829345,
-    "radius": 6367,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 466,
-    "name": "Colon Panama",
-    "lat": 9.340505,
-    "lng": -82.244294,
-    "radius": 50000,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1286,
-    "name": "Concepcion  Chile",
-    "lat": -36.856405,
-    "lng": -72.395317,
-    "radius": 91368,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1493,
-    "name": "Constanta  Romania",
-    "lat": 44.350128,
-    "lng": 28.481816,
-    "radius": 66835,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1274,
-    "name": "Constantine  Algeria",
-    "lat": 36.283471,
-    "lng": 6.622142,
-    "radius": 78836,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
+    "service_area_pricing_id": 217896,
+    "note": "airport has aleady exist"
   },
   {
     "id": 1281,
@@ -21830,241 +17370,86 @@ let noPricingJsonFleets = [
     "lng": -83.059543,
     "radius": 3768,
     "bidding": null,
+    "inserted_at": "2020-12-04 00:00:26",
+    "last_updated_at": "2023-05-19 08:35:09",
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": null
+    "service_area_pricing_id": null,
+    "note": "airport has aleady exist"
   },
   {
-    "id": 1789,
-    "name": "Corozal  Colombia",
-    "lat": 9.33252,
-    "lng": -75.283589,
-    "radius": 65990,
+    "id": 276,
+    "name": "Paris,France",
+    "lat": 48.850908,
+    "lng": 2.397494,
+    "radius": 100000,
     "bidding": null,
+    "inserted_at": "2020-06-08 20:49:25",
+    "last_updated_at": "2024-11-04 04:47:23",
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": null
+    "service_area_pricing_id": 565584,
+    "note": "airport has aleady exist"
   },
   {
-    "id": 1494,
-    "name": "Craiova Romania",
-    "lat": 44.312765,
-    "lng": 23.878591,
-    "radius": 76253,
+    "id": 276,
+    "name": "Paris,France",
+    "lat": 48.850908,
+    "lng": 2.397494,
+    "radius": 100000,
     "bidding": null,
+    "inserted_at": "2020-06-08 20:49:25",
+    "last_updated_at": "2024-11-04 04:47:23",
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": null
+    "service_area_pricing_id": 565584,
+    "note": "airport has aleady exist"
   },
   {
-    "id": 600,
-    "name": "Culebra Puerto Rico",
-    "lat": 18.312465,
-    "lng": -65.30389,
-    "radius": 14878,
+    "id": 70,
+    "name": "Tampa,USA",
+    "lat": 27.785242,
+    "lng": -82.566552,
+    "radius": 80467,
     "bidding": null,
+    "inserted_at": "2020-02-23 02:51:17",
+    "last_updated_at": "2024-11-06 23:23:46",
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": null
+    "service_area_pricing_id": 655204,
+    "note": "airport has aleady exist"
   },
   {
-    "id": 1111,
-    "name": "David  Panama",
-    "lat": 8.391653,
-    "lng": -82.431478,
-    "radius": 63000,
+    "id": 70,
+    "name": "Tampa,USA",
+    "lat": 27.785242,
+    "lng": -82.566552,
+    "radius": 80467,
     "bidding": null,
+    "inserted_at": "2020-02-23 02:51:17",
+    "last_updated_at": "2024-11-06 23:23:46",
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": null
+    "service_area_pricing_id": 655204,
+    "note": "airport has aleady exist"
   },
   {
-    "id": 1032,
-    "name": "Dili East Timor",
-    "lat": -8.954027,
-    "lng": 125.62105,
-    "radius": 65708,
+    "id": 26047,
+    "name": "Tenerife South Spain",
+    "lat": 28.046758,
+    "lng": -16.57253,
+    "radius": 150000,
     "bidding": null,
+    "inserted_at": "2023-07-06 18:30:40",
+    "last_updated_at": "2024-10-07 10:16:53",
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1822,
-    "name": "Ditiki Achaia  Greece",
-    "lat": 38.135961,
-    "lng": 21.604261,
-    "radius": 62743,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 22413,
-    "name": "elife-fallback-service-area",
-    "lat": 0,
-    "lng": 0,
-    "radius": 1,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1860,
-    "name": "Estherville  IA  USA",
-    "lat": 43.405892,
-    "lng": -94.747158,
-    "radius": 108010,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1697,
-    "name": "Fergana  Uzbekistan",
-    "lat": 40.375993,
-    "lng": 71.751969,
-    "radius": 79581,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1768,
-    "name": "Fernando de Noronha  Brazil",
-    "lat": -3.854614,
-    "lng": -32.424385,
-    "radius": 11487,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1843,
-    "name": "Florencia Colombia",
-    "lat": 1.589243,
-    "lng": -75.560644,
-    "radius": 106542,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1200,
-    "name": "Flores  Guatemala",
-    "lat": 16.91466,
-    "lng": -89.877218,
-    "radius": 72232,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 953,
-    "name": "Foz do Iguacu  Brazil",
-    "lat": -25.597709,
-    "lng": -54.488513,
-    "radius": 73438,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1502,
-    "name": "Ganja  Azerbaijan",
-    "lat": 40.739488,
-    "lng": 46.299759,
-    "radius": 60425,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 954,
-    "name": "Goiania  Brazil",
-    "lat": -16.632303,
-    "lng": -49.216345,
-    "radius": 89842,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 484,
-    "name": "Grenada ",
-    "lat": 12.007111,
-    "lng": -61.78604,
-    "radius": 36542,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1289,
-    "name": "Guayaquil  Ecuador",
-    "lat": -2.08218,
-    "lng": -79.875958,
-    "radius": 67415,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1156,
-    "name": "Guernsey  Guernsey ",
-    "lat": 49.465775,
-    "lng": -2.624895,
-    "radius": 10730,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1500,
-    "name": "Gyumri  Armenia",
-    "lat": 40.75111,
-    "lng": 43.85427,
-    "radius": 58338,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1358,
-    "name": "Hanimaadhoo  Maldives",
-    "lat": 6.746492,
-    "lng": 73.169173,
-    "radius": 3924,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1275,
-    "name": "Hassi Messaoud  Algeria",
-    "lat": 31.673889,
-    "lng": 6.140556,
-    "radius": 95000,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
+    "service_area_pricing_id": 245312,
+    "note": "airport has aleady exist"
+  }
+]
+
+let errorLista = [
   {
     "id": 18014,
     "name": "Hatay",
@@ -22072,1263 +17457,12 @@ let noPricingJsonFleets = [
     "lng": 36.284129,
     "radius": 200000,
     "bidding": null,
+    "inserted_at": "2023-02-01 09:44:26",
+    "last_updated_at": "2023-02-01 09:44:26",
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1180,
-    "name": "Huesca Spain",
-    "lat": 42.082429,
-    "lng": -0.322664,
-    "radius": 150000,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1777,
-    "name": "Ibague Colombia",
-    "lat": 4.425284,
-    "lng": -75.140216,
-    "radius": 133220,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1778,
-    "name": "Ipiales  Colombia",
-    "lat": 0.949208,
-    "lng": -77.538271,
-    "radius": 61311,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1749,
-    "name": "Iquique  Chile",
-    "lat": -20.536408,
-    "lng": -70.180518,
-    "radius": 113276,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1276,
-    "name": "Jijel  Algeria",
-    "lat": 36.793393,
-    "lng": 5.877775,
-    "radius": 87950,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1681,
-    "name": "Karaganda  Kazakhstan",
-    "lat": 49.670833,
-    "lng": 73.334444,
-    "radius": 117077,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1849,
-    "name": "Kiel Germany",
-    "lat": 54.383987,
-    "lng": 10.144137,
-    "radius": 60683,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1320,
-    "name": "Kiritimati Kiribati",
-    "lat": 1.881895,
-    "lng": -157.344525,
-    "radius": 31054,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1682,
-    "name": "Kokshetau  Kazakhstan",
-    "lat": 53.333461,
-    "lng": 69.591018,
-    "radius": 90349,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1461,
-    "name": "Kosice  Slovakia",
-    "lat": 48.672906,
-    "lng": 21.237443,
-    "radius": 55451,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1851,
-    "name": "Kozani  Greece",
-    "lat": 40.289302,
-    "lng": 21.840673,
-    "radius": 73555,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1542,
-    "name": "Kraljevo  Serbia",
-    "lat": 43.827486,
-    "lng": 20.581207,
-    "radius": 79336,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1019,
-    "name": "Kupang Indonesia",
-    "lat": -10.014764,
-    "lng": 123.722827,
-    "radius": 57526,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1736,
-    "name": "Kyzylorda  Kazakhstan",
-    "lat": 44.711773,
-    "lng": 65.587838,
-    "radius": 119528,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1655,
-    "name": "Lankaran  Azerbaijan",
-    "lat": 38.742131,
-    "lng": 48.823759,
-    "radius": 60493,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1206,
-    "name": "Lleida  Spain",
-    "lat": 41.72847,
-    "lng": 0.543491,
-    "radius": 90388,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1399,
-    "name": "Lome  Togo",
-    "lat": 6.536327,
-    "lng": 1.29701,
-    "radius": 63957,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 897,
-    "name": "Losinj  Croatia",
-    "lat": 44.840688,
-    "lng": 14.280088,
-    "radius": 46530,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1290,
-    "name": "Machala  Ecuador",
-    "lat": -3.402961,
-    "lng": -79.575846,
-    "radius": 73195,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1341,
-    "name": "Mahajanga  Madagascar",
-    "lat": -15.666389,
-    "lng": 46.350833,
-    "radius": 111822,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1779,
-    "name": "Maicao  Colombia",
-    "lat": 11.231178,
-    "lng": -72.493172,
-    "radius": 76690,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 912,
-    "name": "Malatya Turkey",
-    "lat": 38.439497,
-    "lng": 38.104663,
-    "radius": 150000,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1201,
-    "name": "Managua  Nicaragua",
-    "lat": 12.144652,
-    "lng": -86.171317,
-    "radius": 69130,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1780,
-    "name": "Manizales Colombia",
-    "lat": 5.029111,
-    "lng": -75.469197,
-    "radius": 117006,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1291,
-    "name": "Manta  Ecuador",
-    "lat": -0.952906,
-    "lng": -80.684155,
-    "radius": 124287,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1488,
-    "name": "Maribor  Slovenia",
-    "lat": 46.478944,
-    "lng": 15.68382,
-    "radius": 71686,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 853,
-    "name": "Marsh Harbour  Bahamas",
-    "lat": 26.616755,
-    "lng": -77.214944,
-    "radius": 103271,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 984,
-    "name": "Mersa Matruh Egypt",
-    "lat": 31.338079,
-    "lng": 27.216972,
-    "radius": 139049,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1781,
-    "name": "Mitu  Colombia",
-    "lat": 1.253324,
-    "lng": -70.233826,
-    "radius": 66812,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1770,
-    "name": "Monteria  Colombia",
-    "lat": 8.825197,
-    "lng": -75.824013,
-    "radius": 83838,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1511,
-    "name": "Mostar  Bosnia and Herzegovina",
-    "lat": 43.290073,
-    "lng": 17.836167,
-    "radius": 56899,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1304,
-    "name": "Mount Pleasant  Falkland Islands",
-    "lat": -51.889285,
-    "lng": -58.494301,
-    "radius": 87808,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 2149,
-    "name": "Multan  Pakistan",
-    "lat": 30.196025,
-    "lng": 71.42396,
-    "radius": 109194,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 172,
-    "name": "Murmansk",
-    "lat": 68.784709,
-    "lng": 32.759041,
-    "radius": 130000,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1503,
-    "name": "Nakhchivan  Azerbaijan",
-    "lat": 39.189615,
-    "lng": 45.457937,
-    "radius": 56161,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1698,
-    "name": "Namangan  Uzbekistan",
-    "lat": 40.983478,
-    "lng": 71.574717,
-    "radius": 66156,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1699,
-    "name": "Navoi  Uzbekistan",
-    "lat": 40.119007,
-    "lng": 65.169958,
-    "radius": 144295,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1782,
-    "name": "Neiva  Colombia",
-    "lat": 2.94705,
-    "lng": -75.292823,
-    "radius": 71374,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1651,
-    "name": "Newquay UK",
-    "lat": 50.440132,
-    "lng": -5.010163,
-    "radius": 160934,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1541,
-    "name": "Nis  Serbia",
-    "lat": 43.337628,
-    "lng": 21.866318,
-    "radius": 59562,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1700,
-    "name": "Nukus  Uzbekistan",
-    "lat": 42.481812,
-    "lng": 59.617585,
-    "radius": 72097,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1496,
-    "name": "Oradea  Romania",
-    "lat": 47.025664,
-    "lng": 21.90269,
-    "radius": 75844,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1685,
-    "name": "Oral Kazakhstan",
-    "lat": 51.153313,
-    "lng": 51.538415,
-    "radius": 81067,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1746,
-    "name": "Oranjestad  Sint Eustatius  Caribbean Netherlands",
-    "lat": 17.496493,
-    "lng": -62.979397,
-    "radius": 5603,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 898,
-    "name": "Osijek  Croatia",
-    "lat": 45.466321,
-    "lng": 18.807286,
-    "radius": 76589,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1686,
-    "name": "Oskemen  Kazakhstan",
-    "lat": 50.026128,
-    "lng": 82.506095,
-    "radius": 112657,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1328,
-    "name": "Ouagadougou  Burkina Faso",
-    "lat": 12.354993,
-    "lng": -1.513994,
-    "radius": 190075,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1272,
-    "name": "Oumache  Algeria",
-    "lat": 34.792095,
-    "lng": 5.73372,
-    "radius": 57030,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1452,
-    "name": "Pardubice  Czechia",
-    "lat": 50.017548,
-    "lng": 15.724856,
-    "radius": 102453,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1348,
-    "name": "Paro Bhutan",
-    "lat": 27.388121,
-    "lng": 89.753366,
-    "radius": 106741,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1783,
-    "name": "Pasto  Colombia",
-    "lat": 1.397232,
-    "lng": -77.290521,
-    "radius": 73536,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1687,
-    "name": "Pavlodar  Kazakhstan",
-    "lat": 52.198382,
-    "lng": 77.069711,
-    "radius": 112215,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1460,
-    "name": "Pecs  Hungary",
-    "lat": 45.993682,
-    "lng": 18.234215,
-    "radius": 64656,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1024,
-    "name": "Pekanbaru Indonesia",
-    "lat": 0.464462,
-    "lng": 101.448156,
-    "radius": 99000,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 959,
-    "name": "Petrolina  Brazil",
-    "lat": -9.366573,
-    "lng": -40.565859,
-    "radius": 107619,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1688,
-    "name": "Petropavl  Kazakhstan",
-    "lat": 54.777254,
-    "lng": 69.185907,
-    "radius": 74864,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1462,
-    "name": "Piestany  Slovakia",
-    "lat": 48.611243,
-    "lng": 17.83234,
-    "radius": 72640,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 718,
-    "name": "Pig Beach  The Bahamas",
-    "lat": 23.563622,
-    "lng": -75.873825,
-    "radius": 50000,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1025,
-    "name": "Pontianak Indonesia",
-    "lat": -0.146734,
-    "lng": 109.404345,
-    "radius": 72320,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1784,
-    "name": "Popayan  Colombia",
-    "lat": 2.45257,
-    "lng": -76.609592,
-    "radius": 134920,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1464,
-    "name": "Poprad  Slovakia",
-    "lat": 49.068316,
-    "lng": 20.247673,
-    "radius": 76241,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1253,
-    "name": "Port-au-Prince Haiti",
-    "lat": 18.575924,
-    "lng": -72.294638,
-    "radius": 53000,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 961,
-    "name": "Porto Velho  Brazil",
-    "lat": -8.71417,
-    "lng": -63.89832,
-    "radius": 85057,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1489,
-    "name": "Portoroz  Slovenia",
-    "lat": 45.474404,
-    "lng": 13.616712,
-    "radius": 63293,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1672,
-    "name": "Pristina  Kosovo",
-    "lat": 42.574564,
-    "lng": 21.029508,
-    "radius": 52927,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1785,
-    "name": "Providence Island  Colombia",
-    "lat": 13.35884,
-    "lng": -81.359158,
-    "radius": 8056,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1282,
-    "name": "Puerto Cabezas  Nicaragua",
-    "lat": 14.041994,
-    "lng": -83.380538,
-    "radius": 66314,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 654,
-    "name": "Punta Arenas Chile",
-    "lat": -53.123921,
-    "lng": -71.809857,
-    "radius": 95553,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1504,
-    "name": "Qabala  Azerbaijan",
-    "lat": 40.826667,
-    "lng": 47.7125,
-    "radius": 61799,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1786,
-    "name": "Quibdo  Colombia",
-    "lat": 5.690999,
-    "lng": -76.644184,
-    "radius": 79816,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 893,
-    "name": "Resistencia Argentina",
-    "lat": -27.444926,
-    "lng": -59.048739,
-    "radius": 200000,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 963,
-    "name": "Rio Branco  Brazil",
-    "lat": -9.866221,
-    "lng": -67.897199,
-    "radius": 62049,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 894,
-    "name": "Rio Gallegos Argentina",
-    "lat": -51.611403,
-    "lng": -69.303833,
-    "radius": 65569,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1205,
-    "name": "Rio Negro Argentina",
-    "lat": -40.863078,
-    "lng": -63.005511,
-    "radius": 200000,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 889,
-    "name": "Riohacha  Colombia",
-    "lat": 11.528599,
-    "lng": -72.919172,
-    "radius": 94038,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1300,
-    "name": "Rivera  Uruguay",
-    "lat": -30.974445,
-    "lng": -55.476665,
-    "radius": 103216,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1747,
-    "name": "Saba  Caribbean Netherlands",
-    "lat": 17.64461,
-    "lng": -63.220728,
-    "radius": 8189,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1798,
-    "name": "Saint-Pierre  Saint Pierre and Miquelon",
-    "lat": 46.890962,
-    "lng": -56.387167,
-    "radius": 29036,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1701,
-    "name": "Samarkand  Uzbekistan",
-    "lat": 39.755602,
-    "lng": 66.743905,
-    "radius": 90214,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 878,
-    "name": "Santa Cruz de Tenerife Spain",
-    "lat": 28.265635,
-    "lng": -16.457975,
-    "radius": 50000,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 653,
-    "name": "Santiago Dominican Republic",
-    "lat": 19.402133,
-    "lng": -70.601907,
-    "radius": 137092,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1737,
-    "name": "Semey  Kazakhstan",
-    "lat": 50.353313,
-    "lng": 80.233354,
-    "radius": 100525,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1309,
-    "name": "Setif  Algeria",
-    "lat": 36.175511,
-    "lng": 5.330304,
-    "radius": 99854,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1265,
-    "name": "Sfax  Tunisia",
-    "lat": 35.202252,
-    "lng": 10.133801,
-    "radius": 97174,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1689,
-    "name": "Shymkent  Kazakhstan",
-    "lat": 42.366172,
-    "lng": 69.493104,
-    "radius": 120254,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1027,
-    "name": "Siborong-Borong Indonesia",
-    "lat": 2.262275,
-    "lng": 98.987803,
-    "radius": 60000,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 683,
-    "name": "Sint Maarten",
-    "lat": 18.04187,
-    "lng": -63.113082,
-    "radius": 54371,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1483,
-    "name": "Skyros Island  Greece",
-    "lat": 38.869457,
-    "lng": 24.570192,
-    "radius": 16120,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1465,
-    "name": "Sliac  Slovakia",
-    "lat": 48.638056,
-    "lng": 19.134167,
-    "radius": 78488,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1118,
-    "name": "Sokhumi  Georgia",
-    "lat": 42.901181,
-    "lng": 41.097378,
-    "radius": 65239,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 852,
-    "name": "South Eleuthera  Bahamas",
-    "lat": 25.154983,
-    "lng": -76.460553,
-    "radius": 77605,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1306,
-    "name": "St. Jean  Saint Barthelemy",
-    "lat": 17.904187,
-    "lng": -62.84162,
-    "radius": 6250,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1266,
-    "name": "Tabarka  Tunisia",
-    "lat": 36.978253,
-    "lng": 8.961823,
-    "radius": 65144,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1278,
-    "name": "Tamanrasset  Algeria",
-    "lat": 22.811111,
-    "lng": 5.450833,
-    "radius": 304774,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1047,
-    "name": "Tarakan Indonesia",
-    "lat": 3.356795,
-    "lng": 117.636746,
-    "radius": 14774,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1321,
-    "name": "Tarawa  Kiribati",
-    "lat": 1.407653,
-    "lng": 173.033013,
-    "radius": 31049,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1690,
-    "name": "Taraz  Kazakhstan",
-    "lat": 42.866358,
-    "lng": 71.293378,
-    "radius": 91009,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1821,
-    "name": "Temuco  Chile",
-    "lat": -38.927165,
-    "lng": -72.646853,
-    "radius": 90197,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1171,
-    "name": "Terceira Island  Portugal",
-    "lat": 38.753758,
-    "lng": -27.12019,
-    "radius": 26872,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1108,
-    "name": "Teresina  Brazil",
-    "lat": -5.060252,
-    "lng": -42.823646,
-    "radius": 102644,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1702,
-    "name": "Termez  Uzbekistan",
-    "lat": 37.280903,
-    "lng": 67.318927,
-    "radius": 56812,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1279,
-    "name": "Tlemcen  Algeria",
-    "lat": 35.012304,
-    "lng": -1.447937,
-    "radius": 136142,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1343,
-    "name": "Toamasina  Madagascar",
-    "lat": -18.110186,
-    "lng": 49.392609,
-    "radius": 103257,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1344,
-    "name": "Tolanaro  Madagascar",
-    "lat": -25.03649,
-    "lng": 46.954418,
-    "radius": 119255,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1787,
-    "name": "Tolu  Colombia",
-    "lat": 9.51246,
-    "lng": -75.58658,
-    "radius": 93121,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1267,
-    "name": "Tozeur  Tunisia",
-    "lat": 33.935338,
-    "lng": 8.111465,
-    "radius": 51522,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1292,
-    "name": "Tulcan  Ecuador",
-    "lat": 0.115181,
-    "lng": -78.101655,
-    "radius": 86380,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1345,
-    "name": "Tulear  Madagascar",
-    "lat": -23.387862,
-    "lng": 43.723193,
-    "radius": 131662,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1788,
-    "name": "Tumaco  Colombia",
-    "lat": 1.812363,
-    "lng": -78.751523,
-    "radius": 83921,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1741,
-    "name": "Turkmenabat  Turkmenistan",
-    "lat": 38.936835,
-    "lng": 63.567634,
-    "radius": 59751,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1510,
-    "name": "Tuzla  Bosnia and Herzegovina",
-    "lat": 44.464043,
-    "lng": 18.710289,
-    "radius": 56983,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 968,
-    "name": "Uberlandia  Brazil",
-    "lat": -18.889337,
-    "lng": -48.230954,
-    "radius": 73143,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1703,
-    "name": "Urgench  Uzbekistan",
-    "lat": 41.583884,
-    "lng": 60.642432,
-    "radius": 61892,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1796,
-    "name": "Uruapan  Mexico",
-    "lat": 19.397231,
-    "lng": -102.039299,
-    "radius": 109986,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
+    "service_area_pricing_id": null,
+    "note": "no pricing json"
   },
   {
     "id": 18512,
@@ -23337,85 +17471,42 @@ let noPricingJsonFleets = [
     "lng": -68.58138,
     "radius": 41865,
     "bidding": null,
+    "inserted_at": "2023-02-14 21:05:41",
+    "last_updated_at": "2023-02-14 21:05:41",
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": null
+    "service_area_pricing_id": null,
+    "note": "no pricing json"
+  }
+]
+
+let list = [
+  {
+    "id": 1707,
+    "name": "Aurangabad, India",
+    "lat": 19.867355,
+    "lng": 75.395796,
+    "radius": 250000,
+    "bidding": null,
+    "inserted_at": "2020-12-17 17:55:42",
+    "last_updated_at": "2024-02-17 14:57:48",
+    "parent_fleet_id": 15,
+    "unverified": null,
+    "service_area_pricing_id": 124600,
+    "note": "airport has aleady exist"
   },
   {
-    "id": 599,
-    "name": "Vieques Puerto Rico",
-    "lat": 18.055646,
-    "lng": -65.407558,
-    "radius": 25000,
+    "id": 26047,
+    "name": "Tenerife South Spain",
+    "lat": 28.046758,
+    "lng": -16.57253,
+    "radius": 150000,
     "bidding": null,
+    "inserted_at": "2023-07-06 18:30:40",
+    "last_updated_at": "2024-10-07 10:16:53",
     "parent_fleet_id": 15,
     "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1791,
-    "name": "Villavicencio  Colombia",
-    "lat": 4.168983,
-    "lng": -73.612168,
-    "radius": 100620,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1649,
-    "name": "Visby  Sweden",
-    "lat": 57.462167,
-    "lng": 18.693941,
-    "radius": 79767,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1792,
-    "name": "Yopal  Colombia",
-    "lat": 5.320657,
-    "lng": -72.386216,
-    "radius": 102362,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1797,
-    "name": "Zacatecas  Mexico",
-    "lat": 22.900251,
-    "lng": -102.680396,
-    "radius": 130270,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 1466,
-    "name": "Zilina  Slovakia",
-    "lat": 49.233659,
-    "lng": 18.614183,
-    "radius": 114683,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
-  },
-  {
-    "id": 916,
-    "name": "Zonguldak Turkey",
-    "lat": 41.506545,
-    "lng": 32.090593,
-    "radius": 200000,
-    "bidding": null,
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null
+    "service_area_pricing_id": 245312,
+    "note": "airport has aleady exist"
   }
 ]

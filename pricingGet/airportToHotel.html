@@ -116,15 +116,11 @@
           }
         };
         fileReader.readAsBinaryString(files[0]);
-
-
       },
 
 
 
       async exportCsv() {
-
-
         let loading = this.$loading({
           lock: true,
           text: `Loading-${this.percent}%`,
@@ -138,8 +134,6 @@
         for (let addr of this.addrList) {
 
           let { from, to } = addr
-          // let fromDetail = this.addrCache[`${from}`]
-          // if (!fromDetail) {
           let fromList = await this.getAddrList(from.addr)
           if (!fromList.length) {
             addr['pricing'] = []
@@ -215,7 +209,6 @@
 
         loading.close()
         this.exportCSV(title, jsonData)
-
       },
 
 

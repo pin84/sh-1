@@ -1,122 +1,528 @@
 {
-    "currencyCode": "CNY",
     "serviceArea": {
-        "name": "nanning",
-        "lat": 22.6096443,
-        "lng": 108.1716582,
-        "radius": 150000,
-        "parent_fleet_id": 40,
-        "id": 61353,
-        "pid": "40.1.1",
-        "parent_fleet_name": "Elife"
+        "id": 75456,
+        "parent_fleet_id": 75362,
+        "name": "A Coruna,Spain",
+        "lat": 43.301164,
+        "lng": -8.379209,
+        "radius": 130000,
+        "parent_fleet_name": "jayrideSupply",
+        "pid": "15.1.1"
     },
-    "airports": [
-        "NNG"
-    ],
-    "countryCode": "CHN",
     "pricing": {
         "ranges": [
             {
                 "seq": 0,
-                "amount": 1.22,
-                "currency": "CNY",
-                "distance": 1000,
-                "from": 1000,
-                "to": 2000,
+                "amount": 2.59,
+                "currency": "USD",
+                "distance": 20000,
+                "from": 10000,
+                "to": 30000,
+                "distanceIn": 24,
+                "per_unit": 1,
+                "pid": "15.2.1"
+            },
+            {
+                "seq": 1,
+                "amount": 2.47,
+                "currency": "USD",
+                "distance": 20000,
+                "from": 30000,
+                "to": 50000,
+                "distanceIn": 20,
+                "per_unit": 1,
+                "pid": "15.2.2"
+            },
+            {
+                "seq": 2,
+                "amount": 2.3,
+                "currency": "USD",
+                "distance": 50000,
+                "from": 50000,
+                "to": 100000,
+                "distanceIn": 450,
+                "per_unit": 1,
+                "pid": "15.2.3"
+            },
+            {
+                "seq": 3,
+                "amount": 2,
+                "currency": "USD",
+                "distance": 100000,
+                "from": 100000,
+                "to": 200000,
                 "distanceIn": 0,
                 "per_unit": 1,
-                "pid": "40.2.1"
+                "pid": "15.2.4"
+            },
+            {
+                "seq": 4,
+                "amount": 2,
+                "currency": "USD",
+                "distance": 300000,
+                "from": 200000,
+                "to": 500000,
+                "distanceIn": 0,
+                "per_unit": 1,
+                "pid": "15.2.5"
             }
         ],
-        "currency": "CNY",
-        "meet_n_greet": 0,
-        "min_amount": 1.22,
-        "min_distance": 1000
+        "min_amount": 52.97,
+        "currency": "USD",
+        "min_distance": 10000,
+        "meet_n_greet": 0
     },
+    "zones": [
+        {
+            "name": "A Coruna",
+            "lat": 43.3623436,
+            "lng": -8.4115401,
+            "radius": 4860,
+            "prices": [
+                {
+                    "airport": "LCG",
+                    "amount": 50.61,
+                    "currency": "USD",
+                    "p_amt": 50.61,
+                    "d_amt": 50.61
+                }
+            ],
+            "pid": "15.4.1"
+        }
+    ],
+    "airports": [
+        "LCG"
+    ],
     "vehicleClasses": [
         {
             "vehicle_class_id": 1,
             "delta_amount": 0,
             "percent": 0,
             "hourly_percent": 0,
-            "hourly_delta": 0,
             "percent_appendix": [
                 {
-                    "field": "zones.0.prices.0.d_amt",
-                    "delta_amount": 35.06
+                    "field": "zones.0.prices.0",
+                    "delta_amount": -9.61
+                },
+                {
+                    "field": "hourly_pricing.min_amount",
+                    "delta_amount": -18.96
+                },
+                {
+                    "field": "pricing.min_amount",
+                    "delta_amount": -2.36
+                },
+                {
+                    "field": "pricing.ranges.0",
+                    "delta_amount": -0.19
+                },
+                {
+                    "field": "pricing.ranges.1",
+                    "delta_amount": 0.03
+                },
+                {
+                    "field": "pricing.ranges.2",
+                    "delta_amount": 0.2
+                },
+                {
+                    "field": "pricing.ranges.3",
+                    "delta_amount": 0
+                },
+                {
+                    "field": "pricing.ranges.4",
+                    "delta_amount": -0.9
+                }
+            ],
+            "notice_time": [
+                {
+                    "time": 1200,
+                    "percent": 10,
+                    "allowance": 360
+                }
+            ]
+        },
+        {
+            "vehicle_class_id": 2,
+            "delta_amount": 0,
+            "percent": 50,
+            "percent_appendix": [
+                {
+                    "field": "pricing.min_amount",
+                    "delta_amount": 22.94
+                },
+                {
+                    "field": "zones.0.prices.0",
+                    "delta_amount": 13
+                },
+                {
+                    "field": "hourly_pricing.min_amount",
+                    "delta_amount": 181.04
+                }
+            ],
+            "hourly_percent": 50,
+            "notice_time": [
+                {
+                    "time": 720,
+                    "percent": 50,
+                    "allowance": 480
+                }
+            ]
+        },
+        {
+            "vehicle_class_id": 6,
+            "delta_amount": 0,
+            "percent": 29,
+            "percent_appendix": [
+                {
+                    "field": "pricing.min_amount",
+                    "delta_amount": 12.32
+                },
+                {
+                    "field": "zones.0.prices.0",
+                    "delta_amount": 2.39
+                },
+                {
+                    "field": "hourly_pricing.min_amount",
+                    "delta_amount": 31.04
+                },
+                {
+                    "field": "pricing.ranges.0",
+                    "delta_amount": 0.01
+                },
+                {
+                    "field": "pricing.ranges.1",
+                    "delta_amount": 0.03
+                },
+                {
+                    "field": "pricing.ranges.2",
+                    "delta_amount": 0.2
+                },
+                {
+                    "field": "pricing.ranges.3",
+                    "delta_amount": 0
+                },
+                {
+                    "field": "pricing.ranges.4",
+                    "delta_amount": -0.5
+                }
+            ],
+            "hourly_percent": 29,
+            "notice_time": [
+                {
+                    "time": 1200,
+                    "percent": 10,
+                    "allowance": 360
+                }
+            ]
+        },
+        {
+            "vehicle_class_id": 3,
+            "delta_amount": 0,
+            "percent": 30,
+            "percent_appendix": [
+                {
+                    "field": "pricing.min_amount",
+                    "delta_amount": 17.03
+                },
+                {
+                    "field": "zones.0.prices.0",
+                    "delta_amount": 6.39
+                },
+                {
+                    "field": "hourly_pricing.min_amount",
+                    "delta_amount": 61.04
+                },
+                {
+                    "field": "pricing.ranges.0",
+                    "delta_amount": -0.09
+                },
+                {
+                    "field": "pricing.ranges.1",
+                    "delta_amount": 0.03
+                },
+                {
+                    "field": "pricing.ranges.2",
+                    "delta_amount": 0.2
+                },
+                {
+                    "field": "pricing.ranges.3",
+                    "delta_amount": 0
+                },
+                {
+                    "field": "pricing.ranges.4",
+                    "delta_amount": -0.5
                 },
                 {
                     "field": "zones.0.prices.0.p_amt",
-                    "delta_amount": 6.21
+                    "delta_amount": 19.39
+                },
+                {
+                    "field": "zones.0.prices.0.d_amt",
+                    "delta_amount": 19.39
+                }
+            ],
+            "hourly_percent": 30,
+            "notice_time": [
+                {
+                    "time": 1200,
+                    "percent": 10,
+                    "allowance": 360
+                }
+            ]
+        },
+        {
+            "vehicle_class_id": 4,
+            "delta_amount": 0,
+            "percent": 80,
+            "percent_appendix": [
+                {
+                    "field": "pricing.min_amount",
+                    "delta_amount": 38.13
+                },
+                {
+                    "field": "zones.0.prices.0",
+                    "delta_amount": 32
+                },
+                {
+                    "field": "hourly_pricing.min_amount",
+                    "delta_amount": 81.04
+                }
+            ],
+            "hourly_percent": 80,
+            "notice_time": [
+                {
+                    "time": 720,
+                    "percent": 50,
+                    "allowance": 480
+                }
+            ]
+        },
+        {
+            "vehicle_class_id": 36,
+            "delta_amount": 0,
+            "percent": 85,
+            "percent_appendix": [
+                {
+                    "field": "pricing.min_amount",
+                    "delta_amount": 40.66
+                },
+                {
+                    "field": "zones.0.prices.0",
+                    "delta_amount": 32
+                }
+            ],
+            "hourly_percent": 85,
+            "notice_time": [
+                {
+                    "time": 720,
+                    "percent": 50,
+                    "allowance": 480
+                }
+            ]
+        },
+        {
+            "vehicle_class_id": 5,
+            "delta_amount": 0,
+            "percent": 100,
+            "percent_appendix": [
+                {
+                    "field": "pricing.min_amount",
+                    "delta_amount": 48.25
+                },
+                {
+                    "field": "zones.0.prices.0",
+                    "delta_amount": 107
+                },
+                {
+                    "field": "pricing.ranges.0",
+                    "delta_amount": -0.09
+                },
+                {
+                    "field": "pricing.ranges.1",
+                    "delta_amount": 0.03
+                },
+                {
+                    "field": "pricing.ranges.2",
+                    "delta_amount": 0.2
+                },
+                {
+                    "field": "pricing.ranges.3",
+                    "delta_amount": 0
+                },
+                {
+                    "field": "pricing.ranges.4",
+                    "delta_amount": 0
+                }
+            ],
+            "hourly_percent": 100,
+            "notice_time": [
+                {
+                    "time": 720,
+                    "percent": 50,
+                    "allowance": 480
+                }
+            ]
+        },
+        {
+            "vehicle_class_id": 9,
+            "delta_amount": 0,
+            "percent": 370,
+            "percent_appendix": [
+                {
+                    "field": "pricing.min_amount",
+                    "delta_amount": 235
+                },
+                {
+                    "field": "zones.0.prices.0",
+                    "delta_amount": 114.39
+                }
+            ],
+            "hourly_percent": 370,
+            "notice_time": [
+                {
+                    "time": 720,
+                    "percent": 50,
+                    "allowance": 480
+                }
+            ]
+        },
+        {
+            "vehicle_class_id": 10,
+            "delta_amount": 0,
+            "percent": 380,
+            "percent_appendix": [
+                {
+                    "field": "pricing.min_amount",
+                    "delta_amount": 245
+                },
+                {
+                    "field": "zones.0.prices.0",
+                    "delta_amount": 159.39
+                },
+                {
+                    "field": "hourly_pricing.min_amount",
+                    "delta_amount": 381.04
+                }
+            ],
+            "hourly_percent": 380,
+            "notice_time": [
+                {
+                    "time": 720,
+                    "percent": 50,
+                    "allowance": 480
+                }
+            ]
+        },
+        {
+            "vehicle_class_id": 11,
+            "delta_amount": 0,
+            "percent": 390,
+            "percent_appendix": [
+                {
+                    "field": "pricing.min_amount",
+                    "delta_amount": 194.03
+                },
+                {
+                    "field": "zones.0.prices.0",
+                    "delta_amount": 196.39
+                },
+                {
+                    "field": "hourly_pricing.min_amount",
+                    "delta_amount": 522.04
+                }
+            ],
+            "hourly_percent": 390,
+            "notice_time": [
+                {
+                    "time": 720,
+                    "percent": 50,
+                    "allowance": 480
                 }
             ]
         }
     ],
-    "notice_time_rules": [
+    "countryCode": "ESP",
+    "currencyCode": "USD",
+    "hint": [
         {
-            "zones": [],
-            "ps": [
-                {
-                    "vc_ids": [],
-                    "notice_time": [
-                        {}
-                    ]
-                }
+            "normal_reserve_value": 20,
+            "vehicles": [
+                1,
+                6,
+                3
             ],
-            "pid": "40.6.1"
+            "notice_time_hint": [
+                {
+                    "advance_time_start": 6,
+                    "advance_time_end": 20,
+                    "notice_time": {
+                        "time": 1200,
+                        "percent": 10,
+                        "allowance": 360
+                    }
+                }
+            ]
+        },
+        {
+            "normal_reserve_value": 12,
+            "vehicles": [
+                5,
+                9,
+                10,
+                11,
+                36,
+                4,
+                2
+            ],
+            "notice_time_hint": [
+                {
+                    "advance_time_start": 8,
+                    "advance_time_end": 12,
+                    "notice_time": {
+                        "time": 720,
+                        "percent": 50,
+                        "allowance": 480
+                    }
+                }
+            ]
         }
     ],
-    "tz": {
-        "dos": 0,
-        "ros": 28800,
-        "tzid": "Asia/Shanghai"
+    "hourly_pricing": {
+        "min_amount": 218.96,
+        "min_duration": 4,
+        "currency": "USD",
+        "ranges": [
+            {
+                "seq": 0,
+                "amount": 54.74,
+                "currency": "USD",
+                "duration": 4,
+                "from": 4,
+                "to": 8
+            }
+        ],
+        "pid": "15.9.1"
     },
     "date_surcharge_method": "sum",
-    "req_id": "bea6ba9b-8e75-e369-20c8-1f108b2e8667",
-    "service_area_pricing_id": 8034,
-    "zones": [
+    "service_area_pricing_id": null,
+    "req_id": "dfbc40ec-f097-efff-0953-e7363201cfef",
+    "tz": {
+        "dos": 3600,
+        "ros": 3600,
+        "tzid": "Europe/Madrid"
+    },
+    "pricing_schedule_sum": [
         {
-            "lat": 22.32941893155462,
-            "lng": 107.9216582,
-            "name": "TEST",
-            "p2p": false,
-            "prices": [
-                {
-                    "airport": "NNG",
-                    "p_amt": 1,
-                    "d_amt": 1,
-                    "currency": "CNY",
-                    "amount": 1
-                }
+            "notice_time_hint": [
+                "null",
+                "null",
+                "null",
+                "null",
+                "null",
+                "null",
+                "null"
             ],
-            "radius": 0,
-            "polygons": [
-                {
-                    "lat": 22.609644,
-                    "lng": 107.171658
-                },
-                {
-                    "lat": 22.915219,
-                    "lng": 107.561795
-                },
-                {
-                    "lat": 22.5758,
-                    "lng": 107.891629
-                },
-                {
-                    "lat": 22.218626,
-                    "lng": 107.710477
-                },
-                {
-                    "lat": 21.743619,
-                    "lng": 108.671658
-                },
-                {
-                    "lat": 21.743619,
-                    "lng": 107.671658
-                }
-            ],
-            "pid": "40.4.1"
+            "pid": "15.7.1"
         }
     ]
 }

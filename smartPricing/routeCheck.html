@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <!-- import CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+</head>
+
+<body>
+  <div id="app">
+
+    <el-button @click="check" class="ex">check</el-button>
+    <el-button @click="exportCSV" class="ex">export csv</el-button>
+
+  </div>
+</body>
+<!-- import Vue before Element -->
+<script src="https://unpkg.com/vue@2/dist/vue.js"></script>
+<!-- import JavaScript -->
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+<script src="https://cdn.sheetjs.com/xlsx-0.20.2/package/dist/xlsx.full.min.js"></script>
+<script src="../components.js"></script>
+<script src="./routeCheckData.js"></script>
+
+
+<script>
+  new Vue({
+    el: '#app',
+    data: function () {
+      return {
+        originLatLng: { //initial bound lat and lng is sfo's
+          boundLat: 37.6213129,
+          boundLng: -122.3789554,
+          boundRadius: 200000
+        },
+        curPartnerSvcData: {}, // partner , current service area data
+        predictionsCache: {}, // Cache search address
+
+        routes: [],
+        exportRouts: [[
+          {
+            "id": 36,
+            "from_place": "YYZ",
+            "to_place": "Downtown",
+            "from_address": "YYZ Airport",
+            "to_address": "Marriott Downtown at CF Toronto Eaton Centre",
+            "partner_id": 3,
+            "platform_name": "Mozio",
+            "note": "一口价圈不正确，正确的是YYZ-Toronto",
+          },
+          {
+            "id": 117,
+            "from_place": "LHR",
+            "to_place": "central london",
+            "from_address": "LHR",
+            "to_address": "8-10 Paul St, London EC2A 4JH, UK",
+            "partner_id": 3,
+            "platform_name": "Mozio",
+            "note": "一口价圈不正确，正确的是LHR-London city center "
+          },
+          {
+            "id": 140,
+            "from_place": "central london",
+            "to_place": "LHR",
+            "from_address": "The Marylebone Hotel, Welbeck Street, London, UK",
+            "to_address": "LHR",
+            "partner_id": 3,
+            "platform_name": "Mozio",
+            "note": "一口价圈不正确，正确的是London city center -LHR"
+          },
+          {
+            "id": 184,
+            "from_place": "LHR",
+            "to_place": "vauxhall",
+            "from_address": "LHR",
+            "to_address": "Lancaster Gate Hotel, Lancaster Gate, London, UK",
+            "partner_id": 3,
+            "platform_name": "Mozio",
+            "note": "一口价圈不正确，正确的是LHR-London city center "
+          },
+          {
+            "id": 210,
+            "from_place": "Downtown",
+            "to_place": "YYZ",
+            "from_address": "The St. Regis Toronto, Bay Street, Toronto, ON, Canada",
+            "to_address": "YYZ",
+            "partner_id": 3,
+            "platform_name": "Mozio",
+            "note": "一口价圈不正确，正确的是Toronto-YYZ"
+          },
+          {
+            "id": 323,
+            "from_place": "3-马卡蒂",
+            "to_place": "MNL",
+            "from_address": "Ascott Makati - Glorietta 4, Makati, Metro Manila, Philippines",
+            "to_address": "MNL",
+            "partner_id": 2621,
+            "platform_name": "China Ctrip API",
+            "note": "一口价圈不正确，正确的是3-市区-MNL"
+          },
+          {
+            "id": 647,
+            "from_place": "UKB",
+            "to_place": "神户圈",
+            "from_address": "UKB",
+            "to_address": "神户大仓酒店",
+            "partner_id": 2621,
+            "platform_name": "China Ctrip API",
+            "note": "找不到from/to的坐标"
+          },
+          {
+            "id": 648,
+            "from_place": "神户圈",
+            "to_place": "UKB",
+            "from_address": "神户大仓酒店",
+            "to_address": "UKB",
+            "partner_id": 2621,
+            "platform_name": "China Ctrip API",
+            "note": "找不到from/to的坐标"
+          },
+          {
+            "id": 828,
+            "from_place": "DAL",
+            "to_place": "DAL",
+            "from_address": "DAL",
+            "to_address": "3880 W Northwest Hwy, Dallas, TX 75220",
+            "partner_id": 2621,
+            "platform_name": "m.ctrip.com",
+            "note": "一口价圈不正确，正确的是Dallas downtown-DAL"
+          },
+          {
+            "id": 913,
+            "from_place": "Beauvais",
+            "to_place": "BVA",
+            "from_address": "Chez Hortense",
+            "to_address": "BVA",
+            "partner_id": 2621,
+            "platform_name": "China Ctrip API",
+            "note": "没有使用一口价"
+          },
+          {
+            "id": 926,
+            "from_place": "MBA",
+            "to_place": "蒙巴萨岛",
+            "from_address": "MBA",
+            "to_address": "Hotel Sapphire",
+            "partner_id": 2621,
+            "platform_name": "China Ctrip API",
+            "note": "没有使用一口价"
+          },
+          {
+            "id": 927,
+            "from_place": "蒙巴萨岛",
+            "to_place": "MBA",
+            "from_address": "Hotel Sapphire",
+            "to_address": "MBA",
+            "partner_id": 2621,
+            "platform_name": "China Ctrip API",
+            "note": "没有使用一口价"
+          },
+          {
+            "id": 938,
+            "from_place": "Kuwait City",
+            "to_place": "KWI",
+            "from_address": "Grand Majestic Hotel",
+            "to_address": "KWI",
+            "partner_id": 2621,
+            "platform_name": "China Ctrip API",
+            "note": "没有使用一口价"
+          },
+          {
+            "id": 950,
+            "from_place": "Ghent",
+            "to_place": "BRU",
+            "from_address": "B&B Hotel Gent Centrum",
+            "to_address": "BRU",
+            "partner_id": 2621,
+            "platform_name": "China Ctrip API",
+            "note": "没有使用一口价"
+          },
+          {
+            "id": 999,
+            "from_place": "Johor Bahru/新山",
+            "to_place": "SIN",
+            "from_address": "凯瑟城市商场",
+            "to_address": "樟宜国际机场",
+            "partner_id": 2621,
+            "platform_name": "China Ctrip API",
+            "note": "没有使用一口价"
+          },
+          {
+            "id": 1010,
+            "from_place": "Microcentro",
+            "to_place": "EZE",
+            "from_address": "Four Seasons Hotel",
+            "to_address": "EZE",
+            "partner_id": 2621,
+            "platform_name": "China Ctrip API",
+            "note": "没有使用一口价"
+          },
+          {
+            "id": 1029,
+            "from_place": "Zone 6",
+            "to_place": "MTY",
+            "from_address": "Four Point by Sheraton",
+            "to_address": "MTY",
+            "partner_id": 2621,
+            "platform_name": "China Ctrip API",
+            "note": "一口价圈不正确，正确的是Zone 7-MTY"
+          },
+          {
+            "id": 1041,
+            "from_place": "Zone 12",
+            "to_place": "MTY",
+            "from_address": "City Express By Marriot",
+            "to_address": "MTY",
+            "partner_id": 2621,
+            "platform_name": "China Ctrip API",
+            "note": "一口价圈不正确，正确的是Zone 1- Aeropuerto-MTY"
+          },
+          {
+            "id": 1186,
+            "from_place": "BWN",
+            "to_place": "city",
+            "from_address": "BWN",
+            "to_address": "瓦法酒店和公寓",
+            "partner_id": 3,
+            "platform_name": "Mozio",
+            "note": "没有使用一口价"
+          },
+          {
+            "id": 1187,
+            "from_place": "city",
+            "to_place": "BWN",
+            "from_address": "瓦法酒店和公寓",
+            "to_address": "BWN",
+            "partner_id": 3,
+            "platform_name": "Mozio",
+            "note": "没有使用一口价"
+          },
+          {
+            "id": 1208,
+            "from_place": "BVA",
+            "to_place": "CDG",
+            "from_address": "BVA",
+            "to_address": "CDG",
+            "partner_id": 3,
+            "platform_name": "Mozio",
+            "note": "一口价圈不正确，正确的是BVA-CDG机场范围"
+          },
+          {
+            "id": 1209,
+            "from_place": "BVA",
+            "to_place": "ORY",
+            "from_address": "BVA",
+            "to_address": "ORY",
+            "partner_id": 3,
+            "platform_name": "Mozio",
+            "note": "一口价圈不正确，正确的是BVA-ORY机场范围"
+          },
+          {
+            "id": 1221,
+            "from_place": "蒙巴萨岛",
+            "to_place": "MBA",
+            "from_address": "Hotel Sapphire",
+            "to_address": "MBA",
+            "partner_id": 3,
+            "platform_name": "Mozio",
+            "note": "没有使用一口价"
+          },
+          {
+            "id": 1247,
+            "from_place": "ANR",
+            "to_place": "Brussels",
+            "from_address": "ANR",
+            "to_address": "Red Star Line Museum",
+            "partner_id": 3,
+            "platform_name": "Mozio",
+            "note": "一口价圈不正确，正确的是ANR-Antwerp"
+          },
+          {
+            "id": 1248,
+            "from_place": "Brussels",
+            "to_place": "ANR",
+            "from_address": "Red Star Line Museum",
+            "to_address": "ANR",
+            "partner_id": 3,
+            "platform_name": "Mozio",
+            "note": "一口价圈不正确，正确的是Antwerp-ANR"
+          },
+          {
+            "id": 1292,
+            "from_place": "OKA",
+            "to_place": "那霸市区不规则",
+            "from_address": "Naha Airport",
+            "to_address": "Hotel Resonex Naha",
+            "partner_id": 3,
+            "platform_name": "Mozio",
+            "note": "一口价圈不正确，正确的是OKA-那霸市区"
+          },
+          {
+            "id": 1335,
+            "from_place": "NAP",
+            "to_place": "Naples",
+            "from_address": "Naples",
+            "to_address": "NAP",
+            "partner_id": 3,
+            "platform_name": "Mozio",
+            "note": "没有使用一口价"
+          },
+          {
+            "id": 1336,
+            "from_place": "BRS",
+            "to_place": "Bristol",
+            "from_address": "Bristol",
+            "to_address": "BRS",
+            "partner_id": 3,
+            "platform_name": "Mozio",
+            "note": "没有使用一口价"
+          },
+          {
+            "id": 1359,
+            "from_place": "H SUR 2",
+            "to_place": "CZM",
+            "from_address": "Fiesta Americana",
+            "to_address": "CZM",
+            "partner_id": 3,
+            "platform_name": "Mozio",
+            "note": "没有使用一口价"
+          },
+          {
+            "id": 1377,
+            "from_place": "Zone 6",
+            "to_place": "MTY",
+            "from_address": "Four Point by Sheraton",
+            "to_address": "MTY",
+            "partner_id": 3,
+            "platform_name": "Mozio",
+            "note": "一口价圈不正确，正确的是Zone 7-MTY"
+          },
+          {
+            "id": 1564,
+            "from_place": "DAD",
+            "to_place": "高尔夫",
+            "from_address": "DAD",
+            "to_address": "Hoiana Resort & Golf",
+            "partner_id": 2,
+            "platform_name": "Booking",
+            "note": "找不到from/to的坐标"
+          },
+          {
+            "id": 1565,
+            "from_place": "高尔夫",
+            "to_place": "DAD",
+            "from_address": "Hoiana Resort & Golf",
+            "to_address": "DAD",
+            "partner_id": 2,
+            "platform_name": "Booking",
+            "note": "找不到from/to的坐标"
+          },
+          {
+            "id": 1630,
+            "from_place": "VNS",
+            "to_place": "Sarnath",
+            "from_address": "VNS",
+            "to_address": "The Fern Residency, Plot No 15/121 Ashapur Chauraha, Pandeypur-Sarnath Rd, near state Bank of India Ashapur, Pandeypur, Sarnath, Varanasi, Uttar Pradesh 221007",
+            "partner_id": 2621,
+            "platform_name": "China Ctrip API",
+            "note": "一口价圈不正确，正确的是VNS-Nadesar"
+          },
+          {
+            "id": 1631,
+            "from_place": "Sarnath",
+            "to_place": "VNS",
+            "from_address": "The Fern Residency, Plot No 15/121 Ashapur Chauraha, Pandeypur-Sarnath Rd, near state Bank of India Ashapur, Pandeypur, Sarnath, Varanasi, Uttar Pradesh 221007",
+            "to_address": "VNS",
+            "partner_id": 2621,
+            "platform_name": "China Ctrip API",
+            "note": "一口价圈不正确，正确的是Nadesar-VNS"
+          },
+          {
+            "id": 1653,
+            "from_place": "Puerto Escondido",
+            "to_place": "HUX",
+            "from_address": "Cam. a Puerto Angelito 206, Sector Hidalgo, 71983 Puerto Escondido, Oax., Mexico",
+            "to_address": "HUX",
+            "partner_id": 2621,
+            "platform_name": "China Ctrip API",
+            "note": "没有使用一口价"
+          },
+          {
+            "id": 1655,
+            "from_place": "Salina Cruz",
+            "to_place": "HUX",
+            "from_address": "Casa Mirador Salina Cruz Mexico",
+            "to_address": "HUX",
+            "partner_id": 2621,
+            "platform_name": "China Ctrip API",
+            "note": "没有使用一口价"
+          },
+          {
+            "id": 1674,
+            "from_place": "Anyang",
+            "to_place": "ICN",
+            "from_address": "Urban Boutique Hotel",
+            "to_address": "仁川机场",
+            "partner_id": 2621,
+            "platform_name": "China Ctrip API",
+            "note": "没有使用一口价"
+          },
+          {
+            "id": 1676,
+            "from_place": "Anyang",
+            "to_place": "GMP",
+            "from_address": "Urban Boutique Hotel",
+            "to_address": "金浦机场",
+            "partner_id": 2621,
+            "platform_name": "China Ctrip API",
+            "note": "没有使用一口价"
+          },
+          {
+            "id": 1767,
+            "from_place": "Antibes",
+            "to_place": "NCE",
+            "from_address": "Hôtel & Spa La Villa Port d'Antibes",
+            "to_address": "NCE",
+            "partner_id": 3,
+            "platform_name": "Mozio",
+            "note": "没有使用一口价"
+          },
+          {
+            "id": 1823,
+            "from_place": "Naples",
+            "to_place": "NAP",
+            "from_address": "Naples",
+            "to_address": "NAP",
+            "partner_id": 3,
+            "platform_name": "Mozio",
+            "note": "一口价圈不正确，正确的是Napoli-Napoli"
+          },
+          {
+            "id": 1872,
+            "from_place": "OKA",
+            "to_place": "水族馆",
+            "from_address": "Naha Airport",
+            "to_address": "Royal View Hotel Churaumi",
+            "partner_id": 3,
+            "platform_name": "Mozio",
+            "note": "找不到from/to的坐标"
+          },
+          {
+            "id": 1876,
+            "from_place": "OKA",
+            "to_place": "浦添市",
+            "from_address": "Naha Airport",
+            "to_address": "コンドミニアムホテル・リッカ in Gusukuma",
+            "partner_id": 3,
+            "platform_name": "Mozio",
+            "note": "找不到from/to的坐标"
+          },
+          {
+            "id": 1878,
+            "from_place": "OKA",
+            "to_place": "西原町",
+            "from_address": "Naha Airport",
+            "to_address": "Mr.KINJO in MINAMIUEBARU",
+            "partner_id": 3,
+            "platform_name": "Mozio",
+            "note": "找不到from/to的坐标"
+          },
+          {
+            "id": 1905,
+            "from_place": "Anyang",
+            "to_place": "ICN",
+            "from_address": "Urban Boutique Hotel",
+            "to_address": "仁川机场",
+            "partner_id": 3,
+            "platform_name": "Mozio",
+            "note": "没有使用一口价"
+          },
+          {
+            "id": 1907,
+            "from_place": "Anyang",
+            "to_place": "GMP",
+            "from_address": "Urban Boutique Hotel",
+            "to_address": "金浦机场",
+            "partner_id": 3,
+            "platform_name": "Mozio",
+            "note": "没有使用一口价"
+          },
+          {
+            "id": 2043,
+            "from_place": "Puerto Iguazu",
+            "to_place": "IGR",
+            "from_address": "Loi Suites Iguazu Hotel",
+            "to_address": "IGR",
+            "partner_id": 2621,
+            "platform_name": "China Ctrip API",
+            "note": "没有使用一口价"
+          },
+          {
+            "id": 2056,
+            "from_place": "ANU",
+            "to_place": "Willikies",
+            "from_address": "ANU",
+            "to_address": "St. Phillip's North Willikies St. Philip Adjacent to Devil’s Bridge National Park, Antigua & Barbuda",
+            "partner_id": 2621,
+            "platform_name": "China Ctrip API",
+            "note": "没有使用一口价"
+          },
+          {
+            "id": 2057,
+            "from_place": "Willikies",
+            "to_place": "ANU",
+            "from_address": "St. Phillip's North Willikies St. Philip Adjacent to Devil’s Bridge National Park, Antigua & Barbuda",
+            "to_address": "ANU",
+            "partner_id": 2621,
+            "platform_name": "China Ctrip API",
+            "note": "没有使用一口价"
+          }
+        ]],
+
+        ids: []
+      }
+    },
+
+    mounted() {
+
+    },
+
+    created() {
+    },
+
+
+
+    methods: {
+
+      exportCSV() {
+        /**
+               select
+            sr.id as id,from_place,to_place,service_area_id,strategy_id,platform_name,partner_id,service_area_id_elife,sr.json,
+            sc.cost,sc.profit,sc.vehicle_class_id
+#             airport.ctry country_code,
+#             country.name country_name,
+#             fleet.name service_area_name
+            from
+            spp_cost sc
+            left join spp_route sr on sr.id=sc.route_id
+#             left join airport_fleet af on  af.fleet_id = sr.service_area_id
+#             left join airport  on airport.code3 = af.airport
+#             left join country on country.alpha_3 = airport.ctry
+#             left join fleet on fleet.id = sr.service_area_id
+            where sc.id in (select max(sc.id) from spp_cost sc  group by sc.vehicle_class_id,sc.route_id) and sr.is_active = 99 and sr.id in (99)
+            group by id,vehicle_class_id
+        **/
+       
+
+        let routes = []
+        for (let route of this.exportRouts) {
+          let { id, from_address, to_address, from_place, to_place, vehicle_class_id, profit, cost, partner_id } = route
+
+          let index = routes.findIndex(item => item.id == id)
+
+          let vehicle = vehicleList.find(item => item.vehicle_id == vehicle_class_id)
+          let { vehicle_name } = vehicle
+          let obj = {}
+          obj['vid'] = vehicle_class_id
+          obj[`${vehicle_name} Cost`] = cost
+          obj[`${vehicle_name} min profit`] = profit * 100
+          obj[`${vehicle_name} min price`] = cost + (cost * profit)
+
+          if (index == -1) {
+            routes.push({
+              id,
+              from_zone: from_place,
+              to_zone: to_place,
+              from_detail_address: from_address,
+              to_detail_address: to_address,
+              partner_id,
+              cost: [obj]
+            })
+          } else {
+            routes[index].cost.push(obj)
+          }
+        }
+
+
+        for (let item of routes) {
+          let { cost } = item
+          for (let id of curVehicleList) {
+            let index = cost.findIndex(c => c.vid == id)
+            let vehicle = vehicleList.find(item => item.vehicle_id == id)
+            let { vehicle_name } = vehicle
+            if (index == -1) {
+              let obj = {}
+              obj['vid'] = id
+              obj[`${vehicle_name} Cost`] = ''
+              obj[`${vehicle_name} min profit`] = ''
+              obj[`${vehicle_name} min price`] = ''
+              cost.push(obj)
+            }
+          }
+
+          const indexMap = {};
+          curVehicleList.forEach((value, index) => {
+            indexMap[value] = index;
+          });
+          cost.sort((a, b) => indexMap[a.vid] - indexMap[b.vid]);
+        }
+        console.log(routes);
+
+        let csvRows = []
+        let csvTitles = []
+        let i = 0
+        for (let r of routes) {
+          let row = []
+          for (let [key, value] of Object.entries(r)) {
+
+            if (key == 'cost') {
+
+              for (let item of value) {
+                for (let [k, v] of Object.entries(item)) {
+                  if (k == 'vid') continue
+                  if (i == 0) {
+                    csvTitles.push(k)
+                  }
+                  row.push(v)
+                }
+              }
+
+            } else {
+              if (i == 0) {
+                csvTitles.push(key)
+              }
+              row.push(value)
+            }
+
+          }
+          i++
+          csvRows.push(row)
+        }
+
+        saveCSV('abc', csvTitles, csvRows)
+
+
+        console.log(csvTitles);
+        console.log(csvRows);
+      },
+
+
+
+      async check() {
+        let loading = this.$loading({
+          lock: true,
+          text: `Loading-${this.percent}%`,
+          spinner: 'el-icon-loading',
+          background: 'rgba(0, 0, 0, 0.7)'
+        });
+
+        let i = 0
+
+        for (let route of routes) {
+          console.log(`-------${i++}--------`);
+
+          let { id, from_address, to_address, from_place, to_place, partner_id } = route
+
+          let fromDetail = {}
+          let toDetail = {}
+
+          if (from_place.length == 3) {
+            fromDetail = await getAirportInfo(urlProd, from_place)
+          } else if (to_place.length == 3) {
+            let fromList = await this.getAddrList(from_address)
+            let { place_id: from_place_id } = fromList[0]
+            fromDetail = await this.getDetailByPlaceId(from_place_id)
+          } else {
+            route['note'] = 'from/to都不是机场'
+            this.exportRouts.push(route)
+            this.ids.push(id)
+            continue
+          }
+
+          if (to_place.length == 3) {
+            toDetail = await getAirportInfo(urlProd, to_place)
+          } else {
+            let toList = await this.getAddrList(to_address)
+            let { place_id: to_place_id } = toList[0]
+            toDetail = await this.getDetailByPlaceId(to_place_id)
+          }
+
+
+
+
+          let { lat: fLat, lng: fLng } = fromDetail
+          let { lat: tLat, lng: tLng } = toDetail
+
+          if (!fLat || !fLng || !tLat || !tLng) {
+            route['note'] = '找不到from/to的坐标'
+            this.exportRouts.push(route)
+            continue
+          }
+
+
+          let { from, to } = await this.getPriceElife(fLat, fLng, tLat, tLng, partner_id)
+
+          if (!from || !to) {
+            route['note'] = '没有使用一口价'
+            this.exportRouts.push(route)
+            this.ids.push(id)
+            continue
+          }
+
+          if (from != from_place || to != to_place) {
+            route['note'] = `一口价圈不正确，正确的是${from}-${to}`
+            this.exportRouts.push(route)
+            this.ids.push(id)
+            continue
+          }
+
+
+
+
+        }
+        let idsArr = Array.from(new Set(this.ids))
+        console.log(idsArr);
+        console.log('---exportRouts---', this.exportRouts);
+        loading.close()
+      },
+
+      async getAddrList(keywords = 'SFO') {
+        if (!keywords) {
+          return []
+        }
+
+        let list = this.predictionsCache[keywords]
+        if (list) {
+          return list
+        }
+
+
+
+        let { boundLat, boundLng, sessionToken, boundRadius } = this.originLatLng
+        let url = `https://388bivap71.execute-api.us-east-2.amazonaws.com/prod/maps/places/auto-comp?input_text=${keywords}&location=${boundLat},${boundLng}&radius=${boundRadius}`
+        if (sessionToken) {
+          url += `&session_token=${sessionToken}`
+        }
+        let res = await this.fetchData({ url, isShowLoading: false })
+        if (!res) return
+        let { session_token } = res
+        this.originLatLng.sessionToken = session_token
+        list = res.predictions.predictions
+
+        this.predictionsCache[keywords] = list
+        return list
+      },
+
+      async getDistance(fLat, fLng, tLat, tLng) {
+
+        let url = `https://d3nz1awfgb.execute-api.us-east-2.amazonaws.com/upncoming/maps/routes/distance-time?from_lat=${fLat}&from_lng=${fLng}&to_lat=${tLat}&to_lng=${tLng}`
+
+        let response = await fetch(url)
+        let res = await response.json();
+
+        let distance = res?.distance || undefined
+
+        return distance
+      },
+
+
+      async getDetailByPlaceId(id) {
+        let url = `https://388bivap71.execute-api.us-east-2.amazonaws.com/prod/maps/places/id?google_place_id=${id}`
+        let { place_detail } = await this.fetchData({ url, isShowLoading: false })
+        let { status } = place_detail
+
+        if (status == 'OK') {
+          let { result: { formatted_address, name: localName, geometry: { location } } } = place_detail
+
+          let val = `${localName} ${formatted_address}`
+          if (formatted_address.startsWith(localName)) {
+            val = formatted_address
+          }
+          // this.elm.value = val
+
+          let { lat, lng, } = location
+          let t = typeof lat === 'number' ? lat : lat()
+          let g = typeof lng === 'number' ? lng : lng()
+
+          this.originLatLng.boundLat = lat
+          this.originLatLng.boundLng = lng
+
+
+          return { lat: t, lng: g, name: val }
+        }
+
+      },
+
+      async getPriceElife(fLat, fLng, tLat, tLng, partner_id, distance) {
+
+        // let supply_fleet_id = 45
+        // let demand_fleet_id = 15
+        // switch (partner_id) {
+        //   case 2621:
+        //     supply_fleet_id = 61654
+        //     demand_fleet_id = 24337
+        //     break;
+        //   case 3:
+        //     supply_fleet_id = 51488
+        //     demand_fleet_id = 53422
+        //     break;
+
+        //   default:
+        //     supply_fleet_id = 45
+        //     demand_fleet_id = 15
+        //     break;
+        // }
+        let { supply_fleet_id, demand_fleet_id } = getDemandSupply(partner_id)
+
+        let url = `https://j1j495o5pk.execute-api.us-east-2.amazonaws.com/upncoming/ride-pricings?from_lat=${fLat}&from_lng=${fLng}&to_lat=${tLat}&to_lng=${tLng}&ses=Unrfxa1M0lDAR4ODnRXP5DKfaLTD0Oe6SOfN6FtkCTTIdGi0jB8rcoLk8fsiJSDVd3V9o6hOkzZLeJxp46fW1VpAp7FznwOcR8e6LiMoBBQne4g9PyHdP9pe34omovzH&currency=USD&demand_fleet_id=${demand_fleet_id}`
+
+        if (partner_id != 2) {
+          url += `&supply_fleet_id=${supply_fleet_id}`
+        }
+
+        if (distance) {
+          url += `&distance=${distance}`
+        }
+
+
+        let response = await fetch(url)
+        let res = await response.json();
+        let { fleets } = res
+        if (!fleets.length) {
+          return []
+        }
+
+
+        let elife = fleets.find(item => item.parent_fleet_id == (partner_id == 2 ? 15 : supply_fleet_id))
+        return this.pricingJosnHandler(elife)
+
+      },
+
+
+      pricingJosnHandler(obj) {
+        let { vehicle_classes, fleet_id } = obj
+        let price_detail = vehicle_classes[0].price_detail
+        let fix_price_detail = price_detail?.base_pricing?.fix_price_detail || {}
+        return fix_price_detail
+      },
+
+
+
+      fetchData: async ({
+        url = '',
+        data = {},
+        method = 'GET',
+        isShowLoading = true
+      } = {}) => {
+        method = method.toUpperCase();
+        if (method == 'GET') {
+          let dataStr = '';
+          Object.keys(data).forEach(key => {
+            dataStr += key + '=' + data[key] + '&';
+          })
+          if (dataStr !== '') {
+            dataStr = dataStr.substring(0, dataStr.lastIndexOf('&'));
+            url = url + '?' + dataStr;
+          }
+        }
+        let requestConfig = {
+          // credentials: 'same-origin',
+          method,
+          headers: {
+            'Accept': 'application/json',
+            // 'Content-method': 'application/json'
+          },
+          // mode: "cors", // same-origin，no-cors（default） cores;
+          // cache: "force-cache" // default 、 no-store 、 reload 、 no-cache 、 force-cache 、 only-if-cached 
+        }
+
+        if (method == 'POST') {
+          Object.defineProperty(requestConfig, 'body', {
+            value: JSON.stringify(data)
+          })
+        }
+        try {
+          const response = await fetch(url, requestConfig);
+          const responseJson = await response.json();
+
+          return responseJson
+        } catch (error) {
+          throw new Error(error)
+        }
+      },
+
+
+    }
+  })
+
+
+
+
+
+</script>
+
+</html>

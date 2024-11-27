@@ -8,101 +8,88 @@
 </head>
 
 <body>
-
+    <div class="btn">btn</div>
 
     <script>
 
-        let isCircle = true
+        let btn = document.querySelector('.btn')
+        btn.addEventListener('click', () => {
+            let isCircle = false
+            let barriers = []
 
-        let d = [{
-            "type": "polygon", "points": [
-                {
-                    "lat": 20.601913388367247,
-                    "lng": -86.71756081445311
-                },
-                {
-                    "lat": 20.581386761880086,
-                    "lng": -86.838640526074
-                },
-                {
-                    "lat": 20.563362055096867,
-                    "lng": -86.92250262615052
-                },
-                {
-                    "lat": 20.511223965991487,
-                    "lng": -86.97337669061521
-                },
-                {
-                    "lat": 20.38828872522638,
-                    "lng": -87.02832348289914
-                },
-                {
-                    "lat": 20.305262105972457,
-                    "lng": -87.02179577527234
-                },
-                {
-                    "lat": 20.26344801654347,
-                    "lng": -86.9967380652344
+            let points = dataHandler(d)
+            let len = points.length
+            debugger
+            for (let i = 0; i < len; i++) {
+                let { lat: fromLat, lng: fromLng } = points[i]
+                let j = i + 1
+
+                let obj = {
+                    a_lat: fromLat,
+                    a_lng: fromLng,
+                    a_cross: 0,
                 }
-                
-            ]
-        }]
 
-        let points = d[0]['points']
-        console.log(points);
-
-        let barriers = []
-
-        //    {
-        //     "a_lat": 21.19799017350279,
-        //     "a_lng": -86.70880885787703,
-        //     "a_cross": 0,
-        //     "b_lat": 21.2318645888616,
-        //     "b_lng": -86.74812558500743,
-        //     "b_cross": 0
-        // }
-
-        let len = points.length
-
-        for (let i = 0; i < len; i++) {
-            let { lat: fromLat, lng: fromLng } = points[i]
-            let j = i + 1
-
-            let obj = {
-                a_lat: fromLat,
-                a_lng: fromLng,
-                a_cross: 0,
-            }
-
-            let nextObj = points[j]
-            if (nextObj) {
-                let { lat: toLat, lng: toLng } = nextObj
-                obj['b_lat'] = toLat
-                obj['b_lng'] = toLng
-                obj['b_cross'] = 0
-            } else {
-                if (isCircle) {
-                    barriers.push(Object.assign({}, obj, {
-                        b_lat: points[0].lat,
-                        b_lng: points[0].lng,
-                        b_cross: 0,
-                    }))
+                let nextObj = points[j]
+                if (nextObj) {
+                    let { lat: toLat, lng: toLng } = nextObj
+                    obj['b_lat'] = toLat
+                    obj['b_lng'] = toLng
+                    obj['b_cross'] = 0
+                } else {
+                    if (isCircle) {
+                        barriers.push(Object.assign({}, obj, {
+                            b_lat: points[0].lat,
+                            b_lng: points[0].lng,
+                            b_cross: 0,
+                        }))
+                    }
+                    continue
                 }
-                continue
+                barriers.push(obj)
             }
-            barriers.push(obj)
+            console.log(barriers);
+        })
+
+
+
+
+
+
+        let d = [
+            [45.465502545328484, 12.380750630072914],
+            [45.464786681243176, 12.342780418304475],
+            [45.43872304074895, 12.298890119754937],
+            [45.42582997652895, 12.304810206536036]
+        ]
+
+
+
+        let points = [
+            // {
+            //     "lat": 20.601913388367247,
+            //     "lng": -86.71756081445311
+            // }
+        ]
+
+
+        function dataHandler(d) {
+            points = []
+
+            for(let item of d){
+                points.push({
+                    lat:item[0],
+                    lng:item[1],
+                }) 
+            }
+            return points
         }
 
 
-        console.log(barriers);
-
-
-
-
-
-
-
     </script>
+
+
+
 </body>
 
 </html>

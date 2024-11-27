@@ -34,42 +34,56 @@
 <body>
   <div class="btn-box">
     <div class='btn copy' class="btn">Copy</div>
-    <!-- <div class='btn addPercentToSvc' class="btn">addPercentToSvc</div> -->
   </div>
 
-  <script src="./components.js"></script>
+  
+
+  <script src="../components.js"></script>
   <script src="./copyFleet.js"></script>
   <script>
     let copy = document.querySelector('.copy')
-    let addPercentToSvc = document.querySelector('.addPercentToSvc')
 
 
-
+    let deletedSvc = []
     let noPricingIds = []
-    let completedIds = []
+    let aleadyInsert = []
     let errorList = []
 
+
+    // let stage = 'DEV'
     let stage = 'PROD'
+    let partnerId = 4
     let fleetsInfo = {
       2692: {
         parent_fleet_id: stage == 'DEV' ? 62294 : 67743,
         parent_fleet_name: 'emergingTravelGroup'
+      },
+      2736: {
+        parent_fleet_id: stage == 'DEV' ? 63369 : 72105,
+        parent_fleet_name: 'CityAirportTaxisSupply'
+      },
+      4: {
+        parent_fleet_id: stage == 'DEV' ? 63625 : 75362,
+        parent_fleet_name: 'jayrideSupply'
       }
     }
 
     copy.addEventListener('click', async () => {
-      let { parent_fleet_id, parent_fleet_name, } = fleetsInfo['2692']
+      let { parent_fleet_id, parent_fleet_name, } = fleetsInfo[partnerId]
       let url = stage == 'DEV' ? urlDev : urlProd  //urlDev,urlProd
       let i = 0
 
-      for (let fleet of noPricingJsonFleets) {
+      let allFleets = elifeFleets.concat(...elifeFleetsNotRadius)
+      for (let fleet of allFleets) {
         console.log(`--- i ++------`, i++);
-        if(i < 72) continue
         debugger
         let { id, name, service_area_pricing_id, radius } = fleet
-        if (radius == 1) continue
+        if (radius == 1) {
+          deletedSvc.push(fleet)
+          continue
+        }
 
-
+        
         fleet.name = fleet.name.replace(/\'/g, '\\\'')
         let LastFleetId = await this.getFleetIdByName(url, fleet.name, parent_fleet_id)
         if (!LastFleetId) {
@@ -84,12 +98,11 @@
         let json = null
         if (service_area_pricing_id) {
           json = await getPricingJsonBySvcId(url, id)
-          
         } else {
           json = await getLatPricingJsonAndFleeNotJsonId(url, id)
-
         }
-        if(!json){
+        if (!json) {
+          fleet['note'] = 'no pricing json'
           errorList.push(fleet)
           continue
         }
@@ -97,10 +110,13 @@
 
         let { polygons } = json.serviceArea
         if (polygons) {
+
+
+
           let { AffectedRows } = await this.insertSvcAttr(url, LastFleetId, polygons)
           if (!AffectedRows) {
-            errorList.push(fleet)
-            continue
+            fleet['note'] = 'polygons has aleady exist'
+            aleadyInsert.push(fleet)
           }
         }
 
@@ -109,8 +125,8 @@
           for (let airport of airports) {
             let { AffectedRows } = await this.insertAirportFleet(url, parent_fleet_id, LastFleetId, [airport])
             if (!AffectedRows) {
-              errorList.push(fleet)
-              continue
+              fleet['note'] = 'airport has aleady exist'
+              aleadyInsert.push(fleet)
             }
           }
         }
@@ -130,7 +146,6 @@
         let res = null
         if (service_area_pricing_id) {
           res = await insertAndUpdate(url, pricingStr, LastFleetId)
-
         } else {
           res = await insertServiceAreaPricing(url, pricingStr, LastFleetId)
         }
@@ -141,11 +156,12 @@
       }
 
       console.log('---noPricingIds---', noPricingIds);
-      console.log('---completedIds---', completedIds);
+      console.log('---aleadyInsert---', aleadyInsert);
+      console.log('---deletedSvc---', deletedSvc);
       console.log('---errorList---', errorList);
     })
 
-    async function getLatPricingJsonAndFleeNotJsonId(url,svcId){
+    async function getLatPricingJsonAndFleeNotJsonId(url, svcId) {
       // select * from service_area_pricing where service_area_id = {{svcId}} order by  id desc
       let d = {
         sql: 134679330,
@@ -153,17 +169,39 @@
         svcId
       }
 
-      let {pricing} = await fetchData({
+      let { pricing } = await fetchData({
         url,
         method: 'POST',
         data: d,
       })
 
-      if(pricing){
+      if (pricing) {
         return JSON.parse(pricing)
       } else {
-        return 
+        return
       }
+    }
+
+    async function insertAndUpdate(url, pricing_str, newFleetId) {
+      let updateD = {
+        sql: 134678780,
+        version: '1.0',
+        pricing_str,
+        new_fleet_id: newFleetId
+      }
+
+      // insert into service_area_pricing (service_area_id,pricing,effective_at,expire_at) 
+      // values  ({{new_fleet_id}},'{{pricing_str}}','2024-04-08 05:05:00','2037-12-31 23:59:59' );
+      // update fleet set service_area_pricing_id = last_insert_id() where id = {{new_fleet_id}} limit 1;
+
+      let res = await fetchData({
+        url,
+        method: 'POST',
+        data: updateD,
+        desc: 'update json'
+      })
+
+      return res
     }
     async function insertServiceAreaPricing(url, pricing_str, LastFleetId) {
       // insert into service_area_pricing (service_area_id,pricing,effective_at,expire_at) values  ({{new_fleet_id}},'{{pricing_str}}','2024-04-08 05:05:00','2037-12-31 23:59:59' );
@@ -195,6 +233,22 @@
       })
 
       return res.id || 0
+    }
+
+    async function getSvcAttr(url, fleet_id) {
+      let d = {
+        sql: 134679330,
+        version: '4.011',
+        fleet_id
+      }
+
+      let res = await fetchData({
+        url,
+        method: 'POST',
+        data: d
+      })
+      return res
+
     }
 
     async function insertSvcAttr(url, fleetId, polygons) {
@@ -288,7 +342,6 @@
 
     async function jsonHandler(svcJson, oldJson) {
 
-      let partnerJson = partner.json
 
       let mag_delta = partnerJson.service_areas?.mag_delta || []
       let ads_delta = partnerJson.service_areas?.ads_delta || []
@@ -302,7 +355,6 @@
       let vcs = sas?.vcs || []
       let percent = sas?.percent || 0
       let svcPercent = percent || partnerPercent
-
       { // meet_n_greet
         let mng = mag_delta.find(item => item.id == svcId)
         let { switch: isClose, delta } = mng || {}
@@ -383,7 +435,6 @@
         }
 
         { //hourly_pricing
-
           let min_amount = svcJson.hourly_pricing?.min_amount || undefined
           if (min_amount != undefined) {
             svcJson.hourly_pricing.min_amount = addPicies(min_amount, svcPercent)
@@ -404,6 +455,25 @@
 
             for (let range of (ranges || [])) {
               range.amount = addPicies(range.amount, svcPercent)
+            }
+          }
+        }
+
+        { // hpd
+          let hpd = svcJson.hpd || {}
+          let return_fee = hpd.return_fee
+          return_fee = addPicies(return_fee, svcPercent)
+          let rules = hpd.rules || []
+          for (let r of rules) {
+            let { over } = r
+            over.duration_per_price = addPicies(over.duration_per_price, svcPercent)
+            over.hour_per_price = addPicies(over.hour_per_price, svcPercent)
+            let ranges = r.ranges || []
+            for (let range of ranges) {
+              let durations = range.durations || []
+              for (let d of durations) {
+                d.amount = addPicies(d.amount, svcPercent)
+              }
             }
           }
         }
@@ -473,16 +543,30 @@
           }
         }
 
+
+
         { //specific_date_surcharge
           let specificDateSurcharge = svcJson.specific_date_surcharge || []
           for (let item of specificDateSurcharge) {
-            let vehicleClasses = item.vehicle_classes || []
-            for (let v of vehicleClasses) {
+            let { vehicle_classes = [], routes = [] } = item
+            for (let v of vehicle_classes) {
               let { percent, delta_amount } = v
               if (delta_amount != 0) {
                 v.delta_amount = addPicies(v.delta_amount, svcPercent)
               } else {
               }
+            }
+
+            for (let item of routes) {
+              let { vehicle_classes_date = [] } = item
+              for(let vcd of vehicle_classes_date){
+                let {vehicle_classes = []} = vcd
+                for(let vc of vehicle_classes){
+                  let {delta_amount = 0} = vc
+                  vc.delta_amount =  addPicies(delta_amount, svcPercent)
+                }
+              }
+
             }
           }
         }
