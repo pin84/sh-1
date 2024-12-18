@@ -36,10 +36,13 @@
     <div class='btn copy' class="btn">Copy</div>
   </div>
 
-  
+
 
   <script src="../components.js"></script>
-  <script src="./copyFleet.js"></script>
+  <!-- <script src="./jayride.js"></script> -->
+  <!-- <script src="./jayrideDev.js"></script> -->
+  <!-- <script src="./cityAirportText.js"></script> -->
+  <script src="./klook.js"></script>
   <script>
     let copy = document.querySelector('.copy')
 
@@ -50,21 +53,28 @@
     let errorList = []
 
 
-    // let stage = 'DEV'
-    let stage = 'PROD'
-    let partnerId = 4
+    let stage = 'DEV' // PROD,DEV
+    let partnerId = 28
     let fleetsInfo = {
       2692: {
         parent_fleet_id: stage == 'DEV' ? 62294 : 67743,
         parent_fleet_name: 'emergingTravelGroup'
       },
-      2736: {
+      5: {
         parent_fleet_id: stage == 'DEV' ? 63369 : 72105,
         parent_fleet_name: 'CityAirportTaxisSupply'
       },
       4: {
         parent_fleet_id: stage == 'DEV' ? 63625 : 75362,
         parent_fleet_name: 'jayrideSupply'
+      },
+      3: {
+        parent_fleet_id: stage == 'DEV' ? 27672 : 51488,
+        parent_fleet_name: '3_elife'
+      },
+      28: {
+        parent_fleet_id: stage == 'DEV' ? 64566 : 78568,
+        parent_fleet_name: 'klookSupply'
       }
     }
 
@@ -73,7 +83,13 @@
       let url = stage == 'DEV' ? urlDev : urlProd  //urlDev,urlProd
       let i = 0
 
-      let allFleets = elifeFleets.concat(...elifeFleetsNotRadius)
+      let allFleets = []
+      if (stage == 'DEV') {
+        allFleets = elifeFleetsDev.concat(...elifeFleetsNotRadiusDev)
+      } else {
+        allFleets = elifeFleets.concat(...elifeFleetsNotRadius)
+      }
+
       for (let fleet of allFleets) {
         console.log(`--- i ++------`, i++);
         debugger
@@ -83,7 +99,7 @@
           continue
         }
 
-        
+
         fleet.name = fleet.name.replace(/\'/g, '\\\'')
         let LastFleetId = await this.getFleetIdByName(url, fleet.name, parent_fleet_id)
         if (!LastFleetId) {
@@ -110,9 +126,6 @@
 
         let { polygons } = json.serviceArea
         if (polygons) {
-
-
-
           let { AffectedRows } = await this.insertSvcAttr(url, LastFleetId, polygons)
           if (!AffectedRows) {
             fleet['note'] = 'polygons has aleady exist'
@@ -142,7 +155,6 @@
 
         let pricingStr = JSON.stringify(jsonHandled).replace(/\'/g, '\\\'')
 
-
         let res = null
         if (service_area_pricing_id) {
           res = await insertAndUpdate(url, pricingStr, LastFleetId)
@@ -165,7 +177,7 @@
       // select * from service_area_pricing where service_area_id = {{svcId}} order by  id desc
       let d = {
         sql: 134679330,
-        version: '1.11',
+        version: '4.024',
         svcId
       }
 
@@ -342,6 +354,7 @@
 
     async function jsonHandler(svcJson, oldJson) {
 
+      let partnerJson =  stage == 'DEV' ? partnerJsonDev : partnerJsonProd
 
       let mag_delta = partnerJson.service_areas?.mag_delta || []
       let ads_delta = partnerJson.service_areas?.ads_delta || []
@@ -349,22 +362,27 @@
       let { serviceArea: { id: svcId } } = svcJson
 
 
-      let partnerPercent = 0
+      let partnerPercent = partnerJson.percent || 0
 
       let sas = sas_percent.find(item => item.id == svcId)
       let vcs = sas?.vcs || []
-      let percent = sas?.percent || 0
-      let svcPercent = percent || partnerPercent
+      let percent = sas?.percent 
+      let svcPercent =  Number(partnerPercent)
+      if(percent != undefined){
+        svcPercent = percent
+      }
+
       { // meet_n_greet
         let mng = mag_delta.find(item => item.id == svcId)
         let { switch: isClose, delta } = mng || {}
-        let meet_n_greet = svcJson.pricing?.meet_n_greet || 0
+        let meet_n_greet = svcJson.pricing?.meet_n_greet
 
         if (isClose != 'on') {
           delta = 0
         }
-        svcJson.pricing.meet_n_greet = addPicies(Number(meet_n_greet) + Number(delta), svcPercent)
-
+        if(meet_n_greet != undefined){
+          svcJson.pricing.meet_n_greet = addPicies(Number(meet_n_greet) + Number(delta), svcPercent)
+        }
       }
 
       { //add_service
@@ -411,10 +429,8 @@
 
 
         { // pricing
-          let { ranges, meet_n_greet, min_amount } = svcJson.pricing || {}
-          // if (meet_n_greet != undefined) {
-          //   svcJson.pricing.meet_n_greet = addPicies(meet_n_greet, svcPercent)
-          // }
+          let { ranges, min_amount } = svcJson.pricing || {}
+        
           if (min_amount != undefined) {
             svcJson.pricing.min_amount = addPicies(min_amount, svcPercent)
           }
@@ -559,11 +575,11 @@
 
             for (let item of routes) {
               let { vehicle_classes_date = [] } = item
-              for(let vcd of vehicle_classes_date){
-                let {vehicle_classes = []} = vcd
-                for(let vc of vehicle_classes){
-                  let {delta_amount = 0} = vc
-                  vc.delta_amount =  addPicies(delta_amount, svcPercent)
+              for (let vcd of vehicle_classes_date) {
+                let { vehicle_classes = [] } = vcd
+                for (let vc of vehicle_classes) {
+                  let { delta_amount = 0 } = vc
+                  vc.delta_amount = addPicies(delta_amount, svcPercent)
                 }
               }
 

@@ -33,7 +33,7 @@
   </style>
 
   <script src="../components.js"></script>
-  <script src="./data.js"></script>
+  <script src="./data/errorRoute.js"></script>
 </head>
 
 <body>
@@ -62,19 +62,34 @@
         this.i = 0
         let submit = document.querySelector('.submit')
         submit.addEventListener('click', async () => {
-
-
           // this.addRouteTop200Price()
           // this.addRouteTop200()
 
-          this.updateRoute()
+          // this.updateRoute()
           // this.updateCostAndPrice()
 
           // this.setMng()
 
+          // this.addTz()
+
+          this.changeZonesIndex()
+
         })
       }
 
+      async changeZonesIndex() {
+        console.log(ids);
+
+        let list = Array.from(new Set(ids))
+        console.log(list);
+
+        for (let id of list) {
+
+          let route = await this.getRoute(id)
+        }
+
+
+      }
 
       async getPartnerPricingJson(url) {
         let mngCach = {}
@@ -236,14 +251,13 @@
         let noRoute = []
         let doneList = []
 
-        let list = ctrip_max_11_13
-        let partnerId = 2621
+        let list = etg_12_18
+        let partnerId = 2692
 
         let vehicles = this.getVehicles()
         let cStr = ' Cost'
         let pStr = ' min profit'
         let mStr = ' Max'
-
         let parentFleetId = this.stage == 'PROD' ? 15 : 40
         switch (partnerId) {
           case 2621:
@@ -251,6 +265,9 @@
             break;
           case 3:
             parentFleetId = this.stage == 'PROD' ? 51488 : 27672
+            break;
+          case 2692:
+            parentFleetId = this.stage == 'PROD' ? 67743 : 62294
             break;
           default:
             break;
@@ -317,11 +334,13 @@
               profit = '0'
             }
             profit = Number(profit.replace(/\%/g, '')) / 100
-            max = Number(max.replace(/\$/g, ''))
+            if (max) {
+              max = Number(max.replace(/\$/g, ''))
+            }
 
             let vid = vehicleList.find(vehicle => vehicle.vehicle_name == v).vehicle_id
 
-            let jsonHandled = this.jsonHandler3(pricingJson, from_zone, to_zone, isPickup, airportInfo, vid)
+            let jsonHandled = await this.jsonHandler3(pricingJson, from_zone, to_zone, isPickup, airportInfo, vid)
             if (!jsonHandled) {
               item['note'] = 'no Fixed Price Zone'
               this.noInsertList.push(item)
@@ -329,6 +348,7 @@
             }
             let { pAmt } = jsonHandled
             console.log('--', routeId, '--', v, '--', vid, '----', cost, '---', profit, '--', max, '---', pAmt);
+
             if (pAmt && cost) {
               let obj = {
                 route_id: routeId,
@@ -362,9 +382,9 @@
           }
           // console.log(costs);
           // console.log(prices);
-          let insertCostRes = await this.insertCost(url, costs)
           debugger
-          // let insertAdjRes = await this.insertAdj(url, prices)
+          let insertCostRes = await this.insertCost(url, costs)
+          let insertAdjRes = await this.insertAdj(url, prices)
         }
 
         console.log('--this.noInsertList--', this.noInsertList);
@@ -380,11 +400,12 @@
       async addRouteTop200() {
         let url = true ? urlProd : urlDev    // urlDev,urlProd
         let batch = 0
-        let is_active = 98
+        let is_active = 1
         let strategy_id = 1
+        let crawl_state = null
 
-        let partnerId = 2621 //Booking,Ctrip,Mozio
-        let list = ctrip_11_12
+        let partnerId = 2692 //Booking,Ctrip,Mozio
+        let list = etg_12_18
         // switch (partnerId) {
         //   case 2:
         //     strategy_id = 4
@@ -403,10 +424,10 @@
 
         let i = 0
         for (let item of list) {
+          debugger
           let { from_zone: fromZone, to_zone: toZone, from_detail_address, to_detail_address, from_place: fromPlace, to_place: toPlace, from_address: fromAddress, to_address: toAddrEss } = item
           let from_zone = fromZone || fromPlace
           let to_zone = toZone || toPlace
-
           if (!to_zone || !from_zone) {
             item['note'] = 'No from/to'
             this.noInsertList.push(item)
@@ -416,7 +437,6 @@
           to_zone = to_zone.trim()
           // let obj = top200Route.find(o => o.from_zone == from_zone && o.to_zone == to_zone)
           console.log(`-----${i++}----${from_zone}--${to_zone}`);
-
           let from_address = from_detail_address || fromAddress || null
           let to_address = to_detail_address || toAddrEss || null
 
@@ -436,7 +456,7 @@
           let airportInfoObj = await this.getAirport(from_zone, to_zone)
           let { code: airportSearchResCode } = airportInfoObj
           if (airportSearchResCode > 0) {
-            if (code == 1) {
+            if (airportSearchResCode == 1) {
               item['note'] = 'No  airport'
             } else {
               item['note'] = 'From and to are both airports'
@@ -461,9 +481,8 @@
           }
           let pricingJson = JSON.parse(pricing)
 
-          let jsonHandled = this.jsonHandler3(pricingJson, from_zone, to_zone, isPickup, airportInfo)
-
-          let { adjJson, from_place_lat_lng, to_place_lat_lng, code } = jsonHandled
+          let jsonHandled = await this.jsonHandler3(pricingJson, from_zone, to_zone, isPickup, airportInfo)
+          let { adjJson, from_place_lat_lng, to_place_lat_lng, code, tz } = jsonHandled
 
           if (code > 0) {
             if (code == 2) {
@@ -498,11 +517,16 @@
 
             strategy_id,
             batch,
-            is_active
+            is_active,
+            tz,
+            crawl_state: 1
           }
+
+
 
           route = Object.assign({}, route, partnerInfo)
           console.log(route);
+          debugger
           if (!routeId) {
             let res = await this.insertSppRouteV2(url, route)
             if (res) {
@@ -511,25 +535,31 @@
             }
             this.newRouteIds.push(routeId)
           } else {
+            debugger
             route['id'] = routeId
-            let { is_active, batch } = routeInfo
+            let { is_active, batch, strategy_id } = routeInfo
             if (is_active < 0) {
               route['is_active'] = 98
               route['batch'] = 0
               route['strategy_id'] = 1
-              // let insertRes = await this.updateRouteV2(url, route)
-              let d = {
-                sql: 134679330,
-                version: '1.83',
-                ids: `${routeId}`,
-              }
-              d = Object.assign({}, d, route)
-              let res = await fetchData({
-                url,
-                method: 'POST',
-                data: d
-              })
+            } else {
+              route['strategy_id'] = strategy_id
+              route['batch'] = batch
+              route['is_active'] = is_active
             }
+
+            let d = {
+              sql: 134679330,
+              version: '4.022',
+              ids: `${routeId}`,
+            }
+            d = Object.assign({}, d, route)
+            let res = await fetchData({
+              url,
+              method: 'POST',
+              data: d
+            })
+
             this.existsIds.push(routeId)
           }
           this.doneList.push(item)
@@ -568,7 +598,7 @@
           for (let cost of costs.results) {
             let { vehicle_class_id } = cost
 
-            let jsonHandled = this.jsonHandler3(pricingJson, from_place, to_place, isPickup, airportInfo, vehicle_class_id)
+            let jsonHandled = await this.jsonHandler3(pricingJson, from_place, to_place, isPickup, airportInfo, vehicle_class_id)
 
             if (!jsonHandled) {
               item['note'] = 'no Fixed Price Zone'
@@ -628,6 +658,13 @@
             partnerInfo = {
               platform_name: 'China Ctrip API',
               partner_id: 2621,
+            }
+            break;
+          case 2692:
+            parentFleetId = 67743
+            partnerInfo = {
+              platform_name: 'emergingTravelGroup',
+              partner_id: 2692,
             }
             break;
           default:
@@ -699,8 +736,8 @@
         // INSERT INTO ride.spp_route (from_place, to_place, service_area_id, json, name,from_place_lat_lng, to_place_lat_lng, strategy_id, platform_name, partner_id, service_area_id_elife,from_address,to_address)VALUES ('{{from_place}}', '{{to_place}}',  {{service_area_id}}, '{{json}}', '{{name}}', '{{from_place_lat_lng}}', '{{to_place_lat_lng}}', {{strategy_id}}, '{{platform_name}}', {{partner_id}}, {{service_area_id_elife}},'{{from_address}}','{{to_address}}') limit 1;
 
         let d = Object.assign({}, {
-          sql: 134678935,
-          version: '1.2',
+          sql: 134679330,
+          version: '4.021',
         },
           route
         )
@@ -742,7 +779,8 @@
         return { isPickup, airportInfo, code: 0 }
       }
 
-      jsonHandler3(pricing, from_place, to_place, isPickup, airportInfo, vid) {
+      async jsonHandler3(pricing, from_place, to_place, isPickup, airportInfo, vid) {
+
         let { zones, vehicleClasses } = pricing
         if (!zones) return {
           code: 1
@@ -800,9 +838,67 @@
         if (pAmt) {
           res['pAmt'] = pAmt
         }
+
+        let rawOffset = await this.timeZoneHandler(pricing, airportInfo)
+        res['tz'] = rawOffset
         return res
       }
 
+
+      async addTz() {
+
+        for (let item of ids) {
+          let url = true ? urlProd : urlDev    // urlDev,urlProd
+
+          let { id, service_area_id } = item
+          let pricing = await getPricingJsonBySvcId(url, service_area_id)
+          debugger
+          let tz = await this.timeZoneHandler(pricing)
+          console.log(tz);
+
+          let res = await this.updateRoute([id], tz)
+        }
+
+      }
+
+
+
+      async timeZoneHandler(pricing, airportInfo) {
+        let rawOffset = pricing?.tz?.ros || undefined
+        if (rawOffset == undefined) {
+          let dateStr = this.getStandardDateTime()
+          let { lat, lng } = airportInfo
+          // get fake local utc
+          // let url = `${api[stage].maps}/timezones/location/date-time?loc=${lat},${lng}&dt=${dateStr}`
+          let url = `https://388bivap71.execute-api.us-east-2.amazonaws.com/prod/maps/timezones/location/date-time`
+          let res = await fetchData({
+            url,
+            method: 'GET',
+            data: {
+              loc: `${lat},${lng}`,
+              dt: `${dateStr}`
+            }
+          })
+          rawOffset = res?.timezone?.rawOffset
+        }
+        return rawOffset / 3600
+      }
+
+      getStandardDateTime() {
+        let date = new Date()
+        let t = date.toLocaleString('zh-CN')
+        let arr = t.split(' ')
+        let dateArr = arr[0].split('/')
+        let [y, m, d] = dateArr
+        if (m < 10) {
+          m = `0${m}`
+        }
+        if (d < 10) {
+          d = `0${d}`
+        }
+        let str = `${y}-${m}-${d} ${arr[1]}`
+        return str
+      }
 
 
       async insertAdj(url, prices) {
@@ -840,27 +936,24 @@
       }
 
 
-      async updateRoute() {
-
-        let ids = [
-        1700
-        ]
 
 
+      async updateRoute(ids = [], tz) {
+        ids = [899, 900]
         let idsStr = ids.join(',')
-        console.log(ids);
         let url = urlProd   // urlDev,urlProd
         let d = {
           sql: 134679330,
-          version: '1.83',
-          is_active: 99,
-          // batch: '10',
-          // strategy_id: 1,
+          version: '4.022',
+          is_active: '-5',
+          // tz,
+          batch: '0',
+          strategy_id: 1,
           // platform_name:'m.ctrip.com',
-          // from_address: '歐泰勒梅爾屈爾博韋中心大教堂',
-          // to_address:'歐泰勒梅爾屈爾博韋中心大教堂',
+          // from_address: this.addressHandler(start_place_address),
+          // to_address: this.addressHandler(end_place_address),
           // from_place:"那霸市区",
-          "json":'{"d_amt":"zones.0.prices.0.d_amt"}',
+          // "json":'{"d_amt":"zones.5.prices.0.d_amt"}',
           // "to_place":"奥克斯利Oxley",
           ids: idsStr,
         }
@@ -869,7 +962,7 @@
           method: 'POST',
           data: d
         })
-
+        return res
       }
 
       async getRoute(url, from, to, partner_id) {
@@ -878,7 +971,7 @@
           method: 'POST',
           data: {
             sql: 134679330,
-            version: '2.4',
+            version: '4.026',
             from_place: from,
             to_place: to,
             partner_id
@@ -887,6 +980,9 @@
 
         return res
       }
+
+
+    
 
 
 
@@ -917,7 +1013,7 @@
           let { isPickup, airportInfo } = airportInfoObj
 
 
-          let jsonHandled = this.jsonHandler3(pricingJson, from_place, to_place, isPickup, airportInfo)
+          let jsonHandled = await this.jsonHandler3(pricingJson, from_place, to_place, isPickup, airportInfo)
           if (!jsonHandled) {
             this.noInsertList.push(item)
             is_active = -1

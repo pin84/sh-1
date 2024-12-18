@@ -17332,8 +17332,6 @@ let partnerJson = {
 
 
 
-
-
 let aleadyInserta = [
   {
     "id": 1707,
@@ -17510,3 +17508,6 @@ let list = [
     "note": "airport has aleady exist"
   }
 ]
+
+//有问题的机场
+// IXU
