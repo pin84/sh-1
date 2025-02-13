@@ -19,17 +19,22 @@ async function getPricingJsonBySvcId(url, id) {
 
 async function getAirportInfo(url, code) {
   // select a.code3,ad.lat,ad.lng,a.radius from address ad left join airport a on code3 = '{{airport_code}}' where ad.id = a.address_id
-  let res = await fetchData({
-    url,
-    method: 'POST',
-    data: {
-      sql: 134678945,
-      version: '1.0',
-      airport_code: code
-    }
-  })
+  let res = caches[code]
+  if (!res) {
+    res = await fetchData({
+      url,
+      method: 'POST',
+      data: {
+        sql: 134678945,
+        version: '1.0',
+        airport_code: code
+      }
+    })
+  }
   return res
 }
+
+
 
 
 
@@ -66,19 +71,36 @@ function saveCSV(title, head, data) {
     })
 }
 
-
-
-
-
-
-
-
-async function getRouteById(id){
-    let d = {
-      sql:
-    }     
+function getStandardDateTime() {
+  let date = new Date()
+  let t = date.toLocaleString('zh-CN')
+  let arr = t.split(' ')
+  let dateArr = arr[0].split('/')
+  let [y, m, d] = dateArr
+  if (m < 10) {
+    m = `0${m}`
+  }
+  if (d < 10) {
+    d = `0${d}`
+  }
+  let str = `${y}-${m}-${d} ${arr[1]}`
+  return str
 }
 
+
+async function getRouteById(url, id) {
+  let res = await fetchData({
+    url,
+    method: 'POST',
+    data: {
+      sql: 134679330,
+      version: '4.030',
+      id
+    }
+  })
+
+  return res
+}
 
 
 
@@ -153,10 +175,10 @@ function hasSelfIntersect(polygon) {
   return false;
 }
 
-function polygonCheck(zones,zoneName) {
+function polygonCheck(zones, zoneName) {
   for (let item of zones) {
-    let { polygons,name } = item
-    if(name != zoneName) continue
+    let { polygons, name } = item
+    if (name != zoneName) continue
     if (polygons) {
       let flag = hasSelfIntersect(polygons)
       if (flag) return

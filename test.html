@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        function deepClone(obj, cache = new WeakMap()) {
+            // 如果是基本类型或 null，直接返回
+            if (obj === null || typeof obj !== 'object') {
+                return obj;
+            }
+
+            // 如果对象已经被克隆过，直接返回缓存的结果
+            if (cache.has(obj)) {
+                return cache.get(obj);
+            }
+
+            // 处理数组
+            if (Array.isArray(obj)) {
+                const clonedArray = [];
+                cache.set(obj, clonedArray); // 缓存当前对象
+                for (let item of obj) {
+                    clonedArray.push(deepClone(item, cache)); // 递归克隆数组元素
+                }
+                return clonedArray;
+            }
+
+            // 处理普通对象
+            const clonedObj = {};
+            cache.set(obj, clonedObj); // 缓存当前对象
+            for (let key in obj) {
+                if (obj.hasOwnProperty(key)) {
+                    clonedObj[key] = deepClone(obj[key], cache); // 递归克隆属性
+                }
+            }
+
+            return clonedObj;
+        }
+
+        // 示例
+        const obj = {
+            name: "Alice",
+            age: 25,
+            address: {
+                city: "New York",
+                zip: "10001"
+            },
+            hobbies: ["reading", "traveling"],
+            greet() {
+                console.log(`Hello, my name is ${this.name}`);
+            }
+        };
+
+        const clonedObj = deepClone(obj);
+        console.log(clonedObj);
+        clonedObj.greet(); // 输出: Hello, my name is Alice
+
+
+    </script>
+</body>
+
+</html>

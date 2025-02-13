@@ -15323,7 +15323,7 @@ let elifeFleetsNotRadius = [
 
 
 
-let partnerJson = {
+let partnerJsonProd = {
   "service_areas": {
     "sas_percent": [
       {
@@ -17447,66 +17447,61 @@ let aleadyInserta = [
   }
 ]
 
-let errorLista = [
-  {
-    "id": 18014,
-    "name": "Hatay",
-    "lat": 36.363345,
-    "lng": 36.284129,
-    "radius": 200000,
-    "bidding": null,
-    "inserted_at": "2023-02-01 09:44:26",
-    "last_updated_at": "2023-02-01 09:44:26",
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null,
-    "note": "no pricing json"
-  },
-  {
-    "id": 18512,
-    "name": "Uvero alto",
-    "lat": 18.808542,
-    "lng": -68.58138,
-    "radius": 41865,
-    "bidding": null,
-    "inserted_at": "2023-02-14 21:05:41",
-    "last_updated_at": "2023-02-14 21:05:41",
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": null,
-    "note": "no pricing json"
-  }
-]
+// let errorLista = [
+//   {
+//     "id": 18014,
+//     "name": "Hatay",
+//     "lat": 36.363345,
+//     "lng": 36.284129,
+//     "radius": 200000,
+//     "bidding": null,
+//     "inserted_at": "2023-02-01 09:44:26",
+//     "last_updated_at": "2023-02-01 09:44:26",
+//     "parent_fleet_id": 15,
+//     "unverified": null,
+//     "service_area_pricing_id": null,
+//     "note": "no pricing json"
+//   },
+//   {
+//     "id": 18512,
+//     "name": "Uvero alto",
+//     "lat": 18.808542,
+//     "lng": -68.58138,
+//     "radius": 41865,
+//     "bidding": null,
+//     "inserted_at": "2023-02-14 21:05:41",
+//     "last_updated_at": "2023-02-14 21:05:41",
+//     "parent_fleet_id": 15,
+//     "unverified": null,
+//     "service_area_pricing_id": null,
+//     "note": "no pricing json"
+//   }
+// ]
 
-let list = [
+let jayrideErrorList = [
   {
-    "id": 1707,
-    "name": "Aurangabad, India",
-    "lat": 19.867355,
-    "lng": 75.395796,
-    "radius": 250000,
-    "bidding": null,
-    "inserted_at": "2020-12-17 17:55:42",
-    "last_updated_at": "2024-02-17 14:57:48",
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": 124600,
-    "note": "airport has aleady exist"
+      "id": 26047,
+      "name": "Tenerife South Spain",
+      "lat": 28.046758,
+      "lng": -16.572530,
+      "radius": 150000,
+      "bidding": null,
+      "parent_fleet_id": 15,
+      "unverified": null,
+      "service_area_pricing_id": 245312
   },
+
   {
-    "id": 26047,
-    "name": "Tenerife South Spain",
-    "lat": 28.046758,
-    "lng": -16.57253,
-    "radius": 150000,
-    "bidding": null,
-    "inserted_at": "2023-07-06 18:30:40",
-    "last_updated_at": "2024-10-07 10:16:53",
-    "parent_fleet_id": 15,
-    "unverified": null,
-    "service_area_pricing_id": 245312,
-    "note": "airport has aleady exist"
-  }
+      "id": 1707,
+      "name": "Aurangabad, India",
+      "lat": 19.867355,
+      "lng": 75.395796,
+      "radius": 250000,
+      "bidding": null,
+      "parent_fleet_id": 15,
+      "unverified": null,
+      "service_area_pricing_id": 124600
+  },
 ]
 
 //有问题的机场

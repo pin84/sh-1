@@ -15340,7 +15340,7 @@ let elifeFleets = [
     "lat": 40.702590
   }
 ]
-let partnerJson = {
+let partnerJsonProd = {
   "service_areas": {
     "sas_percent": [
       {

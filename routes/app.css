@@ -1,0 +1,4 @@
+.demo-tabs {
+  display: flex;
+  flex-direction: column;
+}

@@ -36,13 +36,9 @@
     <div class='btn copy' class="btn">Copy</div>
   </div>
 
-
-
   <script src="../components.js"></script>
-  <!-- <script src="./jayride.js"></script> -->
-  <!-- <script src="./jayrideDev.js"></script> -->
-  <!-- <script src="./cityAirportText.js"></script> -->
-  <script src="./klook.js"></script>
+  <script src="./fleets.js"></script>
+
   <script>
     let copy = document.querySelector('.copy')
 
@@ -54,7 +50,19 @@
 
 
     let stage = 'DEV' // PROD,DEV
-    let partnerId = 28
+    let partnerId = 2
+
+
+    let allFleets = []
+    if (stage == 'DEV') {
+      allFleets = elifeFleetsDev
+    } else {
+      allFleets = elifeFleetsProd.concat(...elifeFleetsNotRadius)
+    }
+
+
+
+
     let fleetsInfo = {
       2692: {
         parent_fleet_id: stage == 'DEV' ? 62294 : 67743,
@@ -75,6 +83,22 @@
       28: {
         parent_fleet_id: stage == 'DEV' ? 64566 : 78568,
         parent_fleet_name: 'klookSupply'
+      },
+      2621: {
+        parent_fleet_id: stage == 'DEV' ? 60924 : 61654,
+        parent_fleet_name: 'ChinaCtripAPI'
+      },
+      2690: {
+        parent_fleet_id: stage == 'DEV' ? 45099 : 54928,
+        parent_fleet_name: 'Supply Cost'
+      },
+      39533: {
+        parent_fleet_id: stage == 'DEV' ? 64935 : 82594,
+        parent_fleet_name: 'almosaferSupply'
+      },
+      2: {
+        parent_fleet_id: stage == 'DEV' ? 65099 : 85191,
+        parent_fleet_name: 'bookingSupply'
       }
     }
 
@@ -83,12 +107,7 @@
       let url = stage == 'DEV' ? urlDev : urlProd  //urlDev,urlProd
       let i = 0
 
-      let allFleets = []
-      if (stage == 'DEV') {
-        allFleets = elifeFleetsDev.concat(...elifeFleetsNotRadiusDev)
-      } else {
-        allFleets = elifeFleets.concat(...elifeFleetsNotRadius)
-      }
+      debugger
 
       for (let fleet of allFleets) {
         console.log(`--- i ++------`, i++);
@@ -111,6 +130,7 @@
           continue
         }
 
+        
         let json = null
         if (service_area_pricing_id) {
           json = await getPricingJsonBySvcId(url, id)
@@ -154,7 +174,7 @@
         console.log('---after----', jsonHandled);
 
         let pricingStr = JSON.stringify(jsonHandled).replace(/\'/g, '\\\'')
-
+        debugger
         let res = null
         if (service_area_pricing_id) {
           res = await insertAndUpdate(url, pricingStr, LastFleetId)
@@ -353,9 +373,6 @@
     }
 
     async function jsonHandler(svcJson, oldJson) {
-
-      let partnerJson =  stage == 'DEV' ? partnerJsonDev : partnerJsonProd
-
       let mag_delta = partnerJson.service_areas?.mag_delta || []
       let ads_delta = partnerJson.service_areas?.ads_delta || []
       let sas_percent = partnerJson.service_areas?.sas_percent || []
@@ -366,9 +383,9 @@
 
       let sas = sas_percent.find(item => item.id == svcId)
       let vcs = sas?.vcs || []
-      let percent = sas?.percent 
-      let svcPercent =  Number(partnerPercent)
-      if(percent != undefined){
+      let percent = sas?.percent
+      let svcPercent = Number(partnerPercent)
+      if (percent != undefined) {
         svcPercent = percent
       }
 
@@ -380,47 +397,58 @@
         if (isClose != 'on') {
           delta = 0
         }
-        if(meet_n_greet != undefined){
+        if (meet_n_greet != undefined) {
           svcJson.pricing.meet_n_greet = addPicies(Number(meet_n_greet) + Number(delta), svcPercent)
         }
       }
 
       { //add_service
-        let { is_p, ts_p, cs_p } = svcJson.add_service || {}
-        let ads = ads_delta.find(item => item.id == svcId)
-
+        let { is_p, ts_p, cs_p, ma_p, lg_p } = svcJson.add_service || {}
+        let ads = ads_delta.find(item => item.id == svcId) || {}
+        
         if (is_p != undefined) {
-          // let { infant: { delta, switch: isClose } } = ads
           let delta = ads?.infant?.delta || 0
           let isClose = ads?.infant?.switch || 'off'
 
           if (isClose != 'on') {
             delta = 0
           }
-          // svcJson.add_service.is_p = (Number(is_p) + Number(delta)) * partnerPercent
           svcJson.add_service.is_p = addPicies(Number(is_p) + Number(delta), svcPercent)
         }
         if (ts_p != undefined) {
-          // let { toddler: { delta, switch: isClose } } = ads
           let delta = ads?.toddler?.delta || 0
           let isClose = ads?.toddler?.switch || 'off'
 
           if (isClose != 'on') {
             delta = 0
           }
-          // svcJson.add_service.ts_p = (Number(ts_p) + Number(delta)) * partnerPercent
           svcJson.add_service.ts_p = addPicies(Number(ts_p) + Number(delta), svcPercent)
         }
         if (cs_p != undefined) {
-          // let { child: { delta, switch: isClose } } = ads
-          let delta = ads?.child?.delta || 0
-          let isClose = ads?.child?.switch || 'off'
+          let delta = ads?.children?.delta || 0
+          let isClose = ads?.children?.switch || 'off'
           if (isClose != 'on') {
             delta = 0
           }
-          // svcJson.add_service.cs_p = (Number(cs_p) + Number(delta)) * partnerPercent
           svcJson.add_service.cs_p = addPicies(Number(cs_p) + Number(delta), svcPercent)
         }
+        if (ma_p != undefined) {
+          let delta = ads?.meal?.delta || 0
+          let isClose = ads?.meal?.switch || 'off'
+          if (isClose != 'on') {
+            delta = 0
+          }
+          svcJson.add_service.ma_p = addPicies(Number(ma_p) + Number(delta), svcPercent)
+        }
+        if (lg_p != undefined) {
+          let delta = ads?.lodge?.delta || 0
+          let isClose = ads?.lodge?.switch || 'off'
+          if (isClose != 'on') {
+            delta = 0
+          }
+          svcJson.add_service.lg_p = addPicies(Number(lg_p) + Number(delta), svcPercent)
+        }
+
       }
 
 
@@ -430,7 +458,7 @@
 
         { // pricing
           let { ranges, min_amount } = svcJson.pricing || {}
-        
+
           if (min_amount != undefined) {
             svcJson.pricing.min_amount = addPicies(min_amount, svcPercent)
           }
@@ -588,13 +616,13 @@
         }
 
 
-        {//add_service
-          let add_service = svcJson.add_service || {}
-          let keys = Object.keys(add_service)
-          for (let k of keys) {
-            add_service[k] = addPicies(add_service[k], svcPercent)
-          }
-        }
+        // {//add_service
+        //   let add_service = svcJson.add_service || {}
+        //   let keys = Object.keys(add_service)
+        //   for (let k of keys) {
+        //     add_service[k] = addPicies(add_service[k], svcPercent)
+        //   }
+        // }
 
         { //vehicleClasses
           let vehicleClasses = svcJson.vehicleClasses || []
@@ -675,6 +703,7 @@
 
       return svcJson
     }
+
 
 
     function percentTranslate(p) {

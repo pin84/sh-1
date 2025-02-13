@@ -19275,3 +19275,30 @@ let partnerJsonDev = {
     },
     "doNotDel": "doNotDel"
 }
+
+let klookErrorList = [
+
+    {
+        "id": 26047,
+        "name": "Tenerife South Spain",
+        "lat": 28.046758,
+        "lng": -16.572530,
+        "radius": 150000,
+        "bidding": null,
+        "parent_fleet_id": 15,
+        "unverified": null,
+        "service_area_pricing_id": 245312
+    },
+
+    {
+        "id": 1707,
+        "name": "Aurangabad, India",
+        "lat": 19.867355,
+        "lng": 75.395796,
+        "radius": 250000,
+        "bidding": null,
+        "parent_fleet_id": 15,
+        "unverified": null,
+        "service_area_pricing_id": 124600
+    },
+]

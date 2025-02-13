@@ -1,0 +1,37 @@
+// * {
+//     padding: 0;
+//     margin: 0;
+// }
+
+// #app {
+//     padding: 10px;
+//     padding-left: 50px;
+
+//     .box {
+//         // display: flex;
+//         // flex-direction: column;
+//         // align-items: flex-start;
+//         .el-button {
+//             margin-left: 0;
+//         }
+//         .btn {
+//             margin-bottom: 10px;
+//         }
+
+//         .add-route{
+
+//             border: 1px solid red;
+//         }
+//     }
+// }
+
+// .demo-tabs > .el-tabs__content {
+//     padding: 32px;
+//     color: #6b778c;
+//     font-size: 32px;
+//     font-weight: 600;
+//   }
+.demo-tabs{
+    display: flex;
+    flex-direction: column;
+}

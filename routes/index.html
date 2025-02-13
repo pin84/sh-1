@@ -1,0 +1,1038 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+
+  <link rel="stylesheet" href="./index.css">
+  <link rel="stylesheet" href="./app.css">
+  <script src="./vue.global.js"></script>
+  <script src="./index.full.js"></script>
+
+  <script src="../components.js"></script>
+  <script src="./index.js"></script>
+
+
+
+</head>
+
+<body>
+
+  <div id="app">
+
+    <el-tabs v-model="activeName" class="demo-tabs" @tab-click="handleClick">
+      <el-tab-pane label="copy routes" name="first">
+        <el-form :model="form" label-width="auto" style="max-width: 600px">
+          <el-form-item label="Route ids">
+            <el-input v-model="form.ids" type="textarea" />
+          </el-form-item>
+          <el-form-item label="to partner">
+            <el-select v-model="form.partnerId" placeholder="please select partner">
+              <el-option v-for="(item,index) in partnerIds" :label="item.id" :value="item.id" />
+            </el-select>
+          </el-form-item>
+          <el-form-item>
+            <el-button type="primary" @click="copyRoute">copy routes to other partner</el-button>
+            <!-- <el-button>Cancel</el-button> -->
+          </el-form-item>
+        </el-form>
+      </el-tab-pane>
+      <el-tab-pane label="addTz" name="second">
+        <el-button class="btn" type="primary" @click="addTz">addTz</el-button>
+      </el-tab-pane>
+      <el-tab-pane label="changeSvcID" name="changeSvcID">
+        <el-button class="btn" type="primary" @click="changeSvcID">changeSvcID</el-button>
+      </el-tab-pane>
+      <el-tab-pane label="change currency" name="change currency">
+        <el-button class="btn" type="primary" @click="changeCurrency">changeCurrency</el-button>
+      </el-tab-pane>
+      <el-tab-pane label="Task" name="fourth">
+        <el-button class="btn" type="primary" @click="updateRoute">updateRoute</el-button>
+        <el-button class="btn" type="primary" @click="addRoute">addRoute</el-button>
+        <el-button class="btn" type="primary" @click="addRoutePrice">addRoutePrice</el-button>
+        <el-button class="btn" type="primary" @click="createBarriers">createBarriers</el-button>
+        <el-button class="btn" type="primary" @click="setMng">setMng</el-button>
+        <el-button class="btn" type="primary" @click="setSpecialDate">setSpecialDate</el-button>
+        <el-button class="btn" type="primary" @click="addStrategy">addStrategy</el-button>
+        <el-button class="btn" type="primary" @click="updateStrategy">updateStrategy</el-button>
+
+      </el-tab-pane>
+
+    </el-tabs>
+
+  </div>
+</body>
+
+<script src="./data/bookingChangeSvcID.js"></script>
+
+
+<script setup>
+  const { createApp, ref, reactive, computed, watch, defineComponent, onMounted } = Vue;
+  const stage = 'PROD' //PROD,DEV
+  const url = stage == 'PROD' ? urlProd : urlDev
+  const crawl_state = '1'
+
+  const is_active = 11
+  const strategy_id = 1
+
+  let i = 0
+  let cache = {}
+  let partnerJson = null
+
+  const batch = 0
+  const partnerId = 2
+  let dList = stage == 'PROD' ? bookingRoute_2_9 : []
+
+
+
+
+  const app = createApp({
+    // components: { Parent },
+
+    methods: {
+
+      async changeCurrency() {
+
+        let svcList = []
+        // let partnerIds = [15,3, 2690, 2621, 2692, 5, 4, 28, 2, 1000]
+        let partnerIds = [15]
+        console.log(svcList);
+
+        for (let pid of partnerIds) {
+
+          // let { parentFleetId } = getPatnerInfo(pid, stage)
+          let parentFleetId = 15
+          for (let svc of svcList) {
+            console.log(`--${i++}---`)
+            let { name } = svc
+
+            let { id: fleetId } = await getFleetByName(url, name, parentFleetId)
+            if (!fleetId) {
+              this.noInsertList.push({
+                partnerId: pid,
+                name,
+                note: 'do not find service area'
+              })
+              continue
+            }
+
+            let pricingJson = await getLastPricingJsonBySvcId(url, fleetId)
+            if (!pricingJson) {
+              this.noInsertList.push({
+                partnerId: pid,
+                name,
+                note: 'do not have service area pricing'
+              })
+              continue
+            }
+
+            console.log('--befor--', pricingJson);
+
+
+            let fromCur = pricingJson.currencyCode
+
+            if (fromCur == 'USD') {
+              this.noInsertList.push({
+                partnerId: pid,
+                name,
+                note: 'the currency is already USD'
+              })
+              continue
+            }
+            let toCur = 'USD'
+            let rate = await getCurrencyRates(fromCur, toCur)
+
+            const targetFields = ["min_amount", "amount", 'delta_amount', 'meet_n_greet', "p_amt", "d_amt"];
+
+
+            let changedJson = this.updateFields(JSON.parse(JSON.stringify(pricingJson)), targetFields, rate, toCur)
+            changedJson['currencyCode'] = toCur
+            console.log('----changed---', changedJson);
+
+            debugger
+            let pricingStr = JSON.stringify(changedJson)
+            let res = await insertAndUpdate(url, pricingStr, fleetId)
+            if (!res) {
+              this.noInsertList.push({
+                partnerId: pid,
+                name,
+                note: 'Insert error'
+              })
+            } else {
+              this.doneList.push({
+                partnerId: pid,
+                name,
+              })
+            }
+          }
+        }
+
+        let date = new Date()
+        downLoadCSV(this.noInsertList, `no insert list`)
+        downLoadCSV(this.doneList, `doneList`)
+      },
+
+
+
+
+      updateFields(obj, targetFields, rate, currencyCode) {
+        if (typeof obj === "object" && obj !== null) {
+          for (let key in obj) {
+            if (key == 'currency') {
+              obj[key] = currencyCode
+            }
+            if (targetFields.includes(key) && typeof obj[key] === "number") {
+              obj[key] = Number((Number(obj[key]) * rate).toFixed(2));
+            } else if (typeof obj[key] === "object") {
+              this.updateFields(obj[key], targetFields, rate, currencyCode);
+            }
+          }
+        }
+        return obj
+      },
+
+      async changeSvcID() {
+        let { partnerInfo, parentFleetId } = getPatnerInfo(partnerId, stage)
+        for (let r of dList) {
+          console.log(`-----${i++}----`);
+          let { id, from_place, to_place } = r
+          let airportInfoObj = await getAirport(from_place, to_place)
+          let { code: airportSearchResCode } = airportInfoObj
+          if (airportSearchResCode > 0) {
+            if (airportSearchResCode == 1) {
+              item['note'] = 'No  airport'
+            } else {
+              item['note'] = 'From and to are both airports'
+            }
+            this.noInsertList.push(item)
+            continue
+          }
+          let { isPickup, airportInfo } = airportInfoObj
+          let airportCode = isPickup ? from_place : to_place
+
+          let str = `${parentFleetId}-${airportCode}`
+          let fleetInfo = cache[str]
+          if (!fleetInfo) {
+            fleetInfo = await getFleetIdAndPricingByAirport(url, airportCode, parentFleetId)
+
+          }
+          let { fleet_id, pricing, pricing_id } = fleetInfo
+          if (!fleet_id) {
+            item['note'] = 'NO fleet'
+            this.noInsertList.push(item)
+            continue
+          }
+
+          cache[str] = fleetInfo
+
+          let d = {
+            sql: 134679330,
+            version: '4.045',
+            is_active: '99',
+            service_area_id: fleet_id,
+            ids: `${id}`,
+          }
+          let res = await fetchData({
+            url,
+            method: 'POST',
+            data: d
+          })
+
+          let num = res['Affected rows']
+          if (num != 1) {
+            item['note'] = 'inser error'
+            this.noInsertList.push(item)
+          }
+
+        }
+
+        console.log('--noInsertList--', this.noInsertList);
+        console.log('--doneList--', this.doneList);
+        console.log('--this.existsIds--', this.existsIds);
+        console.log('--this.newRouteIds--', this.newRouteIds);
+
+
+
+        let date = new Date()
+        downLoadCSV(this.noInsertList, `${parentFleetId}-${date.toLocaleString()}- no insert list`)
+
+      },
+      handleClick(tab, event) {
+        console.log(tab, event)
+      },
+
+      loadCSV(e) {
+        console.log(e.target.files);
+      },
+
+      getDisableDate(pricingJson) {
+        let specialCharge = pricingJson?.specific_date_surcharge || []
+        let arr = []
+        for (let item of specialCharge) {
+          let { from_date, to_date } = item
+          if (!from_date || !to_date) continue
+          arr.push(`${from_date}/${to_date}`)
+        }
+        let dateStr = arr.join(',')
+        return dateStr
+      },
+
+      async setSpecialDate() {
+
+        dList = [
+          {
+            "id": 3248,
+            "service_area_id": 68514,
+            "is_active": 99
+          }
+        ]
+        for (let route of dList) {
+          console.log(`------${i++}-----`);
+
+          let { id, service_area_id } = route
+          let dateStr = cache[service_area_id]
+          if (!dateStr) {
+            let pricingJson = await getLastPricingJsonBySvcId(url, service_area_id)
+            let specialCharge = pricingJson?.specific_date_surcharge || []
+            let arr = []
+            for (let item of specialCharge) {
+              let { from_date, to_date } = item
+              if (!from_date || !to_date) continue
+              arr.push(`${from_date}/${to_date}`)
+            }
+            dateStr = arr.join(',')
+            cache[service_area_id] = dateStr
+          }
+
+          let d = {
+            sql: 134679330,
+            version: '4.045',
+            is_active: '99',
+            disable_date: dateStr,
+            ids: `${id}`,
+          }
+          let res = await fetchData({
+            url,
+            method: 'POST',
+            data: d
+          })
+        }
+      },
+
+      async updateRoute() {
+        let ids = [
+          // 2939,2940,2952,2957,2939,2940,2952,2957,4671,4672,4683,4684,4685,4686,4692,4695,4696,4697,4698,4701,4702,4703,4704,4705,4706,4715,4716,4717,4718,4719,4720
+
+          4305, 4306, 4307, 4308, 4309, 4310, 4311, 4312, 4313, 4314, 4315, 4316, 4317, 4318, 4319, 4320, 4321, 4322, 4323, 4324, 4325, 4326, 4327, 4328, 4329, 4330, 4331, 4332, 4333, 4334, 4335, 4336, 4337, 4338, 4339, 4340, 4341, 4342, 4343, 4344, 4345, 4346, 4347, 4348, 4349, 4350, 4351, 4352, 4353, 4354, 4355, 4356, 4357, 4358, 4359, 4360, 4361, 4362, 4363, 4364, 4365, 4366, 4367, 4368, 4369, 4370, 4371, 4372, 4374, 4375, 4376, 4378, 4379, 4380, 4381, 4382, 4383, 4384, 4386, 4387, 4388, 4389, 4390, 4391, 4392, 4394, 4395, 4396, 4397, 4398, 4399, 4400, 4401, 4402, 4404, 4405, 4406, 4407, 4408, 4409, 4410, 4411, 4412, 4413, 4414, 4415, 4416, 4417, 4418, 4419, 4420, 4421, 4422, 4423, 4424, 4425, 4426, 4427, 4428, 4429, 4430, 4431, 4432, 4433, 4434, 4435, 4436, 4437, 4438, 4439, 4440, 4441, 4442, 4443, 4444, 4445, 4446, 4447, 4448, 4449, 4450, 4451, 4452, 4453, 4454, 4455, 4456, 4457, 4458, 4459, 4460, 4461, 4462, 4463, 4464, 4465, 4466, 4467, 4468, 4469, 4470, 4471, 4472, 4473, 4474, 4475, 4476, 4477, 4478, 4479, 4480, 4481, 4482, 4483, 4484, 4485, 4486, 4487, 4488, 4489, 4490, 4491, 4492, 4493, 4494, 4495, 4496, 4497, 4498, 4499, 4500, 4501, 4502, 4503, 4504, 4505, 4506, 4507, 4508, 4509, 4510, 4511, 4512, 4513, 4514, 4515, 4516, 4517, 4518, 4519, 4520, 4521, 4522, 4523, 4524, 4525, 4526, 4527, 4528, 4529, 4530, 4531, 4532, 4533, 4534, 4535, 4536, 4537, 4538, 4539, 4540, 4541, 4542, 4543, 4544, 4545, 4546, 4547, 4548, 4549, 4550, 4551, 4552, 4553, 4554, 4555, 4556, 4557, 4558, 4559, 4560, 4561, 4562, 4563, 4564, 4565, 4566, 4567, 4568, 4569, 4570, 4571, 4572, 4573, 4574, 4575, 4576, 4577, 4578, 4579, 4580, 4581, 4582, 4583, 4584, 4585, 4586, 4587, 4588, 4589, 4590, 4591, 4592, 4593, 4594, 4595, 4596, 4597, 4598, 4599, 4600, 4601, 4602, 4603, 4604, 4605, 4606, 4607, 4608, 4609, 4610, 4611, 4612, 4613, 4614, 4615, 4616, 4617, 4618, 4619, 4620, 4621, 4622, 4623, 4624, 4625, 4626, 4627, 4628, 4629, 4630, 4631, 4632, 4633, 4634, 4635, 4636, 4637, 4638, 4639, 4640, 4641, 4642, 4643, 4644, 4645, 4646, 4647, 4648, 4649, 4650, 4651, 4652, 4653, 4654, 4655, 4656, 4657, 4658, 4659, 4660, 4661, 4662, 4663, 4664, 4665, 4666, 4667, 4668, 4669, 4670, 4673, 4674, 4675, 4676, 4677, 4678, 4679, 4680, 4681, 4682, 4687, 4688, 4689, 4690, 4691, 4693, 4694, 4699, 4700, 4707, 4708, 4709, 4710, 4711, 4712, 4713, 4714, 4721, 4722, 4723, 4724, 4725, 4726, 4727, 4728, 4729, 4730, 4731, 4732, 4733, 4734, 4735, 4736, 4737, 4738, 4739, 4740, 4741, 4742, 4743, 4744, 4745, 4746, 4747, 4748, 4749, 4750, 4751, 4752, 4753, 4754, 4755, 4756, 4757, 4758, 4759, 4760, 4761, 4762, 4763, 4764, 4765, 4766, 4767, 4768, 4769, 4770, 4771, 4772, 4773, 4774, 4775, 4776, 4777, 4778, 4779, 4780, 4781, 4782, 4783, 4784, 4785, 4786, 4787, 4788, 4789, 4790, 4791, 4792, 4793, 4794, 4795, 4796, 4797, 4798, 4799, 4800, 4801, 4802, 4803, 4804, 4805, 4806,
+
+        ]
+        console.log(ids);
+
+        let idsStr = ids.join(',')
+
+        let url = urlProd   // urlDev,urlProd
+        let d = {
+          sql: 134679330,
+          version: '4.045',
+          is_active: '99',
+          // tz,
+          batch: '22',
+          // strategy_id: 14,
+          // platform_name:'m.ctrip.com',
+          // from_address: this.addressHandler(start_place_address),
+          // to_address: addressHandler(add),
+          // from_place:"那霸市区",
+          // "json":'{"d_amt":"zones.15.prices.1.d_amt"}',
+          // "to_place":"奥克斯利Oxley",
+          ids: idsStr,
+        }
+        let res = await fetchData({
+          url,
+          method: 'POST',
+          data: d
+        })
+        return res
+      },
+
+
+      async copyRoute() {
+        let { ids, partnerId } = this.form
+        if (!partnerId || !ids) return
+        let idsArr = ids.split(',')
+        console.log(idsArr, partnerId);
+        let { partnerInfo, parentFleetId } = getPatnerInfo(partnerId, stage)
+        for (let id of idsArr) {
+          console.log(`----------${i++}----------`);
+
+          let item = await getRouteById(url, id)
+
+          let originalRouteId = item.id
+          delete item.id
+          let { from_place,
+            to_place,
+            service_area_id,
+            from_address,
+            to_address, service_area_id_elife } = item
+
+          let airportInfoObj = await getAirport(from_place, to_place)
+          let { code: airportSearchResCode } = airportInfoObj
+          if (airportSearchResCode > 0) {
+            if (airportSearchResCode == 1) {
+              item['note'] = 'No  airport'
+            } else {
+              item['note'] = 'From and to are both airports'
+            }
+            this.noInsertList.push(item)
+            continue
+          }
+          let { isPickup, airportInfo } = airportInfoObj
+          let airportCode = isPickup ? from_place : to_place
+          let { fleet_id, pricing } = await getFleetIdAndPricingByAirport(url, airportCode, parentFleetId)
+
+          let pricingJson = JSON.parse(pricing)
+          let jsonHandled = await jsonHandler3(pricingJson, from_place, to_place, isPickup, airportInfo)
+          let { adjJson, from_place_lat_lng, to_place_lat_lng, code, tz } = jsonHandled
+
+
+
+          if (code > 0) {
+            if (code == 2) {
+              item['note'] = 'There is a crossover in the fixed price circle'
+              this.noInsertList.push(item)
+            } else {
+              item['note'] = 'no Fixed Price Zone'
+              this.noInsertList.push(item)
+            }
+            continue
+          }
+
+
+          let route_info = {
+            service_area_id: fleet_id,
+            strategy_id: 1,
+            batch,
+            is_active,
+            crawl_state,
+            tz,
+            json: JSON.stringify(adjJson),
+            from_place_lat_lng: JSON.stringify(from_place_lat_lng),
+            to_place_lat_lng: JSON.stringify(to_place_lat_lng),
+            name: `${from_place}-${to_place}`
+          }
+
+          let route = Object.assign({}, item, route_info, partnerInfo)
+          route['service_area_id'] = fleet_id
+          console.log(route);
+
+          let routeInfo = await getRoute(url, from_place, to_place, partnerId)
+          let { id: routeId } = routeInfo
+          if (!routeId) {
+            let res = await insertSppRouteV2(url, route)
+            let { lastId } = res
+            routeId = lastId
+          }
+
+
+          this.newRouteIds.push(routeId)
+          let originalCost = await getCostProfit(url, originalRouteId)
+          let costs = []
+          let prices = []
+          for (let c of originalCost.results) {
+            c['route_id'] = routeId
+            costs.push(c)
+            let { vehicle_class_id } = c
+            let jsonHandled = await jsonHandler3(pricingJson, from_place, to_place, isPickup, airportInfo, vehicle_class_id)
+            let { pAmt } = jsonHandled
+            if (!pAmt) continue
+            prices.push({
+              price: pAmt,
+              route_id: routeId,
+              vehicle_class_id
+            })
+          }
+          console.log(prices);
+          console.log(costs);
+          let insertCostRes = await insertCost(url, costs)
+          let insertAdjRes = await insertAdj(url, prices)
+        }
+
+        this.form = {
+          ids: '',
+          partnerId: '',
+        }
+
+        let date = new Date()
+        downLoadCSV(this.noInsertList, `${parentFleetId}-${date.toLocaleString()}- no insert list`)
+      },
+
+
+
+
+      async addRoutePrice() {
+        let vehicles = getVehicles()
+        let cStr = ' Cost'
+        let pStr = ' min profit'
+        let mStr = ' Max'
+        let { parentFleetId, partnerInfo } = getPatnerInfo(partnerId, stage)
+        if (partnerId == 2 && !partnerJson) {
+          partnerJson = await getPartnerPricingJson(url, stage)
+          if (!partnerJson) {
+            throw new Error('errot')
+          }
+        }
+        console.log(dList);
+        let i = 0
+        for (let item of dList) {
+          console.log(`-------${i++}--------`);
+          let { from_zone: fz, to_zone: tz, service_area_id, from_place, to_place } = item
+
+          let from_zone = fz ? fz : from_place
+          let to_zone = tz ? tz : to_place
+
+          if (!from_zone || !to_zone) {
+            this.noInsertList.push(item)
+            continue
+          }
+
+          let { id: routeId } = await getRoute(url, from_zone, to_zone, partnerId)
+
+          if (!routeId) {
+            item['note'] = 'no route'
+            this.noInsertList.push(item)
+            continue
+          }
+
+          let airportInfoObj = await getAirport(from_zone, to_zone)
+          if (!airportInfoObj) {
+            item['note'] = 'No  airport'
+            this.noInsertList.push(item)
+            continue
+          }
+          let { isPickup, airportInfo } = airportInfoObj
+          let airportCode = isPickup ? from_zone : to_zone
+
+          let str = `${parentFleetId}-${airportCode}`
+          let fleetInfo = cache[str]
+          if (!fleetInfo) {
+            fleetInfo = await getFleetIdAndPricingByAirport(url, airportCode, parentFleetId)
+          }
+
+          let { fleet_id, pricing, pricing_id } = fleetInfo
+          if (!fleet_id) {
+            item['note'] = 'NO fleet'
+            this.noInsertList.push(item)
+            continue
+          }
+
+          cache[str] = fleetInfo
+
+
+
+
+
+          let pricingJson = JSON.parse(pricing)
+
+          let costs = []
+          let prices = []
+          for (let v of vehicles) {
+
+            let cost = item[`${v}${cStr}`]
+            let profit = item[`${v}${pStr}`]
+            let max = item[`${v}${mStr}`]
+            if (!cost) {
+              cost = '1000'
+            }
+
+            cost = Number(cost.replace(/\$/g, '').replace(/\,/g, ''))
+            if (!profit) {
+              profit = '0'
+            }
+            profit = Number(profit.replace(/\%/g, '')) / 100
+            if (max) {
+              max = Number(max.replace(/\$/g, ''))
+            }
+
+            let vid = vehicleList.find(vehicle => vehicle.vehicle_name == v).vehicle_id
+
+            let jsonHandled = await jsonHandler3(pricingJson, from_zone, to_zone, isPickup, airportInfo, vid)
+            if (!jsonHandled) {
+              item['note'] = 'no Fixed Price Zone'
+              this.noInsertList.push(item)
+              continue
+            }
+            let { pAmt } = jsonHandled
+            console.log('--', routeId, '--', v, '--', vid, '----', cost, '---', profit, '--', max, '---', pAmt);
+            if (pAmt && cost) {
+              let obj = {
+                route_id: routeId,
+                vehicle_class_id: vid,
+                cost,
+                profit
+              }
+
+              if (max) {
+                obj['max'] = max
+              }
+              if (partnerId == 2) {
+                let markup = getPartnerMarkup(partnerJson, fleet_id, vid)
+                let mng = await getMng(pricingJson, partnerJson)
+                obj = Object.assign({}, obj, {
+                  partner_markup: `${markup / 100}`,
+                  sla: '0',
+                  mng
+                })
+              }
+
+              costs.push(obj)
+
+              prices.push({
+                route_id: routeId,
+                vehicle_class_id: vid,
+                price: pAmt
+              })
+            }
+            this.doneList.push(routeId)
+          }
+          let insertCostRes = await insertCost(url, costs)
+          let insertAdjRes = await insertAdj(url, prices)
+        }
+
+        console.log('--this.noInsertList--', this.noInsertList);
+        let dones = Array.from(new Set(this.doneList))
+        console.log('--doneList--', dones);
+
+        let date = new Date()
+        downLoadCSV(this.noInsertList, `${parentFleetId}-${date.toLocaleString()}- no insert list`)
+
+      },
+
+      // need to add special date
+      async addRoute() {
+        let { parentFleetId, partnerInfo } = getPatnerInfo(partnerId, stage)
+        console.log(dList);
+        let i = 0
+        for (let item of dList) {
+          let { from_zone: fromZone, to_zone: toZone, from_detail_address, to_detail_address, from_place: fromPlace, to_place: toPlace, from_address: fromAddress, to_address: toAddress } = item
+          let from_zone = fromZone || fromPlace
+          let to_zone = toZone || toPlace
+          if (!to_zone || !from_zone) {
+            item['note'] = 'No from/to'
+            this.noInsertList.push(item)
+            continue
+          }
+          from_zone = from_zone.trim()
+          to_zone = to_zone.trim()
+
+          console.log(`-----${i++}----${from_zone}--${to_zone}`);
+          let from_address = from_detail_address || fromAddress || null
+          let to_address = to_detail_address || toAddress || null
+
+
+          if (!from_address || !to_address) {
+            item['note'] = 'No detailed address'
+            this.noInsertList.push(item)
+            continue
+          }
+
+          from_address = addressHandler(from_address)
+          to_address = addressHandler(to_address)
+          from_zone = addressHandler(from_zone)
+          to_zone = addressHandler(to_zone)
+
+
+          let airportInfoObj = await getAirport(from_zone, to_zone)
+          let { code: airportSearchResCode } = airportInfoObj
+          if (airportSearchResCode > 0) {
+            if (airportSearchResCode == 1) {
+              item['note'] = 'No  airport'
+            } else {
+              item['note'] = 'From and to are both airports'
+            }
+            this.noInsertList.push(item)
+            continue
+          }
+          let { isPickup, airportInfo } = airportInfoObj
+          let airportCode = isPickup ? from_zone : to_zone
+
+
+          let str = `${parentFleetId}-${airportCode}`
+          let fleetInfo = cache[str]
+          if (!fleetInfo) {
+            fleetInfo = await getFleetIdAndPricingByAirport(url, airportCode, parentFleetId)
+          }
+          let { fleet_id, pricing, pricing_id } = fleetInfo
+          if (!fleet_id) {
+            item['note'] = 'NO fleet'
+            this.noInsertList.push(item)
+            continue
+          }
+
+          cache[str] = fleetInfo
+
+          if (!pricing) {
+            item['note'] = 'no pricing json'
+            this.noInsertList.push(item)
+            continue
+          }
+          let pricingJson = JSON.parse(pricing)
+
+          let jsonHandled = await jsonHandler3(pricingJson, from_zone, to_zone, isPickup, airportInfo)
+          let { adjJson, from_place_lat_lng, to_place_lat_lng, code, tz } = jsonHandled
+
+          if (code > 0) {
+            if (code == 2) {
+              item['note'] = 'There is a crossover in the fixed price circle'
+              this.noInsertList.push(item)
+            } else {
+              item['note'] = 'no Fixed Price Zone'
+              this.noInsertList.push(item)
+            }
+            continue
+          }
+
+          let routeInfo = await getRoute(url, from_zone, to_zone, partnerId)
+          let { id: routeId } = routeInfo
+
+          let elifefleet = await getFleetIdByAirport(url, airportCode, stage == 'PROD' ? 15 : 40)
+
+          let disable_date = this.getDisableDate(pricingJson)
+
+          let route = {
+            from_place: from_zone,
+            to_place: to_zone,
+            service_area_id: fleet_id,
+
+            json: JSON.stringify(adjJson),
+            name: `${from_zone}-${to_zone}`,
+            from_place_lat_lng: JSON.stringify(from_place_lat_lng),
+            to_place_lat_lng: JSON.stringify(to_place_lat_lng),
+
+
+
+            service_area_id_elife: elifefleet.fleet_id,
+            from_address,
+            to_address,
+
+            strategy_id,
+            batch,
+            is_active,
+            tz,
+            crawl_state,
+            disable_date
+          }
+
+
+          route = Object.assign({}, route, partnerInfo)
+          console.log(route);
+          if (!routeId) {
+            let res = await insertSppRouteV2(url, route)
+            if (res) {
+              let { lastId } = res
+              routeId = lastId
+            }
+            this.newRouteIds.push(routeId)
+          } else {
+            route['id'] = routeId
+            let { is_active, batch, strategy_id } = routeInfo
+            if (is_active < 11) {
+              route['is_active'] = 11
+              route['batch'] = 0
+              route['strategy_id'] = 1
+            } else {
+              route['strategy_id'] = strategy_id
+              route['batch'] = batch
+              route['is_active'] = is_active
+            }
+            let d = {
+              sql: 134679330,
+              version: '4.045',
+              ids: `${routeId}`,
+            }
+            d = Object.assign({}, d, route)
+            let res = await fetchData({
+              url,
+              method: 'POST',
+              data: d
+            })
+
+            this.existsIds.push(routeId)
+          }
+          this.doneList.push(item)
+        }
+        console.log('--noInsertList--', this.noInsertList);
+        console.log('--doneList--', this.doneList);
+        console.log('--this.existsIds--', this.existsIds);
+        console.log('--this.newRouteIds--', this.newRouteIds);
+
+
+
+        let date = new Date()
+        downLoadCSV(this.noInsertList, `${parentFleetId}-${date.toLocaleString()}- no insert list`)
+      },
+
+
+      createBarriers() {
+        let isCircle = false
+        let barriers = []
+        let barriersLatLng = [
+          [20.596357940533963, -86.65671626151678],
+          [20.615400331443954, -86.89830037115604],
+          [20.35216745796691, -87.06232326664797],
+          [20.22694429941017, -86.98857653844227]
+        ]
+
+
+
+        points = []
+        for (let item of barriersLatLng) {
+          points.push({
+            lat: item[0],
+            lng: item[1],
+          })
+        }
+
+        let len = points.length
+        for (let i = 0; i < len; i++) {
+          let { lat: fromLat, lng: fromLng } = points[i]
+          let j = i + 1
+
+          let obj = {
+            a_lat: fromLat,
+            a_lng: fromLng,
+            a_cross: 0,
+          }
+
+          let nextObj = points[j]
+          if (nextObj) {
+            let { lat: toLat, lng: toLng } = nextObj
+            obj['b_lat'] = toLat
+            obj['b_lng'] = toLng
+            obj['b_cross'] = 0
+          } else {
+            if (isCircle) {
+              barriers.push(Object.assign({}, obj, {
+                b_lat: points[0].lat,
+                b_lng: points[0].lng,
+                b_cross: 0,
+              }))
+            }
+            continue
+          }
+          barriers.push(obj)
+        }
+        console.log(barriers);
+      },
+
+
+      async updateStrategy() {
+        let sql = {
+          sql: 134679330,
+          version: '2.3'
+        }
+
+        let strategy = {
+          "id": 14,
+          "name": "less1ToWinFloatC",
+          "description": "city airport taxis less1ToWinFloatC",
+          "rules": JSON.stringify([{
+            'name': 'step1',
+            'description': 'Adjust price to current price × 1.2 if price1 equals target vehicle and elife is first and has been first twice.',
+            'conditions': ['price1_equals_target_vehicle', 'elife_is_first', 'elife_has_been_first_twice'],
+            'action': 'adjust_price_to_current_price_times_1.2'
+          }, {
+            'name': 'step2',
+            'description': 'Adjust price to first price - 1 if elife is not first or if elife is first but price1 != target vehicle.',
+            'conditions': ['elife_is_not_first', 'elife_is_first_and_price1_not_equals_target_vehicle'],
+            'action': 'adjust_price_to_first_price_minus_1'
+          }, {
+            'name': 'step3',
+            'description': 'Adjust price to first price - 0.01 if elife is not first.',
+            'conditions': ['elife_is_not_first'],
+            'action': 'adjust_price_to_first_price_times_0.01'
+          }, {
+            'name': 'step4',
+            'description': 'Set price back to cost price if elife is not first.',
+            'conditions': ['elife_is_not_first'],
+            'action': 'set_price_to_cost'
+          }, {
+            'name': 'step5',
+            'description': 'Reset price to original price if elife is not first; calculate commission if elife is first.',
+            'conditions': ['elife_is_not_first', 'elife_is_first'],
+            'action': 'reset_price_to_original_or_calculate_commission'
+          }]),
+
+          "partner_id": 5,
+          "is_active": 1
+        }
+
+        let d = {
+          url,
+          method: 'POST',
+          data: Object.assign({}, sql, strategy)
+        }
+
+        let res = await fetchData(d)
+      },
+
+      async addTz() {
+        for (let item of dList) {
+          let { id, service_area_id, is_active } = item
+          let pricing = await getPricingJsonBySvcId(url, service_area_id)
+          let tz = await timeZoneHandler(pricing)
+          let d = {
+            sql: 134679330,
+            version: '4.045',
+            is_active,
+            tz,
+            ids: id,
+          }
+          let res = await fetchData({
+            url,
+            method: 'POST',
+            data: d
+          })
+        }
+      },
+
+
+      async addStrategy() {
+        let sql = {
+          sql: 134679330,
+          version: '2.31'
+        }
+
+
+
+
+        let strategy = {
+          "id": 14,
+          "name": "city airport taxis less1ToWinFloatC",
+          "description": "city airport taxis less1ToWinFloatC",
+          "rules":
+            [{
+              'name': 'step1',
+              'description': 'Adjust price to current price × 1.2 if price1 equals target vehicle and elife is first and has been first twice.',
+              'conditions': ['price1_equals_target_vehicle', 'elife_is_first', 'elife_has_been_first_twice'],
+              'action': 'adjust_price_to_current_price_times_1.2'
+            }, {
+              'name': 'step2',
+              'description': 'Adjust price to first price - 1 if elife is not first or if elife is first but price1 != target vehicle.',
+              'conditions': ['elife_is_not_first', 'elife_is_first_and_price1_not_equals_target_vehicle'],
+              'action': 'adjust_price_to_first_price_minus_1'
+            }, {
+              'name': 'step3',
+              'description': 'Adjust price to first price - 0.01 if elife is not first.',
+              'conditions': ['elife_is_not_first'],
+              'action': 'adjust_price_to_first_price_times_0.01'
+            }, {
+              'name': 'step4',
+              'description': 'Set price back to cost price if elife is not first.',
+              'conditions': ['elife_is_not_first'],
+              'action': 'set_price_to_cost'
+            }, {
+              'name': 'step5',
+              'description': 'Reset price to original price if elife is not first; calculate commission if elife is first.',
+              'conditions': ['elife_is_not_first', 'elife_is_first'],
+              'action': 'reset_price_to_original_or_calculate_commission'
+            }],
+          "partner_id": 5,
+          "is_active": 1
+        }
+
+
+        let d = {
+          url,
+          method: 'POST',
+          data: Object.assign({}, sql, strategy)
+        }
+
+        let res = await fetchData(d)
+
+
+      },
+      async setMng() {
+
+        for (let route of addMNG_12_26) {
+          console.log(`-------${i++}----`);
+          let { id: routeId, service_area_id } = route
+
+          let mng = mngCach[service_area_id]
+          if (!mng) {
+            let pricingJson = await getLastPricingJsonBySvcId(url, service_area_id)
+
+
+            console.log(pricingJson);
+            mng = pricingJson?.pricing?.meet_n_greet
+            mngCach[service_area_id] = mng
+          }
+
+          if (mng == undefined) {
+            route['note'] = 'there is no meet and greet in the service area'
+            this.noInsertList.push(route)
+            continue
+          }
+
+          let resCosts = await getCostProfit(url, routeId)
+          let costs = resCosts.results || []
+
+          for (let c of costs) {
+            // let { vehicle_class_id } = c
+            // let vehiclePercent = vcs.find(item => item.id == vehicle_class_id)
+            // let pm = vehiclePercent?.percent || partnerMarkup
+            // c['partner_markup'] = `${pm / 100}`
+            // c['sla'] = '0'
+            c['mng'] = `${mng}`
+          }
+
+          console.log(costs);
+          let insertCostRes = await insertCost(url, costs)
+        }
+      }
+
+    },
+
+    setup() {
+
+      const form = ref({
+        ids: '',
+        partnerId: '',
+      })
+
+      const activeName = ref('change currency')
+
+      const partnerIds = ref([
+        {
+          id: 2
+        }
+      ])
+      return {
+        abc: 1,
+        noInsertList: [],
+        existsIds: [],
+        doneList: [],
+        newRouteIds: [],
+        form,
+        activeName,
+        partnerIds
+
+
+      }
+    },
+
+
+
+
+  });
+
+
+
+
+
+  app.use(ElementPlus);
+
+  app.mount("#app");
+</script>
+
+</html>

@@ -1,0 +1,120 @@
+{
+    "id": "10a8d1d5-dcf8-4cc1-9afe-8bf8b7b90b7f",
+    "request": {
+        "origin": {
+            "latitude": 49.1905961,
+            "longitude": -122.8483246,
+            "name": "Civic Hotel, Autograph Collection, 13475 Central Ave, Surrey, BC V3T 0L8, Canada",
+            "city": "Surrey",
+            "country": "CA",
+            "postcode": "V3T 0L8",
+            "iata": null
+        },
+        "destination": {
+            "latitude": 48.4263175,
+            "longitude": -123.3634079,
+            "name": "728 Yates St, 728 Yates St, Victoria, BC V8W 0C8, Canada",
+            "city": "Victoria",
+            "country": "CA",
+            "postcode": "V8W 0C8",
+            "iata": null
+        },
+        "pickupDateTime": "2025-03-20T19:00:00Z",
+        "pickupTimezone": "America/Vancouver",
+        "currency": null,
+        "customerCountry": null,
+        "customerLanguage": null,
+        "drivingDistanceInKm": 112.31,
+        "passengers": 5,
+        "supplierPickupId": null,
+        "genius": {
+            "level": "GENIUS_ONE"
+        },
+        "service_area_id": 86649,
+        "country": "CAN"
+    },
+    "prices": [
+        {
+            "id": "9dbdef7c-ae96-4709-9139-5752c5638bdb",
+            "price": {
+                "transportCategory": "EXECUTIVEPEOPLECARRIER",
+                "price": {
+                    "salePriceMin": 407.27,
+                    "salePriceMax": 407.27,
+                    "currency": "USD"
+                },
+                "minPassengers": 1,
+                "maxPassengers": 5,
+                "features": [
+                    {
+                        "name": "noOfBags",
+                        "value": 5
+                    }
+                ],
+                "vehicle_class_id": 4
+            }
+        }
+    ],
+    "passenger": {
+        "salutation": " ",
+        "first_name": "Vivek",
+        "last_name": "Kaushik",
+        "cell_phone": "+971544421864"
+    },
+    "customerReference": "85164508",
+    "bookingReference": "89842568",
+    "legId": "89842568",
+    "services": [
+        {
+            "name": "meetAndGreetMessage",
+            "value": "Vivek Kaushik"
+        }
+    ],
+    "flightNumber": null,
+    "comment": null
+}
+
+
+[
+    {
+        "id": "9dbdef7c-ae96-4709-9139-5752c5638bdb",
+        "payload": "{\"transportCategory\": \"EXECUTIVEPEOPLECARRIER\", \"price\": {\"salePriceMin\": 407.27, \"salePriceMax\": 407.27, \"currency\": \"USD\"}, \"minPassengers\": 1, \"maxPassengers\": 5, \"features\": [{\"name\": \"noOfBags\", \"value\": 5}], \"vehicle_class_id\": 4}",
+        "req_id": "10a8d1d5-dcf8-4cc1-9afe-8bf8b7b90b7f",
+        "part": 5,
+        "inserted_at": "2025-02-10 02:26:38"
+    }
+]
+
+  {
+    "origin": {
+        "latitude": 49.1905961,
+        "longitude": -122.8483246,
+        "name": "Civic Hotel, Autograph Collection, 13475 Central Ave, Surrey, BC V3T 0L8, Canada",
+        "city": "Surrey",
+        "country": "CA",
+        "postcode": "V3T 0L8",
+        "iata": null
+    },
+    "destination": {
+        "latitude": 48.4263175,
+        "longitude": -123.3634079,
+        "name": "728 Yates St, 728 Yates St, Victoria, BC V8W 0C8, Canada",
+        "city": "Victoria",
+        "country": "CA",
+        "postcode": "V8W 0C8",
+        "iata": null
+    },
+    "pickupDateTime": "2025-03-20T19:00:00Z",
+    "pickupTimezone": "America/Vancouver",
+    "currency": null,
+    "customerCountry": null,
+    "customerLanguage": null,
+    "drivingDistanceInKm": 112.31,
+    "passengers": 5,
+    "supplierPickupId": null,
+    "genius": {
+        "level": "GENIUS_ONE"
+    },
+    "service_area_id": 86649,
+    "country": "CAN"
+}
