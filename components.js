@@ -1,7 +1,13 @@
 
 
+
+
 async function getPricingJsonBySvcId(url, id) {
   //  select pricing from fleet left join service_area_pricing s on  s.id = fleet.service_area_pricing_id where fleet.id = {{svc_id}}
+  let result = caches[id]
+  if (result) {
+    return result
+  }
   let d = {
     sql: 134678865,
     version: '1.1',
@@ -14,7 +20,14 @@ async function getPricingJsonBySvcId(url, id) {
     data: d,
     desc: 'get pricing json_id'
   })
-  return JSON.parse(res.pricing)
+
+  let {pricing} = res
+  if(!pricing){
+    return
+  }
+  result =  JSON.parse(res.pricing)
+  caches[id] = result
+  return result
 }
 
 async function getAirportInfo(url, code) {
@@ -207,6 +220,109 @@ function getDemandSupply(partner_id) {
   }
 
   return { supply_fleet_id, demand_fleet_id }
+}
+
+
+function getPatnerInfo(partnerId, stage) {
+  let partnerInfo = {}
+  let isProd = stage == 'PROD'
+  switch (partnerId) {
+    case 3:
+      partnerInfo = {
+        parentFleetId: isProd ? 51488 : 27672,
+        platform_name: 'Mozio',
+        partner_id: 3,
+        demand_fleet_id: 53422,
+        supply_fleet_id: 51488
+      }
+      break;
+    case 2621:
+      partnerInfo = {
+        parentFleetId: isProd ? 61654 : 60924,
+        platform_name: 'China Ctrip API',
+        partner_id: 2621,
+        demand_fleet_id: 24337,
+        supply_fleet_id: 61654
+      }
+      break;
+    case 2692:
+      partnerInfo = {
+        parentFleetId: isProd ? 67743 : 62294,
+        platform_name: 'emergingTravelGroup',
+        partner_id: 2692,
+        demand_fleet_id: 57395,
+        supply_fleet_id: 67743
+      }
+      break;
+    case 28:
+      partnerInfo = {
+        parentFleetId: isProd ? 78568 : 64566,
+        platform_name: 'klookSupply',
+        partner_id: 28,
+        demand_fleet_id: 1771,
+        supply_fleet_id: 78568
+      }
+      break;
+    case 5:
+      partnerInfo = {
+        parentFleetId: isProd ? 72105 : 63369,
+        platform_name: 'cityAirportTaxis',
+        partner_id: 5,
+        demand_fleet_id: 193,
+        supply_fleet_id: 72105
+      }
+      break;
+    case 2:
+      partnerInfo = {
+        parentFleetId: isProd ? 85191 : 65099,
+        platform_name: 'booking',
+        partner_id: 2,
+        demand_fleet_id: 18,
+        supply_fleet_id: 85191
+      }
+      break;
+    case 4:
+      partnerInfo = {
+        parentFleetId: isProd ? 75362 : 63625,
+        platform_name: 'Jayride',
+        partner_id: 4,
+        demand_fleet_id: 194,
+        supply_fleet_id: 75362
+      }
+      break;
+    case 2690:
+      partnerInfo = {
+        parentFleetId: isProd ? 54928 : 45099,
+        platform_name: 'Supply Cost',
+        partner_id: 2690,
+        demand_fleet_id: 56745,
+        supply_fleet_id: 15
+      }
+      break;
+    case 2588:
+      partnerInfo = {
+        parentFleetId: isProd ? 89496  : 65579,
+        parentFleetName:'hoppaSupply',
+        platform_name: 'Hoppa',
+        partner_id: 2588,
+        demand_fleet_id: 11104,
+        supply_fleet_id: 89496,
+      }
+      break;
+    // case 1000:
+    //   partnerInfo = {
+    //     parentFleetId: isProd ? 82594 : 64935,
+    //     platform_name: 'almosafer',
+    //     partner_id: 1000,
+    //     demand_fleet_id: 56745,
+    //     supply_fleet_id: 15
+    //   }
+    //   break;
+    default:
+      break;
+  }
+
+  return partnerInfo
 }
 
 

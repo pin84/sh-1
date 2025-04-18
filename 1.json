@@ -1,0 +1,214 @@
+{
+  "currencyCode": "THB",
+  "serviceArea": {
+      "name": "跨国",
+      "lat": 13.57367762894856,
+      "lng": 102.2530421449429,
+      "radius": 200000,
+      "parent_fleet_id": 40,
+      "id": 26940,
+      "parent_fleet_name": "Elife",
+      "pid": "40.1.1"
+  },
+  "airports": [
+      "BKK",
+      "DMK"
+  ],
+  "countryCode": "THA",
+  "pricing": {
+      "ranges": [
+          {
+              "seq": 0,
+              "amount": 2,
+              "currency": "THB",
+              "distance": 30000,
+              "from": 20000,
+              "to": 50000,
+              "distanceIn": 0,
+              "per_unit": 1,
+              "pid": "40.2.1"
+          }
+      ],
+      "currency": "THB",
+      "meet_n_greet": 19,
+      "min_amount": 10,
+      "min_distance": 20000
+  },
+  "vehicleClasses": [
+      {
+          "vehicle_class_id": 1,
+          "delta_amount": 0,
+          "percent": 0,
+          "hourly_percent": 0,
+          "hourly_delta": 0
+      },
+      {
+          "vehicle_class_id": 6,
+          "delta_amount": 0,
+          "percent": 0,
+          "hourly_percent": 0,
+          "hourly_delta": 0
+      },
+      {
+          "vehicle_class_id": 3,
+          "delta_amount": 0,
+          "percent": 0,
+          "hourly_percent": 0,
+          "hourly_delta": 0
+      },
+      {
+          "vehicle_class_id": 7,
+          "delta_amount": 0,
+          "percent": 0,
+          "hourly_percent": 0,
+          "hourly_delta": 0
+      }
+  ],
+  "tz": {
+      "dos": 0,
+      "ros": 25200,
+      "tzid": "Asia/Bangkok"
+  },
+  "date_surcharge_method": "sum",
+  "service_area_pricing_id": null,
+  "req_id": "f852f321-4072-7b2a-fb9f-6f32f4b5e48e",
+  "specific_date_surcharge": [
+      {
+          "from_date": "2025-01-07",
+          "to_date": "2025-01-10",
+          "currency": "THB",
+          "name": "Rule 1",
+          "zones": [],
+          "vehicle_classes": [
+              {
+                  "vehicle_class_ids": [],
+                  "percent": 0,
+                  "delta_amount": 0
+              }
+          ],
+          "routes": [
+              {
+                  "name": "Route 1",
+                  "type": 1,
+                  "from_zones": [
+                      {
+                          "name": "BKK",
+                          "type": "airport"
+                      },
+                      {
+                          "name": "DMK",
+                          "type": "airport"
+                      }
+                  ],
+                  "to_zones": [
+                      {
+                          "name": "serviceArea",
+                          "type": "zone"
+                      }
+                  ],
+                  "vehicle_classes": [
+                      {
+                          "vehicle_class_ids": [],
+                          "percent": 0,
+                          "delta_amount": 0
+                      }
+                  ],
+                  "vehicle_classes_date": [
+                      {
+                          "date_range": {
+                              "from": "00:00",
+                              "to": "23:05"
+                          },
+                          "vehicle_classes": [
+                              {
+                                  "vehicle_class_ids": [
+                                      1,
+                                      6,
+                                      3,
+                                      7
+                                  ],
+                                  "percent": 0,
+                                  "delta_amount": 200
+                              }
+                          ]
+                      }
+                  ]
+              }
+          ],
+          "pid": "40.8.1"
+      }
+  ],
+  "notice_time_rules": [
+      {
+          "zones": [],
+          "from_zones": [],
+          "to_zones": [],
+          "type": 1,
+          "ps": [
+              {
+                  "vc_ids": [],
+                  "notice_time": [
+                      {}
+                  ]
+              }
+          ],
+          "name": "Rule 1",
+          "pid": "40.6.1"
+      }
+  ],
+  "record": {
+      "max_zid": null
+  },
+  "hpd": {
+      "io_threshold": 0,
+      "return_fee": 0,
+      "rules": [
+          {
+              "io": 1,
+              "name": "Rule 1",
+              "zones": [
+                  "serviceArea"
+              ],
+              "over": {
+                  "hour_per_price": 3,
+                  "max_hour": 18000,
+                  "duration_per_price": 4,
+                  "max_duration": 400000
+              },
+              "ranges": [
+                  {
+                      "durations": [
+                          {
+                              "max": 400000,
+                              "amount": 500
+                          }
+                      ],
+                      "from": 0,
+                      "to": 600
+                  }
+              ],
+              "pid": "40.10.1"
+          }
+      ]
+  },
+  "zones": [],
+  "add_service": {
+      "is_p": 20
+  },
+  "pricing_schedule_sum": [
+      {
+          "notice_time_hint": [
+              "null",
+              "null",
+              "null",
+              "null",
+              "null",
+              "null",
+              "null"
+          ],
+          "vehicles": [],
+          "sname": "setting1",
+          "pid": "40.7.1"
+      }
+  ]
+}

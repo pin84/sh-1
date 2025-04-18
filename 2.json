@@ -1,120 +1,591 @@
 {
-    "id": "10a8d1d5-dcf8-4cc1-9afe-8bf8b7b90b7f",
-    "request": {
-        "origin": {
-            "latitude": 49.1905961,
-            "longitude": -122.8483246,
-            "name": "Civic Hotel, Autograph Collection, 13475 Central Ave, Surrey, BC V3T 0L8, Canada",
-            "city": "Surrey",
-            "country": "CA",
-            "postcode": "V3T 0L8",
-            "iata": null
-        },
-        "destination": {
-            "latitude": 48.4263175,
-            "longitude": -123.3634079,
-            "name": "728 Yates St, 728 Yates St, Victoria, BC V8W 0C8, Canada",
-            "city": "Victoria",
-            "country": "CA",
-            "postcode": "V8W 0C8",
-            "iata": null
-        },
-        "pickupDateTime": "2025-03-20T19:00:00Z",
-        "pickupTimezone": "America/Vancouver",
-        "currency": null,
-        "customerCountry": null,
-        "customerLanguage": null,
-        "drivingDistanceInKm": 112.31,
-        "passengers": 5,
-        "supplierPickupId": null,
-        "genius": {
-            "level": "GENIUS_ONE"
-        },
-        "service_area_id": 86649,
-        "country": "CAN"
-    },
-    "prices": [
-        {
-            "id": "9dbdef7c-ae96-4709-9139-5752c5638bdb",
-            "price": {
-                "transportCategory": "EXECUTIVEPEOPLECARRIER",
-                "price": {
-                    "salePriceMin": 407.27,
-                    "salePriceMax": 407.27,
-                    "currency": "USD"
-                },
-                "minPassengers": 1,
-                "maxPassengers": 5,
-                "features": [
-                    {
-                        "name": "noOfBags",
-                        "value": 5
-                    }
-                ],
-                "vehicle_class_id": 4
-            }
-        }
-    ],
-    "passenger": {
-        "salutation": " ",
-        "first_name": "Vivek",
-        "last_name": "Kaushik",
-        "cell_phone": "+971544421864"
-    },
-    "customerReference": "85164508",
-    "bookingReference": "89842568",
-    "legId": "89842568",
-    "services": [
-        {
-            "name": "meetAndGreetMessage",
-            "value": "Vivek Kaushik"
-        }
-    ],
-    "flightNumber": null,
-    "comment": null
-}
-
-
-[
-    {
-        "id": "9dbdef7c-ae96-4709-9139-5752c5638bdb",
-        "payload": "{\"transportCategory\": \"EXECUTIVEPEOPLECARRIER\", \"price\": {\"salePriceMin\": 407.27, \"salePriceMax\": 407.27, \"currency\": \"USD\"}, \"minPassengers\": 1, \"maxPassengers\": 5, \"features\": [{\"name\": \"noOfBags\", \"value\": 5}], \"vehicle_class_id\": 4}",
-        "req_id": "10a8d1d5-dcf8-4cc1-9afe-8bf8b7b90b7f",
-        "part": 5,
-        "inserted_at": "2025-02-10 02:26:38"
-    }
-]
-
-  {
-    "origin": {
-        "latitude": 49.1905961,
-        "longitude": -122.8483246,
-        "name": "Civic Hotel, Autograph Collection, 13475 Central Ave, Surrey, BC V3T 0L8, Canada",
-        "city": "Surrey",
-        "country": "CA",
-        "postcode": "V3T 0L8",
-        "iata": null
-    },
-    "destination": {
-        "latitude": 48.4263175,
-        "longitude": -123.3634079,
-        "name": "728 Yates St, 728 Yates St, Victoria, BC V8W 0C8, Canada",
-        "city": "Victoria",
-        "country": "CA",
-        "postcode": "V8W 0C8",
-        "iata": null
-    },
-    "pickupDateTime": "2025-03-20T19:00:00Z",
-    "pickupTimezone": "America/Vancouver",
-    "currency": null,
-    "customerCountry": null,
-    "customerLanguage": null,
-    "drivingDistanceInKm": 112.31,
-    "passengers": 5,
-    "supplierPickupId": null,
-    "genius": {
-        "level": "GENIUS_ONE"
-    },
-    "service_area_id": 86649,
-    "country": "CAN"
+  "currencyCode": "THB",
+  "serviceArea": {
+      "name": "跨国",
+      "lat": 13.57367762894856,
+      "lng": 102.2530421449429,
+      "radius": 200000,
+      "parent_fleet_id": 40,
+      "id": 26940,
+      "parent_fleet_name": "Elife",
+      "pid": "40.1.1"
+  },
+  "airports": [
+      "BKK",
+      "DMK"
+  ],
+  "countryCode": "THA",
+  "pricing": {
+      "ranges": [
+          {
+              "seq": 0,
+              "amount": 2,
+              "currency": "THB",
+              "distance": 30000,
+              "from": 20000,
+              "to": 50000,
+              "distanceIn": 0,
+              "per_unit": 1,
+              "pid": "40.2.1"
+          }
+      ],
+      "currency": "THB",
+      "meet_n_greet": 19,
+      "min_amount": 10,
+      "min_distance": 20000
+  },
+  "vehicleClasses": [
+      {
+          "vehicle_class_id": 1,
+          "delta_amount": 0,
+          "percent": 0,
+          "hourly_percent": 0,
+          "hourly_delta": 0
+      },
+      {
+          "vehicle_class_id": 6,
+          "delta_amount": 0,
+          "percent": 0,
+          "hourly_percent": 0,
+          "hourly_delta": 0
+      },
+      {
+          "vehicle_class_id": 3,
+          "delta_amount": 0,
+          "percent": 0,
+          "hourly_percent": 0,
+          "hourly_delta": 0
+      },
+      {
+          "vehicle_class_id": 7,
+          "delta_amount": 0,
+          "percent": 0,
+          "hourly_percent": 0,
+          "hourly_delta": 0
+      },
+      {
+          "vehicle_class_id": 12,
+          "delta_amount": 0,
+          "percent": 0,
+          "hourly_percent": 0,
+          "hourly_delta": 0
+      },
+      {
+          "vehicle_class_id": 41,
+          "delta_amount": 0,
+          "percent": 0,
+          "hourly_percent": 0,
+          "hourly_delta": 0
+      },
+      {
+          "vehicle_class_id": 2,
+          "delta_amount": 0,
+          "percent": 0,
+          "hourly_percent": 0,
+          "hourly_delta": 0
+      },
+      {
+          "vehicle_class_id": 14,
+          "delta_amount": 0,
+          "percent": 0,
+          "hourly_percent": 0,
+          "hourly_delta": 0
+      },
+      {
+          "vehicle_class_id": 42,
+          "delta_amount": 0,
+          "percent": 0,
+          "hourly_percent": 0,
+          "hourly_delta": 0
+      },
+      {
+          "vehicle_class_id": 40,
+          "delta_amount": 0,
+          "percent": 0,
+          "hourly_percent": 0,
+          "hourly_delta": 0
+      },
+      {
+          "vehicle_class_id": 111,
+          "delta_amount": 0,
+          "percent": 0,
+          "hourly_percent": 0,
+          "hourly_delta": 0
+      },
+      {
+          "vehicle_class_id": 110,
+          "delta_amount": 0,
+          "percent": 0,
+          "hourly_percent": 0,
+          "hourly_delta": 0
+      },
+      {
+          "vehicle_class_id": 109,
+          "delta_amount": 0,
+          "percent": 0,
+          "hourly_percent": 0,
+          "hourly_delta": 0
+      },
+      {
+          "vehicle_class_id": 103,
+          "delta_amount": 0,
+          "percent": 0,
+          "hourly_percent": 0,
+          "hourly_delta": 0
+      },
+      {
+          "vehicle_class_id": 102,
+          "delta_amount": 0,
+          "percent": 0,
+          "hourly_percent": 0,
+          "hourly_delta": 0
+      },
+      {
+          "vehicle_class_id": 101,
+          "delta_amount": 0,
+          "percent": 0,
+          "hourly_percent": 0,
+          "hourly_delta": 0
+      },
+      {
+          "vehicle_class_id": 18,
+          "delta_amount": 0,
+          "percent": 0,
+          "hourly_percent": 0,
+          "hourly_delta": 0
+      },
+      {
+          "vehicle_class_id": 43,
+          "delta_amount": 0,
+          "percent": 0,
+          "hourly_percent": 0,
+          "hourly_delta": 0
+      },
+      {
+          "vehicle_class_id": 44,
+          "delta_amount": 0,
+          "percent": 0,
+          "hourly_percent": 0,
+          "hourly_delta": 0
+      },
+      {
+          "vehicle_class_id": 45,
+          "delta_amount": 0,
+          "percent": 0,
+          "hourly_percent": 0,
+          "hourly_delta": 0
+      },
+      {
+          "vehicle_class_id": 46,
+          "delta_amount": 0,
+          "percent": 0,
+          "hourly_percent": 0,
+          "hourly_delta": 0
+      },
+      {
+          "vehicle_class_id": 47,
+          "delta_amount": 0,
+          "percent": 0,
+          "hourly_percent": 0,
+          "hourly_delta": 0
+      },
+      {
+          "vehicle_class_id": 13,
+          "delta_amount": 0,
+          "percent": 0,
+          "hourly_percent": 0,
+          "hourly_delta": 0
+      },
+      {
+          "vehicle_class_id": 48,
+          "delta_amount": 0,
+          "percent": 0,
+          "hourly_percent": 0,
+          "hourly_delta": 0
+      },
+      {
+          "vehicle_class_id": 49,
+          "delta_amount": 0,
+          "percent": 0,
+          "hourly_percent": 0,
+          "hourly_delta": 0
+      },
+      {
+          "vehicle_class_id": 4,
+          "delta_amount": 0,
+          "percent": 0,
+          "hourly_percent": 0,
+          "hourly_delta": 0
+      },
+      {
+          "vehicle_class_id": 108,
+          "delta_amount": 0,
+          "percent": 0,
+          "hourly_percent": 0,
+          "hourly_delta": 0
+      },
+      {
+          "vehicle_class_id": 20,
+          "delta_amount": 0,
+          "percent": 0,
+          "hourly_percent": 0,
+          "hourly_delta": 0
+      },
+      {
+          "vehicle_class_id": 36,
+          "delta_amount": 0,
+          "percent": 0,
+          "hourly_percent": 0,
+          "hourly_delta": 0
+      },
+      {
+          "vehicle_class_id": 52,
+          "delta_amount": 0,
+          "percent": 0,
+          "hourly_percent": 0,
+          "hourly_delta": 0
+      },
+      {
+          "vehicle_class_id": 19,
+          "delta_amount": 0,
+          "percent": 0,
+          "hourly_percent": 0,
+          "hourly_delta": 0
+      },
+      {
+          "vehicle_class_id": 50,
+          "delta_amount": 0,
+          "percent": 0,
+          "hourly_percent": 0,
+          "hourly_delta": 0
+      },
+      {
+          "vehicle_class_id": 21,
+          "delta_amount": 0,
+          "percent": 0,
+          "hourly_percent": 0,
+          "hourly_delta": 0
+      },
+      {
+          "vehicle_class_id": 22,
+          "delta_amount": 0,
+          "percent": 0,
+          "hourly_percent": 0,
+          "hourly_delta": 0
+      },
+      {
+          "vehicle_class_id": 23,
+          "delta_amount": 0,
+          "percent": 0,
+          "hourly_percent": 0,
+          "hourly_delta": 0
+      },
+      {
+          "vehicle_class_id": 24,
+          "delta_amount": 0,
+          "percent": 0,
+          "hourly_percent": 0,
+          "hourly_delta": 0
+      },
+      {
+          "vehicle_class_id": 27,
+          "delta_amount": 0,
+          "percent": 0,
+          "hourly_percent": 0,
+          "hourly_delta": 0
+      },
+      {
+          "vehicle_class_id": 25,
+          "delta_amount": 0,
+          "percent": 0,
+          "hourly_percent": 0,
+          "hourly_delta": 0
+      },
+      {
+          "vehicle_class_id": 26,
+          "delta_amount": 0,
+          "percent": 0,
+          "hourly_percent": 0,
+          "hourly_delta": 0
+      },
+      {
+          "vehicle_class_id": 28,
+          "delta_amount": 0,
+          "percent": 0,
+          "hourly_percent": 0,
+          "hourly_delta": 0
+      },
+      {
+          "vehicle_class_id": 8,
+          "delta_amount": 0,
+          "percent": 0,
+          "hourly_percent": 0,
+          "hourly_delta": 0
+      },
+      {
+          "vehicle_class_id": 5,
+          "delta_amount": 0,
+          "percent": 0,
+          "hourly_percent": 0,
+          "hourly_delta": 0
+      },
+      {
+          "vehicle_class_id": 10,
+          "delta_amount": 0,
+          "percent": 0,
+          "hourly_percent": 0,
+          "hourly_delta": 0
+      },
+      {
+          "vehicle_class_id": 9,
+          "delta_amount": 0,
+          "percent": 0,
+          "hourly_percent": 0,
+          "hourly_delta": 0
+      },
+      {
+          "vehicle_class_id": 11,
+          "delta_amount": 0,
+          "percent": 0,
+          "hourly_percent": 0,
+          "hourly_delta": 0
+      },
+      {
+          "vehicle_class_id": 51,
+          "delta_amount": 0,
+          "percent": 0,
+          "hourly_percent": 0,
+          "hourly_delta": 0
+      },
+      {
+          "vehicle_class_id": 56,
+          "delta_amount": 0,
+          "percent": 0,
+          "hourly_percent": 0,
+          "hourly_delta": 0
+      },
+      {
+          "vehicle_class_id": 57,
+          "delta_amount": 0,
+          "percent": 0,
+          "hourly_percent": 0,
+          "hourly_delta": 0
+      },
+      {
+          "vehicle_class_id": 29,
+          "delta_amount": 0,
+          "percent": 0,
+          "hourly_percent": 0,
+          "hourly_delta": 0
+      },
+      {
+          "vehicle_class_id": 30,
+          "delta_amount": 0,
+          "percent": 0,
+          "hourly_percent": 0,
+          "hourly_delta": 0
+      },
+      {
+          "vehicle_class_id": 31,
+          "delta_amount": 0,
+          "percent": 0,
+          "hourly_percent": 0,
+          "hourly_delta": 0
+      },
+      {
+          "vehicle_class_id": 32,
+          "delta_amount": 0,
+          "percent": 0,
+          "hourly_percent": 0,
+          "hourly_delta": 0
+      },
+      {
+          "vehicle_class_id": 38,
+          "delta_amount": 0,
+          "percent": 0,
+          "hourly_percent": 0,
+          "hourly_delta": 0
+      },
+      {
+          "vehicle_class_id": 37,
+          "delta_amount": 0,
+          "percent": 0,
+          "hourly_percent": 0,
+          "hourly_delta": 0
+      },
+      {
+          "vehicle_class_id": 33,
+          "delta_amount": 0,
+          "percent": 0,
+          "hourly_percent": 0,
+          "hourly_delta": 0
+      },
+      {
+          "vehicle_class_id": 39,
+          "delta_amount": 0,
+          "percent": 0,
+          "hourly_percent": 0,
+          "hourly_delta": 0
+      },
+      {
+          "vehicle_class_id": 34,
+          "delta_amount": 0,
+          "percent": 0,
+          "hourly_percent": 0,
+          "hourly_delta": 0
+      },
+      {
+          "vehicle_class_id": 35,
+          "delta_amount": 0,
+          "percent": 0,
+          "hourly_percent": 0,
+          "hourly_delta": 0
+      },
+      {
+          "vehicle_class_id": 58,
+          "delta_amount": 0,
+          "percent": 0,
+          "hourly_percent": 0,
+          "hourly_delta": 0
+      },
+      {
+          "vehicle_class_id": 59,
+          "delta_amount": 0,
+          "percent": 0,
+          "hourly_percent": 0,
+          "hourly_delta": 0
+      },
+      {
+          "vehicle_class_id": 60,
+          "delta_amount": 0,
+          "percent": 0,
+          "hourly_percent": 0,
+          "hourly_delta": 0
+      },
+      {
+          "vehicle_class_id": 61,
+          "delta_amount": 0,
+          "percent": 0,
+          "hourly_percent": 0,
+          "hourly_delta": 0
+      },
+      {
+          "vehicle_class_id": 62,
+          "delta_amount": 0,
+          "percent": 0,
+          "hourly_percent": 0,
+          "hourly_delta": 0
+      },
+      {
+          "vehicle_class_id": 63,
+          "delta_amount": 0,
+          "percent": 0,
+          "hourly_percent": 0,
+          "hourly_delta": 0
+      },
+      {
+          "vehicle_class_id": 64,
+          "delta_amount": 0,
+          "percent": 0,
+          "hourly_percent": 0,
+          "hourly_delta": 0
+      },
+      {
+          "vehicle_class_id": 99,
+          "delta_amount": 0,
+          "percent": 0,
+          "hourly_percent": 0,
+          "hourly_delta": 0
+      },
+      {
+          "vehicle_class_id": 107,
+          "delta_amount": 0,
+          "percent": 0,
+          "hourly_percent": 0,
+          "hourly_delta": 0
+      }
+  ],
+  "tz": {
+      "dos": 0,
+      "ros": 25200,
+      "tzid": "Asia/Bangkok"
+  },
+  "date_surcharge_method": "sum",
+  "service_area_pricing_id": null,
+  "req_id": "247d10db-3176-4ac8-95a3-3dcff0461089",
+  "specific_date_surcharge": [],
+  "notice_time_rules": [
+      {
+          "type": 1,
+          "name": "Rule 1",
+          "pid": "40.6.1"
+      }
+  ],
+  "hpd": {
+      "io_threshold": 0,
+      "return_fee": 0,
+      "rules": [
+          {
+              "io": 1,
+              "name": "Rule 1",
+              "zones": [
+                  "serviceArea"
+              ],
+              "over": {
+                  "hour_per_price": 3,
+                  "max_hour": 18000,
+                  "duration_per_price": 4,
+                  "max_duration": 400000
+              },
+              "ranges": [
+                  {
+                      "durations": [
+                          {
+                              "max": 400000,
+                              "amount": 500
+                          }
+                      ],
+                      "from": 0,
+                      "to": 600
+                  }
+              ],
+              "pid": "40.10.1"
+          }
+      ]
+  },
+  "add_service": {
+      "is_p": 20
+  },
+  "pricing_schedule_sum": [
+      {
+          "notice_time_hint": [
+              "null",
+              "null",
+              "null",
+              "null",
+              "null",
+              "null",
+              "null"
+          ],
+          "sname": "setting1",
+          "pid": "40.7.1"
+      }
+  ],
+  "hint": [
+      {
+          "notice_time_hint": [
+              {
+                  "curUnit": "%",
+                  "notice_time": {
+                      "percent": 0,
+                      "time": 0,
+                      "allowance": 0
+                  }
+              }
+          ]
+      }
+  ],
+  "record": {
+      "max_zid": null
+  }
 }

@@ -143,10 +143,7 @@
 
           let { place_id: from_place_id } = fromList[0]
           let fromDetail = await this.getDetailByPlaceId(from_place_id)
-          // }
 
-          // let toDetail = this.addrCache[`${to}`]
-          // if (!toDetail) {
           let toList = await this.getAddrList(to.addr)
           if (!toList.length) {
             addr['pricing'] = []
@@ -155,7 +152,6 @@
           }
           let to_place_id = toList[0].place_id
           let toDetail = await this.getDetailByPlaceId(to_place_id)
-          // }
 
 
           let { lat: fLat, lng: fLng } = fromDetail

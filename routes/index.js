@@ -1,6 +1,7 @@
 
 
 
+
 async function jsonHandler3(pricing, from_place, to_place, isPickup, airportInfo, vid) {
   let { zones, vehicleClasses } = pricing
   if (!zones) return {
@@ -40,7 +41,7 @@ async function jsonHandler3(pricing, from_place, to_place, isPickup, airportInfo
       let field = null
       let n = null
 
-      if (p_amt && d_amt) {
+      if (p_amt != undefined && d_amt != undefined) {
         let pamtOrDamt = isPickup ? 'p_amt' : 'd_amt'
         field = percent_appendix.find(item => item.field == `zones.${index}.prices.${idx}.${pamtOrDamt}`)
         n = Number(isPickup ? p_amt : d_amt)
@@ -78,8 +79,7 @@ async function jsonHandler3(pricing, from_place, to_place, isPickup, airportInfo
     res['pAmt'] = pAmt
   }
 
-  let rawOffset = await timeZoneHandler(pricing, airportInfo)
-  res['tz'] = rawOffset
+ 
   return res
 }
 
@@ -121,8 +121,19 @@ async function getCurrencyRates(fromCur, toCur) {
 }
 
 async function getAirport(from_place, to_place) {
-  let fromAirportInfo = await getAirportInfo(urlProd, from_place)
-  let toAirportInfo = await getAirportInfo(urlProd, to_place)
+
+  let fromAirportInfo = caches[from_place]
+
+  if (!fromAirportInfo) {
+    fromAirportInfo = await getAirportInfo(urlProd, from_place)
+  }
+  let toAirportInfo = caches[to_place]
+
+  if (!toAirportInfo) {
+    toAirportInfo = await getAirportInfo(urlProd, to_place)
+  }
+
+
 
   if (fromAirportInfo.code3 && toAirportInfo.code3) {
     return { code: 2 }
@@ -146,7 +157,7 @@ async function insertSppRouteV2(url, route) {
 
   let d = Object.assign({}, {
     sql: 134679330,
-    version: '4.046',
+    version: '4.055',
   },
     route
   )
@@ -272,83 +283,6 @@ async function insertCost(url, costs) {
 
 
 
-function getPatnerInfo(partnerId, stage) {
-  let parentFleetId = stage == 'PROD' ? '' : 40
-  let partnerInfo = {}
-
-  switch (partnerId) {
-    case 3:
-      parentFleetId = stage == 'PROD' ? 51488 : 27672
-      partnerInfo = {
-        platform_name: 'Mozio',
-        partner_id: 3,
-      }
-      break;
-    case 2621:
-      parentFleetId = stage == 'PROD' ? 61654 : 60924
-      partnerInfo = {
-        platform_name: 'China Ctrip API',
-        partner_id: 2621,
-      }
-      break;
-    case 2692:
-      parentFleetId = stage == 'PROD' ? 67743 : 62294
-      partnerInfo = {
-        platform_name: 'emergingTravelGroup',
-        partner_id: 2692,
-      }
-      break;
-    case 28:
-      parentFleetId = stage == 'PROD' ? 78568 : 64566
-      partnerInfo = {
-        platform_name: 'klookSupply',
-        partner_id: 28,
-      }
-      break;
-    case 5:
-      parentFleetId = stage == 'PROD' ? 72105 : 63369
-      partnerInfo = {
-        platform_name: 'cityAirportTaxis',
-        partner_id: 5,
-      }
-      break;
-    case 2:
-      parentFleetId = stage == 'PROD' ? 85191 : 65099
-      partnerInfo = {
-        platform_name: 'bookingSupply',
-        partner_id: 2,
-      }
-      break;
-    case 4:
-      parentFleetId = stage == 'PROD' ? 75362 : 63625
-      partnerInfo = {
-        platform_name: 'jayrideSupply',
-        partner_id: 4,
-      }
-      break;
-    case 2690:
-      parentFleetId = stage == 'PROD' ? 54928 : 45099
-      partnerInfo = {
-        platform_name: 'Supply Cost',
-        partner_id: 2690,
-      }
-      break;
-    case 1000:
-      parentFleetId = stage == 'PROD' ? 82594 : 64935
-      partnerInfo = {
-        platform_name: 'almosafer',
-        partner_id: 1000,
-      }
-      break;
-    default:
-      break;
-  }
-
-  return {
-    parentFleetId,
-    partnerInfo
-  }
-}
 
 async function getFleetByName(url, name, parentFleetId) {
   let str = `${parentFleetId}-${name}`
@@ -443,11 +377,10 @@ async function getLastPricingJsonBySvcId(url, svcId) {
     }
   })
   let { pricing } = res
-  if(!pricing){
-    pricing  = await getLatPricingJsonAndFleeNotJsonId(url, svcId)
+  if (!pricing) {
+    pricing = await getLatPricingJsonAndFleeNotJsonId(url, svcId)
   }
-  if(!pricing) return
-
+  if (!pricing) return
   return JSON.parse(pricing)
 }
 
@@ -468,7 +401,7 @@ async function getLatPricingJsonAndFleeNotJsonId(url, svcId) {
 
   if (pricing) {
     return pricing
-  } 
+  }
 }
 
 async function getFleetIdByAirport(url, airport, parent_fleet_id) {
@@ -488,36 +421,79 @@ async function getFleetIdByAirport(url, airport, parent_fleet_id) {
 
 function getVehicles() {
   let vehicles = [
-    'Sedan',
-    'Comfort Sedan',
-    'Business Sedan',
-    'MPV-4',
-    'MPV-5',
-    'Business Minivan',
-    'Business SUV',
-    'Minibus-8',
-    'Minibus-10',
-    'Minibus-12',
-    'Minibus-14'
+    {
+      name: 'Sedan',
+      id: 1
+    },
+
+    {
+      name: 'Comfort Sedan',
+      id: 12
+    },
+
+    {
+      name: 'Business Sedan',
+      id: 2
+    },
+
+    {
+      name: 'MPV-4',
+      id: 6
+    },
+
+    {
+      name: 'MPV-5',
+      id: 3
+    },
+
+    {
+      name: 'Business Minivan',
+      id: 36
+    },
+    {
+      name: 'Business SUV',
+      id: 4
+    },
+    {
+      name: 'Minibus-6',
+      id: 5
+    },
+    {
+      name: 'Minibus-7',
+      id: 8
+    },
+    {
+      name: 'Minibus-8',
+      id: 5
+    },
+    {
+      name: 'Minibus-10',
+      id: 9
+    },
+    {
+      name: 'Minibus-12',
+      id: 10
+    },
+    {
+      name: 'Minibus-14',
+      id: 11
+    }
+
   ]
 
   return vehicles
 }
 
 async function timeZoneHandler(pricing, airportInfo) {
-  let svcId = pricing.serviceArea.id
-  let rawOffset = cache[svcId]
-  if (pricing.tz) {
-    rawOffset = pricing.tz.ros
-  }
-  if (rawOffset == undefined) {
+  let { tzid } = pricing?.tz || {}
+  debugger
+  if (tzid == undefined) {
     let dateStr = getStandardDateTime()
     if (!airportInfo) {
       airportInfo = await getAirportInfo(urlProd, pricing.airports[0])
     }
 
     let { lat, lng } = airportInfo
-
     let url = `https://388bivap71.execute-api.us-east-2.amazonaws.com/prod/maps/timezones/location/date-time`
     let res = await fetchData({
       url,
@@ -527,21 +503,7 @@ async function timeZoneHandler(pricing, airportInfo) {
         dt: `${dateStr}`
       }
     })
-    rawOffset = res?.timezone?.rawOffset
-    cache[svcId] = rawOffset
+    tzid = res?.timezone?.timeZoneId
   }
-  let sign = '+'
-  if (rawOffset < 0) {
-    sign = '-'
-  }
-  let temTz = Math.abs(rawOffset) / 3600
-  let arr = String(temTz).split('.')
-  let [hours, minutes] = arr
-  if (minutes == 5) {
-    minutes = '30'
-  } else {
-    minutes = '00'
-  }
-  let tz = `${sign}${String(hours).padStart(2, '0')}:${minutes}`;
-  return tz
+  return tzid
 }

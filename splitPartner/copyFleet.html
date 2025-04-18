@@ -49,8 +49,8 @@
     let errorList = []
 
 
-    let stage = 'DEV' // PROD,DEV
-    let partnerId = 2
+    let stage = 'PROD' // PROD,DEV
+    let partnerId = 2588
 
 
     let allFleets = []
@@ -62,53 +62,15 @@
 
 
 
-
-    let fleetsInfo = {
-      2692: {
-        parent_fleet_id: stage == 'DEV' ? 62294 : 67743,
-        parent_fleet_name: 'emergingTravelGroup'
-      },
-      5: {
-        parent_fleet_id: stage == 'DEV' ? 63369 : 72105,
-        parent_fleet_name: 'CityAirportTaxisSupply'
-      },
-      4: {
-        parent_fleet_id: stage == 'DEV' ? 63625 : 75362,
-        parent_fleet_name: 'jayrideSupply'
-      },
-      3: {
-        parent_fleet_id: stage == 'DEV' ? 27672 : 51488,
-        parent_fleet_name: '3_elife'
-      },
-      28: {
-        parent_fleet_id: stage == 'DEV' ? 64566 : 78568,
-        parent_fleet_name: 'klookSupply'
-      },
-      2621: {
-        parent_fleet_id: stage == 'DEV' ? 60924 : 61654,
-        parent_fleet_name: 'ChinaCtripAPI'
-      },
-      2690: {
-        parent_fleet_id: stage == 'DEV' ? 45099 : 54928,
-        parent_fleet_name: 'Supply Cost'
-      },
-      39533: {
-        parent_fleet_id: stage == 'DEV' ? 64935 : 82594,
-        parent_fleet_name: 'almosaferSupply'
-      },
-      2: {
-        parent_fleet_id: stage == 'DEV' ? 65099 : 85191,
-        parent_fleet_name: 'bookingSupply'
-      }
-    }
-
     copy.addEventListener('click', async () => {
-      let { parent_fleet_id, parent_fleet_name, } = fleetsInfo[partnerId]
+
       let url = stage == 'DEV' ? urlDev : urlProd  //urlDev,urlProd
       let i = 0
 
-      debugger
 
+      let { parentFleetId, parentFleetName, } = getPatnerInfo(partnerId,stage)
+
+      debugger
       for (let fleet of allFleets) {
         console.log(`--- i ++------`, i++);
         debugger
@@ -120,9 +82,9 @@
 
 
         fleet.name = fleet.name.replace(/\'/g, '\\\'')
-        let LastFleetId = await this.getFleetIdByName(url, fleet.name, parent_fleet_id)
+        let LastFleetId = await this.getFleetIdByName(url, fleet.name, parentFleetId)
         if (!LastFleetId) {
-          let { LastrowId } = await this.insertFleet(url, fleet, parent_fleet_id)
+          let { LastrowId } = await this.insertFleet(url, fleet, parentFleetId)
           LastFleetId = LastrowId
         }
         if (!LastFleetId) {
@@ -130,7 +92,7 @@
           continue
         }
 
-        
+
         let json = null
         if (service_area_pricing_id) {
           json = await getPricingJsonBySvcId(url, id)
@@ -156,7 +118,7 @@
         let airports = json.airports || []
         if (airports.length) {
           for (let airport of airports) {
-            let { AffectedRows } = await this.insertAirportFleet(url, parent_fleet_id, LastFleetId, [airport])
+            let { AffectedRows } = await this.insertAirportFleet(url, parentFleetId, LastFleetId, [airport])
             if (!AffectedRows) {
               fleet['note'] = 'airport has aleady exist'
               aleadyInsert.push(fleet)
@@ -166,8 +128,8 @@
 
         let jsonHandled = await jsonHandler(JSON.parse(JSON.stringify(json)), json)
 
-        jsonHandled.serviceArea['parent_fleet_id'] = parent_fleet_id
-        jsonHandled.serviceArea['parent_fleet_name'] = parent_fleet_name
+        jsonHandled.serviceArea['parent_fleet_id'] = parentFleetId
+        jsonHandled.serviceArea['parent_fleet_name'] = parentFleetName
         jsonHandled.serviceArea['id'] = LastFleetId
         jsonHandled['service_area_pricing_id'] = null
 
@@ -405,7 +367,7 @@
       { //add_service
         let { is_p, ts_p, cs_p, ma_p, lg_p } = svcJson.add_service || {}
         let ads = ads_delta.find(item => item.id == svcId) || {}
-        
+
         if (is_p != undefined) {
           let delta = ads?.infant?.delta || 0
           let isClose = ads?.infant?.switch || 'off'
@@ -746,6 +708,50 @@
       // }
       return v
     }
+
+    
+    // let fleetsInfo = {
+    //   2692: {
+    //     parent_fleet_id: stage == 'DEV' ? 62294 : 67743,
+    //     parent_fleet_name: 'emergingTravelGroup'
+    //   },
+    //   5: {
+    //     parent_fleet_id: stage == 'DEV' ? 63369 : 72105,
+    //     parent_fleet_name: 'CityAirportTaxisSupply'
+    //   },
+    //   4: {
+    //     parent_fleet_id: stage == 'DEV' ? 63625 : 75362,
+    //     parent_fleet_name: 'jayrideSupply'
+    //   },
+    //   3: {
+    //     parent_fleet_id: stage == 'DEV' ? 27672 : 51488,
+    //     parent_fleet_name: '3_elife'
+    //   },
+    //   28: {
+    //     parent_fleet_id: stage == 'DEV' ? 64566 : 78568,
+    //     parent_fleet_name: 'klookSupply'
+    //   },
+    //   2621: {
+    //     parent_fleet_id: stage == 'DEV' ? 60924 : 61654,
+    //     parent_fleet_name: 'ChinaCtripAPI'
+    //   },
+    //   2690: {
+    //     parent_fleet_id: stage == 'DEV' ? 45099 : 54928,
+    //     parent_fleet_name: 'Supply Cost'
+    //   },
+    //   39533: {
+    //     parent_fleet_id: stage == 'DEV' ? 64935 : 82594,
+    //     parent_fleet_name: 'almosaferSupply'
+    //   },
+    //   2: {
+    //     parent_fleet_id: stage == 'DEV' ? 65099 : 85191,
+    //     parent_fleet_name: 'bookingSupply'
+    //   },
+    //   2588: {
+    //     parent_fleet_id: stage == 'DEV' ? 65099 : 85191,
+    //     parent_fleet_name: 'bookingSupply'
+    //   }
+    // }
   </script>
 </body>
 

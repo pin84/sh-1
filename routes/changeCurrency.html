@@ -37,15 +37,9 @@
         <el-button class="btn" type="primary" @click="changeSvcID">changeSvcID</el-button>
       </el-tab-pane>
       <el-tab-pane label="change currency" name="change currency">
-        <el-form :model="changeCurrencyData" label-width="auto" style="max-width: 600px">
-          <el-form-item label="service area id">
-            <el-input v-model="changeCurrencyData.svcId" />
-          </el-form-item>
-          <el-form-item label="from currency">
-            <el-input v-model="changeCurrencyData.fromCur" />
-          </el-form-item>
-          <el-form-item label="to currency">
-            <el-input v-model="changeCurrencyData.toCur" />
+        <el-form :model="form" label-width="auto" style="max-width: 600px">
+          <el-form-item label="Activity name">
+            <el-input v-model="form.name" />
           </el-form-item>
         </el-form>
         <el-button class="btn" type="primary" @click="changeCurrency">changeCurrency</el-button>
@@ -79,7 +73,7 @@
     </el-tabs>
   </div>
 </body>
-<script src="./data/d_4_16.js"></script>
+<script src="./data/d_tem.js"></script>
 <script setup>
   const { createApp, ref, reactive, computed, watch, defineComponent, onMounted } = Vue;
   const stage = 'PROD' //PROD,DEV
@@ -95,8 +89,8 @@
 
 
   const batch = 0
-  const partnerId = 2
-  let dList = stage == 'PROD' ? booking : []
+  const partnerId = 2692
+  let dList = stage == 'PROD' ? data_4_10 : []
 
 
 
@@ -228,7 +222,6 @@
       },
 
       async addToYouXuan() {
-        ids = [4837,4838]
         for (let id of ids) {
           let d = {
             sql: 134679330,
@@ -496,36 +489,77 @@
       },
 
       async changeCurrency() {
-        let { fromCur, toCur, svcId } = this.changeCurrencyData
-        console.log(fromCur, toCur, svcId);
-        let ids = svcId.split(',')
-        debugger
-        for (let fleetId of ids) {
-          let pricingJson = await getLastPricingJsonBySvcId(url, fleetId)
-          if (!pricingJson) {
-            this.noInsertList.push({
-              partnerId: pid,
-              name,
-              note: 'do not have service area pricing'
-            })
-            continue
-          }
-          console.log('--befor--', pricingJson);
-          let rate = await getCurrencyRates(fromCur, toCur)
-          const targetFields = ["min_amount", "amount", 'delta_amount', 'meet_n_greet', "p_amt", "d_amt"];
-          let changedJson = this.updateFields(JSON.parse(JSON.stringify(pricingJson)), targetFields, rate, toCur)
-          changedJson['currencyCode'] = toCur
-          console.log('----changed---', changedJson);
 
-          let pricingStr = JSON.stringify(changedJson)
-          let res = await insertAndUpdate(url, pricingStr, fleetId)
-          let total_affected_rows = res?.['total_affected_rows'] || 0
-          if (!total_affected_rows) {
-            this.noInsertList.push({
-              partnerId: pid,
-              name,
-              note: 'Insert error'
-            })
+        let svcList = []
+        // let partnerIds = [15,3, 2690, 2621, 2692, 5, 4, 28, 2, 1000]
+        let partnerIds = [15]
+        console.log(svcList);
+
+        for (let pid of partnerIds) {
+
+          // let { parentFleetId } = getPatnerInfo(pid, stage)
+          let parentFleetId = 15
+          for (let svc of svcList) {
+            console.log(`--${i++}---`)
+            let { name } = svc
+
+            let { id: fleetId } = await getFleetByName(url, name, parentFleetId)
+            if (!fleetId) {
+              this.noInsertList.push({
+                partnerId: pid,
+                name,
+                note: 'do not find service area'
+              })
+              continue
+            }
+
+            // let pricingJson = await getLastPricingJsonBySvcId(url, fleetId)
+            if (!pricingJson) {
+              this.noInsertList.push({
+                partnerId: pid,
+                name,
+                note: 'do not have service area pricing'
+              })
+              continue
+            }
+
+            console.log('--befor--', pricingJson);
+
+
+            let fromCur = pricingJson.currencyCode
+
+            if (fromCur == 'USD') {
+              this.noInsertList.push({
+                partnerId: pid,
+                name,
+                note: 'the currency is already USD'
+              })
+              continue
+            }
+            let toCur = 'USD'
+            let rate = await getCurrencyRates(fromCur, toCur)
+
+            const targetFields = ["min_amount", "amount", 'delta_amount', 'meet_n_greet', "p_amt", "d_amt"];
+
+
+            let changedJson = this.updateFields(JSON.parse(JSON.stringify(pricingJson)), targetFields, rate, toCur)
+            changedJson['currencyCode'] = toCur
+            console.log('----changed---', changedJson);
+
+            let pricingStr = JSON.stringify(changedJson)
+            let res = await insertAndUpdate(url, pricingStr, fleetId)
+            if (!res) {
+              this.noInsertList.push({
+                partnerId: pid,
+                name,
+                note: 'Insert error'
+              })
+            } else {
+              this.doneList.push({
+                partnerId: pid,
+                name,
+              })
+            }
           }
         }
 
@@ -674,7 +708,7 @@
 
       async updateRoute() {
         let ids = [
-        9,14,1356,1358,1377,2152
+          5137, 5139
         ]
         console.log(ids);
 
@@ -684,15 +718,15 @@
         let d = {
           sql: 134679330,
           version: '4.045',
-          is_active: '-5',
+          is_active: '99',
           // tz,
-          batch: '0',
-          strategy_id: 1,
+          // batch: '24',
+          // strategy_id: 1,
           // crawl_state:'0',
           // platform_name:'m.ctrip.com',
           // from_address: this.addressHandler(start_place_address),
           // to_address: addressHandler(add),
-          // from_place: "千叶",
+          from_place: "千叶",
           // "json": '{"d_amt":"zones.1.prices.0.d_amt"}',
           // "to_place":"千叶",
           ids: idsStr,
@@ -743,7 +777,7 @@
           let jsonHandled = await jsonHandler3(pricingJson, from_place, to_place, isPickup, airportInfo)
           let { adjJson, from_place_lat_lng, to_place_lat_lng, code, tz } = jsonHandled
 
-          let rawOffset = await timeZoneHandler(pricingJson, airportInfo)
+
 
           if (code > 0) {
             if (code == 2) {
@@ -763,7 +797,7 @@
             batch,
             is_active,
             crawl_state,
-            tz_id:rawOffset,
+            tz,
             json: JSON.stringify(adjJson),
             from_place_lat_lng: JSON.stringify(from_place_lat_lng),
             to_place_lat_lng: JSON.stringify(to_place_lat_lng),
@@ -906,6 +940,7 @@
             let { name: v, id } = vehicleInfo
 
             let cost = sameCosts.find(sc => sc.vehicle_class_id == id)?.cost
+            debugger
             if (!cost) {
               cost = Number(item[`${v}${cStr}`].replace(/\$/g, '').replace(/\,/g, '')) || 1000
             }
@@ -983,9 +1018,6 @@
       },
 
 
-      async createRout(){
-
-      },
 
 
 
@@ -1059,7 +1091,7 @@
         let jsonHandled = await jsonHandler3(pricingJson, from_zone, to_zone, isPickup, airportInfo)
         let { adjJson, from_place_lat_lng, to_place_lat_lng, code } = jsonHandled
 
-        let rawOffset = await timeZoneHandler(pricingJson, airportInfo)
+        let rawOffset = await timeZoneHandler(pricing, airportInfo)
 
 
         if (code > 0) {
@@ -1073,8 +1105,13 @@
           return
         }
 
+        let routeInfo = await getRoute(url, from_zone, to_zone, partner_id)
+        let { id: routeId } = routeInfo
+
         let elifefleet = await getFleetIdByAirport(url, airportCode, stage == 'PROD' ? 15 : 40)
+
         let disable_date = this.getDisableDate(pricingJson)
+
         let route = {
           from_place: from_zone,
           to_place: to_zone,
@@ -1084,6 +1121,8 @@
           name: `${from_zone}-${to_zone}`,
           from_place_lat_lng: JSON.stringify(from_place_lat_lng),
           to_place_lat_lng: JSON.stringify(to_place_lat_lng),
+
+
 
           service_area_id_elife: elifefleet.fleet_id,
           from_address,
@@ -1100,12 +1139,11 @@
           partner_id,
           platform_name
         }
+
+
         route = Object.assign({}, route)
         console.log(route);
         debugger
-        
-        let routeInfo = await getRoute(url, from_zone, to_zone, partner_id)
-        let { id: routeId } = routeInfo
         if (!routeId) {
           let res = await insertSppRouteV2(url, route)
           if (res) {
@@ -1526,7 +1564,7 @@
         partnerId: '',
       })
 
-      const activeName = ref('change currency')
+      const activeName = ref('checkRoutes')
 
       const partnerIds = ref([
         {
@@ -1540,13 +1578,6 @@
         boundRadius: 200000
       })
 
-
-      const changeCurrencyData = ref({
-        fromCur: 'USD',
-        toCur: 'JPY',
-        svcId: 0
-      })
-
       return {
         abc: 1,
         noInsertList: [],
@@ -1556,8 +1587,8 @@
         form,
         activeName,
         partnerIds,
-        originLatLng,
-        changeCurrencyData
+        originLatLng
+
       }
     },
 
