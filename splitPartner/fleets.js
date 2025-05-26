@@ -15260,101 +15260,1264 @@ let elifeFleetsNotRadius = [
 
 
 let partnerJson = {
+  "percent": 35,
+  "fallback": {
+      "demand_fleet_id": 63270,
+      "supply_fleet_id": 15
+  },
   "service_areas": {
-    "sas_percent": [
-      {
-        "id": 69,
-        "percent": "10"
-      },
-      {
-        "id": 72,
-        "percent": "10"
-      },
-      {
-        "id": 1039,
-        "percent": "30"
-      },
-      {
-        "id": 623,
-        "percent": "10"
-      },
-      {
-        "id": 365,
-        "percent": "0"
-      },
-      {
-        "id": 447,
-        "percent": "0"
-      },
-      {
-        "id": 185,
-        "percent": "0"
-      },
-      {
-        "id": 929,
-        "percent": "0"
-      },
-      {
-        "id": 45,
-        "percent": "0"
-      },
-      {
-        "id": 41,
-        "percent": "0"
-      },
-      {
-        "id": 986,
-        "percent": "0"
-      },
-      {
-        "id": 152,
-        "percent": "0"
-      },
-      {
-        "id": 1169,
-        "percent": "10"
-      },
-      {
-        "id": 430,
-        "percent": "15"
-      },
-      {
-        "id": 346,
-        "percent": "25"
-      },
-      {
-        "id": 1235,
-        "percent": "0"
-      },
-      {
-        "id": 325,
-        "percent": "20"
-      },
-      {
-        "id": 134,
-        "percent": "20"
-      },
-      {
-        "id": "1054",
-        "percent": "50"
-      },
-      {
-        "id": "1058",
-        "percent": "50"
-      },
-      {
-        "id": "15384",
-        "percent": "50"
-      },
-      {
-        "id": "1059",
-        "percent": "50"
-      },
-      {
-        "id": "1061",
-        "percent": "50"
-      }
-    ]
+      "ads_delta": [
+          {
+              "id": "94",
+              "infant": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "on"
+              },
+              "toddler": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "on"
+              },
+              "child": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "on"
+              }
+          },
+          {
+              "id": "40",
+              "infant": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "on"
+              },
+              "toddler": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "on"
+              },
+              "child": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "on"
+              }
+          },
+          {
+              "id": "88",
+              "infant": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "on"
+              },
+              "toddler": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "on"
+              },
+              "child": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "on"
+              }
+          },
+          {
+              "id": "37",
+              "infant": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "on"
+              },
+              "toddler": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "on"
+              },
+              "child": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "on"
+              }
+          },
+          {
+              "id": "62",
+              "infant": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "on"
+              },
+              "toddler": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "on"
+              },
+              "child": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "on"
+              }
+          },
+          {
+              "id": "58",
+              "infant": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "on"
+              },
+              "toddler": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "on"
+              },
+              "child": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "on"
+              }
+          },
+          {
+              "id": "77",
+              "infant": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "on"
+              },
+              "toddler": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "on"
+              },
+              "child": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "on"
+              }
+          },
+          {
+              "id": "74",
+              "infant": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "on"
+              },
+              "toddler": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "on"
+              },
+              "children": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "on"
+              }
+          },
+          {
+              "id": "73",
+              "infant": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "on"
+              },
+              "toddler": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "on"
+              },
+              "children": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "on"
+              }
+          },
+          {
+              "id": "89",
+              "infant": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "on"
+              },
+              "toddler": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "on"
+              },
+              "children": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "on"
+              }
+          },
+          {
+              "id": "68",
+              "infant": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "on"
+              },
+              "toddler": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "on"
+              },
+              "children": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "on"
+              }
+          },
+          {
+              "id": "55",
+              "infant": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "on"
+              },
+              "toddler": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "on"
+              },
+              "child": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "on"
+              }
+          },
+          {
+              "id": "56",
+              "infant": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "on"
+              },
+              "toddler": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "on"
+              },
+              "child": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "on"
+              }
+          },
+          {
+              "id": "57",
+              "infant": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "on"
+              },
+              "toddler": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "on"
+              },
+              "child": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "on"
+              }
+          },
+          {
+              "id": "69",
+              "infant": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "on"
+              },
+              "toddler": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "on"
+              },
+              "child": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "on"
+              }
+          },
+          {
+              "id": "72",
+              "infant": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "on"
+              },
+              "toddler": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "on"
+              },
+              "child": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "on"
+              }
+          },
+          {
+              "id": "39",
+              "infant": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "on"
+              },
+              "toddler": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "on"
+              },
+              "child": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "on"
+              }
+          },
+          {
+              "id": "367",
+              "infant": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "on"
+              },
+              "toddler": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "on"
+              },
+              "child": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "on"
+              }
+          },
+          {
+              "id": "84",
+              "infant": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "on"
+              },
+              "toddler": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "on"
+              },
+              "child": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "on"
+              }
+          },
+          {
+              "id": "70",
+              "infant": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "on"
+              },
+              "toddler": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "on"
+              },
+              "child": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "on"
+              }
+          },
+          {
+              "id": "76",
+              "infant": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "on"
+              },
+              "toddler": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "on"
+              },
+              "child": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "on"
+              }
+          },
+          {
+              "id": "99",
+              "infant": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "on"
+              },
+              "toddler": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "on"
+              },
+              "child": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "on"
+              }
+          },
+          {
+              "id": "92",
+              "infant": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "on"
+              },
+              "toddler": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "on"
+              },
+              "child": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "on"
+              }
+          },
+          {
+              "id": "87",
+              "infant": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "on"
+              },
+              "toddler": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "on"
+              },
+              "child": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "on"
+              }
+          },
+          {
+              "id": "38",
+              "infant": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "on"
+              },
+              "toddler": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "on"
+              },
+              "child": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "on"
+              }
+          },
+          {
+              "id": "75",
+              "infant": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "on"
+              },
+              "toddler": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "on"
+              },
+              "child": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "on"
+              }
+          },
+          {
+              "id": "1997",
+              "infant": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "on"
+              },
+              "toddler": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "on"
+              },
+              "child": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "on"
+              }
+          },
+          {
+              "id": "98",
+              "infant": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "on"
+              },
+              "toddler": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "on"
+              },
+              "child": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "on"
+              }
+          },
+          {
+              "id": "65",
+              "infant": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "on"
+              },
+              "toddler": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "on"
+              },
+              "child": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "on"
+              }
+          },
+          {
+              "id": "379",
+              "infant": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "on"
+              },
+              "toddler": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "on"
+              },
+              "child": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "on"
+              }
+          },
+          {
+              "id": "385",
+              "infant": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "on"
+              },
+              "toddler": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "on"
+              },
+              "child": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "on"
+              }
+          },
+          {
+              "id": "96",
+              "infant": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "on"
+              },
+              "toddler": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "on"
+              },
+              "child": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "on"
+              }
+          },
+          {
+              "id": "66",
+              "infant": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "on"
+              },
+              "toddler": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "on"
+              },
+              "child": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "on"
+              }
+          },
+          {
+              "id": "64",
+              "infant": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "on"
+              },
+              "toddler": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "on"
+              },
+              "child": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "on"
+              }
+          },
+          {
+              "id": "67",
+              "infant": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "on"
+              },
+              "toddler": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "on"
+              },
+              "child": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "on"
+              }
+          },
+          {
+              "id": "390",
+              "infant": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "on"
+              },
+              "toddler": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "on"
+              },
+              "child": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "on"
+              }
+          },
+          {
+              "id": "391",
+              "infant": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "on"
+              },
+              "toddler": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "on"
+              },
+              "child": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "on"
+              }
+          },
+          {
+              "id": "384",
+              "infant": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "on"
+              },
+              "toddler": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "on"
+              },
+              "child": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "on"
+              }
+          },
+          {
+              "id": "276",
+              "infant": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "off"
+              },
+              "toddler": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "off"
+              },
+              "children": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "off"
+              }
+          },
+          {
+              "id": "426",
+              "infant": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "off"
+              },
+              "toddler": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "off"
+              },
+              "children": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "off"
+              }
+          },
+          {
+              "id": "449",
+              "infant": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "off"
+              },
+              "toddler": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "off"
+              },
+              "children": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "off"
+              }
+          },
+          {
+              "id": "328",
+              "infant": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "off"
+              },
+              "toddler": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "off"
+              },
+              "children": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "off"
+              }
+          },
+          {
+              "id": "452",
+              "infant": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "off"
+              },
+              "toddler": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "off"
+              },
+              "children": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "off"
+              }
+          },
+          {
+              "id": "1139",
+              "infant": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "off"
+              },
+              "toddler": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "off"
+              },
+              "children": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "off"
+              }
+          },
+          {
+              "id": "1140",
+              "infant": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "off"
+              },
+              "toddler": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "off"
+              },
+              "children": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "off"
+              }
+          },
+          {
+              "id": "843",
+              "infant": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "off"
+              },
+              "toddler": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "off"
+              },
+              "children": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "off"
+              }
+          },
+          {
+              "id": "49",
+              "infant": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "on"
+              },
+              "toddler": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "off"
+              },
+              "children": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "off"
+              }
+          },
+          {
+              "id": "43",
+              "infant": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "on"
+              },
+              "toddler": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "on"
+              },
+              "children": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "on"
+              }
+          },
+          {
+              "id": "44",
+              "infant": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "on"
+              },
+              "toddler": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "on"
+              },
+              "children": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "on"
+              }
+          },
+          {
+              "id": "105",
+              "infant": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "on"
+              },
+              "toddler": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "on"
+              },
+              "children": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "on"
+              }
+          },
+          {
+              "id": "964",
+              "infant": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "off"
+              },
+              "toddler": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "off"
+              },
+              "children": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "off"
+              }
+          },
+          {
+              "id": "344",
+              "infant": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "off"
+              },
+              "toddler": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "off"
+              },
+              "children": {
+                  "delta": 0,
+                  "currency": "USD",
+                  "switch": "off"
+              }
+          }
+      ],
+      "mag_delta": [
+          {
+              "id": "94",
+              "delta": 15,
+              "currency": "USD",
+              "switch": "on"
+          },
+          {
+              "id": "40",
+              "delta": 15,
+              "currency": "USD",
+              "switch": "on"
+          },
+          {
+              "id": "88",
+              "delta": 15,
+              "currency": "USD",
+              "switch": "on"
+          },
+          {
+              "id": "37",
+              "delta": 20,
+              "currency": "USD",
+              "switch": "on"
+          },
+          {
+              "id": "62",
+              "delta": 5,
+              "currency": "USD",
+              "switch": "on"
+          },
+          {
+              "id": "58",
+              "delta": 10,
+              "currency": "USD",
+              "switch": "on"
+          },
+          {
+              "id": "77",
+              "delta": 0,
+              "currency": "USD",
+              "switch": "on"
+          },
+          {
+              "id": "74",
+              "delta": 20,
+              "currency": "USD",
+              "switch": "on"
+          },
+          {
+              "id": "73",
+              "delta": 20,
+              "currency": "USD",
+              "switch": "on"
+          },
+          {
+              "id": "89",
+              "delta": 15,
+              "currency": "USD",
+              "switch": "on"
+          },
+          {
+              "id": "68",
+              "delta": 20,
+              "currency": "USD",
+              "switch": "on"
+          },
+          {
+              "id": "55",
+              "delta": 0,
+              "currency": "USD",
+              "switch": "on"
+          },
+          {
+              "id": "56",
+              "delta": 10,
+              "currency": "USD",
+              "switch": "on"
+          },
+          {
+              "id": "57",
+              "delta": 10,
+              "currency": "USD",
+              "switch": "on"
+          },
+          {
+              "id": "69",
+              "delta": 20,
+              "currency": "USD",
+              "switch": "on"
+          },
+          {
+              "id": "72",
+              "delta": 20,
+              "currency": "USD",
+              "switch": "on"
+          },
+          {
+              "id": "39",
+              "delta": 15,
+              "currency": "USD",
+              "switch": "on"
+          },
+          {
+              "id": "367",
+              "delta": 15,
+              "currency": "USD",
+              "switch": "on"
+          },
+          {
+              "id": "84",
+              "delta": 15,
+              "currency": "USD",
+              "switch": "on"
+          },
+          {
+              "id": "70",
+              "delta": 15,
+              "currency": "USD",
+              "switch": "on"
+          },
+          {
+              "id": "76",
+              "delta": 15,
+              "currency": "USD",
+              "switch": "on"
+          },
+          {
+              "id": "99",
+              "delta": 20,
+              "currency": "USD",
+              "switch": "on"
+          },
+          {
+              "id": "92",
+              "delta": 20,
+              "currency": "USD",
+              "switch": "on"
+          },
+          {
+              "id": "87",
+              "delta": 20,
+              "currency": "USD",
+              "switch": "on"
+          },
+          {
+              "id": "38",
+              "delta": 15,
+              "currency": "USD",
+              "switch": "on"
+          },
+          {
+              "id": "75",
+              "delta": 15,
+              "currency": "USD",
+              "switch": "on"
+          },
+          {
+              "id": "1997",
+              "delta": 15,
+              "currency": "USD",
+              "switch": "on"
+          },
+          {
+              "id": "98",
+              "delta": 20,
+              "currency": "USD",
+              "switch": "on"
+          },
+          {
+              "id": "65",
+              "delta": 20,
+              "currency": "USD",
+              "switch": "on"
+          },
+          {
+              "id": "379",
+              "delta": 20,
+              "currency": "USD",
+              "switch": "on"
+          },
+          {
+              "id": "385",
+              "delta": 25,
+              "currency": "USD",
+              "switch": "on"
+          },
+          {
+              "id": "96",
+              "delta": 20,
+              "currency": "USD",
+              "switch": "on"
+          },
+          {
+              "id": "66",
+              "delta": 20,
+              "currency": "USD",
+              "switch": "on"
+          },
+          {
+              "id": "64",
+              "delta": 25,
+              "currency": "USD",
+              "switch": "on"
+          },
+          {
+              "id": "67",
+              "delta": 25,
+              "currency": "USD",
+              "switch": "on"
+          },
+          {
+              "id": "390",
+              "delta": 25,
+              "currency": "USD",
+              "switch": "on"
+          },
+          {
+              "id": "391",
+              "delta": 15,
+              "currency": "USD",
+              "switch": "on"
+          },
+          {
+              "id": "384",
+              "delta": 20,
+              "currency": "USD",
+              "switch": "on"
+          },
+          {
+              "id": "276",
+              "delta": 10,
+              "currency": "USD",
+              "switch": "on"
+          },
+          {
+              "id": "426",
+              "delta": 10,
+              "currency": "USD",
+              "switch": "on"
+          },
+          {
+              "id": "449",
+              "delta": 10,
+              "currency": "USD",
+              "switch": "on"
+          },
+          {
+              "id": "328",
+              "delta": 10,
+              "currency": "USD",
+              "switch": "on"
+          },
+          {
+              "id": "452",
+              "delta": 10,
+              "currency": "USD",
+              "switch": "on"
+          },
+          {
+              "id": "1139",
+              "delta": 10,
+              "currency": "USD",
+              "switch": "on"
+          },
+          {
+              "id": "1140",
+              "delta": 10,
+              "currency": "USD",
+              "switch": "on"
+          },
+          {
+              "id": "843",
+              "delta": 10,
+              "currency": "USD",
+              "switch": "on"
+          },
+          {
+              "id": "49",
+              "delta": 5,
+              "currency": "USD",
+              "switch": "on"
+          },
+          {
+              "id": "43",
+              "delta": -5,
+              "currency": "USD",
+              "switch": "on"
+          },
+          {
+              "id": "44",
+              "delta": -5,
+              "currency": "USD",
+              "switch": "on"
+          },
+          {
+              "id": "105",
+              "delta": 5,
+              "currency": "USD",
+              "switch": "on"
+          },
+          {
+              "id": "964",
+              "delta": 6,
+              "currency": "USD",
+              "switch": "on"
+          },
+          {
+              "id": "344",
+              "delta": 10,
+              "currency": "USD",
+              "switch": "on"
+          }
+      ]
   },
   "doNotDel": "doNotDel"
 }

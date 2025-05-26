@@ -1,214 +1,5806 @@
 {
-  "currencyCode": "THB",
   "serviceArea": {
-      "name": "跨国",
-      "lat": 13.57367762894856,
-      "lng": 102.2530421449429,
-      "radius": 200000,
-      "parent_fleet_id": 40,
-      "id": 26940,
-      "parent_fleet_name": "Elife",
-      "pid": "40.1.1"
+    "id": 90022,
+    "parent_fleet_id": 89496,
+    "name": "Dubai,United Arab Emirates",
+    "lat": 25.253175,
+    "lng": 55.365673,
+    "radius": 152000,
+    "parent_fleet_name": "hoppaSupply",
+    "pid": "89496.1.1"
   },
-  "airports": [
-      "BKK",
-      "DMK"
-  ],
-  "countryCode": "THA",
   "pricing": {
-      "ranges": [
-          {
-              "seq": 0,
-              "amount": 2,
-              "currency": "THB",
-              "distance": 30000,
-              "from": 20000,
-              "to": 50000,
-              "distanceIn": 0,
-              "per_unit": 1,
-              "pid": "40.2.1"
-          }
-      ],
-      "currency": "THB",
-      "meet_n_greet": 19,
-      "min_amount": 10,
-      "min_distance": 20000
-  },
-  "vehicleClasses": [
+    "ranges": [
       {
-          "vehicle_class_id": 1,
-          "delta_amount": 0,
-          "percent": 0,
-          "hourly_percent": 0,
-          "hourly_delta": 0
+        "seq": 0,
+        "amount": 1,
+        "currency": "USD",
+        "distance": 10000,
+        "from": 20000,
+        "to": 30000,
+        "distanceIn": 10,
+        "per_unit": 1,
+        "pid": "89496.2.1"
       },
       {
-          "vehicle_class_id": 6,
-          "delta_amount": 0,
-          "percent": 0,
-          "hourly_percent": 0,
-          "hourly_delta": 0
+        "seq": 1,
+        "amount": 1.1,
+        "currency": "USD",
+        "distance": 30000,
+        "from": 30000,
+        "to": 60000,
+        "distanceIn": 50,
+        "per_unit": 1,
+        "pid": "89496.2.2"
       },
       {
-          "vehicle_class_id": 3,
-          "delta_amount": 0,
-          "percent": 0,
-          "hourly_percent": 0,
-          "hourly_delta": 0
+        "seq": 2,
+        "amount": 1,
+        "currency": "USD",
+        "distance": 40000,
+        "from": 60000,
+        "to": 100000,
+        "distanceIn": 420,
+        "per_unit": 1,
+        "pid": "89496.2.3"
       },
       {
-          "vehicle_class_id": 7,
-          "delta_amount": 0,
-          "percent": 0,
-          "hourly_percent": 0,
-          "hourly_delta": 0
+        "seq": 3,
+        "amount": 0.8,
+        "currency": "USD",
+        "distance": 100000,
+        "from": 100000,
+        "to": 200000,
+        "distanceIn": 0,
+        "per_unit": 1,
+        "pid": "89496.2.4"
+      },
+      {
+        "seq": 4,
+        "amount": 0.7,
+        "currency": "USD",
+        "distance": 300000,
+        "from": 200000,
+        "to": 500000,
+        "distanceIn": 0,
+        "per_unit": 1,
+        "pid": "89496.2.5"
       }
+    ],
+    "min_amount": 25,
+    "currency": "USD",
+    "min_distance": 20000,
+    "meet_n_greet": 0
+  },
+  "zones": [
+    {
+      "name": "2Sharjah",
+      "lat": 25.3461555,
+      "lng": 55.42109319999999,
+      "radius": 5483,
+      "prices": [
+        {
+          "airport": "DXB",
+          "amount": 32.4,
+          "currency": "USD",
+          "p_amt": 32.4,
+          "d_amt": 32.4
+        }
+      ],
+      "p2p": "false",
+      "pid": "89496.4.1"
+    },
+    {
+      "name": "3Ajman",
+      "lat": 25.41141894396922,
+      "lng": 55.48755085400396,
+      "radius": 6587,
+      "prices": [
+        {
+          "airport": "DXB",
+          "amount": 33.1,
+          "currency": "USD",
+          "p_amt": 33.1,
+          "d_amt": 33.1
+        }
+      ],
+      "p2p": "false",
+      "pid": "89496.4.2"
+    },
+    {
+      "name": "6Dubai Investment Park",
+      "lat": 25.012688028018562,
+      "lng": 55.134484514704155,
+      "radius": 6203,
+      "prices": [
+        {
+          "airport": "DXB",
+          "amount": 32.4,
+          "currency": "USD",
+          "p_amt": 32.4,
+          "d_amt": 32.4
+        }
+      ],
+      "p2p": "false",
+      "pid": "89496.4.3"
+    },
+    {
+      "name": "7Abu Dhabi",
+      "lat": 24.478571839657604,
+      "lng": 54.48136791323188,
+      "radius": 17906,
+      "prices": [
+        {
+          "airport": "DXB",
+          "amount": 100,
+          "currency": "USD",
+          "p_amt": 100,
+          "d_amt": 100
+        }
+      ],
+      "p2p": "false",
+      "pid": "89496.4.4"
+    },
+    {
+      "name": "11Al Qusais Cemetery Mosque",
+      "lat": 25.27812287970441,
+      "lng": 55.427493770198986,
+      "radius": 2243,
+      "prices": [
+        {
+          "airport": "DXB",
+          "amount": 24.95,
+          "currency": "USD",
+          "p_amt": 24.95,
+          "d_amt": 24.95
+        }
+      ],
+      "p2p": "false",
+      "pid": "89496.4.5"
+    },
+    {
+      "name": "12\u8fea\u62dc\u6c99\u6f20\u5ea6\u5047\u9152\u5e97",
+      "lat": 24.79671880610819,
+      "lng": 55.6029163314299,
+      "radius": 5000,
+      "prices": [
+        {
+          "airport": "DXB",
+          "amount": 30,
+          "currency": "USD",
+          "p_amt": 30,
+          "d_amt": 30
+        }
+      ],
+      "p2p": "false",
+      "pid": "89496.4.6"
+    },
+    {
+      "name": "13Radisson Hotel Dubai Damac Hills",
+      "lat": 25.020626643070603,
+      "lng": 55.27204777387685,
+      "radius": 5259,
+      "prices": [
+        {
+          "airport": "DXB",
+          "amount": 10,
+          "currency": "USD",
+          "p_amt": 10,
+          "d_amt": 10
+        }
+      ],
+      "p2p": "false",
+      "pid": "89496.4.7"
+    },
+    {
+      "name": "\u53e6\u5916\u4e00\u4e2a\u5c9b\u65c1\u8fb9",
+      "lat": 24.9188049,
+      "lng": 55.01002880000001,
+      "radius": 5000,
+      "prices": [
+        {
+          "airport": "DXB",
+          "amount": 10,
+          "currency": "USD",
+          "p_amt": 10,
+          "d_amt": 10
+        }
+      ],
+      "p2p": "false",
+      "pid": "89496.4.8"
+    },
+    {
+      "lat": 25.156775500000002,
+      "lng": 55.227864999999994,
+      "name": "\u5e02\u533a\u4e2d\u95f4",
+      "p2p": false,
+      "prices": [
+        {
+          "airport": "DXB",
+          "amount": 10,
+          "currency": "USD",
+          "p_amt": 18,
+          "d_amt": 18
+        }
+      ],
+      "polygons": [
+        {
+          "lat": 25.205742,
+          "lng": 55.193429
+        },
+        {
+          "lat": 25.208449,
+          "lng": 55.208503
+        },
+        {
+          "lat": 25.211156,
+          "lng": 55.223576
+        },
+        {
+          "lat": 25.19845,
+          "lng": 55.2397
+        },
+        {
+          "lat": 25.185743,
+          "lng": 55.255823
+        },
+        {
+          "lat": 25.183772,
+          "lng": 55.26936
+        },
+        {
+          "lat": 25.181801,
+          "lng": 55.282897
+        },
+        {
+          "lat": 25.176028,
+          "lng": 55.276051
+        },
+        {
+          "lat": 25.170254,
+          "lng": 55.269204
+        },
+        {
+          "lat": 25.165853,
+          "lng": 55.265451
+        },
+        {
+          "lat": 25.161452,
+          "lng": 55.261697
+        },
+        {
+          "lat": 25.151492,
+          "lng": 55.261527
+        },
+        {
+          "lat": 25.141532,
+          "lng": 55.261357
+        },
+        {
+          "lat": 25.133657,
+          "lng": 55.257929
+        },
+        {
+          "lat": 25.125782,
+          "lng": 55.254501
+        },
+        {
+          "lat": 25.114088,
+          "lng": 55.244231
+        },
+        {
+          "lat": 25.102395,
+          "lng": 55.233962
+        },
+        {
+          "lat": 25.113155,
+          "lng": 55.216633
+        },
+        {
+          "lat": 25.123915,
+          "lng": 55.199303
+        },
+        {
+          "lat": 25.134709,
+          "lng": 55.187225
+        },
+        {
+          "lat": 25.145502,
+          "lng": 55.175147
+        },
+        {
+          "lat": 25.154986,
+          "lng": 55.17399
+        },
+        {
+          "lat": 25.16447,
+          "lng": 55.172833
+        },
+        {
+          "lat": 25.185106,
+          "lng": 55.183131
+        }
+      ],
+      "pid": "89496.4.9"
+    },
+    {
+      "lat": 25.09957,
+      "lng": 55.16307,
+      "name": "\u6731\u7f8e\u62c9",
+      "p2p": false,
+      "prices": [
+        {
+          "airport": "DXB",
+          "amount": 10,
+          "currency": "USD",
+          "p_amt": 22,
+          "d_amt": 22
+        }
+      ],
+      "polygons": [
+        {
+          "lat": 25.154088,
+          "lng": 55.132251
+        },
+        {
+          "lat": 25.158622,
+          "lng": 55.142033
+        },
+        {
+          "lat": 25.163157,
+          "lng": 55.151815
+        },
+        {
+          "lat": 25.131658,
+          "lng": 55.192511
+        },
+        {
+          "lat": 25.10016,
+          "lng": 55.233208
+        },
+        {
+          "lat": 25.092712,
+          "lng": 55.241221
+        },
+        {
+          "lat": 25.085264,
+          "lng": 55.249234
+        },
+        {
+          "lat": 25.071131,
+          "lng": 55.250077
+        },
+        {
+          "lat": 25.056997,
+          "lng": 55.250921
+        },
+        {
+          "lat": 25.04649,
+          "lng": 55.212965
+        },
+        {
+          "lat": 25.035983,
+          "lng": 55.17501
+        },
+        {
+          "lat": 25.076162,
+          "lng": 55.125114
+        },
+        {
+          "lat": 25.116342,
+          "lng": 55.075219
+        },
+        {
+          "lat": 25.135215,
+          "lng": 55.103735
+        }
+      ],
+      "pid": "89496.4.10"
+    },
+    {
+      "lat": 25.246586999999998,
+      "lng": 55.3131985,
+      "name": "\u5e02\u533a",
+      "p2p": false,
+      "prices": [
+        {
+          "airport": "DXB",
+          "amount": 10,
+          "currency": "USD",
+          "p_amt": 18,
+          "d_amt": 18
+        }
+      ],
+      "polygons": [
+        {
+          "lat": 25.277425,
+          "lng": 55.274395
+        },
+        {
+          "lat": 25.295618,
+          "lng": 55.284691
+        },
+        {
+          "lat": 25.313811,
+          "lng": 55.294987
+        },
+        {
+          "lat": 25.314136,
+          "lng": 55.319664
+        },
+        {
+          "lat": 25.31446,
+          "lng": 55.344341
+        },
+        {
+          "lat": 25.307124,
+          "lng": 55.347791
+        },
+        {
+          "lat": 25.299787,
+          "lng": 55.351241
+        },
+        {
+          "lat": 25.29839,
+          "lng": 55.357645
+        },
+        {
+          "lat": 25.296992,
+          "lng": 55.364049
+        },
+        {
+          "lat": 25.281717,
+          "lng": 55.386932
+        },
+        {
+          "lat": 25.266442,
+          "lng": 55.409815
+        },
+        {
+          "lat": 25.249895,
+          "lng": 55.407311
+        },
+        {
+          "lat": 25.233348,
+          "lng": 55.404807
+        },
+        {
+          "lat": 25.222089,
+          "lng": 55.403148
+        },
+        {
+          "lat": 25.21083,
+          "lng": 55.401488
+        },
+        {
+          "lat": 25.194772,
+          "lng": 55.399057
+        },
+        {
+          "lat": 25.178714,
+          "lng": 55.396625
+        },
+        {
+          "lat": 25.183061,
+          "lng": 55.378172
+        },
+        {
+          "lat": 25.187407,
+          "lng": 55.359719
+        },
+        {
+          "lat": 25.185577,
+          "lng": 55.343794
+        },
+        {
+          "lat": 25.183747,
+          "lng": 55.327868
+        },
+        {
+          "lat": 25.181231,
+          "lng": 55.320032
+        },
+        {
+          "lat": 25.178714,
+          "lng": 55.312196
+        },
+        {
+          "lat": 25.181774,
+          "lng": 55.304708
+        },
+        {
+          "lat": 25.184834,
+          "lng": 55.29722
+        },
+        {
+          "lat": 25.183118,
+          "lng": 55.289636
+        },
+        {
+          "lat": 25.181402,
+          "lng": 55.282053
+        },
+        {
+          "lat": 25.18369,
+          "lng": 55.269287
+        },
+        {
+          "lat": 25.185977,
+          "lng": 55.256522
+        },
+        {
+          "lat": 25.200844,
+          "lng": 55.236552
+        },
+        {
+          "lat": 25.215711,
+          "lng": 55.216582
+        },
+        {
+          "lat": 25.232581,
+          "lng": 55.228118
+        },
+        {
+          "lat": 25.24945,
+          "lng": 55.239654
+        },
+        {
+          "lat": 25.255954,
+          "lng": 55.240986
+        },
+        {
+          "lat": 25.262457,
+          "lng": 55.242317
+        },
+        {
+          "lat": 25.264866,
+          "lng": 55.247111
+        },
+        {
+          "lat": 25.267274,
+          "lng": 55.251905
+        },
+        {
+          "lat": 25.277985,
+          "lng": 55.252819
+        },
+        {
+          "lat": 25.288696,
+          "lng": 55.253732
+        },
+        {
+          "lat": 25.28306,
+          "lng": 55.264064
+        }
+      ],
+      "pid": "89496.4.11"
+    }
   ],
-  "tz": {
-      "dos": 0,
-      "ros": 25200,
-      "tzid": "Asia/Bangkok"
+  "airports": [
+    "DXB"
+  ],
+  "vehicleClasses": [
+    {
+      "vehicle_class_id": 1,
+      "delta_amount": 0,
+      "percent": 0,
+      "hourly_percent": 0,
+      "percent_appendix": [
+        {
+          "field": "zone2zone.prices.0",
+          "delta_amount": -20
+        },
+        {
+          "field": "zones.0.prices.0.d_amt",
+          "delta_amount": 4.6,
+          "z_id": "15.4.1"
+        },
+        {
+          "field": "zones.0.prices.0.p_amt",
+          "delta_amount": 4.6,
+          "z_id": "15.4.1"
+        },
+        {
+          "field": "zones.1.prices.0.d_amt",
+          "delta_amount": 18.9,
+          "z_id": "15.4.2"
+        },
+        {
+          "field": "zones.1.prices.0.p_amt",
+          "delta_amount": 18.92,
+          "z_id": "15.4.2"
+        },
+        {
+          "field": "zones.2.prices.0.d_amt",
+          "delta_amount": 1.9,
+          "z_id": "15.4.3"
+        },
+        {
+          "field": "zones.2.prices.0.p_amt",
+          "delta_amount": 1.9,
+          "z_id": "15.4.3"
+        },
+        {
+          "field": "zones.3.prices.0.d_amt",
+          "delta_amount": -29.3,
+          "z_id": "15.4.4"
+        },
+        {
+          "field": "zones.3.prices.0.p_amt",
+          "delta_amount": -29.3,
+          "z_id": "15.4.4"
+        },
+        {
+          "field": "zones.4.prices.0.d_amt",
+          "delta_amount": 0.83,
+          "z_id": "15.4.5"
+        },
+        {
+          "field": "zones.4.prices.0.p_amt",
+          "delta_amount": 0.83,
+          "z_id": "15.4.5"
+        },
+        {
+          "field": "zones.5.prices.0.d_amt",
+          "delta_amount": 20,
+          "z_id": "15.4.6"
+        },
+        {
+          "field": "zones.5.prices.0.p_amt",
+          "delta_amount": 20,
+          "z_id": "15.4.6"
+        },
+        {
+          "field": "zones.6.prices.0.d_amt",
+          "delta_amount": 20,
+          "z_id": "15.4.7"
+        },
+        {
+          "field": "zones.6.prices.0.p_amt",
+          "delta_amount": 20,
+          "z_id": "15.4.7"
+        },
+        {
+          "field": "zones.7.prices.0.d_amt",
+          "delta_amount": 30,
+          "z_id": "15.4.8"
+        },
+        {
+          "field": "zones.7.prices.0.p_amt",
+          "delta_amount": 30,
+          "z_id": "15.4.8"
+        },
+        {
+          "field": "zones.8.prices.0.d_amt",
+          "delta_amount": 2.45,
+          "z_id": "15.4.9"
+        },
+        {
+          "field": "zones.8.prices.0.p_amt",
+          "delta_amount": 2.45,
+          "z_id": "15.4.9"
+        },
+        {
+          "field": "zones.9.prices.0.d_amt",
+          "delta_amount": 1
+        },
+        {
+          "field": "zones.9.prices.0.p_amt",
+          "delta_amount": 1
+        },
+        {
+          "field": "zones.10.prices.0.d_amt",
+          "delta_amount": 1
+        },
+        {
+          "field": "zones.10.prices.0.p_amt",
+          "delta_amount": 1
+        },
+        {
+          "field": "downtown_areas.min_amount",
+          "delta_amount": -2
+        }
+      ],
+      "surcharge_schedule": [
+        [
+          {
+            "from": "00:00",
+            "to": "07:30",
+            "break": "false",
+            "percent": 20,
+            "ts": 1704688723952
+          }
+        ],
+        [
+          {
+            "from": "00:00",
+            "to": "07:30",
+            "break": "false",
+            "percent": 20,
+            "ts": 1704688723952
+          }
+        ],
+        [
+          {
+            "from": "00:00",
+            "to": "07:30",
+            "break": "false",
+            "percent": 20,
+            "ts": 1704688723952
+          }
+        ],
+        [
+          {
+            "from": "00:00",
+            "to": "07:30",
+            "break": "false",
+            "percent": 20,
+            "ts": 1704688723952
+          }
+        ],
+        [
+          {
+            "from": "00:00",
+            "to": "07:30",
+            "break": "false",
+            "percent": 20,
+            "ts": 1704688723952
+          }
+        ],
+        [
+          {
+            "from": "00:00",
+            "to": "07:30",
+            "break": "false",
+            "percent": 20,
+            "ts": 1704688723952
+          }
+        ],
+        [
+          {
+            "from": "00:00",
+            "to": "07:30",
+            "break": "false",
+            "percent": 20,
+            "ts": 1704688723952
+          }
+        ]
+      ]
+    },
+    {
+      "vehicle_class_id": 2,
+      "delta_amount": 0,
+      "percent": 50,
+      "hourly_percent": 50,
+      "percent_appendix": [
+        {
+          "field": "downtown_areas.min_amount",
+          "delta_amount": 30
+        },
+        {
+          "field": "pricing.ranges.0",
+          "delta_amount": 1.75
+        },
+        {
+          "field": "pricing.ranges.1",
+          "delta_amount": 1.6
+        },
+        {
+          "field": "pricing.ranges.2",
+          "delta_amount": 3.25
+        },
+        {
+          "field": "zone2zone.prices.0",
+          "delta_amount": 100
+        },
+        {
+          "field": "zones.0.prices.0.d_amt",
+          "delta_amount": 47.6,
+          "z_id": "15.4.1"
+        },
+        {
+          "field": "zones.0.prices.0.p_amt",
+          "delta_amount": 47.6,
+          "z_id": "15.4.1"
+        },
+        {
+          "field": "zones.1.prices.0.d_amt",
+          "delta_amount": 126.9,
+          "z_id": "15.4.2"
+        },
+        {
+          "field": "zones.1.prices.0.p_amt",
+          "delta_amount": 126.9,
+          "z_id": "15.4.2"
+        },
+        {
+          "field": "zones.2.prices.0.d_amt",
+          "delta_amount": 17.6,
+          "z_id": "15.4.3"
+        },
+        {
+          "field": "zones.2.prices.0.p_amt",
+          "delta_amount": 17.6,
+          "z_id": "15.4.3"
+        },
+        {
+          "field": "zones.3.prices.0.d_amt",
+          "delta_amount": 35,
+          "z_id": "15.4.4"
+        },
+        {
+          "field": "zones.3.prices.0.p_amt",
+          "delta_amount": 35,
+          "z_id": "15.4.4"
+        },
+        {
+          "field": "zones.4.prices.0.d_amt",
+          "delta_amount": 25.05,
+          "z_id": "15.4.5"
+        },
+        {
+          "field": "zones.4.prices.0.p_amt",
+          "delta_amount": 25.05,
+          "z_id": "15.4.5"
+        },
+        {
+          "field": "zones.5.prices.0.d_amt",
+          "delta_amount": 110,
+          "z_id": "15.4.6"
+        },
+        {
+          "field": "zones.5.prices.0.p_amt",
+          "delta_amount": 110,
+          "z_id": "15.4.6"
+        },
+        {
+          "field": "zones.6.prices.0.d_amt",
+          "delta_amount": 60,
+          "z_id": "15.4.7"
+        },
+        {
+          "field": "zones.6.prices.0.p_amt",
+          "delta_amount": 60,
+          "z_id": "15.4.7"
+        },
+        {
+          "field": "zones.7.prices.0.d_amt",
+          "delta_amount": 90,
+          "z_id": "15.4.8"
+        },
+        {
+          "field": "zones.7.prices.0.p_amt",
+          "delta_amount": 90,
+          "z_id": "15.4.8"
+        },
+        {
+          "field": "zones.8.prices.0.d_amt",
+          "delta_amount": 11
+        },
+        {
+          "field": "zones.8.prices.0.p_amt",
+          "delta_amount": 11
+        },
+        {
+          "field": "zones.9.prices.0.d_amt",
+          "delta_amount": 40,
+          "z_id": "15.4.10"
+        },
+        {
+          "field": "zones.9.prices.0.p_amt",
+          "delta_amount": 40,
+          "z_id": "15.4.10"
+        },
+        {
+          "field": "zones.10.prices.0.d_amt",
+          "delta_amount": 11
+        },
+        {
+          "field": "zones.10.prices.0.p_amt",
+          "delta_amount": 11
+        }
+      ],
+      "surcharge_schedule": [
+        [
+          {
+            "from": "00:00",
+            "to": "07:30",
+            "break": "false",
+            "percent": 20,
+            "ts": 1704688723952
+          }
+        ],
+        [
+          {
+            "from": "00:00",
+            "to": "07:30",
+            "break": "false",
+            "percent": 20,
+            "ts": 1704688723952
+          }
+        ],
+        [
+          {
+            "from": "00:00",
+            "to": "07:30",
+            "break": "false",
+            "percent": 20,
+            "ts": 1704688723952
+          }
+        ],
+        [
+          {
+            "from": "00:00",
+            "to": "07:30",
+            "break": "false",
+            "percent": 20,
+            "ts": 1704688723952
+          }
+        ],
+        [
+          {
+            "from": "00:00",
+            "to": "07:30",
+            "break": "false",
+            "percent": 20,
+            "ts": 1704688723952
+          }
+        ],
+        [
+          {
+            "from": "00:00",
+            "to": "07:30",
+            "break": "false",
+            "percent": 20,
+            "ts": 1704688723952
+          }
+        ],
+        [
+          {
+            "from": "00:00",
+            "to": "07:30",
+            "break": "false",
+            "percent": 20,
+            "ts": 1704688723952
+          }
+        ]
+      ]
+    },
+    {
+      "vehicle_class_id": 6,
+      "delta_amount": 0,
+      "percent": 30,
+      "hourly_percent": 30,
+      "percent_appendix": [
+        {
+          "field": "downtown_areas.min_amount",
+          "delta_amount": 1.5
+        },
+        {
+          "field": "hourly_pricing.rules.0.min_amount",
+          "delta_amount": 80
+        },
+        {
+          "field": "hourly_pricing.rules.0.ranges.0",
+          "delta_amount": 30
+        },
+        {
+          "field": "hourly_pricing.rules.0.ranges.1",
+          "delta_amount": 35
+        },
+        {
+          "field": "hourly_pricing.rules.1.min_amount",
+          "delta_amount": 80
+        },
+        {
+          "field": "hourly_pricing.rules.1.ranges.0",
+          "delta_amount": 30
+        },
+        {
+          "field": "hourly_pricing.rules.1.ranges.1",
+          "delta_amount": 35
+        },
+        {
+          "field": "pricing.min_amount",
+          "delta_amount": 2
+        },
+        {
+          "field": "pricing.ranges.0",
+          "delta_amount": 0.05
+        },
+        {
+          "field": "pricing.ranges.1",
+          "delta_amount": 0.05
+        },
+        {
+          "field": "pricing.ranges.2",
+          "delta_amount": 0.05
+        },
+        {
+          "field": "zone2zone.prices.0",
+          "delta_amount": 0
+        },
+        {
+          "field": "zones.0.prices.0.d_amt",
+          "delta_amount": 9.6,
+          "z_id": "15.4.1"
+        },
+        {
+          "field": "zones.0.prices.0.p_amt",
+          "delta_amount": 9.6,
+          "z_id": "15.4.1"
+        },
+        {
+          "field": "zones.1.prices.0.d_amt",
+          "delta_amount": 23.9,
+          "z_id": "15.4.2"
+        },
+        {
+          "field": "zones.1.prices.0.p_amt",
+          "delta_amount": 23.9,
+          "z_id": "15.4.2"
+        },
+        {
+          "field": "zones.2.prices.0.d_amt",
+          "delta_amount": 6.6,
+          "z_id": "15.4.3"
+        },
+        {
+          "field": "zones.2.prices.0.p_amt",
+          "delta_amount": 6.6,
+          "z_id": "15.4.3"
+        },
+        {
+          "field": "zones.3.prices.0.d_amt",
+          "delta_amount": -14.25,
+          "z_id": "15.4.4"
+        },
+        {
+          "field": "zones.3.prices.0.p_amt",
+          "delta_amount": -14.25,
+          "z_id": "15.4.4"
+        },
+        {
+          "field": "zones.4.prices.0.d_amt",
+          "delta_amount": 9.77,
+          "z_id": "15.4.5"
+        },
+        {
+          "field": "zones.4.prices.0.p_amt",
+          "delta_amount": 9.77,
+          "z_id": "15.4.5"
+        },
+        {
+          "field": "zones.5.prices.0.d_amt",
+          "delta_amount": 23,
+          "z_id": "15.4.6"
+        },
+        {
+          "field": "zones.5.prices.0.p_amt",
+          "delta_amount": 23,
+          "z_id": "15.4.6"
+        },
+        {
+          "field": "zones.6.prices.0.d_amt",
+          "delta_amount": 32,
+          "z_id": "15.4.7"
+        },
+        {
+          "field": "zones.6.prices.0.p_amt",
+          "delta_amount": 32,
+          "z_id": "15.4.7"
+        },
+        {
+          "field": "zones.7.prices.0.d_amt",
+          "delta_amount": 60,
+          "z_id": "15.4.8"
+        },
+        {
+          "field": "zones.7.prices.0.p_amt",
+          "delta_amount": 60,
+          "z_id": "15.4.8"
+        },
+        {
+          "field": "zones.8.prices.0.d_amt",
+          "delta_amount": 3.5
+        },
+        {
+          "field": "zones.8.prices.0.p_amt",
+          "delta_amount": 3.5
+        },
+        {
+          "field": "zones.9.prices.0.d_amt",
+          "delta_amount": 2.5
+        },
+        {
+          "field": "zones.9.prices.0.p_amt",
+          "delta_amount": 2.5
+        },
+        {
+          "field": "zones.10.prices.0.d_amt",
+          "delta_amount": 3.55
+        },
+        {
+          "field": "zones.10.prices.0.p_amt",
+          "delta_amount": 3.5
+        }
+      ],
+      "surcharge_schedule": [
+        [
+          {
+            "from": "00:00",
+            "to": "07:30",
+            "break": "false",
+            "percent": 20,
+            "ts": 1704688723952
+          }
+        ],
+        [
+          {
+            "from": "00:00",
+            "to": "07:30",
+            "break": "false",
+            "percent": 20,
+            "ts": 1704688723952
+          }
+        ],
+        [
+          {
+            "from": "00:00",
+            "to": "07:30",
+            "break": "false",
+            "percent": 20,
+            "ts": 1704688723952
+          }
+        ],
+        [
+          {
+            "from": "00:00",
+            "to": "07:30",
+            "break": "false",
+            "percent": 20,
+            "ts": 1704688723952
+          }
+        ],
+        [
+          {
+            "from": "00:00",
+            "to": "07:30",
+            "break": "false",
+            "percent": 20,
+            "ts": 1704688723952
+          }
+        ],
+        [
+          {
+            "from": "00:00",
+            "to": "07:30",
+            "break": "false",
+            "percent": 20,
+            "ts": 1704688723952
+          }
+        ],
+        [
+          {
+            "from": "00:00",
+            "to": "07:30",
+            "break": "false",
+            "percent": 20,
+            "ts": 1704688723952
+          }
+        ]
+      ]
+    },
+    {
+      "vehicle_class_id": 3,
+      "delta_amount": 0,
+      "percent": 35,
+      "hourly_percent": 35,
+      "percent_appendix": [
+        {
+          "field": "downtown_areas.min_amount",
+          "delta_amount": 5
+        },
+        {
+          "field": "hourly_pricing.rules.0.min_amount",
+          "delta_amount": 100
+        },
+        {
+          "field": "hourly_pricing.rules.0.ranges.0",
+          "delta_amount": 35
+        },
+        {
+          "field": "hourly_pricing.rules.0.ranges.1",
+          "delta_amount": 40
+        },
+        {
+          "field": "hourly_pricing.rules.1.min_amount",
+          "delta_amount": 100
+        },
+        {
+          "field": "hourly_pricing.rules.1.ranges.0",
+          "delta_amount": 35
+        },
+        {
+          "field": "hourly_pricing.rules.1.ranges.1",
+          "delta_amount": 40
+        },
+        {
+          "field": "pricing.min_amount",
+          "delta_amount": 3
+        },
+        {
+          "field": "pricing.ranges.0",
+          "delta_amount": 0.08
+        },
+        {
+          "field": "pricing.ranges.1",
+          "delta_amount": 0.08
+        },
+        {
+          "field": "pricing.ranges.2",
+          "delta_amount": 0.1
+        },
+        {
+          "field": "zone2zone.prices.0",
+          "delta_amount": 10
+        },
+        {
+          "field": "zones.0.prices.0.d_amt",
+          "delta_amount": 9.6,
+          "z_id": "15.4.1"
+        },
+        {
+          "field": "zones.0.prices.0.p_amt",
+          "delta_amount": 9.6,
+          "z_id": "15.4.1"
+        },
+        {
+          "field": "zones.1.prices.0.d_amt",
+          "delta_amount": 23.9,
+          "z_id": "15.4.2"
+        },
+        {
+          "field": "zones.1.prices.0.p_amt",
+          "delta_amount": 23.9,
+          "z_id": "15.4.2"
+        },
+        {
+          "field": "zones.2.prices.0.d_amt",
+          "delta_amount": 7.6,
+          "z_id": "15.4.3"
+        },
+        {
+          "field": "zones.2.prices.0.p_amt",
+          "delta_amount": 7.6,
+          "z_id": "15.4.3"
+        },
+        {
+          "field": "zones.3.prices.0.d_amt",
+          "delta_amount": 6.55,
+          "z_id": "15.4.4"
+        },
+        {
+          "field": "zones.3.prices.0.p_amt",
+          "delta_amount": 6.55,
+          "z_id": "15.4.4"
+        },
+        {
+          "field": "zones.4.prices.0.d_amt",
+          "delta_amount": 18.58,
+          "z_id": "15.4.5"
+        },
+        {
+          "field": "zones.4.prices.0.p_amt",
+          "delta_amount": 18.58,
+          "z_id": "15.4.5"
+        },
+        {
+          "field": "zones.5.prices.0.d_amt",
+          "delta_amount": 32,
+          "z_id": "15.4.6"
+        },
+        {
+          "field": "zones.5.prices.0.p_amt",
+          "delta_amount": 32,
+          "z_id": "15.4.6"
+        },
+        {
+          "field": "zones.6.prices.0.d_amt",
+          "delta_amount": 36,
+          "z_id": "15.4.7"
+        },
+        {
+          "field": "zones.6.prices.0.p_amt",
+          "delta_amount": 36,
+          "z_id": "15.4.7"
+        },
+        {
+          "field": "zones.7.prices.0.d_amt",
+          "delta_amount": 70,
+          "z_id": "15.4.8"
+        },
+        {
+          "field": "zones.7.prices.0.p_amt",
+          "delta_amount": 70,
+          "z_id": "15.4.8"
+        },
+        {
+          "field": "zones.8.prices.0.d_amt",
+          "delta_amount": 4
+        },
+        {
+          "field": "zones.8.prices.0.p_amt",
+          "delta_amount": 4
+        },
+        {
+          "field": "zones.9.prices.0.d_amt",
+          "delta_amount": 3
+        },
+        {
+          "field": "zones.9.prices.0.p_amt",
+          "delta_amount": 3
+        },
+        {
+          "field": "zones.10.prices.0.d_amt",
+          "delta_amount": 4
+        },
+        {
+          "field": "zones.10.prices.0.p_amt",
+          "delta_amount": 4
+        }
+      ],
+      "surcharge_schedule": [
+        [
+          {
+            "from": "00:00",
+            "to": "07:30",
+            "break": "false",
+            "percent": 20,
+            "ts": 1704688723952
+          }
+        ],
+        [
+          {
+            "from": "00:00",
+            "to": "07:30",
+            "break": "false",
+            "percent": 20,
+            "ts": 1704688723952
+          }
+        ],
+        [
+          {
+            "from": "00:00",
+            "to": "07:30",
+            "break": "false",
+            "percent": 20,
+            "ts": 1704688723952
+          }
+        ],
+        [
+          {
+            "from": "00:00",
+            "to": "07:30",
+            "break": "false",
+            "percent": 20,
+            "ts": 1704688723952
+          }
+        ],
+        [
+          {
+            "from": "00:00",
+            "to": "07:30",
+            "break": "false",
+            "percent": 20,
+            "ts": 1704688723952
+          }
+        ],
+        [
+          {
+            "from": "00:00",
+            "to": "07:30",
+            "break": "false",
+            "percent": 20,
+            "ts": 1704688723952
+          }
+        ],
+        [
+          {
+            "from": "00:00",
+            "to": "07:30",
+            "break": "false",
+            "percent": 20,
+            "ts": 1704688723952
+          }
+        ]
+      ]
+    },
+    {
+      "vehicle_class_id": 4,
+      "delta_amount": 0,
+      "percent": 60,
+      "hourly_percent": 60,
+      "percent_appendix": [
+        {
+          "field": "downtown_areas.min_amount",
+          "delta_amount": 70
+        },
+        {
+          "field": "hourly_pricing.rules.0.min_amount",
+          "delta_amount": 200
+        },
+        {
+          "field": "hourly_pricing.rules.0.ranges.0",
+          "delta_amount": 40
+        },
+        {
+          "field": "hourly_pricing.rules.0.ranges.1",
+          "delta_amount": 45
+        },
+        {
+          "field": "hourly_pricing.rules.1.min_amount",
+          "delta_amount": 200
+        },
+        {
+          "field": "hourly_pricing.rules.1.ranges.0",
+          "delta_amount": 40
+        },
+        {
+          "field": "hourly_pricing.rules.1.ranges.1",
+          "delta_amount": 45
+        },
+        {
+          "field": "pricing.min_amount",
+          "delta_amount": 70
+        },
+        {
+          "field": "pricing.ranges.2",
+          "delta_amount": 3.5
+        },
+        {
+          "field": "zone2zone.prices.0",
+          "delta_amount": 180
+        },
+        {
+          "field": "zones.0.prices.0.d_amt",
+          "delta_amount": 117.6,
+          "z_id": "15.4.1"
+        },
+        {
+          "field": "zones.0.prices.0.p_amt",
+          "delta_amount": 117.6,
+          "z_id": "15.4.1"
+        },
+        {
+          "field": "zones.1.prices.0.d_amt",
+          "delta_amount": 166.9,
+          "z_id": "15.4.2"
+        },
+        {
+          "field": "zones.1.prices.0.p_amt",
+          "delta_amount": 166.9,
+          "z_id": "15.4.2"
+        },
+        {
+          "field": "zones.2.prices.0.d_amt",
+          "delta_amount": 87.6,
+          "z_id": "15.4.3"
+        },
+        {
+          "field": "zones.2.prices.0.p_amt",
+          "delta_amount": 87.6,
+          "z_id": "15.4.3"
+        },
+        {
+          "field": "zones.3.prices.0.d_amt",
+          "delta_amount": 62.2,
+          "z_id": "15.4.4"
+        },
+        {
+          "field": "zones.3.prices.0.p_amt",
+          "delta_amount": 62.2,
+          "z_id": "15.4.4"
+        },
+        {
+          "field": "zones.4.prices.0.d_amt",
+          "delta_amount": 75.05,
+          "z_id": "15.4.5"
+        },
+        {
+          "field": "zones.4.prices.0.p_amt",
+          "delta_amount": 75.05,
+          "z_id": "15.4.5"
+        },
+        {
+          "field": "zones.5.prices.0.d_amt",
+          "delta_amount": 90,
+          "z_id": "15.4.6"
+        },
+        {
+          "field": "zones.5.prices.0.p_amt",
+          "delta_amount": 90,
+          "z_id": "15.4.6"
+        },
+        {
+          "field": "zones.6.prices.0.d_amt",
+          "delta_amount": 90,
+          "z_id": "15.4.7"
+        },
+        {
+          "field": "zones.6.prices.0.p_amt",
+          "delta_amount": 90,
+          "z_id": "15.4.7"
+        },
+        {
+          "field": "zones.7.prices.0.d_amt",
+          "delta_amount": 75
+        },
+        {
+          "field": "zones.7.prices.0.p_amt",
+          "delta_amount": 75
+        },
+        {
+          "field": "zones.8.prices.0.d_amt",
+          "delta_amount": 70.3,
+          "z_id": "15.4.9"
+        },
+        {
+          "field": "zones.8.prices.0.p_amt",
+          "delta_amount": 70.3,
+          "z_id": "15.4.9"
+        },
+        {
+          "field": "zones.9.prices.0.d_amt",
+          "delta_amount": 68,
+          "z_id": "15.4.10"
+        },
+        {
+          "field": "zones.9.prices.0.p_amt",
+          "delta_amount": 68,
+          "z_id": "15.4.10"
+        },
+        {
+          "field": "zones.10.prices.0.d_amt",
+          "delta_amount": 62
+        },
+        {
+          "field": "zones.10.prices.0.p_amt",
+          "delta_amount": 62
+        }
+      ],
+      "surcharge_schedule": [
+        [
+          {
+            "from": "00:00",
+            "to": "07:30",
+            "break": "false",
+            "percent": 20,
+            "ts": 1704688723952
+          }
+        ],
+        [
+          {
+            "from": "00:00",
+            "to": "07:30",
+            "break": "false",
+            "percent": 20,
+            "ts": 1704688723952
+          }
+        ],
+        [
+          {
+            "from": "00:00",
+            "to": "07:30",
+            "break": "false",
+            "percent": 20,
+            "ts": 1704688723952
+          }
+        ],
+        [
+          {
+            "from": "00:00",
+            "to": "07:30",
+            "break": "false",
+            "percent": 20,
+            "ts": 1704688723952
+          }
+        ],
+        [
+          {
+            "from": "00:00",
+            "to": "07:30",
+            "break": "false",
+            "percent": 20,
+            "ts": 1704688723952
+          }
+        ],
+        [
+          {
+            "from": "00:00",
+            "to": "07:30",
+            "break": "false",
+            "percent": 20,
+            "ts": 1704688723952
+          }
+        ],
+        [
+          {
+            "from": "00:00",
+            "to": "07:30",
+            "break": "false",
+            "percent": 20,
+            "ts": 1704688723952
+          }
+        ]
+      ]
+    },
+    {
+      "vehicle_class_id": 5,
+      "delta_amount": 0,
+      "percent": 100,
+      "hourly_percent": 100,
+      "percent_appendix": [
+        {
+          "field": "downtown_areas.min_amount",
+          "delta_amount": 8
+        },
+        {
+          "field": "hourly_pricing.rules.0.min_amount",
+          "delta_amount": 240
+        },
+        {
+          "field": "hourly_pricing.rules.0.ranges.0",
+          "delta_amount": 40
+        },
+        {
+          "field": "hourly_pricing.rules.0.ranges.1",
+          "delta_amount": 45
+        },
+        {
+          "field": "hourly_pricing.rules.1.min_amount",
+          "delta_amount": 240
+        },
+        {
+          "field": "hourly_pricing.rules.1.ranges.0",
+          "delta_amount": 40
+        },
+        {
+          "field": "hourly_pricing.rules.1.ranges.1",
+          "delta_amount": 45
+        },
+        {
+          "field": "pricing.min_amount",
+          "delta_amount": 15
+        },
+        {
+          "field": "pricing.ranges.0",
+          "delta_amount": 0.35
+        },
+        {
+          "field": "pricing.ranges.1",
+          "delta_amount": 0.4
+        },
+        {
+          "field": "pricing.ranges.2",
+          "delta_amount": 0.45
+        },
+        {
+          "field": "zone2zone.prices.0",
+          "delta_amount": 50
+        },
+        {
+          "field": "zones.0.prices.0.d_amt",
+          "delta_amount": 14.6,
+          "z_id": "15.4.1"
+        },
+        {
+          "field": "zones.0.prices.0.p_amt",
+          "delta_amount": 14.6,
+          "z_id": "15.4.1"
+        },
+        {
+          "field": "zones.1.prices.0.d_amt",
+          "delta_amount": 35.8,
+          "z_id": "15.4.2"
+        },
+        {
+          "field": "zones.1.prices.0.p_amt",
+          "delta_amount": 35.8,
+          "z_id": "15.4.2"
+        },
+        {
+          "field": "zones.2.prices.0.d_amt",
+          "delta_amount": 7.88,
+          "z_id": "15.4.3"
+        },
+        {
+          "field": "zones.2.prices.0.p_amt",
+          "delta_amount": 7.88,
+          "z_id": "15.4.3"
+        },
+        {
+          "field": "zones.3.prices.0.d_amt",
+          "delta_amount": -1.8,
+          "z_id": "15.4.4"
+        },
+        {
+          "field": "zones.3.prices.0.p_amt",
+          "delta_amount": -1.8,
+          "z_id": "15.4.4"
+        },
+        {
+          "field": "zones.4.prices.0.d_amt",
+          "delta_amount": 22.05,
+          "z_id": "15.4.5"
+        },
+        {
+          "field": "zones.4.prices.0.p_amt",
+          "delta_amount": 22.05,
+          "z_id": "15.4.5"
+        },
+        {
+          "field": "zones.5.prices.0.d_amt",
+          "delta_amount": 27,
+          "z_id": "15.4.6"
+        },
+        {
+          "field": "zones.5.prices.0.p_amt",
+          "delta_amount": 27,
+          "z_id": "15.4.6"
+        },
+        {
+          "field": "zones.6.prices.0.d_amt",
+          "delta_amount": 38,
+          "z_id": "15.4.7"
+        },
+        {
+          "field": "zones.6.prices.0.p_amt",
+          "delta_amount": 38,
+          "z_id": "15.4.7"
+        },
+        {
+          "field": "zones.7.prices.0.d_amt",
+          "delta_amount": 90,
+          "z_id": "15.4.8"
+        },
+        {
+          "field": "zones.7.prices.0.p_amt",
+          "delta_amount": 90,
+          "z_id": "15.4.8"
+        },
+        {
+          "field": "zones.8.prices.0.d_amt",
+          "delta_amount": 8,
+          "z_id": "15.4.9"
+        },
+        {
+          "field": "zones.8.prices.0.p_amt",
+          "delta_amount": 8,
+          "z_id": "15.4.9"
+        },
+        {
+          "field": "zones.9.prices.0.d_amt",
+          "delta_amount": 18,
+          "z_id": "15.4.10"
+        },
+        {
+          "field": "zones.9.prices.0.p_amt",
+          "delta_amount": 18,
+          "z_id": "15.4.10"
+        },
+        {
+          "field": "zones.10.prices.0.d_amt",
+          "delta_amount": 16,
+          "z_id": "15.4.11"
+        },
+        {
+          "field": "zones.10.prices.0.p_amt",
+          "delta_amount": 16,
+          "z_id": "15.4.11"
+        }
+      ],
+      "surcharge_schedule": [
+        [
+          {
+            "from": "00:00",
+            "to": "07:30",
+            "break": "false",
+            "percent": 20,
+            "ts": 1704688723952
+          }
+        ],
+        [
+          {
+            "from": "00:00",
+            "to": "07:30",
+            "break": "false",
+            "percent": 20,
+            "ts": 1704688723952
+          }
+        ],
+        [
+          {
+            "from": "00:00",
+            "to": "07:30",
+            "break": "false",
+            "percent": 20,
+            "ts": 1704688723952
+          }
+        ],
+        [
+          {
+            "from": "00:00",
+            "to": "07:30",
+            "break": "false",
+            "percent": 20,
+            "ts": 1704688723952
+          }
+        ],
+        [
+          {
+            "from": "00:00",
+            "to": "07:30",
+            "break": "false",
+            "percent": 20,
+            "ts": 1704688723952
+          }
+        ],
+        [
+          {
+            "from": "00:00",
+            "to": "07:30",
+            "break": "false",
+            "percent": 20,
+            "ts": 1704688723952
+          }
+        ],
+        [
+          {
+            "from": "00:00",
+            "to": "07:30",
+            "break": "false",
+            "percent": 20,
+            "ts": 1704688723952
+          }
+        ]
+      ]
+    },
+    {
+      "vehicle_class_id": 9,
+      "delta_amount": 0,
+      "percent": 135,
+      "hourly_percent": 135,
+      "percent_appendix": [
+        {
+          "field": "downtown_areas.min_amount",
+          "delta_amount": 23
+        },
+        {
+          "field": "hourly_pricing.rules.0.min_amount",
+          "delta_amount": 290
+        },
+        {
+          "field": "hourly_pricing.rules.0.ranges.0",
+          "delta_amount": 40
+        },
+        {
+          "field": "hourly_pricing.rules.0.ranges.1",
+          "delta_amount": 45
+        },
+        {
+          "field": "hourly_pricing.rules.1.min_amount",
+          "delta_amount": 290
+        },
+        {
+          "field": "hourly_pricing.rules.1.ranges.0",
+          "delta_amount": 40
+        },
+        {
+          "field": "hourly_pricing.rules.1.ranges.1",
+          "delta_amount": 45
+        },
+        {
+          "field": "pricing.min_amount",
+          "delta_amount": 30
+        },
+        {
+          "field": "pricing.ranges.0",
+          "delta_amount": 0.4
+        },
+        {
+          "field": "pricing.ranges.1",
+          "delta_amount": 0.45
+        },
+        {
+          "field": "pricing.ranges.2",
+          "delta_amount": 0.5
+        },
+        {
+          "field": "pricing.ranges.4",
+          "delta_amount": 0.75
+        },
+        {
+          "field": "zone2zone.prices.0",
+          "delta_amount": 80
+        },
+        {
+          "field": "zones.0.prices.0.d_amt",
+          "delta_amount": 19.6,
+          "z_id": "15.4.1"
+        },
+        {
+          "field": "zones.0.prices.0.p_amt",
+          "delta_amount": 19.6,
+          "z_id": "15.4.1"
+        },
+        {
+          "field": "zones.1.prices.0.d_amt",
+          "delta_amount": 56.9,
+          "z_id": "15.4.2"
+        },
+        {
+          "field": "zones.1.prices.0.p_amt",
+          "delta_amount": 56.9,
+          "z_id": "15.4.2"
+        },
+        {
+          "field": "zones.2.prices.0.d_amt",
+          "delta_amount": 48.2,
+          "z_id": "15.4.3"
+        },
+        {
+          "field": "zones.2.prices.0.p_amt",
+          "delta_amount": 48.2,
+          "z_id": "15.4.3"
+        },
+        {
+          "field": "zones.3.prices.0.d_amt",
+          "delta_amount": 5.4,
+          "z_id": "15.4.4"
+        },
+        {
+          "field": "zones.3.prices.0.p_amt",
+          "delta_amount": 5.4,
+          "z_id": "15.4.4"
+        },
+        {
+          "field": "zones.4.prices.0.d_amt",
+          "delta_amount": 22.41,
+          "z_id": "15.4.5"
+        },
+        {
+          "field": "zones.4.prices.0.p_amt",
+          "delta_amount": 22.41,
+          "z_id": "15.4.5"
+        },
+        {
+          "field": "zones.5.prices.0.d_amt",
+          "delta_amount": 67,
+          "z_id": "15.4.6"
+        },
+        {
+          "field": "zones.5.prices.0.p_amt",
+          "delta_amount": 67,
+          "z_id": "15.4.6"
+        },
+        {
+          "field": "zones.6.prices.0.d_amt",
+          "delta_amount": 52,
+          "z_id": "15.4.7"
+        },
+        {
+          "field": "zones.6.prices.0.p_amt",
+          "delta_amount": 52,
+          "z_id": "15.4.7"
+        },
+        {
+          "field": "zones.7.prices.0.d_amt",
+          "delta_amount": 140,
+          "z_id": "15.4.8"
+        },
+        {
+          "field": "zones.7.prices.0.p_amt",
+          "delta_amount": 140,
+          "z_id": "15.4.8"
+        },
+        {
+          "field": "zones.8.prices.0.d_amt",
+          "delta_amount": 23.9,
+          "z_id": "15.4.9"
+        },
+        {
+          "field": "zones.8.prices.0.p_amt",
+          "delta_amount": 23.9,
+          "z_id": "15.4.9"
+        },
+        {
+          "field": "zones.9.prices.0.d_amt",
+          "delta_amount": 19.88,
+          "z_id": "15.4.10"
+        },
+        {
+          "field": "zones.9.prices.0.p_amt",
+          "delta_amount": 19.88,
+          "z_id": "15.4.10"
+        },
+        {
+          "field": "zones.10.prices.0.d_amt",
+          "delta_amount": 19.1,
+          "z_id": "15.4.11"
+        },
+        {
+          "field": "zones.10.prices.0.p_amt",
+          "delta_amount": 19.1,
+          "z_id": "15.4.11"
+        }
+      ],
+      "surcharge_schedule": [
+        [
+          {
+            "from": "00:00",
+            "to": "07:00",
+            "break": "false",
+            "percent": 20,
+            "ts": 1675824782307
+          }
+        ],
+        [
+          {
+            "from": "00:00",
+            "to": "07:00",
+            "break": "false",
+            "percent": 20,
+            "ts": 1675824782307
+          }
+        ],
+        [
+          {
+            "from": "00:00",
+            "to": "07:00",
+            "break": "false",
+            "percent": 20,
+            "ts": 1675824782307
+          }
+        ],
+        [
+          {
+            "from": "00:00",
+            "to": "07:00",
+            "break": "false",
+            "percent": 20,
+            "ts": 1675824782307
+          }
+        ],
+        [
+          {
+            "from": "00:00",
+            "to": "07:00",
+            "break": "false",
+            "percent": 20,
+            "ts": 1675824782307
+          }
+        ],
+        [
+          {
+            "from": "00:00",
+            "to": "07:00",
+            "break": "false",
+            "percent": 20,
+            "ts": 1675824782307
+          }
+        ],
+        [
+          {
+            "from": "00:00",
+            "to": "07:00",
+            "break": "false",
+            "percent": 20,
+            "ts": 1675824782307
+          }
+        ]
+      ]
+    },
+    {
+      "vehicle_class_id": 10,
+      "delta_amount": 0,
+      "percent": 180,
+      "hourly_percent": 180,
+      "percent_appendix": [
+        {
+          "field": "downtown_areas.min_amount",
+          "delta_amount": 45
+        },
+        {
+          "field": "hourly_pricing.rules.0.min_amount",
+          "delta_amount": 340
+        },
+        {
+          "field": "hourly_pricing.rules.0.ranges.0",
+          "delta_amount": 45
+        },
+        {
+          "field": "hourly_pricing.rules.1.min_amount",
+          "delta_amount": 340
+        },
+        {
+          "field": "hourly_pricing.rules.1.ranges.0",
+          "delta_amount": 45
+        },
+        {
+          "field": "pricing.ranges.0",
+          "delta_amount": 0.45
+        },
+        {
+          "field": "pricing.ranges.1",
+          "delta_amount": 0.5
+        },
+        {
+          "field": "pricing.ranges.2",
+          "delta_amount": 0.55
+        },
+        {
+          "field": "pricing.ranges.3",
+          "delta_amount": 0.9
+        },
+        {
+          "field": "pricing.ranges.4",
+          "delta_amount": 0.7
+        },
+        {
+          "field": "zone2zone.prices.0",
+          "delta_amount": 100
+        },
+        {
+          "field": "zones.0.prices.0.d_amt",
+          "delta_amount": 56.71,
+          "z_id": "15.4.1"
+        },
+        {
+          "field": "zones.0.prices.0.p_amt",
+          "delta_amount": 56.71,
+          "z_id": "15.4.1"
+        },
+        {
+          "field": "zones.1.prices.0.d_amt",
+          "delta_amount": 58.9,
+          "z_id": "15.4.2"
+        },
+        {
+          "field": "zones.1.prices.0.p_amt",
+          "delta_amount": 58.9,
+          "z_id": "15.4.2"
+        },
+        {
+          "field": "zones.2.prices.0.d_amt",
+          "delta_amount": 69.6,
+          "z_id": "15.4.3"
+        },
+        {
+          "field": "zones.2.prices.0.p_amt",
+          "delta_amount": 69.6,
+          "z_id": "15.4.3"
+        },
+        {
+          "field": "zones.3.prices.0.d_amt",
+          "delta_amount": 180,
+          "z_id": "15.4.4"
+        },
+        {
+          "field": "zones.3.prices.0.p_amt",
+          "delta_amount": 180,
+          "z_id": "15.4.4"
+        },
+        {
+          "field": "zones.4.prices.0.d_amt",
+          "delta_amount": 40.25,
+          "z_id": "15.4.5"
+        },
+        {
+          "field": "zones.4.prices.0.p_amt",
+          "delta_amount": 40.25,
+          "z_id": "15.4.5"
+        },
+        {
+          "field": "zones.5.prices.0.d_amt",
+          "delta_amount": 74,
+          "z_id": "15.4.6"
+        },
+        {
+          "field": "zones.5.prices.0.p_amt",
+          "delta_amount": 74,
+          "z_id": "15.4.6"
+        },
+        {
+          "field": "zones.6.prices.0.d_amt",
+          "delta_amount": 82,
+          "z_id": "15.4.7"
+        },
+        {
+          "field": "zones.6.prices.0.p_amt",
+          "delta_amount": 82,
+          "z_id": "15.4.7"
+        },
+        {
+          "field": "zones.7.prices.0.d_amt",
+          "delta_amount": 170,
+          "z_id": "15.4.8"
+        },
+        {
+          "field": "zones.7.prices.0.p_amt",
+          "delta_amount": 170,
+          "z_id": "15.4.8"
+        },
+        {
+          "field": "zones.8.prices.0.d_amt",
+          "delta_amount": 102,
+          "z_id": "15.4.9"
+        },
+        {
+          "field": "zones.8.prices.0.p_amt",
+          "delta_amount": 102,
+          "z_id": "15.4.9"
+        },
+        {
+          "field": "zones.9.prices.0.d_amt",
+          "delta_amount": 98,
+          "z_id": "15.4.10"
+        },
+        {
+          "field": "zones.9.prices.0.p_amt",
+          "delta_amount": 98,
+          "z_id": "15.4.10"
+        },
+        {
+          "field": "zones.10.prices.0.d_amt",
+          "delta_amount": 48.81,
+          "z_id": "15.4.11"
+        },
+        {
+          "field": "zones.10.prices.0.p_amt",
+          "delta_amount": 48.81,
+          "z_id": "15.4.11"
+        }
+      ],
+      "surcharge_schedule": [
+        [
+          {
+            "from": "00:00",
+            "to": "07:00",
+            "break": "false",
+            "percent": 20,
+            "ts": 1675824782307
+          }
+        ],
+        [
+          {
+            "from": "00:00",
+            "to": "07:00",
+            "break": "false",
+            "percent": 20,
+            "ts": 1675824782307
+          }
+        ],
+        [
+          {
+            "from": "00:00",
+            "to": "07:00",
+            "break": "false",
+            "percent": 20,
+            "ts": 1675824782307
+          }
+        ],
+        [
+          {
+            "from": "00:00",
+            "to": "07:00",
+            "break": "false",
+            "percent": 20,
+            "ts": 1675824782307
+          }
+        ],
+        [
+          {
+            "from": "00:00",
+            "to": "07:00",
+            "break": "false",
+            "percent": 20,
+            "ts": 1675824782307
+          }
+        ],
+        [
+          {
+            "from": "00:00",
+            "to": "07:00",
+            "break": "false",
+            "percent": 20,
+            "ts": 1675824782307
+          }
+        ],
+        [
+          {
+            "from": "00:00",
+            "to": "07:00",
+            "break": "false",
+            "percent": 20,
+            "ts": 1675824782307
+          }
+        ]
+      ]
+    },
+    {
+      "vehicle_class_id": 11,
+      "delta_amount": 0,
+      "percent": 220,
+      "hourly_percent": 220,
+      "percent_appendix": [
+        {
+          "field": "downtown_areas.min_amount",
+          "delta_amount": 61
+        },
+        {
+          "field": "hourly_pricing.rules.0.min_amount",
+          "delta_amount": 390
+        },
+        {
+          "field": "hourly_pricing.rules.0.ranges.0",
+          "delta_amount": 45
+        },
+        {
+          "field": "hourly_pricing.rules.1.min_amount",
+          "delta_amount": 390
+        },
+        {
+          "field": "hourly_pricing.rules.1.ranges.0",
+          "delta_amount": 45
+        },
+        {
+          "field": "pricing.ranges.0",
+          "delta_amount": 0.7
+        },
+        {
+          "field": "pricing.ranges.1",
+          "delta_amount": 0.7
+        },
+        {
+          "field": "pricing.ranges.2",
+          "delta_amount": 0.75
+        },
+        {
+          "field": "pricing.ranges.3",
+          "delta_amount": 1.1
+        },
+        {
+          "field": "pricing.ranges.4",
+          "delta_amount": 1
+        },
+        {
+          "field": "zone2zone.prices.0",
+          "delta_amount": 200
+        },
+        {
+          "field": "zones.0.prices.0.d_amt",
+          "delta_amount": 64.68,
+          "z_id": "15.4.1"
+        },
+        {
+          "field": "zones.0.prices.0.p_amt",
+          "delta_amount": 64.68,
+          "z_id": "15.4.1"
+        },
+        {
+          "field": "zones.1.prices.0.d_amt",
+          "delta_amount": 61.4,
+          "z_id": "15.4.2"
+        },
+        {
+          "field": "zones.1.prices.0.p_amt",
+          "delta_amount": 61.4,
+          "z_id": "15.4.2"
+        },
+        {
+          "field": "zones.2.prices.0.d_amt",
+          "delta_amount": 81.08,
+          "z_id": "15.4.3"
+        },
+        {
+          "field": "zones.2.prices.0.p_amt",
+          "delta_amount": 81.08,
+          "z_id": "15.4.3"
+        },
+        {
+          "field": "zones.3.prices.0.d_amt",
+          "delta_amount": 220,
+          "z_id": "15.4.4"
+        },
+        {
+          "field": "zones.3.prices.0.p_amt",
+          "delta_amount": 220,
+          "z_id": "15.4.4"
+        },
+        {
+          "field": "zones.4.prices.0.d_amt",
+          "delta_amount": 52.46,
+          "z_id": "15.4.5"
+        },
+        {
+          "field": "zones.4.prices.0.p_amt",
+          "delta_amount": 52.46,
+          "z_id": "15.4.5"
+        },
+        {
+          "field": "zones.5.prices.0.d_amt",
+          "delta_amount": 100,
+          "z_id": "15.4.6"
+        },
+        {
+          "field": "zones.5.prices.0.p_amt",
+          "delta_amount": 100,
+          "z_id": "15.4.6"
+        },
+        {
+          "field": "zones.6.prices.0.d_amt",
+          "delta_amount": 89,
+          "z_id": "15.4.7"
+        },
+        {
+          "field": "zones.6.prices.0.p_amt",
+          "delta_amount": 89,
+          "z_id": "15.4.7"
+        },
+        {
+          "field": "zones.7.prices.0.d_amt",
+          "delta_amount": 190,
+          "z_id": "15.4.8"
+        },
+        {
+          "field": "zones.7.prices.0.p_amt",
+          "delta_amount": 190,
+          "z_id": "15.4.8"
+        },
+        {
+          "field": "zones.8.prices.0.d_amt",
+          "delta_amount": 132,
+          "z_id": "15.4.9"
+        },
+        {
+          "field": "zones.8.prices.0.p_amt",
+          "delta_amount": 132,
+          "z_id": "15.4.9"
+        },
+        {
+          "field": "zones.9.prices.0.d_amt",
+          "delta_amount": 128,
+          "z_id": "15.4.10"
+        },
+        {
+          "field": "zones.9.prices.0.p_amt",
+          "delta_amount": 128,
+          "z_id": "15.4.10"
+        },
+        {
+          "field": "zones.10.prices.0.d_amt",
+          "delta_amount": 132,
+          "z_id": "15.4.11"
+        },
+        {
+          "field": "zones.10.prices.0.p_amt",
+          "delta_amount": 132,
+          "z_id": "15.4.11"
+        }
+      ],
+      "surcharge_schedule": [
+        [
+          {
+            "from": "00:00",
+            "to": "07:00",
+            "break": "false",
+            "percent": 20,
+            "ts": 1675824782307
+          }
+        ],
+        [
+          {
+            "from": "00:00",
+            "to": "07:00",
+            "break": "false",
+            "percent": 20,
+            "ts": 1675824782307
+          }
+        ],
+        [
+          {
+            "from": "00:00",
+            "to": "07:00",
+            "break": "false",
+            "percent": 20,
+            "ts": 1675824782307
+          }
+        ],
+        [
+          {
+            "from": "00:00",
+            "to": "07:00",
+            "break": "false",
+            "percent": 20,
+            "ts": 1675824782307
+          }
+        ],
+        [
+          {
+            "from": "00:00",
+            "to": "07:00",
+            "break": "false",
+            "percent": 20,
+            "ts": 1675824782307
+          }
+        ],
+        [
+          {
+            "from": "00:00",
+            "to": "07:00",
+            "break": "false",
+            "percent": 20,
+            "ts": 1675824782307
+          }
+        ],
+        [
+          {
+            "from": "00:00",
+            "to": "07:00",
+            "break": "false",
+            "percent": 20,
+            "ts": 1675824782307
+          }
+        ]
+      ]
+    },
+    {
+      "vehicle_class_id": 36,
+      "delta_amount": 0,
+      "percent": 60,
+      "hourly_percent": 60,
+      "hourly_delta": 0,
+      "percent_appendix": [
+        {
+          "field": "downtown_areas.min_amount",
+          "delta_amount": 75
+        },
+        {
+          "field": "hourly_pricing.rules.0.min_amount",
+          "delta_amount": 200
+        },
+        {
+          "field": "hourly_pricing.rules.0.ranges.0",
+          "delta_amount": 40
+        },
+        {
+          "field": "hourly_pricing.rules.0.ranges.1",
+          "delta_amount": 45
+        },
+        {
+          "field": "hourly_pricing.rules.1.min_amount",
+          "delta_amount": 200
+        },
+        {
+          "field": "hourly_pricing.rules.1.ranges.0",
+          "delta_amount": 40
+        },
+        {
+          "field": "hourly_pricing.rules.1.ranges.1",
+          "delta_amount": 45
+        },
+        {
+          "field": "pricing.min_amount",
+          "delta_amount": 70
+        },
+        {
+          "field": "pricing.ranges.2",
+          "delta_amount": 3.5
+        },
+        {
+          "field": "zone2zone.prices.0",
+          "delta_amount": 180
+        },
+        {
+          "field": "zones.0.prices.0.d_amt",
+          "delta_amount": 117.6,
+          "z_id": "15.4.1"
+        },
+        {
+          "field": "zones.0.prices.0.p_amt",
+          "delta_amount": 117.6,
+          "z_id": "15.4.1"
+        },
+        {
+          "field": "zones.1.prices.0.d_amt",
+          "delta_amount": 166.9,
+          "z_id": "15.4.2"
+        },
+        {
+          "field": "zones.1.prices.0.p_amt",
+          "delta_amount": 166.9,
+          "z_id": "15.4.2"
+        },
+        {
+          "field": "zones.2.prices.0.d_amt",
+          "delta_amount": 87.6,
+          "z_id": "15.4.3"
+        },
+        {
+          "field": "zones.2.prices.0.p_amt",
+          "delta_amount": 87.6,
+          "z_id": "15.4.3"
+        },
+        {
+          "field": "zones.3.prices.0.d_amt",
+          "delta_amount": 62.2,
+          "z_id": "15.4.4"
+        },
+        {
+          "field": "zones.3.prices.0.p_amt",
+          "delta_amount": 62.2,
+          "z_id": "15.4.4"
+        },
+        {
+          "field": "zones.4.prices.0.d_amt",
+          "delta_amount": 75.05,
+          "z_id": "15.4.5"
+        },
+        {
+          "field": "zones.4.prices.0.p_amt",
+          "delta_amount": 75.05,
+          "z_id": "15.4.5"
+        },
+        {
+          "field": "zones.5.prices.0.d_amt",
+          "delta_amount": 90,
+          "z_id": "15.4.6"
+        },
+        {
+          "field": "zones.5.prices.0.p_amt",
+          "delta_amount": 90,
+          "z_id": "15.4.6"
+        },
+        {
+          "field": "zones.6.prices.0.d_amt",
+          "delta_amount": 90,
+          "z_id": "15.4.7"
+        },
+        {
+          "field": "zones.6.prices.0.p_amt",
+          "delta_amount": 90,
+          "z_id": "15.4.7"
+        },
+        {
+          "field": "zones.7.prices.0.d_amt",
+          "delta_amount": 75
+        },
+        {
+          "field": "zones.7.prices.0.p_amt",
+          "delta_amount": 75
+        },
+        {
+          "field": "zones.8.prices.0.d_amt",
+          "delta_amount": 70.3,
+          "z_id": "15.4.9"
+        },
+        {
+          "field": "zones.8.prices.0.p_amt",
+          "delta_amount": 70.3,
+          "z_id": "15.4.9"
+        },
+        {
+          "field": "zones.9.prices.0.d_amt",
+          "delta_amount": 68,
+          "z_id": "15.4.10"
+        },
+        {
+          "field": "zones.9.prices.0.p_amt",
+          "delta_amount": 68,
+          "z_id": "15.4.10"
+        },
+        {
+          "field": "zones.10.prices.0.d_amt",
+          "delta_amount": 65
+        },
+        {
+          "field": "zones.10.prices.0.p_amt",
+          "delta_amount": 65
+        }
+      ],
+      "surcharge_schedule": [
+        [
+          {
+            "from": "00:00",
+            "to": "07:00",
+            "break": "false",
+            "percent": 20,
+            "ts": 1675824782307
+          }
+        ],
+        [
+          {
+            "from": "00:00",
+            "to": "07:00",
+            "break": "false",
+            "percent": 20,
+            "ts": 1675824782307
+          }
+        ],
+        [
+          {
+            "from": "00:00",
+            "to": "07:00",
+            "break": "false",
+            "percent": 20,
+            "ts": 1675824782307
+          }
+        ],
+        [
+          {
+            "from": "00:00",
+            "to": "07:00",
+            "break": "false",
+            "percent": 20,
+            "ts": 1675824782307
+          }
+        ],
+        [
+          {
+            "from": "00:00",
+            "to": "07:00",
+            "break": "false",
+            "percent": 20,
+            "ts": 1675824782307
+          }
+        ],
+        [
+          {
+            "from": "00:00",
+            "to": "07:00",
+            "break": "false",
+            "percent": 20,
+            "ts": 1675824782307
+          }
+        ],
+        [
+          {
+            "from": "00:00",
+            "to": "07:00",
+            "break": "false",
+            "percent": 20,
+            "ts": 1675824782307
+          }
+        ]
+      ]
+    },
+    {
+      "vehicle_class_id": 29,
+      "delta_amount": 0,
+      "percent": 230,
+      "hourly_percent": 230,
+      "hourly_delta": 0,
+      "percent_appendix": [
+        {
+          "field": "downtown_areas.min_amount",
+          "delta_amount": 180
+        },
+        {
+          "field": "hourly_pricing.rules.0.min_amount",
+          "delta_amount": 500
+        },
+        {
+          "field": "hourly_pricing.rules.1.min_amount",
+          "delta_amount": 500
+        },
+        {
+          "field": "pricing.min_amount",
+          "delta_amount": 110
+        },
+        {
+          "field": "pricing.ranges.0",
+          "delta_amount": 0.9
+        },
+        {
+          "field": "pricing.ranges.1",
+          "delta_amount": 0.9
+        },
+        {
+          "field": "pricing.ranges.2",
+          "delta_amount": 1.1
+        },
+        {
+          "field": "pricing.ranges.3",
+          "delta_amount": 1.25
+        },
+        {
+          "field": "pricing.ranges.4",
+          "delta_amount": 1.3
+        },
+        {
+          "field": "zone2zone.prices.0",
+          "delta_amount": 250
+        },
+        {
+          "field": "zones.0.prices.0.d_amt",
+          "delta_amount": 118.6,
+          "z_id": "15.4.1"
+        },
+        {
+          "field": "zones.0.prices.0.p_amt",
+          "delta_amount": 118.6,
+          "z_id": "15.4.1"
+        },
+        {
+          "field": "zones.1.prices.0.d_amt",
+          "delta_amount": 128.9,
+          "z_id": "15.4.2"
+        },
+        {
+          "field": "zones.1.prices.0.p_amt",
+          "delta_amount": 128.9,
+          "z_id": "15.4.2"
+        },
+        {
+          "field": "zones.2.prices.0.d_amt",
+          "delta_amount": 119.6,
+          "z_id": "15.4.3"
+        },
+        {
+          "field": "zones.2.prices.0.p_amt",
+          "delta_amount": 119.6,
+          "z_id": "15.4.3"
+        },
+        {
+          "field": "zones.3.prices.0.d_amt",
+          "delta_amount": 300,
+          "z_id": "15.4.4"
+        },
+        {
+          "field": "zones.3.prices.0.p_amt",
+          "delta_amount": 300,
+          "z_id": "15.4.4"
+        },
+        {
+          "field": "zones.4.prices.0.d_amt",
+          "delta_amount": 91.93,
+          "z_id": "15.4.5"
+        },
+        {
+          "field": "zones.4.prices.0.p_amt",
+          "delta_amount": 91.93,
+          "z_id": "15.4.5"
+        },
+        {
+          "field": "zones.5.prices.0.d_amt",
+          "delta_amount": 242,
+          "z_id": "15.4.6"
+        },
+        {
+          "field": "zones.5.prices.0.p_amt",
+          "delta_amount": 242,
+          "z_id": "15.4.6"
+        },
+        {
+          "field": "zones.6.prices.0.d_amt",
+          "delta_amount": 197,
+          "z_id": "15.4.7"
+        },
+        {
+          "field": "zones.6.prices.0.p_amt",
+          "delta_amount": 197,
+          "z_id": "15.4.7"
+        },
+        {
+          "field": "zones.7.prices.0.d_amt",
+          "delta_amount": 290,
+          "z_id": "15.4.8"
+        },
+        {
+          "field": "zones.7.prices.0.p_amt",
+          "delta_amount": 290,
+          "z_id": "15.4.8"
+        },
+        {
+          "field": "zones.8.prices.0.d_amt",
+          "delta_amount": 182,
+          "z_id": "15.4.9"
+        },
+        {
+          "field": "zones.8.prices.0.p_amt",
+          "delta_amount": 182,
+          "z_id": "15.4.9"
+        },
+        {
+          "field": "zones.9.prices.0.d_amt",
+          "delta_amount": 178,
+          "z_id": "15.4.10"
+        },
+        {
+          "field": "zones.9.prices.0.p_amt",
+          "delta_amount": 178,
+          "z_id": "15.4.10"
+        },
+        {
+          "field": "zones.10.prices.0.d_amt",
+          "delta_amount": 142,
+          "z_id": "15.4.11"
+        },
+        {
+          "field": "zones.10.prices.0.p_amt",
+          "delta_amount": 142,
+          "z_id": "15.4.11"
+        }
+      ],
+      "surcharge_schedule": [
+        [
+          {
+            "from": "00:00",
+            "to": "07:00",
+            "break": "false",
+            "percent": 20,
+            "ts": 1675824782307
+          }
+        ],
+        [
+          {
+            "from": "00:00",
+            "to": "07:00",
+            "break": "false",
+            "percent": 20,
+            "ts": 1675824782307
+          }
+        ],
+        [
+          {
+            "from": "00:00",
+            "to": "07:00",
+            "break": "false",
+            "percent": 20,
+            "ts": 1675824782307
+          }
+        ],
+        [
+          {
+            "from": "00:00",
+            "to": "07:00",
+            "break": "false",
+            "percent": 20,
+            "ts": 1675824782307
+          }
+        ],
+        [
+          {
+            "from": "00:00",
+            "to": "07:00",
+            "break": "false",
+            "percent": 20,
+            "ts": 1675824782307
+          }
+        ],
+        [
+          {
+            "from": "00:00",
+            "to": "07:00",
+            "break": "false",
+            "percent": 20,
+            "ts": 1675824782307
+          }
+        ],
+        [
+          {
+            "from": "00:00",
+            "to": "07:00",
+            "break": "false",
+            "percent": 20,
+            "ts": 1675824782307
+          }
+        ]
+      ]
+    },
+    {
+      "vehicle_class_id": 30,
+      "delta_amount": 0,
+      "percent": 240,
+      "hourly_percent": 240,
+      "hourly_delta": 0,
+      "percent_appendix": [
+        {
+          "field": "downtown_areas.min_amount",
+          "delta_amount": 260
+        },
+        {
+          "field": "hourly_pricing.rules.0.min_amount",
+          "delta_amount": 580
+        },
+        {
+          "field": "hourly_pricing.rules.1.min_amount",
+          "delta_amount": 580
+        },
+        {
+          "field": "pricing.min_amount",
+          "delta_amount": 130
+        },
+        {
+          "field": "pricing.ranges.0",
+          "delta_amount": 1
+        },
+        {
+          "field": "pricing.ranges.1",
+          "delta_amount": 1
+        },
+        {
+          "field": "pricing.ranges.2",
+          "delta_amount": 1.2
+        },
+        {
+          "field": "pricing.ranges.3",
+          "delta_amount": 1.35
+        },
+        {
+          "field": "pricing.ranges.4",
+          "delta_amount": 1.4
+        },
+        {
+          "field": "zone2zone.prices.0",
+          "delta_amount": 280
+        },
+        {
+          "field": "zones.0.prices.0.d_amt",
+          "delta_amount": 139.6,
+          "z_id": "15.4.1"
+        },
+        {
+          "field": "zones.0.prices.0.p_amt",
+          "delta_amount": 139.6,
+          "z_id": "15.4.1"
+        },
+        {
+          "field": "zones.1.prices.0.d_amt",
+          "delta_amount": 158.9,
+          "z_id": "15.4.2"
+        },
+        {
+          "field": "zones.1.prices.0.p_amt",
+          "delta_amount": 158.9,
+          "z_id": "15.4.2"
+        },
+        {
+          "field": "zones.2.prices.0.d_amt",
+          "delta_amount": 139.6,
+          "z_id": "15.4.3"
+        },
+        {
+          "field": "zones.2.prices.0.p_amt",
+          "delta_amount": 139.6,
+          "z_id": "15.4.3"
+        },
+        {
+          "field": "zones.3.prices.0.d_amt",
+          "delta_amount": 350,
+          "z_id": "15.4.4"
+        },
+        {
+          "field": "zones.3.prices.0.p_amt",
+          "delta_amount": 350,
+          "z_id": "15.4.4"
+        },
+        {
+          "field": "zones.4.prices.0.d_amt",
+          "delta_amount": 93.61,
+          "z_id": "15.4.5"
+        },
+        {
+          "field": "zones.4.prices.0.p_amt",
+          "delta_amount": 93.61,
+          "z_id": "15.4.5"
+        },
+        {
+          "field": "zones.5.prices.0.d_amt",
+          "delta_amount": 270,
+          "z_id": "15.4.6"
+        },
+        {
+          "field": "zones.5.prices.0.p_amt",
+          "delta_amount": 270,
+          "z_id": "15.4.6"
+        },
+        {
+          "field": "zones.6.prices.0.d_amt",
+          "delta_amount": 292,
+          "z_id": "15.4.7"
+        },
+        {
+          "field": "zones.6.prices.0.p_amt",
+          "delta_amount": 292,
+          "z_id": "15.4.7"
+        },
+        {
+          "field": "zones.7.prices.0.d_amt",
+          "delta_amount": 390,
+          "z_id": "15.4.8"
+        },
+        {
+          "field": "zones.7.prices.0.p_amt",
+          "delta_amount": 390,
+          "z_id": "15.4.8"
+        },
+        {
+          "field": "zones.8.prices.0.d_amt",
+          "delta_amount": 194,
+          "z_id": "15.4.9"
+        },
+        {
+          "field": "zones.8.prices.0.p_amt",
+          "delta_amount": 194,
+          "z_id": "15.4.9"
+        },
+        {
+          "field": "zones.9.prices.0.d_amt",
+          "delta_amount": 208,
+          "z_id": "15.4.10"
+        },
+        {
+          "field": "zones.9.prices.0.p_amt",
+          "delta_amount": 208,
+          "z_id": "15.4.10"
+        },
+        {
+          "field": "zones.10.prices.0.d_amt",
+          "delta_amount": 194,
+          "z_id": "15.4.11"
+        },
+        {
+          "field": "zones.10.prices.0.p_amt",
+          "delta_amount": 194,
+          "z_id": "15.4.11"
+        }
+      ],
+      "surcharge_schedule": [
+        [
+          {
+            "from": "00:00",
+            "to": "07:00",
+            "break": "false",
+            "percent": 20,
+            "ts": 1675824782307
+          }
+        ],
+        [
+          {
+            "from": "00:00",
+            "to": "07:00",
+            "break": "false",
+            "percent": 20,
+            "ts": 1675824782307
+          }
+        ],
+        [
+          {
+            "from": "00:00",
+            "to": "07:00",
+            "break": "false",
+            "percent": 20,
+            "ts": 1675824782307
+          }
+        ],
+        [
+          {
+            "from": "00:00",
+            "to": "07:00",
+            "break": "false",
+            "percent": 20,
+            "ts": 1675824782307
+          }
+        ],
+        [
+          {
+            "from": "00:00",
+            "to": "07:00",
+            "break": "false",
+            "percent": 20,
+            "ts": 1675824782307
+          }
+        ],
+        [
+          {
+            "from": "00:00",
+            "to": "07:00",
+            "break": "false",
+            "percent": 20,
+            "ts": 1675824782307
+          }
+        ],
+        [
+          {
+            "from": "00:00",
+            "to": "07:00",
+            "break": "false",
+            "percent": 20,
+            "ts": 1675824782307
+          }
+        ]
+      ]
+    },
+    {
+      "vehicle_class_id": 31,
+      "delta_amount": 0,
+      "percent": 240,
+      "hourly_percent": 240,
+      "hourly_delta": 0,
+      "percent_appendix": [
+        {
+          "field": "downtown_areas.min_amount",
+          "delta_amount": 360
+        },
+        {
+          "field": "hourly_pricing.rules.0.min_amount",
+          "delta_amount": 620
+        },
+        {
+          "field": "hourly_pricing.rules.1.min_amount",
+          "delta_amount": 620
+        },
+        {
+          "field": "pricing.min_amount",
+          "delta_amount": 180
+        },
+        {
+          "field": "pricing.ranges.0",
+          "delta_amount": 1.05
+        },
+        {
+          "field": "pricing.ranges.1",
+          "delta_amount": 1.05
+        },
+        {
+          "field": "pricing.ranges.2",
+          "delta_amount": 1.25
+        },
+        {
+          "field": "pricing.ranges.3",
+          "delta_amount": 1.5
+        },
+        {
+          "field": "pricing.ranges.4",
+          "delta_amount": 1.45
+        },
+        {
+          "field": "zone2zone.prices.0",
+          "delta_amount": 300
+        },
+        {
+          "field": "zones.0.prices.0.d_amt",
+          "delta_amount": 189.6,
+          "z_id": "15.4.1"
+        },
+        {
+          "field": "zones.0.prices.0.p_amt",
+          "delta_amount": 189.6,
+          "z_id": "15.4.1"
+        },
+        {
+          "field": "zones.1.prices.0.d_amt",
+          "delta_amount": 206.9,
+          "z_id": "15.4.2"
+        },
+        {
+          "field": "zones.1.prices.0.p_amt",
+          "delta_amount": 206.9,
+          "z_id": "15.4.2"
+        },
+        {
+          "field": "zones.2.prices.0.d_amt",
+          "delta_amount": 189.6,
+          "z_id": "15.4.3"
+        },
+        {
+          "field": "zones.2.prices.0.p_amt",
+          "delta_amount": 189.6,
+          "z_id": "15.4.3"
+        },
+        {
+          "field": "zones.3.prices.0.d_amt",
+          "delta_amount": 400,
+          "z_id": "15.4.4"
+        },
+        {
+          "field": "zones.3.prices.0.p_amt",
+          "delta_amount": 400,
+          "z_id": "15.4.4"
+        },
+        {
+          "field": "zones.4.prices.0.d_amt",
+          "delta_amount": 219.06,
+          "z_id": "15.4.5"
+        },
+        {
+          "field": "zones.4.prices.0.p_amt",
+          "delta_amount": 219.06,
+          "z_id": "15.4.5"
+        },
+        {
+          "field": "zones.5.prices.0.d_amt",
+          "delta_amount": 320,
+          "z_id": "15.4.6"
+        },
+        {
+          "field": "zones.5.prices.0.p_amt",
+          "delta_amount": 320,
+          "z_id": "15.4.6"
+        },
+        {
+          "field": "zones.6.prices.0.d_amt",
+          "delta_amount": 342,
+          "z_id": "15.4.7"
+        },
+        {
+          "field": "zones.6.prices.0.p_amt",
+          "delta_amount": 342,
+          "z_id": "15.4.7"
+        },
+        {
+          "field": "zones.7.prices.0.d_amt",
+          "delta_amount": 490,
+          "z_id": "15.4.8"
+        },
+        {
+          "field": "zones.7.prices.0.p_amt",
+          "delta_amount": 490,
+          "z_id": "15.4.8"
+        },
+        {
+          "field": "zones.8.prices.0.d_amt",
+          "delta_amount": 232,
+          "z_id": "15.4.9"
+        },
+        {
+          "field": "zones.8.prices.0.p_amt",
+          "delta_amount": 232,
+          "z_id": "15.4.9"
+        },
+        {
+          "field": "zones.9.prices.0.d_amt",
+          "delta_amount": 278,
+          "z_id": "15.4.10"
+        },
+        {
+          "field": "zones.9.prices.0.p_amt",
+          "delta_amount": 278,
+          "z_id": "15.4.10"
+        },
+        {
+          "field": "zones.10.prices.0.d_amt",
+          "delta_amount": 202,
+          "z_id": "15.4.11"
+        },
+        {
+          "field": "zones.10.prices.0.p_amt",
+          "delta_amount": 202,
+          "z_id": "15.4.11"
+        }
+      ],
+      "surcharge_schedule": [
+        [
+          {
+            "from": "00:00",
+            "to": "07:00",
+            "break": "false",
+            "percent": 20,
+            "ts": 1675824782307
+          }
+        ],
+        [
+          {
+            "from": "00:00",
+            "to": "07:00",
+            "break": "false",
+            "percent": 20,
+            "ts": 1675824782307
+          }
+        ],
+        [
+          {
+            "from": "00:00",
+            "to": "07:00",
+            "break": "false",
+            "percent": 20,
+            "ts": 1675824782307
+          }
+        ],
+        [
+          {
+            "from": "00:00",
+            "to": "07:00",
+            "break": "false",
+            "percent": 20,
+            "ts": 1675824782307
+          }
+        ],
+        [
+          {
+            "from": "00:00",
+            "to": "07:00",
+            "break": "false",
+            "percent": 20,
+            "ts": 1675824782307
+          }
+        ],
+        [
+          {
+            "from": "00:00",
+            "to": "07:00",
+            "break": "false",
+            "percent": 20,
+            "ts": 1675824782307
+          }
+        ],
+        [
+          {
+            "from": "00:00",
+            "to": "07:00",
+            "break": "false",
+            "percent": 20,
+            "ts": 1675824782307
+          }
+        ]
+      ]
+    },
+    {
+      "vehicle_class_id": 32,
+      "delta_amount": 0,
+      "percent": 240,
+      "hourly_percent": 240,
+      "hourly_delta": 0,
+      "percent_appendix": [
+        {
+          "field": "downtown_areas.min_amount",
+          "delta_amount": 430
+        },
+        {
+          "field": "hourly_pricing.rules.0.min_amount",
+          "delta_amount": 700
+        },
+        {
+          "field": "hourly_pricing.rules.0.ranges.0",
+          "delta_amount": 130
+        },
+        {
+          "field": "hourly_pricing.rules.1.min_amount",
+          "delta_amount": 700
+        },
+        {
+          "field": "hourly_pricing.rules.1.ranges.0",
+          "delta_amount": 130
+        },
+        {
+          "field": "pricing.min_amount",
+          "delta_amount": 220
+        },
+        {
+          "field": "pricing.ranges.0",
+          "delta_amount": 1.1
+        },
+        {
+          "field": "pricing.ranges.1",
+          "delta_amount": 1.1
+        },
+        {
+          "field": "pricing.ranges.2",
+          "delta_amount": 1.3
+        },
+        {
+          "field": "pricing.ranges.3",
+          "delta_amount": 1.6
+        },
+        {
+          "field": "pricing.ranges.4",
+          "delta_amount": 1.47
+        },
+        {
+          "field": "zone2zone.prices.0",
+          "delta_amount": 320
+        },
+        {
+          "field": "zones.0.prices.0.d_amt",
+          "delta_amount": 229.6,
+          "z_id": "15.4.1"
+        },
+        {
+          "field": "zones.0.prices.0.p_amt",
+          "delta_amount": 229.6,
+          "z_id": "15.4.1"
+        },
+        {
+          "field": "zones.1.prices.0.d_amt",
+          "delta_amount": 256.9,
+          "z_id": "15.4.2"
+        },
+        {
+          "field": "zones.1.prices.0.p_amt",
+          "delta_amount": 256.9,
+          "z_id": "15.4.2"
+        },
+        {
+          "field": "zones.2.prices.0.d_amt",
+          "delta_amount": 229.6,
+          "z_id": "15.4.3"
+        },
+        {
+          "field": "zones.2.prices.0.p_amt",
+          "delta_amount": 229.6,
+          "z_id": "15.4.3"
+        },
+        {
+          "field": "zones.3.prices.0.d_amt",
+          "delta_amount": 450,
+          "z_id": "15.4.4"
+        },
+        {
+          "field": "zones.3.prices.0.p_amt",
+          "delta_amount": 450,
+          "z_id": "15.4.4"
+        },
+        {
+          "field": "zones.4.prices.0.d_amt",
+          "delta_amount": 267.5,
+          "z_id": "15.4.5"
+        },
+        {
+          "field": "zones.4.prices.0.p_amt",
+          "delta_amount": 267.5,
+          "z_id": "15.4.5"
+        },
+        {
+          "field": "zones.5.prices.0.d_amt",
+          "delta_amount": 370,
+          "z_id": "15.4.6"
+        },
+        {
+          "field": "zones.5.prices.0.p_amt",
+          "delta_amount": 370,
+          "z_id": "15.4.6"
+        },
+        {
+          "field": "zones.6.prices.0.d_amt",
+          "delta_amount": 390,
+          "z_id": "15.4.7"
+        },
+        {
+          "field": "zones.6.prices.0.p_amt",
+          "delta_amount": 390,
+          "z_id": "15.4.7"
+        },
+        {
+          "field": "zones.7.prices.0.d_amt",
+          "delta_amount": 590,
+          "z_id": "15.4.8"
+        },
+        {
+          "field": "zones.7.prices.0.p_amt",
+          "delta_amount": 590,
+          "z_id": "15.4.8"
+        },
+        {
+          "field": "zones.8.prices.0.d_amt",
+          "delta_amount": 282,
+          "z_id": "15.4.9"
+        },
+        {
+          "field": "zones.8.prices.0.p_amt",
+          "delta_amount": 282,
+          "z_id": "15.4.9"
+        },
+        {
+          "field": "zones.9.prices.0.d_amt",
+          "delta_amount": 308,
+          "z_id": "15.4.10"
+        },
+        {
+          "field": "zones.9.prices.0.p_amt",
+          "delta_amount": 308,
+          "z_id": "15.4.10"
+        },
+        {
+          "field": "zones.10.prices.0.d_amt",
+          "delta_amount": 232,
+          "z_id": "15.4.11"
+        },
+        {
+          "field": "zones.10.prices.0.p_amt",
+          "delta_amount": 232,
+          "z_id": "15.4.11"
+        }
+      ],
+      "surcharge_schedule": [
+        [
+          {
+            "from": "00:00",
+            "to": "07:00",
+            "break": "false",
+            "percent": 20,
+            "ts": 1675824782307
+          }
+        ],
+        [
+          {
+            "from": "00:00",
+            "to": "07:00",
+            "break": "false",
+            "percent": 20,
+            "ts": 1675824782307
+          }
+        ],
+        [
+          {
+            "from": "00:00",
+            "to": "07:00",
+            "break": "false",
+            "percent": 20,
+            "ts": 1675824782307
+          }
+        ],
+        [
+          {
+            "from": "00:00",
+            "to": "07:00",
+            "break": "false",
+            "percent": 20,
+            "ts": 1675824782307
+          }
+        ],
+        [
+          {
+            "from": "00:00",
+            "to": "07:00",
+            "break": "false",
+            "percent": 20,
+            "ts": 1675824782307
+          }
+        ],
+        [
+          {
+            "from": "00:00",
+            "to": "07:00",
+            "break": "false",
+            "percent": 20,
+            "ts": 1675824782307
+          }
+        ],
+        [
+          {
+            "from": "00:00",
+            "to": "07:00",
+            "break": "false",
+            "percent": 20,
+            "ts": 1675824782307
+          }
+        ]
+      ]
+    },
+    {
+      "vehicle_class_id": 33,
+      "delta_amount": 0,
+      "percent": 260,
+      "hourly_percent": 260,
+      "hourly_delta": 0,
+      "percent_appendix": [
+        {
+          "field": "downtown_areas.min_amount",
+          "delta_amount": 480
+        },
+        {
+          "field": "hourly_pricing.rules.0.min_amount",
+          "delta_amount": 800
+        },
+        {
+          "field": "hourly_pricing.rules.0.ranges.0",
+          "delta_amount": 150
+        },
+        {
+          "field": "hourly_pricing.rules.1.min_amount",
+          "delta_amount": 800
+        },
+        {
+          "field": "hourly_pricing.rules.1.ranges.0",
+          "delta_amount": 150
+        },
+        {
+          "field": "pricing.min_amount",
+          "delta_amount": 350
+        },
+        {
+          "field": "pricing.ranges.0",
+          "delta_amount": 1.2
+        },
+        {
+          "field": "pricing.ranges.1",
+          "delta_amount": 1.2
+        },
+        {
+          "field": "pricing.ranges.2",
+          "delta_amount": 1.4
+        },
+        {
+          "field": "pricing.ranges.3",
+          "delta_amount": 1.7
+        },
+        {
+          "field": "pricing.ranges.4",
+          "delta_amount": 1.49
+        },
+        {
+          "field": "zone2zone.prices.0",
+          "delta_amount": 350
+        },
+        {
+          "field": "zones.0.prices.0.d_amt",
+          "delta_amount": 357.6,
+          "z_id": "15.4.1"
+        },
+        {
+          "field": "zones.0.prices.0.p_amt",
+          "delta_amount": 357.6,
+          "z_id": "15.4.1"
+        },
+        {
+          "field": "zones.1.prices.0.d_amt",
+          "delta_amount": 396.9,
+          "z_id": "15.4.2"
+        },
+        {
+          "field": "zones.1.prices.0.p_amt",
+          "delta_amount": 396.9,
+          "z_id": "15.4.2"
+        },
+        {
+          "field": "zones.2.prices.0.d_amt",
+          "delta_amount": 357.6,
+          "z_id": "15.4.3"
+        },
+        {
+          "field": "zones.2.prices.0.p_amt",
+          "delta_amount": 357.6,
+          "z_id": "15.4.3"
+        },
+        {
+          "field": "zones.3.prices.0.d_amt",
+          "delta_amount": 550,
+          "z_id": "15.4.4"
+        },
+        {
+          "field": "zones.3.prices.0.p_amt",
+          "delta_amount": 550,
+          "z_id": "15.4.4"
+        },
+        {
+          "field": "zones.4.prices.0.d_amt",
+          "delta_amount": 341.08,
+          "z_id": "15.4.5"
+        },
+        {
+          "field": "zones.4.prices.0.p_amt",
+          "delta_amount": 341.08,
+          "z_id": "15.4.5"
+        },
+        {
+          "field": "zones.5.prices.0.d_amt",
+          "delta_amount": 470,
+          "z_id": "15.4.6"
+        },
+        {
+          "field": "zones.5.prices.0.p_amt",
+          "delta_amount": 470,
+          "z_id": "15.4.6"
+        },
+        {
+          "field": "zones.6.prices.0.d_amt",
+          "delta_amount": 490,
+          "z_id": "15.4.7"
+        },
+        {
+          "field": "zones.6.prices.0.p_amt",
+          "delta_amount": 490,
+          "z_id": "15.4.7"
+        },
+        {
+          "field": "zones.7.prices.0.d_amt",
+          "delta_amount": 690,
+          "z_id": "15.4.8"
+        },
+        {
+          "field": "zones.7.prices.0.p_amt",
+          "delta_amount": 690,
+          "z_id": "15.4.8"
+        },
+        {
+          "field": "zones.8.prices.0.d_amt",
+          "delta_amount": 332,
+          "z_id": "15.4.9"
+        },
+        {
+          "field": "zones.8.prices.0.p_amt",
+          "delta_amount": 332,
+          "z_id": "15.4.9"
+        },
+        {
+          "field": "zones.9.prices.0.d_amt",
+          "delta_amount": 368,
+          "z_id": "15.4.10"
+        },
+        {
+          "field": "zones.9.prices.0.p_amt",
+          "delta_amount": 368,
+          "z_id": "15.4.10"
+        },
+        {
+          "field": "zones.10.prices.0.d_amt",
+          "delta_amount": 262,
+          "z_id": "15.4.11"
+        },
+        {
+          "field": "zones.10.prices.0.p_amt",
+          "delta_amount": 262,
+          "z_id": "15.4.11"
+        }
+      ],
+      "surcharge_schedule": [
+        [
+          {
+            "from": "00:00",
+            "to": "07:00",
+            "break": "false",
+            "percent": 20,
+            "ts": 1675824782307
+          }
+        ],
+        [
+          {
+            "from": "00:00",
+            "to": "07:00",
+            "break": "false",
+            "percent": 20,
+            "ts": 1675824782307
+          }
+        ],
+        [
+          {
+            "from": "00:00",
+            "to": "07:00",
+            "break": "false",
+            "percent": 20,
+            "ts": 1675824782307
+          }
+        ],
+        [
+          {
+            "from": "00:00",
+            "to": "07:00",
+            "break": "false",
+            "percent": 20,
+            "ts": 1675824782307
+          }
+        ],
+        [
+          {
+            "from": "00:00",
+            "to": "07:00",
+            "break": "false",
+            "percent": 20,
+            "ts": 1675824782307
+          }
+        ],
+        [
+          {
+            "from": "00:00",
+            "to": "07:00",
+            "break": "false",
+            "percent": 20,
+            "ts": 1675824782307
+          }
+        ],
+        [
+          {
+            "from": "00:00",
+            "to": "07:00",
+            "break": "false",
+            "percent": 20,
+            "ts": 1675824782307
+          }
+        ]
+      ]
+    },
+    {
+      "vehicle_class_id": 34,
+      "delta_amount": 0,
+      "percent": 260,
+      "hourly_percent": 260,
+      "hourly_delta": 0,
+      "percent_appendix": [
+        {
+          "field": "downtown_areas.min_amount",
+          "delta_amount": 760
+        },
+        {
+          "field": "hourly_pricing.rules.0.min_amount",
+          "delta_amount": 900
+        },
+        {
+          "field": "hourly_pricing.rules.0.ranges.0",
+          "delta_amount": 190
+        },
+        {
+          "field": "hourly_pricing.rules.1.min_amount",
+          "delta_amount": 900
+        },
+        {
+          "field": "hourly_pricing.rules.1.ranges.0",
+          "delta_amount": 190
+        },
+        {
+          "field": "pricing.min_amount",
+          "delta_amount": 375
+        },
+        {
+          "field": "pricing.ranges.0",
+          "delta_amount": 1.3
+        },
+        {
+          "field": "pricing.ranges.1",
+          "delta_amount": 1.3
+        },
+        {
+          "field": "pricing.ranges.2",
+          "delta_amount": 1.5
+        },
+        {
+          "field": "pricing.ranges.3",
+          "delta_amount": 1.8
+        },
+        {
+          "field": "pricing.ranges.4",
+          "delta_amount": 1.52
+        },
+        {
+          "field": "zone2zone.prices.0",
+          "delta_amount": 400
+        },
+        {
+          "field": "zones.0.prices.0.d_amt",
+          "delta_amount": 382.6,
+          "z_id": "15.4.1"
+        },
+        {
+          "field": "zones.0.prices.0.p_amt",
+          "delta_amount": 382.6,
+          "z_id": "15.4.1"
+        },
+        {
+          "field": "zones.1.prices.0.d_amt",
+          "delta_amount": 456.9,
+          "z_id": "15.4.2"
+        },
+        {
+          "field": "zones.1.prices.0.p_amt",
+          "delta_amount": 456.9,
+          "z_id": "15.4.2"
+        },
+        {
+          "field": "zones.2.prices.0.d_amt",
+          "delta_amount": 382.6,
+          "z_id": "15.4.3"
+        },
+        {
+          "field": "zones.2.prices.0.p_amt",
+          "delta_amount": 382.6,
+          "z_id": "15.4.3"
+        },
+        {
+          "field": "zones.3.prices.0.d_amt",
+          "delta_amount": 700,
+          "z_id": "15.4.4"
+        },
+        {
+          "field": "zones.3.prices.0.p_amt",
+          "delta_amount": 700,
+          "z_id": "15.4.4"
+        },
+        {
+          "field": "zones.4.prices.0.d_amt",
+          "delta_amount": 462.47,
+          "z_id": "15.4.5"
+        },
+        {
+          "field": "zones.4.prices.0.p_amt",
+          "delta_amount": 462.47,
+          "z_id": "15.4.5"
+        },
+        {
+          "field": "zones.5.prices.0.d_amt",
+          "delta_amount": 570,
+          "z_id": "15.4.6"
+        },
+        {
+          "field": "zones.5.prices.0.p_amt",
+          "delta_amount": 570,
+          "z_id": "15.4.6"
+        },
+        {
+          "field": "zones.6.prices.0.d_amt",
+          "delta_amount": 590,
+          "z_id": "15.4.7"
+        },
+        {
+          "field": "zones.6.prices.0.p_amt",
+          "delta_amount": 590,
+          "z_id": "15.4.7"
+        },
+        {
+          "field": "zones.7.prices.0.d_amt",
+          "delta_amount": 790,
+          "z_id": "15.4.8"
+        },
+        {
+          "field": "zones.7.prices.0.p_amt",
+          "delta_amount": 790,
+          "z_id": "15.4.8"
+        },
+        {
+          "field": "zones.8.prices.0.d_amt",
+          "delta_amount": 382,
+          "z_id": "15.4.9"
+        },
+        {
+          "field": "zones.8.prices.0.p_amt",
+          "delta_amount": 382,
+          "z_id": "15.4.9"
+        },
+        {
+          "field": "zones.9.prices.0.d_amt",
+          "delta_amount": 393,
+          "z_id": "15.4.10"
+        },
+        {
+          "field": "zones.9.prices.0.p_amt",
+          "delta_amount": 393,
+          "z_id": "15.4.10"
+        },
+        {
+          "field": "zones.10.prices.0.d_amt",
+          "delta_amount": 283,
+          "z_id": "15.4.11"
+        },
+        {
+          "field": "zones.10.prices.0.p_amt",
+          "delta_amount": 283,
+          "z_id": "15.4.11"
+        }
+      ],
+      "surcharge_schedule": [
+        [
+          {
+            "from": "00:00",
+            "to": "07:00",
+            "break": "false",
+            "percent": 20,
+            "ts": 1675824782307
+          }
+        ],
+        [
+          {
+            "from": "00:00",
+            "to": "07:00",
+            "break": "false",
+            "percent": 20,
+            "ts": 1675824782307
+          }
+        ],
+        [
+          {
+            "from": "00:00",
+            "to": "07:00",
+            "break": "false",
+            "percent": 20,
+            "ts": 1675824782307
+          }
+        ],
+        [
+          {
+            "from": "00:00",
+            "to": "07:00",
+            "break": "false",
+            "percent": 20,
+            "ts": 1675824782307
+          }
+        ],
+        [
+          {
+            "from": "00:00",
+            "to": "07:00",
+            "break": "false",
+            "percent": 20,
+            "ts": 1675824782307
+          }
+        ],
+        [
+          {
+            "from": "00:00",
+            "to": "07:00",
+            "break": "false",
+            "percent": 20,
+            "ts": 1675824782307
+          }
+        ],
+        [
+          {
+            "from": "00:00",
+            "to": "07:00",
+            "break": "false",
+            "percent": 20,
+            "ts": 1675824782307
+          }
+        ]
+      ]
+    },
+    {
+      "vehicle_class_id": 35,
+      "delta_amount": 0,
+      "percent": 300,
+      "hourly_percent": 300,
+      "hourly_delta": 0,
+      "percent_appendix": [
+        {
+          "field": "downtown_areas.min_amount",
+          "delta_amount": 880
+        },
+        {
+          "field": "hourly_pricing.rules.0.min_amount",
+          "delta_amount": 1000
+        },
+        {
+          "field": "hourly_pricing.rules.0.ranges.0",
+          "delta_amount": 250
+        },
+        {
+          "field": "hourly_pricing.rules.1.min_amount",
+          "delta_amount": 1000
+        },
+        {
+          "field": "hourly_pricing.rules.1.ranges.0",
+          "delta_amount": 250
+        },
+        {
+          "field": "pricing.min_amount",
+          "delta_amount": 510
+        },
+        {
+          "field": "pricing.ranges.0",
+          "delta_amount": 1.4
+        },
+        {
+          "field": "pricing.ranges.1",
+          "delta_amount": 1.4
+        },
+        {
+          "field": "pricing.ranges.2",
+          "delta_amount": 1.6
+        },
+        {
+          "field": "pricing.ranges.3",
+          "delta_amount": 1.9
+        },
+        {
+          "field": "pricing.ranges.4",
+          "delta_amount": 1.58
+        },
+        {
+          "field": "zone2zone.prices.0",
+          "delta_amount": 450
+        },
+        {
+          "field": "zones.0.prices.0.d_amt",
+          "delta_amount": 517.6,
+          "z_id": "15.4.1"
+        },
+        {
+          "field": "zones.0.prices.0.p_amt",
+          "delta_amount": 517.6,
+          "z_id": "15.4.1"
+        },
+        {
+          "field": "zones.1.prices.0.d_amt",
+          "delta_amount": 631.6,
+          "z_id": "15.4.2"
+        },
+        {
+          "field": "zones.1.prices.0.p_amt",
+          "delta_amount": 631.6,
+          "z_id": "15.4.2"
+        },
+        {
+          "field": "zones.2.prices.0.d_amt",
+          "delta_amount": 517.6,
+          "z_id": "15.4.3"
+        },
+        {
+          "field": "zones.2.prices.0.p_amt",
+          "delta_amount": 517.6,
+          "z_id": "15.4.3"
+        },
+        {
+          "field": "zones.3.prices.0.d_amt",
+          "delta_amount": 800,
+          "z_id": "15.4.4"
+        },
+        {
+          "field": "zones.3.prices.0.p_amt",
+          "delta_amount": 800,
+          "z_id": "15.4.4"
+        },
+        {
+          "field": "zones.4.prices.0.d_amt",
+          "delta_amount": 524.11,
+          "z_id": "15.4.5"
+        },
+        {
+          "field": "zones.4.prices.0.p_amt",
+          "delta_amount": 524.11,
+          "z_id": "15.4.5"
+        },
+        {
+          "field": "zones.5.prices.0.d_amt",
+          "delta_amount": 670,
+          "z_id": "15.4.6"
+        },
+        {
+          "field": "zones.5.prices.0.p_amt",
+          "delta_amount": 670,
+          "z_id": "15.4.6"
+        },
+        {
+          "field": "zones.6.prices.0.d_amt",
+          "delta_amount": 690,
+          "z_id": "15.4.7"
+        },
+        {
+          "field": "zones.6.prices.0.p_amt",
+          "delta_amount": 690,
+          "z_id": "15.4.7"
+        },
+        {
+          "field": "zones.7.prices.0.d_amt",
+          "delta_amount": 890,
+          "z_id": "15.4.8"
+        },
+        {
+          "field": "zones.7.prices.0.p_amt",
+          "delta_amount": 890,
+          "z_id": "15.4.8"
+        },
+        {
+          "field": "zones.8.prices.0.d_amt",
+          "delta_amount": 482,
+          "z_id": "15.4.9"
+        },
+        {
+          "field": "zones.8.prices.0.p_amt",
+          "delta_amount": 482,
+          "z_id": "15.4.9"
+        },
+        {
+          "field": "zones.9.prices.0.d_amt",
+          "delta_amount": 478,
+          "z_id": "15.4.10"
+        },
+        {
+          "field": "zones.9.prices.0.p_amt",
+          "delta_amount": 478,
+          "z_id": "15.4.10"
+        },
+        {
+          "field": "zones.10.prices.0.d_amt",
+          "delta_amount": 479.5,
+          "z_id": "15.4.11"
+        },
+        {
+          "field": "zones.10.prices.0.p_amt",
+          "delta_amount": 479.5,
+          "z_id": "15.4.11"
+        }
+      ],
+      "surcharge_schedule": [
+        [
+          {
+            "from": "00:00",
+            "to": "07:00",
+            "break": "false",
+            "percent": 20,
+            "ts": 1675824782307
+          }
+        ],
+        [
+          {
+            "from": "00:00",
+            "to": "07:00",
+            "break": "false",
+            "percent": 20,
+            "ts": 1675824782307
+          }
+        ],
+        [
+          {
+            "from": "00:00",
+            "to": "07:00",
+            "break": "false",
+            "percent": 20,
+            "ts": 1675824782307
+          }
+        ],
+        [
+          {
+            "from": "00:00",
+            "to": "07:00",
+            "break": "false",
+            "percent": 20,
+            "ts": 1675824782307
+          }
+        ],
+        [
+          {
+            "from": "00:00",
+            "to": "07:00",
+            "break": "false",
+            "percent": 20,
+            "ts": 1675824782307
+          }
+        ],
+        [
+          {
+            "from": "00:00",
+            "to": "07:00",
+            "break": "false",
+            "percent": 20,
+            "ts": 1675824782307
+          }
+        ],
+        [
+          {
+            "from": "00:00",
+            "to": "07:00",
+            "break": "false",
+            "percent": 20,
+            "ts": 1675824782307
+          }
+        ]
+      ]
+    },
+    {
+      "vehicle_class_id": 40,
+      "delta_amount": 0,
+      "percent": 130,
+      "hourly_percent": 130,
+      "hourly_delta": 0,
+      "percent_appendix": [
+        {
+          "field": "downtown_areas.min_amount",
+          "delta_amount": 80
+        },
+        {
+          "field": "hourly_pricing.rules.0.min_amount",
+          "delta_amount": 220
+        },
+        {
+          "field": "hourly_pricing.rules.0.ranges.0",
+          "delta_amount": 60
+        },
+        {
+          "field": "hourly_pricing.rules.0.ranges.1",
+          "delta_amount": 55
+        },
+        {
+          "field": "hourly_pricing.rules.1.min_amount",
+          "delta_amount": 220
+        },
+        {
+          "field": "hourly_pricing.rules.1.ranges.0",
+          "delta_amount": 60
+        },
+        {
+          "field": "hourly_pricing.rules.1.ranges.1",
+          "delta_amount": 55
+        },
+        {
+          "field": "pricing.min_amount",
+          "delta_amount": 90
+        },
+        {
+          "field": "zone2zone.prices.0",
+          "delta_amount": 200
+        },
+        {
+          "field": "zones.0.prices.0.d_amt",
+          "delta_amount": 167.6,
+          "z_id": "15.4.1"
+        },
+        {
+          "field": "zones.0.prices.0.p_amt",
+          "delta_amount": 167.6,
+          "z_id": "15.4.1"
+        },
+        {
+          "field": "zones.1.prices.0.d_amt",
+          "delta_amount": 166.9,
+          "z_id": "15.4.2"
+        },
+        {
+          "field": "zones.1.prices.0.p_amt",
+          "delta_amount": 166.9,
+          "z_id": "15.4.2"
+        },
+        {
+          "field": "zones.2.prices.0.d_amt",
+          "delta_amount": 107.6,
+          "z_id": "15.4.3"
+        },
+        {
+          "field": "zones.2.prices.0.p_amt",
+          "delta_amount": 107.6,
+          "z_id": "15.4.3"
+        },
+        {
+          "field": "zones.3.prices.0.d_amt",
+          "delta_amount": 120,
+          "z_id": "15.4.4"
+        },
+        {
+          "field": "zones.3.prices.0.p_amt",
+          "delta_amount": 120,
+          "z_id": "15.4.4"
+        },
+        {
+          "field": "zones.4.prices.0.d_amt",
+          "delta_amount": 115.05,
+          "z_id": "15.4.5"
+        },
+        {
+          "field": "zones.4.prices.0.p_amt",
+          "delta_amount": 115.05,
+          "z_id": "15.4.5"
+        },
+        {
+          "field": "zones.5.prices.0.d_amt",
+          "delta_amount": 150,
+          "z_id": "15.4.6"
+        },
+        {
+          "field": "zones.5.prices.0.p_amt",
+          "delta_amount": 150,
+          "z_id": "15.4.6"
+        },
+        {
+          "field": "zones.6.prices.0.d_amt",
+          "delta_amount": 150,
+          "z_id": "15.4.7"
+        },
+        {
+          "field": "zones.6.prices.0.p_amt",
+          "delta_amount": 150,
+          "z_id": "15.4.7"
+        },
+        {
+          "field": "zones.7.prices.0.d_amt",
+          "delta_amount": 170,
+          "z_id": "15.4.8"
+        },
+        {
+          "field": "zones.7.prices.0.p_amt",
+          "delta_amount": 170,
+          "z_id": "15.4.8"
+        },
+        {
+          "field": "zones.8.prices.0.d_amt",
+          "delta_amount": 112,
+          "z_id": "15.4.9"
+        },
+        {
+          "field": "zones.8.prices.0.p_amt",
+          "delta_amount": 112,
+          "z_id": "15.4.9"
+        },
+        {
+          "field": "zones.9.prices.0.d_amt",
+          "delta_amount": 108,
+          "z_id": "15.4.10"
+        },
+        {
+          "field": "zones.9.prices.0.p_amt",
+          "delta_amount": 108,
+          "z_id": "15.4.10"
+        },
+        {
+          "field": "zones.10.prices.0.d_amt",
+          "delta_amount": 112,
+          "z_id": "15.4.11"
+        },
+        {
+          "field": "zones.10.prices.0.p_amt",
+          "delta_amount": 112,
+          "z_id": "15.4.11"
+        }
+      ],
+      "surcharge_schedule": [
+        [
+          {
+            "from": "00:00",
+            "to": "07:00",
+            "break": "false",
+            "percent": 20,
+            "ts": 1675824782307
+          }
+        ],
+        [
+          {
+            "from": "00:00",
+            "to": "07:00",
+            "break": "false",
+            "percent": 20,
+            "ts": 1675824782307
+          }
+        ],
+        [
+          {
+            "from": "00:00",
+            "to": "07:00",
+            "break": "false",
+            "percent": 20,
+            "ts": 1675824782307
+          }
+        ],
+        [
+          {
+            "from": "00:00",
+            "to": "07:00",
+            "break": "false",
+            "percent": 20,
+            "ts": 1675824782307
+          }
+        ],
+        [
+          {
+            "from": "00:00",
+            "to": "07:00",
+            "break": "false",
+            "percent": 20,
+            "ts": 1675824782307
+          }
+        ],
+        [
+          {
+            "from": "00:00",
+            "to": "07:00",
+            "break": "false",
+            "percent": 20,
+            "ts": 1675824782307
+          }
+        ],
+        [
+          {
+            "from": "00:00",
+            "to": "07:00",
+            "break": "false",
+            "percent": 20,
+            "ts": 1675824782307
+          }
+        ]
+      ]
+    },
+    {
+      "vehicle_class_id": 12,
+      "delta_amount": 0,
+      "percent": 10,
+      "hourly_percent": 10,
+      "hourly_delta": 0,
+      "percent_appendix": [
+        {
+          "field": "downtown_areas.min_amount",
+          "delta_amount": 6
+        },
+        {
+          "field": "zone2zone.prices.0",
+          "delta_amount": -10
+        },
+        {
+          "field": "zones.0.prices.0.d_amt",
+          "delta_amount": 5.6,
+          "z_id": "15.4.1"
+        },
+        {
+          "field": "zones.0.prices.0.p_amt",
+          "delta_amount": 5.6,
+          "z_id": "15.4.1"
+        },
+        {
+          "field": "zones.1.prices.0.d_amt",
+          "delta_amount": 19.9,
+          "z_id": "15.4.2"
+        },
+        {
+          "field": "zones.1.prices.0.p_amt",
+          "delta_amount": 19.9,
+          "z_id": "15.4.2"
+        },
+        {
+          "field": "zones.2.prices.0.d_amt",
+          "delta_amount": 2.9,
+          "z_id": "15.4.3"
+        },
+        {
+          "field": "zones.2.prices.0.p_amt",
+          "delta_amount": 2.9,
+          "z_id": "15.4.3"
+        },
+        {
+          "field": "zones.3.prices.0.d_amt",
+          "delta_amount": -21,
+          "z_id": "15.4.4"
+        },
+        {
+          "field": "zones.3.prices.0.p_amt",
+          "delta_amount": -21,
+          "z_id": "15.4.4"
+        },
+        {
+          "field": "zones.4.prices.0.d_amt",
+          "delta_amount": 2.05,
+          "z_id": "15.4.5"
+        },
+        {
+          "field": "zones.4.prices.0.p_amt",
+          "delta_amount": 2.05,
+          "z_id": "15.4.5"
+        },
+        {
+          "field": "zones.5.prices.0.d_amt",
+          "delta_amount": 21,
+          "z_id": "15.4.6"
+        },
+        {
+          "field": "zones.5.prices.0.p_amt",
+          "delta_amount": 21,
+          "z_id": "15.4.6"
+        },
+        {
+          "field": "zones.6.prices.0.d_amt",
+          "delta_amount": 21,
+          "z_id": "15.4.7"
+        },
+        {
+          "field": "zones.6.prices.0.p_amt",
+          "delta_amount": 21,
+          "z_id": "15.4.7"
+        },
+        {
+          "field": "zones.7.prices.0.d_amt",
+          "delta_amount": 60,
+          "z_id": "15.4.8"
+        },
+        {
+          "field": "zones.7.prices.0.p_amt",
+          "delta_amount": 60,
+          "z_id": "15.4.8"
+        },
+        {
+          "field": "zones.8.prices.0.d_amt",
+          "delta_amount": 3.6,
+          "z_id": "15.4.9"
+        },
+        {
+          "field": "zones.8.prices.0.p_amt",
+          "delta_amount": 3.6,
+          "z_id": "15.4.9"
+        },
+        {
+          "field": "zones.9.prices.0.d_amt",
+          "delta_amount": 2.75,
+          "z_id": "15.4.10"
+        },
+        {
+          "field": "zones.9.prices.0.p_amt",
+          "delta_amount": 2.75,
+          "z_id": "15.4.10"
+        },
+        {
+          "field": "zones.10.prices.0.d_amt",
+          "delta_amount": 3.6,
+          "z_id": "15.4.11"
+        },
+        {
+          "field": "zones.10.prices.0.p_amt",
+          "delta_amount": 3.6,
+          "z_id": "15.4.11"
+        }
+      ],
+      "surcharge_schedule": [
+        [
+          {
+            "from": "00:00",
+            "to": "07:30",
+            "break": "false",
+            "percent": 20,
+            "ts": 1704688723952
+          }
+        ],
+        [
+          {
+            "from": "00:00",
+            "to": "07:30",
+            "break": "false",
+            "percent": 20,
+            "ts": 1704688723952
+          }
+        ],
+        [
+          {
+            "from": "00:00",
+            "to": "07:30",
+            "break": "false",
+            "percent": 20,
+            "ts": 1704688723952
+          }
+        ],
+        [
+          {
+            "from": "00:00",
+            "to": "07:30",
+            "break": "false",
+            "percent": 20,
+            "ts": 1704688723952
+          }
+        ],
+        [
+          {
+            "from": "00:00",
+            "to": "07:30",
+            "break": "false",
+            "percent": 20,
+            "ts": 1704688723952
+          }
+        ],
+        [
+          {
+            "from": "00:00",
+            "to": "07:30",
+            "break": "false",
+            "percent": 20,
+            "ts": 1704688723952
+          }
+        ],
+        [
+          {
+            "from": "00:00",
+            "to": "07:30",
+            "break": "false",
+            "percent": 20,
+            "ts": 1704688723952
+          }
+        ]
+      ]
+    },
+    {
+      "vehicle_class_id": 103,
+      "delta_amount": 0,
+      "percent": 110,
+      "hourly_percent": 110,
+      "hourly_delta": 0,
+      "percent_appendix": [
+        {
+          "field": "pricing.min_amount",
+          "delta_amount": 75
+        },
+        {
+          "field": "zones.0.prices.0.d_amt",
+          "delta_amount": 147.6,
+          "z_id": "15.4.1"
+        },
+        {
+          "field": "zones.0.prices.0.p_amt",
+          "delta_amount": 147.6,
+          "z_id": "15.4.1"
+        },
+        {
+          "field": "zones.1.prices.0.d_amt",
+          "delta_amount": 146.9,
+          "z_id": "15.4.2"
+        },
+        {
+          "field": "zones.1.prices.0.p_amt",
+          "delta_amount": 146.9,
+          "z_id": "15.4.2"
+        },
+        {
+          "field": "zones.2.prices.0.d_amt",
+          "delta_amount": 107.6,
+          "z_id": "15.4.3"
+        },
+        {
+          "field": "zones.2.prices.0.p_amt",
+          "delta_amount": 107.6,
+          "z_id": "15.4.3"
+        },
+        {
+          "field": "zones.4.prices.0.d_amt",
+          "delta_amount": 95.05,
+          "z_id": "15.4.5"
+        },
+        {
+          "field": "zones.4.prices.0.p_amt",
+          "delta_amount": 95.05,
+          "z_id": "15.4.5"
+        },
+        {
+          "field": "zones.5.prices.0.d_amt",
+          "delta_amount": 170,
+          "z_id": "15.4.6"
+        },
+        {
+          "field": "zones.5.prices.0.p_amt",
+          "delta_amount": 170,
+          "z_id": "15.4.6"
+        },
+        {
+          "field": "zones.6.prices.0.d_amt",
+          "delta_amount": 140,
+          "z_id": "15.4.7"
+        },
+        {
+          "field": "zones.6.prices.0.p_amt",
+          "delta_amount": 140,
+          "z_id": "15.4.7"
+        },
+        {
+          "field": "zones.7.prices.0.d_amt",
+          "delta_amount": 170,
+          "z_id": "15.4.8"
+        },
+        {
+          "field": "zones.7.prices.0.p_amt",
+          "delta_amount": 170,
+          "z_id": "15.4.8"
+        },
+        {
+          "field": "zones.8.prices.0.d_amt",
+          "delta_amount": 93,
+          "z_id": "15.4.9"
+        },
+        {
+          "field": "zones.8.prices.0.p_amt",
+          "delta_amount": 93,
+          "z_id": "15.4.9"
+        },
+        {
+          "field": "zones.9.prices.0.d_amt",
+          "delta_amount": 94,
+          "z_id": "15.4.10"
+        },
+        {
+          "field": "zones.9.prices.0.p_amt",
+          "delta_amount": 94,
+          "z_id": "15.4.10"
+        },
+        {
+          "field": "zones.10.prices.0.d_amt",
+          "delta_amount": 62,
+          "z_id": "15.4.11"
+        },
+        {
+          "field": "zones.10.prices.0.p_amt",
+          "delta_amount": 62,
+          "z_id": "15.4.11"
+        }
+      ]
+    },
+    {
+      "vehicle_class_id": 102,
+      "delta_amount": 0,
+      "percent": 100,
+      "hourly_percent": 100,
+      "hourly_delta": 0,
+      "percent_appendix": [
+        {
+          "field": "hourly_pricing.rules.0.min_amount",
+          "delta_amount": 140
+        },
+        {
+          "field": "pricing.min_amount",
+          "delta_amount": 45
+        },
+        {
+          "field": "zones.0.prices.0.d_amt",
+          "delta_amount": 87.6,
+          "z_id": "15.4.1"
+        },
+        {
+          "field": "zones.0.prices.0.p_amt",
+          "delta_amount": 87.6,
+          "z_id": "15.4.1"
+        },
+        {
+          "field": "zones.1.prices.0.d_amt",
+          "delta_amount": 86.9,
+          "z_id": "15.4.2"
+        },
+        {
+          "field": "zones.1.prices.0.p_amt",
+          "delta_amount": 86.9,
+          "z_id": "15.4.2"
+        },
+        {
+          "field": "zones.2.prices.0.d_amt",
+          "delta_amount": 57.6,
+          "z_id": "15.4.3"
+        },
+        {
+          "field": "zones.2.prices.0.p_amt",
+          "delta_amount": 57.6,
+          "z_id": "15.4.3"
+        },
+        {
+          "field": "zones.3.prices.0.d_amt",
+          "delta_amount": 80,
+          "z_id": "15.4.4"
+        },
+        {
+          "field": "zones.3.prices.0.p_amt",
+          "delta_amount": 80,
+          "z_id": "15.4.4"
+        },
+        {
+          "field": "zones.4.prices.0.d_amt",
+          "delta_amount": 55.05,
+          "z_id": "15.4.5"
+        },
+        {
+          "field": "zones.4.prices.0.p_amt",
+          "delta_amount": 55.05,
+          "z_id": "15.4.5"
+        },
+        {
+          "field": "zones.5.prices.0.d_amt",
+          "delta_amount": 130,
+          "z_id": "15.4.6"
+        },
+        {
+          "field": "zones.5.prices.0.p_amt",
+          "delta_amount": 130,
+          "z_id": "15.4.6"
+        },
+        {
+          "field": "zones.6.prices.0.d_amt",
+          "delta_amount": 90,
+          "z_id": "15.4.7"
+        },
+        {
+          "field": "zones.6.prices.0.p_amt",
+          "delta_amount": 90,
+          "z_id": "15.4.7"
+        },
+        {
+          "field": "zones.7.prices.0.d_amt",
+          "delta_amount": 140,
+          "z_id": "15.4.8"
+        },
+        {
+          "field": "zones.7.prices.0.p_amt",
+          "delta_amount": 140,
+          "z_id": "15.4.8"
+        },
+        {
+          "field": "zones.8.prices.0.d_amt",
+          "delta_amount": 56,
+          "z_id": "15.4.9"
+        },
+        {
+          "field": "zones.8.prices.0.p_amt",
+          "delta_amount": 56,
+          "z_id": "15.4.9"
+        },
+        {
+          "field": "zones.9.prices.0.d_amt",
+          "delta_amount": 57,
+          "z_id": "15.4.10"
+        },
+        {
+          "field": "zones.9.prices.0.p_amt",
+          "delta_amount": 57,
+          "z_id": "15.4.10"
+        },
+        {
+          "field": "zones.10.prices.0.d_amt",
+          "delta_amount": 39,
+          "z_id": "15.4.11"
+        },
+        {
+          "field": "zones.10.prices.0.p_amt",
+          "delta_amount": 39,
+          "z_id": "15.4.11"
+        }
+      ]
+    },
+    {
+      "vehicle_class_id": 101,
+      "delta_amount": 0,
+      "percent": 130,
+      "hourly_percent": 130,
+      "hourly_delta": 0,
+      "percent_appendix": [
+        {
+          "field": "hourly_pricing.rules.0.min_amount",
+          "delta_amount": 260
+        },
+        {
+          "field": "pricing.min_amount",
+          "delta_amount": 115
+        },
+        {
+          "field": "zones.0.prices.0.d_amt",
+          "delta_amount": 187.6,
+          "z_id": "15.4.1"
+        },
+        {
+          "field": "zones.0.prices.0.p_amt",
+          "delta_amount": 187.6,
+          "z_id": "15.4.1"
+        },
+        {
+          "field": "zones.1.prices.0.d_amt",
+          "delta_amount": 186.9,
+          "z_id": "15.4.2"
+        },
+        {
+          "field": "zones.1.prices.0.p_amt",
+          "delta_amount": 186.9,
+          "z_id": "15.4.2"
+        },
+        {
+          "field": "zones.2.prices.0.d_amt",
+          "delta_amount": 127.6,
+          "z_id": "15.4.3"
+        },
+        {
+          "field": "zones.2.prices.0.p_amt",
+          "delta_amount": 127.6,
+          "z_id": "15.4.3"
+        },
+        {
+          "field": "zones.3.prices.0.d_amt",
+          "delta_amount": 150,
+          "z_id": "15.4.4"
+        },
+        {
+          "field": "zones.3.prices.0.p_amt",
+          "delta_amount": 150,
+          "z_id": "15.4.4"
+        },
+        {
+          "field": "zones.4.prices.0.d_amt",
+          "delta_amount": 125.05,
+          "z_id": "15.4.5"
+        },
+        {
+          "field": "zones.4.prices.0.p_amt",
+          "delta_amount": 125.05,
+          "z_id": "15.4.5"
+        },
+        {
+          "field": "zones.5.prices.0.d_amt",
+          "delta_amount": 170,
+          "z_id": "15.4.6"
+        },
+        {
+          "field": "zones.5.prices.0.p_amt",
+          "delta_amount": 170,
+          "z_id": "15.4.6"
+        },
+        {
+          "field": "zones.6.prices.0.d_amt",
+          "delta_amount": 170,
+          "z_id": "15.4.7"
+        },
+        {
+          "field": "zones.6.prices.0.p_amt",
+          "delta_amount": 170,
+          "z_id": "15.4.7"
+        },
+        {
+          "field": "zones.7.prices.0.d_amt",
+          "delta_amount": 210,
+          "z_id": "15.4.8"
+        },
+        {
+          "field": "zones.7.prices.0.p_amt",
+          "delta_amount": 210,
+          "z_id": "15.4.8"
+        },
+        {
+          "field": "zones.8.prices.0.d_amt",
+          "delta_amount": 121,
+          "z_id": "15.4.9"
+        },
+        {
+          "field": "zones.8.prices.0.p_amt",
+          "delta_amount": 121,
+          "z_id": "15.4.9"
+        },
+        {
+          "field": "zones.9.prices.0.d_amt",
+          "delta_amount": 117,
+          "z_id": "15.4.10"
+        },
+        {
+          "field": "zones.9.prices.0.p_amt",
+          "delta_amount": 117,
+          "z_id": "15.4.10"
+        },
+        {
+          "field": "zones.10.prices.0.d_amt",
+          "delta_amount": 102,
+          "z_id": "15.4.11"
+        },
+        {
+          "field": "zones.10.prices.0.p_amt",
+          "delta_amount": 102,
+          "z_id": "15.4.11"
+        }
+      ]
+    }
+  ],
+  "countryCode": "ARE",
+  "currencyCode": "USD",
+  "pricing_schedule_sum": [
+    {
+      "notice_time_hint": [
+        [
+          {
+            "from": "00:00",
+            "to": "07:30",
+            "break": "false",
+            "percent": 20,
+            "ts": 1704688723952
+          }
+        ],
+        [
+          {
+            "from": "00:00",
+            "to": "07:30",
+            "break": "false",
+            "percent": 20,
+            "ts": 1704688723952
+          }
+        ],
+        [
+          {
+            "from": "00:00",
+            "to": "07:30",
+            "break": "false",
+            "percent": 20,
+            "ts": 1704688723952
+          }
+        ],
+        [
+          {
+            "from": "00:00",
+            "to": "07:30",
+            "break": "false",
+            "percent": 20,
+            "ts": 1704688723952
+          }
+        ],
+        [
+          {
+            "from": "00:00",
+            "to": "07:30",
+            "break": "false",
+            "percent": 20,
+            "ts": 1704688723952
+          }
+        ],
+        [
+          {
+            "from": "00:00",
+            "to": "07:30",
+            "break": "false",
+            "percent": 20,
+            "ts": 1704688723952
+          }
+        ],
+        [
+          {
+            "from": "00:00",
+            "to": "07:30",
+            "break": "false",
+            "percent": 20,
+            "ts": 1704688723952
+          }
+        ]
+      ],
+      "vehicles": [
+        1,
+        6,
+        3,
+        2,
+        4,
+        5,
+        12
+      ],
+      "pid": "89496.7.1",
+      "sname": "Setting 1"
+    },
+    {
+      "notice_time_hint": [
+        [
+          {
+            "from": "00:00",
+            "to": "07:00",
+            "break": "false",
+            "percent": 20,
+            "ts": 1675824782307
+          }
+        ],
+        [
+          {
+            "from": "00:00",
+            "to": "07:00",
+            "break": "false",
+            "percent": 20,
+            "ts": 1675824782307
+          }
+        ],
+        [
+          {
+            "from": "00:00",
+            "to": "07:00",
+            "break": "false",
+            "percent": 20,
+            "ts": 1675824782307
+          }
+        ],
+        [
+          {
+            "from": "00:00",
+            "to": "07:00",
+            "break": "false",
+            "percent": 20,
+            "ts": 1675824782307
+          }
+        ],
+        [
+          {
+            "from": "00:00",
+            "to": "07:00",
+            "break": "false",
+            "percent": 20,
+            "ts": 1675824782307
+          }
+        ],
+        [
+          {
+            "from": "00:00",
+            "to": "07:00",
+            "break": "false",
+            "percent": 20,
+            "ts": 1675824782307
+          }
+        ],
+        [
+          {
+            "from": "00:00",
+            "to": "07:00",
+            "break": "false",
+            "percent": 20,
+            "ts": 1675824782307
+          }
+        ]
+      ],
+      "vehicles": [
+        10,
+        11,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        40,
+        36,
+        9
+      ],
+      "pid": "89496.7.2",
+      "sname": "Setting 2"
+    }
+  ],
+  "hourly_pricing": {
+    "currency": "USD",
+    "rules": [
+      {
+        "io": 1,
+        "name": "Rule 1",
+        "zones": [
+          "serviceArea"
+        ],
+        "max_distance": 200,
+        "min_amount": 160,
+        "min_duration": 4,
+        "currency": "USD",
+        "ranges": [
+          {
+            "seq": 0,
+            "amount": 20,
+            "currency": "USD",
+            "duration": 4,
+            "from": 4,
+            "to": 8
+          },
+          {
+            "seq": 1,
+            "amount": 25,
+            "currency": "USD",
+            "duration": 2,
+            "from": 8,
+            "to": 10
+          }
+        ],
+        "pid": "89496.9.1"
+      },
+      {
+        "io": 0,
+        "name": "Rule 2",
+        "zones": [
+          "serviceArea"
+        ],
+        "max_distance": 200,
+        "min_amount": 160,
+        "min_duration": 4,
+        "currency": "USD",
+        "ranges": [
+          {
+            "seq": 0,
+            "amount": 20,
+            "currency": "USD",
+            "duration": 4,
+            "from": 4,
+            "to": 8
+          },
+          {
+            "seq": 1,
+            "amount": 25,
+            "currency": "USD",
+            "duration": 2,
+            "from": 8,
+            "to": 10
+          }
+        ],
+        "pid": "89496.9.2"
+      }
+    ]
   },
   "date_surcharge_method": "sum",
-  "service_area_pricing_id": null,
-  "req_id": "f852f321-4072-7b2a-fb9f-6f32f4b5e48e",
+  "req_id": "fca3d86f-5e71-e9fc-a8b8-f9a7a47bebca",
+  "downtown_areas": {
+    "area_geometry": [
+      {
+        "lat": 25.172725810803332,
+        "lng": 55.20441048779298
+      },
+      {
+        "lat": 25.223381123195903,
+        "lng": 55.230735713623055
+      },
+      {
+        "lat": 25.27401534807724,
+        "lng": 55.249507838867196
+      },
+      {
+        "lat": 25.309557651835043,
+        "lng": 55.28155892529297
+      },
+      {
+        "lat": 25.327092153776313,
+        "lng": 55.347942287109376
+      },
+      {
+        "lat": 25.229437439119994,
+        "lng": 55.42628091015625
+      },
+      {
+        "lat": 25.165889839329157,
+        "lng": 55.42187874951172
+      },
+      {
+        "lat": 25.112706188404488,
+        "lng": 55.3931502644043
+      },
+      {
+        "lat": 25.085950211096655,
+        "lng": 55.353380138061546
+      },
+      {
+        "lat": 25.075048664348717,
+        "lng": 55.294040614746095
+      },
+      {
+        "lat": 25.084999164531,
+        "lng": 55.24362176098633
+      },
+      {
+        "lat": 25.087797596976788,
+        "lng": 55.11458199658204
+      },
+      {
+        "lat": 25.111910785991633,
+        "lng": 55.10433762707518
+      },
+      {
+        "lat": 25.140370492700974,
+        "lng": 55.10645287670899
+      }
+    ],
+    "ranges": [
+      {
+        "seq": 0,
+        "amount": 1,
+        "currency": "USD",
+        "distance": 10000,
+        "from": 10000,
+        "to": 20000,
+        "distanceIn": 0,
+        "per_unit": 1
+      }
+    ],
+    "currency": "USD",
+    "min_amount": 20,
+    "min_distance": 10000,
+    "pid": "89496.3.1"
+  },
   "specific_date_surcharge": [
-      {
-          "from_date": "2025-01-07",
-          "to_date": "2025-01-10",
-          "currency": "THB",
-          "name": "Rule 1",
-          "zones": [],
+    {
+      "from_date": "2025-03-30",
+      "to_date": "2025-04-02",
+      "currency": "USD",
+      "name": "\u5f00\u658b\u8282",
+      "zones": [
+        "serviceArea"
+      ],
+      "vehicle_classes": [
+        {
+          "vehicle_class_ids": [
+            1,
+            12,
+            2,
+            40,
+            103,
+            102,
+            101,
+            6,
+            3,
+            4,
+            36,
+            5,
+            10,
+            9,
+            11,
+            29,
+            30,
+            31,
+            32,
+            33,
+            34,
+            35
+          ],
+          "percent": 0,
+          "delta_amount": 200
+        }
+      ],
+      "routes": [
+        {
+          "name": "Route 5",
+          "type": 2,
+          "from_zones": [
+            {
+              "name": "allAddresses",
+              "type": "zone"
+            }
+          ],
+          "to_zones": [
+            {
+              "name": "allAddresses",
+              "type": "zone"
+            }
+          ],
           "vehicle_classes": [
-              {
-                  "vehicle_class_ids": [],
-                  "percent": 0,
+            {
+              "vehicle_class_ids": [
+                1,
+                12,
+                2,
+                40,
+                103,
+                102,
+                101,
+                6,
+                3,
+                4,
+                36,
+                5,
+                10,
+                9,
+                11,
+                29,
+                30,
+                31,
+                32,
+                33,
+                34,
+                35
+              ],
+              "percent": 0,
+              "delta_amount": 200
+            }
+          ],
+          "vehicle_classes_date": [
+            {
+              "date_range": {
+                "from": "00:00",
+                "to": "24:00"
+              },
+              "vehicle_classes": [
+                {
+                  "vehicle_class_ids": [
+                    1,
+                    12,
+                    2,
+                    40,
+                    103,
+                    102,
+                    101,
+                    6,
+                    3,
+                    4,
+                    36,
+                    5,
+                    10,
+                    9,
+                    11,
+                    29,
+                    30,
+                    31,
+                    32,
+                    33,
+                    34,
+                    35
+                  ],
+                  "percent": 40,
                   "delta_amount": 0
-              }
-          ],
-          "routes": [
-              {
-                  "name": "Route 1",
-                  "type": 1,
-                  "from_zones": [
-                      {
-                          "name": "BKK",
-                          "type": "airport"
-                      },
-                      {
-                          "name": "DMK",
-                          "type": "airport"
-                      }
-                  ],
-                  "to_zones": [
-                      {
-                          "name": "serviceArea",
-                          "type": "zone"
-                      }
-                  ],
-                  "vehicle_classes": [
-                      {
-                          "vehicle_class_ids": [],
-                          "percent": 0,
-                          "delta_amount": 0
-                      }
-                  ],
-                  "vehicle_classes_date": [
-                      {
-                          "date_range": {
-                              "from": "00:00",
-                              "to": "23:05"
-                          },
-                          "vehicle_classes": [
-                              {
-                                  "vehicle_class_ids": [
-                                      1,
-                                      6,
-                                      3,
-                                      7
-                                  ],
-                                  "percent": 0,
-                                  "delta_amount": 200
-                              }
-                          ]
-                      }
-                  ]
-              }
-          ],
-          "pid": "40.8.1"
-      }
-  ],
-  "notice_time_rules": [
-      {
-          "zones": [],
-          "from_zones": [],
-          "to_zones": [],
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "pid": "89496.8.1"
+    },
+    {
+      "from_date": "2025-05-01",
+      "to_date": "2025-05-01",
+      "currency": "USD",
+      "name": 5.1,
+      "zones": [],
+      "vehicle_classes": [
+        {
+          "vehicle_class_ids": [],
+          "percent": 0,
+          "delta_amount": 0
+        }
+      ],
+      "routes": [
+        {
+          "name": "Route 1",
           "type": 1,
-          "ps": [
-              {
-                  "vc_ids": [],
-                  "notice_time": [
-                      {}
-                  ]
-              }
+          "from_zones": [
+            {
+              "name": "allAddresses",
+              "type": "zone"
+            }
           ],
-          "name": "Rule 1",
-          "pid": "40.6.1"
-      }
+          "to_zones": [
+            {
+              "name": "allAddresses",
+              "type": "zone"
+            }
+          ],
+          "vehicle_classes": [
+            {
+              "vehicle_class_ids": [],
+              "percent": 0,
+              "delta_amount": 0
+            }
+          ],
+          "vehicle_classes_date": [
+            {
+              "date_range": {
+                "from": "00:00",
+                "to": "24:00"
+              },
+              "vehicle_classes": [
+                {
+                  "vehicle_class_ids": [
+                    1,
+                    12,
+                    2,
+                    40,
+                    101,
+                    102,
+                    103,
+                    6,
+                    3,
+                    4,
+                    36,
+                    5,
+                    9,
+                    10,
+                    11,
+                    29,
+                    30,
+                    31,
+                    32,
+                    33,
+                    34,
+                    35
+                  ],
+                  "percent": 10,
+                  "delta_amount": 0
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "pid": "89496.8.2"
+    }
+  ],
+  "tz": {
+    "dos": 0,
+    "ros": 14400,
+    "tzid": "Asia/Dubai"
+  },
+  "zone2zone": {
+    "mac": 1,
+    "prices": []
+  },
+  "notice_time_rules": [
+    {
+      "zones": [
+        "serviceArea"
+      ],
+      "ps": [
+        {
+          "vc_ids": [
+            1
+          ],
+          "notice_time": [
+            {
+              "percent": 10,
+              "time": 1440
+            }
+          ],
+          "allowance": 960
+        },
+        {
+          "vc_ids": [
+            40,
+            4,
+            36
+          ],
+          "notice_time": [
+            {
+              "percent": 20,
+              "time": 1440
+            }
+          ],
+          "allowance": 1380
+        },
+        {
+          "vc_ids": [
+            29,
+            30,
+            31,
+            32,
+            33,
+            34,
+            35
+          ],
+          "notice_time": [
+            {
+              "percent": 50,
+              "time": 2880
+            }
+          ],
+          "allowance": 2820
+        },
+        {
+          "vc_ids": [
+            6,
+            12
+          ],
+          "notice_time": [
+            {
+              "percent": 10,
+              "time": 1440
+            }
+          ],
+          "allowance": 960
+        },
+        {
+          "vc_ids": [
+            3
+          ],
+          "notice_time": [
+            {
+              "percent": 10,
+              "time": 1440
+            }
+          ],
+          "allowance": 960
+        },
+        {
+          "vc_ids": [
+            5,
+            9,
+            10,
+            11
+          ],
+          "notice_time": [
+            {
+              "percent": 20,
+              "time": 1440
+            }
+          ],
+          "allowance": 1380
+        },
+        {
+          "vc_ids": [
+            2
+          ],
+          "notice_time": [
+            {
+              "percent": 20,
+              "time": 1440
+            }
+          ],
+          "allowance": 1380
+        }
+      ],
+      "pid": "89496.6.1",
+      "name": "Rule 1",
+      "from_zones": [
+        {
+          "name": "serviceArea",
+          "type": "zone"
+        }
+      ],
+      "to_zones": [
+        {
+          "name": "allAddresses",
+          "type": "zone"
+        }
+      ],
+      "type": 2
+    }
   ],
   "record": {
-      "max_zid": null
+    "max_zid": 11
   },
-  "hpd": {
-      "io_threshold": 0,
-      "return_fee": 0,
-      "rules": [
-          {
-              "io": 1,
-              "name": "Rule 1",
-              "zones": [
-                  "serviceArea"
-              ],
-              "over": {
-                  "hour_per_price": 3,
-                  "max_hour": 18000,
-                  "duration_per_price": 4,
-                  "max_duration": 400000
-              },
-              "ranges": [
-                  {
-                      "durations": [
-                          {
-                              "max": 400000,
-                              "amount": 500
-                          }
-                      ],
-                      "from": 0,
-                      "to": 600
-                  }
-              ],
-              "pid": "40.10.1"
-          }
-      ]
-  },
-  "zones": [],
-  "add_service": {
-      "is_p": 20
-  },
-  "pricing_schedule_sum": [
-      {
-          "notice_time_hint": [
-              "null",
-              "null",
-              "null",
-              "null",
-              "null",
-              "null",
-              "null"
-          ],
-          "vehicles": [],
-          "sname": "setting1",
-          "pid": "40.7.1"
-      }
-  ]
+  "add_service": {},
+  "service_area_pricing_id": 5091412
 }

@@ -1,12 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-
   <style>
     .btn-box {
       display: flex;
@@ -28,17 +25,13 @@
       /* color: #fff; */
     }
   </style>
-
 </head>
-
 <body>
   <div class="btn-box">
     <div class='btn copy' class="btn">Copy</div>
   </div>
-
   <script src="../components.js"></script>
   <script src="./fleets.js"></script>
-
   <script>
     let copy = document.querySelector('.copy')
 
@@ -47,10 +40,15 @@
     let noPricingIds = []
     let aleadyInsert = []
     let errorList = []
-
+    // let splitPartnerIds = [2, 3, 4, 5, 28, 2621, 2692, 2588,1000] 
+    let splitPartnerIds = [3,5,28,2692,2588,2621] 
 
     let stage = 'PROD' // PROD,DEV
-    let partnerId = 2588
+
+    // let partnerId = 3
+
+    let url = stage == 'DEV' ? urlDev : urlProd  //urlDev,urlProd
+    let i = 0
 
 
     let allFleets = []
@@ -60,17 +58,40 @@
       allFleets = elifeFleetsProd.concat(...elifeFleetsNotRadius)
     }
 
-
+    allFleets =  [
+  {
+    "id": 1716,
+    "name": "Hyderabad, India",
+    "lat": 17.392420,
+    "lng": 78.492072,
+    "radius": 350000,
+    "bidding": null,
+    "inserted_at": "2020-12-17 18:47:03",
+    "last_updated_at": "2025-05-01 14:32:25",
+    "parent_fleet_id": 15,
+    "unverified": null,
+    "service_area_pricing_id": 5249304
+  }
+]
 
     copy.addEventListener('click', async () => {
 
-      let url = stage == 'DEV' ? urlDev : urlProd  //urlDev,urlProd
-      let i = 0
+      for(let id of splitPartnerIds){
+
+        await copyHandler(id)
+        debugger
+      }
 
 
-      let { parentFleetId, parentFleetName, } = getPatnerInfo(partnerId,stage)
+      console.log('---noPricingIds---', noPricingIds);
+      console.log('---aleadyInsert---', aleadyInsert);
+      console.log('---deletedSvc---', deletedSvc);
+      console.log('---errorList---', errorList);
+    })
 
-      debugger
+
+    async function copyHandler(partnerId) {
+      let { parentFleetId, parentFleetName, platform_name } = getPatnerInfo(partnerId, stage)
       for (let fleet of allFleets) {
         console.log(`--- i ++------`, i++);
         debugger
@@ -129,7 +150,7 @@
         let jsonHandled = await jsonHandler(JSON.parse(JSON.stringify(json)), json)
 
         jsonHandled.serviceArea['parent_fleet_id'] = parentFleetId
-        jsonHandled.serviceArea['parent_fleet_name'] = parentFleetName
+        jsonHandled.serviceArea['parent_fleet_name'] = parentFleetName || platform_name
         jsonHandled.serviceArea['id'] = LastFleetId
         jsonHandled['service_area_pricing_id'] = null
 
@@ -146,14 +167,8 @@
         if (!res) {
           errorList.push(fleet)
         }
-
       }
-
-      console.log('---noPricingIds---', noPricingIds);
-      console.log('---aleadyInsert---', aleadyInsert);
-      console.log('---deletedSvc---', deletedSvc);
-      console.log('---errorList---', errorList);
-    })
+    }
 
     async function getLatPricingJsonAndFleeNotJsonId(url, svcId) {
       // select * from service_area_pricing where service_area_id = {{svcId}} order by  id desc
@@ -709,7 +724,7 @@
       return v
     }
 
-    
+
     // let fleetsInfo = {
     //   2692: {
     //     parent_fleet_id: stage == 'DEV' ? 62294 : 67743,
@@ -754,5 +769,4 @@
     // }
   </script>
 </body>
-
 </html>

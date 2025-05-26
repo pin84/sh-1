@@ -1,7 +1,70 @@
 
 
+async function getFleetIdAndPricingByAirport(url, airport, parent_fleet_id) {
+  let cachKey = `${parent_fleet_id}-${airport}`
+  let res = caches[cachKey]
+  if (res) {
+    return res
+  }
 
+  res = await fetchData({
+    url,
+    method: "POST",
+    data: {
+      sql: 134679330,
+      version: '1.9',
+      airport,
+      parent_fleet_id,
+    }
+  })
+  caches[cachKey] = res
 
+  if (!res) {
+    return
+  }
+  return res
+}
+async function getAirportInfo(url, code) {
+  // select a.code3,ad.lat,ad.lng,a.radius from address ad left join airport a on code3 = '{{airport_code}}' where ad.id = a.address_id
+  let res = caches[code]
+  if (!res) {
+    res = await fetchData({
+      url,
+      method: 'POST',
+      data: {
+        sql: 134679330,
+        version: '4.068',
+        airport_code: code
+      }
+    })
+    caches[code] = res
+  }
+  return res
+}
+async function getLastPricingJsonBySvcId(url, svcId) {
+  let pricing = caches[svcId]
+  if (pricing) {
+    return pricing
+  }
+  let res = await fetchData({
+    url,
+    method: "POST",
+    data: {
+      sql: 134679330,
+      version: '4.004',
+      svcId,
+    }
+  })
+  pricing = res?.pricing || null
+
+  if (!pricing) {
+    pricing = await getLatPricingJsonAndFleeNotJsonId(url, svcId)
+  }
+  if (!pricing) return
+  pricing = JSON.parse(pricing)
+  caches[svcId] = pricing
+  return pricing
+}
 async function getPricingJsonBySvcId(url, id) {
   //  select pricing from fleet left join service_area_pricing s on  s.id = fleet.service_area_pricing_id where fleet.id = {{svc_id}}
   let result = caches[id]
@@ -21,33 +84,69 @@ async function getPricingJsonBySvcId(url, id) {
     desc: 'get pricing json_id'
   })
 
-  let {pricing} = res
-  if(!pricing){
+  let { pricing } = res
+  if (!pricing) {
     return
   }
-  result =  JSON.parse(res.pricing)
+  result = JSON.parse(res.pricing)
   caches[id] = result
   return result
 }
 
-async function getAirportInfo(url, code) {
-  // select a.code3,ad.lat,ad.lng,a.radius from address ad left join airport a on code3 = '{{airport_code}}' where ad.id = a.address_id
-  let res = caches[code]
+async function getFlightNoByAiportCode(url, airport_code, min_hh, max_hh) {
+  // select flight_no from airport_fleet where airport = {{airport_code}}
+  let str = `flightNo-${airport_code}`
+  let res = caches[str]
   if (!res) {
+    let d = {
+      sql: 134679330,
+      version: '4.067',
+      to_airport_code: airport_code,
+      min_hh,
+      max_hh,
+    }
+    if (!min_hh) {
+      delete d.min_hh
+      delete d.max_hh
+    }
     res = await fetchData({
       url,
       method: 'POST',
-      data: {
-        sql: 134678945,
-        version: '1.0',
-        airport_code: code
-      }
+      data: d
     })
+    caches[str] = res
   }
   return res
 }
 
+// -------------have cache -----------------
 
+
+
+const googleJsKey = 'AIzaSyCaAk67K9PyOQ5yuejv1xZGc7KOuKLOAUs'
+
+
+
+async function getAddrFromLatLng(latlng) {
+  let { lat, lng } = latlng
+  let str = `${lat}-${lng}`
+  let formatAddress = caches[str]
+  if (!formatAddress) {
+    let url = `https://maps.googleapis.com/maps/api/geocode/json`
+    let res = await fetchData({
+      url,
+      method: 'GET',
+      data: {
+        latlng: `${lat},${lng}`,
+        key: googleJsKey
+      }
+    })
+    let results = res?.results || []
+    formatAddress = results[0]?.formatted_address || ''
+    caches[str] = formatAddress
+  }
+  return formatAddress
+}
 
 
 
@@ -63,7 +162,6 @@ function format(data) {
 function saveCSV(title, head, data) {
   let wordSeparator = ','
   let lineSeparator = '\n'
-
   let reTitle = title + '.csv'
   let headBOM = '\ufeff'
   let headStr = head ? head.map(item => format(item)).join(wordSeparator) + lineSeparator : ''
@@ -230,6 +328,7 @@ function getPatnerInfo(partnerId, stage) {
     case 3:
       partnerInfo = {
         parentFleetId: isProd ? 51488 : 27672,
+        parentFleetName: '3_elife',
         platform_name: 'Mozio',
         partner_id: 3,
         demand_fleet_id: 53422,
@@ -240,6 +339,7 @@ function getPatnerInfo(partnerId, stage) {
       partnerInfo = {
         parentFleetId: isProd ? 61654 : 60924,
         platform_name: 'China Ctrip API',
+        parentFleetName: 'chinaCtripAPI',
         partner_id: 2621,
         demand_fleet_id: 24337,
         supply_fleet_id: 61654
@@ -267,6 +367,7 @@ function getPatnerInfo(partnerId, stage) {
       partnerInfo = {
         parentFleetId: isProd ? 72105 : 63369,
         platform_name: 'cityAirportTaxis',
+        parentFleetName: 'CityAirportTaxisSupply',
         partner_id: 5,
         demand_fleet_id: 193,
         supply_fleet_id: 72105
@@ -276,6 +377,7 @@ function getPatnerInfo(partnerId, stage) {
       partnerInfo = {
         parentFleetId: isProd ? 85191 : 65099,
         platform_name: 'booking',
+        parentFleetName: 'bookingSupply',
         partner_id: 2,
         demand_fleet_id: 18,
         supply_fleet_id: 85191
@@ -285,6 +387,7 @@ function getPatnerInfo(partnerId, stage) {
       partnerInfo = {
         parentFleetId: isProd ? 75362 : 63625,
         platform_name: 'Jayride',
+        parentFleetName: 'jayrideSupply',
         partner_id: 4,
         demand_fleet_id: 194,
         supply_fleet_id: 75362
@@ -301,23 +404,33 @@ function getPatnerInfo(partnerId, stage) {
       break;
     case 2588:
       partnerInfo = {
-        parentFleetId: isProd ? 89496  : 65579,
-        parentFleetName:'hoppaSupply',
+        parentFleetId: isProd ? 89496 : 65579,
+        parentFleetName: 'hoppaSupply',
         platform_name: 'Hoppa',
         partner_id: 2588,
         demand_fleet_id: 11104,
         supply_fleet_id: 89496,
       }
       break;
-    // case 1000:
-    //   partnerInfo = {
-    //     parentFleetId: isProd ? 82594 : 64935,
-    //     platform_name: 'almosafer',
-    //     partner_id: 1000,
-    //     demand_fleet_id: 56745,
-    //     supply_fleet_id: 15
-    //   }
-    //   break;
+    case 33:
+      partnerInfo = {
+        parentFleetId: isProd ? 82594 : 64935,
+        platform_name: 'Almosafer',
+        parentFleetName: 'almosaferSupply',
+        partner_id: 33,
+        demand_fleet_id: 78524,
+        supply_fleet_id: 82594
+      }
+    case 2599:
+      partnerInfo = {
+        parentFleetId: isProd ? 15 : 40,
+        platform_name: 'Servantrip',
+        parentFleetName: 'Servantrip',
+        partner_id: 2599,
+        demand_fleet_id: 18426,
+        supply_fleet_id: 15
+      }
+      break;
     default:
       break;
   }
@@ -400,6 +513,146 @@ let vehicleList = [
     "o_image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/sedan.jpg",
     "o_image_url_2": "https://elifelimo.s3.us-east-2.amazonaws.com/art/home/vehicle-classes/sedan.png",
     "o_max_luggage": 3,
+    "vm_id": 638,
+    "maker": "Toyota",
+    "model": "Corolla",
+    "max_passenger": 3,
+    "max_luggage": 3,
+    "image_url_1": "",
+    "image_url_2": "",
+    "maker_txt_id": 3273,
+    "model_txt_id": 3274,
+    "seq_front": 1
+  },
+  {
+    "vehicle_id": 121,
+    "vehicle_name": "Premium Shared Shuttle",
+    "o_max_passenger": 1,
+    "o_maker": "Shared",
+    "o_model": "Bus",
+    "o_image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/Toyota-Coaster.jpg",
+    "o_image_url_2": "https://elifelimo.s3.us-east-2.amazonaws.com/art/home/vehicle-classes/Toyota-Coaster.jpg",
+    "o_max_luggage": 1,
+    "vm_id": null,
+    "maker": null,
+    "model": null,
+    "max_passenger": null,
+    "max_luggage": null,
+    "image_url_1": null,
+    "image_url_2": null,
+    "maker_txt_id": null,
+    "model_txt_id": null,
+    "seq_front": 1
+  },
+  {
+    "vehicle_id": 120,
+    "vehicle_name": "Speedy Shared Shuttle",
+    "o_max_passenger": 1,
+    "o_maker": "Shared",
+    "o_model": "Bus",
+    "o_image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/Toyota-Coaster.jpg",
+    "o_image_url_2": "https://elifelimo.s3.us-east-2.amazonaws.com/art/home/vehicle-classes/Toyota-Coaster.jpg",
+    "o_max_luggage": 1,
+    "vm_id": null,
+    "maker": null,
+    "model": null,
+    "max_passenger": null,
+    "max_luggage": null,
+    "image_url_1": null,
+    "image_url_2": null,
+    "maker_txt_id": null,
+    "model_txt_id": null,
+    "seq_front": 1
+  },
+  {
+    "vehicle_id": 119,
+    "vehicle_name": "Shared Shuttle",
+    "o_max_passenger": 1,
+    "o_maker": "Shared",
+    "o_model": "Bus",
+    "o_image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/Toyota-Coaster.jpg",
+    "o_image_url_2": "https://elifelimo.s3.us-east-2.amazonaws.com/art/home/vehicle-classes/Toyota-Coaster.jpg",
+    "o_max_luggage": 1,
+    "vm_id": null,
+    "maker": null,
+    "model": null,
+    "max_passenger": null,
+    "max_luggage": null,
+    "image_url_1": null,
+    "image_url_2": null,
+    "maker_txt_id": null,
+    "model_txt_id": null,
+    "seq_front": 1
+  },
+  {
+    "vehicle_id": 110,
+    "vehicle_name": "shuttle-7",
+    "o_max_passenger": 7,
+    "o_maker": "minivan",
+    "o_model": "7 pax",
+    "o_image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/Ford-Transit.jpg",
+    "o_image_url_2": "https://elifelimo.s3.us-east-2.amazonaws.com/art/home/vehicle-classes/Ford-Transit.jpg",
+    "o_max_luggage": 7,
+    "vm_id": null,
+    "maker": null,
+    "model": null,
+    "max_passenger": null,
+    "max_luggage": null,
+    "image_url_1": null,
+    "image_url_2": null,
+    "maker_txt_id": null,
+    "model_txt_id": null,
+    "seq_front": 1
+  },
+  {
+    "vehicle_id": 109,
+    "vehicle_name": "Mini Sedan",
+    "o_max_passenger": 3,
+    "o_maker": "Toyota",
+    "o_model": "Corolla",
+    "o_image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/Toyota-Corolla-api.jpg",
+    "o_image_url_2": "https://elifelimo.s3.us-east-2.amazonaws.com/art/home/vehicle-classes/Toyota-Corolla-home.jpg",
+    "o_max_luggage": 3,
+    "vm_id": null,
+    "maker": null,
+    "model": null,
+    "max_passenger": null,
+    "max_luggage": null,
+    "image_url_1": null,
+    "image_url_2": null,
+    "maker_txt_id": null,
+    "model_txt_id": null,
+    "seq_front": 1
+  },
+  {
+    "vehicle_id": 108,
+    "vehicle_name": "Black Minibus-8",
+    "o_max_passenger": 8,
+    "o_maker": "Ford",
+    "o_model": "Transit",
+    "o_image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/minibus-8.jpg",
+    "o_image_url_2": "https://elifelimo.s3.us-east-2.amazonaws.com/art/home/vehicle-classes/minibus8.png",
+    "o_max_luggage": 8,
+    "vm_id": null,
+    "maker": null,
+    "model": null,
+    "max_passenger": null,
+    "max_luggage": null,
+    "image_url_1": null,
+    "image_url_2": null,
+    "maker_txt_id": null,
+    "model_txt_id": null,
+    "seq_front": 1
+  },
+  {
+    "vehicle_id": 107,
+    "vehicle_name": "Black Business Minivan",
+    "o_max_passenger": 5,
+    "o_maker": "Toyota",
+    "o_model": "Sienna",
+    "o_image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/businessminivan.jpg",
+    "o_image_url_2": "https://elifelimo.s3.us-east-2.amazonaws.com/art/home/vehicle-classes/businessminivan.png",
+    "o_max_luggage": 5,
     "vm_id": null,
     "maker": null,
     "model": null,
@@ -432,6 +685,86 @@ let vehicleList = [
     "seq_front": 1
   },
   {
+    "vehicle_id": 106,
+    "vehicle_name": "Black MPV-5",
+    "o_max_passenger": 5,
+    "o_maker": "Toyota",
+    "o_model": "Sienna",
+    "o_image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/mpv-5.jpg",
+    "o_image_url_2": "https://elifelimo.s3.us-east-2.amazonaws.com/art/home/vehicle-classes/mpv5.png",
+    "o_max_luggage": 5,
+    "vm_id": null,
+    "maker": null,
+    "model": null,
+    "max_passenger": null,
+    "max_luggage": null,
+    "image_url_1": null,
+    "image_url_2": null,
+    "maker_txt_id": null,
+    "model_txt_id": null,
+    "seq_front": 1
+  },
+  {
+    "vehicle_id": 105,
+    "vehicle_name": "Black MPV-4",
+    "o_max_passenger": 4,
+    "o_maker": "Toyota",
+    "o_model": "Highlander",
+    "o_image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/mpv-4.jpg",
+    "o_image_url_2": "https://elifelimo.s3.us-east-2.amazonaws.com/art/home/vehicle-classes/mpv4.png",
+    "o_max_luggage": 4,
+    "vm_id": null,
+    "maker": null,
+    "model": null,
+    "max_passenger": null,
+    "max_luggage": null,
+    "image_url_1": null,
+    "image_url_2": null,
+    "maker_txt_id": null,
+    "model_txt_id": null,
+    "seq_front": 1
+  },
+  {
+    "vehicle_id": 104,
+    "vehicle_name": "Black Sedan",
+    "o_max_passenger": 3,
+    "o_maker": "Toyota",
+    "o_model": "Camry",
+    "o_image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/sedan.jpg",
+    "o_image_url_2": "https://elifelimo.s3.us-east-2.amazonaws.com/art/home/vehicle-classes/sedan.png",
+    "o_max_luggage": 3,
+    "vm_id": null,
+    "maker": null,
+    "model": null,
+    "max_passenger": null,
+    "max_luggage": null,
+    "image_url_1": null,
+    "image_url_2": null,
+    "maker_txt_id": null,
+    "model_txt_id": null,
+    "seq_front": 1
+  },
+  {
+    "vehicle_id": 111,
+    "vehicle_name": "shuttle-9",
+    "o_max_passenger": 9,
+    "o_maker": "minivan",
+    "o_model": "9 pax",
+    "o_image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/Ford-Transit.jpg",
+    "o_image_url_2": "https://elifelimo.s3.us-east-2.amazonaws.com/art/home/vehicle-classes/Ford-Transit.jpg",
+    "o_max_luggage": 9,
+    "vm_id": null,
+    "maker": null,
+    "model": null,
+    "max_passenger": null,
+    "max_luggage": null,
+    "image_url_1": null,
+    "image_url_2": null,
+    "maker_txt_id": null,
+    "model_txt_id": null,
+    "seq_front": 2
+  },
+  {
     "vehicle_id": 41,
     "vehicle_name": "EV Sedan",
     "o_max_passenger": 3,
@@ -460,6 +793,26 @@ let vehicleList = [
     "o_image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/besiness-sedan.jpg",
     "o_image_url_2": "https://elifelimo.s3.us-east-2.amazonaws.com/art/home/vehicle-classes/businesssedan.png",
     "o_max_luggage": 3,
+    "vm_id": 639,
+    "maker": "Mercedes",
+    "model": "E Class",
+    "max_passenger": 3,
+    "max_luggage": 3,
+    "image_url_1": "",
+    "image_url_2": "",
+    "maker_txt_id": 3281,
+    "model_txt_id": 3282,
+    "seq_front": 3
+  },
+  {
+    "vehicle_id": 112,
+    "vehicle_name": "shuttle-10",
+    "o_max_passenger": 10,
+    "o_maker": "minibus",
+    "o_model": "10 pax",
+    "o_image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/Ford-Transit.jpg",
+    "o_image_url_2": "https://elifelimo.s3.us-east-2.amazonaws.com/art/home/vehicle-classes/Ford-Transit.jpg",
+    "o_max_luggage": 10,
     "vm_id": null,
     "maker": null,
     "model": null,
@@ -512,14 +865,34 @@ let vehicleList = [
     "seq_front": 4
   },
   {
-    "vehicle_id": 40,
-    "vehicle_name": "First Class Sedan",
-    "o_max_passenger": 3,
-    "o_maker": "Mercedes",
-    "o_model": "S550",
-    "o_image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/first-class.jpg",
-    "o_image_url_2": "https://elifelimo.s3.us-east-2.amazonaws.com/art/home/vehicle-classes/firstclass.png",
-    "o_max_luggage": 3,
+    "vehicle_id": 113,
+    "vehicle_name": "shuttle-14",
+    "o_max_passenger": 14,
+    "o_maker": "minibus",
+    "o_model": "14 pax",
+    "o_image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/Toyota-Coaster.jpg",
+    "o_image_url_2": "https://elifelimo.s3.us-east-2.amazonaws.com/art/home/vehicle-classes/Toyota-Coaster.jpg",
+    "o_max_luggage": 14,
+    "vm_id": null,
+    "maker": null,
+    "model": null,
+    "max_passenger": null,
+    "max_luggage": null,
+    "image_url_1": null,
+    "image_url_2": null,
+    "maker_txt_id": null,
+    "model_txt_id": null,
+    "seq_front": 4
+  },
+  {
+    "vehicle_id": 114,
+    "vehicle_name": "shuttle-50",
+    "o_max_passenger": 50,
+    "o_maker": "bus",
+    "o_model": "50 pax ",
+    "o_image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/Yutong-36.jpg",
+    "o_image_url_2": "https://elifelimo.s3.us-east-2.amazonaws.com/art/home/vehicle-classes/Yutong-36.jpg",
+    "o_max_luggage": 50,
     "vm_id": null,
     "maker": null,
     "model": null,
@@ -532,6 +905,106 @@ let vehicleList = [
     "seq_front": 5
   },
   {
+    "vehicle_id": 40,
+    "vehicle_name": "First Class Sedan",
+    "o_max_passenger": 3,
+    "o_maker": "Mercedes",
+    "o_model": "S550",
+    "o_image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/first-class.jpg",
+    "o_image_url_2": "https://elifelimo.s3.us-east-2.amazonaws.com/art/home/vehicle-classes/firstclass.png",
+    "o_max_luggage": 3,
+    "vm_id": 640,
+    "maker": "Mercedes",
+    "model": "S Class",
+    "max_passenger": 3,
+    "max_luggage": 3,
+    "image_url_1": "",
+    "image_url_2": "",
+    "maker_txt_id": 3289,
+    "model_txt_id": 3290,
+    "seq_front": 5
+  },
+  {
+    "vehicle_id": 101,
+    "vehicle_name": "Black First Class Sedan",
+    "o_max_passenger": 3,
+    "o_maker": "Mercedes",
+    "o_model": "S-Class",
+    "o_image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/first-class.jpg",
+    "o_image_url_2": "https://elifelimo.s3.us-east-2.amazonaws.com/art/home/vehicle-classes/firstclass.png",
+    "o_max_luggage": 3,
+    "vm_id": null,
+    "maker": null,
+    "model": null,
+    "max_passenger": null,
+    "max_luggage": null,
+    "image_url_1": null,
+    "image_url_2": null,
+    "maker_txt_id": null,
+    "model_txt_id": null,
+    "seq_front": 6
+  },
+  {
+    "vehicle_id": 115,
+    "vehicle_name": "speedy shuttle-7",
+    "o_max_passenger": 7,
+    "o_maker": "minivan",
+    "o_model": "7 pax",
+    "o_image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/Ford-Transit.jpg",
+    "o_image_url_2": "https://elifelimo.s3.us-east-2.amazonaws.com/art/home/vehicle-classes/Ford-Transit.jpg",
+    "o_max_luggage": 7,
+    "vm_id": null,
+    "maker": null,
+    "model": null,
+    "max_passenger": null,
+    "max_luggage": null,
+    "image_url_1": null,
+    "image_url_2": null,
+    "maker_txt_id": null,
+    "model_txt_id": null,
+    "seq_front": 6
+  },
+  {
+    "vehicle_id": 102,
+    "vehicle_name": "Black Business Sedan",
+    "o_max_passenger": 3,
+    "o_maker": "Lincoln",
+    "o_model": "Continental",
+    "o_image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/besiness-sedan.jpg",
+    "o_image_url_2": "https://elifelimo.s3.us-east-2.amazonaws.com/art/home/vehicle-classes/businesssedan.png",
+    "o_max_luggage": 3,
+    "vm_id": null,
+    "maker": null,
+    "model": null,
+    "max_passenger": null,
+    "max_luggage": null,
+    "image_url_1": null,
+    "image_url_2": null,
+    "maker_txt_id": null,
+    "model_txt_id": null,
+    "seq_front": 6
+  },
+  {
+    "vehicle_id": 103,
+    "vehicle_name": "Black Business SUV",
+    "o_max_passenger": 5,
+    "o_maker": "Lincoln",
+    "o_model": "Navigator",
+    "o_image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/businessminivan.jpg",
+    "o_image_url_2": "https://elifelimo.s3.us-east-2.amazonaws.com/art/home/vehicle-classes/businessmpv.png",
+    "o_max_luggage": 5,
+    "vm_id": null,
+    "maker": null,
+    "model": null,
+    "max_passenger": null,
+    "max_luggage": null,
+    "image_url_1": null,
+    "image_url_2": null,
+    "maker_txt_id": null,
+    "model_txt_id": null,
+    "seq_front": 6
+  },
+  {
     "vehicle_id": 43,
     "vehicle_name": "EV First Class Sedan",
     "o_max_passenger": 3,
@@ -540,6 +1013,26 @@ let vehicleList = [
     "o_image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/home/vehicle-classes/ev-firstclass.png",
     "o_image_url_2": "https://elifelimo.s3.us-east-2.amazonaws.com/art/home/vehicle-classes/ev-firstclass.png",
     "o_max_luggage": 3,
+    "vm_id": null,
+    "maker": null,
+    "model": null,
+    "max_passenger": null,
+    "max_luggage": null,
+    "image_url_1": null,
+    "image_url_2": null,
+    "maker_txt_id": null,
+    "model_txt_id": null,
+    "seq_front": 7
+  },
+  {
+    "vehicle_id": 116,
+    "vehicle_name": "speedy shuttle-9",
+    "o_max_passenger": 9,
+    "o_maker": "minivan",
+    "o_model": "9 pax",
+    "o_image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/Ford-Transit.jpg",
+    "o_image_url_2": "https://elifelimo.s3.us-east-2.amazonaws.com/art/home/vehicle-classes/Ford-Transit.jpg",
+    "o_max_luggage": 9,
     "vm_id": null,
     "maker": null,
     "model": null,
@@ -572,6 +1065,26 @@ let vehicleList = [
     "seq_front": 8
   },
   {
+    "vehicle_id": 117,
+    "vehicle_name": "speedy shuttle-10",
+    "o_max_passenger": 10,
+    "o_maker": "minibus",
+    "o_model": "10 pax",
+    "o_image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/Ford-Transit.jpg",
+    "o_image_url_2": "https://elifelimo.s3.us-east-2.amazonaws.com/art/home/vehicle-classes/Ford-Transit.jpg",
+    "o_max_luggage": 10,
+    "vm_id": null,
+    "maker": null,
+    "model": null,
+    "max_passenger": null,
+    "max_luggage": null,
+    "image_url_1": null,
+    "image_url_2": null,
+    "maker_txt_id": null,
+    "model_txt_id": null,
+    "seq_front": 8
+  },
+  {
     "vehicle_id": 45,
     "vehicle_name": "Rolls Royce Phantom",
     "o_max_passenger": 2,
@@ -580,6 +1093,26 @@ let vehicleList = [
     "o_image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/rolls-royce-phantom.jpg",
     "o_image_url_2": "https://elifelimo.s3.us-east-2.amazonaws.com/art/home/vehicle-classes/rolls-royce-phantom.png",
     "o_max_luggage": 2,
+    "vm_id": null,
+    "maker": null,
+    "model": null,
+    "max_passenger": null,
+    "max_luggage": null,
+    "image_url_1": null,
+    "image_url_2": null,
+    "maker_txt_id": null,
+    "model_txt_id": null,
+    "seq_front": 9
+  },
+  {
+    "vehicle_id": 118,
+    "vehicle_name": "speedy shuttle-14",
+    "o_max_passenger": 14,
+    "o_maker": "minibus",
+    "o_model": "14 pax",
+    "o_image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/Toyota-Coaster.jpg",
+    "o_image_url_2": "https://elifelimo.s3.us-east-2.amazonaws.com/art/home/vehicle-classes/Toyota-Coaster.jpg",
+    "o_max_luggage": 14,
     "vm_id": null,
     "maker": null,
     "model": null,
@@ -672,14 +1205,14 @@ let vehicleList = [
     "seq_front": 13
   },
   {
-    "vehicle_id": 7,
-    "vehicle_name": "MPV-6",
-    "o_max_passenger": 6,
-    "o_maker": "Toyota",
-    "o_model": "Sienna",
-    "o_image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/MPV-6.jpg",
-    "o_image_url_2": "https://elifelimo.s3.us-east-2.amazonaws.com/art/home/vehicle-classes/MPV-6.jpg",
-    "o_max_luggage": 6,
+    "vehicle_id": 13,
+    "vehicle_name": "Business MPV-4",
+    "o_max_passenger": 4,
+    "o_maker": "INFINITI",
+    "o_model": "QX60",
+    "o_image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/Business-MPV-4.png",
+    "o_image_url_2": "https://elifelimo.s3.us-east-2.amazonaws.com/art/home/vehicle-classes/Business-MPV-4.png",
+    "o_max_luggage": 4,
     "vm_id": null,
     "maker": null,
     "model": null,
@@ -692,14 +1225,14 @@ let vehicleList = [
     "seq_front": 14
   },
   {
-    "vehicle_id": 13,
-    "vehicle_name": "Business MPV-4",
-    "o_max_passenger": 4,
-    "o_maker": "INFINITI",
-    "o_model": "QX60",
-    "o_image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/Business-MPV-4.png",
-    "o_image_url_2": "https://elifelimo.s3.us-east-2.amazonaws.com/art/home/vehicle-classes/Business-MPV-4.png",
-    "o_max_luggage": 4,
+    "vehicle_id": 7,
+    "vehicle_name": "MPV-6",
+    "o_max_passenger": 6,
+    "o_maker": "Toyota",
+    "o_model": "Sienna",
+    "o_image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/MPV-6.jpg",
+    "o_image_url_2": "https://elifelimo.s3.us-east-2.amazonaws.com/art/home/vehicle-classes/MPV-6.jpg",
+    "o_max_luggage": 6,
     "vm_id": null,
     "maker": null,
     "model": null,
@@ -740,15 +1273,15 @@ let vehicleList = [
     "o_image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/ev-business-suv.jpg",
     "o_image_url_2": "https://elifelimo.s3.us-east-2.amazonaws.com/art/home/vehicle-classes/ev-business-suv.png",
     "o_max_luggage": 4,
-    "vm_id": null,
-    "maker": null,
-    "model": null,
-    "max_passenger": null,
-    "max_luggage": null,
-    "image_url_1": null,
-    "image_url_2": null,
-    "maker_txt_id": null,
-    "model_txt_id": null,
+    "vm_id": 756,
+    "maker": "Tesla",
+    "model": "Model Y",
+    "max_passenger": 4,
+    "max_luggage": 4,
+    "image_url_1": "",
+    "image_url_2": "",
+    "maker_txt_id": 4161,
+    "model_txt_id": 4162,
     "seq_front": 16
   },
   {
@@ -780,15 +1313,15 @@ let vehicleList = [
     "o_image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/businessminivan.jpg",
     "o_image_url_2": "https://elifelimo.s3.us-east-2.amazonaws.com/art/home/vehicle-classes/businessmpv.png",
     "o_max_luggage": 5,
-    "vm_id": null,
-    "maker": null,
-    "model": null,
-    "max_passenger": null,
-    "max_luggage": null,
-    "image_url_1": null,
-    "image_url_2": null,
-    "maker_txt_id": null,
-    "model_txt_id": null,
+    "vm_id": 416,
+    "maker": "Mercedes",
+    "model": "V 250class",
+    "max_passenger": 4,
+    "max_luggage": 4,
+    "image_url_1": "",
+    "image_url_2": "",
+    "maker_txt_id": 2121,
+    "model_txt_id": 2122,
     "seq_front": 17
   },
   {
@@ -820,15 +1353,15 @@ let vehicleList = [
     "o_image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/businessminivan.jpg",
     "o_image_url_2": "https://elifelimo.s3.us-east-2.amazonaws.com/art/home/vehicle-classes/businessminivan.png",
     "o_max_luggage": 5,
-    "vm_id": null,
-    "maker": null,
-    "model": null,
-    "max_passenger": null,
-    "max_luggage": null,
-    "image_url_1": null,
-    "image_url_2": null,
-    "maker_txt_id": null,
-    "model_txt_id": null,
+    "vm_id": 641,
+    "maker": "Mercedes",
+    "model": "V 250class",
+    "max_passenger": 5,
+    "max_luggage": 5,
+    "image_url_1": "",
+    "image_url_2": "",
+    "maker_txt_id": 3297,
+    "model_txt_id": 3298,
     "seq_front": 19
   },
   {
@@ -860,15 +1393,15 @@ let vehicleList = [
     "o_image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/wheelchair-van.jpg",
     "o_image_url_2": "https://elifelimo.s3.us-east-2.amazonaws.com/art/home/vehicle-classes/wheelchair-van.png",
     "o_max_luggage": 1,
-    "vm_id": 316,
+    "vm_id": 326,
     "maker": "Toyota",
     "model": "Sienna",
-    "max_passenger": 1,
-    "max_luggage": 1,
+    "max_passenger": 2,
+    "max_luggage": 2,
     "image_url_1": "",
     "image_url_2": "",
-    "maker_txt_id": 1473,
-    "model_txt_id": 1474,
+    "maker_txt_id": 1545,
+    "model_txt_id": 1546,
     "seq_front": 22
   },
   {
@@ -920,15 +1453,15 @@ let vehicleList = [
     "o_image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/stretch-limo-10.jpg",
     "o_image_url_2": "https://elifelimo.s3.us-east-2.amazonaws.com/art/home/vehicle-classes/stretch-limo-10.png",
     "o_max_luggage": 10,
-    "vm_id": 88,
-    "maker": "Liconln",
-    "model": "MKT ",
-    "max_passenger": 9,
-    "max_luggage": 8,
-    "image_url_1": "",
-    "image_url_2": "",
-    "maker_txt_id": 657,
-    "model_txt_id": 658,
+    "vm_id": null,
+    "maker": null,
+    "model": null,
+    "max_passenger": null,
+    "max_luggage": null,
+    "image_url_1": null,
+    "image_url_2": null,
+    "maker_txt_id": null,
+    "model_txt_id": null,
     "seq_front": 25
   },
   {
@@ -960,15 +1493,15 @@ let vehicleList = [
     "o_image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/stretch-limo-16.jpg",
     "o_image_url_2": "https://elifelimo.s3.us-east-2.amazonaws.com/art/home/vehicle-classes/stretch-limo-16.png",
     "o_max_luggage": 16,
-    "vm_id": 15,
-    "maker": "Hummer",
-    "model": "H2",
-    "max_passenger": 15,
-    "max_luggage": 10,
-    "image_url_1": "",
-    "image_url_2": "",
-    "maker_txt_id": 113,
-    "model_txt_id": 114,
+    "vm_id": null,
+    "maker": null,
+    "model": null,
+    "max_passenger": null,
+    "max_luggage": null,
+    "image_url_1": null,
+    "image_url_2": null,
+    "maker_txt_id": null,
+    "model_txt_id": null,
     "seq_front": 27
   },
   {
@@ -1092,13 +1625,33 @@ let vehicleList = [
     "seq_front": 33
   },
   {
+    "vehicle_id": 10,
+    "vehicle_name": "Minibus-12",
+    "o_max_passenger": 12,
+    "o_maker": "Toyota",
+    "o_model": "Hiace",
+    "o_image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/Toyota-Hiace.jpg",
+    "o_image_url_2": "https://elifelimo.s3.us-east-2.amazonaws.com/art/home/vehicle-classes/Toyota-Hiace.jpg",
+    "o_max_luggage": 12,
+    "vm_id": null,
+    "maker": null,
+    "model": null,
+    "max_passenger": null,
+    "max_luggage": null,
+    "image_url_1": null,
+    "image_url_2": null,
+    "maker_txt_id": null,
+    "model_txt_id": null,
+    "seq_front": 33
+  },
+  {
     "vehicle_id": 11,
     "vehicle_name": "Minibus-14",
     "o_max_passenger": 14,
-    "o_maker": "Mercedes",
-    "o_model": "Sprinter",
-    "o_image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/minibus-14.jpg",
-    "o_image_url_2": "https://elifelimo.s3.us-east-2.amazonaws.com/art/home/vehicle-classes/minibus14.png",
+    "o_maker": "Toyota",
+    "o_model": "Coaster",
+    "o_image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/Toyota-Coaster.jpg",
+    "o_image_url_2": "https://elifelimo.s3.us-east-2.amazonaws.com/art/home/vehicle-classes/Toyota-Coaster.jpg",
     "o_max_luggage": 14,
     "vm_id": null,
     "maker": null,
@@ -1109,26 +1662,6 @@ let vehicleList = [
     "image_url_2": null,
     "maker_txt_id": null,
     "model_txt_id": null,
-    "seq_front": 34
-  },
-  {
-    "vehicle_id": 10,
-    "vehicle_name": "Minibus-12",
-    "o_max_passenger": 12,
-    "o_maker": "Mercedes",
-    "o_model": "Sprinter",
-    "o_image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/minibus-12.jpg",
-    "o_image_url_2": "https://elifelimo.s3.us-east-2.amazonaws.com/art/home/vehicle-classes/minibus12.png",
-    "o_max_luggage": 12,
-    "vm_id": 87,
-    "maker": "Mercedes",
-    "model": "Sprinter",
-    "max_passenger": 11,
-    "max_luggage": 11,
-    "image_url_1": "",
-    "image_url_2": "",
-    "maker_txt_id": 649,
-    "model_txt_id": 650,
     "seq_front": 34
   },
   {
@@ -1292,26 +1825,6 @@ let vehicleList = [
     "seq_front": 43
   },
   {
-    "vehicle_id": 33,
-    "vehicle_name": "36-seat Bus",
-    "o_max_passenger": 36,
-    "o_maker": "Ford",
-    "o_model": "F-650 or smilar",
-    "o_image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/bus-36.jpg",
-    "o_image_url_2": "https://elifelimo.s3.us-east-2.amazonaws.com/art/home/vehicle-classes/bus-36.png",
-    "o_max_luggage": 36,
-    "vm_id": null,
-    "maker": null,
-    "model": null,
-    "max_passenger": null,
-    "max_luggage": null,
-    "image_url_1": null,
-    "image_url_2": null,
-    "maker_txt_id": null,
-    "model_txt_id": null,
-    "seq_front": 44
-  },
-  {
     "vehicle_id": 37,
     "vehicle_name": "40-seat Bus",
     "o_max_passenger": 40,
@@ -1332,12 +1845,32 @@ let vehicleList = [
     "seq_front": 44
   },
   {
-    "vehicle_id": 53,
-    "vehicle_name": "50 pax bus ",
+    "vehicle_id": 33,
+    "vehicle_name": "36-seat Bus",
+    "o_max_passenger": 36,
+    "o_maker": "Ford",
+    "o_model": "F-650 or smilar",
+    "o_image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/bus-36.jpg",
+    "o_image_url_2": "https://elifelimo.s3.us-east-2.amazonaws.com/art/home/vehicle-classes/bus-36.png",
+    "o_max_luggage": 36,
+    "vm_id": null,
+    "maker": null,
+    "model": null,
+    "max_passenger": null,
+    "max_luggage": null,
+    "image_url_1": null,
+    "image_url_2": null,
+    "maker_txt_id": null,
+    "model_txt_id": null,
+    "seq_front": 44
+  },
+  {
+    "vehicle_id": 39,
+    "vehicle_name": "50-seat Bus",
     "o_max_passenger": 50,
     "o_maker": "IRIZAR",
     "o_model": "I6",
-    "o_image_url": null,
+    "o_image_url": "",
     "o_image_url_2": "",
     "o_max_luggage": 50,
     "vm_id": null,
@@ -1352,12 +1885,12 @@ let vehicleList = [
     "seq_front": 45
   },
   {
-    "vehicle_id": 39,
-    "vehicle_name": "50-seat Bus",
+    "vehicle_id": 53,
+    "vehicle_name": "50 pax bus ",
     "o_max_passenger": 50,
     "o_maker": "IRIZAR",
     "o_model": "I6",
-    "o_image_url": "",
+    "o_image_url": null,
     "o_image_url_2": "",
     "o_max_luggage": 50,
     "vm_id": null,

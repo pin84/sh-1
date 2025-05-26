@@ -2,9 +2,9 @@
 
 
 
-async function jsonHandler3(pricing, from_place, to_place, isPickup, airportInfo, vid) {
+function jsonHandler3(pricing, from_place, to_place, isPickup, airportInfo, vid) {
   let { zones, vehicleClasses } = pricing
-  if (!zones) return {
+  if (!zones || !zones.length) return {
     code: 1
   }
 
@@ -126,11 +126,13 @@ async function getAirport(from_place, to_place) {
 
   if (!fromAirportInfo) {
     fromAirportInfo = await getAirportInfo(urlProd, from_place)
+    caches[from_place] = fromAirportInfo
   }
   let toAirportInfo = caches[to_place]
 
   if (!toAirportInfo) {
     toAirportInfo = await getAirportInfo(urlProd, to_place)
+    caches[to_place] = toAirportInfo
   }
 
 
@@ -352,37 +354,6 @@ async function getRoute(url, from, to, partner_id) {
 
 
 
-async function getFleetIdAndPricingByAirport(url, airport, parent_fleet_id) {
-  let res = await fetchData({
-    url,
-    method: "POST",
-    data: {
-      sql: 134679330,
-      version: '1.9',
-      airport,
-      parent_fleet_id,
-    }
-  })
-  return res
-}
-
-async function getLastPricingJsonBySvcId(url, svcId) {
-  let res = await fetchData({
-    url,
-    method: "POST",
-    data: {
-      sql: 134679330,
-      version: '4.004',
-      svcId,
-    }
-  })
-  let { pricing } = res
-  if (!pricing) {
-    pricing = await getLatPricingJsonAndFleeNotJsonId(url, svcId)
-  }
-  if (!pricing) return
-  return JSON.parse(pricing)
-}
 
 
 async function getLatPricingJsonAndFleeNotJsonId(url, svcId) {
@@ -455,8 +426,8 @@ function getVehicles() {
       id: 4
     },
     {
-      name: 'Minibus-6',
-      id: 5
+      name: 'MPV-6',
+      id: 7
     },
     {
       name: 'Minibus-7',
@@ -486,13 +457,11 @@ function getVehicles() {
 
 async function timeZoneHandler(pricing, airportInfo) {
   let { tzid } = pricing?.tz || {}
-  debugger
   if (tzid == undefined) {
     let dateStr = getStandardDateTime()
     if (!airportInfo) {
       airportInfo = await getAirportInfo(urlProd, pricing.airports[0])
     }
-
     let { lat, lng } = airportInfo
     let url = `https://388bivap71.execute-api.us-east-2.amazonaws.com/prod/maps/timezones/location/date-time`
     let res = await fetchData({
