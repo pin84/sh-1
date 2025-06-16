@@ -1,55 +1,613 @@
-  {
-      "countries": [
-        "ARE"
-      ],
-      "mapping": [
+{
+    "fleets": [
         {
-          "elife": "1",
-          "china_ctrip_api": 146,
-          "max": 3,
-          "loggage": 2
-        },
-        {
-          "elife": "1",
-          "china_ctrip_api": 117,
-          "max": 4,
-          "loggage": 2
-        },
-        {
-          "elife": "6",
-          "china_ctrip_api": 118,
-          "max": 4,
-          "loggage": 2
-        },
-        {
-          "elife": "2",
-          "china_ctrip_api": 119,
-          "max": 4,
-          "loggage": 3
-        },
-        {
-          "elife": "3",
-          "china_ctrip_api": 20020,
-          "max": 4,
-          "loggage": 4
-        },
-        {
-          "elife": "36",
-          "china_ctrip_api": 120,
-          "max": 6,
-          "loggage": 4
-        },
-        {
-          "elife": "4",
-          "china_ctrip_api": 121,
-          "max": 6,
-          "loggage": 4
-        },
-        {
-          "elife": "11",
-          "china_ctrip_api": 128,
-          "max": 13,
-          "loggage": 6
+            "fleet_id": 85995,
+            "fleet_name": "Kuala Lumpur, Malaysia",
+            "parent_fleet_id": 85191,
+            "parent_fleet_name": "bookingSupply",
+            "vehicle_classes": [
+                {
+                    "price": {
+                        "amount": 16.87,
+                        "currency": "USD",
+                        "quote_id": "e6a3fa1e9cae4d5fa42d93884417d332-v1"
+                    },
+                    "vehicle_class": "Sedan",
+                    "vehicle_class_id": 1,
+                    "passenger_capacity": 3,
+                    "luggage_capacity": 3,
+                    "typical_vehicle": {
+                        "model": "Bezza",
+                        "manufacturer": "Perodua"
+                    },
+                    "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/mys/Perodua-bazza.jpg",
+                    "price_detail": {
+                        "base_pricing": {
+                            "type": "fixed",
+                            "rule": null,
+                            "zone": "吉隆坡",
+                            "fix_price_type": "Transfer",
+                            "price": {
+                                "amount": 16.87,
+                                "currency": "USD"
+                            },
+                            "fix_price_detail": {
+                                "from": "KUL",
+                                "to": "吉隆坡",
+                                "from_type": "Airport",
+                                "to_type": "Zone"
+                            }
+                        },
+                        "special_pricing": [],
+                        "partner_pricing": {},
+                        "system_setting_pricing": {}
+                    }
+                },
+                {
+                    "price": {
+                        "amount": 32.09,
+                        "currency": "USD",
+                        "quote_id": "e6a3fa1e9cae4d5fa42d93884417d332-v2"
+                    },
+                    "vehicle_class": "Business Sedan",
+                    "vehicle_class_id": 2,
+                    "passenger_capacity": 3,
+                    "luggage_capacity": 3,
+                    "typical_vehicle": {
+                        "model": "Alphard ",
+                        "manufacturer": "Toyota"
+                    },
+                    "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/mys/Toyota-Alphard.jpg",
+                    "price_detail": {
+                        "base_pricing": {
+                            "type": "fixed",
+                            "rule": null,
+                            "zone": "吉隆坡",
+                            "fix_price_type": "Transfer",
+                            "price": {
+                                "amount": 32.09,
+                                "currency": "USD"
+                            },
+                            "fix_price_detail": {
+                                "from": "KUL",
+                                "to": "吉隆坡",
+                                "from_type": "Airport",
+                                "to_type": "Zone"
+                            }
+                        },
+                        "special_pricing": [],
+                        "partner_pricing": {},
+                        "system_setting_pricing": {}
+                    }
+                },
+                {
+                    "price": {
+                        "amount": 200.0,
+                        "currency": "USD",
+                        "quote_id": "e6a3fa1e9cae4d5fa42d93884417d332-v40"
+                    },
+                    "vehicle_class": "First Class",
+                    "vehicle_class_id": 40,
+                    "passenger_capacity": 3,
+                    "luggage_capacity": 3,
+                    "typical_vehicle": {
+                        "model": "S550",
+                        "manufacturer": "Mercedes"
+                    },
+                    "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/first-class.jpg",
+                    "price_detail": {
+                        "base_pricing": {
+                            "type": "fixed",
+                            "rule": null,
+                            "zone": "吉隆坡",
+                            "fix_price_type": "Transfer",
+                            "price": {
+                                "amount": 200.0,
+                                "currency": "USD"
+                            },
+                            "fix_price_detail": {
+                                "from": "KUL",
+                                "to": "吉隆坡",
+                                "from_type": "Airport",
+                                "to_type": "Zone"
+                            }
+                        },
+                        "special_pricing": [],
+                        "partner_pricing": {},
+                        "system_setting_pricing": {}
+                    }
+                },
+                {
+                    "price": {
+                        "amount": 19.33,
+                        "currency": "USD",
+                        "quote_id": "e6a3fa1e9cae4d5fa42d93884417d332-v6"
+                    },
+                    "vehicle_class": "MPV-4",
+                    "vehicle_class_id": 6,
+                    "passenger_capacity": 4,
+                    "luggage_capacity": 4,
+                    "typical_vehicle": {
+                        "model": "Alza",
+                        "manufacturer": "perodua"
+                    },
+                    "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/mys/Perodua-Alza.jpg",
+                    "price_detail": {
+                        "base_pricing": {
+                            "type": "fixed",
+                            "rule": null,
+                            "zone": "吉隆坡",
+                            "fix_price_type": "Transfer",
+                            "price": {
+                                "amount": 19.33,
+                                "currency": "USD"
+                            },
+                            "fix_price_detail": {
+                                "from": "KUL",
+                                "to": "吉隆坡",
+                                "from_type": "Airport",
+                                "to_type": "Zone"
+                            }
+                        },
+                        "special_pricing": [],
+                        "partner_pricing": {},
+                        "system_setting_pricing": {}
+                    }
+                },
+                {
+                    "price": {
+                        "amount": 26.01,
+                        "currency": "USD",
+                        "quote_id": "e6a3fa1e9cae4d5fa42d93884417d332-v3"
+                    },
+                    "vehicle_class": "MPV-5",
+                    "vehicle_class_id": 3,
+                    "passenger_capacity": 5,
+                    "luggage_capacity": 5,
+                    "typical_vehicle": {
+                        "model": "new Alza",
+                        "manufacturer": "perodua"
+                    },
+                    "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/mys/Perodua-Alza.jpg",
+                    "price_detail": {
+                        "base_pricing": {
+                            "type": "fixed",
+                            "rule": null,
+                            "zone": "吉隆坡",
+                            "fix_price_type": "Transfer",
+                            "price": {
+                                "amount": 26.01,
+                                "currency": "USD"
+                            },
+                            "fix_price_detail": {
+                                "from": "KUL",
+                                "to": "吉隆坡",
+                                "from_type": "Airport",
+                                "to_type": "Zone"
+                            }
+                        },
+                        "special_pricing": [],
+                        "partner_pricing": {},
+                        "system_setting_pricing": {}
+                    }
+                },
+                {
+                    "price": {
+                        "amount": 50.82,
+                        "currency": "USD",
+                        "quote_id": "e6a3fa1e9cae4d5fa42d93884417d332-v4"
+                    },
+                    "vehicle_class": "Business MPV-5",
+                    "vehicle_class_id": 4,
+                    "passenger_capacity": 5,
+                    "luggage_capacity": 5,
+                    "typical_vehicle": {
+                        "model": "Alphard",
+                        "manufacturer": "Toyota "
+                    },
+                    "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/mys/Toyota-Alphard.jpg",
+                    "price_detail": {
+                        "base_pricing": {
+                            "type": "fixed",
+                            "rule": null,
+                            "zone": "吉隆坡",
+                            "fix_price_type": "Transfer",
+                            "price": {
+                                "amount": 50.82,
+                                "currency": "USD"
+                            },
+                            "fix_price_detail": {
+                                "from": "KUL",
+                                "to": "吉隆坡",
+                                "from_type": "Airport",
+                                "to_type": "Zone"
+                            }
+                        },
+                        "special_pricing": [],
+                        "partner_pricing": {},
+                        "system_setting_pricing": {}
+                    }
+                },
+                {
+                    "price": {
+                        "amount": 55.92,
+                        "currency": "USD",
+                        "quote_id": "e6a3fa1e9cae4d5fa42d93884417d332-v5"
+                    },
+                    "vehicle_class": "Minibus-8",
+                    "vehicle_class_id": 5,
+                    "passenger_capacity": 8,
+                    "luggage_capacity": 8,
+                    "typical_vehicle": {
+                        "model": "cam placer X",
+                        "manufacturer": "cam placer"
+                    },
+                    "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/mys/Cam-Placer-X.jpg",
+                    "price_detail": {
+                        "base_pricing": {
+                            "type": "fixed",
+                            "rule": null,
+                            "zone": "吉隆坡",
+                            "fix_price_type": "Transfer",
+                            "price": {
+                                "amount": 55.92,
+                                "currency": "USD"
+                            },
+                            "fix_price_detail": {
+                                "from": "KUL",
+                                "to": "吉隆坡",
+                                "from_type": "Airport",
+                                "to_type": "Zone"
+                            }
+                        },
+                        "special_pricing": [],
+                        "partner_pricing": {},
+                        "system_setting_pricing": {}
+                    }
+                },
+                {
+                    "price": {
+                        "amount": 61.8,
+                        "currency": "USD",
+                        "quote_id": "e6a3fa1e9cae4d5fa42d93884417d332-v9"
+                    },
+                    "vehicle_class": "Minibus-10",
+                    "vehicle_class_id": 9,
+                    "passenger_capacity": 10,
+                    "luggage_capacity": 10,
+                    "typical_vehicle": {
+                        "model": "cam placer X",
+                        "manufacturer": "cam placer"
+                    },
+                    "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/mys/Cam-Placer-X.jpg",
+                    "price_detail": {
+                        "base_pricing": {
+                            "type": "fixed",
+                            "rule": null,
+                            "zone": "吉隆坡",
+                            "fix_price_type": "Transfer",
+                            "price": {
+                                "amount": 61.8,
+                                "currency": "USD"
+                            },
+                            "fix_price_detail": {
+                                "from": "KUL",
+                                "to": "吉隆坡",
+                                "from_type": "Airport",
+                                "to_type": "Zone"
+                            }
+                        },
+                        "special_pricing": [],
+                        "partner_pricing": {},
+                        "system_setting_pricing": {}
+                    }
+                },
+                {
+                    "price": {
+                        "amount": 66.0,
+                        "currency": "USD",
+                        "quote_id": "e6a3fa1e9cae4d5fa42d93884417d332-v10"
+                    },
+                    "vehicle_class": "Minibus-12",
+                    "vehicle_class_id": 10,
+                    "passenger_capacity": 12,
+                    "luggage_capacity": 12,
+                    "typical_vehicle": {
+                        "model": "cam placer X",
+                        "manufacturer": "cam placer"
+                    },
+                    "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/mys/Cam-Placer-X.jpg",
+                    "price_detail": {
+                        "base_pricing": {
+                            "type": "fixed",
+                            "rule": null,
+                            "zone": "吉隆坡",
+                            "fix_price_type": "Transfer",
+                            "price": {
+                                "amount": 66.0,
+                                "currency": "USD"
+                            },
+                            "fix_price_detail": {
+                                "from": "KUL",
+                                "to": "吉隆坡",
+                                "from_type": "Airport",
+                                "to_type": "Zone"
+                            }
+                        },
+                        "special_pricing": [],
+                        "partner_pricing": {},
+                        "system_setting_pricing": {}
+                    }
+                },
+                {
+                    "price": {
+                        "amount": 74.58,
+                        "currency": "USD",
+                        "quote_id": "e6a3fa1e9cae4d5fa42d93884417d332-v11"
+                    },
+                    "vehicle_class": "Minibus-14",
+                    "vehicle_class_id": 11,
+                    "passenger_capacity": 14,
+                    "luggage_capacity": 14,
+                    "typical_vehicle": {
+                        "model": "Cam Placer  X",
+                        "manufacturer": "Cam Placer "
+                    },
+                    "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/mys/Cam-Placer-X.jpg",
+                    "price_detail": {
+                        "base_pricing": {
+                            "type": "fixed",
+                            "rule": null,
+                            "zone": "吉隆坡",
+                            "fix_price_type": "Transfer",
+                            "price": {
+                                "amount": 74.58,
+                                "currency": "USD"
+                            },
+                            "fix_price_detail": {
+                                "from": "KUL",
+                                "to": "吉隆坡",
+                                "from_type": "Airport",
+                                "to_type": "Zone"
+                            }
+                        },
+                        "special_pricing": [],
+                        "partner_pricing": {},
+                        "system_setting_pricing": {}
+                    }
+                },
+                {
+                    "price": {
+                        "amount": 180.0,
+                        "currency": "USD",
+                        "quote_id": "e6a3fa1e9cae4d5fa42d93884417d332-v29"
+                    },
+                    "vehicle_class": "16-seat Bus",
+                    "vehicle_class_id": 29,
+                    "passenger_capacity": 16,
+                    "luggage_capacity": 16,
+                    "typical_vehicle": {
+                        "model": "cam placer X",
+                        "manufacturer": "cam placer"
+                    },
+                    "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/mys/Cam-Placer-X.jpg",
+                    "price_detail": {
+                        "base_pricing": {
+                            "type": "fixed",
+                            "rule": null,
+                            "zone": "吉隆坡",
+                            "fix_price_type": "Transfer",
+                            "price": {
+                                "amount": 180.0,
+                                "currency": "USD"
+                            },
+                            "fix_price_detail": {
+                                "from": "KUL",
+                                "to": "吉隆坡",
+                                "from_type": "Airport",
+                                "to_type": "Zone"
+                            }
+                        },
+                        "special_pricing": [],
+                        "partner_pricing": {},
+                        "system_setting_pricing": {}
+                    }
+                },
+                {
+                    "price": {
+                        "amount": 48.0,
+                        "currency": "USD",
+                        "quote_id": "e6a3fa1e9cae4d5fa42d93884417d332-v36"
+                    },
+                    "vehicle_class": "Business Van",
+                    "vehicle_class_id": 36,
+                    "passenger_capacity": 5,
+                    "luggage_capacity": 5,
+                    "typical_vehicle": {
+                        "model": "Alphard",
+                        "manufacturer": "Toyota"
+                    },
+                    "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/mys/Toyota-Alphard.jpg",
+                    "price_detail": {
+                        "base_pricing": {
+                            "type": "fixed",
+                            "rule": null,
+                            "zone": "吉隆坡",
+                            "fix_price_type": "Transfer",
+                            "price": {
+                                "amount": 48.0,
+                                "currency": "USD"
+                            },
+                            "fix_price_detail": {
+                                "from": "KUL",
+                                "to": "吉隆坡",
+                                "from_type": "Airport",
+                                "to_type": "Zone"
+                            }
+                        },
+                        "special_pricing": [],
+                        "partner_pricing": {},
+                        "system_setting_pricing": {}
+                    }
+                },
+                {
+                    "price": {
+                        "amount": 19.0,
+                        "currency": "USD",
+                        "quote_id": "e6a3fa1e9cae4d5fa42d93884417d332-v12"
+                    },
+                    "vehicle_class": "Comfort Sedan",
+                    "vehicle_class_id": 12,
+                    "passenger_capacity": 3,
+                    "luggage_capacity": 3,
+                    "typical_vehicle": {
+                        "model": "Alza",
+                        "manufacturer": "perodua"
+                    },
+                    "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/mys/Perodua-Alza.jpg",
+                    "price_detail": {
+                        "base_pricing": {
+                            "type": "fixed",
+                            "rule": null,
+                            "zone": "吉隆坡",
+                            "fix_price_type": "Transfer",
+                            "price": {
+                                "amount": 19.0,
+                                "currency": "USD"
+                            },
+                            "fix_price_detail": {
+                                "from": "KUL",
+                                "to": "吉隆坡",
+                                "from_type": "Airport",
+                                "to_type": "Zone"
+                            }
+                        },
+                        "special_pricing": [],
+                        "partner_pricing": {},
+                        "system_setting_pricing": {}
+                    }
+                },
+                {
+                    "price": {
+                        "amount": 46.0,
+                        "currency": "USD",
+                        "quote_id": "e6a3fa1e9cae4d5fa42d93884417d332-v7"
+                    },
+                    "vehicle_class": "MPV-6",
+                    "vehicle_class_id": 7,
+                    "passenger_capacity": 6,
+                    "luggage_capacity": 6,
+                    "typical_vehicle": {
+                        "model": "cam placer X",
+                        "manufacturer": "cam placer"
+                    },
+                    "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/mys/Cam-Placer-X.jpg",
+                    "price_detail": {
+                        "base_pricing": {
+                            "type": "fixed",
+                            "rule": null,
+                            "zone": "吉隆坡",
+                            "fix_price_type": "Transfer",
+                            "price": {
+                                "amount": 46.0,
+                                "currency": "USD"
+                            },
+                            "fix_price_detail": {
+                                "from": "KUL",
+                                "to": "吉隆坡",
+                                "from_type": "Airport",
+                                "to_type": "Zone"
+                            }
+                        },
+                        "special_pricing": [],
+                        "partner_pricing": {},
+                        "system_setting_pricing": {}
+                    }
+                },
+                {
+                    "price": {
+                        "amount": 45.98,
+                        "currency": "USD",
+                        "quote_id": "e6a3fa1e9cae4d5fa42d93884417d332-v8"
+                    },
+                    "vehicle_class": "Minibus-7",
+                    "vehicle_class_id": 8,
+                    "passenger_capacity": 7,
+                    "luggage_capacity": 7,
+                    "typical_vehicle": {
+                        "model": "cam placer X",
+                        "manufacturer": "cam placer"
+                    },
+                    "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/mys/Cam-Placer-X.jpg",
+                    "price_detail": {
+                        "base_pricing": {
+                            "type": "fixed",
+                            "rule": null,
+                            "zone": "吉隆坡",
+                            "fix_price_type": "Transfer",
+                            "price": {
+                                "amount": 45.98,
+                                "currency": "USD"
+                            },
+                            "fix_price_detail": {
+                                "from": "KUL",
+                                "to": "吉隆坡",
+                                "from_type": "Airport",
+                                "to_type": "Zone"
+                            }
+                        },
+                        "special_pricing": [],
+                        "partner_pricing": {},
+                        "system_setting_pricing": {}
+                    }
+                }
+            ],
+            "add_service": {
+                "infant": {
+                    "price": {
+                        "amount": 0,
+                        "currency": "USD",
+                        "quote_id": "243c309500d3526ad2f9c7e9eda5bf73cf84b7a613f461cd923e87ac33037967"
+                    }
+                },
+                "toddler": {
+                    "price": {
+                        "amount": 0,
+                        "currency": "USD",
+                        "quote_id": "243c309500d3526ad2f9c7e9eda5bf73cf84b7a613f461cd923e87ac33037967"
+                    }
+                },
+                "children": {
+                    "price": {
+                        "amount": 0,
+                        "currency": "USD",
+                        "quote_id": "243c309500d3526ad2f9c7e9eda5bf73cf84b7a613f461cd923e87ac33037967"
+                    }
+                }
+            },
+            "add_service_unit_price": {
+                "infant": {
+                    "currency": "USD",
+                    "amount": 15.0
+                },
+                "toddler": {
+                    "currency": "USD",
+                    "amount": 15.0
+                },
+                "children": {
+                    "currency": "USD",
+                    "amount": 15.0
+                }
+            },
+            "meet_and_greet": {
+                "price": {
+                    "amount": 0,
+                    "currency": "USD",
+                    "quote_id": "e6a3fa1e9cae4d5fa42d93884417d332-m"
+                }
+            }
         }
-      ]
-    }
+    ],
+    "request_id": "7b1362e65d1e4fc4a3c8b6fd03f5d2a2",
+    "distance": 0.0
+}

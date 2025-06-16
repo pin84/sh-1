@@ -159,7 +159,7 @@ async function insertSppRouteV2(url, route) {
 
   let d = Object.assign({}, {
     sql: 134679330,
-    version: '4.055',
+    version: '4.078',
   },
     route
   )
@@ -462,6 +462,9 @@ async function timeZoneHandler(pricing, airportInfo) {
     if (!airportInfo) {
       airportInfo = await getAirportInfo(urlProd, pricing.airports[0])
     }
+
+    console.log('--------调用了时区API---------',airportInfo);
+    
     let { lat, lng } = airportInfo
     let url = `https://388bivap71.execute-api.us-east-2.amazonaws.com/prod/maps/timezones/location/date-time`
     let res = await fetchData({

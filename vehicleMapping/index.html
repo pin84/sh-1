@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script src="../components.js"></script>
+  <script>
+
+    let m = [
+      {
+        "Standard": "Sedan"
+      },
+      {
+        "Electric Standard": "EV Sedan"
+      },
+      {
+        "Executive": "Business Sedan"
+      },
+      {
+        "Luxury": "First Class Sedan"
+      },
+      {
+        "Electric Luxury": "EV First Class Sedan"
+      },
+      {
+        "People carrier": "MPV-4"
+      },
+      {
+        "Large people carrier": "MPV-5"
+      },
+      {
+        "Executive people carrier": "Business SUV"
+      },
+      {
+        "Executive people carrier": "Business Minivan"
+      },
+      {
+        "Minibus": "MPV-6"
+      },
+      {
+        "Minibus": "Minibus-7"
+      },
+      {
+        "Minibus": "Minibus-8"
+      }
+    ]
+
+
+    let mapping = []
+    for (let item of m) {
+      for (let [key, value] of Object.entries(item)) {
+        console.log(key, value);
+        let v = vehicleList.find(o=>o.vehicle_name == value)
+        if(!v){
+          debugger
+        }
+
+        
+        mapping.push({
+          "elife": `${v.vehicle_id}`,
+          "booking": key.toUpperCase()
+        })
+
+      }
+
+    }
+
+
+    console.log(mapping);
+    
+
+  </script>
+</body>
+</html>l

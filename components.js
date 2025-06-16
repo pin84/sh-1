@@ -431,6 +431,16 @@ function getPatnerInfo(partnerId, stage) {
         supply_fleet_id: 15
       }
       break;
+    case 2693:
+      partnerInfo = {
+        parentFleetId: isProd ? 15 : 40,
+        platform_name: 'Traveloka',
+        parentFleetName: 'TravelokaSupply',
+        partner_id: 2693,
+        demand_fleet_id: 58057,
+        supply_fleet_id: 15
+      }
+      break;
     default:
       break;
   }

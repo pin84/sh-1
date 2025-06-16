@@ -13,7 +13,7 @@
 </head>
 <body>
   <div id="app">
-    <el-tabs v-model="activeName" class="demo-tabs" @tab-click="handleClick">
+    <el-tabs v-model="activeName" class="demo-tabs">
       <el-tab-pane label="copy routes" name="first">
         <el-form :model="form" label-width="auto" style="max-width: 600px">
           <el-form-item label="Route ids">
@@ -60,6 +60,27 @@
           <el-button class="btn" type="primary" @click="uploadRouteZoneName">uploadRouteZoneName</el-button>
         </div>
       </el-tab-pane>
+      <el-tab-pane label="changePricingJson" name="changePricingJson">
+        <div class="upload-route-zone-box">
+          <el-form :model="changePricingJsonForm" label-width="80px">
+            <el-form-item label="from fleet">
+              <el-input v-model="changePricingJsonForm.fromSvcId"></el-input>
+            </el-form-item>
+            <el-form-item label="to fleet">
+              <el-input v-model="changePricingJsonForm.toSvcId"></el-input>
+            </el-form-item>
+            <el-form-item label="replace type">
+              <el-checkbox-group v-model="changePricingJsonForm.type">
+                <el-checkbox label="zones" name="type"></el-checkbox>
+                <el-checkbox label="地推活动" name="type"></el-checkbox>
+                <el-checkbox label="线下主题活动" name="type"></el-checkbox>
+                <el-checkbox label="单纯品牌曝光" name="type"></el-checkbox>
+              </el-checkbox-group>
+            </el-form-item>
+          </el-form>
+          <el-button class="btn" type="primary" @click="changePricingJson">changePricingJson</el-button>
+        </div>
+      </el-tab-pane>
       <el-tab-pane label="Task" name="fourth">
         <el-button class="btn" type="primary" @click="updateRoute">updateRoute</el-button>
         <el-button class="btn" type="primary" @click="addRoute">addRoute</el-button>
@@ -83,12 +104,14 @@
         <el-button class="btn" type="primary" @click="ctripTop300Handler">ctripTop300Handler</el-button>
         <el-button class="btn" type="primary" @click="getSvcIdbyAirport">getSvcIdbyAirport</el-button>
         <el-button class="btn" type="primary" @click="hoppaAddZones">hoppaAddZones</el-button>
+        <el-button class="btn" type="primary" @click="checkRouteTop300">checkRouteTop300</el-button>
+        <el-button class="btn" type="primary" @click="getPricingZonesByFleetId">getPricingZonesByFleetId</el-button>
       </el-tab-pane>
     </el-tabs>
   </div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
-<script src="./data/hoppaAddZone/h_5_24.js"></script>
+<script src="./data/d_6_13.js"></script>
 <script setup>
   const { createApp, ref, reactive, computed, watch, defineComponent, onMounted } = Vue;
   const stage = 'PROD' //PROD,DEV
@@ -102,10 +125,11 @@
   let cache = {}
   let partnerJson = null
 
-
+  const route_type = 0 // 1:smart purchasing routes 
   const batch = 0
-  const partnerId = 2692
-  let dList = stage == 'PROD' ? h_5_26 : []
+  const partnerId = 3
+  let dList = stage == 'PROD' ? [] : []
+
 
 
 
@@ -115,9 +139,97 @@
 
     methods: {
 
-      hoppaAddZones() {
 
-        let arr = []
+      async getPricingZonesByFleetId() {
+        // select * from fleet where id in () and parent_fleet_id = 89496
+
+        let ids = [89694, 90331, 90407, 89704, 89777, 89815, 89753, 89894, 90769, 90080, 90099, 90107, 90175, 90176, 90187, 90368, 89660, 89706, 90348, 95413, 90337, 90400, 90451, 89950, 89740, 90589, 90591, 90876, 89815, 90490, 90774, 90773, 90746, 90317, 90797, 90883, 90882, 90972, 90979, 90952, 90953, 90214, 91028]
+
+        let obj = {}
+        for (let id of ids) {
+          let json = await getLastPricingJsonBySvcId(url, id)
+
+          obj[id] = json?.zones || []
+
+        }
+        console.log(obj);
+      },
+
+
+      async checkRouteTop300() {
+
+        let obj = {}
+        for (let p of this.partnerIds) {
+          let { id } = p
+          let arr = []
+          let arr_1 = []
+          for (let item of dList) {
+            let { from_zone, to_zone } = item
+            let routeInfo = await getRoute(url, from_zone, to_zone, id)
+            let { id: routeId } = routeInfo
+            if (routeId) {
+              arr.push(routeId)
+            } else {
+              arr_1.push(item)
+            }
+          }
+
+          obj[id] = {
+            exists: arr,
+            no_exists: arr_1
+          }
+
+        }
+
+        console.log(obj);
+
+
+      },
+
+      async changePricingJson() {
+        // let { fromSvcId, toSvcId, type } = this.changePricingJsonForm
+        // let op = await getPricingJsonBySvcId(url, 451)
+        // let tp = await getPricingJsonBySvcId(url, 88894)
+        // console.log(JSON.parse(JSON.stringify(tp)));
+        // let replaceFields = ['zones']
+        // for (let item of type) {
+        //   tp[item] = op[item]
+        // }
+
+        let tp = {}
+        let toSvcId = 90022
+
+
+        let str = JSON.stringify(tp)
+        str = str.replace(/\'/g, ' ')
+        console.log(JSON.parse(str));
+        let updateD = {
+          sql: 134678780,
+          version: '1.0',
+          pricing_str: str,
+          new_fleet_id: toSvcId
+        }
+
+        debugger
+        // insert into service_area_pricing (service_area_id,pricing,effective_at,expire_at) 
+        // values  ({{new_fleet_id}},'{{pricing_str}}','2024-04-08 05:05:00','2037-12-31 23:59:59' );
+        // update fleet set service_area_pricing_id = last_insert_id() where id = {{new_fleet_id}} limit 1;
+        let res = await fetchData({
+          url,
+          method: 'POST',
+          data: updateD,
+          desc: 'update json'
+        })
+
+        debugger
+      },
+
+      hoppaAddZones() {
+        let pricingJSON = {}
+        let { vehicleClasses, zone2zone } = pricingJSON
+
+        let z2zList = zone2zone?.prices || []
+
         for (let item of dList) {
           let priceStr = item['Final Prices']
           let from = item['From Zone']
@@ -125,24 +237,177 @@
           let FC = item['From Cluster Center']
           let TC = item['To Cluster Center']
           let FE = item['Final Prices Elife Vehicles']
-
           FE = JSON.parse(FE.replace(/'/g, '"'))
+
+          let arr = []
+          let arrPrices = []
+          for (let [key, value] of Object.entries(FE)) {
+            let vehicle = vehicleList.find(o => o.vehicle_name == key)
+            let { vehicle_id, vehicle_name } = vehicle
+
+            arr.push({
+              vehicle_id,
+              vehicle_name,
+              value
+            })
+            if (![119, 120, 121].includes(vehicle_id)) {
+              arrPrices.push(value)
+            }
+          }
+
+
+          let lowestPrice = arr.find(o => o.vehicle_id == 1)?.value || 0
+          if (!lowestPrice) {
+            lowestPrice = Math.min(...arrPrices)
+          }
 
           if (from == 'DXB' || to == 'DXB') {
             if (from.includes('New Cluster') || to.includes('New Cluster')) {
-              console.log(item);
               console.log(`-------${i++}--------`);
 
+              if (to == 'New Cluster 0' || to == 'New Cluster 8') {
+                debugger
+                continue
+              }
 
-              for (let [key, value] of Object.entries(FE)) {
-                let vehicle = vehicleList.find(o => o.vehicle_name == key)
-                let { vehicle_id, vehicle_name } = vehicle
+              let TCArr = TC.substring(1, TC.length - 1).split(',')
+              pricingJSON.zones.push({
+                "name": to,
+                "lat": Number(TCArr[0]),
+                "lng": Number(TCArr[1]),
+                "radius": 5000,
+                "prices": [
+                  {
+                    "airport": from,
+                    "amount": lowestPrice,
+                    "currency": "USD",
+                    "p_amt": lowestPrice,
+                    "d_amt": lowestPrice
+                  }
+                ],
+                "p2p": "false"
+              })
+
+              let len = pricingJSON.zones.length
 
 
+              for (let item of arr) {
+                let { vehicle_id, value, vehicle_name } = item
+                debugger
+                let v = vehicleClasses.find(o => o.vehicle_class_id == vehicle_id)
+                if (!v) {
+                  let delta_amount = Number((value - lowestPrice).toFixed(2))
+                  let newVehicle = {
+                    "vehicle_class_id": vehicle_id,
+                    "delta_amount": 0,
+                    "percent": 0,
+                    "hourly_percent": 0,
+                    "percent_appendix": [
+                      {
+                        field: `zones.${len - 1}.prices.0.p_amt`,
+                        delta_amount: delta_amount
+                      },
+                      {
+                        field: `zones.${len - 1}.prices.0.d_amt`,
+                        delta_amount: delta_amount
+                      },
+                    ],
+                    "surcharge_schedule": []
+                  }
+                  vehicleClasses.push(newVehicle)
+
+                } else {
+                  if (!v.percent_appendix) {
+                    v['percent_appendix'] = []
+                  }
+                  let delta_amount = Number((value - lowestPrice).toFixed(2))
+
+                  let pAmtIdx = v.percent_appendix.findIndex(o => o.field == `zones.${len - 1}.prices.0.p_amt`)
+                  let dAmtIdx = v.percent_appendix.findIndex(o => o.field == `zones.${len - 1}.prices.0.d_amt`)
+                  if (pAmtIdx == -1) {
+                    v.percent_appendix.push(
+                      {
+                        field: `zones.${len - 1}.prices.0.p_amt`,
+                        delta_amount: delta_amount
+                      }
+                    )
+                  } else {
+                    v.percent_appendix[pAmtIdx].delta_amount = delta_amount
+                  }
+                  if (dAmtIdx == -1) {
+                    v.percent_appendix.push(
+                      {
+                        field: `zones.${len - 1}.prices.0.d_amt`,
+                        delta_amount: delta_amount
+                      }
+                    )
+                  } else {
+                    v.percent_appendix[dAmtIdx].delta_amount = delta_amount
+                  }
+                }
+              }
+
+
+
+            }
+          }
+
+          // zone2zone
+          if (from == '市区' && to == '朱美拉') {
+
+            let index = z2zList.findIndex(o => o.from_zone == from && o.to_zone == to)
+            let isExist = false
+
+            if (!zone2zone) {
+              pricingJSON['zone2zone'] = {
+                "mac": 1,
+                "prices": []
+              }
+            }
+
+            if (index != -1) {
+              isExist = true
+              z2zList[index].amount = lowestPrice
+            } else {
+              index = z2zList.length
+              pricingJSON['zone2zone']['prices'].push({
+                "name": `${from}-${to}`,
+                "from_zone": `${from}`,
+                "to_zone": `${to}`,
+                "amount": `${lowestPrice}`,
+                "reverse": "1"
+              })
+            }
+
+            for (let v of vehicleClasses) {
+              let { vehicle_class_id } = v
+              if (!v.percent_appendix) {
+                v['percent_appendix'] = []
+              }
+
+              let vehiclePrice = arr.find(o => o.vehicle_id == vehicle_class_id)
+              if (!vehiclePrice) {
+                continue
+              }
+              let { value } = vehiclePrice
+
+              let delta_amount = Number((value - lowestPrice).toFixed(2))
+              let z2zDelta = v.percent_appendix.find(o => o.field == `zone2zone.prices.${index}`)
+              if (!z2zDelta) {
+                v.percent_appendix.push(
+                  {
+                    field: `zone2zone.prices.${index}`,
+                    delta_amount
+                  })
+              } else {
+                z2zDelta.delta_amount = delta_amount
               }
             }
           }
         }
+
+        console.log(pricingJSON);
+
         console.log(`-------------------END-------------------`);
       },
 
@@ -661,98 +926,6 @@
 
 
 
-      // async addRoutePriceAdj() {
-      //   let vehicles = getVehicles()
-      //   let cStr = ' Cost'
-      //   let pStr = ' min profit'
-      //   let mStr = ' Max'
-
-
-
-      //   for (let item of dList) {
-      //     console.log(`-------${i++}--------`)
-
-      //     let { id: routeId, from_zone: fz, to_zone: tz, service_area_id, from_place, to_place, partner_id } = item
-      //     let { parentFleetId, partnerInfo } = getPatnerInfo(partner_id, stage)
-
-      //     let from_zone = fz ? fz : from_place
-      //     let to_zone = tz ? tz : to_place
-
-      //     let airportInfoObj = await getAirport(from_zone, to_zone)
-      //     if (!airportInfoObj) {
-      //       item['note'] = 'No  airport'
-      //       this.noInsertList.push(item)
-      //       continue
-      //     }
-      //     let { isPickup, airportInfo } = airportInfoObj
-      //     let airportCode = isPickup ? from_zone : to_zone
-
-      //     let str = `${parentFleetId}-${airportCode}`
-      //     let fleetInfo = cache[str]
-      //     if (!fleetInfo) {
-      //       fleetInfo = await getFleetIdAndPricingByAirport(url, airportCode, parentFleetId)
-      //     }
-
-      //     let { fleet_id, pricing, pricing_id } = fleetInfo
-      //     if (!fleet_id) {
-      //       let obj = JSON.parse(JSON.stringify(item))
-      //       obj['note'] = 'NO fleet'
-      //       this.noInsertList.push(obj)
-      //       continue
-      //     }
-
-      //     cache[str] = fleetInfo
-
-      //     let pricingJson = JSON.parse(pricing)
-      //     let prices = []
-      //     for (let v of vehicles) {
-      //       let vid = vehicleList.find(vehicle => vehicle.vehicle_name == v).vehicle_id
-
-
-      //       let jsonHandled = jsonHandler3(pricingJson, from_zone, to_zone, isPickup, airportInfo, vid)
-
-      //       let { adjJson, from_place_lat_lng, to_place_lat_lng, code, tz } = jsonHandled
-      //       if (code > 0) {
-      //         if (code == 2) {
-      //           item['note'] = 'There is a crossover in the fixed price circle'
-      //           this.noInsertList.push(item)
-      //         } else {
-      //           item['note'] = 'no Fixed Price Zone'
-      //           this.noInsertList.push(item)
-      //         }
-      //         continue
-      //       }
-      //       let { pAmt } = jsonHandled
-      //       if (!pAmt) {
-      //         let obj = JSON.parse(JSON.stringify(item))
-      //         obj['note'] = 'no price adj'
-      //         obj['vehicle_id'] = vid
-      //         this.noInsertList.push(obj)
-      //         continue
-      //       }
-      //       console.log('--', routeId, '--', v, '--', vid, '---', pAmt);
-      //       prices.push({
-      //         route_id: routeId,
-      //         vehicle_class_id: vid,
-      //         price: pAmt
-      //       })
-      //       this.doneList.push(routeId)
-      //     }
-      //     let insertAdjRes = await insertAdj(url, prices)
-      //   }
-
-
-      //   console.log('--this.noInsertList--', this.noInsertList);
-      //   let dones = Array.from(new Set(this.doneList))
-      //   console.log('--doneList--', dones);
-
-      //   let date = new Date()
-      //   downLoadCSV(this.noInsertList, `${date.toLocaleString()}- no insert list`)
-      // },
-
-
-
-
       async addFleetToRideVehicleMapping() {
 
         let d = {
@@ -792,6 +965,7 @@
           console.log('----changed---', changedJson);
 
           let pricingStr = JSON.stringify(changedJson)
+          pricingStr = pricingStr.replace(/\'/g, ' ')
           let res = await insertAndUpdate(url, pricingStr, fleetId)
 
           debugger
@@ -894,9 +1068,7 @@
         downLoadCSV(this.noInsertList, `${parentFleetId}-${date.toLocaleString()}- no insert list`)
 
       },
-      handleClick(tab, event) {
-        console.log(tab, event)
-      },
+
 
 
 
@@ -948,7 +1120,7 @@
 
       async updateRoute() {
         let ids = [
-          8250, 8210
+          8504,8505,8519,8534,8535,8564,8565
         ]
 
         console.log(ids);
@@ -958,10 +1130,14 @@
         let url = urlProd   // urlDev,urlProd
         let d = {
           sql: 134679330,
-          version: '4.070',
-          is_active: '11',
+          version: '4.079',
+          ids: idsStr,
+          cost: 1,
+          route_type:'3',
+          // level:0,
+          // is_active: '99',
           // tz,
-          batch: '34',
+          // batch: '37',
           // strategy_id: 1,
           // crawl_state:'0',
           // platform_name:'m.ctrip.com',
@@ -969,11 +1145,11 @@
           // to_address: addressHandler('Grand Hyatt Mumbai Hotel & Residences'),
           // from_place: "千叶",
           // "json": '{"d_amt":"zones.1.prices.0.d_amt"}',
-          // "to_place":"BOM airport",
-          // "from_place": "BOM airport",
+          // "to_place":"Madhapur",
+          // "from_place": "Madhapur",
           // "partner_id": 2593,
           // "platform_name": "Amadeus",
-          ids: idsStr,
+
         }
         let res = await fetchData({
           url,
@@ -1175,6 +1351,8 @@
             continue
           }
 
+          debugger
+
           let { id: routeId } = await getRoute(url, from_zone, to_zone, partnerId)
 
           if (!routeId) {
@@ -1217,6 +1395,7 @@
             })
             sameRoutes = res?.results || []
           }
+          debugger
 
           let costStr = `cost-${from_zone}-${to_zone}`
           let sameCosts = cache[costStr] || []
@@ -1429,7 +1608,8 @@
           disable_date,
 
           partner_id,
-          platform_name
+          platform_name,
+          route_type
         }
         route = Object.assign({}, route)
         console.log(route);
@@ -1468,10 +1648,11 @@
             route['batch'] = batch
             route['is_active'] = is_active
           }
+          route['cost'] = 1
 
           let d = {
             sql: 134679330,
-            version: '4.052',
+            version: '4.079',
             ids: `${routeId}`,
           }
           d = Object.assign({}, d, route)
@@ -1494,7 +1675,7 @@
         let { parentFleetId, partner_id, platform_name } = getPatnerInfo(partnerId, stage)
         console.log(dList);
 
-
+        debugger
         let i = 0
         for (let item of dList) {
           await this.addRouteHandle(item, parentFleetId, partner_id, platform_name)
@@ -1571,8 +1752,9 @@
         }
 
         let strategy = {
-          "id": 15,
-          "name": "HF_V2",
+          "id": 16,
+          "name": "Compete for first",
+          "partner_id": 2593
         }
 
         let d = {
@@ -1588,36 +1770,21 @@
         let arr = []
         for (let item of dList) {
           console.log(`-------${i++}--------`);
-          let { id, is_active, from_address } = item
-
-
-
-
-          let geoUrl = "https://maps.googleapis.com/maps/api/geocode/json"
-          let geoRes = await fetchData({
-            url: geoUrl,
-            method: 'GET',
-            data: {
-              address: `${from_address}`,
-              key: `AIzaSyCaAk67K9PyOQ5yuejv1xZGc7KOuKLOAUs`
-            }
-          })
-
-          let { lat, lng } = geoRes?.results[0]?.geometry?.location || {}
-
+          let { id, is_active, from_place_lat_lng } = item
+          let fromPlaceJson = JSON.parse(from_place_lat_lng)
+          let { lat, lng } = fromPlaceJson
           if (!lat || !lng) {
             arr.push(item)
             continue
           }
-
-
           let timezoneRes = await fetchData({
             url: `https://maps.googleapis.com/maps/api/timezone/json`,
             method: 'GET',
             data: {
               location: `${lat},${lng}`,
               timestamp: Math.floor(Date.now() / 1000),
-              key: `AIzaSyCaAk67K9PyOQ5yuejv1xZGc7KOuKLOAUs`
+              // key: `AIzaSyCaAk67K9PyOQ5yuejv1xZGc7KOuKLOAUs`
+              key: `AIzaSyD9mzj4sfSNhPUOmfp605SpbSMmip6TtD4`
             }
           })
           let { timeZoneId } = timezoneRes
@@ -1654,17 +1821,17 @@
         let sql = {
           sql: 134679330,
           version: '2.31',
-          is_active: 1
+          is_active: 1,
         }
 
 
 
 
         let strategy = {
-          "name": "servantrip",
+          "name": "Traveloka",
           // "id": 15,
-          "partner_id": 2599,
-          "description": "TEST",
+          "partner_id": 2693,
+          "description": "Traveloka",
           "rules": JSON.stringify([])
         }
 
@@ -1841,17 +2008,21 @@
     },
 
     setup() {
+      const activeName = ref('changePricingJson')
       const inputValueRouteIds = ref('');
       const form = ref({
         ids: '2157,2158,2159,2160,2161,2162,2163,2164,2165,2166,2167,2168,2169,2170,2171,2172,2173,2174,2175,2176',
         partnerId: '2',
       })
 
-      const activeName = ref('change currency')
+
 
       const partnerIds = ref([
         {
           id: 2
+        },
+        {
+          id: 3
         },
         {
           id: 5
@@ -1864,6 +2035,12 @@
         },
         {
           id: 28
+        },
+        {
+          id: 2621
+        },
+        {
+          id: 2588
         }
       ])
 
@@ -1871,6 +2048,11 @@
         boundLat: 37.6213129,
         boundLng: -122.3789554,
         boundRadius: 200000
+      })
+      const changePricingJsonForm = ref({
+        fromSvcId: 451,
+        toSvcId: 88894,
+        type: []
       })
 
       const splitOutFleetSupplyIds = [51488, 61654, 67743, 78568, 72105, 85191, 75362, 89496, 15]
@@ -1891,7 +2073,9 @@
         activeName,
         partnerIds,
         originLatLng,
-        changeCurrencyData
+        changeCurrencyData,
+        changePricingJsonForm,
+        splitOutFleetSupplyIds
       }
     },
 
