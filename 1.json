@@ -1,83 +1,1859 @@
 {
-    "restStatus": 200,
-    "body": {
-        "ride_id": 3024670,
-        "meeting_places": [
-            {
-                "iata": "SFO",
-                "location_name": b"testing 123",
-                "terminal": "",
-                "terminal_id": "",
-                "instruction": b"test",
-                "default_meeting_point": 0,
-                "meeting_place_type": 0,
-                "images": []
-            },
-            {
-                "iata": "SFO",
-                "location_name": b"test",
-                "terminal": "",
-                "terminal_id": "",
-                "instruction": b"test",
-                "default_meeting_point": None,
-                "meeting_place_type": 139722768,
-                "images": [
-                    {
-                        "url": "https://elife-docs.s3.amazonaws.com/0aa9ccbe-f28b-4f61-978f-f2f2421f6206.jpeg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVYUEWZRDKBP3U44X%2F20250613%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20250613T100922Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=7d6b45a0ffa06b4b64ba0538d615117fed0533bb3471e64063f2e7ec1c1470aa",
-                        "description": "test"
-                    }
-                ]
-            },
-            {
-                "iata": "SFO",
-                "location_name": b"test",
-                "terminal": "tesy2508",
-                "terminal_id": "2",
-                "instruction": b"testAlexandeer",
-                "default_meeting_point": None,
-                "meeting_place_type": 0,
-                "images": []
-            },
-            {
-                "iata": "SFO",
-                "location_name": b"asdrft",
-                "terminal": "",
-                "terminal_id": "",
-                "instruction": b"test\ntesting\ntest1",
-                "default_meeting_point": None,
-                "meeting_place_type": 0,
-                "images": []
-            },
-            {
-                "iata": "SFO",
-                "location_name": b"Terminal 4",
-                "terminal": "Terminal 3",
-                "terminal_id": "3",
-                "instruction": b"The driver will find you with a silly hat",
-                "default_meeting_point": 0,
-                "meeting_place_type": 0,
-                "images": []
-            },
-            {
-                "iata": "SFO",
-                "location_name": b"Terminal 2",
-                "terminal": "Terminal 3",
-                "terminal_id": "3",
-                "instruction": b"The driver will be standing next to the baggage carousel with a name tag, near Door. "\" > < <> &",
-                "default_meeting_point": 1,
-                "meeting_place_type": 139722768,
-                "images": []
-            },
-            {
-                "iata": "SFO",
-                "location_name": b"test",
-                "terminal": "Mazatlan Internation Terminal",
-                "terminal_id": "T12",
-                "instruction": b"test",
-                "default_meeting_point": 0,
-                "meeting_place_type": 0,
-                "images": []
-            }
-        ]
+  "percent": "0",
+  "dataType": "1",
+  "doNotDel": "doNotDel",
+  "vehicle_type_mapping": [
+    {
+      "countries": [
+        "MYS",
+        "SGP"
+      ],
+      "mapping": [
+        {
+          "elife": "1",
+          "china_ctrip_api": 146,
+          "max": 3,
+          "loggage": 2
+        },
+        {
+          "elife": "12",
+          "china_ctrip_api": 117,
+          "max": 3,
+          "loggage": 2
+        },
+        {
+          "elife": "6",
+          "china_ctrip_api": 118,
+          "max": 4,
+          "loggage": 2
+        },
+        {
+          "elife": "3",
+          "china_ctrip_api": 20020,
+          "max": 4,
+          "loggage": 4
+        },
+        {
+          "elife": "2",
+          "china_ctrip_api": 119,
+          "max": 4,
+          "loggage": 3
+        },
+        {
+          "elife": "4",
+          "china_ctrip_api": 120,
+          "max": 6,
+          "loggage": 4
+        },
+        {
+          "elife": "3",
+          "china_ctrip_api": 121,
+          "max": 6,
+          "loggage": 4
+        },
+        {
+          "elife": "5",
+          "china_ctrip_api": 124,
+          "max": 7,
+          "loggage": 4
+        },
+        {
+          "elife": "9",
+          "china_ctrip_api": 125,
+          "max": 8,
+          "loggage": 5
+        },
+        {
+          "elife": "9",
+          "china_ctrip_api": 126,
+          "max": 9,
+          "loggage": 5
+        },
+        {
+          "elife": "11",
+          "china_ctrip_api": 127,
+          "max": 11,
+          "loggage": 6
+        },
+        {
+          "elife": "11",
+          "china_ctrip_api": 128,
+          "max": 13,
+          "loggage": 6
+        }
+      ]
+    },
+    {
+      "countries": [
+        "JPN"
+      ],
+      "mapping": [
+        {
+          "elife": "1",
+          "china_ctrip_api": 146,
+          "max": 4,
+          "loggage": 2
+        },
+        {
+          "elife": "12",
+          "china_ctrip_api": 118,
+          "max": 4,
+          "loggage": 2
+        },
+        {
+          "elife": "2",
+          "china_ctrip_api": 119,
+          "max": 4,
+          "loggage": 3
+        },
+        {
+          "elife": "6",
+          "china_ctrip_api": 20020,
+          "max": 4,
+          "loggage": 4
+        },
+        {
+          "elife": "4",
+          "china_ctrip_api": 120,
+          "max": 6,
+          "loggage": 4
+        },
+        {
+          "elife": "3",
+          "china_ctrip_api": 121,
+          "max": 6,
+          "loggage": 4
+        },
+        {
+          "elife": "7",
+          "china_ctrip_api": 124,
+          "max": 7,
+          "loggage": 4
+        },
+        {
+          "elife": "8",
+          "china_ctrip_api": 125,
+          "max": 8,
+          "loggage": 5
+        },
+        {
+          "elife": "5",
+          "china_ctrip_api": 126,
+          "max": 9,
+          "loggage": 6
+        },
+        {
+          "elife": "9",
+          "china_ctrip_api": 127,
+          "max": 11,
+          "loggage": 6
+        },
+        {
+          "elife": "9",
+          "china_ctrip_api": 128,
+          "max": 13,
+          "loggage": 6
+        }
+      ]
+    },
+    {
+      "countries": [
+        "AUS",
+        "NZL"
+      ],
+      "mapping": [
+        {
+          "elife": "1",
+          "china_ctrip_api": 146,
+          "max": 3,
+          "loggage": 2
+        },
+        {
+          "elife": "1",
+          "china_ctrip_api": 117,
+          "max": 4,
+          "loggage": 2
+        },
+        {
+          "elife": "12",
+          "china_ctrip_api": 118,
+          "max": 4,
+          "loggage": 2
+        },
+        {
+          "elife": "2",
+          "china_ctrip_api": 119,
+          "max": 4,
+          "loggage": 3
+        },
+        {
+          "elife": "3",
+          "china_ctrip_api": 20020,
+          "max": 4,
+          "loggage": 4
+        },
+        {
+          "elife": "4",
+          "china_ctrip_api": 120,
+          "max": 6,
+          "loggage": 4
+        },
+        {
+          "elife": "4",
+          "china_ctrip_api": 121,
+          "max": 6,
+          "loggage": 4
+        },
+        {
+          "elife": "5",
+          "china_ctrip_api": 122,
+          "max": 7,
+          "loggage": 5
+        },
+        {
+          "elife": "5",
+          "china_ctrip_api": 124,
+          "max": 7,
+          "loggage": 4
+        },
+        {
+          "elife": "9",
+          "china_ctrip_api": 125,
+          "max": 8,
+          "loggage": 5
+        },
+        {
+          "elife": "9",
+          "china_ctrip_api": 126,
+          "max": 9,
+          "loggage": 6
+        },
+        {
+          "elife": "10",
+          "china_ctrip_api": 127,
+          "max": 11,
+          "loggage": 6
+        }
+      ]
+    },
+    {
+      "countries": [
+        "KOR"
+      ],
+      "mapping": [
+        {
+          "elife": "1",
+          "china_ctrip_api": 117,
+          "max": 4,
+          "loggage": 2
+        },
+        {
+          "elife": "12",
+          "china_ctrip_api": 118,
+          "max": 4,
+          "loggage": 2
+        },
+        {
+          "elife": "2",
+          "china_ctrip_api": 119,
+          "max": 4,
+          "loggage": 3
+        },
+        {
+          "elife": "6",
+          "china_ctrip_api": 20020,
+          "max": 4,
+          "loggage": 4
+        },
+        {
+          "elife": "4",
+          "china_ctrip_api": 120,
+          "max": 6,
+          "loggage": 4
+        },
+        {
+          "elife": "3",
+          "china_ctrip_api": 121,
+          "max": 6,
+          "loggage": 4
+        },
+        {
+          "elife": "5",
+          "china_ctrip_api": 123,
+          "max": 8,
+          "loggage": 6
+        },
+        {
+          "elife": "10",
+          "china_ctrip_api": 127,
+          "max": 11,
+          "loggage": 6
+        }
+      ]
+    },
+    {
+      "countries": [
+        "TWN"
+      ],
+      "mapping": [
+        {
+          "elife": "1",
+          "china_ctrip_api": 146,
+          "max": 3,
+          "loggage": 2
+        },
+        {
+          "elife": "1",
+          "china_ctrip_api": 117,
+          "max": 4,
+          "loggage": 2
+        },
+        {
+          "elife": "12",
+          "china_ctrip_api": 118,
+          "max": 4,
+          "loggage": 2
+        },
+        {
+          "elife": "40",
+          "china_ctrip_api": 119,
+          "max": 4,
+          "loggage": 3
+        },
+        {
+          "elife": "3",
+          "china_ctrip_api": 20020,
+          "max": 4,
+          "loggage": 4
+        },
+        {
+          "elife": "4",
+          "china_ctrip_api": 120,
+          "max": 6,
+          "loggage": 4
+        },
+        {
+          "elife": "3",
+          "china_ctrip_api": 121,
+          "max": 6,
+          "loggage": 4
+        },
+        {
+          "elife": "36",
+          "china_ctrip_api": 122,
+          "max": 11,
+          "loggage": 6
+        },
+        {
+          "elife": "5",
+          "china_ctrip_api": 124,
+          "max": 7,
+          "loggage": 5
+        }
+      ]
+    },
+    {
+      "countries": [
+        "USA",
+        "CAN"
+      ],
+      "mapping": [
+        {
+          "elife": "109",
+          "china_ctrip_api": 146,
+          "max": 3,
+          "loggage": 3
+        },
+        {
+          "elife": "1",
+          "china_ctrip_api": 117,
+          "max": 3,
+          "loggage": 3
+        },
+        {
+          "elife": "12",
+          "china_ctrip_api": 118,
+          "max": 3,
+          "loggage": 3
+        },
+        {
+          "elife": "2",
+          "china_ctrip_api": 119,
+          "max": 3,
+          "loggage": 3
+        },
+        {
+          "elife": "42",
+          "china_ctrip_api": 141,
+          "max": 3,
+          "loggage": 3
+        },
+        {
+          "elife": "43",
+          "china_ctrip_api": 40002,
+          "max": 3,
+          "loggage": 3
+        },
+        {
+          "elife": "49",
+          "china_ctrip_api": 40003,
+          "max": 4,
+          "loggage": 4
+        },
+        {
+          "elife": "6",
+          "china_ctrip_api": 20020,
+          "max": 4,
+          "loggage": 4
+        },
+        {
+          "elife": "4",
+          "china_ctrip_api": 120,
+          "max": 5,
+          "loggage": 5
+        },
+        {
+          "elife": "3",
+          "china_ctrip_api": 121,
+          "max": 5,
+          "loggage": 5
+        },
+        {
+          "elife": "7",
+          "china_ctrip_api": 122,
+          "max": 6,
+          "loggage": 6
+        },
+        {
+          "elife": "13",
+          "china_ctrip_api": 20009,
+          "max": 4,
+          "loggage": 4
+        },
+        {
+          "elife": "36",
+          "china_ctrip_api": 20196,
+          "max": 6,
+          "loggage": 6
+        },
+        {
+          "elife": "8",
+          "china_ctrip_api": 124,
+          "max": 7,
+          "loggage": 7
+        },
+        {
+          "elife": "5",
+          "china_ctrip_api": 125,
+          "max": 8,
+          "loggage": 8
+        },
+        {
+          "elife": "9",
+          "china_ctrip_api": 126,
+          "max": 10,
+          "loggage": 10
+        },
+        {
+          "elife": "10",
+          "china_ctrip_api": 127,
+          "max": 11,
+          "loggage": 11
+        },
+        {
+          "elife": "11",
+          "china_ctrip_api": 128,
+          "max": 14,
+          "loggage": 14
+        }
+      ]
+    },
+    {
+      "countries": [
+        "ARE"
+      ],
+      "mapping": [
+        {
+          "elife": "1",
+          "china_ctrip_api": 146,
+          "max": 3,
+          "loggage": 2
+        },
+        {
+          "elife": "1",
+          "china_ctrip_api": 117,
+          "max": 4,
+          "loggage": 2
+        },
+        {
+          "elife": "6",
+          "china_ctrip_api": 118,
+          "max": 4,
+          "loggage": 2
+        },
+        {
+          "elife": "2",
+          "china_ctrip_api": 119,
+          "max": 4,
+          "loggage": 3
+        },
+        {
+          "elife": "3",
+          "china_ctrip_api": 20020,
+          "max": 4,
+          "loggage": 4
+        },
+        {
+          "elife": "36",
+          "china_ctrip_api": 120,
+          "max": 6,
+          "loggage": 4
+        },
+        {
+          "elife": "4",
+          "china_ctrip_api": 121,
+          "max": 6,
+          "loggage": 4
+        },
+        {
+          "elife": "11",
+          "china_ctrip_api": 128,
+          "max": 13,
+          "loggage": 6
+        }
+      ]
+    },
+    {
+      "countries": [
+        "LAO",
+        "VNM",
+        "KHM",
+        "IDN",
+        "PHL",
+        "LKA"
+      ],
+      "mapping": [
+        {
+          "elife": "1",
+          "china_ctrip_api": 146,
+          "max": 3,
+          "loggage": 2
+        },
+        {
+          "elife": "1",
+          "china_ctrip_api": 117,
+          "max": 4,
+          "loggage": 2
+        },
+        {
+          "elife": "6",
+          "china_ctrip_api": 118,
+          "max": 4,
+          "loggage": 2
+        },
+        {
+          "elife": "2",
+          "china_ctrip_api": 119,
+          "max": 4,
+          "loggage": 3
+        },
+        {
+          "elife": "3",
+          "china_ctrip_api": 20020,
+          "max": 4,
+          "loggage": 4
+        },
+        {
+          "elife": "36",
+          "china_ctrip_api": 120,
+          "max": 6,
+          "loggage": 4
+        },
+        {
+          "elife": "4",
+          "china_ctrip_api": 121,
+          "max": 6,
+          "loggage": 4
+        },
+        {
+          "elife": "11",
+          "china_ctrip_api": 128,
+          "max": 13,
+          "loggage": 6
+        }
+      ]
+    },
+    {
+      "countries": [
+        "FRA"
+      ],
+      "mapping": [
+        {
+          "elife": "1",
+          "china_ctrip_api": 117,
+          "max": 4,
+          "loggage": 2
+        },
+        {
+          "elife": "12",
+          "china_ctrip_api": 118,
+          "max": 3,
+          "loggage": 2
+        },
+        {
+          "elife": "2",
+          "china_ctrip_api": 119,
+          "max": 4,
+          "loggage": 3
+        },
+        {
+          "elife": "6",
+          "china_ctrip_api": 20020,
+          "max": 4,
+          "loggage": 4
+        },
+        {
+          "elife": "36",
+          "china_ctrip_api": 120,
+          "max": 6,
+          "loggage": 4
+        },
+        {
+          "elife": "3",
+          "china_ctrip_api": 121,
+          "max": 6,
+          "loggage": 4
+        },
+        {
+          "elife": "8",
+          "china_ctrip_api": 122,
+          "max": 7,
+          "loggage": 5
+        },
+        {
+          "elife": "11",
+          "china_ctrip_api": 128,
+          "max": 13,
+          "loggage": 6
+        }
+      ]
+    },
+    {
+      "countries": [
+        "EST",
+        "ISL",
+        "LTU",
+        "SWE",
+        "HRV",
+        "LUX",
+        "NLD",
+        "AUT",
+        "BGR",
+        "PRT",
+        "ALB",
+        "BIH",
+        "BLR",
+        "CYP",
+        "GGY",
+        "GIB",
+        "MNE",
+        "ROU",
+        "RUS",
+        "SRB",
+        "SVK",
+        "UKR",
+        "XKX",
+        "XXK"
+      ],
+      "mapping": [
+        {
+          "elife": "1",
+          "china_ctrip_api": 146,
+          "max": 3,
+          "loggage": 2
+        },
+        {
+          "elife": "6",
+          "china_ctrip_api": 117,
+          "max": 4,
+          "loggage": 2
+        },
+        {
+          "elife": "6",
+          "china_ctrip_api": 118,
+          "max": 4,
+          "loggage": 2
+        },
+        {
+          "elife": "4",
+          "china_ctrip_api": 119,
+          "max": 4,
+          "loggage": 3
+        },
+        {
+          "elife": "3",
+          "china_ctrip_api": 20020,
+          "max": 4,
+          "loggage": 4
+        },
+        {
+          "elife": "5",
+          "china_ctrip_api": 124,
+          "max": 7,
+          "loggage": 5
+        },
+        {
+          "elife": "11",
+          "china_ctrip_api": 128,
+          "max": 13,
+          "loggage": 6
+        }
+      ]
+    },
+    {
+      "countries": [
+        "ESP"
+      ],
+      "mapping": [
+        {
+          "elife": "1",
+          "china_ctrip_api": 146,
+          "max": 3,
+          "loggage": 2
+        },
+        {
+          "elife": "1",
+          "china_ctrip_api": 117,
+          "max": 3,
+          "loggage": 2
+        },
+        {
+          "elife": "12",
+          "china_ctrip_api": 118,
+          "max": 4,
+          "loggage": 2
+        },
+        {
+          "elife": "2",
+          "china_ctrip_api": 119,
+          "max": 4,
+          "loggage": 3
+        },
+        {
+          "elife": "6",
+          "china_ctrip_api": 20020,
+          "max": 4,
+          "loggage": 4
+        },
+        {
+          "elife": "36",
+          "china_ctrip_api": 120,
+          "max": 6,
+          "loggage": 4
+        },
+        {
+          "elife": "7",
+          "china_ctrip_api": 121,
+          "max": 6,
+          "loggage": 4
+        },
+        {
+          "elife": "8",
+          "china_ctrip_api": 122,
+          "max": 7,
+          "loggage": 5
+        },
+        {
+          "elife": "5",
+          "china_ctrip_api": 123,
+          "max": 8,
+          "loggage": 5
+        },
+        {
+          "elife": "8",
+          "china_ctrip_api": 124,
+          "max": 7,
+          "loggage": 4
+        },
+        {
+          "elife": "9",
+          "china_ctrip_api": 126,
+          "max": 9,
+          "loggage": 6
+        },
+        {
+          "elife": "10",
+          "china_ctrip_api": 127,
+          "max": 11,
+          "loggage": 6
+        },
+        {
+          "elife": "11",
+          "china_ctrip_api": 128,
+          "max": 13,
+          "loggage": 6
+        }
+      ]
+    },
+    {
+      "countries": [
+        "BEL",
+        "HUN",
+        "CZE",
+        "GRC"
+      ],
+      "mapping": [
+        {
+          "elife": "1",
+          "china_ctrip_api": 146,
+          "max": 3,
+          "loggage": 2
+        },
+        {
+          "elife": "1",
+          "china_ctrip_api": 117,
+          "max": 4,
+          "loggage": 2
+        },
+        {
+          "elife": "12",
+          "china_ctrip_api": 118,
+          "max": 4,
+          "loggage": 2
+        },
+        {
+          "elife": "2",
+          "china_ctrip_api": 119,
+          "max": 4,
+          "loggage": 3
+        },
+        {
+          "elife": "6",
+          "china_ctrip_api": 20020,
+          "max": 4,
+          "loggage": 4
+        },
+        {
+          "elife": "36",
+          "china_ctrip_api": 120,
+          "max": 6,
+          "loggage": 4
+        },
+        {
+          "elife": "7",
+          "china_ctrip_api": 121,
+          "max": 6,
+          "loggage": 4
+        },
+        {
+          "elife": "8",
+          "china_ctrip_api": 122,
+          "max": 7,
+          "loggage": 5
+        },
+        {
+          "elife": "5",
+          "china_ctrip_api": 123,
+          "max": 8,
+          "loggage": 6
+        },
+        {
+          "elife": "8",
+          "china_ctrip_api": 124,
+          "max": 7,
+          "loggage": 4
+        },
+        {
+          "elife": "9",
+          "china_ctrip_api": 125,
+          "max": 8,
+          "loggage": 5
+        },
+        {
+          "elife": "9",
+          "china_ctrip_api": 126,
+          "max": 9,
+          "loggage": 6
+        },
+        {
+          "elife": "10",
+          "china_ctrip_api": 127,
+          "max": 11,
+          "loggage": 6
+        },
+        {
+          "elife": "11",
+          "china_ctrip_api": 128,
+          "max": 13,
+          "loggage": 6
+        }
+      ]
+    },
+    {
+      "countries": [
+        "GBR",
+        "TUR"
+      ],
+      "mapping": [
+        {
+          "elife": "1",
+          "china_ctrip_api": 146,
+          "max": 3,
+          "loggage": 2
+        },
+        {
+          "elife": "6",
+          "china_ctrip_api": 117,
+          "max": 4,
+          "loggage": 2
+        },
+        {
+          "elife": "6",
+          "china_ctrip_api": 118,
+          "max": 4,
+          "loggage": 2
+        },
+        {
+          "elife": "4",
+          "china_ctrip_api": 119,
+          "max": 4,
+          "loggage": 3
+        },
+        {
+          "elife": "3",
+          "china_ctrip_api": 20020,
+          "max": 4,
+          "loggage": 4
+        },
+        {
+          "elife": "5",
+          "china_ctrip_api": 124,
+          "max": 7,
+          "loggage": 5
+        },
+        {
+          "elife": "11",
+          "china_ctrip_api": 128,
+          "max": 13,
+          "loggage": 6
+        }
+      ]
+    },
+    {
+      "countries": [
+        "ITA",
+        "MEX",
+        "PAN",
+        "BRA",
+        "COL"
+      ],
+      "mapping": [
+        {
+          "elife": "109",
+          "china_ctrip_api": 146,
+          "max": 3,
+          "loggage": 3
+        },
+        {
+          "elife": "1",
+          "china_ctrip_api": 117,
+          "max": 3,
+          "loggage": 3
+        },
+        {
+          "elife": "12",
+          "china_ctrip_api": 118,
+          "max": 3,
+          "loggage": 3
+        },
+        {
+          "elife": "2",
+          "china_ctrip_api": 119,
+          "max": 3,
+          "loggage": 3
+        },
+        {
+          "elife": "42",
+          "china_ctrip_api": 141,
+          "max": 3,
+          "loggage": 3
+        },
+        {
+          "elife": "43",
+          "china_ctrip_api": 40002,
+          "max": 3,
+          "loggage": 3
+        },
+        {
+          "elife": "49",
+          "china_ctrip_api": 40003,
+          "max": 4,
+          "loggage": 4
+        },
+        {
+          "elife": "6",
+          "china_ctrip_api": 20020,
+          "max": 4,
+          "loggage": 4
+        },
+        {
+          "elife": "4",
+          "china_ctrip_api": 120,
+          "max": 5,
+          "loggage": 5
+        },
+        {
+          "elife": "3",
+          "china_ctrip_api": 121,
+          "max": 5,
+          "loggage": 5
+        },
+        {
+          "elife": "7",
+          "china_ctrip_api": 122,
+          "max": 6,
+          "loggage": 6
+        },
+        {
+          "elife": "13",
+          "china_ctrip_api": 20009,
+          "max": 4,
+          "loggage": 4
+        },
+        {
+          "elife": "36",
+          "china_ctrip_api": 20196,
+          "max": 6,
+          "loggage": 6
+        },
+        {
+          "elife": "8",
+          "china_ctrip_api": 124,
+          "max": 7,
+          "loggage": 7
+        },
+        {
+          "elife": "5",
+          "china_ctrip_api": 125,
+          "max": 8,
+          "loggage": 8
+        },
+        {
+          "elife": "9",
+          "china_ctrip_api": 126,
+          "max": 10,
+          "loggage": 10
+        },
+        {
+          "elife": "10",
+          "china_ctrip_api": 127,
+          "max": 11,
+          "loggage": 11
+        },
+        {
+          "elife": "11",
+          "china_ctrip_api": 128,
+          "max": 14,
+          "loggage": 14
+        }
+      ]
+    },
+    {
+      "countries": [
+        "CHL",
+        "MEX"
+      ],
+      "mapping": [
+        {
+          "elife": "109",
+          "china_ctrip_api": 146,
+          "max": 3,
+          "loggage": 3
+        },
+        {
+          "elife": "1",
+          "china_ctrip_api": 117,
+          "max": 3,
+          "loggage": 3
+        },
+        {
+          "elife": "12",
+          "china_ctrip_api": 118,
+          "max": 3,
+          "loggage": 3
+        },
+        {
+          "elife": "2",
+          "china_ctrip_api": 119,
+          "max": 3,
+          "loggage": 3
+        },
+        {
+          "elife": "6",
+          "china_ctrip_api": 20020,
+          "max": 4,
+          "loggage": 4
+        },
+        {
+          "elife": "4",
+          "china_ctrip_api": 120,
+          "max": 5,
+          "loggage": 5
+        },
+        {
+          "elife": "3",
+          "china_ctrip_api": 121,
+          "max": 5,
+          "loggage": 5
+        },
+        {
+          "elife": "7",
+          "china_ctrip_api": 122,
+          "max": 6,
+          "loggage": 6
+        },
+        {
+          "elife": "13",
+          "china_ctrip_api": 20009,
+          "max": 4,
+          "loggage": 4
+        },
+        {
+          "elife": "36",
+          "china_ctrip_api": 20196,
+          "max": 6,
+          "loggage": 6
+        },
+        {
+          "elife": "8",
+          "china_ctrip_api": 124,
+          "max": 7,
+          "loggage": 7
+        },
+        {
+          "elife": "5",
+          "china_ctrip_api": 125,
+          "max": 8,
+          "loggage": 8
+        },
+        {
+          "elife": "9",
+          "china_ctrip_api": 126,
+          "max": 10,
+          "loggage": 10
+        },
+        {
+          "elife": "10",
+          "china_ctrip_api": 127,
+          "max": 11,
+          "loggage": 11
+        },
+        {
+          "elife": "11",
+          "china_ctrip_api": 128,
+          "max": 14,
+          "loggage": 14
+        }
+      ]
+    },
+    {
+      "countries": [
+        "DEU"
+      ],
+      "mapping": [
+        {
+          "elife": "1",
+          "china_ctrip_api": 146,
+          "max": 3,
+          "loggage": 2
+        },
+        {
+          "elife": "6",
+          "china_ctrip_api": 117,
+          "max": 4,
+          "loggage": 2
+        },
+        {
+          "elife": "6",
+          "china_ctrip_api": 118,
+          "max": 4,
+          "loggage": 2
+        },
+        {
+          "elife": "4",
+          "china_ctrip_api": 119,
+          "max": 4,
+          "loggage": 3
+        },
+        {
+          "elife": "3",
+          "china_ctrip_api": 20020,
+          "max": 4,
+          "loggage": 4
+        },
+        {
+          "elife": "5",
+          "china_ctrip_api": 121,
+          "max": 6,
+          "loggage": 5
+        },
+        {
+          "elife": "5",
+          "china_ctrip_api": 124,
+          "max": 7,
+          "loggage": 5
+        },
+        {
+          "elife": "11",
+          "china_ctrip_api": 128,
+          "max": 13,
+          "loggage": 6
+        }
+      ]
+    },
+    {
+      "countries": [
+        "IND"
+      ],
+      "mapping": [
+        {
+          "elife": "1",
+          "china_ctrip_api": 146,
+          "max": 3,
+          "loggage": 2
+        },
+        {
+          "elife": "6",
+          "china_ctrip_api": 117,
+          "max": 4,
+          "loggage": 2
+        },
+        {
+          "elife": "2",
+          "china_ctrip_api": 118,
+          "max": 4,
+          "loggage": 2
+        },
+        {
+          "elife": "40",
+          "china_ctrip_api": 119,
+          "max": 4,
+          "loggage": 3
+        },
+        {
+          "elife": "3",
+          "china_ctrip_api": 20020,
+          "max": 4,
+          "loggage": 4
+        },
+        {
+          "elife": "5",
+          "china_ctrip_api": 123,
+          "max": 8,
+          "loggage": 4
+        },
+        {
+          "elife": "5",
+          "china_ctrip_api": 124,
+          "max": 7,
+          "loggage": 5
+        },
+        {
+          "elife": "11",
+          "china_ctrip_api": 128,
+          "max": 13,
+          "loggage": 6
+        }
+      ]
+    },
+    {
+      "countries": [
+        "DNK",
+        "FIN",
+        "LVA",
+        "NOR",
+        "POL"
+      ],
+      "mapping": [
+        {
+          "elife": "1",
+          "china_ctrip_api": 146,
+          "max": 3,
+          "loggage": 2
+        },
+        {
+          "elife": "12",
+          "china_ctrip_api": 117,
+          "max": 4,
+          "loggage": 2
+        },
+        {
+          "elife": "6",
+          "china_ctrip_api": 118,
+          "max": 4,
+          "loggage": 2
+        },
+        {
+          "elife": "2",
+          "china_ctrip_api": 119,
+          "max": 4,
+          "loggage": 3
+        },
+        {
+          "elife": "3",
+          "china_ctrip_api": 20020,
+          "max": 4,
+          "loggage": 4
+        },
+        {
+          "elife": "4",
+          "china_ctrip_api": 120,
+          "max": 6,
+          "loggage": 4
+        },
+        {
+          "elife": "7",
+          "china_ctrip_api": 121,
+          "max": 6,
+          "loggage": 4
+        },
+        {
+          "elife": "5",
+          "china_ctrip_api": 124,
+          "max": 7,
+          "loggage": 5
+        },
+        {
+          "elife": "11",
+          "china_ctrip_api": 128,
+          "max": 13,
+          "loggage": 6
+        }
+      ]
+    },
+    {
+      "countries": [
+        "CRI"
+      ],
+      "mapping": [
+        {
+          "elife": "1",
+          "china_ctrip_api": 146,
+          "max": 3,
+          "loggage": 2
+        },
+        {
+          "elife": "6",
+          "china_ctrip_api": 117,
+          "max": 4,
+          "loggage": 2
+        },
+        {
+          "elife": "2",
+          "china_ctrip_api": 119,
+          "max": 4,
+          "loggage": 3
+        },
+        {
+          "elife": "3",
+          "china_ctrip_api": 20020,
+          "max": 4,
+          "loggage": 4
+        },
+        {
+          "elife": "4",
+          "china_ctrip_api": 120,
+          "max": 6,
+          "loggage": 4
+        },
+        {
+          "elife": "3",
+          "china_ctrip_api": 121,
+          "max": 6,
+          "loggage": 4
+        },
+        {
+          "elife": "5",
+          "china_ctrip_api": 124,
+          "max": 7,
+          "loggage": 5
+        },
+        {
+          "elife": "11",
+          "china_ctrip_api": 128,
+          "max": 13,
+          "loggage": 6
+        }
+      ]
+    },
+    {
+      "countries": [
+        "ARG",
+        "PER"
+      ],
+      "mapping": [
+        {
+          "elife": "1",
+          "china_ctrip_api": 146,
+          "max": 3,
+          "loggage": 2
+        },
+        {
+          "elife": "6",
+          "china_ctrip_api": 117,
+          "max": 4,
+          "loggage": 2
+        },
+        {
+          "elife": "2",
+          "china_ctrip_api": 118,
+          "max": 4,
+          "loggage": 2
+        },
+        {
+          "elife": "3",
+          "china_ctrip_api": 20020,
+          "max": 4,
+          "loggage": 4
+        },
+        {
+          "elife": "4",
+          "china_ctrip_api": 120,
+          "max": 6,
+          "loggage": 4
+        },
+        {
+          "elife": "5",
+          "china_ctrip_api": 124,
+          "max": 7,
+          "loggage": 5
+        },
+        {
+          "elife": "11",
+          "china_ctrip_api": 128,
+          "max": 13,
+          "loggage": 6
+        }
+      ]
+    },
+    {
+      "countries": [
+        "ABW",
+        "JAM"
+      ],
+      "mapping": [
+        {
+          "elife": "1",
+          "china_ctrip_api": 146,
+          "max": 3,
+          "loggage": 2
+        },
+        {
+          "elife": "6",
+          "china_ctrip_api": 117,
+          "max": 4,
+          "loggage": 2
+        },
+        {
+          "elife": "2",
+          "china_ctrip_api": 118,
+          "max": 4,
+          "loggage": 2
+        },
+        {
+          "elife": "3",
+          "china_ctrip_api": 20020,
+          "max": 4,
+          "loggage": 4
+        },
+        {
+          "elife": "4",
+          "china_ctrip_api": 120,
+          "max": 6,
+          "loggage": 4
+        },
+        {
+          "elife": "3",
+          "china_ctrip_api": 121,
+          "max": 6,
+          "loggage": 4
+        },
+        {
+          "elife": "5",
+          "china_ctrip_api": 124,
+          "max": 7,
+          "loggage": 5
+        },
+        {
+          "elife": "11",
+          "china_ctrip_api": 128,
+          "max": 13,
+          "loggage": 6
+        }
+      ]
+    },
+    {
+      "countries": [
+        "DOM"
+      ],
+      "mapping": [
+        {
+          "elife": "1",
+          "china_ctrip_api": 146,
+          "max": 3,
+          "loggage": 2
+        },
+        {
+          "elife": "6",
+          "china_ctrip_api": 117,
+          "max": 4,
+          "loggage": 2
+        },
+        {
+          "elife": "6",
+          "china_ctrip_api": 118,
+          "max": 4,
+          "loggage": 2
+        },
+        {
+          "elife": "2",
+          "china_ctrip_api": 119,
+          "max": 4,
+          "loggage": 3
+        },
+        {
+          "elife": "3",
+          "china_ctrip_api": 20020,
+          "max": 4,
+          "loggage": 4
+        },
+        {
+          "elife": "4",
+          "china_ctrip_api": 120,
+          "max": 6,
+          "loggage": 4
+        },
+        {
+          "elife": "3",
+          "china_ctrip_api": 121,
+          "max": 6,
+          "loggage": 4
+        },
+        {
+          "elife": "5",
+          "china_ctrip_api": 124,
+          "max": 7,
+          "loggage": 5
+        },
+        {
+          "elife": "11",
+          "china_ctrip_api": 128,
+          "max": 13,
+          "loggage": 6
+        }
+      ]
+    },
+    {
+      "countries": [
+        "CHE",
+        "IRL"
+      ],
+      "mapping": [
+        {
+          "elife": "1",
+          "china_ctrip_api": 117,
+          "max": 4,
+          "loggage": 2
+        },
+        {
+          "elife": "12",
+          "china_ctrip_api": 118,
+          "max": 4,
+          "loggage": 2
+        },
+        {
+          "elife": "6",
+          "china_ctrip_api": 20020,
+          "max": 4,
+          "loggage": 4
+        },
+        {
+          "elife": "2",
+          "china_ctrip_api": 119,
+          "max": 4,
+          "loggage": 3
+        },
+        {
+          "elife": "36",
+          "china_ctrip_api": 120,
+          "max": 6,
+          "loggage": 4
+        },
+        {
+          "elife": "7",
+          "china_ctrip_api": 121,
+          "max": 6,
+          "loggage": 4
+        },
+        {
+          "elife": "8",
+          "china_ctrip_api": 122,
+          "max": 7,
+          "loggage": 5
+        },
+        {
+          "elife": "5",
+          "china_ctrip_api": 124,
+          "max": 7,
+          "loggage": 5
+        },
+        {
+          "elife": "9",
+          "china_ctrip_api": 125,
+          "max": 8,
+          "loggage": 5
+        },
+        {
+          "elife": "9",
+          "china_ctrip_api": 126,
+          "max": 9,
+          "loggage": 6
+        },
+        {
+          "elife": "11",
+          "china_ctrip_api": 127,
+          "max": 11,
+          "loggage": 6
+        },
+        {
+          "elife": "11",
+          "china_ctrip_api": 128,
+          "max": 13,
+          "loggage": 6
+        }
+      ]
+    },
+    {
+      "countries": [
+        "DEFAULT"
+      ],
+      "mapping": [
+        {
+          "elife": "1",
+          "china_ctrip_api": 146,
+          "max": 3,
+          "loggage": 2
+        },
+        {
+          "elife": "6",
+          "china_ctrip_api": 117,
+          "max": 4,
+          "loggage": 2
+        },
+        {
+          "elife": "6",
+          "china_ctrip_api": 118,
+          "max": 4,
+          "loggage": 2
+        },
+        {
+          "elife": "2",
+          "china_ctrip_api": 119,
+          "max": 4,
+          "loggage": 3
+        },
+        {
+          "elife": "4",
+          "china_ctrip_api": 120,
+          "max": 6,
+          "loggage": 4
+        },
+        {
+          "elife": "5",
+          "china_ctrip_api": 124,
+          "max": 7,
+          "loggage": 5
+        },
+        {
+          "elife": "9",
+          "china_ctrip_api": 125,
+          "max": 8,
+          "loggage": 5
+        },
+        {
+          "elife": "9",
+          "china_ctrip_api": 126,
+          "max": 9,
+          "loggage": 6
+        },
+        {
+          "elife": "11",
+          "china_ctrip_api": 127,
+          "max": 11,
+          "loggage": 6
+        },
+        {
+          "elife": "11",
+          "china_ctrip_api": 128,
+          "max": 13,
+          "loggage": 6
+        },
+        {
+          "elife": "3",
+          "china_ctrip_api": 20020,
+          "max": 4,
+          "loggage": 4
+        }
+      ]
+    },
+    {
+      "countries": [
+        "QAT",
+        "TZA",
+        "EGY",
+        "OMN",
+        "UGA",
+        "ZAF",
+        "KAZ",
+        "NGA",
+        "SAU",
+        "TJK",
+        "MAR",
+        "ZMB",
+        "MUS",
+        "BRN",
+        "MNG"
+      ],
+      "mapping": [
+        {
+          "elife": "1",
+          "china_ctrip_api": 146,
+          "max": 3,
+          "loggage": 2
+        },
+        {
+          "elife": "1",
+          "china_ctrip_api": 117,
+          "max": 4,
+          "loggage": 2
+        },
+        {
+          "elife": "6",
+          "china_ctrip_api": 118,
+          "max": 4,
+          "loggage": 2
+        },
+        {
+          "elife": "2",
+          "china_ctrip_api": 119,
+          "max": 4,
+          "loggage": 3
+        },
+        {
+          "elife": "36",
+          "china_ctrip_api": 120,
+          "max": 6,
+          "loggage": 4
+        },
+        {
+          "elife": "4",
+          "china_ctrip_api": 121,
+          "max": 6,
+          "loggage": 4
+        },
+        {
+          "elife": "5",
+          "china_ctrip_api": 124,
+          "max": 7,
+          "loggage": 5
+        },
+        {
+          "elife": "9",
+          "china_ctrip_api": 125,
+          "max": 8,
+          "loggage": 5
+        },
+        {
+          "elife": "9",
+          "china_ctrip_api": 126,
+          "max": 9,
+          "loggage": 6
+        },
+        {
+          "elife": "11",
+          "china_ctrip_api": 127,
+          "max": 11,
+          "loggage": 6
+        },
+        {
+          "elife": "11",
+          "china_ctrip_api": 128,
+          "max": 13,
+          "loggage": 6
+        },
+        {
+          "elife": "3",
+          "china_ctrip_api": 20020,
+          "max": 4,
+          "loggage": 4
+        }
+      ]
+    },
+    {
+      "area_ids": [
+        152,
+        1392
+      ],
+      "mapping": [
+        {
+          "elife": "1",
+          "china_ctrip_api": 146,
+          "max": 3,
+          "loggage": 2
+        },
+        {
+          "elife": "1",
+          "china_ctrip_api": 117,
+          "max": 4,
+          "loggage": 2
+        },
+        {
+          "elife": "6",
+          "china_ctrip_api": 118,
+          "max": 4,
+          "loggage": 2
+        },
+        {
+          "elife": "2",
+          "china_ctrip_api": 119,
+          "max": 4,
+          "loggage": 3
+        },
+        {
+          "elife": "3",
+          "china_ctrip_api": 20020,
+          "max": 4,
+          "loggage": 4
+        },
+        {
+          "elife": "36",
+          "china_ctrip_api": 120,
+          "max": 6,
+          "loggage": 4
+        },
+        {
+          "elife": "4",
+          "china_ctrip_api": 121,
+          "max": 6,
+          "loggage": 4
+        },
+        {
+          "elife": "11",
+          "china_ctrip_api": 128,
+          "max": 13,
+          "loggage": 6
+        }
+      ]
     }
+  ]
 }

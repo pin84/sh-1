@@ -79,7 +79,7 @@ function jsonHandler3(pricing, from_place, to_place, isPickup, airportInfo, vid)
     res['pAmt'] = pAmt
   }
 
- 
+
   return res
 }
 
@@ -376,17 +376,22 @@ async function getLatPricingJsonAndFleeNotJsonId(url, svcId) {
 }
 
 async function getFleetIdByAirport(url, airport, parent_fleet_id) {
-  let res = await fetchData({
-    url,
-    method: "POST",
-    data: {
-      sql: 134679330,
-      version: '2.0',
-      airport,
-      parent_fleet_id,
-    }
-  })
 
+  let res = caches[`${airport}-${parent_fleet_id}`]
+  if (!res) {
+    res = await fetchData({
+      url,
+      method: "POST",
+      data: {
+        sql: 134679330,
+        version: '2.0',
+        airport,
+        parent_fleet_id,
+      }
+    })
+
+    caches[`${airport}-${parent_fleet_id}`] = res
+  }
   return res
 }
 
@@ -463,8 +468,8 @@ async function timeZoneHandler(pricing, airportInfo) {
       airportInfo = await getAirportInfo(urlProd, pricing.airports[0])
     }
 
-    console.log('--------调用了时区API---------',airportInfo);
-    
+    console.log('--------调用了时区API---------', airportInfo);
+
     let { lat, lng } = airportInfo
     let url = `https://388bivap71.execute-api.us-east-2.amazonaws.com/prod/maps/timezones/location/date-time`
     let res = await fetchData({

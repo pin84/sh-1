@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script src="./data.js"></script>
+  <script src="../../components.js"></script>
+  <script>
+
+
+
+
+    let arr = []
+    for (let item of mapping) {
+      console.log(item);
+      let { Booking, Elife } = item
+
+      Booking = Booking.replaceAll(' ', '').toUpperCase()
+      let v = vehicleList.find(o => o.vehicle_name == Elife)
+      if(!v){
+        debugger
+      }
+      let id = v.vehicle_id
+
+      arr.push({
+        "elife": id,
+        "booking": Booking
+      })
+
+    }
+
+    console.log(arr);
+
+
+
+
+
+  </script>
+</body>
+</html>

@@ -106,17 +106,28 @@
         <el-button class="btn" type="primary" @click="hoppaAddZones">hoppaAddZones</el-button>
         <el-button class="btn" type="primary" @click="checkRouteTop300">checkRouteTop300</el-button>
         <el-button class="btn" type="primary" @click="getPricingZonesByFleetId">getPricingZonesByFleetId</el-button>
+        <el-button class="btn" type="primary" @click="hoppaRoutes2Elifesvc">hoppaRoutes2Elifesvc</el-button>
       </el-tab-pane>
     </el-tabs>
   </div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
-<script src="./data/d_6_13.js"></script>
+<script src="./data/d_7_2.js"></script>
 <script setup>
   const { createApp, ref, reactive, computed, watch, defineComponent, onMounted } = Vue;
   const stage = 'PROD' //PROD,DEV
   const url = stage == 'PROD' ? urlProd : urlDev
   const crawl_state = '1'
+
+  // let _d = {
+  //   curPartnerSvcData: {}, // partner , current service area data
+  //   predictionsCache: {}, // Cache search address
+  //   originLatLng: { //initial bound lat and lng is sfo's
+  //     boundLat: 37.6213129,
+  //     boundLng: -122.3789554,
+  //     boundRadius: 200000
+  //   }
+  // }
 
   const is_active = 11
   const strategy_id = 1
@@ -127,9 +138,8 @@
 
   const route_type = 0 // 1:smart purchasing routes 
   const batch = 0
-  const partnerId = 3
-  let dList = stage == 'PROD' ? [] : []
-
+  const partnerId = 28
+  let dList = stage == 'PROD' ? klook : []
 
 
 
@@ -138,6 +148,120 @@
     // components: { Parent },
 
     methods: {
+      async hoppaRoutes2Elifesvc() {
+
+        let res = await getPricingJsonBySvcIdNew(`https://mfmyyv2bjh.execute-api.us-east-2.amazonaws.com/prod/sql-templates/run?ses=${ses}`, 66035)
+
+        console.log(res);
+
+
+
+        return
+        let arr = []
+        // dList = dList.slice(0, 20)
+        console.log(dList);
+        for (let item of dList) {
+          console.log(`----${i++}---`);
+
+          let Row_Labels = item['Row Labels']
+          let route_id = item['route_id']
+          let From_Address = item['From Address']
+          let To_Address = item['To Address']
+          let svcId = item['service area id']
+
+
+
+          // if (svcId != "no fleet id") {
+          //   arr.push([
+          //     Row_Labels,
+          //     route_id,
+          //     From_Address,
+          //     To_Address,
+          //     svcId
+          //   ])
+          //   continue
+          // }
+
+          const regex = /\(([A-Z]{3})\)$/;
+          const match = From_Address.match(regex) || To_Address.match(regex)
+          let airportCode = ''
+          if (match) {
+            airportCode = match[1]; // 结果: "ALC"
+          }
+          let res = await getFleetIdByAirport(url, airportCode, 15)
+
+          let fleet_id = res.fleet_id || 0
+
+          if (fleet_id == 0) {
+            debugger
+            let fromList = await getAddrList(From_Address)
+            let toList = await getAddrList(To_Address)
+
+
+            let from_place_id = fromList[0]?.place_id || 0
+            let to_place_id = toList[0]?.place_id || 0
+
+            if (!to_place_id || !from_place_id) {
+              arr.push([
+                Row_Labels,
+                route_id,
+                From_Address,
+                To_Address,
+                0
+              ])
+              continue
+            }
+
+
+            let fd = await getDetailByPlaceId(from_place_id)
+            let td = await getDetailByPlaceId(to_place_id)
+            if (!fd || !td) {
+              arr.push([
+                Row_Labels,
+                route_id,
+                From_Address,
+                To_Address,
+                0
+              ])
+              continue
+            }
+
+            let { lat: from_lat, lng: from_lng } = fd
+            let { lat: to_lat, lng: to_lng } = td
+
+
+            let d = {
+              from_lat,
+              from_lng,
+              to_lat,
+              to_lng,
+              // demand_fleet_id: 11104,
+              // supply_fleet_id: 89496
+            }
+
+
+            let fleets = await getPriceByLatLng(d)
+            fleet_id = fleets[0]?.fleet_id || 0
+
+          }
+
+
+
+          arr.push([
+            Row_Labels,
+            route_id,
+            From_Address,
+            To_Address,
+            fleet_id
+          ])
+        }
+
+        debugger
+        let title = ['Row Labels', 'route_id', 'From Address', 'To Address', 'service area id']
+        let date = new Date()
+        saveCSV(date, title, arr)
+
+      },
 
 
       async getPricingZonesByFleetId() {
@@ -187,20 +311,24 @@
       },
 
       async changePricingJson() {
-        // let { fromSvcId, toSvcId, type } = this.changePricingJsonForm
-        // let op = await getPricingJsonBySvcId(url, 451)
-        // let tp = await getPricingJsonBySvcId(url, 88894)
+        let { fromSvcId, toSvcId, type } = this.changePricingJsonForm
+        let op = await getPricingJsonBySvcId(url, fromSvcId)
+        let tp = await getPricingJsonBySvcId(url, toSvcId)
         // console.log(JSON.parse(JSON.stringify(tp)));
         // let replaceFields = ['zones']
         // for (let item of type) {
         //   tp[item] = op[item]
         // }
 
-        let tp = {}
-        let toSvcId = 90022
+        op['serviceArea'] = tp['serviceArea']
+        delete op.service_area_pricing_id
 
 
-        let str = JSON.stringify(tp)
+        // let tp ={}
+        // let toSvcId = 14147
+
+
+        let str = JSON.stringify(op)
         str = str.replace(/\'/g, ' ')
         console.log(JSON.parse(str));
         let updateD = {
@@ -928,11 +1056,18 @@
 
       async addFleetToRideVehicleMapping() {
 
+        // let d = {
+        //   sql: 134679330,
+        //   version: '4.049',
+        //   vehicle_ids: [36, 1, 2, 3, 4, 6, 40, 41, 12, 13, 14, 7, 43, 42, 48, 49, 52, 100, 5, 102, 103, 101, 104, 105, 106, 108],
+        //   to_vehicle_id: 109
+        // }
+
         let d = {
           sql: 134679330,
-          version: '4.049',
-          vehicle_ids: [36, 1, 2, 3, 4, 6, 40, 41, 12, 13, 14, 7, 43, 42, 48, 49, 52, 100, 5, 102, 103, 101, 104, 105, 106, 108],
-          to_vehicle_id: 109
+          version: '4.086',
+          from_vehicle_id: 125,
+          to_vehicle_ids: [8, 7, 11, 10, 9, 6, 5, 3, 123, 124, 125]
         }
         let res = await fetchData({
           url,
@@ -1120,7 +1255,7 @@
 
       async updateRoute() {
         let ids = [
-          8504,8505,8519,8534,8535,8564,8565
+          16, 18, 41, 52, 56, 68, 70, 73, 76, 77, 85, 88, 89, 91, 105, 125, 131, 138, 144, 150, 157, 169, 173, 177, 189, 204, 211, 226, 275, 276, 277, 278, 281, 286, 287, 308, 310, 311, 312, 315, 327, 328, 329, 330, 331, 332, 351, 369, 381, 416, 417, 418, 419, 420, 423, 425, 435, 447, 449, 450, 458, 459, 460, 462, 464, 465, 468, 470, 532, 549, 554, 556, 562, 569, 570, 571, 572, 573, 576, 585, 586, 587, 592, 593, 594, 598, 600, 601, 603, 604, 605, 606, 623, 624, 625, 627, 651, 661, 662, 668, 669, 672, 675, 684, 685, 705, 706, 711, 712, 713, 715, 760, 761, 762, 763, 764, 765, 766, 767, 776, 778, 779, 780, 781, 790, 791, 794, 795, 797, 822, 823, 831, 841, 870, 871, 874, 886, 887, 920, 921, 923, 925, 948, 955, 958, 959, 960, 961, 965, 994, 995, 996, 997, 1004, 1010, 1020, 1021, 1022, 1024, 1025, 1026, 1027, 1028, 1031, 1032, 1034, 1035, 1038, 1040, 1053, 1055, 1083, 1093, 1110, 1114, 1115, 1150, 1151, 1156, 1157, 1166, 1204, 1205, 1210, 1212, 1213, 1247, 1253, 1254, 1256, 1257, 1258, 1261, 1262, 1355, 1424, 1426, 1429, 1430, 1431, 1436, 1437, 1438, 1439, 1440, 1441, 1442, 1443, 1450, 1451, 1452, 1454, 1464, 1465, 1469, 1470, 1524, 1525, 1526, 1527, 1538, 1539, 1546, 1556, 1557, 1568, 1569, 1576, 1609, 1640, 1641, 1678, 1680, 1693, 1694, 1695, 1696, 1697, 1698, 1706, 1773, 1774, 1775, 1792, 1793, 1794, 1795, 1798, 1799, 1800, 1801, 1802, 1803, 1804, 1805, 1817, 1819, 1821, 1869, 1908, 1928, 1929, 1930, 1931, 1932, 1933, 1934, 1936, 1937, 1940, 1942, 1943, 1947, 1948, 1949, 1954, 1955, 1956, 1957, 1958, 1959, 1960, 1961, 1962, 1963, 1966, 1967, 1970, 1972, 1973, 1988, 1998, 2005, 2006, 2007, 2010, 2011, 2014, 2015, 2016, 2020, 2026, 2027, 2063, 2067, 2085, 2086, 2090, 2091, 2097, 2098, 2102, 2133, 2134, 2136, 2137, 2138, 2139, 2146, 2153, 2154, 2156, 2191, 2195, 2199, 2200, 2236, 2237, 2247, 2322, 2323, 2324, 2325, 2327, 2328, 2329, 2330, 2331, 2333, 2334, 2335, 2336, 2337, 2338, 2339, 2340, 2345, 2348, 2359, 2367, 2368, 2369, 2370, 2371, 2372, 2373, 2374, 2375, 2376, 2377, 2378, 2379, 2380, 2381, 2382, 2387, 2388, 2393, 2394, 2401, 2402, 2403, 2404, 2405, 2406, 2407, 2408, 2409, 2410, 2411, 2412, 2413, 2414, 2415, 2417, 2418, 2419, 2420, 2421, 2423, 2424, 2427, 2429, 2447, 2451, 2454, 2465, 2466, 2541, 2542, 2543, 2544, 2670, 2671, 2676, 2677, 2707, 2722, 2723, 2724, 2725, 2726, 2727, 2977, 2979, 2988, 2989, 2990, 3013, 3014, 3015, 3016, 3017, 3021, 3029, 3030, 3031, 3032, 3033, 3034, 3035, 3036, 3037, 3041, 3042, 3045, 3046, 3049, 3050, 3053, 3054, 3057, 3058, 3059, 3060, 3061, 3062, 3063, 3064, 3089, 3090, 3091, 3092, 3093, 3094, 3097, 3098, 3099, 3100, 3101, 3102, 3197, 3198, 3230, 3231, 3236, 3237, 3240, 3241, 3242, 3243, 3244, 3245, 3246, 3247, 3248, 3249, 3256, 3258, 3262, 3338, 3339, 3340, 3341, 3342, 3343, 3344, 3345, 3360, 3361, 3365, 3390, 3391, 3392, 3399, 3453, 3454, 3461, 3491, 3494, 3508, 3584, 3585, 3710, 3884, 3885, 3936, 4807, 4808, 4809, 4810, 4829, 4831, 4835, 4837, 4838, 4845, 4847, 4849, 4851, 4853, 4855, 4856, 4859, 4867, 4868, 4875, 4877, 4878, 5464, 5465, 5486, 5487, 5498, 5524, 5525, 5526, 5527, 5528, 5530, 5531, 5532, 5533, 5534, 5535, 5536, 5538, 5539, 5540, 5544, 5545, 5549, 5598, 5608, 5609, 5858, 5859, 5867, 5868, 6202, 6203, 6204, 6205, 6206, 6225, 6226, 6227, 6228, 6229, 6541, 6542, 6543, 6544
         ]
 
         console.log(ids);
@@ -1133,11 +1268,11 @@
           version: '4.079',
           ids: idsStr,
           cost: 1,
-          route_type:'3',
-          // level:0,
-          // is_active: '99',
+          // route_type:'3',
+          level: "2",
+          // is_active: '-5',
           // tz,
-          // batch: '37',
+          // batch: '0',
           // strategy_id: 1,
           // crawl_state:'0',
           // platform_name:'m.ctrip.com',
@@ -1255,75 +1390,240 @@
 
 
       async addRoutePriceAdj() {
-        let vehicles = getVehicles()
-        for (let route of dList) {
-          console.log(`-------${i++}--------`);
 
-          let { id: routeId, from_zone: fz, to_zone: tz, service_area_id, from_place, to_place, partner_id } = route
-          let from_zone = fz ? fz : from_place
-          let to_zone = tz ? tz : to_place
+        dList = [
+          { "route_id": 1578, "vehicle_class_id": 5, "price": 184.79, "inserted_at": "2025-05-25 05:44:12.000000 UTC", "rn": 1 },
+          { "route_id": 1600, "vehicle_class_id": 1, "price": 73.84, "inserted_at": "2025-05-29 16:55:52.000000 UTC", "rn": 1 },
+          { "route_id": 1600, "vehicle_class_id": 3, "price": 88.32, "inserted_at": "2025-05-29 16:55:52.000000 UTC", "rn": 1 },
+          { "route_id": 1600, "vehicle_class_id": 6, "price": 83.97, "inserted_at": "2025-05-29 16:55:52.000000 UTC", "rn": 1 },
+          { "route_id": 1947, "vehicle_class_id": 1, "price": 49.25, "inserted_at": "2025-06-26 12:20:41.000000 UTC", "rn": 1 },
+          { "route_id": 1947, "vehicle_class_id": 2, "price": 600.0, "inserted_at": "2025-06-26 12:20:41.000000 UTC", "rn": 1 },
+          { "route_id": 1947, "vehicle_class_id": 3, "price": 49.75, "inserted_at": "2025-06-26 12:20:41.000000 UTC", "rn": 1 },
+          { "route_id": 1947, "vehicle_class_id": 4, "price": 656.7, "inserted_at": "2025-06-28 02:21:09.000000 UTC", "rn": 1 },
+          { "route_id": 1947, "vehicle_class_id": 5, "price": 50.0, "inserted_at": "2025-06-26 12:20:41.000000 UTC", "rn": 1 },
+          { "route_id": 1947, "vehicle_class_id": 6, "price": 49.5, "inserted_at": "2025-06-26 12:20:41.000000 UTC", "rn": 1 },
+          { "route_id": 1947, "vehicle_class_id": 36, "price": 660.0, "inserted_at": "2025-06-26 12:20:41.000000 UTC", "rn": 1 },
+          { "route_id": 1952, "vehicle_class_id": 5, "price": 322.06, "inserted_at": "2025-05-29 16:55:14.000000 UTC", "rn": 1 },
+          { "route_id": 1954, "vehicle_class_id": 36, "price": 218.59, "inserted_at": "2025-06-03 09:56:27.000000 UTC", "rn": 1 },
+          { "route_id": 1966, "vehicle_class_id": 1, "price": 14.8, "inserted_at": "2025-04-26 18:38:30.000000 UTC", "rn": 1 },
+          { "route_id": 1966, "vehicle_class_id": 2, "price": 115.0, "inserted_at": "2025-04-26 18:38:30.000000 UTC", "rn": 1 },
+          { "route_id": 1966, "vehicle_class_id": 3, "price": 25.14, "inserted_at": "2025-06-15 02:33:59.000000 UTC", "rn": 1 },
+          { "route_id": 1966, "vehicle_class_id": 5, "price": 74.54, "inserted_at": "2025-05-09 08:06:09.000000 UTC", "rn": 1 },
+          { "route_id": 1966, "vehicle_class_id": 6, "price": 21.01, "inserted_at": "2025-04-26 18:38:30.000000 UTC", "rn": 1 },
+          { "route_id": 1967, "vehicle_class_id": 1, "price": 16.42, "inserted_at": "2025-04-06 05:55:02.000000 UTC", "rn": 1 },
+          { "route_id": 1971, "vehicle_class_id": 2, "price": 61.51, "inserted_at": "2025-05-29 16:55:55.000000 UTC", "rn": 1 },
+          { "route_id": 1977, "vehicle_class_id": 1, "price": 47.99, "inserted_at": "2025-05-25 05:44:08.000000 UTC", "rn": 1 },
+          { "route_id": 1977, "vehicle_class_id": 2, "price": 62.58, "inserted_at": "2025-05-25 05:44:08.000000 UTC", "rn": 1 },
+          { "route_id": 1977, "vehicle_class_id": 6, "price": 54.25, "inserted_at": "2025-05-25 05:44:08.000000 UTC", "rn": 1 },
+          { "route_id": 2388, "vehicle_class_id": 1, "price": 85.67, "inserted_at": "2025-03-12 17:54:13.000000 UTC", "rn": 1 },
+          { "route_id": 2388, "vehicle_class_id": 2, "price": 108.56, "inserted_at": "2025-03-12 17:54:13.000000 UTC", "rn": 1 },
+          { "route_id": 2388, "vehicle_class_id": 3, "price": 122.17, "inserted_at": "2025-03-18 08:30:36.000000 UTC", "rn": 1 },
+          { "route_id": 2388, "vehicle_class_id": 4, "price": 124.94, "inserted_at": "2025-03-12 17:54:13.000000 UTC", "rn": 1 },
+          { "route_id": 2388, "vehicle_class_id": 5, "price": 276.47, "inserted_at": "2025-03-18 08:30:36.000000 UTC", "rn": 1 },
+          { "route_id": 2388, "vehicle_class_id": 6, "price": 94.01, "inserted_at": "2025-03-18 08:30:36.000000 UTC", "rn": 1 },
+          { "route_id": 2419, "vehicle_class_id": 1, "price": 45.0, "inserted_at": "2025-06-29 10:22:36.000000 UTC", "rn": 1 },
+          { "route_id": 2419, "vehicle_class_id": 2, "price": 55.0, "inserted_at": "2025-06-29 10:22:36.000000 UTC", "rn": 1 },
+          { "route_id": 2419, "vehicle_class_id": 3, "price": 54.0, "inserted_at": "2025-06-29 10:22:36.000000 UTC", "rn": 1 },
+          { "route_id": 2419, "vehicle_class_id": 4, "price": 75.0, "inserted_at": "2025-06-29 10:22:36.000000 UTC", "rn": 1 },
+          { "route_id": 2419, "vehicle_class_id": 5, "price": 192.62, "inserted_at": "2025-06-29 10:22:36.000000 UTC", "rn": 1 },
+          { "route_id": 2419, "vehicle_class_id": 6, "price": 50.0, "inserted_at": "2025-06-29 10:22:36.000000 UTC", "rn": 1 },
+          { "route_id": 2439, "vehicle_class_id": 1, "price": 513.0, "inserted_at": "2025-05-22 16:19:31.000000 UTC", "rn": 1 },
+          { "route_id": 2439, "vehicle_class_id": 2, "price": 660.0, "inserted_at": "2025-05-22 16:19:31.000000 UTC", "rn": 1 },
+          { "route_id": 2447, "vehicle_class_id": 1, "price": 52.66, "inserted_at": "2025-06-24 11:42:31.000000 UTC", "rn": 1 },
+          { "route_id": 2447, "vehicle_class_id": 3, "price": 70.15, "inserted_at": "2025-06-24 11:42:31.000000 UTC", "rn": 1 },
+          { "route_id": 2470, "vehicle_class_id": 2, "price": 98.99, "inserted_at": "2025-06-27 04:21:36.000000 UTC", "rn": 1 },
+          { "route_id": 2470, "vehicle_class_id": 3, "price": 89.09, "inserted_at": "2025-06-27 04:21:36.000000 UTC", "rn": 1 },
+          { "route_id": 2470, "vehicle_class_id": 5, "price": 254.65, "inserted_at": "2025-06-27 04:21:36.000000 UTC", "rn": 1 },
+          { "route_id": 2470, "vehicle_class_id": 6, "price": 79.14, "inserted_at": "2025-06-27 04:21:36.000000 UTC", "rn": 1 },
+          { "route_id": 3017, "vehicle_class_id": 2, "price": 66.0, "inserted_at": "2025-05-11 05:44:28.000000 UTC", "rn": 1 },
+          { "route_id": 3017, "vehicle_class_id": 5, "price": 109.25, "inserted_at": "2025-05-11 05:44:28.000000 UTC", "rn": 1 },
+          { "route_id": 3017, "vehicle_class_id": 12, "price": 60.5, "inserted_at": "2025-05-11 05:44:28.000000 UTC", "rn": 1 },
+          { "route_id": 3039, "vehicle_class_id": 2, "price": 80.4, "inserted_at": "2025-04-27 05:45:46.000000 UTC", "rn": 1 },
+          { "route_id": 3039, "vehicle_class_id": 4, "price": 88.6, "inserted_at": "2025-04-27 05:45:46.000000 UTC", "rn": 1 },
+          { "route_id": 3059, "vehicle_class_id": 40, "price": 88.49, "inserted_at": "2025-06-30 08:34:43.000000 UTC", "rn": 1 },
+          { "route_id": 3063, "vehicle_class_id": 6, "price": 54.86, "inserted_at": "2025-06-25 11:34:50.000000 UTC", "rn": 1 },
+          { "route_id": 3064, "vehicle_class_id": 6, "price": 54.86, "inserted_at": "2025-06-25 21:35:53.000000 UTC", "rn": 1 },
+          { "route_id": 3419, "vehicle_class_id": 4, "price": 120.0, "inserted_at": "2025-06-28 00:24:27.000000 UTC", "rn": 1 },
+          { "route_id": 3674, "vehicle_class_id": 2, "price": 177.17, "inserted_at": "2025-06-13 16:22:17.000000 UTC", "rn": 1 },
+          { "route_id": 3680, "vehicle_class_id": 1, "price": 56.92, "inserted_at": "2025-06-30 04:22:11.000000 UTC", "rn": 1 },
+          { "route_id": 3680, "vehicle_class_id": 2, "price": 138.4, "inserted_at": "2025-06-30 04:21:02.000000 UTC", "rn": 1 },
+          { "route_id": 3680, "vehicle_class_id": 3, "price": 70.0, "inserted_at": "2025-06-30 04:22:11.000000 UTC", "rn": 1 },
+          { "route_id": 3680, "vehicle_class_id": 4, "price": 168.51, "inserted_at": "2025-06-30 04:21:02.000000 UTC", "rn": 1 },
+          { "route_id": 3680, "vehicle_class_id": 5, "price": 209.0, "inserted_at": "2025-07-01 04:21:59.000000 UTC", "rn": 1 },
+          { "route_id": 3680, "vehicle_class_id": 6, "price": 68.8, "inserted_at": "2025-06-30 04:22:11.000000 UTC", "rn": 1 },
+          { "route_id": 3680, "vehicle_class_id": 9, "price": 209.0, "inserted_at": "2025-07-01 04:21:59.000000 UTC", "rn": 1 },
+          { "route_id": 3704, "vehicle_class_id": 1, "price": 54.68, "inserted_at": "2025-03-19 04:18:00.000000 UTC", "rn": 1 },
+          { "route_id": 3704, "vehicle_class_id": 2, "price": 61.86, "inserted_at": "2025-03-19 04:18:00.000000 UTC", "rn": 1 },
+          { "route_id": 3704, "vehicle_class_id": 3, "price": 62.99, "inserted_at": "2025-03-19 04:18:00.000000 UTC", "rn": 1 },
+          { "route_id": 3704, "vehicle_class_id": 4, "price": 90.0, "inserted_at": "2025-03-19 04:18:00.000000 UTC", "rn": 1 },
+          { "route_id": 3704, "vehicle_class_id": 6, "price": 59.6, "inserted_at": "2025-03-19 04:18:00.000000 UTC", "rn": 1 },
+          { "route_id": 3772, "vehicle_class_id": 1, "price": 493.16, "inserted_at": "2025-03-15 16:46:56.000000 UTC", "rn": 1 },
+          { "route_id": 3772, "vehicle_class_id": 2, "price": 711.27, "inserted_at": "2025-03-15 16:46:56.000000 UTC", "rn": 1 },
+          { "route_id": 3772, "vehicle_class_id": 6, "price": 645.56, "inserted_at": "2025-03-15 16:46:56.000000 UTC", "rn": 1 },
+          { "route_id": 3797, "vehicle_class_id": 3, "price": 181.0, "inserted_at": "2025-03-17 17:02:51.000000 UTC", "rn": 1 },
+          { "route_id": 3797, "vehicle_class_id": 4, "price": 247.0, "inserted_at": "2025-03-17 17:02:51.000000 UTC", "rn": 1 },
+          { "route_id": 3797, "vehicle_class_id": 6, "price": 169.0, "inserted_at": "2025-03-17 17:02:51.000000 UTC", "rn": 1 },
+          { "route_id": 3822, "vehicle_class_id": 1, "price": 199.59, "inserted_at": "2025-03-17 17:15:21.000000 UTC", "rn": 1 },
+          { "route_id": 3822, "vehicle_class_id": 3, "price": 239.81, "inserted_at": "2025-03-17 17:15:21.000000 UTC", "rn": 1 },
+          { "route_id": 3822, "vehicle_class_id": 4, "price": 253.04, "inserted_at": "2025-03-17 17:15:21.000000 UTC", "rn": 1 },
+          { "route_id": 3822, "vehicle_class_id": 5, "price": 511.72, "inserted_at": "2025-03-17 17:15:21.000000 UTC", "rn": 1 },
+          { "route_id": 4829, "vehicle_class_id": 6, "price": 54.33, "inserted_at": "2025-06-28 22:24:40.000000 UTC", "rn": 1 },
+          { "route_id": 5449, "vehicle_class_id": 1, "price": 65.7, "inserted_at": "2025-05-05 16:43:42.000000 UTC", "rn": 1 },
+          { "route_id": 5449, "vehicle_class_id": 3, "price": 94.39, "inserted_at": "2025-05-05 16:43:42.000000 UTC", "rn": 1 },
+          { "route_id": 5449, "vehicle_class_id": 6, "price": 94.29, "inserted_at": "2025-05-05 16:43:42.000000 UTC", "rn": 1 },
+          { "route_id": 5450, "vehicle_class_id": 1, "price": 59.47, "inserted_at": "2025-05-05 16:44:09.000000 UTC", "rn": 1 },
+          { "route_id": 5450, "vehicle_class_id": 3, "price": 85.58, "inserted_at": "2025-05-05 16:44:09.000000 UTC", "rn": 1 },
+          { "route_id": 5450, "vehicle_class_id": 6, "price": 85.48, "inserted_at": "2025-05-05 16:44:09.000000 UTC", "rn": 1 },
+          { "route_id": 5455, "vehicle_class_id": 1, "price": 40.47, "inserted_at": "2025-06-28 08:24:56.000000 UTC", "rn": 1 },
+          { "route_id": 5455, "vehicle_class_id": 2, "price": 50.72, "inserted_at": "2025-06-28 08:24:56.000000 UTC", "rn": 1 },
+          { "route_id": 5455, "vehicle_class_id": 6, "price": 52.99, "inserted_at": "2025-06-28 08:24:56.000000 UTC", "rn": 1 },
+          { "route_id": 5455, "vehicle_class_id": 36, "price": 110.0, "inserted_at": "2025-06-28 08:24:56.000000 UTC", "rn": 1 },
+          { "route_id": 5520, "vehicle_class_id": 1, "price": 118.79, "inserted_at": "2025-06-24 04:20:01.000000 UTC", "rn": 1 },
+          { "route_id": 5520, "vehicle_class_id": 2, "price": 194.39, "inserted_at": "2025-06-24 04:20:01.000000 UTC", "rn": 1 },
+          { "route_id": 5520, "vehicle_class_id": 4, "price": 399.59, "inserted_at": "2025-06-24 04:20:01.000000 UTC", "rn": 1 },
+          { "route_id": 5520, "vehicle_class_id": 6, "price": 151.19, "inserted_at": "2025-06-24 04:20:01.000000 UTC", "rn": 1 },
+          { "route_id": 5522, "vehicle_class_id": 3, "price": 48.0, "inserted_at": "2025-04-23 16:47:40.000000 UTC", "rn": 1 },
+          { "route_id": 5522, "vehicle_class_id": 5, "price": 54.0, "inserted_at": "2025-04-23 16:47:40.000000 UTC", "rn": 1 },
+          { "route_id": 5526, "vehicle_class_id": 1, "price": 61.53, "inserted_at": "2025-06-03 10:02:32.000000 UTC", "rn": 1 },
+          { "route_id": 5526, "vehicle_class_id": 5, "price": 102.99, "inserted_at": "2025-06-03 10:02:32.000000 UTC", "rn": 1 },
+          { "route_id": 5526, "vehicle_class_id": 6, "price": 91.23, "inserted_at": "2025-06-03 10:02:32.000000 UTC", "rn": 1 },
+          { "route_id": 5528, "vehicle_class_id": 1, "price": 19.95, "inserted_at": "2025-06-03 10:02:32.000000 UTC", "rn": 1 },
+          { "route_id": 5528, "vehicle_class_id": 5, "price": 69.6, "inserted_at": "2025-06-03 10:02:32.000000 UTC", "rn": 1 },
+          { "route_id": 5528, "vehicle_class_id": 6, "price": 24.84, "inserted_at": "2025-06-03 10:02:32.000000 UTC", "rn": 1 },
+          { "route_id": 5532, "vehicle_class_id": 1, "price": 218.77, "inserted_at": "2025-06-03 10:03:03.000000 UTC", "rn": 1 },
+          { "route_id": 5532, "vehicle_class_id": 2, "price": 1104.0, "inserted_at": "2025-06-03 10:02:19.000000 UTC", "rn": 1 },
+          { "route_id": 5532, "vehicle_class_id": 5, "price": 250.56, "inserted_at": "2025-06-03 10:03:03.000000 UTC", "rn": 1 },
+          { "route_id": 5533, "vehicle_class_id": 1, "price": 35.7, "inserted_at": "2025-06-03 10:02:32.000000 UTC", "rn": 1 },
+          { "route_id": 5533, "vehicle_class_id": 2, "price": 500.0, "inserted_at": "2025-06-26 10:23:27.000000 UTC", "rn": 1 },
+          { "route_id": 5533, "vehicle_class_id": 4, "price": 666.6, "inserted_at": "2025-06-26 10:23:27.000000 UTC", "rn": 1 },
+          { "route_id": 5533, "vehicle_class_id": 5, "price": 80.85, "inserted_at": "2025-06-03 10:02:32.000000 UTC", "rn": 1 },
+          { "route_id": 5533, "vehicle_class_id": 6, "price": 46.2, "inserted_at": "2025-06-03 10:02:32.000000 UTC", "rn": 1 },
+          { "route_id": 5540, "vehicle_class_id": 1, "price": 49.71, "inserted_at": "2025-06-30 12:32:14.000000 UTC", "rn": 1 },
+          { "route_id": 5540, "vehicle_class_id": 2, "price": 90.85, "inserted_at": "2025-06-30 12:32:14.000000 UTC", "rn": 1 },
+          { "route_id": 5540, "vehicle_class_id": 4, "price": 85.1, "inserted_at": "2025-06-30 12:32:14.000000 UTC", "rn": 1 },
+          { "route_id": 5540, "vehicle_class_id": 5, "price": 87.98, "inserted_at": "2025-06-30 12:32:14.000000 UTC", "rn": 1 },
+          { "route_id": 5540, "vehicle_class_id": 6, "price": 57.75, "inserted_at": "2025-06-30 12:32:14.000000 UTC", "rn": 1 },
+          { "route_id": 5550, "vehicle_class_id": 2, "price": 48.11, "inserted_at": "2025-06-29 00:23:29.000000 UTC", "rn": 1 },
+          { "route_id": 5550, "vehicle_class_id": 4, "price": 98.99, "inserted_at": "2025-06-29 00:23:29.000000 UTC", "rn": 1 },
+          { "route_id": 5550, "vehicle_class_id": 5, "price": 86.4, "inserted_at": "2025-06-29 00:24:35.000000 UTC", "rn": 1 },
+          { "route_id": 5618, "vehicle_class_id": 2, "price": 132.0, "inserted_at": "2025-05-22 16:51:20.000000 UTC", "rn": 1 },
+          { "route_id": 5618, "vehicle_class_id": 4, "price": 162.95, "inserted_at": "2025-05-22 16:50:39.000000 UTC", "rn": 1 },
+          { "route_id": 5618, "vehicle_class_id": 5, "price": 35.69, "inserted_at": "2025-05-22 16:50:39.000000 UTC", "rn": 1 },
+          { "route_id": 5627, "vehicle_class_id": 1, "price": 19.56, "inserted_at": "2025-05-25 05:45:37.000000 UTC", "rn": 1 },
+          { "route_id": 5627, "vehicle_class_id": 3, "price": 31.8, "inserted_at": "2025-05-25 05:45:37.000000 UTC", "rn": 1 },
+          { "route_id": 5627, "vehicle_class_id": 5, "price": 36.66, "inserted_at": "2025-05-25 05:45:37.000000 UTC", "rn": 1 },
+          { "route_id": 5627, "vehicle_class_id": 6, "price": 31.38, "inserted_at": "2025-05-25 05:45:37.000000 UTC", "rn": 1 },
+          { "route_id": 5627, "vehicle_class_id": 12, "price": 27.44, "inserted_at": "2025-05-25 05:45:37.000000 UTC", "rn": 1 },
+          { "route_id": 5840, "vehicle_class_id": 1, "price": 16.43, "inserted_at": "2025-06-04 16:23:32.000000 UTC", "rn": 1 },
+          { "route_id": 5840, "vehicle_class_id": 2, "price": 45.45, "inserted_at": "2025-06-04 16:23:32.000000 UTC", "rn": 1 },
+          { "route_id": 5840, "vehicle_class_id": 5, "price": 39.74, "inserted_at": "2025-06-04 16:23:32.000000 UTC", "rn": 1 },
+          { "route_id": 5840, "vehicle_class_id": 6, "price": 21.88, "inserted_at": "2025-06-04 16:23:32.000000 UTC", "rn": 1 },
+          { "route_id": 5859, "vehicle_class_id": 1, "price": 16.85, "inserted_at": "2025-06-25 11:35:39.000000 UTC", "rn": 1 },
+          { "route_id": 5859, "vehicle_class_id": 2, "price": 32.2, "inserted_at": "2025-06-25 11:35:39.000000 UTC", "rn": 1 },
+          { "route_id": 5859, "vehicle_class_id": 4, "price": 51.75, "inserted_at": "2025-06-25 11:35:39.000000 UTC", "rn": 1 },
+          { "route_id": 5859, "vehicle_class_id": 5, "price": 42.55, "inserted_at": "2025-06-25 11:35:39.000000 UTC", "rn": 1 },
+          { "route_id": 5859, "vehicle_class_id": 6, "price": 18.98, "inserted_at": "2025-06-25 11:35:39.000000 UTC", "rn": 1 },
+          { "route_id": 6616, "vehicle_class_id": 2, "price": 300.0, "inserted_at": "2025-06-04 16:27:58.000000 UTC", "rn": 1 },
+          { "route_id": 8151, "vehicle_class_id": 1, "price": 21.0, "inserted_at": "2025-06-04 16:26:15.000000 UTC", "rn": 1 },
+          { "route_id": 8151, "vehicle_class_id": 6, "price": 49.42, "inserted_at": "2025-06-04 16:26:15.000000 UTC", "rn": 1 },
+          { "route_id": 8270, "vehicle_class_id": 1, "price": 66.95, "inserted_at": "2025-06-24 04:21:53.000000 UTC", "rn": 1 },
+          { "route_id": 8270, "vehicle_class_id": 3, "price": 80.05, "inserted_at": "2025-06-24 04:21:53.000000 UTC", "rn": 1 },
+          { "route_id": 8270, "vehicle_class_id": 6, "price": 78.4, "inserted_at": "2025-06-24 04:21:53.000000 UTC", "rn": 1 },
+          { "route_id": 9634, "vehicle_class_id": 4, "price": 46.23, "inserted_at": "2025-06-20 17:03:14.000000 UTC", "rn": 1 },
+          { "route_id": 9634, "vehicle_class_id": 5, "price": 73.4, "inserted_at": "2025-06-20 17:03:14.000000 UTC", "rn": 1 },
+          { "route_id": 9698, "vehicle_class_id": 2, "price": 74.92, "inserted_at": "2025-06-24 04:21:40.000000 UTC", "rn": 1 }
+        ]
+
+
+        for (let item of dList) {
+          console.log(`---------${i++}---------------`);
+          let { route_id, vehicle_class_id, price } = item
+
+    
+          let arr = [
+            {
+              route_id,
+              vehicle_class_id,
+              price
+            }
+          ] 
 
           debugger
 
-          let { parentFleetId, platform_name } = getPatnerInfo(partner_id, stage)
+          let insertAdjRes = await insertAdj(url, arr)
 
-          let airportInfoObj = await getAirport(from_zone, to_zone)
-          if (!airportInfoObj) {
-            item['note'] = 'No  airport'
-            this.noInsertList.push(item)
-            continue
-          }
-          let { isPickup, airportInfo } = airportInfoObj
-          let airportCode = isPickup ? from_zone : to_zone
-
-          let str = `${parentFleetId}-${airportCode}`
-          let fleetInfo = cache[str]
-          if (!fleetInfo) {
-            fleetInfo = await getFleetIdAndPricingByAirport(url, airportCode, parentFleetId)
-          }
-
-          let { fleet_id, pricing, pricing_id } = fleetInfo
-          if (!fleet_id) {
-            item['note'] = 'NO fleet'
-            this.noInsertList.push(item)
-            continue
-          }
-          cache[str] = fleetInfo
-
-
-          let pricingJson = JSON.parse(pricing)
-          let prices = []
-
-          for (let vehicleInfo of vehicles) {
-            let { name: v, id } = vehicleInfo
-
-            let curvehicle = vehicleList.find(vehicle => vehicle.vehicle_name == v)
-
-            if (!curvehicle) {
-              debugger
-              continue
-            }
-            let vid = curvehicle.vehicle_id
-
-            let jsonHandled = jsonHandler3(pricingJson, from_zone, to_zone, isPickup, airportInfo, vid)
-            if (!jsonHandled) {
-              item['note'] = 'no Fixed Price Zone'
-              this.noInsertList.push(item)
-              continue
-            }
-            let { pAmt } = jsonHandled
-            console.log('--', routeId, '--', v, '--', vid, '----', pAmt);
-            if (pAmt) {
-              prices.push({
-                route_id: routeId,
-                vehicle_class_id: vid,
-                price: pAmt
-              })
-            }
-          }
-
-          let insertAdjRes = await insertAdj(url, prices)
+          debugger
         }
+        // let vehicles = getVehicles()
+        // for (let route of dList) {
+        //   debugger
+        //   console.log(`-------${i++}--------`);
+
+        //   let { id: routeId, from_zone: fz, to_zone: tz, service_area_id, from_place, to_place, partner_id } = route
+        //   let from_zone = fz ? fz : from_place
+        //   let to_zone = tz ? tz : to_place
+
+        //   debugger
+
+        //   let { parentFleetId, platform_name } = getPatnerInfo(partner_id, stage)
+
+        //   let airportInfoObj = await getAirport(from_zone, to_zone)
+        //   if (!airportInfoObj) {
+        //     item['note'] = 'No  airport'
+        //     this.noInsertList.push(item)
+        //     continue
+        //   }
+        //   let { isPickup, airportInfo } = airportInfoObj
+        //   let airportCode = isPickup ? from_zone : to_zone
+
+        //   let str = `${parentFleetId}-${airportCode}`
+        //   let fleetInfo = cache[str]
+        //   if (!fleetInfo) {
+        //     fleetInfo = await getFleetIdAndPricingByAirport(url, airportCode, parentFleetId)
+        //   }
+
+        //   let { fleet_id, pricing, pricing_id } = fleetInfo
+        //   if (!fleet_id) {
+        //     item['note'] = 'NO fleet'
+        //     this.noInsertList.push(item)
+        //     continue
+        //   }
+        //   cache[str] = fleetInfo
+
+
+        //   let pricingJson = JSON.parse(pricing)
+        //   let prices = []
+
+        //   for (let vehicleInfo of vehicles) {
+        //     let { name: v, id } = vehicleInfo
+
+        //     let curvehicle = vehicleList.find(vehicle => vehicle.vehicle_name == v)
+
+        //     if (!curvehicle) {
+        //       debugger
+        //       continue
+        //     }
+        //     let vid = curvehicle.vehicle_id
+
+        //     let jsonHandled = jsonHandler3(pricingJson, from_zone, to_zone, isPickup, airportInfo, vid)
+        //     if (!jsonHandled) {
+        //       item['note'] = 'no Fixed Price Zone'
+        //       this.noInsertList.push(item)
+        //       continue
+        //     }
+        //     let { pAmt } = jsonHandled
+        //     console.log('--', routeId, '--', v, '--', vid, '----', pAmt);
+        //     if (pAmt) {
+        //       prices.push({
+        //         route_id: routeId,
+        //         vehicle_class_id: vid,
+        //         price: pAmt
+        //       })
+        //     }
+        //   }
+
+        //   let insertAdjRes = await insertAdj(url, prices)
+        // }
 
       },
 
@@ -1346,6 +1646,8 @@
           let from_zone = fz ? fz : from_place
           let to_zone = tz ? tz : to_place
           console.log(`-------${i++}---${from_zone}--${to_zone}---`);
+
+          if(i < 19 ) continue
           if (!from_zone || !to_zone) {
             this.noInsertList.push(item)
             continue
@@ -1551,6 +1853,8 @@
           fleetInfo = await getFleetIdAndPricingByAirport(url, airportCode, parentFleetId)
         }
         let { fleet_id, pricing, pricing_id } = fleetInfo
+
+        debugger
         if (!fleet_id) {
           item['note'] = 'NO fleet'
           this.noInsertList.push(item)
@@ -1674,7 +1978,6 @@
 
         let { parentFleetId, partner_id, platform_name } = getPatnerInfo(partnerId, stage)
         console.log(dList);
-
         debugger
         let i = 0
         for (let item of dList) {
@@ -1752,9 +2055,10 @@
         }
 
         let strategy = {
-          "id": 16,
-          "name": "Compete for first",
-          "partner_id": 2593
+          "id": 18,
+          "name": "less1ToWin",
+          "partner_id": 5,
+          "description": "cityairporttaxis less than 1 hour before pickup time to win float C",
         }
 
         let d = {
@@ -1828,10 +2132,10 @@
 
 
         let strategy = {
-          "name": "Traveloka",
+          "name": "less1ToWinFloatC",
           // "id": 15,
-          "partner_id": 2693,
-          "description": "Traveloka",
+          "partner_id": 2,
+          "description": "booking less than 1 hour before pickup time to win float C",
           "rules": JSON.stringify([])
         }
 
@@ -2062,6 +2366,8 @@
         toCur: 'EUR',
         svcId: '1039,51531,61831,67905,72444,75472,78647,85373,89677,1040,51746,62048,68087,72663,75688,78862,85588,89893,11395,51900,62206,68223,72816,75841,79015,85744,90049,1154,52179,62487,68474,73091,76115,79288,86016,90322,1041,51912,62218,68232,72827,75852,79026,85755,90060,1042,52357,62667,68633,73266,76290,79462,86191,90497,1043,52437,62748,68701,73345,76369,79541,86270,90576,623,52289,62599,68572,73200,76224,79396,86125,90431,1044,52554,62866,68795,73462,76487,79659,86388,90693,1045,52740,63053,68954,73639,76664,79838,86566,90871,1046,52756,63069,68963,73656,76681,79855,86583,90888,1153,51827,62132,68153,72743,75769,78944,85670,89975'
       })
+
+
 
       return {
         abc: 1,

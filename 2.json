@@ -1,79 +1,1256 @@
 {
-    "resource": "/v2/search-results",
-    "path": "/v2/search-results",
-    "httpMethod": "POST",
-    "headers": {
-        "Authorization": "Bearer 5v7kdq4kf67vfE4sdu3Q81e9a427014cd07e4e24153a4d1d2243bfcb2ec9dd7de662b6f9626156ee7323",
-        "content-type": "application/json; charset=utf-8",
-        "Host": "xsdwy487ph.execute-api.us-east-2.amazonaws.com",
-        "User-Agent": "armeria/1.27.2",
-        "X-Amzn-Trace-Id": "Root=1-6841a32f-3b3a801b004f76b0558d042e",
-        "X-Forwarded-For": "52.48.204.66",
-        "X-Forwarded-Port": "443",
-        "X-Forwarded-Proto": "https"
+  "timestamp": 1750703780,
+  "offer_data": {
+    "id": 115608340,
+    "wifi": false,
+    "price": {
+      "to": 367.94,
+      "max": 99999999,
+      "base": {
+        "default": "€367.94",
+        "preferred": "US$425.70"
+      },
+      "amount": 367.94,
+      "return": 0.0
     },
-    "multiValueHeaders": {
-        "Authorization": [
-            "Bearer 5v7kdq4kf67vfE4sdu3Q81e9a427014cd07e4e24153a4d1d2243bfcb2ec9dd7de662b6f9626156ee7323"
-        ],
-        "content-type": [
-            "application/json; charset=utf-8"
-        ],
-        "Host": [
-            "xsdwy487ph.execute-api.us-east-2.amazonaws.com"
-        ],
-        "User-Agent": [
-            "armeria/1.27.2"
-        ],
-        "X-Amzn-Trace-Id": [
-            "Root=1-6841a32f-3b3a801b004f76b0558d042e"
-        ],
-        "X-Forwarded-For": [
-            "52.48.204.66"
-        ],
-        "X-Forwarded-Port": [
-            "443"
-        ],
-        "X-Forwarded-Proto": [
-            "https"
-        ]
+    "driver": null,
+    "status": "new",
+    "armored": false,
+    "carrier": {
+      "id": 335647,
+      "ratings": {
+        "driver": 1.8,
+        "average": 2.0,
+        "vehicle": 1.8,
+        "communication": 2.3
+      },
+      "approved": false,
+      "languages": [
+        {
+          "code": "en",
+          "title": "English"
+        }
+      ],
+      "using_state": false,
+      "years_of_work": 0,
+      "feedbacks_count": {
+        "clean_vehicle": 3,
+        "careful_driving": 3,
+        "punctual_driver": 4
+      },
+      "license_numbers": [],
+      "rated_offers_count": 106,
+      "completed_trips_count": 243
     },
-    "queryStringParameters": None,
-    "multiValueQueryStringParameters": None,
-    "pathParameters": None,
-    "stageVariables": None,
-    "requestContext": {
-        "resourceId": "41merr",
-        "resourcePath": "/v2/search-results",
-        "httpMethod": "POST",
-        "extendedRequestId": "LsZviGFoCYcEDQA=",
-        "requestTime": "05/Jun/2025:14:01:19 +0000",
-        "path": "/prod/v2/search-results",
-        "accountId": "064290855103",
-        "protocol": "HTTP/1.1",
-        "stage": "prod",
-        "domainPrefix": "xsdwy487ph",
-        "requestTimeEpoch": 1749132079831,
-        "requestId": "0add102f-b3a1-4abe-8ee9-7c0c8e774f86",
-        "identity": {
-            "cognitoIdentityPoolId": None,
-            "accountId": None,
-            "cognitoIdentityId": None,
-            "caller": None,
-            "sourceIp": "52.48.204.66",
-            "principalOrgId": None,
-            "accessKey": None,
-            "cognitoAuthenticationType": None,
-            "cognitoAuthenticationProvider": None,
-            "userArn": None,
-            "userAgent": "armeria/1.27.2",
-            "user": None
+    "charger": false,
+    "vehicle": {
+      "id": 638149,
+      "name": "Ford Transit (or similar), 2016",
+      "year": 2016,
+      "color": "white",
+      "model": "Ford Transit (or similar)",
+      "photos": [
+        "/files/ef99a308d07d073689c6125a4a1d7a10.jpg"
+      ],
+      "pax_max": 8,
+      "brand_name": "Ford",
+      "model_name": "Transit (or similar)",
+      "new_luxury": false,
+      "luggage_max": 8,
+      "default_options": [],
+      "transport_type_id": "minibus",
+      "registration_number": "EL_IT_MI"
+    },
+    "currency": "EUR",
+    "commission": 30.0,
+    "created_at": "2025-06-23T21:36:19+0300",
+    "wheelchair": false,
+    "changes_left": 2,
+    "refreshments": false,
+    "selecting_now": false,
+    "with_name_sign": true,
+    "air_conditioner": false,
+    "already_changed": false,
+    "available_until": null,
+    "offer_unchangeable": false,
+    "time_to_start_point": null,
+    "vehicle_price_profile": null,
+    "with_special_commission": false
+  },
+  "reject_type": {},
+  "offer_request": {
+    "offer": {
+      "currency": "EUR",
+      "price_to": 367.94,
+      "vehicle_id": 638149,
+      "transfer_id": 20689456,
+      "with_name_sign": true,
+      "available_until": "2025-08-01T11:40:00+0200"
+    }
+  },
+  "transfer_data": {
+    "id": 20689456,
+    "to": {
+      "name": "Piazza Martiri di Montemaggio, 5, Strove, Province of Siena, Italy",
+      "point": "(43.3797407,11.1725085)",
+      "types": [
+        "premise",
+        "street_address"
+      ],
+      "country": "IT",
+      "place_id": "ChIJLbWHfPIvKhMRwKS-K272240",
+      "chosen_on_map": false
+    },
+    "pax": 5,
+    "asap": false,
+    "from": {
+      "name": "Firenze Santa Maria Novella, Piazza della Stazione, Florence, Metropolitan City of Florence, Italy",
+      "point": "(43.7766715,11.2479159)",
+      "types": [
+        "establishment",
+        "point_of_interest",
+        "train_station",
+        "transit_station"
+      ],
+      "country": "IT",
+      "place_id": "ChIJiVAKEaVWKhMRKcPGvSboWBk",
+      "chosen_on_map": false
+    },
+    "time": 61,
+    "type": "one_way",
+    "uuid": "ba6c4236-1f02-40ba-855a-4c0e0462cc88",
+    "status": "new",
+    "urgent": false,
+    "comment": null,
+    "distance": 61,
+    "duration": null,
+    "watertaxi": false,
+    "commission": 30.0,
+    "created_at": "2025-06-23T21:32:37+0300",
+    "child_seats": 0,
+    "carrier_offer": null,
+    "date_to_local": "2025-08-03T11:40:00+0200",
+    "offerable_for": 604611,
+    "date_end_local": null,
+    "no_competitors": false,
+    "performed_offer": null,
+    "show_commission": false,
+    "suggested_prices": {
+      "van": {
+        "amount": 238.0,
+        "default": "US$238"
+      }
+    },
+    "date_return_local": null,
+    "name_sign_present": true,
+    "child_seats_infant": 0,
+    "transport_type_ids": [],
+    "child_seats_booster": 0,
+    "child_seats_convertible": 0,
+    "passenger_offered_price": null,
+    "armored_option_available": false,
+    "unsatisfied_requirements": null,
+    "air_conditioner_option_available": false
+  },
+  "chosen_vehicle": {
+    "price": {
+      "amount": 363.89,
+      "currency": "EUR",
+      "quote_id": "69524d3e748d436bbe21df62e6f84b2e-v5"
+    },
+    "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/minibus-8.jpg",
+    "price_detail": {
+      "base_pricing": {
+        "rule": "serviceArea",
+        "type": "range",
+        "zone": "serviceArea",
+        "price": {
+          "amount": 269.55424,
+          "currency": "EUR"
+        }
+      },
+      "partner_pricing": {
+        "type": "serviceArea",
+        "percent": 35.0
+      },
+      "special_pricing": [],
+      "system_setting_pricing": {}
+    },
+    "vehicle_class": "Minibus-8",
+    "typical_vehicle": {
+      "model": "Transit",
+      "manufacturer": "Ford"
+    },
+    "luggage_capacity": 8,
+    "vehicle_class_id": 5,
+    "passenger_capacity": 8,
+    "gettransfer_category": "van",
+    "gettransfer_vehicle_id": 638149
+  },
+  "offer_response": {
+    "body": {
+      "data": {
+        "offer": {
+          "id": 115608340,
+          "wifi": false,
+          "price": {
+            "to": 367.94,
+            "max": 99999999,
+            "base": {
+              "default": "€367.94",
+              "preferred": "US$425.70"
+            },
+            "amount": 367.94,
+            "return": 0.0
+          },
+          "driver": null,
+          "status": "new",
+          "armored": false,
+          "carrier": {
+            "id": 335647,
+            "ratings": {
+              "driver": 1.8,
+              "average": 2.0,
+              "vehicle": 1.8,
+              "communication": 2.3
+            },
+            "approved": false,
+            "languages": [
+              {
+                "code": "en",
+                "title": "English"
+              }
+            ],
+            "using_state": false,
+            "years_of_work": 0,
+            "feedbacks_count": {
+              "clean_vehicle": 3,
+              "careful_driving": 3,
+              "punctual_driver": 4
+            },
+            "license_numbers": [],
+            "rated_offers_count": 106,
+            "completed_trips_count": 243
+          },
+          "charger": false,
+          "vehicle": {
+            "id": 638149,
+            "name": "Ford Transit (or similar), 2016",
+            "year": 2016,
+            "color": "white",
+            "model": "Ford Transit (or similar)",
+            "photos": [
+              "/files/ef99a308d07d073689c6125a4a1d7a10.jpg"
+            ],
+            "pax_max": 8,
+            "brand_name": "Ford",
+            "model_name": "Transit (or similar)",
+            "new_luxury": false,
+            "luggage_max": 8,
+            "default_options": [],
+            "transport_type_id": "minibus",
+            "registration_number": "EL_IT_MI"
+          },
+          "currency": "EUR",
+          "commission": 30.0,
+          "created_at": "2025-06-23T21:36:19+0300",
+          "wheelchair": false,
+          "changes_left": 2,
+          "refreshments": false,
+          "selecting_now": false,
+          "with_name_sign": true,
+          "air_conditioner": false,
+          "already_changed": false,
+          "available_until": null,
+          "offer_unchangeable": false,
+          "time_to_start_point": null,
+          "vehicle_price_profile": null,
+          "with_special_commission": false
+        }
+      },
+      "result": "success"
+    },
+    "restStatus": 200
+  },
+  "quotes_request": {
+    "id": 20689456,
+    "to": {
+      "name": "Piazza Martiri di Montemaggio, 5, Strove, Province of Siena, Italy",
+      "point": "(43.3797407,11.1725085)",
+      "types": [
+        "premise",
+        "street_address"
+      ],
+      "country": "IT",
+      "place_id": "ChIJLbWHfPIvKhMRwKS-K272240",
+      "chosen_on_map": false
+    },
+    "pax": 5,
+    "asap": false,
+    "from": {
+      "name": "Firenze Santa Maria Novella, Piazza della Stazione, Florence, Metropolitan City of Florence, Italy",
+      "point": "(43.7766715,11.2479159)",
+      "types": [
+        "establishment",
+        "point_of_interest",
+        "train_station",
+        "transit_station"
+      ],
+      "country": "IT",
+      "place_id": "ChIJiVAKEaVWKhMRKcPGvSboWBk",
+      "chosen_on_map": false
+    },
+    "time": 61,
+    "type": "one_way",
+    "uuid": "ba6c4236-1f02-40ba-855a-4c0e0462cc88",
+    "status": "new",
+    "urgent": false,
+    "comment": null,
+    "distance": 61,
+    "duration": null,
+    "watertaxi": false,
+    "commission": 30.0,
+    "created_at": "2025-06-23T21:32:37+0300",
+    "child_seats": 0,
+    "carrier_offer": null,
+    "date_to_local": "2025-08-03T11:40:00+0200",
+    "offerable_for": 604611,
+    "date_end_local": null,
+    "no_competitors": false,
+    "performed_offer": null,
+    "show_commission": false,
+    "suggested_prices": {
+      "van": {
+        "amount": 238.0,
+        "default": "US$238"
+      }
+    },
+    "date_return_local": null,
+    "name_sign_present": true,
+    "child_seats_infant": 0,
+    "transport_type_ids": [],
+    "child_seats_booster": 0,
+    "child_seats_convertible": 0,
+    "passenger_offered_price": null,
+    "armored_option_available": false,
+    "unsatisfied_requirements": null,
+    "air_conditioner_option_available": false
+  },
+  "quotes_response": {
+    "langs": [
+      {
+        "eng": {
+          "messages": [
+            {
+              "message": "60 minutes of waiting after the arrival of your flight is included",
+              "subject": "waiting time"
+            },
+            {
+              "message": "full refund if cancenlled 24 hours ahead of the time",
+              "subject": "cancellation"
+            }
+          ],
+          "vehicles_classes": [
+            {
+              "vehicle_class": "Sedan"
+            },
+            {
+              "vehicle_class": "Business Sedan"
+            },
+            {
+              "vehicle_class": "First Class"
+            },
+            {
+              "vehicle_class": "Minivan"
+            },
+            {
+              "vehicle_class": "Business Van"
+            },
+            {
+              "vehicle_class": "Minibus-8"
+            },
+            {
+              "vehicle_class": "Minibus-10"
+            },
+            {
+              "vehicle_class": "Minibus-12"
+            },
+            {
+              "vehicle_class": "Minibus-14"
+            },
+            {
+              "vehicle_class": "16-seat Bus"
+            },
+            {
+              "vehicle_class": "20-seat Bus"
+            },
+            {
+              "vehicle_class": "23-seat Bus"
+            },
+            {
+              "vehicle_class": "27-seat Bus"
+            },
+            {
+              "vehicle_class": "36-seat Bus"
+            },
+            {
+              "vehicle_class": "44-seat Coach Bus"
+            },
+            {
+              "vehicle_class": "55-seat Coach Bus"
+            },
+            {
+              "vehicle_class": "Compatct Minivan"
+            },
+            {
+              "vehicle_class": "Minibus-7"
+            },
+            {
+              "vehicle_class": "Business MPV-4"
+            }
+          ]
+        }
+      },
+      {
+        "por": {
+          "messages": [
+            {
+              "message": "60 minutos de espera após a chegada do seu voo está incluído",
+              "subject": "tempo de espera"
+            },
+            {
+              "message": "reembolso total se cancenlled 24 horas antes do tempo",
+              "subject": "cancelamento"
+            }
+          ],
+          "vehicles_classes": [
+            {
+              "vehicle_class": "Sedan"
+            },
+            {
+              "vehicle_class": "Business Sedan"
+            },
+            {
+              "vehicle_class": "Primeira Classe"
+            },
+            {
+              "vehicle_class": "Minivan"
+            },
+            {
+              "vehicle_class": "Business Van"
+            },
+            {
+              "vehicle_class": "Microônibus-8"
+            },
+            {
+              "vehicle_class": "Microônibus-10"
+            },
+            {
+              "vehicle_class": "Microônibus-12"
+            },
+            {
+              "vehicle_class": "Microônibus-14"
+            },
+            {
+              "vehicle_class": "Ônibus de 16 lugares"
+            },
+            {
+              "vehicle_class": "Ônibus de 20 lugares"
+            },
+            {
+              "vehicle_class": "Ônibus de 23 lugares"
+            },
+            {
+              "vehicle_class": "Ônibus de 27 lugares"
+            },
+            {
+              "vehicle_class": "Ônibus de 36 lugares"
+            },
+            {
+              "vehicle_class": "Autocarro de 44 lugares"
+            },
+            {
+              "vehicle_class": "Autocarro de 55 lugares"
+            },
+            {
+              "vehicle_class": "Compatct Minivan"
+            },
+            {
+              "vehicle_class": "Minibus-7"
+            },
+            {
+              "vehicle_class": "Business MPV-4"
+            }
+          ]
         },
-        "domainName": "xsdwy487ph.execute-api.us-east-2.amazonaws.com",
-        "deploymentId": "qjqb17",
-        "apiId": "xsdwy487ph"
+        "spa": {
+          "messages": [
+            {
+              "message": "60 minutos de espera incluidos a la llegada de tu vuelo",
+              "subject": "Tiempo de espera"
+            },
+            {
+              "message": "Reembolso total en caso de cancelar al menos 24 horas antes del servicio",
+              "subject": "Cancelación"
+            }
+          ],
+          "vehicles_classes": [
+            {
+              "vehicle_class": "Sedan"
+            },
+            {
+              "vehicle_class": "Sedan Ejecutivo"
+            },
+            {
+              "vehicle_class": "Sedan Primera Clase"
+            },
+            {
+              "vehicle_class": "Minivan"
+            },
+            {
+              "vehicle_class": "Van Ejecutiva"
+            },
+            {
+              "vehicle_class": "Minibus de 8 pasajeros"
+            },
+            {
+              "vehicle_class": "Minibus de 10 pasajeros"
+            },
+            {
+              "vehicle_class": "Minibus de 12 pasajeros"
+            },
+            {
+              "vehicle_class": "Minibus de 14 pasajeros"
+            },
+            {
+              "vehicle_class": "Autobús de 16 pasajeros"
+            },
+            {
+              "vehicle_class": "Autobús de 20 pasajeros"
+            },
+            {
+              "vehicle_class": "Autobús de 23 pasajeros"
+            },
+            {
+              "vehicle_class": "Autobús de 27 pasajeros"
+            },
+            {
+              "vehicle_class": "Autobús de 36 pasajeros"
+            },
+            {
+              "vehicle_class": "Autobús de 44 pasajeros"
+            },
+            {
+              "vehicle_class": "Autobús de 55 pasajeros"
+            },
+            {
+              "vehicle_class": "Minivan Compacta"
+            },
+            {
+              "vehicle_class": "Minibus-7"
+            },
+            {
+              "vehicle_class": "Business MPV-4"
+            }
+          ]
+        }
+      }
+    ],
+    "airports": [
+      "FLR"
+    ],
+    "distance": 53673,
+    "duration": 58.05,
+    "fleet_id": 346,
+    "messages": {
+      "url": "https://elifelimo.s3.us-east-2.amazonaws.com/quote/message/messages.json"
     },
-    "body": "{"origin":{"latitude":22.312381,"longitude":113.930447,"name":"Hong Kong International Airport (HKG),
-    1 Sky Plaza Rd, Chek Lap Kok, Hong Kong","city":"Hong Kong","country":"HK","postcode":"","iata":"HKG"},"destination":{"latitude":22.3129666,"longitude":114.0412819,"name":"香港迪士尼樂園, Lantau Island, Hong Kong","city":"Hong Kong","country":"HK","postcode":null,"iata":null},"pickupDateTime":"2025-06-14T01: 00: 00Z","pickupTimezone":"Asia/Hong_Kong","currency":null,"customerCountry":null,"customerLanguage":null,"drivingDistanceInKm":18.39,"passengers":2,"supplierPickupId":null,"genius":{"level":"NON_GENIUS"}}",
-    "isBase64Encoded": False
+    "quote_id": "",
+    "request_id": "8a56cc2a-4ede-452d-bb1d-e946d1bada5a",
+    "add_service": {
+      "infant": {
+        "price": {
+          "amount": 0,
+          "currency": "EUR",
+          "quote_id": "69524d3e748d436bbe21df62e6f84b2e-i"
+        }
+      },
+      "toddler": {
+        "price": {
+          "amount": 0,
+          "currency": "EUR",
+          "quote_id": "69524d3e748d436bbe21df62e6f84b2e-t"
+        }
+      },
+      "children": {
+        "price": {
+          "amount": 0,
+          "currency": "EUR",
+          "quote_id": "69524d3e748d436bbe21df62e6f84b2e-c"
+        }
+      }
+    },
+    "meet_and_greet": {
+      "price": {
+        "amount": 4.05,
+        "currency": "EUR",
+        "quote_id": "69524d3e748d436bbe21df62e6f84b2e-m"
+      }
+    },
+    "vehicle_classes": [
+      {
+        "price": {
+          "amount": 227.43,
+          "currency": "EUR",
+          "quote_id": "69524d3e748d436bbe21df62e6f84b2e-v1"
+        },
+        "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/sedan.jpg",
+        "price_detail": {
+          "base_pricing": {
+            "rule": "serviceArea",
+            "type": "range",
+            "zone": "serviceArea",
+            "price": {
+              "amount": 168.4714,
+              "currency": "EUR"
+            }
+          },
+          "partner_pricing": {
+            "type": "serviceArea",
+            "percent": 35.0
+          },
+          "special_pricing": [],
+          "system_setting_pricing": {}
+        },
+        "vehicle_class": "Sedan",
+        "typical_vehicle": {
+          "model": "Camry",
+          "manufacturer": "Toyota"
+        },
+        "luggage_capacity": 3,
+        "vehicle_class_id": 1,
+        "passenger_capacity": 3,
+        "gettransfer_category": "economy",
+        "gettransfer_vehicle_id": 638131
+      },
+      {
+        "price": {
+          "amount": 307.04,
+          "currency": "EUR",
+          "quote_id": "69524d3e748d436bbe21df62e6f84b2e-v2"
+        },
+        "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/besiness-sedan.jpg",
+        "price_detail": {
+          "base_pricing": {
+            "rule": "serviceArea",
+            "type": "range",
+            "zone": "serviceArea",
+            "price": {
+              "amount": 227.43639,
+              "currency": "EUR"
+            }
+          },
+          "partner_pricing": {
+            "type": "serviceArea",
+            "percent": 35.0
+          },
+          "special_pricing": [],
+          "system_setting_pricing": {}
+        },
+        "vehicle_class": "Business Sedan",
+        "typical_vehicle": {
+          "model": "Continental",
+          "manufacturer": "Lincoln"
+        },
+        "luggage_capacity": 3,
+        "vehicle_class_id": 2,
+        "passenger_capacity": 3,
+        "gettransfer_category": "business",
+        "gettransfer_vehicle_id": 638136
+      },
+      {
+        "price": {
+          "amount": 864.26,
+          "currency": "EUR",
+          "quote_id": "69524d3e748d436bbe21df62e6f84b2e-v40"
+        },
+        "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/first-class.jpg",
+        "price_detail": {
+          "base_pricing": {
+            "rule": "serviceArea",
+            "type": "range",
+            "zone": "serviceArea",
+            "price": {
+              "amount": 640.19132,
+              "currency": "EUR"
+            }
+          },
+          "partner_pricing": {
+            "type": "serviceArea",
+            "percent": 35.0
+          },
+          "special_pricing": [],
+          "system_setting_pricing": {}
+        },
+        "vehicle_class": "First Class",
+        "typical_vehicle": {
+          "model": "S550",
+          "manufacturer": "Mercedes"
+        },
+        "luggage_capacity": 3,
+        "vehicle_class_id": 40,
+        "passenger_capacity": 3,
+        "gettransfer_category": "premium",
+        "gettransfer_vehicle_id": 638142
+      },
+      {
+        "price": {
+          "amount": 307.04,
+          "currency": "EUR",
+          "quote_id": "69524d3e748d436bbe21df62e6f84b2e-v3"
+        },
+        "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/mpv-5.jpg",
+        "price_detail": {
+          "base_pricing": {
+            "rule": "serviceArea",
+            "type": "range",
+            "zone": "serviceArea",
+            "price": {
+              "amount": 227.43639,
+              "currency": "EUR"
+            }
+          },
+          "partner_pricing": {
+            "type": "serviceArea",
+            "percent": 35.0
+          },
+          "special_pricing": [],
+          "system_setting_pricing": {}
+        },
+        "vehicle_class": "MPV-5",
+        "typical_vehicle": {
+          "model": "Sienna",
+          "manufacturer": "Toyota"
+        },
+        "luggage_capacity": 5,
+        "vehicle_class_id": 3,
+        "passenger_capacity": 5
+      },
+      {
+        "price": {
+          "amount": 363.89,
+          "currency": "EUR",
+          "quote_id": "69524d3e748d436bbe21df62e6f84b2e-v36"
+        },
+        "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/businessminivan.jpg",
+        "price_detail": {
+          "base_pricing": {
+            "rule": "serviceArea",
+            "type": "range",
+            "zone": "serviceArea",
+            "price": {
+              "amount": 269.55424,
+              "currency": "EUR"
+            }
+          },
+          "partner_pricing": {
+            "type": "serviceArea",
+            "percent": 35.0
+          },
+          "special_pricing": [],
+          "system_setting_pricing": {}
+        },
+        "vehicle_class": "Business Van",
+        "typical_vehicle": {
+          "model": "GL8",
+          "manufacturer": "Buick"
+        },
+        "luggage_capacity": 5,
+        "vehicle_class_id": 36,
+        "passenger_capacity": 5
+      },
+      {
+        "price": {
+          "amount": 363.89,
+          "currency": "EUR",
+          "quote_id": "69524d3e748d436bbe21df62e6f84b2e-v5"
+        },
+        "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/minibus-8.jpg",
+        "price_detail": {
+          "base_pricing": {
+            "rule": "serviceArea",
+            "type": "range",
+            "zone": "serviceArea",
+            "price": {
+              "amount": 269.55424,
+              "currency": "EUR"
+            }
+          },
+          "partner_pricing": {
+            "type": "serviceArea",
+            "percent": 35.0
+          },
+          "special_pricing": [],
+          "system_setting_pricing": {}
+        },
+        "vehicle_class": "Minibus-8",
+        "typical_vehicle": {
+          "model": "Transit",
+          "manufacturer": "Ford"
+        },
+        "luggage_capacity": 8,
+        "vehicle_class_id": 5,
+        "passenger_capacity": 8,
+        "gettransfer_category": "van",
+        "gettransfer_vehicle_id": 638149
+      },
+      {
+        "price": {
+          "amount": 703.51,
+          "currency": "EUR",
+          "quote_id": "69524d3e748d436bbe21df62e6f84b2e-v9"
+        },
+        "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/minibus-10.jpg",
+        "price_detail": {
+          "base_pricing": {
+            "rule": "serviceArea",
+            "type": "range",
+            "zone": "serviceArea",
+            "price": {
+              "amount": 521.117,
+              "currency": "EUR"
+            }
+          },
+          "partner_pricing": {
+            "type": "serviceArea",
+            "percent": 35.0
+          },
+          "special_pricing": [],
+          "system_setting_pricing": {}
+        },
+        "vehicle_class": "Minibus-10",
+        "typical_vehicle": {
+          "model": "Ford",
+          "manufacturer": "Ford"
+        },
+        "luggage_capacity": 10,
+        "vehicle_class_id": 9,
+        "passenger_capacity": 10
+      },
+      {
+        "price": {
+          "amount": 737.49,
+          "currency": "EUR",
+          "quote_id": "69524d3e748d436bbe21df62e6f84b2e-v10"
+        },
+        "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/Toyota-Hiace.jpg",
+        "price_detail": {
+          "base_pricing": {
+            "rule": "serviceArea",
+            "type": "range",
+            "zone": "serviceArea",
+            "price": {
+              "amount": 546.289,
+              "currency": "EUR"
+            }
+          },
+          "partner_pricing": {
+            "type": "serviceArea",
+            "percent": 35.0
+          },
+          "special_pricing": [],
+          "system_setting_pricing": {}
+        },
+        "vehicle_class": "Minibus-12",
+        "typical_vehicle": {
+          "model": "Hiace",
+          "manufacturer": "Toyota"
+        },
+        "luggage_capacity": 12,
+        "vehicle_class_id": 10,
+        "passenger_capacity": 12
+      },
+      {
+        "price": {
+          "amount": 771.47,
+          "currency": "EUR",
+          "quote_id": "69524d3e748d436bbe21df62e6f84b2e-v11"
+        },
+        "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/Toyota-Coaster.jpg",
+        "price_detail": {
+          "base_pricing": {
+            "rule": "serviceArea",
+            "type": "range",
+            "zone": "serviceArea",
+            "price": {
+              "amount": 571.461,
+              "currency": "EUR"
+            }
+          },
+          "partner_pricing": {
+            "type": "serviceArea",
+            "percent": 35.0
+          },
+          "special_pricing": [],
+          "system_setting_pricing": {}
+        },
+        "vehicle_class": "Minibus-14",
+        "typical_vehicle": {
+          "model": "Coaster",
+          "manufacturer": "Toyota"
+        },
+        "luggage_capacity": 14,
+        "vehicle_class_id": 11,
+        "passenger_capacity": 14
+      },
+      {
+        "price": {
+          "amount": 956.35,
+          "currency": "EUR",
+          "quote_id": "69524d3e748d436bbe21df62e6f84b2e-v29"
+        },
+        "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/bus-16.jpg",
+        "price_detail": {
+          "base_pricing": {
+            "rule": "serviceArea",
+            "type": "range",
+            "zone": "serviceArea",
+            "price": {
+              "amount": 708.408,
+              "currency": "EUR"
+            }
+          },
+          "partner_pricing": {
+            "type": "serviceArea",
+            "percent": 35.0
+          },
+          "special_pricing": [],
+          "system_setting_pricing": {}
+        },
+        "vehicle_class": "16-seat Bus",
+        "typical_vehicle": {
+          "model": "E-450",
+          "manufacturer": "Ford"
+        },
+        "luggage_capacity": 16,
+        "vehicle_class_id": 29,
+        "passenger_capacity": 16,
+        "gettransfer_category": "minibus",
+        "gettransfer_vehicle_id": 638151
+      },
+      {
+        "price": {
+          "amount": 1158.22,
+          "currency": "EUR",
+          "quote_id": "69524d3e748d436bbe21df62e6f84b2e-v30"
+        },
+        "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/bus-20.jpg",
+        "price_detail": {
+          "base_pricing": {
+            "rule": "serviceArea",
+            "type": "range",
+            "zone": "serviceArea",
+            "price": {
+              "amount": 857.941,
+              "currency": "EUR"
+            }
+          },
+          "partner_pricing": {
+            "type": "serviceArea",
+            "percent": 35.0
+          },
+          "special_pricing": [],
+          "system_setting_pricing": {}
+        },
+        "vehicle_class": "20-seat Bus",
+        "typical_vehicle": {
+          "model": "E-450",
+          "manufacturer": "Ford"
+        },
+        "luggage_capacity": 20,
+        "vehicle_class_id": 30,
+        "passenger_capacity": 20
+      },
+      {
+        "price": {
+          "amount": 1243.17,
+          "currency": "EUR",
+          "quote_id": "69524d3e748d436bbe21df62e6f84b2e-v31"
+        },
+        "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/bus-23.jpg",
+        "price_detail": {
+          "base_pricing": {
+            "rule": "serviceArea",
+            "type": "range",
+            "zone": "serviceArea",
+            "price": {
+              "amount": 920.871,
+              "currency": "EUR"
+            }
+          },
+          "partner_pricing": {
+            "type": "serviceArea",
+            "percent": 35.0
+          },
+          "special_pricing": [],
+          "system_setting_pricing": {}
+        },
+        "vehicle_class": "23-seat Bus",
+        "typical_vehicle": {
+          "model": "F-550",
+          "manufacturer": "Ford"
+        },
+        "luggage_capacity": 23,
+        "vehicle_class_id": 31,
+        "passenger_capacity": 23
+      },
+      {
+        "price": {
+          "amount": 1328.13,
+          "currency": "EUR",
+          "quote_id": "69524d3e748d436bbe21df62e6f84b2e-v32"
+        },
+        "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/bus-27.jpg",
+        "price_detail": {
+          "base_pricing": {
+            "rule": "serviceArea",
+            "type": "range",
+            "zone": "serviceArea",
+            "price": {
+              "amount": 983.801,
+              "currency": "EUR"
+            }
+          },
+          "partner_pricing": {
+            "type": "serviceArea",
+            "percent": 35.0
+          },
+          "special_pricing": [],
+          "system_setting_pricing": {}
+        },
+        "vehicle_class": "27-seat Bus",
+        "typical_vehicle": {
+          "model": "F-550",
+          "manufacturer": "Ford"
+        },
+        "luggage_capacity": 27,
+        "vehicle_class_id": 32,
+        "passenger_capacity": 27
+      },
+      {
+        "price": {
+          "amount": 1445.04,
+          "currency": "EUR",
+          "quote_id": "69524d3e748d436bbe21df62e6f84b2e-v33"
+        },
+        "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/bus-36.jpg",
+        "price_detail": {
+          "base_pricing": {
+            "rule": "serviceArea",
+            "type": "range",
+            "zone": "serviceArea",
+            "price": {
+              "amount": 1070.404,
+              "currency": "EUR"
+            }
+          },
+          "partner_pricing": {
+            "type": "serviceArea",
+            "percent": 35.0
+          },
+          "special_pricing": [],
+          "system_setting_pricing": {}
+        },
+        "vehicle_class": "36-seat Bus",
+        "typical_vehicle": {
+          "model": "F-650 or smilar",
+          "manufacturer": "Ford"
+        },
+        "luggage_capacity": 36,
+        "vehicle_class_id": 33,
+        "passenger_capacity": 36
+      },
+      {
+        "price": {
+          "amount": 1614.95,
+          "currency": "EUR",
+          "quote_id": "69524d3e748d436bbe21df62e6f84b2e-v34"
+        },
+        "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/bus-44.jpg",
+        "price_detail": {
+          "base_pricing": {
+            "rule": "serviceArea",
+            "type": "range",
+            "zone": "serviceArea",
+            "price": {
+              "amount": 1196.264,
+              "currency": "EUR"
+            }
+          },
+          "partner_pricing": {
+            "type": "serviceArea",
+            "percent": 35.0
+          },
+          "special_pricing": [],
+          "system_setting_pricing": {}
+        },
+        "vehicle_class": "44-seat Coach Bus",
+        "typical_vehicle": {
+          "model": "Coach bus",
+          "manufacturer": "Volvo"
+        },
+        "luggage_capacity": 44,
+        "vehicle_class_id": 34,
+        "passenger_capacity": 44
+      },
+      {
+        "price": {
+          "amount": 1699.91,
+          "currency": "EUR",
+          "quote_id": "69524d3e748d436bbe21df62e6f84b2e-v35"
+        },
+        "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/bus-55.jpg",
+        "price_detail": {
+          "base_pricing": {
+            "rule": "serviceArea",
+            "type": "range",
+            "zone": "serviceArea",
+            "price": {
+              "amount": 1259.194,
+              "currency": "EUR"
+            }
+          },
+          "partner_pricing": {
+            "type": "serviceArea",
+            "percent": 35.0
+          },
+          "special_pricing": [],
+          "system_setting_pricing": {}
+        },
+        "vehicle_class": "55-seat Coach Bus",
+        "typical_vehicle": {
+          "model": "Motorcoach or smilar",
+          "manufacturer": "Prevost"
+        },
+        "luggage_capacity": 55,
+        "vehicle_class_id": 35,
+        "passenger_capacity": 55
+      },
+      {
+        "price": {
+          "amount": 284.3,
+          "currency": "EUR",
+          "quote_id": "69524d3e748d436bbe21df62e6f84b2e-v6"
+        },
+        "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/mpv-4.jpg",
+        "price_detail": {
+          "base_pricing": {
+            "rule": "serviceArea",
+            "type": "range",
+            "zone": "serviceArea",
+            "price": {
+              "amount": 210.58925,
+              "currency": "EUR"
+            }
+          },
+          "partner_pricing": {
+            "type": "serviceArea",
+            "percent": 35.0
+          },
+          "special_pricing": [],
+          "system_setting_pricing": {}
+        },
+        "vehicle_class": "MPV-4",
+        "typical_vehicle": {
+          "model": "Highlander",
+          "manufacturer": "Toyota"
+        },
+        "luggage_capacity": 4,
+        "vehicle_class_id": 6,
+        "passenger_capacity": 4,
+        "gettransfer_category": "suv",
+        "gettransfer_vehicle_id": 638145
+      },
+      {
+        "price": {
+          "amount": 352.53,
+          "currency": "EUR",
+          "quote_id": "69524d3e748d436bbe21df62e6f84b2e-v8"
+        },
+        "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/Minibus-7.jpg",
+        "price_detail": {
+          "base_pricing": {
+            "rule": "serviceArea",
+            "type": "range",
+            "zone": "serviceArea",
+            "price": {
+              "amount": 261.13067,
+              "currency": "EUR"
+            }
+          },
+          "partner_pricing": {
+            "type": "serviceArea",
+            "percent": 35.0
+          },
+          "special_pricing": [],
+          "system_setting_pricing": {}
+        },
+        "vehicle_class": "Minibus-7",
+        "typical_vehicle": {
+          "model": "Transit",
+          "manufacturer": "Ford"
+        },
+        "luggage_capacity": 7,
+        "vehicle_class_id": 8,
+        "passenger_capacity": 7
+      },
+      {
+        "price": {
+          "amount": 352.53,
+          "currency": "EUR",
+          "quote_id": "69524d3e748d436bbe21df62e6f84b2e-v13"
+        },
+        "image_url": "https://elifelimo.s3.us-east-2.amazonaws.com/art/vehicle/sm/Business-MPV-4.png",
+        "price_detail": {
+          "base_pricing": {
+            "rule": "serviceArea",
+            "type": "range",
+            "zone": "serviceArea",
+            "price": {
+              "amount": 261.13067,
+              "currency": "EUR"
+            }
+          },
+          "partner_pricing": {
+            "type": "serviceArea",
+            "percent": 35.0
+          },
+          "special_pricing": [],
+          "system_setting_pricing": {}
+        },
+        "vehicle_class": "Business MPV-4",
+        "typical_vehicle": {
+          "model": "QX60",
+          "manufacturer": "INFINITI"
+        },
+        "luggage_capacity": 4,
+        "vehicle_class_id": 13,
+        "passenger_capacity": 4
+      }
+    ],
+    "add_service_unit_price": {
+      "infant": {
+        "amount": 20.25,
+        "currency": "EUR"
+      },
+      "toddler": {
+        "amount": 20.25,
+        "currency": "EUR"
+      },
+      "children": {
+        "amount": 20.25,
+        "currency": "EUR"
+      }
+    }
+  }
 }

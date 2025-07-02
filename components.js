@@ -92,6 +92,33 @@ async function getPricingJsonBySvcId(url, id) {
   caches[id] = result
   return result
 }
+async function getPricingJsonBySvcIdNew(url, id) {
+  //  select pricing from fleet left join service_area_pricing s on  s.id = fleet.service_area_pricing_id where fleet.id = {{svc_id}}
+  let result = caches[id]
+  if (result) {
+    return result
+  }
+  let d = {
+    sql: 134679330,
+    version: '4.081',
+    svc_id: id
+  }
+
+  let res = await fetchData({
+    url,
+    method: 'POST',
+    data: d,
+    desc: 'get pricing json_id'
+  })
+
+  let { pricing } = res
+  if (!pricing) {
+    return
+  }
+  result = JSON.parse(res.pricing)
+  caches[id] = result
+  return result
+}
 
 async function getFlightNoByAiportCode(url, airport_code, min_hh, max_hh) {
   // select flight_no from airport_fleet where airport = {{airport_code}}
@@ -448,8 +475,108 @@ function getPatnerInfo(partnerId, stage) {
   return partnerInfo
 }
 
+let _componentData = {
+  caches: {}, // Cache data
+  curPartnerSvcData: {}, // partner , current service area data
+  predictionsCache: {}, // Cache search address
+  originLatLng: { //initial bound lat and lng is sfo's
+    boundLat: 37.6213129,
+    boundLng: -122.3789554,
+    boundRadius: 200000
+  }
+}
 
+async function getAddrList(keywords = 'SFO') {
+  if (!keywords) {
+    return []
+  }
 
+  let list = _componentData.predictionsCache[keywords]
+  if (list) {
+    return list
+  }
+
+  let { boundLat, boundLng, sessionToken, boundRadius } = _componentData.originLatLng
+  let url = `https://388bivap71.execute-api.us-east-2.amazonaws.com/prod/maps/places/auto-comp`
+
+  let d = {
+    input_text: keywords,
+    location: `${boundLat},${boundLng}`,
+    radius: boundRadius
+  }
+  if (sessionToken) {
+    d[`&session_token`] = sessionToken
+  }
+
+  let res = await fetchData({
+    url, data: d
+  })
+  if (!res) return
+  let { session_token } = res
+  _componentData.originLatLng.sessionToken = session_token
+  list = res.predictions.predictions
+
+  _componentData.predictionsCache[keywords] = list
+  return list
+}
+
+async function getDetailByPlaceId(id) {
+  if (_componentData.caches[id]) {
+    return _componentData.caches[id]
+  }
+  let url = `https://388bivap71.execute-api.us-east-2.amazonaws.com/prod/maps/places/id`
+  let { place_detail } = await fetchData({
+    url,
+    data: { google_place_id: id }
+  })
+  let { status } = place_detail
+
+  if (status == 'OK') {
+    let { result: { formatted_address, name: localName, geometry: { location } } } = place_detail
+
+    let val = `${localName} ${formatted_address}`
+    if (formatted_address.startsWith(localName)) {
+      val = formatted_address
+    }
+    // this.elm.value = val
+
+    let { lat, lng, } = location
+    let t = typeof lat === 'number' ? lat : lat()
+    let g = typeof lng === 'number' ? lng : lng()
+
+    _componentData.originLatLng.boundLat = lat
+    _componentData.originLatLng.boundLng = lng
+    _componentData.caches[id] = { lat: t, lng: g, name: val }
+
+    return { lat: t, lng: g, name: val }
+  }
+
+}
+
+async function getPriceByLatLng(d) {
+  let { from_lat,
+    from_lng,
+    to_lat,
+    to_lng,
+    demand_fleet_id,
+    supply_fleet_id } = d
+
+  let str = `${from_lat}-${from_lng}-${to_lat}-${to_lng}-${demand_fleet_id}-${supply_fleet_id}`
+  let res = _componentData.caches[str]
+
+  if (!res) {
+    let url = 'https://k3zdvi12m6.execute-api.us-east-2.amazonaws.com/prod/ride-pricings'
+    let results = await fetchData({
+      url,
+      method: 'GET',
+      data: d
+    })
+    res = results?.fleets || []
+    _componentData.caches[str] = res
+  }
+
+  return res
+}
 
 function fetchData({
   url = '',
