@@ -1,5 +1,9 @@
 
 
+
+const ses = 'YM9zkRVEF7DYYr1JFhgAyKobXMYWYgnfuBRqEX8y5ePR7hykxUVrSdXVM9rrIWXB9IwfUBQFMVeS7bCHMTwXNy0UqpSR9DFXnayZVBCkgGmXn0fGFhtNT8g729VBq4CO'
+const sesDev = 'UEc1L5eErGh7DFkDh6wrQ46IVQt0d8QYQfquN6udTq7t0ETpcA7lmlXrUXJC2t66teluAqg47qpGznRfaVc6d4b9OHAJilwsE1e3wMYhvDdkfEgCJzYAaCe59gRYg8Sm'
+
 async function getFleetIdAndPricingByAirport(url, airport, parent_fleet_id) {
   let cachKey = `${parent_fleet_id}-${airport}`
   let res = caches[cachKey]
@@ -578,6 +582,7 @@ async function getPriceByLatLng(d) {
   return res
 }
 
+
 function fetchData({
   url = '',
   data = {},
@@ -586,6 +591,7 @@ function fetchData({
 } = {}) {
   method = method.toUpperCase();
   data['req_id'] = this.uuid()
+
   if (method == 'GET') {
     let dataStr = '';
     Object.keys(data).forEach(key => {
@@ -633,10 +639,7 @@ function uuid() {
 }
 
 
-let ses = 'YM9zkRVEF7DYYr1JFhgAyKobXMYWYgnfuBRqEX8y5ePR7hykxUVrSdXVM9rrIWXB9IwfUBQFMVeS7bCHMTwXNy0UqpSR9DFXnayZVBCkgGmXn0fGFhtNT8g729VBq4CO'
 let urlProd = `https://ujrfp99zs9.execute-api.us-east-2.amazonaws.com/upncoming/sql-templates/run?ses=${ses}`
-
-let sesDev = 'UEc1L5eErGh7DFkDh6wrQ46IVQt0d8QYQfquN6udTq7t0ETpcA7lmlXrUXJC2t66teluAqg47qpGznRfaVc6d4b9OHAJilwsE1e3wMYhvDdkfEgCJzYAaCe59gRYg8Sm'
 let urlDev = `https://jqwys3p5nk.execute-api.us-east-2.amazonaws.com/dev/sql-template/run?ses=${sesDev}`
 
 

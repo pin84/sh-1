@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input class="switch-box infant-switch" type="checkbox">
+    <script src="./data.js"></script>
+    <script>
+
+        const R = 6371;
+        const SPEED = 50000 
+        function calDistance(point1, point2) {
+            // const point1 = { lat: 28.4229699, lng: -81.3115369 }; // napa
+            // const point2 = { lat: 28.459636687937, lng: -81.315650939941 };
+
+            function toRadians(degrees) {
+                return degrees * Math.PI / 180;
+            }
+
+            const deltaLat = toRadians(point2.lat - point1.lat);
+            const deltaLng = toRadians(point2.lng - point1.lng);
+
+            const lat1 = toRadians(point1.lat);
+            const lat2 = toRadians(point2.lat);
+
+            const a = Math.sin(deltaLat / 2) * Math.sin(deltaLat / 2) +
+                Math.cos(lat1) * Math.cos(lat2) *
+                Math.sin(deltaLng / 2) * Math.sin(deltaLng / 2);
+            const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+            const d = R * c;
+
+            let distance = d * 1000 // unit is meter
+            let  duration = distance / SPEED * 60 * 60 // seconds
+           
+            return {distance,duration}
+        }
+
+
+        const ridePickupPonter = { lat: 37.0219636, lng: 25.1152364 }
+
+        let arr = []
+        for (let item of d) {
+            let { id, lat, lng } = item
+            let {distance,duration} = calDistance({ lat, lng }, ridePickupPonter)
+            arr.push({
+                id,
+                distance,
+                duration
+            })
+        }
+        console.log(arr);
+        
+
+
+    </script>
+</html>
