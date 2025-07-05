@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="../vue/index.css">
+  <link rel="stylesheet" href="../vue/app.css">
+  <script src="../vue/vue.global.js"></script>
+  <script src="../vue/index.full.js"></script>
+  <script src="../tools/components.js"></script>
+  <script src="../tools/index.js"></script>
+</head>
+<body>
+  <div id="app">
+    <el-tabs v-model="activeName" class="demo-tabs">
+      <el-tab-pane label="copy routes" name="first">
+        <el-form :model="copySvc" label-width="auto" style="max-width: 600px">
+          <el-form-item label="prod svc id">
+            <el-input v-model="copySvc.prodId" />
+          </el-form-item>
+          <!-- <el-form-item label="dev svc id">
+            <el-input v-model="copySvc.devId"  />
+          </el-form-item> -->
+          <el-form-item>
+            <el-button type="primary" @click="copySvcProd2Dev">copySvcProd2Dev</el-button>
+          </el-form-item>
+        </el-form>
+      </el-tab-pane>
+    </el-tabs>
+  </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+<script src="./data.js"></script>
+<script setup>
+  const { createApp, ref, reactive, computed, watch, defineComponent, onMounted } = Vue;
+  const stage = 'PROD' //PROD,DEV
+  const url = stage == 'PROD' ? urlProd : urlDev
+  const crawl_state = '1'
+
+
+  const is_active = 11
+  const strategy_id = 1
+
+  let i = 0
+  let cache = {}
+  let partnerJson = null
+
+  const route_type = 0 // 1:smart purchasing routes 
+  const batch = 0
+  const partnerId = 5
+  let dList = stage == 'PROD' ? [] : []
+
+
+
+
+  const app = createApp({
+    // components: { Parent },
+
+    methods: {
+      async copySvcProd2Dev() {
+        let prodFleetId = 89777
+        let parent_fleet_id_prod = 89496
+        let parent_fleet_id_dev = 65579
+        let pricingJson = await getLastPricingJsonBySvcId(urlProd, prodFleetId)
+
+        let { airports } = pricingJson
+
+        let airportCode = airports[0]
+
+        let devFleet = await getFleetIdAndPricingByAirport(urlDev, airportCode, parent_fleet_id_dev)
+        let fleet_id  = devFleet?.fleet_id || 0
+
+        debugger
+        if (!fleet_id) {
+          //insert airport_fleet v3.1
+          //get prod fleet info
+          let res = await fetchData({
+            url: urlProd,
+            method: 'POST',
+            data: {
+              "sql": 134679330,
+              "version": "4.090",
+              "parent_fleet_id": parent_fleet_id_prod,
+              "airportCode": airportCode
+            }
+          })
+
+          let { id, lat, lng, name, radius } = res
+          // insert fleet dev
+          let insertFleetRes = await fetchData({
+            url: urlDev,
+            method: 'POST',
+            data: {
+              "sql": 134679330,
+              "version": "3.0",
+              "parent_fleet_id": parent_fleet_id_dev,
+              name,
+              radius,
+              lat,
+              lng
+            }
+          })
+          fleet_id = insertFleetRes['Lastrow id']
+
+          if (!fleet_id) {
+            debugger
+          }
+          debugger
+          // insert airport_fleet 
+          let insertAirportFleetRes = await fetchData({
+            url: urlDev,
+            method: 'POST',
+            data: {
+              "sql": 134679330,
+              "version": "4.088",
+              airports,
+              fleet_id,
+              parent_fleet_id: parent_fleet_id_dev,
+            }
+          })
+          let lastAirportFleetId = insertAirportFleetRes['Lastrow id']
+
+          debugger
+        } else {
+          debugger
+
+
+        }
+
+
+        // pricing json handle
+        let pricingJsonDev = JSON.parse(JSON.stringify(pricingJson))
+        pricingJsonDev.serviceArea['parent_fleet_id'] = parent_fleet_id_dev
+        // pricingJsonDev.serviceArea['parent_fleet_name'] = parentFleetName || platform_name
+        pricingJsonDev.serviceArea['id'] = fleet_id
+        pricingJsonDev['service_area_pricing_id'] = null
+        console.log(pricingJsonDev);
+        let pricingStr = JSON.stringify(pricingJsonDev).replace(/\'/g, '\\\'')
+        let updateFleet = await insertAndUpdate(urlDev, pricingStr, fleet_id)
+
+
+
+      }
+
+  
+      
+    },
+
+    setup() {
+      const activeName = ref('first')
+      const inputValueRouteIds = ref('');
+      const copySvc = ref({
+        prodId: 89777,
+        devId: ''
+      })
+
+
+
+
+
+
+
+
+
+      return {
+
+        copySvc,
+        activeName,
+
+      }
+    },
+
+
+
+
+  });
+
+
+
+
+
+  app.use(ElementPlus);
+
+  app.mount("#app");
+</script>
+</html>

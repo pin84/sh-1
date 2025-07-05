@@ -150,6 +150,29 @@ async function getFlightNoByAiportCode(url, airport_code, min_hh, max_hh) {
   return res
 }
 
+
+
+async function insertAndUpdate(url, pricing_str, newFleetId) {
+  let updateD = {
+    sql: 134678780,
+    version: '1.0',
+    pricing_str,
+    new_fleet_id: newFleetId
+  }
+
+  // insert into service_area_pricing (service_area_id,pricing,effective_at,expire_at) 
+  // values  ({{new_fleet_id}},'{{pricing_str}}','2024-04-08 05:05:00','2037-12-31 23:59:59' );
+  // update fleet set service_area_pricing_id = last_insert_id() where id = {{new_fleet_id}} limit 1;
+
+  let res = await fetchData({
+    url,
+    method: 'POST',
+    data: updateD,
+    desc: 'update json'
+  })
+
+  return res
+}
 // -------------have cache -----------------
 
 

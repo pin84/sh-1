@@ -7,29 +7,1387 @@
 </head>
 <body>
   <script>
+    let zones = [
+    {
+        "lat": 41.386381,
+        "lng": 2.1390775,
+        "name": "Barcelona",
+        "p2p": false,
+        "prices": [
+            {
+                "airport": "BCN",
+                "amount": 130,
+                "currency": "USD",
+                "p_amt": 30,
+                "d_amt": 30
+            }
+        ],
+        "polygons": [
+            {
+                "lat": 41.400445,
+                "lng": 2.114333
+            },
+            {
+                "lat": 41.418479,
+                "lng": 2.133324
+            },
+            {
+                "lat": 41.436513,
+                "lng": 2.152316
+            },
+            {
+                "lat": 41.440927,
+                "lng": 2.165994
+            },
+            {
+                "lat": 41.445342,
+                "lng": 2.179672
+            },
+            {
+                "lat": 41.448698,
+                "lng": 2.18762
+            },
+            {
+                "lat": 41.452054,
+                "lng": 2.195568
+            },
+            {
+                "lat": 41.448059,
+                "lng": 2.200764
+            },
+            {
+                "lat": 41.444065,
+                "lng": 2.20596
+            },
+            {
+                "lat": 41.435375,
+                "lng": 2.212222
+            },
+            {
+                "lat": 41.426685,
+                "lng": 2.218484
+            },
+            {
+                "lat": 41.422888,
+                "lng": 2.231407
+            },
+            {
+                "lat": 41.419092,
+                "lng": 2.24433
+            },
+            {
+                "lat": 41.405202,
+                "lng": 2.229142
+            },
+            {
+                "lat": 41.391312,
+                "lng": 2.213954
+            },
+            {
+                "lat": 41.377015,
+                "lng": 2.207559
+            },
+            {
+                "lat": 41.362719,
+                "lng": 2.201163
+            },
+            {
+                "lat": 41.357706,
+                "lng": 2.198107
+            },
+            {
+                "lat": 41.352693,
+                "lng": 2.19505
+            },
+            {
+                "lat": 41.355446,
+                "lng": 2.186692
+            },
+            {
+                "lat": 41.3582,
+                "lng": 2.178333
+            },
+            {
+                "lat": 41.355859,
+                "lng": 2.169897
+            },
+            {
+                "lat": 41.353519,
+                "lng": 2.161461
+            },
+            {
+                "lat": 41.352191,
+                "lng": 2.154995
+            },
+            {
+                "lat": 41.350864,
+                "lng": 2.148529
+            },
+            {
+                "lat": 41.34429,
+                "lng": 2.136342
+            },
+            {
+                "lat": 41.337716,
+                "lng": 2.124156
+            },
+            {
+                "lat": 41.332413,
+                "lng": 2.120559
+            },
+            {
+                "lat": 41.327111,
+                "lng": 2.116961
+            },
+            {
+                "lat": 41.323909,
+                "lng": 2.116828
+            },
+            {
+                "lat": 41.320708,
+                "lng": 2.116695
+            },
+            {
+                "lat": 41.339157,
+                "lng": 2.084881
+            },
+            {
+                "lat": 41.357607,
+                "lng": 2.053067
+            },
+            {
+                "lat": 41.365762,
+                "lng": 2.043446
+            },
+            {
+                "lat": 41.373918,
+                "lng": 2.033825
+            },
+            {
+                "lat": 41.377817,
+                "lng": 2.067399
+            },
+            {
+                "lat": 41.381716,
+                "lng": 2.100974
+            },
+            {
+                "lat": 41.39108,
+                "lng": 2.107653
+            }
+        ],
+        "pid": "65579.4.1"
+    },
+    {
+        "lat": 41.3235994013398,
+        "lng": 2.1643701796257973,
+        "name": "Port de Barcelona",
+        "p2p": false,
+        "prices": [
+            {
+                "airport": "BCN",
+                "amount": 130,
+                "currency": "USD",
+                "p_amt": 30,
+                "d_amt": 30
+            }
+        ],
+        "radius": 4000,
+        "pid": "65579.4.2"
+    },
+    {
+        "lat": 41.283975850487465,
+        "lng": 2.0469440917174193,
+        "name": "机场附近",
+        "p2p": false,
+        "prices": [
+            {
+                "airport": "BCN",
+                "amount": 130,
+                "currency": "USD",
+                "p_amt": 32,
+                "d_amt": 32
+            }
+        ],
+        "radius": 8000,
+        "pid": "65579.4.3"
+    },
+    {
+        "lat": 41.448274690179616,
+        "lng": 2.2447416586831515,
+        "name": "Badalona",
+        "p2p": false,
+        "prices": [
+            {
+                "airport": "BCN",
+                "amount": 130,
+                "currency": "USD",
+                "p_amt": 36,
+                "d_amt": 36
+            }
+        ],
+        "radius": 4000,
+        "pid": "65579.4.4"
+    },
+    {
+        "lat": 41.232508659971096,
+        "lng": 1.8133613286016,
+        "name": "锡切斯",
+        "p2p": false,
+        "prices": [
+            {
+                "airport": "BCN",
+                "amount": 130,
+                "currency": "USD",
+                "p_amt": 56,
+                "d_amt": 56
+            }
+        ],
+        "radius": 2000,
+        "pid": "65579.4.5"
+    },
+    {
+        "lat": 41.11336217217861,
+        "lng": 1.261066617876746,
+        "name": "塔拉戈纳",
+        "p2p": false,
+        "prices": [
+            {
+                "airport": "BCN",
+                "amount": 130,
+                "currency": "USD",
+                "p_amt": 115,
+                "d_amt": 115
+            }
+        ],
+        "radius": 2000,
+        "pid": "65579.4.6"
+    },
+    {
+        "lat": 41.07451902682309,
+        "lng": 1.1391325506869021,
+        "name": "萨洛",
+        "p2p": false,
+        "prices": [
+            {
+                "airport": "BCN",
+                "amount": 130,
+                "currency": "USD",
+                "p_amt": 118,
+                "d_amt": 118
+            }
+        ],
+        "radius": 4000,
+        "pid": "65579.4.7"
+    },
+    {
+        "lat": 41.56181009177034,
+        "lng": 2.016914945618061,
+        "name": "特拉萨",
+        "p2p": false,
+        "prices": [
+            {
+                "airport": "BCN",
+                "amount": 130,
+                "currency": "USD",
+                "p_amt": 65,
+                "d_amt": 65
+            }
+        ],
+        "radius": 3000,
+        "pid": "65579.4.8"
+    },
+    {
+        "lat": 41.617059340570165,
+        "lng": 2.685727992956722,
+        "name": "滨海皮内达",
+        "p2p": false,
+        "prices": [
+            {
+                "airport": "BCN",
+                "amount": 130,
+                "currency": "USD",
+                "p_amt": 92,
+                "d_amt": 92
+            }
+        ],
+        "radius": 3000,
+        "pid": "65579.4.9"
+    },
+    {
+        "lat": 41.69730656835783,
+        "lng": 2.8544886274934784,
+        "name": "滨海略雷特",
+        "p2p": false,
+        "prices": [
+            {
+                "airport": "BCN",
+                "amount": 130,
+                "currency": "USD",
+                "p_amt": 113,
+                "d_amt": 113
+            }
+        ],
+        "radius": 3000,
+        "pid": "65579.4.10"
+    },
+    {
+        "lat": 41.64274733012695,
+        "lng": 2.7270972681958,
+        "name": "New Cluster 23",
+        "p2p": false,
+        "prices": [
+            {
+                "airport": "BCN",
+                "amount": 79.01,
+                "currency": "USD",
+                "p_amt": 79.01,
+                "d_amt": 79.01
+            }
+        ],
+        "radius": 5000
+    },
+    {
+        "lat": 41.0636859394043,
+        "lng": 1.048602783858795,
+        "name": "New Cluster 3",
+        "p2p": false,
+        "prices": [
+            {
+                "airport": "BCN",
+                "amount": 132.87,
+                "currency": "USD",
+                "p_amt": 132.87,
+                "d_amt": 132.87
+            }
+        ],
+        "radius": 5000
+    },
+    {
+        "lat": 41.6759766,
+        "lng": 2.79022539,
+        "name": "New Cluster 24",
+        "p2p": false,
+        "prices": [
+            {
+                "airport": "BCN",
+                "amount": 105,
+                "currency": "USD",
+                "p_amt": 105,
+                "d_amt": 105
+            }
+        ],
+        "radius": 5000
+    },
+    {
+        "lat": 41.72983287370605,
+        "lng": 2.9403284164752197,
+        "name": "New Cluster 25",
+        "p2p": false,
+        "prices": [
+            {
+                "airport": "BCN",
+                "amount": 120.31,
+                "currency": "USD",
+                "p_amt": 120.31,
+                "d_amt": 120.31
+            }
+        ],
+        "radius": 5000
+    },
+    {
+        "lat": 41.4931564331055,
+        "lng": 2.18187093734741,
+        "name": "New Cluster 15",
+        "p2p": false,
+        "prices": [
+            {
+                "airport": "BCN",
+                "amount": 48,
+                "currency": "USD",
+                "p_amt": 48,
+                "d_amt": 48
+            }
+        ],
+        "radius": 5000
+    },
+    {
+        "lat": 41.1701254,
+        "lng": 1.4706685,
+        "name": "New Cluster 4",
+        "p2p": false,
+        "prices": [
+            {
+                "airport": "BCN",
+                "amount": 87,
+                "currency": "USD",
+                "p_amt": 87,
+                "d_amt": 87
+            }
+        ],
+        "radius": 5000
+    },
+    {
+        "lat": 42.542445,
+        "lng": 1.7281864,
+        "name": "New Cluster 32",
+        "p2p": false,
+        "prices": [
+            {
+                "airport": "BCN",
+                "amount": 220,
+                "currency": "USD",
+                "p_amt": 220,
+                "d_amt": 220
+            }
+        ],
+        "radius": 5000
+    },
+    {
+        "lat": 41.5381108,
+        "lng": 2.44471755,
+        "name": "New Cluster 16",
+        "p2p": false,
+        "prices": [
+            {
+                "airport": "BCN",
+                "amount": 62,
+                "currency": "USD",
+                "p_amt": 62,
+                "d_amt": 62
+            }
+        ],
+        "radius": 5000
+    },
+    {
+        "lat": 41.191691149873044,
+        "lng": 1.576078046122986,
+        "name": "New Cluster 5",
+        "p2p": false,
+        "prices": [
+            {
+                "airport": "BCN",
+                "amount": 83.1,
+                "currency": "USD",
+                "p_amt": 83.1,
+                "d_amt": 83.1
+            }
+        ],
+        "radius": 5000
+    },
+    {
+        "lat": 41.21573971223145,
+        "lng": 1.69516050210289,
+        "name": "New Cluster 6",
+        "p2p": false,
+        "prices": [
+            {
+                "airport": "BCN",
+                "amount": 70.21,
+                "currency": "USD",
+                "p_amt": 70.21,
+                "d_amt": 70.21
+            }
+        ],
+        "radius": 5000
+    },
+    {
+        "lat": 41.9794006347656,
+        "lng": 2.8214259147644,
+        "name": "New Cluster 30",
+        "p2p": false,
+        "prices": [
+            {
+                "airport": "BCN",
+                "amount": 129,
+                "currency": "USD",
+                "p_amt": 129,
+                "d_amt": 129
+            }
+        ],
+        "radius": 5000
+    },
+    {
+        "lat": 41.3833312988281,
+        "lng": 2.06666159629822,
+        "name": "New Cluster 11",
+        "p2p": false,
+        "prices": [
+            {
+                "airport": "BCN",
+                "amount": 36.41,
+                "currency": "USD",
+                "p_amt": 36.41,
+                "d_amt": 36.41
+            }
+        ],
+        "radius": 5000
+    },
+    {
+        "lat": 41.5783404,
+        "lng": 2.5346892,
+        "name": "New Cluster 19",
+        "p2p": false,
+        "prices": [
+            {
+                "airport": "BCN",
+                "amount": 85,
+                "currency": "USD",
+                "p_amt": 85,
+                "d_amt": 85
+            }
+        ],
+        "radius": 5000
+    },
+    {
+        "lat": 41.508921597900404,
+        "lng": 2.1017744545977775,
+        "name": "New Cluster 14",
+        "p2p": false,
+        "prices": [
+            {
+                "airport": "BCN",
+                "amount": 52.33,
+                "currency": "USD",
+                "p_amt": 52.33,
+                "d_amt": 52.33
+            }
+        ],
+        "radius": 5000
+    },
+    {
+        "lat": 41.5889701843262,
+        "lng": 2.58038902282715,
+        "name": "New Cluster 20",
+        "p2p": false,
+        "prices": [
+            {
+                "airport": "BCN",
+                "amount": 85,
+                "currency": "USD",
+                "p_amt": 85,
+                "d_amt": 85
+            }
+        ],
+        "radius": 5000
+    },
+    {
+        "lat": 41.904136300000005,
+        "lng": 3.17417118,
+        "name": "New Cluster 28",
+        "p2p": false,
+        "prices": [
+            {
+                "airport": "BCN",
+                "amount": 158.33,
+                "currency": "USD",
+                "p_amt": 158.33,
+                "d_amt": 158.33
+            }
+        ],
+        "radius": 5000
+    },
+    {
+        "lat": 41.495077020917975,
+        "lng": 2.333720406038942,
+        "name": "New Cluster 13",
+        "p2p": false,
+        "prices": [
+            {
+                "airport": "BCN",
+                "amount": 55.76,
+                "currency": "USD",
+                "p_amt": 55.76,
+                "d_amt": 55.76
+            }
+        ],
+        "radius": 5000
+    },
+    {
+        "lat": 41.5523452758789,
+        "lng": 2.24775385856628,
+        "name": "New Cluster 17",
+        "p2p": false,
+        "prices": [
+            {
+                "airport": "BCN",
+                "amount": 63.33,
+                "currency": "USD",
+                "p_amt": 63.33,
+                "d_amt": 63.33
+            }
+        ],
+        "radius": 5000
+    },
+    {
+        "lat": 41.8065852,
+        "lng": 3.06065675,
+        "name": "New Cluster 26",
+        "p2p": false,
+        "prices": [
+            {
+                "airport": "BCN",
+                "amount": 133.66,
+                "currency": "USD",
+                "p_amt": 133.66,
+                "d_amt": 133.66
+            }
+        ],
+        "radius": 5000
+    },
+    {
+        "lat": 42.05113395,
+        "lng": 3.18698674,
+        "name": "New Cluster 31",
+        "p2p": false,
+        "prices": [
+            {
+                "airport": "BCN",
+                "amount": 175,
+                "currency": "USD",
+                "p_amt": 175,
+                "d_amt": 175
+            }
+        ],
+        "radius": 5000
+    },
+    {
+        "lat": 41.2596817016602,
+        "lng": 1.77579200267792,
+        "name": "New Cluster 7",
+        "p2p": false,
+        "prices": [
+            {
+                "airport": "BCN",
+                "amount": 73.65,
+                "currency": "USD",
+                "p_amt": 73.65,
+                "d_amt": 73.65
+            }
+        ],
+        "radius": 5000
+    },
+    {
+        "lat": 42.5747985839844,
+        "lng": 1.48184597492218,
+        "name": "New Cluster 33",
+        "p2p": false,
+        "prices": [
+            {
+                "airport": "BCN",
+                "amount": 232,
+                "currency": "USD",
+                "p_amt": 232,
+                "d_amt": 232
+            }
+        ],
+        "radius": 5000
+    },
+    {
+        "lat": 41.6061935424805,
+        "lng": 2.28708910942078,
+        "name": "New Cluster 22",
+        "p2p": false,
+        "prices": [
+            {
+                "airport": "BCN",
+                "amount": 60,
+                "currency": "USD",
+                "p_amt": 60,
+                "d_amt": 60
+            }
+        ],
+        "radius": 5000
+    },
+    {
+        "lat": 40.9909210205078,
+        "lng": 0.923717975616455,
+        "name": "New Cluster 2",
+        "p2p": false,
+        "prices": [
+            {
+                "airport": "BCN",
+                "amount": 138,
+                "currency": "USD",
+                "p_amt": 138,
+                "d_amt": 138
+            }
+        ],
+        "radius": 5000
+    },
+    {
+        "lat": 41.346954902807596,
+        "lng": 1.697156449779205,
+        "name": "New Cluster 10",
+        "p2p": false,
+        "prices": [
+            {
+                "airport": "BCN",
+                "amount": 68,
+                "currency": "USD",
+                "p_amt": 68,
+                "d_amt": 68
+            }
+        ],
+        "radius": 5000
+    },
+    {
+        "lat": 40.4679870605469,
+        "lng": 0.474730104207993,
+        "name": "New Cluster 1",
+        "p2p": false,
+        "prices": [
+            {
+                "airport": "BCN",
+                "amount": 210,
+                "currency": "USD",
+                "p_amt": 210,
+                "d_amt": 210
+            }
+        ],
+        "radius": 5000
+    },
+    {
+        "lat": 41.4134483337402,
+        "lng": 2.01824259757996,
+        "name": "New Cluster 12",
+        "p2p": false,
+        "prices": [
+            {
+                "airport": "BCN",
+                "amount": 38,
+                "currency": "USD",
+                "p_amt": 38,
+                "d_amt": 38
+            }
+        ],
+        "radius": 5000
+    },
+    {
+        "lat": 41.9304389953613,
+        "lng": 2.25443339347839,
+        "name": "New Cluster 29",
+        "p2p": false,
+        "prices": [
+            {
+                "airport": "BCN",
+                "amount": 102,
+                "currency": "USD",
+                "p_amt": 102,
+                "d_amt": 102
+            }
+        ],
+        "radius": 5000
+    },
+    {
+        "lat": 40.349281,
+        "lng": 0.2865266,
+        "name": "New Cluster 0",
+        "p2p": false,
+        "prices": [
+            {
+                "airport": "BCN",
+                "amount": 232,
+                "currency": "USD",
+                "p_amt": 232,
+                "d_amt": 232
+            }
+        ],
+        "radius": 5000
+    },
+    {
+        "lat": 41.8276875,
+        "lng": 2.71522416,
+        "name": "New Cluster 27",
+        "p2p": false,
+        "prices": [
+            {
+                "airport": "BCN",
+                "amount": 120,
+                "currency": "USD",
+                "p_amt": 120,
+                "d_amt": 120
+            }
+        ],
+        "radius": 5000
+    },
+    {
+        "lat": 41.508921597900404,
+        "lng": 2.1017744545977775,
+        "name": "New Cluster 14",
+        "p2p": false,
+        "prices": [
+            {
+                "airport": "Barcelona",
+                "amount": 65.41,
+                "currency": "USD",
+                "p_amt": 65.41,
+                "d_amt": 65.41
+            }
+        ],
+        "radius": 5000
+    },
+    {
+        "lat": 41.2829284667969,
+        "lng": 1.72305500507355,
+        "name": "New Cluster 8",
+        "p2p": false,
+        "prices": [
+            {
+                "airport": "BCN",
+                "amount": 38,
+                "currency": "USD",
+                "p_amt": 38,
+                "d_amt": 38
+            }
+        ],
+        "radius": 5000
+    },
+    {
+        "lat": 41.3100879,
+        "lng": 1.81239462,
+        "name": "New Cluster 9",
+        "p2p": false,
+        "prices": [
+            {
+                "airport": "BCN",
+                "amount": 62,
+                "currency": "USD",
+                "p_amt": 62,
+                "d_amt": 62
+            }
+        ],
+        "radius": 5000
+    },
+    {
+        "lat": 41.64274733012695,
+        "lng": 2.7270972681958,
+        "name": "New Cluster 23",
+        "p2p": false,
+        "prices": [
+            {
+                "airport": "BCN",
+                "amount": 79.01,
+                "currency": "USD",
+                "p_amt": 79.01,
+                "d_amt": 79.01
+            }
+        ],
+        "radius": 5000
+    },
+    {
+        "lat": 41.0636859394043,
+        "lng": 1.048602783858795,
+        "name": "New Cluster 3",
+        "p2p": false,
+        "prices": [
+            {
+                "airport": "BCN",
+                "amount": 132.87,
+                "currency": "USD",
+                "p_amt": 132.87,
+                "d_amt": 132.87
+            }
+        ],
+        "radius": 5000
+    },
+    {
+        "lat": 41.6759766,
+        "lng": 2.79022539,
+        "name": "New Cluster 24",
+        "p2p": false,
+        "prices": [
+            {
+                "airport": "BCN",
+                "amount": 105,
+                "currency": "USD",
+                "p_amt": 105,
+                "d_amt": 105
+            }
+        ],
+        "radius": 5000
+    },
+    {
+        "lat": 41.72983287370605,
+        "lng": 2.9403284164752197,
+        "name": "New Cluster 25",
+        "p2p": false,
+        "prices": [
+            {
+                "airport": "BCN",
+                "amount": 120.31,
+                "currency": "USD",
+                "p_amt": 120.31,
+                "d_amt": 120.31
+            }
+        ],
+        "radius": 5000
+    },
+    {
+        "lat": 41.4931564331055,
+        "lng": 2.18187093734741,
+        "name": "New Cluster 15",
+        "p2p": false,
+        "prices": [
+            {
+                "airport": "BCN",
+                "amount": 48,
+                "currency": "USD",
+                "p_amt": 48,
+                "d_amt": 48
+            }
+        ],
+        "radius": 5000
+    },
+    {
+        "lat": 41.1701254,
+        "lng": 1.4706685,
+        "name": "New Cluster 4",
+        "p2p": false,
+        "prices": [
+            {
+                "airport": "BCN",
+                "amount": 87,
+                "currency": "USD",
+                "p_amt": 87,
+                "d_amt": 87
+            }
+        ],
+        "radius": 5000
+    },
+    {
+        "lat": 42.542445,
+        "lng": 1.7281864,
+        "name": "New Cluster 32",
+        "p2p": false,
+        "prices": [
+            {
+                "airport": "BCN",
+                "amount": 220,
+                "currency": "USD",
+                "p_amt": 220,
+                "d_amt": 220
+            }
+        ],
+        "radius": 5000
+    },
+    {
+        "lat": 41.5381108,
+        "lng": 2.44471755,
+        "name": "New Cluster 16",
+        "p2p": false,
+        "prices": [
+            {
+                "airport": "BCN",
+                "amount": 62,
+                "currency": "USD",
+                "p_amt": 62,
+                "d_amt": 62
+            }
+        ],
+        "radius": 5000
+    },
+    {
+        "lat": 41.191691149873044,
+        "lng": 1.576078046122986,
+        "name": "New Cluster 5",
+        "p2p": false,
+        "prices": [
+            {
+                "airport": "BCN",
+                "amount": 83.1,
+                "currency": "USD",
+                "p_amt": 83.1,
+                "d_amt": 83.1
+            }
+        ],
+        "radius": 5000
+    },
+    {
+        "lat": 41.21573971223145,
+        "lng": 1.69516050210289,
+        "name": "New Cluster 6",
+        "p2p": false,
+        "prices": [
+            {
+                "airport": "BCN",
+                "amount": 70.21,
+                "currency": "USD",
+                "p_amt": 70.21,
+                "d_amt": 70.21
+            }
+        ],
+        "radius": 5000
+    },
+    {
+        "lat": 41.9794006347656,
+        "lng": 2.8214259147644,
+        "name": "New Cluster 30",
+        "p2p": false,
+        "prices": [
+            {
+                "airport": "BCN",
+                "amount": 129,
+                "currency": "USD",
+                "p_amt": 129,
+                "d_amt": 129
+            }
+        ],
+        "radius": 5000
+    },
+    {
+        "lat": 41.3833312988281,
+        "lng": 2.06666159629822,
+        "name": "New Cluster 11",
+        "p2p": false,
+        "prices": [
+            {
+                "airport": "BCN",
+                "amount": 36.41,
+                "currency": "USD",
+                "p_amt": 36.41,
+                "d_amt": 36.41
+            }
+        ],
+        "radius": 5000
+    },
+    {
+        "lat": 41.5783404,
+        "lng": 2.5346892,
+        "name": "New Cluster 19",
+        "p2p": false,
+        "prices": [
+            {
+                "airport": "BCN",
+                "amount": 85,
+                "currency": "USD",
+                "p_amt": 85,
+                "d_amt": 85
+            }
+        ],
+        "radius": 5000
+    },
+    {
+        "lat": 41.508921597900404,
+        "lng": 2.1017744545977775,
+        "name": "New Cluster 14",
+        "p2p": false,
+        "prices": [
+            {
+                "airport": "BCN",
+                "amount": 52.33,
+                "currency": "USD",
+                "p_amt": 52.33,
+                "d_amt": 52.33
+            }
+        ],
+        "radius": 5000
+    },
+    {
+        "lat": 41.5889701843262,
+        "lng": 2.58038902282715,
+        "name": "New Cluster 20",
+        "p2p": false,
+        "prices": [
+            {
+                "airport": "BCN",
+                "amount": 85,
+                "currency": "USD",
+                "p_amt": 85,
+                "d_amt": 85
+            }
+        ],
+        "radius": 5000
+    },
+    {
+        "lat": 41.904136300000005,
+        "lng": 3.17417118,
+        "name": "New Cluster 28",
+        "p2p": false,
+        "prices": [
+            {
+                "airport": "BCN",
+                "amount": 158.33,
+                "currency": "USD",
+                "p_amt": 158.33,
+                "d_amt": 158.33
+            }
+        ],
+        "radius": 5000
+    },
+    {
+        "lat": 41.495077020917975,
+        "lng": 2.333720406038942,
+        "name": "New Cluster 13",
+        "p2p": false,
+        "prices": [
+            {
+                "airport": "BCN",
+                "amount": 55.76,
+                "currency": "USD",
+                "p_amt": 55.76,
+                "d_amt": 55.76
+            }
+        ],
+        "radius": 5000
+    },
+    {
+        "lat": 41.5523452758789,
+        "lng": 2.24775385856628,
+        "name": "New Cluster 17",
+        "p2p": false,
+        "prices": [
+            {
+                "airport": "BCN",
+                "amount": 63.33,
+                "currency": "USD",
+                "p_amt": 63.33,
+                "d_amt": 63.33
+            }
+        ],
+        "radius": 5000
+    },
+    {
+        "lat": 41.8065852,
+        "lng": 3.06065675,
+        "name": "New Cluster 26",
+        "p2p": false,
+        "prices": [
+            {
+                "airport": "BCN",
+                "amount": 133.66,
+                "currency": "USD",
+                "p_amt": 133.66,
+                "d_amt": 133.66
+            }
+        ],
+        "radius": 5000
+    },
+    {
+        "lat": 42.05113395,
+        "lng": 3.18698674,
+        "name": "New Cluster 31",
+        "p2p": false,
+        "prices": [
+            {
+                "airport": "BCN",
+                "amount": 175,
+                "currency": "USD",
+                "p_amt": 175,
+                "d_amt": 175
+            }
+        ],
+        "radius": 5000
+    },
+    {
+        "lat": 41.2596817016602,
+        "lng": 1.77579200267792,
+        "name": "New Cluster 7",
+        "p2p": false,
+        "prices": [
+            {
+                "airport": "BCN",
+                "amount": 73.65,
+                "currency": "USD",
+                "p_amt": 73.65,
+                "d_amt": 73.65
+            }
+        ],
+        "radius": 5000
+    },
+    {
+        "lat": 42.5747985839844,
+        "lng": 1.48184597492218,
+        "name": "New Cluster 33",
+        "p2p": false,
+        "prices": [
+            {
+                "airport": "BCN",
+                "amount": 232,
+                "currency": "USD",
+                "p_amt": 232,
+                "d_amt": 232
+            }
+        ],
+        "radius": 5000
+    },
+    {
+        "lat": 41.6061935424805,
+        "lng": 2.28708910942078,
+        "name": "New Cluster 22",
+        "p2p": false,
+        "prices": [
+            {
+                "airport": "BCN",
+                "amount": 60,
+                "currency": "USD",
+                "p_amt": 60,
+                "d_amt": 60
+            }
+        ],
+        "radius": 5000
+    },
+    {
+        "lat": 40.9909210205078,
+        "lng": 0.923717975616455,
+        "name": "New Cluster 2",
+        "p2p": false,
+        "prices": [
+            {
+                "airport": "BCN",
+                "amount": 138,
+                "currency": "USD",
+                "p_amt": 138,
+                "d_amt": 138
+            }
+        ],
+        "radius": 5000
+    },
+    {
+        "lat": 41.346954902807596,
+        "lng": 1.697156449779205,
+        "name": "New Cluster 10",
+        "p2p": false,
+        "prices": [
+            {
+                "airport": "BCN",
+                "amount": 68,
+                "currency": "USD",
+                "p_amt": 68,
+                "d_amt": 68
+            }
+        ],
+        "radius": 5000
+    },
+    {
+        "lat": 40.4679870605469,
+        "lng": 0.474730104207993,
+        "name": "New Cluster 1",
+        "p2p": false,
+        "prices": [
+            {
+                "airport": "BCN",
+                "amount": 210,
+                "currency": "USD",
+                "p_amt": 210,
+                "d_amt": 210
+            }
+        ],
+        "radius": 5000
+    },
+    {
+        "lat": 41.4134483337402,
+        "lng": 2.01824259757996,
+        "name": "New Cluster 12",
+        "p2p": false,
+        "prices": [
+            {
+                "airport": "BCN",
+                "amount": 38,
+                "currency": "USD",
+                "p_amt": 38,
+                "d_amt": 38
+            }
+        ],
+        "radius": 5000
+    },
+    {
+        "lat": 41.9304389953613,
+        "lng": 2.25443339347839,
+        "name": "New Cluster 29",
+        "p2p": false,
+        "prices": [
+            {
+                "airport": "BCN",
+                "amount": 102,
+                "currency": "USD",
+                "p_amt": 102,
+                "d_amt": 102
+            }
+        ],
+        "radius": 5000
+    },
+    {
+        "lat": 40.349281,
+        "lng": 0.2865266,
+        "name": "New Cluster 0",
+        "p2p": false,
+        "prices": [
+            {
+                "airport": "BCN",
+                "amount": 232,
+                "currency": "USD",
+                "p_amt": 232,
+                "d_amt": 232
+            }
+        ],
+        "radius": 5000
+    },
+    {
+        "lat": 41.8276875,
+        "lng": 2.71522416,
+        "name": "New Cluster 27",
+        "p2p": false,
+        "prices": [
+            {
+                "airport": "BCN",
+                "amount": 120,
+                "currency": "USD",
+                "p_amt": 120,
+                "d_amt": 120
+            }
+        ],
+        "radius": 5000
+    },
+    {
+        "lat": 41.2829284667969,
+        "lng": 1.72305500507355,
+        "name": "New Cluster 8",
+        "p2p": false,
+        "prices": [
+            {
+                "airport": "BCN",
+                "amount": 38,
+                "currency": "USD",
+                "p_amt": 38,
+                "d_amt": 38
+            }
+        ],
+        "radius": 5000
+    },
+    {
+        "lat": 41.3100879,
+        "lng": 1.81239462,
+        "name": "New Cluster 9",
+        "p2p": false,
+        "prices": [
+            {
+                "airport": "BCN",
+                "amount": 62,
+                "currency": "USD",
+                "p_amt": 62,
+                "d_amt": 62
+            }
+        ],
+        "radius": 5000
+    }
+]
 
-    function splitByCountries(data) {
-      return data.flatMap(item => {
-        return item.countries.map(country => ({
-          countries: [country],
-          mapping: [...item.mapping] // 保持mapping引用独立
-        }));
-      });
+
+    let arr = []
+    for (let z of zones) {
+      let n = z.name
+      let index = arr.findIndex(o => o == n)
+
+      if (index != -1) {
+        debugger
+
+      }
+
+      arr.push(n)
     }
 
-    // 使用示例
-    const originalData = [
-      {
-        "countries": ["MYS", "SGP"],
-        "mapping": [
-          { "elife": "1", "china_ctrip_api": 146, "max": 3, "loggage": 2 },
-          // ...其他mapping项
-        ]
-      }
-    ];
-
-    const splitData = splitByCountries(originalData);
-    console.log(splitData);
+    console.log(arr);
 
 
   </script>
