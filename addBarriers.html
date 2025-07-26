@@ -1,35 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-
 <body>
     <div class="btn">btn</div>
-
     <script>
 
         let btn = document.querySelector('.btn')
         btn.addEventListener('click', () => {
             let isCircle = false
             let barriers = []
-
-            let points = dataHandler(d)
+            let points = []
+            for (let item of d) {
+                points.push({
+                    lat: item[0],
+                    lng: item[1],
+                })
+            }
             let len = points.length
-            debugger
             for (let i = 0; i < len; i++) {
                 let { lat: fromLat, lng: fromLng } = points[i]
                 let j = i + 1
-
                 let obj = {
                     a_lat: fromLat,
                     a_lng: fromLng,
                     a_cross: 0,
                 }
-
                 let nextObj = points[j]
                 if (nextObj) {
                     let { lat: toLat, lng: toLng } = nextObj
@@ -52,43 +51,11 @@
         })
 
 
-
-
-
-
         let d = [
-            [10.758279657664508, 103.56887271027074],
-            [10.62613954859856, 103.46173011893418],
-            [10.46814102931175, 103.64594977852815]
+            [39.32177105510385, -75.39543447515226],
+            [38.217131086342434, -74.56339099712956]
         ]
-
-
-
-        let points = [
-            // {
-            //     "lat": 20.601913388367247,
-            //     "lng": -86.71756081445311
-            // }
-        ]
-
-
-        function dataHandler(d) {
-            points = []
-
-            for(let item of d){
-                points.push({
-                    lat:item[0],
-                    lng:item[1],
-                }) 
-            }
-            return points
-        }
-
 
     </script>
-
-
-
 </body>
-
 </html>

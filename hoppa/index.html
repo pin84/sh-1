@@ -44,53 +44,92 @@
     methods: {
 
       async matchZones() {
-        console.log(barcelonaPrice);
 
-        let pricingJson = await getLastPricingJsonBySvcId(urlDev, 66383)
-        console.log(JSON.parse(JSON.stringify(pricingJson)));
+        let z2z = []
 
-        let { vehicleClasses, zones, serviceArea: { id } } = pricingJson
+        for (let [fleetIdDev, v] of Object.entries(elifeZones)) {
+          let { elifePrice } = v
 
-        for (let zone of barcelonaPrice) {
-          let from = zone['From Zone']
-          let to = zone['To Zone']
-          let toLatLng = zone['To Cluster Center']
+          let pricingJson = await getLastPricingJsonBySvcId(urlDev, fleetIdDev)
+          console.log(JSON.parse(JSON.stringify(pricingJson)));
 
-          if (to.includes('New Cluster') && from == 'BCN') {
+          let { vehicleClasses: vc, zones: zs, serviceArea: { id }, airports } = pricingJson
+
+          let vehicleClasses = JSON.parse(JSON.stringify(vc))
+          let zones = JSON.parse(JSON.stringify(zs))
+
+          for (let zone of elifePrice) {
+            let from = zone['From Zone']
+            let to = zone['To Zone']
+
+            let airportInfoObj = await getAirport(from, to)
+            let { code: airportSearchResCode } = airportInfoObj
+            if (airportSearchResCode > 0) {
+              z2z.push(zone)
+              continue
+            }
+            let { isPickup, airportInfo } = airportInfoObj
+            let airportCode = isPickup ? from : to
+
+            let airportIndex = airports.findIndex(a => a == airportCode)
+
+
+
+            let toLatLng = zone['To Cluster Center']
+
+
             let latlng = toLatLng.slice(1, -1).split(',')
             let lat = Number(latlng[0])
             let lng = Number(latlng[1])
             let p = zone['Final Prices Elife Vehicles'].replace(/'/g, '"')
+            console.log(p);
+
             let vPrices = JSON.parse(p)
             let prices = []
             for (let [k, v] of Object.entries(vPrices)) {
               let vehicle = vehicleList.find(v => v.vehicle_name == k)
-              if (!shareShurleIds.includes(Number(vehicle.vehicle_id))) {
-                prices.push(v)
+              if (!vehicle) {
               }
+              prices.push(v)
+              // if (!shareShurleIds.includes(Number(vehicle.vehicle_id))) {
+              // }
             }
 
+
+
             let minPrice = Math.min(...prices)
-            zones.push({
-              lat,
-              lng,
-              "name": to,
-              "p2p": false,
-              "prices": [
-                {
-                  "airport": from,
-                  "amount": minPrice,
-                  "currency": "USD",
-                  "p_amt": minPrice,
-                  "d_amt": minPrice
-                }
-              ],
-              "radius": 5000,
-            })
+            let zoneIndex = zones.findIndex(o => o.name == to)
+            if (zoneIndex == -1 && to.includes('New Cluster')) {
+              zones.push({
+                lat,
+                lng,
+                "name": to,
+                "p2p": false,
+                "prices": [
+                  {
+                    "airport": from,
+                    "amount": minPrice,
+                    "currency": "USD",
+                    "p_amt": minPrice,
+                    "d_amt": minPrice
+                  }
+                ],
+                "radius": 5000,
+              })
+            } else {
+              zones[zoneIndex]['prices'][airportIndex]['amount'] = minPrice
+              zones[zoneIndex]['prices'][airportIndex]['p_amt'] = minPrice
+              zones[zoneIndex]['prices'][airportIndex]['d_amt'] = minPrice
+            }
+
+
+            let len = zones.length - 1
+            if (zoneIndex != -1) {
+              len = zoneIndex
+            }
 
 
 
-            let len = zones.length
 
             for (let [k, value] of Object.entries(vPrices)) {
               let { vehicle_id } = vehicleList.find(v => v.vehicle_name == k)
@@ -107,11 +146,11 @@
                   "hourly_percent": 0,
                   "percent_appendix": [
                     {
-                      field: `zones.${len - 1}.prices.0.p_amt`,
+                      field: `zones.${len}.prices.0.p_amt`,
                       delta_amount: delta_amount
                     },
                     {
-                      field: `zones.${len - 1}.prices.0.d_amt`,
+                      field: `zones.${len}.prices.0.d_amt`,
                       delta_amount: delta_amount
                     },
                   ],
@@ -125,12 +164,12 @@
                 }
                 let delta_amount = Number((value - minPrice).toFixed(2))
 
-                let pAmtIdx = v.percent_appendix.findIndex(o => o.field == `zones.${len - 1}.prices.0.p_amt`)
-                let dAmtIdx = v.percent_appendix.findIndex(o => o.field == `zones.${len - 1}.prices.0.d_amt`)
+                let pAmtIdx = v.percent_appendix.findIndex(o => o.field == `zones.${len}.prices.0.p_amt`)
+                let dAmtIdx = v.percent_appendix.findIndex(o => o.field == `zones.${len}.prices.0.d_amt`)
                 if (pAmtIdx == -1) {
                   v.percent_appendix.push(
                     {
-                      field: `zones.${len - 1}.prices.0.p_amt`,
+                      field: `zones.${len}.prices.0.p_amt`,
                       delta_amount: delta_amount
                     }
                   )
@@ -140,7 +179,7 @@
                 if (dAmtIdx == -1) {
                   v.percent_appendix.push(
                     {
-                      field: `zones.${len - 1}.prices.0.d_amt`,
+                      field: `zones.${len}.prices.0.d_amt`,
                       delta_amount: delta_amount
                     }
                   )
@@ -149,17 +188,33 @@
                 }
               }
             }
+
+            if (to == 'Port de Barcelona') {
+              console.log(vehicleClasses);
+              console.log(zones);
+
+            }
+
           }
+
+          pricingJson['zones'] = zones
+          pricingJson['vehicleClasses'] = vehicleClasses
+
+          let pricingStr = JSON.stringify(pricingJson)
+
+          console.log(pricingStr);
+          let aa = JSON.parse(pricingStr)
+
+          for (let z of z2z) {
+
+          }
+
+          let updateFleet = await insertAndUpdate(urlDev, pricingStr, id)
         }
 
-        let pricingStr = JSON.stringify(pricingJson)
-        console.log(pricingStr);
 
-        let aa = JSON.parse(pricingStr)
 
-        debugger
-        
-        // let updateFleet = await insertAndUpdate(urlDev, pricingStr, id)
+
       },
 
 

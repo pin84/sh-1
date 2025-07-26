@@ -122,15 +122,17 @@ async function getCurrencyRates(fromCur, toCur) {
 
 async function getAirport(from_place, to_place) {
 
-  let fromAirportInfo = caches[from_place]
+  let fromAirportInfo = caches[from_place] || {}
 
-  if (!fromAirportInfo) {
+  debugger
+
+  if (Object.keys(fromAirportInfo).length === 0 && from_place.length == 3) {
     fromAirportInfo = await getAirportInfo(urlProd, from_place)
     caches[from_place] = fromAirportInfo
   }
-  let toAirportInfo = caches[to_place]
+  let toAirportInfo = caches[to_place] || {}
 
-  if (!toAirportInfo) {
+  if (Object.keys(toAirportInfo).length === 0 && to_place.length == 3) {
     toAirportInfo = await getAirportInfo(urlProd, to_place)
     caches[to_place] = toAirportInfo
   }

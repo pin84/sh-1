@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="../vue/index.css">
+  <link rel="stylesheet" href="../vue/app.css">
+  <script src="../vue/vue.global.js"></script>
+  <script src="../vue/index.full.js"></script>
+  <script src="../tools/components.js"></script>
+  <script src="../tools/index.js"></script>
+</head>
+<body>
+  <div id="app">
+       <el-button type="primary">Primary</el-button>
+  </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+<script src="./data.js"></script>
+<script setup>
+  const { createApp, ref, reactive, computed, watch, defineComponent, onMounted } = Vue;
+  const stage = 'PROD' //PROD,DEV
+  const url = stage == 'PROD' ? urlProd : urlDev
+
+
+  const app = createApp({
+    // components: { Parent },
+
+    methods: {
+   
+
+    },
+
+    setup() {
+      const activeName = ref('first')
+      const inputValueRouteIds = ref('');
+      const copySvc = ref({
+        fromSvcId: '73215', //89885,89777
+        fromEnv: 'prod',
+        toFleet: 'dev-elife'
+      })
+
+      const env = ref(['dev', 'prod'])
+
+      const partnerIds = ref([
+        {
+          label: 'booking',
+          id: 2
+        },
+        {
+          label: 'mozio',
+          id: 3
+        },
+        {
+          label: 'cityairporttaxi',
+          id: 5
+        },
+        {
+          label: 'jayride',
+          id: 4
+        },
+        {
+          label: 'etg',
+          id: 2692
+        },
+        {
+          label: 'klook',
+          id: 28
+        },
+        {
+          label: 'ctrip',
+          id: 2621
+        },
+        {
+          label: 'hoppa',
+          id: 2588
+        },
+        {
+          label: 'prod-elife',
+          id: 13
+        },
+        {
+          label: 'dev-elife',
+          id: 13
+        },
+        {
+          label: 'dev-cityairporttaxi',
+          id: 5,
+          stage: 'DEV'
+        }
+      ])
+
+
+
+
+
+
+      return {
+        partnerIds,
+        copySvc,
+        activeName,
+        env
+
+      }
+    },
+
+
+
+
+  });
+
+
+
+
+
+  app.use(ElementPlus);
+
+  app.mount("#app");
+</script>
+</html>

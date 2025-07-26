@@ -9,7 +9,7 @@
     <input class="switch-box infant-switch" type="checkbox">
     <script src="./data.js"></script>
     <script>
-
+        let i = 0
         const R = 6371;
         const SPEED = 50000 
         function calDistance(point1, point2) {
@@ -42,14 +42,20 @@
         const ridePickupPonter = { lat: 37.0219636, lng: 25.1152364 }
 
         let arr = []
-        for (let item of d) {
-            let { id, lat, lng } = item
-            let {distance,duration} = calDistance({ lat, lng }, ridePickupPonter)
-            arr.push({
-                id,
-                distance,
-                duration
-            })
+        for (let item of crawlRoutes) {
+            console.log(`----------${i++}-----`);
+            
+            let { id, start_place_lat:lat, start_place_lng:lng } = item
+            let sppRoute = sppRoutes.find(o=>o.id == id)
+            let {lat:sLat,lng:sLng} = JSON.parse(sppRoute.from_place_lat_lng)
+            debugger
+            let {distance,duration} = calDistance({ lat, lng }, {lat:sLat,lng:sLng})
+
+            debugger
+            if(distance > 8000){
+                console.log({ lat, lng }, {lat:sLat,lng:sLng});
+                arr.push(id)
+            }
         }
         console.log(arr);
         

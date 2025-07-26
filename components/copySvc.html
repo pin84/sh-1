@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="../vue/index.css">
+  <link rel="stylesheet" href="../vue/app.css">
+  <script src="../vue/vue.global.js"></script>
+  <script src="../vue/index.full.js"></script>
+  <script src="../tools/components.js"></script>
+  <script src="../tools/index.js"></script>
+</head>
+<body>
+  <div id="app">
+    <el-tabs v-model="activeName" class="demo-tabs">
+      <el-tab-pane label="copySvcProd2Dev" name="first">
+        <el-form :model="copySvc" label-width="80px">
+          <el-form-item label="from fleet">
+            <el-input v-model="copySvc.fromSvcId"></el-input>
+          </el-form-item>
+          <el-form-item label="from env">
+            <el-select v-model="copySvc.fromEnv" placeholder="请选择">
+              <el-option v-for="(item,index) in env" :key="index" :label="item" :value="item">
+              </el-option>
+            </el-select>
+          </el-form-item>
+          <el-form-item label="to fleet">
+            <el-select v-model="copySvc.toFleet" placeholder="请选择">
+              <el-option v-for="(item,index) in partnerIds" :key="index" :label="item.label" :value="item.label">
+              </el-option>
+            </el-select>
+          </el-form-item>
+        </el-form>
+        <el-button class="btn" type="primary" @click="copySvcProd2Dev">copySvcProd2Dev</el-button>
+      </el-tab-pane>
+      <el-tab-pane label="addBarriers" name="second">
+        <el-form :model="secondForm" label-width="auto" style="max-width: 600px">
+          <el-form-item label="lat lng">
+            <el-input v-model="secondForm.latLng" type="textarea" />
+          </el-form-item>
+          <el-form-item label="to fleet">
+            <el-input v-model="secondForm.fleets" />
+          </el-form-item>
+          <el-form-item>
+            <el-button type="primary" @click="addBarriers">addBarriers</el-button>
+            <el-button>Cancel</el-button>
+          </el-form-item>
+        </el-form>
+      </el-tab-pane>
+      <el-tab-pane label="addB" name="third">
+        <el-form :model="thirdForm" label-width="auto" style="max-width: 600px">
+          <el-form-item label="lat lng">
+            <el-input v-model="thirdForm.latLng" type="textarea" />
+          </el-form-item>
+          <el-form-item label="to fleet">
+            <el-input v-model="thirdForm.fleets" />
+          </el-form-item>
+          <el-form-item>
+            <el-button type="primary" @click="addBarriers">addBarriers</el-button>
+            <el-button>Cancel</el-button>
+          </el-form-item>
+        </el-form>
+      </el-tab-pane>
+    </el-tabs>
+  </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+<script src="./data.js"></script>
+<script setup>
+  const { createApp, ref, reactive, computed, watch, defineComponent, onMounted } = Vue;
+  const stage = 'PROD' //PROD,DEV
+  const url = stage == 'PROD' ? urlProd : urlDev
+
+
+  const app = createApp({
+    methods: {
+      async copyJsonToOtherPartner(){
+
+
+      },
+
+      // 
+      async copySvcProd2Dev() {
+
+        let { fromSvcId, fromEnv, toFleet } = this.copySvc
+        let fromIds = fromSvcId.split(',')
+
+        let fromUrl = fromEnv == 'prod' ? urlProd : urlDev
+        debugger
+        for (let id of fromIds) {
+          let fromPricingJson = await getLastPricingJsonBySvcId(fromUrl, id)
+
+
+          let deepcopyFromPricingJson = JSON.parse(JSON.stringify(fromPricingJson))
+          console.log(deepcopyFromPricingJson);
+
+          let { airports, serviceArea } = fromPricingJson
+
+
+          let { id: pid, stage: toFleetStage } = this.partnerIds.find(o => o.label == toFleet)
+
+          let toUrl = toFleetStage == 'DEV' ? urlDev : urlProd
+          debugger
+
+          let { parentFleetId, parentFleetName } = getPatnerInfo(pid, toFleetStage)
+          debugger
+          //get fleet by airport
+
+          let fleet_id = null
+          for (let airport of airports) {
+            let res = await getFleetIdAndPricingByAirport(toUrl, airport, parentFleetId)
+            let fid = res.fleet_id || null
+            console.log(fid);
+            debugger
+
+            if (fid) {
+              fleet_id = fid
+              break
+            }
+          }
+          debugger
+          if (!fleet_id) {
+            let { id, lat, lng, name, radius } = serviceArea
+            // insert fleet 
+            let insertFleetRes = await fetchData({
+              url: toUrl,
+              method: 'POST',
+              data: {
+                "sql": 134679330,
+                "version": "3.0",
+                "parent_fleet_id": parentFleetId,
+                name,
+                radius,
+                lat,
+                lng
+              }
+            })
+            fleet_id = insertFleetRes['Lastrow id']
+          }
+
+          // insert airport_fleet 
+          for (let airport of airports) {
+            let insertAirportFleetRes = await fetchData({
+              url: toUrl,
+              method: 'POST',
+              data: {
+                "sql": 134679330,
+                "version": "4.088",
+                airportCode: airport,
+                fleet_id,
+                parent_fleet_id: parentFleetId,
+              }
+            })
+
+            if (insertAirportFleetRes) {
+              let lastAirportFleetId = insertAirportFleetRes['Lastrow id']
+              debugger
+            }
+          }
+
+
+          debugger
+          // pricing json handle
+          fromPricingJson.serviceArea['parent_fleet_id'] = parentFleetId
+          fromPricingJson.serviceArea['parent_fleet_name'] = parentFleetName
+          fromPricingJson.serviceArea['id'] = fleet_id
+          fromPricingJson['service_area_pricing_id'] = null
+          delete fromPricingJson['use_google_api']
+
+          console.log(fromPricingJson);
+
+          debugger
+          let pricingStr = JSON.stringify(fromPricingJson).replace(/\'/g, '\\\'')
+          let updateFleet = await insertAndUpdate(toUrl, pricingStr, fleet_id)
+
+
+
+          console.log('-------------end---------');
+
+        }
+
+      },
+
+      async addBarriers() {
+        let { latLng, fleets } = this.secondForm
+        let ll = latLng.split('/')
+        let d = ll.map(item => {
+          let [lat, lng] = item.split(',')
+          return [parseFloat(lat.trim()), parseFloat(lng.trim())]
+        })
+        debugger
+        const handler = (d) => {
+          let isCircle = false
+          let barriers = []
+          let points = []
+          for (let item of d) {
+            points.push({
+              lat: item[0],
+              lng: item[1],
+            })
+          }
+          let len = points.length
+          for (let i = 0; i < len; i++) {
+            let { lat: fromLat, lng: fromLng } = points[i]
+            let j = i + 1
+            let obj = {
+              a_lat: fromLat,
+              a_lng: fromLng,
+              a_cross: 0,
+            }
+            let nextObj = points[j]
+            if (nextObj) {
+              let { lat: toLat, lng: toLng } = nextObj
+              obj['b_lat'] = toLat
+              obj['b_lng'] = toLng
+              obj['b_cross'] = 0
+            } else {
+              if (isCircle) {
+                barriers.push(Object.assign({}, obj, {
+                  b_lat: points[0].lat,
+                  b_lng: points[0].lng,
+                  b_cross: 0,
+                }))
+              }
+              continue
+            }
+            barriers.push(obj)
+          }
+
+          return barriers
+        }
+
+        let barriers = handler(d)
+
+        let fleetIds = fleets.split(',')
+
+        for (let id of fleetIds) {
+          let fromPricingJson = await getLastPricingJsonBySvcId(url, id)
+          let barrier = fromPricingJson.barriers || []
+          barrier.push(...barriers)
+          fromPricingJson['barriers'] = barrier
+          let pricingStr = JSON.stringify(fromPricingJson).replace(/\'/g, '\\\'')
+          let updateFleet = await insertAndUpdate(url, pricingStr, id)
+
+
+          debugger
+        }
+
+      }
+    },
+
+    setup() {
+      const activeName = ref('second')
+      const inputValueRouteIds = ref('');
+      const copySvc = ref({
+        // fromSvcId: '66398,66397,66401,66402,66504,66400', // DEV 2 PROD
+        fromSvcId: '66402,66504,66400', //prod 2 dev
+        fromEnv: 'dev',
+        toFleet: 'dev-elife'
+      })
+
+      const secondForm = reactive({
+        latLng: '49.379980988877435, -124.08890998872278/48.66511715852646, -122.68919016519571/48.1881462334005,-123.2045096582983/48.71329780377251, -125.34098447890138',
+        fleets: '55,52823,56239,63136,69016,73723,76747,79921,83989,86649,90956'
+      })
+
+      const thirdForm = reactive({
+        latLng: '49.379980988877435, -124.08890998872278/48.66511715852646, -122.68919016519571/48.1881462334005,-123.2045096582983/48.71329780377251, -125.34098447890138',
+        fleets: '55,52823,56239,63136,69016,73723,76747,79921,83989,86649,90956'
+      })
+
+      const env = ref(['dev', 'prod'])
+
+      const partnerIds = ref([
+        {
+          label: 'booking',
+          id: 2
+        },
+        {
+          label: 'mozio',
+          id: 3
+        },
+        {
+          label: 'cityairporttaxi',
+          id: 5
+        },
+        {
+          label: 'jayride',
+          id: 4
+        },
+        {
+          label: 'etg',
+          id: 2692
+        },
+        {
+          label: 'klook',
+          id: 28
+        },
+        {
+          label: 'ctrip',
+          id: 2621
+        },
+        {
+          label: 'hoppa',
+          id: 2588,
+          stage: 'prod'
+        },
+        {
+          label: 'prod-elife',
+          id: 13
+        },
+        {
+          label: 'dev-elife',
+          id: 13
+        },
+        {
+          label: 'dev-cityairporttaxi',
+          id: 5,
+          stage: 'DEV'
+        },
+        {
+          label: 'dev-hoppa',
+          id: 2588,
+          stage: 'DEV'
+        },
+        {
+          label: 'dev-booking',
+          id: 2,
+          stage: 'DEV'
+        }
+      ])
+
+
+
+
+
+
+      return {
+        thirdForm,
+        partnerIds,
+        copySvc,
+        activeName,
+        env,
+        secondForm
+
+      }
+    },
+
+
+
+
+  });
+
+
+
+
+
+  app.use(ElementPlus);
+
+  app.mount("#app");
+</script>
+</html>

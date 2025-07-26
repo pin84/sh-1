@@ -1,16 +1,14 @@
-
-
-
 const ses = 'YM9zkRVEF7DYYr1JFhgAyKobXMYWYgnfuBRqEX8y5ePR7hykxUVrSdXVM9rrIWXB9IwfUBQFMVeS7bCHMTwXNy0UqpSR9DFXnayZVBCkgGmXn0fGFhtNT8g729VBq4CO'
 const sesDev = 'UEc1L5eErGh7DFkDh6wrQ46IVQt0d8QYQfquN6udTq7t0ETpcA7lmlXrUXJC2t66teluAqg47qpGznRfaVc6d4b9OHAJilwsE1e3wMYhvDdkfEgCJzYAaCe59gRYg8Sm'
 
 async function getFleetIdAndPricingByAirport(url, airport, parent_fleet_id) {
+  debugger
   let cachKey = `${parent_fleet_id}-${airport}`
   let res = caches[cachKey]
   if (res) {
     return res
   }
-
+  debugger
   res = await fetchData({
     url,
     method: "POST",
@@ -22,9 +20,30 @@ async function getFleetIdAndPricingByAirport(url, airport, parent_fleet_id) {
     }
   })
   caches[cachKey] = res
+  
 
-  if (!res) {
-    return
+  let { pricing_id, fleet_id, pricing } = res
+  if(!fleet_id){
+    return {}
+  }
+  if (!pricing_id && !pricing) {
+    pricing = await getLatPricingJsonAndFleeNotJsonId(url, fleet_id)
+  }
+
+  if (!pricing) {
+    let fleetInfo = await fetchData({
+      url,
+      method: 'POST',
+      data: {
+        sql: 134679330,
+        version: '4.090',
+        airportCode: airport,
+        parent_fleet_id
+      }
+    })
+    res['pricing'] = {}
+    res['pricing']['serviceArea'] = fleetInfo
+    res['pricing'] = JSON.stringify( res['pricing'])
   }
   return res
 }
@@ -377,7 +396,7 @@ function getDemandSupply(partner_id) {
 
 function getPatnerInfo(partnerId, stage) {
   let partnerInfo = {}
-  let isProd = stage == 'PROD'
+  let isProd = stage.toUpperCase() == 'PROD'
   switch (partnerId) {
     case 3:
       partnerInfo = {
@@ -423,8 +442,8 @@ function getPatnerInfo(partnerId, stage) {
         platform_name: 'cityAirportTaxis',
         parentFleetName: 'CityAirportTaxisSupply',
         partner_id: 5,
-        demand_fleet_id: 193,
-        supply_fleet_id: 72105
+        demand_fleet_id: isProd ? 193 : 125,
+        supply_fleet_id:  isProd ? 72105 : 63369,
       }
       break;
     case 2:
@@ -493,6 +512,16 @@ function getPatnerInfo(partnerId, stage) {
         partner_id: 2693,
         demand_fleet_id: 58057,
         supply_fleet_id: 15
+      }
+      break;
+    case 13:
+      partnerInfo = {
+        parentFleetId: isProd ? 15 : 40,
+        platform_name: 'Elife',
+        parentFleetName: 'Elife',
+        partner_id: 13,
+        demand_fleet_id: isProd ? 239 : 718,
+        supply_fleet_id: isProd ? 15 : 40
       }
       break;
     default:

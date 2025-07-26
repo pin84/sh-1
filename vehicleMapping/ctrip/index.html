@@ -4,12 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Document</title>
-  <link rel="stylesheet" href="../../index.css">
-  <link rel="stylesheet" href="../../app.css">
-  <script src="../../vue.global.js"></script>
-  <script src="../../index.full.js"></script>
-  <script src="../../../components.js"></script>
-  <script src="../../index.js"></script>
+  <link rel="stylesheet" href="../../vue/index.css">
+  <link rel="stylesheet" href="../../vue/app.css">
+  <script src="../../vue/vue.global.js"></script>
+  <script src="../../vue/index.full.js"></script>
+  <script src="../../tools/components.js"></script>
+  <script src="../../tools/index.js"></script>
 </head>
 <body>
   <div id="app">
@@ -51,9 +51,80 @@
 
     methods: {
       async mapping() {
-        await this.mappingHandlSplit()
-        await this.createMapping()
-        await this.mappingHandlMerge()
+        let partner_id = 2621
+        let currentMapping = await this.getCurrentMapping(partner_id)
+        let { demand_fleet_id, supply_fleet_id, json: { vehicle_type_mapping } } = currentMapping
+        let splitMappingByCountry = this.splitByCountries(vehicle_type_mapping)
+
+        splitMappingByCountry.sort((a, b) => {
+          const countryA = a.countries[0] || '';
+          const countryB = b.countries[0] || '';
+          return countryA.localeCompare(countryB);
+        });
+
+        console.log('--1--', splitMappingByCountry);
+        let copyMapping = JSON.parse(JSON.stringify(splitMappingByCountry))
+
+        // get mapping by country
+        let countryMapping = await fetchData({
+          url, method: 'POST',
+          data: {
+            "sql": 134679330,
+            "version": "4.098",
+            demand_fleet_id,
+            supply_fleet_id
+          }
+        })
+
+        let coutryMappingJosn = countryMapping.results
+        debugger
+
+        let createSplitMapping = await this.createMapping(copyMapping, coutryMappingJosn)
+
+        createSplitMapping.sort((a, b) => {
+          const countryA = a.countries[0] || '';
+          const countryB = b.countries[0] || '';
+          return countryA.localeCompare(countryB);
+        });
+        console.log('--2--', createSplitMapping);
+        const merged = this.mergeCountriesByMapping(createSplitMapping)
+        currentMapping['json']['vehicle_type_mapping'] = merged
+
+        let mappingStr = JSON.stringify(currentMapping)
+        debugger
+        let res =  await this.insertMapping(mappingStr, demand_fleet_id, supply_fleet_id)
+        console.log(res);
+      },
+
+
+
+      async insertMapping(mappingStr, demand_fleet_id, supply_fleet_id) {
+        let res = await fetchData({
+          url, method: 'POST',
+          data: {
+            "sql": 134679330,
+            "version": "4.097",
+            demand_fleet_id,
+            supply_fleet_id,
+            "json": mappingStr
+          }
+        })
+
+        return res
+      },
+
+      async getCurrentMapping(partner_id) {
+        let res = await fetchData({
+          url,
+          method: "POST",
+          data: {
+            "sql": 134679330,
+            "version": "4.096",
+            partner_id
+          }
+        })
+        res['json'] = JSON.parse(res['json'])
+        return res
       },
 
       mergeCountriesByMapping(data) {
@@ -97,11 +168,13 @@
         });
       },
 
-      mappingHandlSplit() {
+      mappingHandlSplit(currentMapping) {
         let { vehicle_type_mapping } = currentMapping
         let split = this.splitByCountries(vehicle_type_mapping)
         currentMapping['vehicle_type_mapping'] = split
         console.log(currentMapping);
+
+        return currentMapping
       },
 
 
@@ -109,31 +182,21 @@
         let { vehicle_type_mapping } = currentMapping
         const merged = this.mergeCountriesByMapping(vehicle_type_mapping)
         currentMapping['vehicle_type_mapping'] = merged
-        console.log(JSON.stringify(currentMapping));
+        mappingMerged = JSON.stringify(currentMapping)
+        return mappingMerged
       },
 
-      async createMapping() {
+      async createMapping(vehicle_type_mapping, countryMapping) {
         let arr = []
-        for (let vm of dList) {
+        for (let vm of countryMapping) {
           let { country, json: mapping } = vm
           if (country == 'DEFAULT') {
           }
 
-
-
-          let { vehicle_type_mapping } = currentMapping
-          console.log(vehicle_type_mapping);
-
           let index = vehicle_type_mapping.findIndex(o => o.countries.includes(country))
           if (index != -1) {
-            debugger
             vehicle_type_mapping.splice(index, 1)
           }
-
-          console.log(vehicle_type_mapping);
-
-
-
 
           let obj = {
             countries: [country],
@@ -156,14 +219,12 @@
           for (let item of mapping) {
             let { vehicle_class, x_vehicle_class } = item
             let vehicle = countryVehicle.find(v => v.vehicle_name == vehicle_class)
-            let ctripVehicle = x_ctrip.find(v => v['携程车型'] == x_vehicle_class)
+            let ctripVehicle = x_ctrip.find(v => v['携程车型'] == x_vehicle_class.replace(/\s/g, ''))
 
             if (!vehicle || !ctripVehicle) {
               debugger
             }
-
             let { max_luggage, max_passenger, o_max_luggage, o_max_passenger } = vehicle
-
             obj.mapping.push({
               "elife": `${vehicle.vehicle_id}`,
               "china_ctrip_api": Number(ctripVehicle['车型id']),
@@ -176,13 +237,9 @@
           if (obj.mapping.length > 0) {
             arr.push(obj);
           }
-
         }
-
-
-        currentMapping['vehicle_type_mapping'].push(...arr)
-        console.log(currentMapping);
-
+        vehicle_type_mapping.push(...arr)
+        return vehicle_type_mapping
       }
 
 

@@ -4,18 +4,18 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Document</title>
-  <link rel="stylesheet" href="./index.css">
-  <link rel="stylesheet" href="./app.css">
-  <script src="./vue.global.js"></script>
-  <script src="./index.full.js"></script>
-  <script src="../components.js"></script>
-  <script src="./index.js"></script>
+  <link rel="stylesheet" href="../vue/index.css">
+  <link rel="stylesheet" href="../vue/app.css">
+  <script src="../vue/vue.global.js"></script>
+  <script src="../vue/index.full.js"></script>
+  <script src="../tools/index.js"></script>
+  <script src="../tools/components.js"></script>
 </head>
 <body>
   <div id="app">
     <el-tabs v-model="activeName" class="demo-tabs">
       <el-tab-pane label="copy routes" name="first">
-        <el-form :model="form" label-width="auto" style="max-width: 600px">
+        <el-form :model="form" label-width="auto" style="max-width: 800px">
           <el-form-item label="Route ids">
             <el-input v-model="form.ids" type="textarea" />
           </el-form-item>
@@ -66,8 +66,17 @@
             <el-form-item label="from fleet">
               <el-input v-model="changePricingJsonForm.fromSvcId"></el-input>
             </el-form-item>
+            <el-form-item label="from env">
+              <el-select v-model="changePricingJsonForm.fromEnv" placeholder="请选择">
+                <el-option v-for="(item,index) in env" :key="index" :label="item" :value="item">
+                </el-option>
+              </el-select>
+            </el-form-item>
             <el-form-item label="to fleet">
-              <el-input v-model="changePricingJsonForm.toSvcId"></el-input>
+              <el-select v-model="changePricingJsonForm.toFleet" placeholder="请选择">
+                <el-option v-for="(item,index) in partnerIds" :key="index" :label="item.label" :value="item.id">
+                </el-option>
+              </el-select>
             </el-form-item>
             <el-form-item label="replace type">
               <el-checkbox-group v-model="changePricingJsonForm.type">
@@ -108,12 +117,13 @@
         <el-button class="btn" type="primary" @click="getPricingZonesByFleetId">getPricingZonesByFleetId</el-button>
         <el-button class="btn" type="primary" @click="hoppaRoutes2Elifesvc">hoppaRoutes2Elifesvc</el-button>
         <el-button class="btn" type="primary" @click="addSvc">addSvc</el-button>
+        <el-button class="btn" type="primary" @click="getIds">获取急单路线ID</el-button>
       </el-tab-pane>
     </el-tabs>
   </div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
-<script src="./data/d_tem.js"></script>
+<script src="./data/d_7_23.js"></script>
 <script setup>
   const { createApp, ref, reactive, computed, watch, defineComponent, onMounted } = Vue;
   const stage = 'PROD' //PROD,DEV
@@ -137,11 +147,10 @@
   let cache = {}
   let partnerJson = null
 
-  const route_type = 0 // 1:smart purchasing routes 
+  const route_type = 0 // 0:nomor, 2:smart purchasing routes 
   const batch = 0
-  const partnerId = 5
-  let dList = stage == 'PROD' ? tem_7_4 : []
-
+  const partnerId = 2
+  let dList = stage == 'PROD' ? bookingJiDan : []
 
 
 
@@ -149,6 +158,46 @@
     // components: { Parent },
 
     methods: {
+
+      
+
+      async getIds() {
+        let arr = []
+        for (let item of dList) {
+          console.log(`----${i++}--------`);
+          
+          let { from_zone, to_zone } = item
+          let res = await getRoute(url, from_zone, to_zone, 2)
+          let id = res.id || 0
+          if (!id) {
+            console.log(`----${i++}-------${from_zone}--${to_zone}--`);
+            continue
+          }
+          arr.push(id)
+        }
+        console.log(arr);
+      },
+
+      async syncLevel() {
+
+        for (let item of crawlRoutes) {
+          let { level } = item
+
+          console.log(`----${i++} -------------`);
+
+          let res = await fetch({
+            url,
+            method: 'POST',
+            data: {
+              sql: 134679330,
+              version: '4.079',
+              ids: idsStr,
+              cost: 1,
+              level: level,
+            }
+          })
+        }
+      },
 
       async addSvc() {
         let title = ['id', 'from_place', 'to_place', 'text', 'platform_name', 'servic area name', 'country', 'new platform_name']
@@ -185,7 +234,7 @@
         }
 
         let date = new Date()
-         saveCSV(`${date.getTime()}`, title, arr)
+        saveCSV(`${date.getTime()}`, title, arr)
       },
 
       async hoppaRoutes2Elifesvc() {
@@ -351,43 +400,55 @@
       },
 
       async changePricingJson() {
-        let { fromSvcId, toSvcId, type } = this.changePricingJsonForm
-        let op = await getPricingJsonBySvcId(url, fromSvcId)
-        let tp = await getPricingJsonBySvcId(url, toSvcId)
-        // console.log(JSON.parse(JSON.stringify(tp)));
-        // let replaceFields = ['zones']
-        // for (let item of type) {
-        //   tp[item] = op[item]
-        // }
+        let ids = [65801]
+        // let airprots = ['JTR', 'CHQ', 'CFU', 'HER', 'RHO', 'SKG', 'KGS', 'JMK']
+        let airprots = ['ATH', 'EFL']
 
-        op['serviceArea'] = tp['serviceArea']
-        delete op.service_area_pricing_id
-
-
-        // let tp ={}
-        // let toSvcId = 14147
-
-
-        let str = JSON.stringify(op)
-        str = str.replace(/\'/g, ' ')
-        console.log(JSON.parse(str));
-        let updateD = {
-          sql: 134678780,
-          version: '1.0',
-          pricing_str: str,
-          new_fleet_id: toSvcId
-        }
+        let { fromSvcIds, fromEnv, toFleet } = this.changePricingJsonForm
 
         debugger
-        // insert into service_area_pricing (service_area_id,pricing,effective_at,expire_at) 
-        // values  ({{new_fleet_id}},'{{pricing_str}}','2024-04-08 05:05:00','2037-12-31 23:59:59' );
-        // update fleet set service_area_pricing_id = last_insert_id() where id = {{new_fleet_id}} limit 1;
-        let res = await fetchData({
-          url,
-          method: 'POST',
-          data: updateD,
-          desc: 'update json'
-        })
+
+        for (let id of ids) {
+          let fromUrl = fromEnv == 'PROD' ? urlProd : urlDev
+          let fromPricing = await getLastPricingJsonBySvcId(fromUrl, id)
+
+          debugger
+          let { fleet_id: toSvcId, pricing: toPricing } = await getFleetIdAndPricingByAirport(url, airport, 91726)
+
+          debugger
+
+          let tp = JSON.parse(toPricing)
+
+
+          op['serviceArea'] = tp['serviceArea']
+          delete op.service_area_pricing_id
+
+          // let tp ={}
+          // let toSvcId = 14147
+
+
+          let str = JSON.stringify(op)
+          str = str.replace(/\'/g, ' ')
+          console.log(JSON.parse(str));
+          let updateD = {
+            sql: 134678780,
+            version: '1.0',
+            pricing_str: str,
+            new_fleet_id: toSvcId
+          }
+
+          debugger
+          // insert into service_area_pricing (service_area_id,pricing,effective_at,expire_at) 
+          // values  ({{new_fleet_id}},'{{pricing_str}}','2024-04-08 05:05:00','2037-12-31 23:59:59' );
+          // update fleet set service_area_pricing_id = last_insert_id() where id = {{new_fleet_id}} limit 1;
+          let res = await fetchData({
+            url,
+            method: 'POST',
+            data: updateD,
+            desc: 'update json'
+          })
+        }
+
 
         debugger
       },
@@ -1296,7 +1357,7 @@
       async updateRoute() {
         let ids = [
 
-          8282, 8283, 9977, 9978, 9979, 9980, 9981, 9982, 9983, 9984, 9985, 9986, 9987, 9988, 9989, 9990, 9991, 9992, 9993, 9994, 9995, 9996
+          53,59,79,80,106,250,253,340,341,7371,7372,7379,7380,8659,8660,8661,8662,8663,8664,8665,8666,8667,8668,8669,8670,8671,8672,8673,8674,8677,8678,8681,8682,8683,8684,8685,8686,8687,8688,8689,8690,8691,8692,8693,8694,8695,8696,8697,8698,8699,8700,8701,8702,8703,8704,8705,8706,8707,8708,8709,8710,8711,8712,8713,8716,8717,8718,8719,8720,8721,8722,8723,8724,8725,8726,8727,8728,8729,8730,8731,8732,8733,8734,8735,8736,8737,8738,8739,8740,8741,8742,8743,8744,8745,8749,8750,8751,8752,8753,8754,8755,8756,8757,8758,8759,8760,8761,8762,8763,8764,8769,8770,8771,8772,8773,8774,8775,8776,8779,8780,8781,8782,8783,8784,8785,8786,8787,8788,8789,8790,8791,8792,8793,8794,8795,8796,8797,8798,8799,8800,8801,8802,8803,8804,8805,8806,8809,8810,8811,8812,8813,8814,8815,8816,8817,8818,8819,8820,8821,8822,8823,8824,8825,8826,8827,8828,8829,8830,8831,8832,8833,8834,8835,8836,8837,8838,8839,8840,8841,8842,8843,8844,8845,8846,8847,8848,8849,8850,8851,8852,8853,8854,8855,8856,8857,8858,8859,8860,8861,8862,8863,8864,8865,8866,8867,8868,8869,8870,8871,8872,8873,8874,8875,8876,8877,8878,8879,8880,8881,8882,8883,8884,8885,8886,8887,8888,8890,8891,8892,8893,8894,8895,8896,8897,8898,8899,8900,8901,8902,8903,8904,8905,8907,8908,8909,8910,8911,8912,8913,8914,8915,8916,8917,8918,8919,8922,8923,8924,8925,8926,8927,8928,8929,8930,8931,8932,8933,8934,8935,8936,8937,8938,8939,8940,8941,8942,8945,8948,8949,8950,8951,8982,8983,8990,8991,8994,8995,8996,8997,8998,8999,9000,9001,9002,9003,9004,9005,9006,9007,9008,9009,9010,9011,9012,9013,9014,9015,9016,9017,9018,9019,9020,9021,9022,9023,9024,9025,9026,9027,9028,9029,9030,9031,9032,9033,9034,9035,9036,9037,9038,9039,9040,9041,9042,9043,9044,9045,9046,9047,9048,9049,9050,9051,9052,9053,9054,9055,9056,9057,9058,9059,9060,9061,9064,9065,9066,9067,9068,9069,9070,9071,9072,9073,9074,9075,9076,9077,9078,9079,9080,9081,9082,9083,9084,9085,9086,9087,9088,9089,9090,9091,9092,9093,9094,9095,9096,9097,9098,9099,9100,9101,9102,9103,9104,9105,9106,9107,9108,9109,9110,9111,9112,9113,9114,9115,9116,9117,9118,9119,9120,9121,9122,9123,9124,9125,9126,9127,9128,9129,9130,9131,9132,9133,9134,9135,9136,9137,9138,9139,9140,9141,9142,9143,9144,9145,9146,9147,9148,9149,9150,9151,9152,9153,9154,9155,9156,9157,9158,9159,9160,9161,9162,9163,9164,9165,9166,9167,9168,9169,9170,9171,9172,9173,9174,9175,9176,9177,9178,9179,9180,9181,9182,9183,9184,9185,9186,9187,9188,9189,9190,9191,9192,9193,9194,9195,9196,9197,9198,9199,9200,9201,9202,9203,9204,9205,9206,9207,9208,9209,9210,9211,9212,9213,9214,9215,9216,9217,9218,9219,9220,9221,9222,9223,9224,9225,9226,9227,9228,9229,9230,9231,9232,9233,9234,9235,9236,9237,9238,9239,9240,9241,9242,9243,9244,9245,9246,9247,9248,9249,9250,9251,9252,9253,9254,9255,9256,9257,9258,9259,9260,9261,9262,9263,9264,9265,9266,9267,9268,9269,9270,9271,9272,9273,9274,9275,9276,9277,9278,9279,9280,9281,9282,9283,9284,9285,9286,9287,9288,9289,9290,9291,9292,9293,9294,9295,9296,9297,9298,9299,9300,9301,9302,9303,9304,9305,9306,9307,9308,9309,9310,9311,9312,9313,9314,9315,9316,9317,9318,9319,9320,9321,9322,9323,9324,9325,9326,9327,9328,9329,9330,9331,9332,9333,9334,9335,9336,9337,9338,9339,9340,9341,9342,9343,9344,9347,9348,9349,9350,9351,9352,9353,9354,9355,9356,9357,9358,9359,9360,9363,9364,9365,9366,9367,9368,9369,9370,9371,9372,9373,9374,9386,9387,9388,9389,9392,9393,9398,9399,9410,9411,9412,9413,9414,9415,9416,9417,9418,9419,9420,9421,9422,9423,9424,9425,9430,9431,9432,9433,9434,9435,9436,9437,9438,9439,9440,9441,9442,9443,9444,9445,9446,9447,9448,9451,9452
         ]
 
         console.log(ids);
@@ -1309,11 +1370,11 @@
           version: '4.079',
           ids: idsStr,
           cost: 1,
-          // route_type:'3',
-          // level: "2",
-          is_active: '99',
+          route_type: '0',
+          // level: "1",
+          // is_active: '99',
           // tz,
-          batch: '39',
+          // batch: '40',
           // strategy_id: 1,
           // crawl_state:'0',
           // platform_name:'m.ctrip.com',
@@ -1432,12 +1493,12 @@
 
       async addRoutePriceAdj() {
 
-
         for (let item of dList) {
           console.log(`---------${i++}---------------`);
           let { route_id, vehicle_class_id, price } = item
-
-
+          let cacheStr = `${route_id}-${vehicle_class_id}`
+          let isCache = cache[cacheStr]
+          if (isCache) continue
           let arr = [
             {
               route_id,
@@ -1445,83 +1506,13 @@
               price
             }
           ]
-
           debugger
-
           let insertAdjRes = await insertAdj(url, arr)
+
+          cache[cacheStr] = 1
 
           debugger
         }
-        // let vehicles = getVehicles()
-        // for (let route of dList) {
-        //   debugger
-        //   console.log(`-------${i++}--------`);
-
-        //   let { id: routeId, from_zone: fz, to_zone: tz, service_area_id, from_place, to_place, partner_id } = route
-        //   let from_zone = fz ? fz : from_place
-        //   let to_zone = tz ? tz : to_place
-
-        //   debugger
-
-        //   let { parentFleetId, platform_name } = getPatnerInfo(partner_id, stage)
-
-        //   let airportInfoObj = await getAirport(from_zone, to_zone)
-        //   if (!airportInfoObj) {
-        //     item['note'] = 'No  airport'
-        //     this.noInsertList.push(item)
-        //     continue
-        //   }
-        //   let { isPickup, airportInfo } = airportInfoObj
-        //   let airportCode = isPickup ? from_zone : to_zone
-
-        //   let str = `${parentFleetId}-${airportCode}`
-        //   let fleetInfo = cache[str]
-        //   if (!fleetInfo) {
-        //     fleetInfo = await getFleetIdAndPricingByAirport(url, airportCode, parentFleetId)
-        //   }
-
-        //   let { fleet_id, pricing, pricing_id } = fleetInfo
-        //   if (!fleet_id) {
-        //     item['note'] = 'NO fleet'
-        //     this.noInsertList.push(item)
-        //     continue
-        //   }
-        //   cache[str] = fleetInfo
-
-
-        //   let pricingJson = JSON.parse(pricing)
-        //   let prices = []
-
-        //   for (let vehicleInfo of vehicles) {
-        //     let { name: v, id } = vehicleInfo
-
-        //     let curvehicle = vehicleList.find(vehicle => vehicle.vehicle_name == v)
-
-        //     if (!curvehicle) {
-        //       debugger
-        //       continue
-        //     }
-        //     let vid = curvehicle.vehicle_id
-
-        //     let jsonHandled = jsonHandler3(pricingJson, from_zone, to_zone, isPickup, airportInfo, vid)
-        //     if (!jsonHandled) {
-        //       item['note'] = 'no Fixed Price Zone'
-        //       this.noInsertList.push(item)
-        //       continue
-        //     }
-        //     let { pAmt } = jsonHandled
-        //     console.log('--', routeId, '--', v, '--', vid, '----', pAmt);
-        //     if (pAmt) {
-        //       prices.push({
-        //         route_id: routeId,
-        //         vehicle_class_id: vid,
-        //         price: pAmt
-        //       })
-        //     }
-        //   }
-
-        //   let insertAdjRes = await insertAdj(url, prices)
-        // }
 
       },
 
@@ -1811,6 +1802,10 @@
           partner_id,
           platform_name,
           route_type
+        }
+
+        if (route_type) {
+          route['route_type'] = route_type
         }
         route = Object.assign({}, route)
         console.log(route);
@@ -2220,28 +2215,44 @@
 
       const partnerIds = ref([
         {
+          label: 'booking',
           id: 2
         },
         {
+          label: 'mozio',
           id: 3
         },
         {
+          label: 'cityairporttaxi',
           id: 5
         },
         {
+          label: 'jayride',
           id: 4
         },
         {
+          label: 'etg',
           id: 2692
         },
         {
+          label: 'klook',
           id: 28
         },
         {
+          label: 'ctrip',
           id: 2621
         },
         {
+          label: 'hoppa',
           id: 2588
+        },
+        {
+          label: 'prod-elife',
+          id: 15
+        },
+        {
+          label: 'dev-elife',
+          id: 40
         }
       ])
 
@@ -2253,8 +2264,13 @@
       const changePricingJsonForm = ref({
         fromSvcId: 451,
         toSvcId: 88894,
+        fromEnv: 'DEV',
+        toEnv: 'DEV',
+        toFleet: 'dev-elife',
         type: []
       })
+
+      const env = ref(['DEV', 'PROD'])
 
       const splitOutFleetSupplyIds = [51488, 61654, 67743, 78568, 72105, 85191, 75362, 89496, 15]
 
@@ -2266,8 +2282,10 @@
 
 
 
+
       return {
         abc: 1,
+        env,
         noInsertList: [],
         existsIds: [],
         doneList: [],

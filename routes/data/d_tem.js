@@ -1,9322 +1,25104 @@
 let tem_7_4 = [
   {
-    "id": "4653",
-    "from_place": "ORY",
-    "to_place": "Paris",
-    "platform_name": "China Ctrip API",
-    "text": "ORYParis",
-    "new platform_name": ""
-  },
-  {
-    "id": "4654",
-    "from_place": "Paris",
-    "to_place": "ORY",
-    "platform_name": "China Ctrip API",
-    "text": "ParisORY",
-    "new platform_name": ""
-  },
-  {
-    "id": "4655",
-    "from_place": "CDG",
-    "to_place": "Paris",
-    "platform_name": "China Ctrip API",
-    "text": "CDGParis",
-    "new platform_name": ""
-  },
-  {
-    "id": "4656",
-    "from_place": "Paris",
-    "to_place": "CDG",
-    "platform_name": "China Ctrip API",
-    "text": "ParisCDG",
-    "new platform_name": ""
-  },
-  {
-    "id": "4657",
-    "from_place": "CDG",
-    "to_place": "迪士尼",
-    "platform_name": "China Ctrip API",
-    "text": "CDG迪士尼",
-    "new platform_name": ""
-  },
-  {
-    "id": "4658",
-    "from_place": "迪士尼",
-    "to_place": "CDG",
-    "platform_name": "China Ctrip API",
-    "text": "迪士尼CDG",
-    "new platform_name": ""
-  },
-  {
-    "id": "4659",
-    "from_place": "迪士尼",
-    "to_place": "ORY",
-    "platform_name": "China Ctrip API",
-    "text": "迪士尼ORY",
-    "new platform_name": ""
-  },
-  {
-    "id": "4660",
-    "from_place": "ORY",
-    "to_place": "迪士尼",
-    "platform_name": "China Ctrip API",
-    "text": "ORY迪士尼",
-    "new platform_name": ""
-  },
-  {
-    "id": "4661",
-    "from_place": "凡尔赛2",
-    "to_place": "CDG",
-    "platform_name": "China Ctrip API",
-    "text": "凡尔赛2CDG",
-    "new platform_name": ""
-  },
-  {
-    "id": "4662",
-    "from_place": "CDG",
-    "to_place": "凡尔赛2",
-    "platform_name": "China Ctrip API",
-    "text": "CDG凡尔赛2",
-    "new platform_name": ""
-  },
-  {
-    "id": "4663",
-    "from_place": "凡尔赛2",
-    "to_place": "ORY",
-    "platform_name": "China Ctrip API",
-    "text": "凡尔赛2ORY",
-    "new platform_name": ""
-  },
-  {
-    "id": "4664",
-    "from_place": "ORY",
-    "to_place": "凡尔赛2",
-    "platform_name": "China Ctrip API",
-    "text": "ORY凡尔赛2",
-    "new platform_name": ""
-  },
-  {
-    "id": "4665",
-    "from_place": "CDG",
-    "to_place": "Beauvais",
-    "platform_name": "China Ctrip API",
-    "text": "CDGBeauvais",
-    "new platform_name": ""
-  },
-  {
-    "id": "4666",
-    "from_place": "ORY",
-    "to_place": "Beauvais",
-    "platform_name": "China Ctrip API",
-    "text": "ORYBeauvais",
-    "new platform_name": ""
-  },
-  {
-    "id": "4667",
-    "from_place": "ZRH",
-    "to_place": "Zurich City",
-    "platform_name": "China Ctrip API",
-    "text": "ZRHZurich City",
-    "new platform_name": ""
-  },
-  {
-    "id": "4668",
-    "from_place": "Zurich City",
-    "to_place": "ZRH",
-    "platform_name": "China Ctrip API",
-    "text": "Zurich CityZRH",
-    "new platform_name": ""
-  },
-  {
-    "id": "4669",
-    "from_place": "BUD",
-    "to_place": "Budapest",
-    "platform_name": "China Ctrip API",
-    "text": "BUDBudapest",
-    "new platform_name": ""
-  },
-  {
-    "id": "4670",
-    "from_place": "Budapest",
-    "to_place": "BUD",
-    "platform_name": "China Ctrip API",
-    "text": "BudapestBUD",
-    "new platform_name": ""
-  },
-  {
-    "id": "4671",
-    "from_place": "PRG",
-    "to_place": "Prague",
-    "platform_name": "China Ctrip API",
-    "text": "PRGPrague",
-    "new platform_name": ""
-  },
-  {
-    "id": "4672",
-    "from_place": "Prague",
-    "to_place": "PRG",
-    "platform_name": "China Ctrip API",
-    "text": "PraguePRG",
-    "new platform_name": ""
-  },
-  {
-    "id": "4673",
-    "from_place": "Brussels",
-    "to_place": "BRU",
-    "platform_name": "China Ctrip API",
-    "text": "BrusselsBRU",
-    "new platform_name": ""
-  },
-  {
-    "id": "4674",
-    "from_place": "BRU",
-    "to_place": "Brussels",
-    "platform_name": "China Ctrip API",
-    "text": "BRUBrussels",
-    "new platform_name": ""
-  },
-  {
-    "id": "4675",
-    "from_place": "BCN",
-    "to_place": "Barcelona",
-    "platform_name": "China Ctrip API",
-    "text": "BCNBarcelona",
-    "new platform_name": ""
-  },
-  {
-    "id": "4676",
-    "from_place": "Barcelona",
-    "to_place": "BCN",
-    "platform_name": "China Ctrip API",
-    "text": "BarcelonaBCN",
-    "new platform_name": ""
-  },
-  {
-    "id": "4677",
-    "from_place": "ALC",
-    "to_place": "Alicante",
-    "platform_name": "#N/A",
-    "text": "ALCAlicante",
-    "new platform_name": ""
-  },
-  {
-    "id": "4678",
-    "from_place": "Alicate",
-    "to_place": "ALC",
-    "platform_name": "China Ctrip API",
-    "text": "AlicateALC",
-    "new platform_name": ""
-  },
-  {
-    "id": "4679",
-    "from_place": "ALC",
-    "to_place": "Benidorm",
-    "platform_name": "China Ctrip API",
-    "text": "ALCBenidorm",
-    "new platform_name": ""
-  },
-  {
-    "id": "4680",
-    "from_place": "Benidorm",
-    "to_place": "ALC",
-    "platform_name": "China Ctrip API",
-    "text": "BenidormALC",
-    "new platform_name": ""
-  },
-  {
-    "id": "4681",
-    "from_place": "PMI",
-    "to_place": "Palma",
-    "platform_name": "China Ctrip API",
-    "text": "PMIPalma",
-    "new platform_name": ""
-  },
-  {
-    "id": "4682",
-    "from_place": "Palma",
-    "to_place": "PMI",
-    "platform_name": "China Ctrip API",
-    "text": "PalmaPMI",
-    "new platform_name": ""
-  },
-  {
-    "id": "4683",
-    "from_place": "TFS",
-    "to_place": "Costa Adeje",
-    "platform_name": "China Ctrip API",
-    "text": "TFSCosta Adeje",
-    "new platform_name": ""
-  },
-  {
-    "id": "4684",
-    "from_place": "Costa Adeje",
-    "to_place": "TFS",
-    "platform_name": "China Ctrip API",
-    "text": "Costa AdejeTFS",
-    "new platform_name": ""
-  },
-  {
-    "id": "4685",
-    "from_place": "MAD",
-    "to_place": "马德里市区",
-    "platform_name": "#N/A",
-    "text": "MAD马德里市区",
-    "new platform_name": ""
-  },
-  {
-    "id": "4686",
-    "from_place": "马德里市区",
-    "to_place": "MAD",
-    "platform_name": "#N/A",
-    "text": "马德里市区MAD",
-    "new platform_name": ""
-  },
-  {
-    "id": "4687",
-    "from_place": "DXB",
-    "to_place": "市区",
-    "platform_name": "#N/A",
-    "text": "DXB市区",
-    "new platform_name": ""
-  },
-  {
-    "id": "4688",
-    "from_place": "市区",
-    "to_place": "DXB",
-    "platform_name": "#N/A",
-    "text": "市区DXB",
-    "new platform_name": ""
-  },
-  {
-    "id": "4689",
-    "from_place": "DXB",
-    "to_place": "朱美拉",
-    "platform_name": "#N/A",
-    "text": "DXB朱美拉",
-    "new platform_name": ""
-  },
-  {
-    "id": "4690",
-    "from_place": "朱美拉",
-    "to_place": "DXB",
-    "platform_name": "#N/A",
-    "text": "朱美拉DXB",
-    "new platform_name": ""
-  },
-  {
-    "id": "4691",
-    "from_place": "DXB",
-    "to_place": "市区中间",
-    "platform_name": "#N/A",
-    "text": "DXB市区中间",
-    "new platform_name": ""
-  },
-  {
-    "id": "4692",
-    "from_place": "市区中间",
-    "to_place": "DXB",
-    "platform_name": "#N/A",
-    "text": "市区中间DXB",
-    "new platform_name": ""
-  },
-  {
-    "id": "4693",
-    "from_place": "GVA",
-    "to_place": "Geneva",
-    "platform_name": "China Ctrip API",
-    "text": "GVAGeneva",
-    "new platform_name": ""
-  },
-  {
-    "id": "4694",
-    "from_place": "Geneva",
-    "to_place": "GVA",
-    "platform_name": "China Ctrip API",
-    "text": "GenevaGVA",
-    "new platform_name": ""
-  },
-  {
-    "id": "4695",
-    "from_place": "BRU",
-    "to_place": "Antwerp",
-    "platform_name": "China Ctrip API",
-    "text": "BRUAntwerp",
-    "new platform_name": ""
-  },
-  {
-    "id": "4696",
-    "from_place": "Antwerp",
-    "to_place": "BRU",
-    "platform_name": "China Ctrip API",
-    "text": "AntwerpBRU",
-    "new platform_name": ""
-  },
-  {
-    "id": "4697",
-    "from_place": "BRU",
-    "to_place": "Ghent",
-    "platform_name": "China Ctrip API",
-    "text": "BRUGhent",
-    "new platform_name": ""
-  },
-  {
-    "id": "4698",
-    "from_place": "Ghent",
-    "to_place": "BRU",
-    "platform_name": "China Ctrip API",
-    "text": "GhentBRU",
-    "new platform_name": ""
-  },
-  {
-    "id": "4699",
-    "from_place": "CRL",
-    "to_place": "Brussels",
-    "platform_name": "China Ctrip API",
-    "text": "CRLBrussels",
-    "new platform_name": ""
-  },
-  {
-    "id": "4700",
-    "from_place": "Brussels",
-    "to_place": "CRL",
-    "platform_name": "China Ctrip API",
-    "text": "BrusselsCRL",
-    "new platform_name": ""
-  },
-  {
-    "id": "4701",
-    "from_place": "CRL",
-    "to_place": "Antwerp",
-    "platform_name": "China Ctrip API",
-    "text": "CRLAntwerp",
-    "new platform_name": ""
-  },
-  {
-    "id": "4702",
-    "from_place": "Antwerp",
-    "to_place": "CRL",
-    "platform_name": "China Ctrip API",
-    "text": "AntwerpCRL",
-    "new platform_name": ""
-  },
-  {
-    "id": "4703",
-    "from_place": "AGP",
-    "to_place": "Malaga",
-    "platform_name": "China Ctrip API",
-    "text": "AGPMalaga",
-    "new platform_name": ""
-  },
-  {
-    "id": "4704",
-    "from_place": "Malaga",
-    "to_place": "AGP",
-    "platform_name": "China Ctrip API",
-    "text": "MalagaAGP",
-    "new platform_name": ""
-  },
-  {
-    "id": "4705",
-    "from_place": "AGP",
-    "to_place": "Cancelada",
-    "platform_name": "China Ctrip API",
-    "text": "AGPCancelada",
-    "new platform_name": ""
-  },
-  {
-    "id": "4706",
-    "from_place": "Cancelada",
-    "to_place": "AGP",
-    "platform_name": "China Ctrip API",
-    "text": "CanceladaAGP",
-    "new platform_name": ""
-  },
-  {
-    "id": "4707",
-    "from_place": "AGP",
-    "to_place": "Torremolinos",
-    "platform_name": "China Ctrip API",
-    "text": "AGPTorremolinos",
-    "new platform_name": ""
-  },
-  {
-    "id": "4708",
-    "from_place": "Torremolinos",
-    "to_place": "AGP",
-    "platform_name": "China Ctrip API",
-    "text": "TorremolinosAGP",
-    "new platform_name": ""
-  },
-  {
-    "id": "4709",
-    "from_place": "AGP",
-    "to_place": "Nerja",
-    "platform_name": "China Ctrip API",
-    "text": "AGPNerja",
-    "new platform_name": ""
-  },
-  {
-    "id": "4710",
-    "from_place": "Nerja",
-    "to_place": "AGP",
-    "platform_name": "China Ctrip API",
-    "text": "NerjaAGP",
-    "new platform_name": ""
-  },
-  {
-    "id": "4711",
-    "from_place": "AGP",
-    "to_place": "Fuengirola",
-    "platform_name": "China Ctrip API",
-    "text": "AGPFuengirola",
-    "new platform_name": ""
-  },
-  {
-    "id": "4712",
-    "from_place": "Fuengirola",
-    "to_place": "AGP",
-    "platform_name": "China Ctrip API",
-    "text": "FuengirolaAGP",
-    "new platform_name": ""
-  },
-  {
-    "id": "4713",
-    "from_place": "AGP",
-    "to_place": "Benalmádena",
-    "platform_name": "China Ctrip API",
-    "text": "AGPBenalmádena",
-    "new platform_name": ""
-  },
-  {
-    "id": "4714",
-    "from_place": "Benalmádena",
-    "to_place": "AGP",
-    "platform_name": "China Ctrip API",
-    "text": "BenalmádenaAGP",
-    "new platform_name": ""
-  },
-  {
-    "id": "4715",
-    "from_place": "AGP",
-    "to_place": "Estepona",
-    "platform_name": "China Ctrip API",
-    "text": "AGPEstepona",
-    "new platform_name": ""
-  },
-  {
-    "id": "4716",
-    "from_place": "Estepona",
-    "to_place": "AGP",
-    "platform_name": "China Ctrip API",
-    "text": "EsteponaAGP",
-    "new platform_name": ""
-  },
-  {
-    "id": "4717",
-    "from_place": "DUB",
-    "to_place": "Dublin",
-    "platform_name": "China Ctrip API",
-    "text": "DUBDublin",
-    "new platform_name": ""
-  },
-  {
-    "id": "4718",
-    "from_place": "Dublin",
-    "to_place": "DUB",
-    "platform_name": "China Ctrip API",
-    "text": "DublinDUB",
-    "new platform_name": ""
-  },
-  {
-    "id": "4719",
-    "from_place": "OSL",
-    "to_place": "Oslo City",
-    "platform_name": "China Ctrip API",
-    "text": "OSLOslo City",
-    "new platform_name": ""
-  },
-  {
-    "id": "4720",
-    "from_place": "Oslo City",
-    "to_place": "OSL",
-    "platform_name": "China Ctrip API",
-    "text": "Oslo CityOSL",
-    "new platform_name": ""
-  },
-  {
-    "id": "4721",
-    "from_place": "TOS",
-    "to_place": "Tromso city",
-    "platform_name": "#N/A",
-    "text": "TOSTromso city",
-    "new platform_name": ""
-  },
-  {
-    "id": "4722",
-    "from_place": "Tromso city",
-    "to_place": "TOS",
-    "platform_name": "#N/A",
-    "text": "Tromso cityTOS",
-    "new platform_name": ""
-  },
-  {
-    "id": "4723",
-    "from_place": "BGO",
-    "to_place": "Bergen city",
-    "platform_name": "#N/A",
-    "text": "BGOBergen city",
-    "new platform_name": ""
-  },
-  {
-    "id": "4724",
-    "from_place": "Bergen city",
-    "to_place": "BGO",
-    "platform_name": "#N/A",
-    "text": "Bergen cityBGO",
-    "new platform_name": ""
-  },
-  {
-    "id": "4725",
-    "from_place": "Krakow city",
-    "to_place": "KRK",
-    "platform_name": "#N/A",
-    "text": "Krakow cityKRK",
-    "new platform_name": ""
-  },
-  {
-    "id": "4726",
-    "from_place": "KRK",
-    "to_place": "Krakow city",
-    "platform_name": "#N/A",
-    "text": "KRKKrakow city",
-    "new platform_name": ""
-  },
-  {
-    "id": "4727",
-    "from_place": "KEF",
-    "to_place": "Reykjavik",
-    "platform_name": "China Ctrip API",
-    "text": "KEFReykjavik",
-    "new platform_name": ""
-  },
-  {
-    "id": "4728",
-    "from_place": "Reykjavik",
-    "to_place": "KEF",
-    "platform_name": "China Ctrip API",
-    "text": "ReykjavikKEF",
-    "new platform_name": ""
-  },
-  {
-    "id": "4729",
-    "from_place": "CPH",
-    "to_place": "Copenhagen",
-    "platform_name": "China Ctrip API",
-    "text": "CPHCopenhagen",
-    "new platform_name": ""
-  },
-  {
-    "id": "4730",
-    "from_place": "Copenhagen",
-    "to_place": "CPH",
-    "platform_name": "China Ctrip API",
-    "text": "CopenhagenCPH",
-    "new platform_name": ""
-  },
-  {
-    "id": "4731",
-    "from_place": "DEL",
-    "to_place": "甘地国际机场",
-    "platform_name": "China Ctrip API",
-    "text": "DEL甘地国际机场",
-    "new platform_name": ""
-  },
-  {
-    "id": "4732",
-    "from_place": "甘地国际机场",
-    "to_place": "DEL",
-    "platform_name": "China Ctrip API",
-    "text": "甘地国际机场DEL",
-    "new platform_name": ""
-  },
-  {
-    "id": "4733",
-    "from_place": "DEL",
-    "to_place": "德里市区",
-    "platform_name": "China Ctrip API",
-    "text": "DEL德里市区",
-    "new platform_name": ""
-  },
-  {
-    "id": "4734",
-    "from_place": "德里市区",
-    "to_place": "DEL",
-    "platform_name": "China Ctrip API",
-    "text": "德里市区DEL",
-    "new platform_name": ""
-  },
-  {
-    "id": "4735",
-    "from_place": "BOM",
-    "to_place": "BOM airport",
-    "platform_name": "#N/A",
-    "text": "BOMBOM airport",
-    "new platform_name": ""
-  },
-  {
-    "id": "4736",
-    "from_place": "BOM airport",
-    "to_place": "BOM",
-    "platform_name": "#N/A",
-    "text": "BOM airportBOM",
-    "new platform_name": ""
-  },
-  {
-    "id": "4737",
-    "from_place": "BOM",
-    "to_place": "Mumbai center",
-    "platform_name": "China Ctrip API",
-    "text": "BOMMumbai center",
-    "new platform_name": ""
-  },
-  {
-    "id": "4738",
-    "from_place": "Mumbai center",
-    "to_place": "BOM",
-    "platform_name": "China Ctrip API",
-    "text": "Mumbai centerBOM",
-    "new platform_name": ""
-  },
-  {
-    "id": "4739",
-    "from_place": "KUL",
-    "to_place": "吉隆坡",
-    "platform_name": "#N/A",
-    "text": "KUL吉隆坡",
-    "new platform_name": ""
-  },
-  {
-    "id": "4740",
-    "from_place": "吉隆坡",
-    "to_place": "KUL",
-    "platform_name": "#N/A",
-    "text": "吉隆坡KUL",
-    "new platform_name": ""
-  },
-  {
-    "id": "4741",
-    "from_place": "KUL",
-    "to_place": "云顶",
-    "platform_name": "China Ctrip API",
-    "text": "KUL云顶",
-    "new platform_name": ""
-  },
-  {
-    "id": "4742",
-    "from_place": "云顶",
-    "to_place": "KUL",
-    "platform_name": "China Ctrip API",
-    "text": "云顶KUL",
-    "new platform_name": ""
-  },
-  {
-    "id": "4743",
-    "from_place": "KUL",
-    "to_place": "马六甲",
-    "platform_name": "China Ctrip API",
-    "text": "KUL马六甲",
-    "new platform_name": ""
-  },
-  {
-    "id": "4744",
-    "from_place": "马六甲",
-    "to_place": "KUL",
-    "platform_name": "China Ctrip API",
-    "text": "马六甲KUL",
-    "new platform_name": ""
-  },
-  {
-    "id": "4745",
-    "from_place": "HND",
-    "to_place": "东京2",
-    "platform_name": "China Ctrip API",
-    "text": "HND东京2",
-    "new platform_name": ""
-  },
-  {
-    "id": "4746",
-    "from_place": "东京2",
-    "to_place": "HND",
-    "platform_name": "China Ctrip API",
-    "text": "东京2HND",
-    "new platform_name": ""
-  },
-  {
-    "id": "4747",
-    "from_place": "HND",
-    "to_place": "横滨",
-    "platform_name": "China Ctrip API",
-    "text": "HND横滨",
-    "new platform_name": ""
-  },
-  {
-    "id": "4748",
-    "from_place": "横滨",
-    "to_place": "HND",
-    "platform_name": "China Ctrip API",
-    "text": "横滨HND",
-    "new platform_name": ""
-  },
-  {
-    "id": "4749",
-    "from_place": "HND",
-    "to_place": "富士山",
-    "platform_name": "China Ctrip API",
-    "text": "HND富士山",
-    "new platform_name": ""
-  },
-  {
-    "id": "4750",
-    "from_place": "富士山",
-    "to_place": "HND",
-    "platform_name": "China Ctrip API",
-    "text": "富士山HND",
-    "new platform_name": ""
-  },
-  {
-    "id": "4751",
-    "from_place": "NRT",
-    "to_place": "东京2",
-    "platform_name": "China Ctrip API",
-    "text": "NRT东京2",
-    "new platform_name": ""
-  },
-  {
-    "id": "4752",
-    "from_place": "东京2",
-    "to_place": "NRT",
-    "platform_name": "China Ctrip API",
-    "text": "东京2NRT",
-    "new platform_name": ""
-  },
-  {
-    "id": "4753",
-    "from_place": "NRT",
-    "to_place": "横滨",
-    "platform_name": "China Ctrip API",
-    "text": "NRT横滨",
-    "new platform_name": ""
-  },
-  {
-    "id": "4754",
-    "from_place": "横滨",
-    "to_place": "NRT",
-    "platform_name": "China Ctrip API",
-    "text": "横滨NRT",
-    "new platform_name": ""
-  },
-  {
-    "id": "4755",
-    "from_place": "NRT",
-    "to_place": "富士山",
-    "platform_name": "China Ctrip API",
-    "text": "NRT富士山",
-    "new platform_name": ""
-  },
-  {
-    "id": "4756",
-    "from_place": "富士山",
-    "to_place": "NRT",
-    "platform_name": "China Ctrip API",
-    "text": "富士山NRT",
-    "new platform_name": ""
-  },
-  {
-    "id": "4757",
-    "from_place": "KIX",
-    "to_place": "大阪",
-    "platform_name": "China Ctrip API",
-    "text": "KIX大阪",
-    "new platform_name": ""
-  },
-  {
-    "id": "4758",
-    "from_place": "大阪",
-    "to_place": "KIX",
-    "platform_name": "China Ctrip API",
-    "text": "大阪KIX",
-    "new platform_name": ""
-  },
-  {
-    "id": "4759",
-    "from_place": "KIX",
-    "to_place": "京都",
-    "platform_name": "China Ctrip API",
-    "text": "KIX京都",
-    "new platform_name": ""
-  },
-  {
-    "id": "4760",
-    "from_place": "京都",
-    "to_place": "KIX",
-    "platform_name": "China Ctrip API",
-    "text": "京都KIX",
-    "new platform_name": ""
-  },
-  {
-    "id": "4761",
-    "from_place": "ITM",
-    "to_place": "大阪",
-    "platform_name": "China Ctrip API",
-    "text": "ITM大阪",
-    "new platform_name": ""
-  },
-  {
-    "id": "4762",
-    "from_place": "大阪",
-    "to_place": "ITM",
-    "platform_name": "China Ctrip API",
-    "text": "大阪ITM",
-    "new platform_name": ""
-  },
-  {
-    "id": "4763",
-    "from_place": "ITM",
-    "to_place": "京都",
-    "platform_name": "China Ctrip API",
-    "text": "ITM京都",
-    "new platform_name": ""
-  },
-  {
-    "id": "4764",
-    "from_place": "京都",
-    "to_place": "ITM",
-    "platform_name": "China Ctrip API",
-    "text": "京都ITM",
-    "new platform_name": ""
-  },
-  {
-    "id": "4765",
-    "from_place": "GMP",
-    "to_place": "1-首尔",
-    "platform_name": "China Ctrip API",
-    "text": "GMP1-首尔",
-    "new platform_name": ""
-  },
-  {
-    "id": "4766",
-    "from_place": "1-首尔",
-    "to_place": "GMP",
-    "platform_name": "China Ctrip API",
-    "text": "1-首尔GMP",
-    "new platform_name": ""
-  },
-  {
-    "id": "4767",
-    "from_place": "ICN",
-    "to_place": "1-首尔",
-    "platform_name": "China Ctrip API",
-    "text": "ICN1-首尔",
-    "new platform_name": ""
-  },
-  {
-    "id": "4768",
-    "from_place": "1-首尔",
-    "to_place": "ICN",
-    "platform_name": "China Ctrip API",
-    "text": "1-首尔ICN",
-    "new platform_name": ""
-  },
-  {
-    "id": "4769",
-    "from_place": "HKG",
-    "to_place": "迪士尼",
-    "platform_name": "China Ctrip API",
-    "text": "HKG迪士尼",
-    "new platform_name": ""
-  },
-  {
-    "id": "4770",
-    "from_place": "迪士尼",
-    "to_place": "HKG",
-    "platform_name": "China Ctrip API",
-    "text": "迪士尼HKG",
-    "new platform_name": ""
-  },
-  {
-    "id": "4771",
-    "from_place": "HKG",
-    "to_place": "九龙",
-    "platform_name": "China Ctrip API",
-    "text": "HKG九龙",
-    "new platform_name": ""
-  },
-  {
-    "id": "4772",
-    "from_place": "九龙",
-    "to_place": "HKG",
-    "platform_name": "China Ctrip API",
-    "text": "九龙HKG",
-    "new platform_name": ""
-  },
-  {
-    "id": "4773",
-    "from_place": "HKG",
-    "to_place": "港岛（1）",
-    "platform_name": "China Ctrip API",
-    "text": "HKG港岛（1）",
-    "new platform_name": ""
-  },
-  {
-    "id": "4774",
-    "from_place": "港岛（1）",
-    "to_place": "HKG",
-    "platform_name": "China Ctrip API",
-    "text": "港岛（1）HKG",
-    "new platform_name": ""
-  },
-  {
-    "id": "4775",
-    "from_place": "HKG",
-    "to_place": "港岛（2）",
-    "platform_name": "China Ctrip API",
-    "text": "HKG港岛（2）",
-    "new platform_name": ""
-  },
-  {
-    "id": "4776",
-    "from_place": "港岛（2）",
-    "to_place": "HKG",
-    "platform_name": "China Ctrip API",
-    "text": "港岛（2）HKG",
-    "new platform_name": ""
-  },
-  {
-    "id": "4777",
-    "from_place": "PEK",
-    "to_place": "北京市区下",
-    "platform_name": "China Ctrip API",
-    "text": "PEK北京市区下",
-    "new platform_name": ""
-  },
-  {
-    "id": "4778",
-    "from_place": "北京市区下",
-    "to_place": "PEK",
-    "platform_name": "China Ctrip API",
-    "text": "北京市区下PEK",
-    "new platform_name": ""
-  },
-  {
-    "id": "4779",
-    "from_place": "PVG",
-    "to_place": "上海市区左",
-    "platform_name": "China Ctrip API",
-    "text": "PVG上海市区左",
-    "new platform_name": ""
-  },
-  {
-    "id": "4780",
-    "from_place": "上海市区左",
-    "to_place": "PVG",
-    "platform_name": "China Ctrip API",
-    "text": "上海市区左PVG",
-    "new platform_name": ""
-  },
-  {
-    "id": "4781",
-    "from_place": "BKK",
-    "to_place": "市区中心",
-    "platform_name": "China Ctrip API",
-    "text": "BKK市区中心",
-    "new platform_name": ""
-  },
-  {
-    "id": "4782",
-    "from_place": "芭提雅市区",
-    "to_place": "BKK",
-    "platform_name": "#N/A",
-    "text": "芭提雅市区BKK",
-    "new platform_name": ""
-  },
-  {
-    "id": "4783",
-    "from_place": "BKK",
-    "to_place": "芭提雅市区",
-    "platform_name": "#N/A",
-    "text": "BKK芭提雅市区",
-    "new platform_name": ""
-  },
-  {
-    "id": "4784",
-    "from_place": "市区中心",
-    "to_place": "BKK",
-    "platform_name": "China Ctrip API",
-    "text": "市区中心BKK",
-    "new platform_name": ""
-  },
-  {
-    "id": "4785",
-    "from_place": "BKK",
-    "to_place": "华欣",
-    "platform_name": "#N/A",
-    "text": "BKK华欣",
-    "new platform_name": ""
-  },
-  {
-    "id": "4786",
-    "from_place": "DMK",
-    "to_place": "市区中心",
-    "platform_name": "China Ctrip API",
-    "text": "DMK市区中心",
-    "new platform_name": ""
-  },
-  {
-    "id": "4787",
-    "from_place": "市区中心",
-    "to_place": "DMK",
-    "platform_name": "China Ctrip API",
-    "text": "市区中心DMK",
-    "new platform_name": ""
-  },
-  {
-    "id": "4788",
-    "from_place": "BKK",
-    "to_place": "10-DMK",
-    "platform_name": "#N/A",
-    "text": "BKK10-DMK",
-    "new platform_name": ""
-  },
-  {
-    "id": "4789",
-    "from_place": "10-DMK",
-    "to_place": "BKK",
-    "platform_name": "#N/A",
-    "text": "10-DMKBKK",
-    "new platform_name": ""
-  },
-  {
-    "id": "4790",
-    "from_place": "BKK",
-    "to_place": "\"\"\"11-大城府",
-    "platform_name": "",
-    "text": "",
-    "new platform_name": ""
-  },
-  {
-    "id": "\"",
-    "from_place": "China Ctrip API",
-    "to_place": "\"BKK\"\"11-大城府",
-    "platform_name": "",
-    "text": "",
-    "new platform_name": ""
-  },
-  {
-    "id": "\"",
-    "from_place": "#N/A",
-    "to_place": "",
-    "platform_name": "",
-    "text": "",
-    "new platform_name": ""
-  },
-  {
-    "id": "4791",
-    "from_place": "11-大城府",
-    "to_place": "BKK",
-    "platform_name": "#N/A",
-    "text": "11-大城府BKK",
-    "new platform_name": ""
-  },
-  {
-    "id": "4792",
-    "from_place": "BKK",
-    "to_place": "12-Ratchaburi",
-    "platform_name": "#N/A",
-    "text": "BKK12-Ratchaburi",
-    "new platform_name": ""
-  },
-  {
-    "id": "4793",
-    "from_place": "12-Ratchaburi",
-    "to_place": "BKK",
-    "platform_name": "#N/A",
-    "text": "12-RatchaburiBKK",
-    "new platform_name": ""
-  },
-  {
-    "id": "4794",
-    "from_place": "BKK",
-    "to_place": "14-Samut Prakan Ancient City",
-    "platform_name": "#N/A",
-    "text": "BKK14-Samut Prakan Ancient City",
-    "new platform_name": ""
-  },
-  {
-    "id": "4795",
-    "from_place": "14-Samut Prakan Ancient City",
-    "to_place": "BKK",
-    "platform_name": "#N/A",
-    "text": "14-Samut Prakan Ancient CityBKK",
-    "new platform_name": ""
-  },
-  {
-    "id": "4796",
-    "from_place": "BKK",
-    "to_place": "safair动物园",
-    "platform_name": "#N/A",
-    "text": "BKKsafair动物园",
-    "new platform_name": ""
-  },
-  {
-    "id": "4797",
-    "from_place": "safair动物园",
-    "to_place": "BKK",
-    "platform_name": "#N/A",
-    "text": "safair动物园BKK",
-    "new platform_name": ""
-  },
-  {
-    "id": "4798",
-    "from_place": "BKK",
-    "to_place": "市区过河",
-    "platform_name": "#N/A",
-    "text": "BKK市区过河",
-    "new platform_name": ""
-  },
-  {
-    "id": "4799",
-    "from_place": "市区过河",
-    "to_place": "BKK",
-    "platform_name": "#N/A",
-    "text": "市区过河BKK",
-    "new platform_name": ""
-  },
-  {
-    "id": "4800",
-    "from_place": "BKK",
-    "to_place": "BKK机场附近",
-    "platform_name": "#N/A",
-    "text": "BKKBKK机场附近",
-    "new platform_name": ""
-  },
-  {
-    "id": "4801",
-    "from_place": "BKK机场附近",
-    "to_place": "BKK",
-    "platform_name": "#N/A",
-    "text": "BKK机场附近BKK",
-    "new platform_name": ""
-  },
-  {
-    "id": "4802",
-    "from_place": "HKT",
-    "to_place": "1-甲米",
-    "platform_name": "#N/A",
-    "text": "HKT1-甲米",
-    "new platform_name": ""
-  },
-  {
-    "id": "4803",
-    "from_place": "1-甲米",
-    "to_place": "HKT",
-    "platform_name": "#N/A",
-    "text": "1-甲米HKT",
-    "new platform_name": ""
-  },
-  {
-    "id": "4804",
-    "from_place": "HKT",
-    "to_place": "2-Natai beach",
-    "platform_name": "#N/A",
-    "text": "HKT2-Natai beach",
-    "new platform_name": ""
-  },
-  {
-    "id": "4805",
-    "from_place": "2-Natai beach",
-    "to_place": "HKT",
-    "platform_name": "#N/A",
-    "text": "2-Natai beachHKT",
-    "new platform_name": ""
-  },
-  {
-    "id": "4806",
-    "from_place": "HKT",
-    "to_place": "4-机场附近",
-    "platform_name": "#N/A",
-    "text": "HKT4-机场附近",
-    "new platform_name": ""
-  },
-  {
-    "id": "4807",
-    "from_place": "4-机场附近",
-    "to_place": "HKT",
-    "platform_name": "#N/A",
-    "text": "4-机场附近HKT",
-    "new platform_name": ""
-  },
-  {
-    "id": "4808",
-    "from_place": "HKT",
-    "to_place": "7-普吉市",
-    "platform_name": "China Ctrip API",
-    "text": "HKT7-普吉市",
-    "new platform_name": ""
-  },
-  {
-    "id": "4809",
-    "from_place": "7-普吉市",
-    "to_place": "HKT",
-    "platform_name": "China Ctrip API",
-    "text": "7-普吉市HKT",
-    "new platform_name": ""
-  },
-  {
-    "id": "4810",
-    "from_place": "HKT",
-    "to_place": "5-芭东",
-    "platform_name": "China Ctrip API",
-    "text": "HKT5-芭东",
-    "new platform_name": ""
-  },
-  {
-    "id": "4811",
-    "from_place": "5-芭东",
-    "to_place": "HKT",
-    "platform_name": "China Ctrip API",
-    "text": "5-芭东HKT",
-    "new platform_name": ""
-  },
-  {
-    "id": "4812",
-    "from_place": "HKT",
-    "to_place": "9-卡马拉",
-    "platform_name": "#N/A",
-    "text": "HKT9-卡马拉",
-    "new platform_name": ""
-  },
-  {
-    "id": "4813",
-    "from_place": "9-卡马拉",
-    "to_place": "HKT",
-    "platform_name": "#N/A",
-    "text": "9-卡马拉HKT",
-    "new platform_name": ""
-  },
-  {
-    "id": "4814",
-    "from_place": "HKT",
-    "to_place": "10-Ao Po码头",
-    "platform_name": "#N/A",
-    "text": "HKT10-Ao Po码头",
-    "new platform_name": ""
-  },
-  {
-    "id": "4815",
-    "from_place": "10-Ao Po码头",
-    "to_place": "HKT",
-    "platform_name": "#N/A",
-    "text": "10-Ao Po码头HKT",
-    "new platform_name": ""
-  },
-  {
-    "id": "4816",
-    "from_place": "HKT",
-    "to_place": "8-卡伦海滩",
-    "platform_name": "China Ctrip API",
-    "text": "HKT8-卡伦海滩",
-    "new platform_name": ""
-  },
-  {
-    "id": "4817",
-    "from_place": "HKT",
-    "to_place": "11-Panwa",
-    "platform_name": "#N/A",
-    "text": "HKT11-Panwa",
-    "new platform_name": ""
-  },
-  {
-    "id": "4818",
-    "from_place": "NBO",
-    "to_place": "市区",
-    "platform_name": "#N/A",
-    "text": "NBO市区",
-    "new platform_name": ""
-  },
-  {
-    "id": "4819",
-    "from_place": "市区",
-    "to_place": "NBO",
-    "platform_name": "#N/A",
-    "text": "市区NBO",
-    "new platform_name": ""
-  },
-  {
-    "id": "4820",
-    "from_place": "NBO",
-    "to_place": "市区1",
-    "platform_name": "#N/A",
-    "text": "NBO市区1",
-    "new platform_name": ""
-  },
-  {
-    "id": "4821",
-    "from_place": "市区1",
-    "to_place": "NBO",
-    "platform_name": "#N/A",
-    "text": "市区1NBO",
-    "new platform_name": ""
-  },
-  {
-    "id": "4822",
-    "from_place": "NBO",
-    "to_place": "市区2",
-    "platform_name": "#N/A",
-    "text": "NBO市区2",
-    "new platform_name": ""
-  },
-  {
-    "id": "4823",
-    "from_place": "市区2",
-    "to_place": "NBO",
-    "platform_name": "#N/A",
-    "text": "市区2NBO",
-    "new platform_name": ""
-  },
-  {
-    "id": "4824",
-    "from_place": "NBO",
-    "to_place": "机场附近",
-    "platform_name": "#N/A",
-    "text": "NBO机场附近",
-    "new platform_name": ""
-  },
-  {
-    "id": "4825",
-    "from_place": "机场附近",
-    "to_place": "NBO",
-    "platform_name": "#N/A",
-    "text": "机场附近NBO",
-    "new platform_name": ""
-  },
-  {
-    "id": "4826",
-    "from_place": "WIL",
-    "to_place": "市区",
-    "platform_name": "#N/A",
-    "text": "WIL市区",
-    "new platform_name": ""
-  },
-  {
-    "id": "4827",
-    "from_place": "市区",
-    "to_place": "WIL",
-    "platform_name": "#N/A",
-    "text": "市区WIL",
-    "new platform_name": ""
-  },
-  {
-    "id": "4828",
-    "from_place": "KTM",
-    "to_place": "市区",
-    "platform_name": "#N/A",
-    "text": "KTM市区",
-    "new platform_name": ""
-  },
-  {
-    "id": "4829",
-    "from_place": "市区",
-    "to_place": "KTM",
-    "platform_name": "#N/A",
-    "text": "市区KTM",
-    "new platform_name": ""
-  },
-  {
-    "id": "4830",
-    "from_place": "MNL",
-    "to_place": "市区",
-    "platform_name": "#N/A",
-    "text": "MNL市区",
-    "new platform_name": ""
-  },
-  {
-    "id": "4831",
-    "from_place": "市区",
-    "to_place": "MNL",
-    "platform_name": "#N/A",
-    "text": "市区MNL",
-    "new platform_name": ""
-  },
-  {
-    "id": "4832",
-    "from_place": "MNL",
-    "to_place": "3-马卡蒂",
-    "platform_name": "China Ctrip API",
-    "text": "MNL3-马卡蒂",
-    "new platform_name": ""
-  },
-  {
-    "id": "4833",
-    "from_place": "3-马卡蒂",
-    "to_place": "MNL",
-    "platform_name": "China Ctrip API",
-    "text": "3-马卡蒂MNL",
-    "new platform_name": ""
-  },
-  {
-    "id": "4834",
-    "from_place": "MNL",
-    "to_place": "4-passy",
-    "platform_name": "#N/A",
-    "text": "MNL4-passy",
-    "new platform_name": ""
-  },
-  {
-    "id": "4835",
-    "from_place": "4-passy",
-    "to_place": "MNL",
-    "platform_name": "#N/A",
-    "text": "4-passyMNL",
-    "new platform_name": ""
-  },
-  {
-    "id": "4836",
-    "from_place": "MNL",
-    "to_place": "8-Barangay",
-    "platform_name": "#N/A",
-    "text": "MNL8-Barangay",
-    "new platform_name": ""
-  },
-  {
-    "id": "4837",
-    "from_place": "8-Barangay",
-    "to_place": "MNL",
-    "platform_name": "#N/A",
-    "text": "8-BarangayMNL",
-    "new platform_name": ""
-  },
-  {
-    "id": "4838",
-    "from_place": "MNL",
-    "to_place": "9-Tambo",
-    "platform_name": "#N/A",
-    "text": "MNL9-Tambo",
-    "new platform_name": ""
-  },
-  {
-    "id": "4839",
-    "from_place": "9-Tambo",
-    "to_place": "MNL",
-    "platform_name": "#N/A",
-    "text": "9-TamboMNL",
-    "new platform_name": ""
-  },
-  {
-    "id": "4840",
-    "from_place": "MNL",
-    "to_place": "奎松市",
-    "platform_name": "#N/A",
-    "text": "MNL奎松市",
-    "new platform_name": ""
-  },
-  {
-    "id": "4841",
-    "from_place": "奎松市",
-    "to_place": "MNL",
-    "platform_name": "#N/A",
-    "text": "奎松市MNL",
-    "new platform_name": ""
-  },
-  {
-    "id": "4842",
-    "from_place": "MNL",
-    "to_place": "机场附近",
-    "platform_name": "#N/A",
-    "text": "MNL机场附近",
-    "new platform_name": ""
-  },
-  {
-    "id": "4843",
-    "from_place": "机场附近",
-    "to_place": "MNL",
-    "platform_name": "#N/A",
-    "text": "机场附近MNL",
-    "new platform_name": ""
-  },
-  {
-    "id": "4844",
-    "from_place": "MNL",
-    "to_place": "博尼法乔",
-    "platform_name": "#N/A",
-    "text": "MNL博尼法乔",
-    "new platform_name": ""
-  },
-  {
-    "id": "4845",
-    "from_place": "博尼法乔",
-    "to_place": "MNL",
-    "platform_name": "#N/A",
-    "text": "博尼法乔MNL",
-    "new platform_name": ""
-  },
-  {
-    "id": "4846",
-    "from_place": "MNL",
-    "to_place": "pasig",
-    "platform_name": "#N/A",
-    "text": "MNLpasig",
-    "new platform_name": ""
-  },
-  {
-    "id": "4847",
-    "from_place": "pasig",
-    "to_place": "MNL",
-    "platform_name": "#N/A",
-    "text": "pasigMNL",
-    "new platform_name": ""
-  },
-  {
-    "id": "4848",
-    "from_place": "CEB",
-    "to_place": "4宿务市区",
-    "platform_name": "China Ctrip API",
-    "text": "CEB4宿务市区",
-    "new platform_name": ""
-  },
-  {
-    "id": "4849",
-    "from_place": "4宿务市区",
-    "to_place": "CEB",
-    "platform_name": "China Ctrip API",
-    "text": "4宿务市区CEB",
-    "new platform_name": ""
-  },
-  {
-    "id": "4850",
-    "from_place": "CEB",
-    "to_place": "3机场附近",
-    "platform_name": "China Ctrip API",
-    "text": "CEB3机场附近",
-    "new platform_name": ""
-  },
-  {
-    "id": "4851",
-    "from_place": "3机场附近",
-    "to_place": "CEB",
-    "platform_name": "m.ctrip.com",
-    "text": "3机场附近CEB",
-    "new platform_name": ""
-  },
-  {
-    "id": "4852",
-    "from_place": "CEB",
-    "to_place": "1Minglanilla",
-    "platform_name": "#N/A",
-    "text": "CEB1Minglanilla",
-    "new platform_name": ""
-  },
-  {
-    "id": "4853",
-    "from_place": "1Minglanilla",
-    "to_place": "CEB",
-    "platform_name": "#N/A",
-    "text": "1MinglanillaCEB",
-    "new platform_name": ""
-  },
-  {
-    "id": "4854",
-    "from_place": "SSH",
-    "to_place": "1市区",
-    "platform_name": "#N/A",
-    "text": "SSH1市区",
-    "new platform_name": ""
-  },
-  {
-    "id": "4855",
-    "from_place": "1市区",
-    "to_place": "SSH",
-    "platform_name": "#N/A",
-    "text": "1市区SSH",
-    "new platform_name": ""
-  },
-  {
-    "id": "4856",
-    "from_place": "SSH",
-    "to_place": "2Dahab",
-    "platform_name": "China Ctrip API",
-    "text": "SSH2Dahab",
-    "new platform_name": ""
-  },
-  {
-    "id": "4857",
-    "from_place": "2Dahab",
-    "to_place": "SSH",
-    "platform_name": "China Ctrip API",
-    "text": "2DahabSSH",
-    "new platform_name": ""
-  },
-  {
-    "id": "4858",
-    "from_place": "HRG",
-    "to_place": "市区",
-    "platform_name": "#N/A",
-    "text": "HRG市区",
-    "new platform_name": ""
-  },
-  {
-    "id": "4859",
-    "from_place": "市区",
-    "to_place": "HRG",
-    "platform_name": "#N/A",
-    "text": "市区HRG",
-    "new platform_name": ""
-  },
-  {
-    "id": "4860",
-    "from_place": "HRG",
-    "to_place": "2HRG-2",
-    "platform_name": "#N/A",
-    "text": "HRG2HRG-2",
-    "new platform_name": ""
-  },
-  {
-    "id": "4861",
-    "from_place": "2HRG-2",
-    "to_place": "HRG",
-    "platform_name": "#N/A",
-    "text": "2HRG-2HRG",
-    "new platform_name": ""
-  },
-  {
-    "id": "4862",
-    "from_place": "HRG",
-    "to_place": "3HRG-3",
-    "platform_name": "#N/A",
-    "text": "HRG3HRG-3",
-    "new platform_name": ""
-  },
-  {
-    "id": "4863",
-    "from_place": "3HRG-3",
-    "to_place": "HRG",
-    "platform_name": "#N/A",
-    "text": "3HRG-3HRG",
-    "new platform_name": ""
-  },
-  {
-    "id": "4864",
-    "from_place": "HRG",
-    "to_place": "4Soma Bay",
-    "platform_name": "#N/A",
-    "text": "HRG4Soma Bay",
-    "new platform_name": ""
-  },
-  {
-    "id": "4865",
-    "from_place": "4Soma Bay",
-    "to_place": "HRG",
-    "platform_name": "#N/A",
-    "text": "4Soma BayHRG",
-    "new platform_name": ""
-  },
-  {
-    "id": "4866",
-    "from_place": "RMF",
-    "to_place": "市区4",
-    "platform_name": "#N/A",
-    "text": "RMF市区4",
-    "new platform_name": ""
-  },
-  {
-    "id": "4867",
-    "from_place": "市区4",
-    "to_place": "RMF",
-    "platform_name": "#N/A",
-    "text": "市区4RMF",
-    "new platform_name": ""
-  },
-  {
-    "id": "4868",
-    "from_place": "RMF",
-    "to_place": "1市区",
-    "platform_name": "#N/A",
-    "text": "RMF1市区",
-    "new platform_name": ""
-  },
-  {
-    "id": "4869",
-    "from_place": "1市区",
-    "to_place": "RMF",
-    "platform_name": "#N/A",
-    "text": "1市区RMF",
-    "new platform_name": ""
-  },
-  {
-    "id": "4870",
-    "from_place": "RMF",
-    "to_place": "机场附近1",
-    "platform_name": "#N/A",
-    "text": "RMF机场附近1",
-    "new platform_name": ""
-  },
-  {
-    "id": "4871",
-    "from_place": "机场附近1",
-    "to_place": "RMF",
-    "platform_name": "#N/A",
-    "text": "机场附近1RMF",
-    "new platform_name": ""
-  },
-  {
-    "id": "4872",
-    "from_place": "RMF",
-    "to_place": "机场附近2",
-    "platform_name": "#N/A",
-    "text": "RMF机场附近2",
-    "new platform_name": ""
-  },
-  {
-    "id": "4873",
-    "from_place": "机场附近2",
-    "to_place": "RMF",
-    "platform_name": "#N/A",
-    "text": "机场附近2RMF",
-    "new platform_name": ""
-  },
-  {
-    "id": "4874",
-    "from_place": "RMF",
-    "to_place": "机场附近3",
-    "platform_name": "#N/A",
-    "text": "RMF机场附近3",
-    "new platform_name": ""
-  },
-  {
-    "id": "4875",
-    "from_place": "机场附近3",
-    "to_place": "RMF",
-    "platform_name": "#N/A",
-    "text": "机场附近3RMF",
-    "new platform_name": ""
-  },
-  {
-    "id": "4876",
-    "from_place": "RMF",
-    "to_place": "市区2",
-    "platform_name": "#N/A",
-    "text": "RMF市区2",
-    "new platform_name": ""
-  },
-  {
-    "id": "4877",
-    "from_place": "市区2",
-    "to_place": "RMF",
-    "platform_name": "#N/A",
-    "text": "市区2RMF",
-    "new platform_name": ""
-  },
-  {
-    "id": "4878",
-    "from_place": "RMF",
-    "to_place": "市区3",
-    "platform_name": "#N/A",
-    "text": "RMF市区3",
-    "new platform_name": ""
-  },
-  {
-    "id": "4879",
-    "from_place": "市区3",
-    "to_place": "RMF",
-    "platform_name": "#N/A",
-    "text": "市区3RMF",
-    "new platform_name": ""
-  },
-  {
-    "id": "4880",
-    "from_place": "RMF",
-    "to_place": "Qusei",
-    "platform_name": "#N/A",
-    "text": "RMFQusei",
-    "new platform_name": ""
-  },
-  {
-    "id": "4881",
-    "from_place": "Qusei",
-    "to_place": "RMF",
-    "platform_name": "#N/A",
-    "text": "QuseiRMF",
-    "new platform_name": ""
-  },
-  {
-    "id": "4882",
-    "from_place": "CAI",
-    "to_place": "1Cairo",
-    "platform_name": "China Ctrip API",
-    "text": "CAI1Cairo",
-    "new platform_name": ""
-  },
-  {
-    "id": "4883",
-    "from_place": "1Cairo",
-    "to_place": "CAI",
-    "platform_name": "China Ctrip API",
-    "text": "1CairoCAI",
-    "new platform_name": ""
-  },
-  {
-    "id": "4884",
-    "from_place": "CAI",
-    "to_place": "4开罗2",
-    "platform_name": "#N/A",
-    "text": "CAI4开罗2",
-    "new platform_name": ""
-  },
-  {
-    "id": "4885",
-    "from_place": "4开罗2",
-    "to_place": "CAI",
-    "platform_name": "#N/A",
-    "text": "4开罗2CAI",
-    "new platform_name": ""
-  },
-  {
-    "id": "4886",
-    "from_place": "CAI",
-    "to_place": "5开罗2",
-    "platform_name": "#N/A",
-    "text": "CAI5开罗2",
-    "new platform_name": ""
-  },
-  {
-    "id": "4887",
-    "from_place": "5开罗2",
-    "to_place": "CAI",
-    "platform_name": "#N/A",
-    "text": "5开罗2CAI",
-    "new platform_name": ""
-  },
-  {
-    "id": "4888",
-    "from_place": "PNH",
-    "to_place": "Phnom Penh",
-    "platform_name": "China Ctrip API",
-    "text": "PNHPhnom Penh",
-    "new platform_name": ""
-  },
-  {
-    "id": "4889",
-    "from_place": "Phnom Penh",
-    "to_place": "PNH",
-    "platform_name": "China Ctrip API",
-    "text": "Phnom PenhPNH",
-    "new platform_name": ""
-  },
-  {
-    "id": "4890",
-    "from_place": "SAI",
-    "to_place": "Siem Reap",
-    "platform_name": "China Ctrip API",
-    "text": "SAISiem Reap",
-    "new platform_name": ""
-  },
-  {
-    "id": "4891",
-    "from_place": "Siem Reap",
-    "to_place": "SAI",
-    "platform_name": "China Ctrip API",
-    "text": "Siem ReapSAI",
-    "new platform_name": ""
-  },
-  {
-    "id": "4892",
-    "from_place": "CPT",
-    "to_place": "市区1",
-    "platform_name": "China Ctrip API",
-    "text": "CPT市区1",
-    "new platform_name": ""
-  },
-  {
-    "id": "4893",
-    "from_place": "市区1",
-    "to_place": "CPT",
-    "platform_name": "China Ctrip API",
-    "text": "市区1CPT",
-    "new platform_name": ""
-  },
-  {
-    "id": "4894",
-    "from_place": "DUR",
-    "to_place": "市区",
-    "platform_name": "#N/A",
-    "text": "DUR市区",
-    "new platform_name": ""
-  },
-  {
-    "id": "4895",
-    "from_place": "市区",
-    "to_place": "DUR",
-    "platform_name": "#N/A",
-    "text": "市区DUR",
-    "new platform_name": ""
-  },
-  {
-    "id": "4896",
-    "from_place": "HAN",
-    "to_place": "市区",
-    "platform_name": "China Ctrip API",
-    "text": "HAN市区",
-    "new platform_name": ""
-  },
-  {
-    "id": "4897",
-    "from_place": "市区",
-    "to_place": "HAN",
-    "platform_name": "China Ctrip API",
-    "text": "市区HAN",
-    "new platform_name": ""
-  },
-  {
-    "id": "4898",
-    "from_place": "HAN",
-    "to_place": "海防",
-    "platform_name": "China Ctrip API",
-    "text": "HAN海防",
-    "new platform_name": ""
-  },
-  {
-    "id": "4899",
-    "from_place": "海防",
-    "to_place": "HAN",
-    "platform_name": "China Ctrip API",
-    "text": "海防HAN",
-    "new platform_name": ""
-  },
-  {
-    "id": "4900",
-    "from_place": "HAN",
-    "to_place": "下龙湾",
-    "platform_name": "China Ctrip API",
-    "text": "HAN下龙湾",
-    "new platform_name": ""
-  },
-  {
-    "id": "4901",
-    "from_place": "下龙湾",
-    "to_place": "HAN",
-    "platform_name": "China Ctrip API",
-    "text": "下龙湾HAN",
-    "new platform_name": ""
-  },
-  {
-    "id": "4902",
-    "from_place": "DAD",
-    "to_place": "市区",
-    "platform_name": "China Ctrip API",
-    "text": "DAD市区",
-    "new platform_name": ""
-  },
-  {
-    "id": "4903",
-    "from_place": "市区",
-    "to_place": "DAD",
-    "platform_name": "China Ctrip API",
-    "text": "市区DAD",
-    "new platform_name": ""
-  },
-  {
-    "id": "4904",
-    "from_place": "DAD",
-    "to_place": "会安",
-    "platform_name": "China Ctrip API",
-    "text": "DAD会安",
-    "new platform_name": ""
-  },
-  {
-    "id": "4905",
-    "from_place": "会安",
-    "to_place": "DAD",
-    "platform_name": "China Ctrip API",
-    "text": "会安DAD",
-    "new platform_name": ""
-  },
-  {
-    "id": "4906",
-    "from_place": "DOH",
-    "to_place": "市区",
-    "platform_name": "#N/A",
-    "text": "DOH市区",
-    "new platform_name": ""
-  },
-  {
-    "id": "4907",
-    "from_place": "市区",
-    "to_place": "DOH",
-    "platform_name": "#N/A",
-    "text": "市区DOH",
-    "new platform_name": ""
-  },
-  {
-    "id": "4908",
-    "from_place": "CMB",
-    "to_place": "市区",
-    "platform_name": "#N/A",
-    "text": "CMB市区",
-    "new platform_name": ""
-  },
-  {
-    "id": "4909",
-    "from_place": "市区",
-    "to_place": "CMB",
-    "platform_name": "#N/A",
-    "text": "市区CMB",
-    "new platform_name": ""
-  },
-  {
-    "id": "4910",
-    "from_place": "JFK",
-    "to_place": "曼哈顿",
-    "platform_name": "China Ctrip API",
-    "text": "JFK曼哈顿",
-    "new platform_name": ""
-  },
-  {
-    "id": "4911",
-    "from_place": "曼哈顿",
-    "to_place": "JFK",
-    "platform_name": "China Ctrip API",
-    "text": "曼哈顿JFK",
-    "new platform_name": ""
-  },
-  {
-    "id": "4912",
-    "from_place": "JFK",
-    "to_place": "布鲁克林",
-    "platform_name": "China Ctrip API",
-    "text": "JFK布鲁克林",
-    "new platform_name": ""
-  },
-  {
-    "id": "4913",
-    "from_place": "布鲁克林",
-    "to_place": "JFK",
-    "platform_name": "China Ctrip API",
-    "text": "布鲁克林JFK",
-    "new platform_name": ""
-  },
-  {
-    "id": "4914",
-    "from_place": "LGA",
-    "to_place": "曼哈顿",
-    "platform_name": "China Ctrip API",
-    "text": "LGA曼哈顿",
-    "new platform_name": ""
-  },
-  {
-    "id": "4915",
-    "from_place": "曼哈顿",
-    "to_place": "LGA",
-    "platform_name": "China Ctrip API",
-    "text": "曼哈顿LGA",
-    "new platform_name": ""
-  },
-  {
-    "id": "4916",
-    "from_place": "LGA",
-    "to_place": "布鲁克林",
-    "platform_name": "China Ctrip API",
-    "text": "LGA布鲁克林",
-    "new platform_name": ""
-  },
-  {
-    "id": "4917",
-    "from_place": "布鲁克林",
-    "to_place": "LGA",
-    "platform_name": "China Ctrip API",
-    "text": "布鲁克林LGA",
-    "new platform_name": ""
-  },
-  {
-    "id": "4918",
-    "from_place": "EWR",
-    "to_place": "曼哈顿",
-    "platform_name": "China Ctrip API",
-    "text": "EWR曼哈顿",
-    "new platform_name": ""
-  },
-  {
-    "id": "4919",
-    "from_place": "曼哈顿",
-    "to_place": "EWR",
-    "platform_name": "China Ctrip API",
-    "text": "曼哈顿EWR",
-    "new platform_name": ""
-  },
-  {
-    "id": "4920",
-    "from_place": "EWR",
-    "to_place": "布鲁克林",
-    "platform_name": "China Ctrip API",
-    "text": "EWR布鲁克林",
-    "new platform_name": ""
-  },
-  {
-    "id": "4921",
-    "from_place": "布鲁克林",
-    "to_place": "EWR",
-    "platform_name": "China Ctrip API",
-    "text": "布鲁克林EWR",
-    "new platform_name": ""
-  },
-  {
-    "id": "4922",
-    "from_place": "IAD",
-    "to_place": "Washington DC",
-    "platform_name": "China Ctrip API",
-    "text": "IADWashington DC",
-    "new platform_name": ""
-  },
-  {
-    "id": "4923",
-    "from_place": "Washington DC",
-    "to_place": "IAD",
-    "platform_name": "China Ctrip API",
-    "text": "Washington DCIAD",
-    "new platform_name": ""
-  },
-  {
-    "id": "4924",
-    "from_place": "DCA",
-    "to_place": "Washington DC",
-    "platform_name": "China Ctrip API",
-    "text": "DCAWashington DC",
-    "new platform_name": ""
-  },
-  {
-    "id": "4925",
-    "from_place": "Washington DC",
-    "to_place": "DCA",
-    "platform_name": "China Ctrip API",
-    "text": "Washington DCDCA",
-    "new platform_name": ""
-  },
-  {
-    "id": "4926",
-    "from_place": "BWi",
-    "to_place": "Washington DC",
-    "platform_name": "m.ctrip.com",
-    "text": "BWiWashington DC",
-    "new platform_name": ""
-  },
-  {
-    "id": "4927",
-    "from_place": "Washington DC",
-    "to_place": "BWI",
-    "platform_name": "China Ctrip API",
-    "text": "Washington DCBWI",
-    "new platform_name": ""
-  },
-  {
-    "id": "4928",
-    "from_place": "BOS",
-    "to_place": "bos Downtown",
-    "platform_name": "China Ctrip API",
-    "text": "BOSbos Downtown",
-    "new platform_name": ""
-  },
-  {
-    "id": "4929",
-    "from_place": "bos Downtown",
-    "to_place": "BOS",
-    "platform_name": "China Ctrip API",
-    "text": "bos DowntownBOS",
-    "new platform_name": ""
-  },
-  {
-    "id": "4930",
-    "from_place": "ORD",
-    "to_place": "Chicago",
-    "platform_name": "m.ctrip.com",
-    "text": "ORDChicago",
-    "new platform_name": ""
-  },
-  {
-    "id": "4931",
-    "from_place": "Chicago",
-    "to_place": "ORD",
-    "platform_name": "m.ctrip.com",
-    "text": "ChicagoORD",
-    "new platform_name": ""
-  },
-  {
-    "id": "4932",
-    "from_place": "MDW",
-    "to_place": "Chicago",
-    "platform_name": "#N/A",
-    "text": "MDWChicago",
-    "new platform_name": ""
-  },
-  {
-    "id": "4933",
-    "from_place": "Chicago",
-    "to_place": "MDW",
-    "platform_name": "#N/A",
-    "text": "ChicagoMDW",
-    "new platform_name": ""
-  },
-  {
-    "id": "4934",
-    "from_place": "ORD",
-    "to_place": "Chicago South side",
-    "platform_name": "m.ctrip.com",
-    "text": "ORDChicago South side",
-    "new platform_name": ""
-  },
-  {
-    "id": "4935",
-    "from_place": "Chicago South side",
-    "to_place": "ORD",
-    "platform_name": "m.ctrip.com",
-    "text": "Chicago South sideORD",
-    "new platform_name": ""
-  },
-  {
-    "id": "4936",
-    "from_place": "ORD",
-    "to_place": "Evanston",
-    "platform_name": "m.ctrip.com",
-    "text": "ORDEvanston",
-    "new platform_name": ""
-  },
-  {
-    "id": "4937",
-    "from_place": "Evanston",
-    "to_place": "ORD",
-    "platform_name": "m.ctrip.com",
-    "text": "EvanstonORD",
-    "new platform_name": ""
-  },
-  {
-    "id": "4938",
-    "from_place": "ORD",
-    "to_place": "Deerfield",
-    "platform_name": "#N/A",
-    "text": "ORDDeerfield",
-    "new platform_name": ""
-  },
-  {
-    "id": "4939",
-    "from_place": "Deerfield",
-    "to_place": "ORD",
-    "platform_name": "#N/A",
-    "text": "DeerfieldORD",
-    "new platform_name": ""
-  },
-  {
-    "id": "4940",
-    "from_place": "ORD",
-    "to_place": "Tinley Park",
-    "platform_name": "#N/A",
-    "text": "ORDTinley Park",
-    "new platform_name": ""
-  },
-  {
-    "id": "4941",
-    "from_place": "Tinley Park",
-    "to_place": "ORD",
-    "platform_name": "#N/A",
-    "text": "Tinley ParkORD",
-    "new platform_name": ""
-  },
-  {
-    "id": "4942",
-    "from_place": "ORD",
-    "to_place": "Peoria",
-    "platform_name": "#N/A",
-    "text": "ORDPeoria",
-    "new platform_name": ""
-  },
-  {
-    "id": "4943",
-    "from_place": "Peoria",
-    "to_place": "ORD",
-    "platform_name": "#N/A",
-    "text": "PeoriaORD",
-    "new platform_name": ""
-  },
-  {
-    "id": "4944",
-    "from_place": "ORD",
-    "to_place": "Beaver Dam",
-    "platform_name": "#N/A",
-    "text": "ORDBeaver Dam",
-    "new platform_name": ""
-  },
-  {
-    "id": "4945",
-    "from_place": "Beaver Dam",
-    "to_place": "ORD",
-    "platform_name": "#N/A",
-    "text": "Beaver DamORD",
-    "new platform_name": ""
-  },
-  {
-    "id": "4946",
-    "from_place": "ORD",
-    "to_place": "Champaign",
-    "platform_name": "#N/A",
-    "text": "ORDChampaign",
-    "new platform_name": ""
-  },
-  {
-    "id": "4947",
-    "from_place": "Champaign",
-    "to_place": "ORD",
-    "platform_name": "#N/A",
-    "text": "ChampaignORD",
-    "new platform_name": ""
-  },
-  {
-    "id": "4948",
-    "from_place": "ORD",
-    "to_place": "Bloomington",
-    "platform_name": "#N/A",
-    "text": "ORDBloomington",
-    "new platform_name": ""
-  },
-  {
-    "id": "4949",
-    "from_place": "Bloomington",
-    "to_place": "ORD",
-    "platform_name": "#N/A",
-    "text": "BloomingtonORD",
-    "new platform_name": ""
-  },
-  {
-    "id": "4950",
-    "from_place": "ORD",
-    "to_place": "Lafayette",
-    "platform_name": "#N/A",
-    "text": "ORDLafayette",
-    "new platform_name": ""
-  },
-  {
-    "id": "4951",
-    "from_place": "Lafayette",
-    "to_place": "ORD",
-    "platform_name": "#N/A",
-    "text": "LafayetteORD",
-    "new platform_name": ""
-  },
-  {
-    "id": "4952",
-    "from_place": "ORD",
-    "to_place": "Merrillville",
-    "platform_name": "#N/A",
-    "text": "ORDMerrillville",
-    "new platform_name": ""
-  },
-  {
-    "id": "4953",
-    "from_place": "Merrillville",
-    "to_place": "ORD",
-    "platform_name": "#N/A",
-    "text": "MerrillvilleORD",
-    "new platform_name": ""
-  },
-  {
-    "id": "4954",
-    "from_place": "ORD",
-    "to_place": "Schaumburg",
-    "platform_name": "#N/A",
-    "text": "ORDSchaumburg",
-    "new platform_name": ""
-  },
-  {
-    "id": "4955",
-    "from_place": "Schaumburg",
-    "to_place": "ORD",
-    "platform_name": "#N/A",
-    "text": "SchaumburgORD",
-    "new platform_name": ""
-  },
-  {
-    "id": "4956",
-    "from_place": "ORD",
-    "to_place": "Rockford",
-    "platform_name": "#N/A",
-    "text": "ORDRockford",
-    "new platform_name": ""
-  },
-  {
-    "id": "4957",
-    "from_place": "Rockford",
-    "to_place": "ORD",
-    "platform_name": "#N/A",
-    "text": "RockfordORD",
-    "new platform_name": ""
-  },
-  {
-    "id": "4958",
-    "from_place": "ORD",
-    "to_place": "Madison",
-    "platform_name": "#N/A",
-    "text": "ORDMadison",
-    "new platform_name": ""
-  },
-  {
-    "id": "4959",
-    "from_place": "Madison",
-    "to_place": "ORD",
-    "platform_name": "#N/A",
-    "text": "MadisonORD",
-    "new platform_name": ""
-  },
-  {
-    "id": "4960",
-    "from_place": "ORD",
-    "to_place": "ORD airport",
-    "platform_name": "#N/A",
-    "text": "ORDORD airport",
-    "new platform_name": ""
-  },
-  {
-    "id": "4961",
-    "from_place": "ORD airport",
-    "to_place": "ORD",
-    "platform_name": "#N/A",
-    "text": "ORD airportORD",
-    "new platform_name": ""
-  },
-  {
-    "id": "4962",
-    "from_place": "ORD",
-    "to_place": "Milwaukee",
-    "platform_name": "#N/A",
-    "text": "ORDMilwaukee",
-    "new platform_name": ""
-  },
-  {
-    "id": "4963",
-    "from_place": "Milwaukee",
-    "to_place": "ORD",
-    "platform_name": "#N/A",
-    "text": "MilwaukeeORD",
-    "new platform_name": ""
-  },
-  {
-    "id": "4964",
-    "from_place": "ORD",
-    "to_place": "South Bend",
-    "platform_name": "#N/A",
-    "text": "ORDSouth Bend",
-    "new platform_name": ""
-  },
-  {
-    "id": "4965",
-    "from_place": "South Bend",
-    "to_place": "ORD",
-    "platform_name": "#N/A",
-    "text": "South BendORD",
-    "new platform_name": ""
-  },
-  {
-    "id": "4966",
-    "from_place": "ORD",
-    "to_place": "Oak Brook",
-    "platform_name": "m.ctrip.com",
-    "text": "ORDOak Brook",
-    "new platform_name": ""
-  },
-  {
-    "id": "4967",
-    "from_place": "Oak Brook",
-    "to_place": "ORD",
-    "platform_name": "m.ctrip.com",
-    "text": "Oak BrookORD",
-    "new platform_name": ""
-  },
-  {
-    "id": "4968",
-    "from_place": "ORD",
-    "to_place": "四城国际机场",
-    "platform_name": "#N/A",
-    "text": "ORD四城国际机场",
-    "new platform_name": ""
-  },
-  {
-    "id": "4969",
-    "from_place": "四城国际机场",
-    "to_place": "ORD",
-    "platform_name": "#N/A",
-    "text": "四城国际机场ORD",
-    "new platform_name": ""
-  },
-  {
-    "id": "4970",
-    "from_place": "MDW",
-    "to_place": "Chicago South side",
-    "platform_name": "#N/A",
-    "text": "MDWChicago South side",
-    "new platform_name": ""
-  },
-  {
-    "id": "4971",
-    "from_place": "Chicago South side",
-    "to_place": "MDW",
-    "platform_name": "#N/A",
-    "text": "Chicago South sideMDW",
-    "new platform_name": ""
-  },
-  {
-    "id": "4972",
-    "from_place": "MDW",
-    "to_place": "Evanston",
-    "platform_name": "#N/A",
-    "text": "MDWEvanston",
-    "new platform_name": ""
-  },
-  {
-    "id": "4973",
-    "from_place": "Evanston",
-    "to_place": "MDW",
-    "platform_name": "#N/A",
-    "text": "EvanstonMDW",
-    "new platform_name": ""
-  },
-  {
-    "id": "4974",
-    "from_place": "MDW",
-    "to_place": "Deerfield",
-    "platform_name": "#N/A",
-    "text": "MDWDeerfield",
-    "new platform_name": ""
-  },
-  {
-    "id": "4975",
-    "from_place": "Deerfield",
-    "to_place": "MDW",
-    "platform_name": "#N/A",
-    "text": "DeerfieldMDW",
-    "new platform_name": ""
-  },
-  {
-    "id": "4976",
-    "from_place": "MDW",
-    "to_place": "Tinley Park",
-    "platform_name": "#N/A",
-    "text": "MDWTinley Park",
-    "new platform_name": ""
-  },
-  {
-    "id": "4977",
-    "from_place": "Tinley Park",
-    "to_place": "MDW",
-    "platform_name": "#N/A",
-    "text": "Tinley ParkMDW",
-    "new platform_name": ""
-  },
-  {
-    "id": "4978",
-    "from_place": "MDW",
-    "to_place": "Peoria",
-    "platform_name": "#N/A",
-    "text": "MDWPeoria",
-    "new platform_name": ""
-  },
-  {
-    "id": "4979",
-    "from_place": "Peoria",
-    "to_place": "MDW",
-    "platform_name": "#N/A",
-    "text": "PeoriaMDW",
-    "new platform_name": ""
-  },
-  {
-    "id": "4980",
-    "from_place": "MDW",
-    "to_place": "Beaver Dam",
-    "platform_name": "#N/A",
-    "text": "MDWBeaver Dam",
-    "new platform_name": ""
-  },
-  {
-    "id": "4981",
-    "from_place": "Beaver Dam",
-    "to_place": "MDW",
-    "platform_name": "#N/A",
-    "text": "Beaver DamMDW",
-    "new platform_name": ""
-  },
-  {
-    "id": "4982",
-    "from_place": "MDW",
-    "to_place": "Champaign",
-    "platform_name": "#N/A",
-    "text": "MDWChampaign",
-    "new platform_name": ""
-  },
-  {
-    "id": "4983",
-    "from_place": "Champaign",
-    "to_place": "MDW",
-    "platform_name": "#N/A",
-    "text": "ChampaignMDW",
-    "new platform_name": ""
-  },
-  {
-    "id": "4984",
-    "from_place": "MDW",
-    "to_place": "Bloomington",
-    "platform_name": "#N/A",
-    "text": "MDWBloomington",
-    "new platform_name": ""
-  },
-  {
-    "id": "4985",
-    "from_place": "Bloomington",
-    "to_place": "MDW",
-    "platform_name": "#N/A",
-    "text": "BloomingtonMDW",
-    "new platform_name": ""
-  },
-  {
-    "id": "4986",
-    "from_place": "MDW",
-    "to_place": "Lafayette",
-    "platform_name": "#N/A",
-    "text": "MDWLafayette",
-    "new platform_name": ""
-  },
-  {
-    "id": "4987",
-    "from_place": "Lafayette",
-    "to_place": "MDW",
-    "platform_name": "#N/A",
-    "text": "LafayetteMDW",
-    "new platform_name": ""
-  },
-  {
-    "id": "4988",
-    "from_place": "MDW",
-    "to_place": "Merrillville",
-    "platform_name": "#N/A",
-    "text": "MDWMerrillville",
-    "new platform_name": ""
-  },
-  {
-    "id": "4989",
-    "from_place": "Merrillville",
-    "to_place": "MDW",
-    "platform_name": "#N/A",
-    "text": "MerrillvilleMDW",
-    "new platform_name": ""
-  },
-  {
-    "id": "4990",
-    "from_place": "MDW",
-    "to_place": "Schaumburg",
-    "platform_name": "#N/A",
-    "text": "MDWSchaumburg",
-    "new platform_name": ""
-  },
-  {
-    "id": "4991",
-    "from_place": "Schaumburg",
-    "to_place": "MDW",
-    "platform_name": "#N/A",
-    "text": "SchaumburgMDW",
-    "new platform_name": ""
-  },
-  {
-    "id": "4992",
-    "from_place": "MDW",
-    "to_place": "Rockford",
-    "platform_name": "#N/A",
-    "text": "MDWRockford",
-    "new platform_name": ""
-  },
-  {
-    "id": "4993",
-    "from_place": "Rockford",
-    "to_place": "MDW",
-    "platform_name": "#N/A",
-    "text": "RockfordMDW",
-    "new platform_name": ""
-  },
-  {
-    "id": "4994",
-    "from_place": "MDW",
-    "to_place": "Madison",
-    "platform_name": "#N/A",
-    "text": "MDWMadison",
-    "new platform_name": ""
-  },
-  {
-    "id": "4995",
-    "from_place": "Madison",
-    "to_place": "MDW",
-    "platform_name": "#N/A",
-    "text": "MadisonMDW",
-    "new platform_name": ""
-  },
-  {
-    "id": "4996",
-    "from_place": "MDW",
-    "to_place": "ORD airport",
-    "platform_name": "#N/A",
-    "text": "MDWORD airport",
-    "new platform_name": ""
-  },
-  {
-    "id": "4997",
-    "from_place": "ORD airport",
-    "to_place": "MDW",
-    "platform_name": "#N/A",
-    "text": "ORD airportMDW",
-    "new platform_name": ""
-  },
-  {
-    "id": "4998",
-    "from_place": "MDW",
-    "to_place": "Milwaukee",
-    "platform_name": "#N/A",
-    "text": "MDWMilwaukee",
-    "new platform_name": ""
-  },
-  {
-    "id": "4999",
-    "from_place": "Milwaukee",
-    "to_place": "MDW",
-    "platform_name": "#N/A",
-    "text": "MilwaukeeMDW",
-    "new platform_name": ""
-  },
-  {
-    "id": "5000",
-    "from_place": "MDW",
-    "to_place": "South Bend",
-    "platform_name": "#N/A",
-    "text": "MDWSouth Bend",
-    "new platform_name": ""
-  },
-  {
-    "id": "5001",
-    "from_place": "South Bend",
-    "to_place": "MDW",
-    "platform_name": "#N/A",
-    "text": "South BendMDW",
-    "new platform_name": ""
-  },
-  {
-    "id": "5002",
-    "from_place": "MDW",
-    "to_place": "Oak Brook",
-    "platform_name": "#N/A",
-    "text": "MDWOak Brook",
-    "new platform_name": ""
-  },
-  {
-    "id": "5003",
-    "from_place": "Oak Brook",
-    "to_place": "MDW",
-    "platform_name": "#N/A",
-    "text": "Oak BrookMDW",
-    "new platform_name": ""
-  },
-  {
-    "id": "5004",
-    "from_place": "MDW",
-    "to_place": "test",
-    "platform_name": "#N/A",
-    "text": "MDWtest",
-    "new platform_name": ""
-  },
-  {
-    "id": "5005",
-    "from_place": "四城国际机场",
-    "to_place": "MDW",
-    "platform_name": "#N/A",
-    "text": "四城国际机场MDW",
-    "new platform_name": ""
-  },
-  {
-    "id": "5006",
-    "from_place": "JFK",
-    "to_place": "Middletown",
-    "platform_name": "#N/A",
-    "text": "JFKMiddletown",
-    "new platform_name": ""
-  },
-  {
-    "id": "5007",
-    "from_place": "Middletown",
-    "to_place": "JFK",
-    "platform_name": "#N/A",
-    "text": "MiddletownJFK",
-    "new platform_name": ""
-  },
-  {
-    "id": "5008",
-    "from_place": "JFK",
-    "to_place": "纽瓦克",
-    "platform_name": "#N/A",
-    "text": "JFK纽瓦克",
-    "new platform_name": ""
-  },
-  {
-    "id": "5009",
-    "from_place": "纽瓦克",
-    "to_place": "JFK",
-    "platform_name": "#N/A",
-    "text": "纽瓦克JFK",
-    "new platform_name": ""
-  },
-  {
-    "id": "5010",
-    "from_place": "JFK",
-    "to_place": "新泽西",
-    "platform_name": "#N/A",
-    "text": "JFK新泽西",
-    "new platform_name": ""
-  },
-  {
-    "id": "5011",
-    "from_place": "新泽西",
-    "to_place": "JFK",
-    "platform_name": "#N/A",
-    "text": "新泽西JFK",
-    "new platform_name": ""
-  },
-  {
-    "id": "5012",
-    "from_place": "JFK",
-    "to_place": "普林斯顿",
-    "platform_name": "#N/A",
-    "text": "JFK普林斯顿",
-    "new platform_name": ""
-  },
-  {
-    "id": "5013",
-    "from_place": "普林斯顿",
-    "to_place": "JFK",
-    "platform_name": "#N/A",
-    "text": "普林斯顿JFK",
-    "new platform_name": ""
-  },
-  {
-    "id": "5014",
-    "from_place": "JFK",
-    "to_place": "Edison",
-    "platform_name": "#N/A",
-    "text": "JFKEdison",
-    "new platform_name": ""
-  },
-  {
-    "id": "5015",
-    "from_place": "Edison",
-    "to_place": "JFK",
-    "platform_name": "#N/A",
-    "text": "EdisonJFK",
-    "new platform_name": ""
-  },
-  {
-    "id": "5016",
-    "from_place": "JFK",
-    "to_place": "boston",
-    "platform_name": "#N/A",
-    "text": "JFKboston",
-    "new platform_name": ""
-  },
-  {
-    "id": "5017",
-    "from_place": "boston",
-    "to_place": "JFK",
-    "platform_name": "#N/A",
-    "text": "bostonJFK",
-    "new platform_name": ""
-  },
-  {
-    "id": "5018",
-    "from_place": "JFK",
-    "to_place": "philadelphia",
-    "platform_name": "#N/A",
-    "text": "JFKphiladelphia",
-    "new platform_name": ""
-  },
-  {
-    "id": "5019",
-    "from_place": "philadelphia",
-    "to_place": "JFK",
-    "platform_name": "#N/A",
-    "text": "philadelphiaJFK",
-    "new platform_name": ""
-  },
-  {
-    "id": "5020",
-    "from_place": "JFK",
-    "to_place": "NEW HAVEN",
-    "platform_name": "#N/A",
-    "text": "JFKNEW HAVEN",
-    "new platform_name": ""
-  },
-  {
-    "id": "5021",
-    "from_place": "NEW HAVEN",
-    "to_place": "JFK",
-    "platform_name": "#N/A",
-    "text": "NEW HAVENJFK",
-    "new platform_name": ""
-  },
-  {
-    "id": "5022",
-    "from_place": "JFK",
-    "to_place": "providence",
-    "platform_name": "#N/A",
-    "text": "JFKprovidence",
-    "new platform_name": ""
-  },
-  {
-    "id": "5023",
-    "from_place": "providence",
-    "to_place": "JFK",
-    "platform_name": "#N/A",
-    "text": "providenceJFK",
-    "new platform_name": ""
-  },
-  {
-    "id": "5024",
-    "from_place": "LGA",
-    "to_place": "Middletown",
-    "platform_name": "#N/A",
-    "text": "LGAMiddletown",
-    "new platform_name": ""
-  },
-  {
-    "id": "5025",
-    "from_place": "Middletown",
-    "to_place": "LGA",
-    "platform_name": "#N/A",
-    "text": "MiddletownLGA",
-    "new platform_name": ""
-  },
-  {
-    "id": "5026",
-    "from_place": "LGA",
-    "to_place": "纽瓦克",
-    "platform_name": "#N/A",
-    "text": "LGA纽瓦克",
-    "new platform_name": ""
-  },
-  {
-    "id": "5027",
-    "from_place": "纽瓦克",
-    "to_place": "LGA",
-    "platform_name": "#N/A",
-    "text": "纽瓦克LGA",
-    "new platform_name": ""
-  },
-  {
-    "id": "5028",
-    "from_place": "LGA",
-    "to_place": "新泽西",
-    "platform_name": "#N/A",
-    "text": "LGA新泽西",
-    "new platform_name": ""
-  },
-  {
-    "id": "5029",
-    "from_place": "新泽西",
-    "to_place": "LGA",
-    "platform_name": "#N/A",
-    "text": "新泽西LGA",
-    "new platform_name": ""
-  },
-  {
-    "id": "5030",
-    "from_place": "LGA",
-    "to_place": "普林斯顿",
-    "platform_name": "#N/A",
-    "text": "LGA普林斯顿",
-    "new platform_name": ""
-  },
-  {
-    "id": "5031",
-    "from_place": "普林斯顿",
-    "to_place": "LGA",
-    "platform_name": "#N/A",
-    "text": "普林斯顿LGA",
-    "new platform_name": ""
-  },
-  {
-    "id": "5032",
-    "from_place": "LGA",
-    "to_place": "Edison",
-    "platform_name": "#N/A",
-    "text": "LGAEdison",
-    "new platform_name": ""
-  },
-  {
-    "id": "5033",
-    "from_place": "Edison",
-    "to_place": "LGA",
-    "platform_name": "#N/A",
-    "text": "EdisonLGA",
-    "new platform_name": ""
-  },
-  {
-    "id": "5034",
-    "from_place": "LGA",
-    "to_place": "boston",
-    "platform_name": "#N/A",
-    "text": "LGAboston",
-    "new platform_name": ""
-  },
-  {
-    "id": "5035",
-    "from_place": "boston",
-    "to_place": "LGA",
-    "platform_name": "#N/A",
-    "text": "bostonLGA",
-    "new platform_name": ""
-  },
-  {
-    "id": "5036",
-    "from_place": "LGA",
-    "to_place": "philadelphia",
-    "platform_name": "#N/A",
-    "text": "LGAphiladelphia",
-    "new platform_name": ""
-  },
-  {
-    "id": "5037",
-    "from_place": "philadelphia",
-    "to_place": "LGA",
-    "platform_name": "#N/A",
-    "text": "philadelphiaLGA",
-    "new platform_name": ""
-  },
-  {
-    "id": "5038",
-    "from_place": "LGA",
-    "to_place": "NEW HAVEN",
-    "platform_name": "#N/A",
-    "text": "LGANEW HAVEN",
-    "new platform_name": ""
-  },
-  {
-    "id": "5039",
-    "from_place": "NEW HAVEN",
-    "to_place": "LGA",
-    "platform_name": "#N/A",
-    "text": "NEW HAVENLGA",
-    "new platform_name": ""
-  },
-  {
-    "id": "5040",
-    "from_place": "LGA",
-    "to_place": "providence",
-    "platform_name": "#N/A",
-    "text": "LGAprovidence",
-    "new platform_name": ""
-  },
-  {
-    "id": "5041",
-    "from_place": "providence",
-    "to_place": "LGA",
-    "platform_name": "#N/A",
-    "text": "providenceLGA",
-    "new platform_name": ""
-  },
-  {
-    "id": "5042",
-    "from_place": "EWR",
-    "to_place": "Middletown",
-    "platform_name": "#N/A",
-    "text": "EWRMiddletown",
-    "new platform_name": ""
-  },
-  {
-    "id": "5043",
-    "from_place": "Middletown",
-    "to_place": "EWR",
-    "platform_name": "#N/A",
-    "text": "MiddletownEWR",
-    "new platform_name": ""
-  },
-  {
-    "id": "5044",
-    "from_place": "EWR",
-    "to_place": "新泽西",
-    "platform_name": "#N/A",
-    "text": "EWR新泽西",
-    "new platform_name": ""
-  },
-  {
-    "id": "5045",
-    "from_place": "新泽西",
-    "to_place": "EWR",
-    "platform_name": "#N/A",
-    "text": "新泽西EWR",
-    "new platform_name": ""
-  },
-  {
-    "id": "5046",
-    "from_place": "EWR",
-    "to_place": "普林斯顿",
-    "platform_name": "#N/A",
-    "text": "EWR普林斯顿",
-    "new platform_name": ""
-  },
-  {
-    "id": "5047",
-    "from_place": "普林斯顿",
-    "to_place": "EWR",
-    "platform_name": "#N/A",
-    "text": "普林斯顿EWR",
-    "new platform_name": ""
-  },
-  {
-    "id": "5048",
-    "from_place": "EWR",
-    "to_place": "Edison",
-    "platform_name": "#N/A",
-    "text": "EWREdison",
-    "new platform_name": ""
-  },
-  {
-    "id": "5049",
-    "from_place": "Edison",
-    "to_place": "EWR",
-    "platform_name": "#N/A",
-    "text": "EdisonEWR",
-    "new platform_name": ""
-  },
-  {
-    "id": "5050",
-    "from_place": "EWR",
-    "to_place": "boston",
-    "platform_name": "#N/A",
-    "text": "EWRboston",
-    "new platform_name": ""
-  },
-  {
-    "id": "5051",
-    "from_place": "boston",
-    "to_place": "EWR",
-    "platform_name": "#N/A",
-    "text": "bostonEWR",
-    "new platform_name": ""
-  },
-  {
-    "id": "5052",
-    "from_place": "EWR",
-    "to_place": "philadelphia",
-    "platform_name": "#N/A",
-    "text": "EWRphiladelphia",
-    "new platform_name": ""
-  },
-  {
-    "id": "5053",
-    "from_place": "philadelphia",
-    "to_place": "EWR",
-    "platform_name": "#N/A",
-    "text": "philadelphiaEWR",
-    "new platform_name": ""
-  },
-  {
-    "id": "5054",
-    "from_place": "EWR",
-    "to_place": "NEW HAVEN",
-    "platform_name": "#N/A",
-    "text": "EWRNEW HAVEN",
-    "new platform_name": ""
-  },
-  {
-    "id": "5055",
-    "from_place": "NEW HAVEN",
-    "to_place": "EWR",
-    "platform_name": "#N/A",
-    "text": "NEW HAVENEWR",
-    "new platform_name": ""
-  },
-  {
-    "id": "5056",
-    "from_place": "EWR",
-    "to_place": "providence",
-    "platform_name": "#N/A",
-    "text": "EWRprovidence",
-    "new platform_name": ""
-  },
-  {
-    "id": "5057",
-    "from_place": "providence",
-    "to_place": "EWR",
-    "platform_name": "#N/A",
-    "text": "providenceEWR",
-    "new platform_name": ""
-  },
-  {
-    "id": "5058",
-    "from_place": "IAD",
-    "to_place": "Reston",
-    "platform_name": "m.ctrip.com",
-    "text": "IADReston",
-    "new platform_name": ""
-  },
-  {
-    "id": "5059",
-    "from_place": "Reston",
-    "to_place": "IAD",
-    "platform_name": "m.ctrip.com",
-    "text": "RestonIAD",
-    "new platform_name": ""
-  },
-  {
-    "id": "5060",
-    "from_place": "IAD",
-    "to_place": "Balitimore",
-    "platform_name": "m.ctrip.com",
-    "text": "IADBalitimore",
-    "new platform_name": ""
-  },
-  {
-    "id": "5061",
-    "from_place": "Balitimore",
-    "to_place": "IAD",
-    "platform_name": "m.ctrip.com",
-    "text": "BalitimoreIAD",
-    "new platform_name": ""
-  },
-  {
-    "id": "5062",
-    "from_place": "IAD",
-    "to_place": "Arlington",
-    "platform_name": "m.ctrip.com",
-    "text": "IADArlington",
-    "new platform_name": ""
-  },
-  {
-    "id": "5063",
-    "from_place": "Arlington",
-    "to_place": "IAD",
-    "platform_name": "m.ctrip.com",
-    "text": "ArlingtonIAD",
-    "new platform_name": ""
-  },
-  {
-    "id": "5064",
-    "from_place": "IAD",
-    "to_place": "National Harbor",
-    "platform_name": "#N/A",
-    "text": "IADNational Harbor",
-    "new platform_name": ""
-  },
-  {
-    "id": "5065",
-    "from_place": "National Harbor",
-    "to_place": "IAD",
-    "platform_name": "#N/A",
-    "text": "National HarborIAD",
-    "new platform_name": ""
-  },
-  {
-    "id": "5066",
-    "from_place": "IAD",
-    "to_place": "Bethesda",
-    "platform_name": "#N/A",
-    "text": "IADBethesda",
-    "new platform_name": ""
-  },
-  {
-    "id": "5067",
-    "from_place": "Bethesda",
-    "to_place": "IAD",
-    "platform_name": "#N/A",
-    "text": "BethesdaIAD",
-    "new platform_name": ""
-  },
-  {
-    "id": "5068",
-    "from_place": "IAD",
-    "to_place": "Columbia",
-    "platform_name": "#N/A",
-    "text": "IADColumbia",
-    "new platform_name": ""
-  },
-  {
-    "id": "5069",
-    "from_place": "Columbia",
-    "to_place": "IAD",
-    "platform_name": "#N/A",
-    "text": "ColumbiaIAD",
-    "new platform_name": ""
-  },
-  {
-    "id": "5070",
-    "from_place": "DCA",
-    "to_place": "Reston",
-    "platform_name": "m.ctrip.com",
-    "text": "DCAReston",
-    "new platform_name": ""
-  },
-  {
-    "id": "5071",
-    "from_place": "Reston",
-    "to_place": "DCA",
-    "platform_name": "m.ctrip.com",
-    "text": "RestonDCA",
-    "new platform_name": ""
-  },
-  {
-    "id": "5072",
-    "from_place": "DCA",
-    "to_place": "Balitimore",
-    "platform_name": "m.ctrip.com",
-    "text": "DCABalitimore",
-    "new platform_name": ""
-  },
-  {
-    "id": "5073",
-    "from_place": "Balitimore",
-    "to_place": "DCA",
-    "platform_name": "m.ctrip.com",
-    "text": "BalitimoreDCA",
-    "new platform_name": ""
-  },
-  {
-    "id": "5074",
-    "from_place": "DCA",
-    "to_place": "Arlington",
-    "platform_name": "m.ctrip.com",
-    "text": "DCAArlington",
-    "new platform_name": ""
-  },
-  {
-    "id": "5075",
-    "from_place": "Arlington",
-    "to_place": "DCA",
-    "platform_name": "m.ctrip.com",
-    "text": "ArlingtonDCA",
-    "new platform_name": ""
-  },
-  {
-    "id": "5076",
-    "from_place": "DCA",
-    "to_place": "National Harbor",
-    "platform_name": "#N/A",
-    "text": "DCANational Harbor",
-    "new platform_name": ""
-  },
-  {
-    "id": "5077",
-    "from_place": "National Harbor",
-    "to_place": "DCA",
-    "platform_name": "#N/A",
-    "text": "National HarborDCA",
-    "new platform_name": ""
-  },
-  {
-    "id": "5078",
-    "from_place": "DCA",
-    "to_place": "Bethesda",
-    "platform_name": "#N/A",
-    "text": "DCABethesda",
-    "new platform_name": ""
-  },
-  {
-    "id": "5079",
-    "from_place": "Bethesda",
-    "to_place": "DCA",
-    "platform_name": "#N/A",
-    "text": "BethesdaDCA",
-    "new platform_name": ""
-  },
-  {
-    "id": "5080",
-    "from_place": "DCA",
-    "to_place": "Columbia",
-    "platform_name": "#N/A",
-    "text": "DCAColumbia",
-    "new platform_name": ""
-  },
-  {
-    "id": "5081",
-    "from_place": "Columbia",
-    "to_place": "DCA",
-    "platform_name": "#N/A",
-    "text": "ColumbiaDCA",
-    "new platform_name": ""
-  },
-  {
-    "id": "5082",
-    "from_place": "BWI",
-    "to_place": "Reston",
-    "platform_name": "m.ctrip.com",
-    "text": "BWIReston",
-    "new platform_name": ""
-  },
-  {
-    "id": "5083",
-    "from_place": "Reston",
-    "to_place": "BWI",
-    "platform_name": "m.ctrip.com",
-    "text": "RestonBWI",
-    "new platform_name": ""
-  },
-  {
-    "id": "5084",
-    "from_place": "BWI",
-    "to_place": "Balitimore",
-    "platform_name": "m.ctrip.com",
-    "text": "BWIBalitimore",
-    "new platform_name": ""
-  },
-  {
-    "id": "5085",
-    "from_place": "Balitimore",
-    "to_place": "BWI",
-    "platform_name": "m.ctrip.com",
-    "text": "BalitimoreBWI",
-    "new platform_name": ""
-  },
-  {
-    "id": "5086",
-    "from_place": "BWI",
-    "to_place": "Arlington",
-    "platform_name": "m.ctrip.com",
-    "text": "BWIArlington",
-    "new platform_name": ""
-  },
-  {
-    "id": "5087",
-    "from_place": "Arlington",
-    "to_place": "BWI",
-    "platform_name": "m.ctrip.com",
-    "text": "ArlingtonBWI",
-    "new platform_name": ""
-  },
-  {
-    "id": "5088",
-    "from_place": "BWI",
-    "to_place": "National Harbor",
-    "platform_name": "#N/A",
-    "text": "BWINational Harbor",
-    "new platform_name": ""
-  },
-  {
-    "id": "5089",
-    "from_place": "National Harbor",
-    "to_place": "BWI",
-    "platform_name": "#N/A",
-    "text": "National HarborBWI",
-    "new platform_name": ""
-  },
-  {
-    "id": "5090",
-    "from_place": "BWI",
-    "to_place": "Bethesda",
-    "platform_name": "#N/A",
-    "text": "BWIBethesda",
-    "new platform_name": ""
-  },
-  {
-    "id": "5091",
-    "from_place": "Bethesda",
-    "to_place": "BWI",
-    "platform_name": "#N/A",
-    "text": "BethesdaBWI",
-    "new platform_name": ""
-  },
-  {
-    "id": "5092",
-    "from_place": "BWI",
-    "to_place": "Columbia",
-    "platform_name": "#N/A",
-    "text": "BWIColumbia",
-    "new platform_name": ""
-  },
-  {
-    "id": "5093",
-    "from_place": "Columbia",
-    "to_place": "BWI",
-    "platform_name": "#N/A",
-    "text": "ColumbiaBWI",
-    "new platform_name": ""
-  },
-  {
-    "id": "5094",
-    "from_place": "BOS",
-    "to_place": "providence",
-    "platform_name": "m.ctrip.com",
-    "text": "BOSprovidence",
-    "new platform_name": ""
-  },
-  {
-    "id": "5095",
-    "from_place": "providence",
-    "to_place": "BOS",
-    "platform_name": "m.ctrip.com",
-    "text": "providenceBOS",
-    "new platform_name": ""
-  },
-  {
-    "id": "5096",
-    "from_place": "BOS",
-    "to_place": "Revere",
-    "platform_name": "m.ctrip.com",
-    "text": "BOSRevere",
-    "new platform_name": ""
-  },
-  {
-    "id": "5097",
-    "from_place": "Revere",
-    "to_place": "BOS",
-    "platform_name": "m.ctrip.com",
-    "text": "RevereBOS",
-    "new platform_name": ""
-  },
-  {
-    "id": "5098",
-    "from_place": "DEN",
-    "to_place": "Denver Downtown",
-    "platform_name": "m.ctrip.com",
-    "text": "DENDenver Downtown",
-    "new platform_name": ""
-  },
-  {
-    "id": "5099",
-    "from_place": "Denver Downtown",
-    "to_place": "DEN",
-    "platform_name": "m.ctrip.com",
-    "text": "Denver DowntownDEN",
-    "new platform_name": ""
-  },
-  {
-    "id": "5100",
-    "from_place": "SEA",
-    "to_place": "Bellevue",
-    "platform_name": "m.ctrip.com",
-    "text": "SEABellevue",
-    "new platform_name": ""
-  },
-  {
-    "id": "5101",
-    "from_place": "Bellevue",
-    "to_place": "SEA",
-    "platform_name": "m.ctrip.com",
-    "text": "BellevueSEA",
-    "new platform_name": ""
-  },
-  {
-    "id": "5102",
-    "from_place": "IAH",
-    "to_place": "Houston",
-    "platform_name": "m.ctrip.com",
-    "text": "IAHHouston",
-    "new platform_name": ""
-  },
-  {
-    "id": "5103",
-    "from_place": "Houston",
-    "to_place": "IAH",
-    "platform_name": "m.ctrip.com",
-    "text": "HoustonIAH",
-    "new platform_name": ""
-  },
-  {
-    "id": "5104",
-    "from_place": "HOU",
-    "to_place": "Houston",
-    "platform_name": "m.ctrip.com",
-    "text": "HOUHouston",
-    "new platform_name": ""
-  },
-  {
-    "id": "5105",
-    "from_place": "Houston",
-    "to_place": "HOU",
-    "platform_name": "m.ctrip.com",
-    "text": "HoustonHOU",
-    "new platform_name": ""
-  },
-  {
-    "id": "5106",
-    "from_place": "IAH",
-    "to_place": "Galveston, TX",
-    "platform_name": "m.ctrip.com",
-    "text": "IAHGalveston, TX",
-    "new platform_name": ""
-  },
-  {
-    "id": "5107",
-    "from_place": "Galveston, TX",
-    "to_place": "IAH",
-    "platform_name": "m.ctrip.com",
-    "text": "Galveston, TXIAH",
-    "new platform_name": ""
-  },
-  {
-    "id": "5108",
-    "from_place": "HOU",
-    "to_place": "Galveston, TX",
-    "platform_name": "m.ctrip.com",
-    "text": "HOUGalveston, TX",
-    "new platform_name": ""
-  },
-  {
-    "id": "5109",
-    "from_place": "Galveston, TX",
-    "to_place": "HOU",
-    "platform_name": "m.ctrip.com",
-    "text": "Galveston, TXHOU",
-    "new platform_name": ""
-  },
-  {
-    "id": "5110",
-    "from_place": "SFO",
-    "to_place": "san jose",
-    "platform_name": "m.ctrip.com",
-    "text": "SFOsan jose",
-    "new platform_name": ""
-  },
-  {
-    "id": "5111",
-    "from_place": "san jose",
-    "to_place": "SFO",
-    "platform_name": "m.ctrip.com",
-    "text": "san joseSFO",
-    "new platform_name": ""
-  },
-  {
-    "id": "5112",
-    "from_place": "SFO",
-    "to_place": "berkeley",
-    "platform_name": "m.ctrip.com",
-    "text": "SFOberkeley",
-    "new platform_name": ""
-  },
-  {
-    "id": "5113",
-    "from_place": "berkeley",
-    "to_place": "SFO",
-    "platform_name": "m.ctrip.com",
-    "text": "berkeleySFO",
-    "new platform_name": ""
-  },
-  {
-    "id": "5114",
-    "from_place": "SFO",
-    "to_place": "Fremont",
-    "platform_name": "m.ctrip.com",
-    "text": "SFOFremont",
-    "new platform_name": ""
-  },
-  {
-    "id": "5115",
-    "from_place": "Fremont",
-    "to_place": "SFO",
-    "platform_name": "m.ctrip.com",
-    "text": "FremontSFO",
-    "new platform_name": ""
-  },
-  {
-    "id": "5116",
-    "from_place": "YYC",
-    "to_place": "Banff",
-    "platform_name": "China Ctrip API",
-    "text": "YYCBanff",
-    "new platform_name": ""
-  },
-  {
-    "id": "5117",
-    "from_place": "Banff",
-    "to_place": "YYC",
-    "platform_name": "China Ctrip API",
-    "text": "BanffYYC",
-    "new platform_name": ""
-  },
-  {
-    "id": "5118",
-    "from_place": "YVR",
-    "to_place": "Vancouver",
-    "platform_name": "m.ctrip.com",
-    "text": "YVRVancouver",
-    "new platform_name": ""
-  },
-  {
-    "id": "5119",
-    "from_place": "Vancouver",
-    "to_place": "YVR",
-    "platform_name": "m.ctrip.com",
-    "text": "VancouverYVR",
-    "new platform_name": ""
-  },
-  {
-    "id": "5120",
-    "from_place": "YVR",
-    "to_place": "Whistler",
-    "platform_name": "m.ctrip.com",
-    "text": "YVRWhistler",
-    "new platform_name": ""
-  },
-  {
-    "id": "5121",
-    "from_place": "Whistler",
-    "to_place": "YVR",
-    "platform_name": "m.ctrip.com",
-    "text": "WhistlerYVR",
-    "new platform_name": ""
-  },
-  {
-    "id": "5122",
-    "from_place": "YYZ",
-    "to_place": "Toronto",
-    "platform_name": "m.ctrip.com",
-    "text": "YYZToronto",
-    "new platform_name": ""
-  },
-  {
-    "id": "5123",
-    "from_place": "Toronto",
-    "to_place": "YYZ",
-    "platform_name": "m.ctrip.com",
-    "text": "TorontoYYZ",
-    "new platform_name": ""
-  },
-  {
-    "id": "5124",
-    "from_place": "YYZ",
-    "to_place": "Nigara falls",
-    "platform_name": "m.ctrip.com",
-    "text": "YYZNigara falls",
-    "new platform_name": ""
-  },
-  {
-    "id": "5125",
-    "from_place": "Nigara falls",
-    "to_place": "YYZ",
-    "platform_name": "m.ctrip.com",
-    "text": "Nigara fallsYYZ",
-    "new platform_name": ""
-  },
-  {
-    "id": "5126",
-    "from_place": "YUL",
-    "to_place": "Montreal",
-    "platform_name": "China Ctrip API",
-    "text": "YULMontreal",
-    "new platform_name": ""
-  },
-  {
-    "id": "5127",
-    "from_place": "Montreal",
-    "to_place": "YUL",
-    "platform_name": "China Ctrip API",
-    "text": "MontrealYUL",
-    "new platform_name": ""
-  },
-  {
-    "id": "5128",
-    "from_place": "LAS",
-    "to_place": "Las vegas stripe",
-    "platform_name": "m.ctrip.com",
-    "text": "LASLas vegas stripe",
-    "new platform_name": ""
-  },
-  {
-    "id": "5129",
-    "from_place": "Las vegas stripe",
-    "to_place": "LAS",
-    "platform_name": "m.ctrip.com",
-    "text": "Las vegas stripeLAS",
-    "new platform_name": ""
-  },
-  {
-    "id": "5130",
-    "from_place": "ATL",
-    "to_place": "Atlanta",
-    "platform_name": "m.ctrip.com",
-    "text": "ATLAtlanta",
-    "new platform_name": ""
-  },
-  {
-    "id": "5131",
-    "from_place": "Atlanta",
-    "to_place": "ATL",
-    "platform_name": "m.ctrip.com",
-    "text": "AtlantaATL",
-    "new platform_name": ""
-  },
-  {
-    "id": "5132",
-    "from_place": "BNA",
-    "to_place": "Nashville",
-    "platform_name": "m.ctrip.com",
-    "text": "BNANashville",
-    "new platform_name": ""
-  },
-  {
-    "id": "5133",
-    "from_place": "Nashville",
-    "to_place": "BNA",
-    "platform_name": "m.ctrip.com",
-    "text": "NashvilleBNA",
-    "new platform_name": ""
-  },
-  {
-    "id": "5134",
-    "from_place": "BUF",
-    "to_place": "Buffalo Downtown",
-    "platform_name": "m.ctrip.com",
-    "text": "BUFBuffalo Downtown",
-    "new platform_name": ""
-  },
-  {
-    "id": "5135",
-    "from_place": "Buffalo Downtown",
-    "to_place": "BUF",
-    "platform_name": "m.ctrip.com",
-    "text": "Buffalo DowntownBUF",
-    "new platform_name": ""
-  },
-  {
-    "id": "5136",
-    "from_place": "BUF",
-    "to_place": "Niagara Falls 2",
-    "platform_name": "China Ctrip API",
-    "text": "BUFNiagara Falls 2",
-    "new platform_name": ""
-  },
-  {
-    "id": "5137",
-    "from_place": "AUS",
-    "to_place": "Austin Downtown",
-    "platform_name": "m.ctrip.com",
-    "text": "AUSAustin Downtown",
-    "new platform_name": ""
-  },
-  {
-    "id": "5138",
-    "from_place": "Austin Downtown",
-    "to_place": "AUS",
-    "platform_name": "m.ctrip.com",
-    "text": "Austin DowntownAUS",
-    "new platform_name": ""
-  },
-  {
-    "id": "5139",
-    "from_place": "DTW",
-    "to_place": "Detroit",
-    "platform_name": "m.ctrip.com",
-    "text": "DTWDetroit",
-    "new platform_name": ""
-  },
-  {
-    "id": "5140",
-    "from_place": "Detroit",
-    "to_place": "DTW",
-    "platform_name": "m.ctrip.com",
-    "text": "DetroitDTW",
-    "new platform_name": ""
-  },
-  {
-    "id": "5141",
-    "from_place": "CLT",
-    "to_place": "Charlotte",
-    "platform_name": "m.ctrip.com",
-    "text": "CLTCharlotte",
-    "new platform_name": ""
-  },
-  {
-    "id": "5142",
-    "from_place": "Charlotte",
-    "to_place": "CLT",
-    "platform_name": "m.ctrip.com",
-    "text": "CharlotteCLT",
-    "new platform_name": ""
-  },
-  {
-    "id": "5143",
-    "from_place": "TPA",
-    "to_place": "Tampa Downtown",
-    "platform_name": "m.ctrip.com",
-    "text": "TPATampa Downtown",
-    "new platform_name": ""
-  },
-  {
-    "id": "5144",
-    "from_place": "Tampa Downtown",
-    "to_place": "TPA",
-    "platform_name": "m.ctrip.com",
-    "text": "Tampa DowntownTPA",
-    "new platform_name": ""
-  },
-  {
-    "id": "5145",
-    "from_place": "TPA",
-    "to_place": "Clear water",
-    "platform_name": "China Ctrip API",
-    "text": "TPAClear water",
-    "new platform_name": ""
-  },
-  {
-    "id": "5146",
-    "from_place": "Clear water",
-    "to_place": "TPA",
-    "platform_name": "China Ctrip API",
-    "text": "Clear waterTPA",
-    "new platform_name": ""
-  },
-  {
-    "id": "5147",
-    "from_place": "MSP",
-    "to_place": "Minneapolis",
-    "platform_name": "China Ctrip API",
-    "text": "MSPMinneapolis",
-    "new platform_name": ""
-  },
-  {
-    "id": "5148",
-    "from_place": "Minneapolis",
-    "to_place": "MSP",
-    "platform_name": "China Ctrip API",
-    "text": "MinneapolisMSP",
-    "new platform_name": ""
-  },
-  {
-    "id": "5149",
-    "from_place": "IND",
-    "to_place": "Indianapolis",
-    "platform_name": "China Ctrip API",
-    "text": "INDIndianapolis",
-    "new platform_name": ""
-  },
-  {
-    "id": "5150",
-    "from_place": "Indianapolis",
-    "to_place": "IND",
-    "platform_name": "China Ctrip API",
-    "text": "IndianapolisIND",
-    "new platform_name": ""
-  },
-  {
-    "id": "5151",
-    "from_place": "MIA",
-    "to_place": "Hollywood",
-    "platform_name": "m.ctrip.com",
-    "text": "MIAHollywood",
-    "new platform_name": ""
-  },
-  {
-    "id": "5152",
-    "from_place": "Hollywood",
-    "to_place": "MIA",
-    "platform_name": "m.ctrip.com",
-    "text": "HollywoodMIA",
-    "new platform_name": ""
-  },
-  {
-    "id": "5153",
-    "from_place": "MIA",
-    "to_place": "Down town miami",
-    "platform_name": "China Ctrip API",
-    "text": "MIADown town miami",
-    "new platform_name": ""
-  },
-  {
-    "id": "5154",
-    "from_place": "Down town miami",
-    "to_place": "MIA",
-    "platform_name": "China Ctrip API",
-    "text": "Down town miamiMIA",
-    "new platform_name": ""
-  },
-  {
-    "id": "5155",
-    "from_place": "MIA",
-    "to_place": "port",
-    "platform_name": "m.ctrip.com",
-    "text": "MIAport",
-    "new platform_name": ""
-  },
-  {
-    "id": "5156",
-    "from_place": "port",
-    "to_place": "MIA",
-    "platform_name": "m.ctrip.com",
-    "text": "portMIA",
-    "new platform_name": ""
-  },
-  {
-    "id": "5157",
-    "from_place": "MIA",
-    "to_place": "Miami beach",
-    "platform_name": "m.ctrip.com",
-    "text": "MIAMiami beach",
-    "new platform_name": ""
-  },
-  {
-    "id": "5158",
-    "from_place": "Miami beach",
-    "to_place": "MIA",
-    "platform_name": "m.ctrip.com",
-    "text": "Miami beachMIA",
-    "new platform_name": ""
-  },
-  {
-    "id": "5159",
-    "from_place": "FLL",
-    "to_place": "Miami beach",
-    "platform_name": "m.ctrip.com",
-    "text": "FLLMiami beach",
-    "new platform_name": ""
-  },
-  {
-    "id": "5160",
-    "from_place": "Miami beach",
-    "to_place": "FLL",
-    "platform_name": "m.ctrip.com",
-    "text": "Miami beachFLL",
-    "new platform_name": ""
-  },
-  {
-    "id": "5161",
-    "from_place": "FLL",
-    "to_place": "port",
-    "platform_name": "m.ctrip.com",
-    "text": "FLLport",
-    "new platform_name": ""
-  },
-  {
-    "id": "5162",
-    "from_place": "port",
-    "to_place": "FLL",
-    "platform_name": "#N/A",
-    "text": "portFLL",
-    "new platform_name": ""
-  },
-  {
-    "id": "5163",
-    "from_place": "FLL",
-    "to_place": "Down town miami",
-    "platform_name": "China Ctrip API",
-    "text": "FLLDown town miami",
-    "new platform_name": ""
-  },
-  {
-    "id": "5164",
-    "from_place": "Down town miami",
-    "to_place": "FLL",
-    "platform_name": "#N/A",
-    "text": "Down town miamiFLL",
-    "new platform_name": ""
-  },
-  {
-    "id": "5165",
-    "from_place": "FLL",
-    "to_place": "Sunny Isles Beach",
-    "platform_name": "m.ctrip.com",
-    "text": "FLLSunny Isles Beach",
-    "new platform_name": ""
-  },
-  {
-    "id": "5166",
-    "from_place": "Sunny Isles Beach",
-    "to_place": "FLL",
-    "platform_name": "m.ctrip.com",
-    "text": "Sunny Isles BeachFLL",
-    "new platform_name": ""
-  },
-  {
-    "id": "5167",
-    "from_place": "FLL",
-    "to_place": "Hollywood",
-    "platform_name": "m.ctrip.com",
-    "text": "FLLHollywood",
-    "new platform_name": ""
-  },
-  {
-    "id": "5168",
-    "from_place": "Hollywood",
-    "to_place": "FLL",
-    "platform_name": "m.ctrip.com",
-    "text": "HollywoodFLL",
-    "new platform_name": ""
-  },
-  {
-    "id": "5169",
-    "from_place": "MCO",
-    "to_place": "Orlando",
-    "platform_name": "m.ctrip.com",
-    "text": "MCOOrlando",
-    "new platform_name": ""
-  },
-  {
-    "id": "5170",
-    "from_place": "Orlando",
-    "to_place": "MCO",
-    "platform_name": "m.ctrip.com",
-    "text": "OrlandoMCO",
-    "new platform_name": ""
-  },
-  {
-    "id": "5171",
-    "from_place": "MCO",
-    "to_place": "downtown 2",
-    "platform_name": "m.ctrip.com",
-    "text": "MCOdowntown 2",
-    "new platform_name": ""
-  },
-  {
-    "id": "5172",
-    "from_place": "downtown 2",
-    "to_place": "MCO",
-    "platform_name": "m.ctrip.com",
-    "text": "downtown 2MCO",
-    "new platform_name": ""
-  },
-  {
-    "id": "5173",
-    "from_place": "MCO",
-    "to_place": "Disney world",
-    "platform_name": "m.ctrip.com",
-    "text": "MCODisney world",
-    "new platform_name": ""
-  },
-  {
-    "id": "5174",
-    "from_place": "Disney world",
-    "to_place": "MCO",
-    "platform_name": "m.ctrip.com",
-    "text": "Disney worldMCO",
-    "new platform_name": ""
-  },
-  {
-    "id": "5175",
-    "from_place": "MCO",
-    "to_place": "Kennedy Space Center",
-    "platform_name": "m.ctrip.com",
-    "text": "MCOKennedy Space Center",
-    "new platform_name": ""
-  },
-  {
-    "id": "5176",
-    "from_place": "SEA",
-    "to_place": "Seattle",
-    "platform_name": "m.ctrip.com",
-    "text": "SEASeattle",
-    "new platform_name": ""
-  },
-  {
-    "id": "5177",
-    "from_place": "Seattle",
-    "to_place": "SEA",
-    "platform_name": "m.ctrip.com",
-    "text": "SeattleSEA",
-    "new platform_name": ""
-  },
-  {
-    "id": "5178",
-    "from_place": "MSY",
-    "to_place": "New Orleans",
-    "platform_name": "m.ctrip.com",
-    "text": "MSYNew Orleans",
-    "new platform_name": ""
-  },
-  {
-    "id": "5179",
-    "from_place": "New Orleans",
-    "to_place": "MSY",
-    "platform_name": "m.ctrip.com",
-    "text": "New OrleansMSY",
-    "new platform_name": ""
-  },
-  {
-    "id": "5180",
-    "from_place": "HNL",
-    "to_place": "Waikiki",
-    "platform_name": "China Ctrip API",
-    "text": "HNLWaikiki",
-    "new platform_name": ""
-  },
-  {
-    "id": "5181",
-    "from_place": "Waikiki",
-    "to_place": "HNL",
-    "platform_name": "China Ctrip API",
-    "text": "WaikikiHNL",
-    "new platform_name": ""
-  },
-  {
-    "id": "5182",
-    "from_place": "FCO",
-    "to_place": "Roma",
-    "platform_name": "China Ctrip API",
-    "text": "FCORoma",
-    "new platform_name": ""
-  },
-  {
-    "id": "5183",
-    "from_place": "Roma",
-    "to_place": "FCO",
-    "platform_name": "China Ctrip API",
-    "text": "RomaFCO",
-    "new platform_name": ""
-  },
-  {
-    "id": "5184",
-    "from_place": "CIA",
-    "to_place": "Roma",
-    "platform_name": "China Ctrip API",
-    "text": "CIARoma",
-    "new platform_name": ""
-  },
-  {
-    "id": "5185",
-    "from_place": "Roma",
-    "to_place": "CIA",
-    "platform_name": "China Ctrip API",
-    "text": "RomaCIA",
-    "new platform_name": ""
-  },
-  {
-    "id": "5186",
-    "from_place": "FCO",
-    "to_place": "Civitavecchia",
-    "platform_name": "China Ctrip API",
-    "text": "FCOCivitavecchia",
-    "new platform_name": ""
-  },
-  {
-    "id": "5187",
-    "from_place": "Civitavecchia",
-    "to_place": "FCO",
-    "platform_name": "China Ctrip API",
-    "text": "CivitavecchiaFCO",
-    "new platform_name": ""
-  },
-  {
-    "id": "5188",
-    "from_place": "CIA",
-    "to_place": "Civitavecchia",
-    "platform_name": "China Ctrip API",
-    "text": "CIACivitavecchia",
-    "new platform_name": ""
-  },
-  {
-    "id": "5189",
-    "from_place": "Civitavecchia",
-    "to_place": "CIA",
-    "platform_name": "China Ctrip API",
-    "text": "CivitavecchiaCIA",
-    "new platform_name": ""
-  },
-  {
-    "id": "5190",
-    "from_place": "MXP",
-    "to_place": "Milan C 区",
-    "platform_name": "#N/A",
-    "text": "MXPMilan C 区",
-    "new platform_name": ""
-  },
-  {
-    "id": "5191",
-    "from_place": "Milan C 区",
-    "to_place": "MXP",
-    "platform_name": "#N/A",
-    "text": "Milan C 区MXP",
-    "new platform_name": ""
-  },
-  {
-    "id": "5192",
-    "from_place": "LIN",
-    "to_place": "Milan C 区",
-    "platform_name": "#N/A",
-    "text": "LINMilan C 区",
-    "new platform_name": ""
-  },
-  {
-    "id": "5193",
-    "from_place": "Milan C 区",
-    "to_place": "LIN",
-    "platform_name": "#N/A",
-    "text": "Milan C 区LIN",
-    "new platform_name": ""
-  },
-  {
-    "id": "5194",
-    "from_place": "BGY",
-    "to_place": "Milan C 区",
-    "platform_name": "#N/A",
-    "text": "BGYMilan C 区",
-    "new platform_name": ""
-  },
-  {
-    "id": "5195",
-    "from_place": "Milan C 区",
-    "to_place": "BGY",
-    "platform_name": "#N/A",
-    "text": "Milan C 区BGY",
-    "new platform_name": ""
-  },
-  {
-    "id": "5196",
-    "from_place": "MXP",
-    "to_place": "Milan",
-    "platform_name": "China Ctrip API",
-    "text": "MXPMilan",
-    "new platform_name": ""
-  },
-  {
-    "id": "5197",
-    "from_place": "Milan",
-    "to_place": "MXP",
-    "platform_name": "China Ctrip API",
-    "text": "MilanMXP",
-    "new platform_name": ""
-  },
-  {
-    "id": "5198",
-    "from_place": "LIN",
-    "to_place": "Milan",
-    "platform_name": "China Ctrip API",
-    "text": "LINMilan",
-    "new platform_name": ""
-  },
-  {
-    "id": "5199",
-    "from_place": "Milan",
-    "to_place": "LIN",
-    "platform_name": "China Ctrip API",
-    "text": "MilanLIN",
-    "new platform_name": ""
-  },
-  {
-    "id": "5200",
-    "from_place": "BGY",
-    "to_place": "Milan",
-    "platform_name": "China Ctrip API",
-    "text": "BGYMilan",
-    "new platform_name": ""
-  },
-  {
-    "id": "5201",
-    "from_place": "Milan",
-    "to_place": "BGY",
-    "platform_name": "China Ctrip API",
-    "text": "MilanBGY",
-    "new platform_name": ""
-  },
-  {
-    "id": "5202",
-    "from_place": "FLR",
-    "to_place": "Florence",
-    "platform_name": "China Ctrip API",
-    "text": "FLRFlorence",
-    "new platform_name": ""
-  },
-  {
-    "id": "5203",
-    "from_place": "Florence",
-    "to_place": "FLR",
-    "platform_name": "China Ctrip API",
-    "text": "FlorenceFLR",
-    "new platform_name": ""
-  },
-  {
-    "id": "5204",
-    "from_place": "NAP",
-    "to_place": "Naples",
-    "platform_name": "China Ctrip API",
-    "text": "NAPNaples",
-    "new platform_name": ""
-  },
-  {
-    "id": "5205",
-    "from_place": "Naples",
-    "to_place": "NAP",
-    "platform_name": "China Ctrip API",
-    "text": "NaplesNAP",
-    "new platform_name": ""
-  },
-  {
-    "id": "5206",
-    "from_place": "VCE",
-    "to_place": "Mastre",
-    "platform_name": "China Ctrip API",
-    "text": "VCEMastre",
-    "new platform_name": ""
-  },
-  {
-    "id": "5207",
-    "from_place": "Mastre",
-    "to_place": "VCE",
-    "platform_name": "China Ctrip API",
-    "text": "MastreVCE",
-    "new platform_name": ""
-  },
-  {
-    "id": "5208",
-    "from_place": "TSF",
-    "to_place": "Mastre",
-    "platform_name": "China Ctrip API",
-    "text": "TSFMastre",
-    "new platform_name": ""
-  },
-  {
-    "id": "5209",
-    "from_place": "Mastre",
-    "to_place": "TSF",
-    "platform_name": "China Ctrip API",
-    "text": "MastreTSF",
-    "new platform_name": ""
-  },
-  {
-    "id": "5210",
-    "from_place": "VCE",
-    "to_place": "traditional Venice",
-    "platform_name": "China Ctrip API",
-    "text": "VCEtraditional Venice",
-    "new platform_name": ""
-  },
-  {
-    "id": "5211",
-    "from_place": "traditional Venice",
-    "to_place": "VCE",
-    "platform_name": "China Ctrip API",
-    "text": "traditional VeniceVCE",
-    "new platform_name": ""
-  },
-  {
-    "id": "5212",
-    "from_place": "TSF",
-    "to_place": "traditional Venice",
-    "platform_name": "China Ctrip API",
-    "text": "TSFtraditional Venice",
-    "new platform_name": ""
-  },
-  {
-    "id": "5213",
-    "from_place": "traditional Venice",
-    "to_place": "TSF",
-    "platform_name": "China Ctrip API",
-    "text": "traditional VeniceTSF",
-    "new platform_name": ""
-  },
-  {
-    "id": "5214",
-    "from_place": "CUN",
-    "to_place": "Hotel Zone",
-    "platform_name": "China Ctrip API",
-    "text": "CUNHotel Zone",
-    "new platform_name": ""
-  },
-  {
-    "id": "5215",
-    "from_place": "Hotel Zone",
-    "to_place": "CUN",
-    "platform_name": "China Ctrip API",
-    "text": "Hotel ZoneCUN",
-    "new platform_name": ""
-  },
-  {
-    "id": "5216",
-    "from_place": "CUN",
-    "to_place": "Playa del Carmen",
-    "platform_name": "China Ctrip API",
-    "text": "CUNPlaya del Carmen",
-    "new platform_name": ""
-  },
-  {
-    "id": "5217",
-    "from_place": "Playa del Carmen",
-    "to_place": "CUN",
-    "platform_name": "China Ctrip API",
-    "text": "Playa del CarmenCUN",
-    "new platform_name": ""
-  },
-  {
-    "id": "5218",
-    "from_place": "CUN",
-    "to_place": "Puerto Morelos",
-    "platform_name": "China Ctrip API",
-    "text": "CUNPuerto Morelos",
-    "new platform_name": ""
-  },
-  {
-    "id": "5219",
-    "from_place": "Puerto Morelos",
-    "to_place": "CUN",
-    "platform_name": "China Ctrip API",
-    "text": "Puerto MorelosCUN",
-    "new platform_name": ""
-  },
-  {
-    "id": "5220",
-    "from_place": "CUN",
-    "to_place": "Tulum",
-    "platform_name": "China Ctrip API",
-    "text": "CUNTulum",
-    "new platform_name": ""
-  },
-  {
-    "id": "5221",
-    "from_place": "Tulum",
-    "to_place": "CUN",
-    "platform_name": "China Ctrip API",
-    "text": "TulumCUN",
-    "new platform_name": ""
-  },
-  {
-    "id": "5222",
-    "from_place": "CUN",
-    "to_place": "COSTA MUJERES",
-    "platform_name": "China Ctrip API",
-    "text": "CUNCOSTA MUJERES",
-    "new platform_name": ""
-  },
-  {
-    "id": "5223",
-    "from_place": "COSTA MUJERES",
-    "to_place": "CUN",
-    "platform_name": "China Ctrip API",
-    "text": "COSTA MUJERESCUN",
-    "new platform_name": ""
-  },
-  {
-    "id": "5224",
-    "from_place": "CUN",
-    "to_place": "Akumal",
-    "platform_name": "China Ctrip API",
-    "text": "CUNAkumal",
-    "new platform_name": ""
-  },
-  {
-    "id": "5225",
-    "from_place": "Akumal",
-    "to_place": "CUN",
-    "platform_name": "China Ctrip API",
-    "text": "AkumalCUN",
-    "new platform_name": ""
-  },
-  {
-    "id": "5226",
-    "from_place": "CUN",
-    "to_place": "Puerto Aventuras",
-    "platform_name": "China Ctrip API",
-    "text": "CUNPuerto Aventuras",
-    "new platform_name": ""
-  },
-  {
-    "id": "5227",
-    "from_place": "Puerto Aventuras",
-    "to_place": "CUN",
-    "platform_name": "China Ctrip API",
-    "text": "Puerto AventurasCUN",
-    "new platform_name": ""
-  },
-  {
-    "id": "5228",
-    "from_place": "CUN",
-    "to_place": "Puerto Juarez",
-    "platform_name": "China Ctrip API",
-    "text": "CUNPuerto Juarez",
-    "new platform_name": ""
-  },
-  {
-    "id": "5229",
-    "from_place": "Puerto Juarez",
-    "to_place": "CUN",
-    "platform_name": "China Ctrip API",
-    "text": "Puerto JuarezCUN",
-    "new platform_name": ""
-  },
-  {
-    "id": "5230",
-    "from_place": "MEX",
-    "to_place": "Mexico city mid",
-    "platform_name": "China Ctrip API",
-    "text": "MEXMexico city mid",
-    "new platform_name": ""
-  },
-  {
-    "id": "5231",
-    "from_place": "Mexico city mid",
-    "to_place": "MEX",
-    "platform_name": "China Ctrip API",
-    "text": "Mexico city midMEX",
-    "new platform_name": ""
-  },
-  {
-    "id": "5232",
-    "from_place": "MEX",
-    "to_place": "Puebla",
-    "platform_name": "China Ctrip API",
-    "text": "MEXPuebla",
-    "new platform_name": ""
-  },
-  {
-    "id": "5233",
-    "from_place": "Puebla",
-    "to_place": "MEX",
-    "platform_name": "China Ctrip API",
-    "text": "PueblaMEX",
-    "new platform_name": ""
-  },
-  {
-    "id": "5234",
-    "from_place": "MEX",
-    "to_place": "Mexico City South",
-    "platform_name": "m.ctrip.com",
-    "text": "MEXMexico City South",
-    "new platform_name": ""
-  },
-  {
-    "id": "5235",
-    "from_place": "Mexico City South",
-    "to_place": "MEX",
-    "platform_name": "m.ctrip.com",
-    "text": "Mexico City SouthMEX",
-    "new platform_name": ""
-  },
-  {
-    "id": "5236",
-    "from_place": "MEX",
-    "to_place": "Mexico City Northwest",
-    "platform_name": "m.ctrip.com",
-    "text": "MEXMexico City Northwest",
-    "new platform_name": ""
-  },
-  {
-    "id": "5237",
-    "from_place": "Mexico City Northwest",
-    "to_place": "MEX",
-    "platform_name": "m.ctrip.com",
-    "text": "Mexico City NorthwestMEX",
-    "new platform_name": ""
-  },
-  {
-    "id": "5238",
-    "from_place": "SCL",
-    "to_place": "Santiago/Providencia",
-    "platform_name": "China Ctrip API",
-    "text": "SCLSantiago/Providencia",
-    "new platform_name": ""
-  },
-  {
-    "id": "5239",
-    "from_place": "Santiago/Providencia",
-    "to_place": "SCL",
-    "platform_name": "China Ctrip API",
-    "text": "Santiago/ProvidenciaSCL",
-    "new platform_name": ""
-  },
-  {
-    "id": "5240",
-    "from_place": "SCL",
-    "to_place": "Las condes",
-    "platform_name": "China Ctrip API",
-    "text": "SCLLas condes",
-    "new platform_name": ""
-  },
-  {
-    "id": "5241",
-    "from_place": "Las condes",
-    "to_place": "SCL",
-    "platform_name": "China Ctrip API",
-    "text": "Las condesSCL",
-    "new platform_name": ""
-  },
-  {
-    "id": "5242",
-    "from_place": "SCL",
-    "to_place": "Vitacuraa",
-    "platform_name": "China Ctrip API",
-    "text": "SCLVitacuraa",
-    "new platform_name": ""
-  },
-  {
-    "id": "5243",
-    "from_place": "Vitacuraa",
-    "to_place": "SCL",
-    "platform_name": "China Ctrip API",
-    "text": "VitacuraaSCL",
-    "new platform_name": ""
-  },
-  {
-    "id": "5244",
-    "from_place": "SJO",
-    "to_place": "San Jose",
-    "platform_name": "China Ctrip API",
-    "text": "SJOSan Jose",
-    "new platform_name": ""
-  },
-  {
-    "id": "5245",
-    "from_place": "San Jose",
-    "to_place": "SJO",
-    "platform_name": "China Ctrip API",
-    "text": "San JoseSJO",
-    "new platform_name": ""
-  },
-  {
-    "id": "5246",
-    "from_place": "SJO",
-    "to_place": "Alajuelita",
-    "platform_name": "China Ctrip API",
-    "text": "SJOAlajuelita",
-    "new platform_name": ""
-  },
-  {
-    "id": "5247",
-    "from_place": "Alajuelita",
-    "to_place": "SJO",
-    "platform_name": "China Ctrip API",
-    "text": "AlajuelitaSJO",
-    "new platform_name": ""
-  },
-  {
-    "id": "5248",
-    "from_place": "SJO",
-    "to_place": "Heredia",
-    "platform_name": "China Ctrip API",
-    "text": "SJOHeredia",
-    "new platform_name": ""
-  },
-  {
-    "id": "5249",
-    "from_place": "Heredia",
-    "to_place": "SJO",
-    "platform_name": "China Ctrip API",
-    "text": "HerediaSJO",
-    "new platform_name": ""
-  },
-  {
-    "id": "5250",
-    "from_place": "SJD",
-    "to_place": "Cabo San Luca",
-    "platform_name": "#N/A",
-    "text": "SJDCabo San Luca",
-    "new platform_name": ""
-  },
-  {
-    "id": "5251",
-    "from_place": "Cabo San Luca",
-    "to_place": "SJD",
-    "platform_name": "#N/A",
-    "text": "Cabo San LucaSJD",
-    "new platform_name": ""
-  },
-  {
-    "id": "5252",
-    "from_place": "SJD",
-    "to_place": "San Jose Del Cabo",
-    "platform_name": "China Ctrip API",
-    "text": "SJDSan Jose Del Cabo",
-    "new platform_name": ""
-  },
-  {
-    "id": "5253",
-    "from_place": "San Jose Del Cabo",
-    "to_place": "SJD",
-    "platform_name": "China Ctrip API",
-    "text": "San Jose Del CaboSJD",
-    "new platform_name": ""
-  },
-  {
-    "id": "5254",
-    "from_place": "SJD",
-    "to_place": "Tourist corridor",
-    "platform_name": "China Ctrip API",
-    "text": "SJDTourist corridor",
-    "new platform_name": ""
-  },
-  {
-    "id": "5255",
-    "from_place": "Tourist corridor",
-    "to_place": "SJD",
-    "platform_name": "China Ctrip API",
-    "text": "Tourist corridorSJD",
-    "new platform_name": ""
-  },
-  {
-    "id": "5256",
-    "from_place": "SJD",
-    "to_place": "Pacific Side",
-    "platform_name": "China Ctrip API",
-    "text": "SJDPacific Side",
-    "new platform_name": ""
-  },
-  {
-    "id": "5257",
-    "from_place": "Pacific Side",
-    "to_place": "SJD",
-    "platform_name": "China Ctrip API",
-    "text": "Pacific SideSJD",
-    "new platform_name": ""
-  },
-  {
-    "id": "5258",
-    "from_place": "AUA",
-    "to_place": "Noord",
-    "platform_name": "China Ctrip API",
-    "text": "AUANoord",
-    "new platform_name": ""
-  },
-  {
-    "id": "5259",
-    "from_place": "Noord",
-    "to_place": "AUA",
-    "platform_name": "China Ctrip API",
-    "text": "NoordAUA",
-    "new platform_name": ""
-  },
-  {
-    "id": "5260",
-    "from_place": "AUA",
-    "to_place": "Aruba Downtown",
-    "platform_name": "China Ctrip API",
-    "text": "AUAAruba Downtown",
-    "new platform_name": ""
-  },
-  {
-    "id": "5261",
-    "from_place": "Aruba Downtown",
-    "to_place": "AUA",
-    "platform_name": "China Ctrip API",
-    "text": "Aruba DowntownAUA",
-    "new platform_name": ""
-  },
-  {
-    "id": "5262",
-    "from_place": "LIM",
-    "to_place": "Lima",
-    "platform_name": "China Ctrip API",
-    "text": "LIMLima",
-    "new platform_name": ""
-  },
-  {
-    "id": "5263",
-    "from_place": "Lima",
-    "to_place": "LIM",
-    "platform_name": "China Ctrip API",
-    "text": "LimaLIM",
-    "new platform_name": ""
-  },
-  {
-    "id": "5264",
-    "from_place": "LIM",
-    "to_place": "Barranco",
-    "platform_name": "China Ctrip API",
-    "text": "LIMBarranco",
-    "new platform_name": ""
-  },
-  {
-    "id": "5265",
-    "from_place": "Barranco",
-    "to_place": "LIM",
-    "platform_name": "China Ctrip API",
-    "text": "BarrancoLIM",
-    "new platform_name": ""
-  },
-  {
-    "id": "5266",
-    "from_place": "LIM",
-    "to_place": "San Isidro",
-    "platform_name": "China Ctrip API",
-    "text": "LIMSan Isidro",
-    "new platform_name": ""
-  },
-  {
-    "id": "5267",
-    "from_place": "San Isidro",
-    "to_place": "LIM",
-    "platform_name": "China Ctrip API",
-    "text": "San IsidroLIM",
-    "new platform_name": ""
-  },
-  {
-    "id": "5268",
-    "from_place": "GIG",
-    "to_place": "Centro",
-    "platform_name": "China Ctrip API",
-    "text": "GIGCentro",
-    "new platform_name": ""
-  },
-  {
-    "id": "5269",
-    "from_place": "Centro",
-    "to_place": "GIG",
-    "platform_name": "China Ctrip API",
-    "text": "CentroGIG",
-    "new platform_name": ""
-  },
-  {
-    "id": "5270",
-    "from_place": "GIG",
-    "to_place": "Barra da Tijuca",
-    "platform_name": "China Ctrip API",
-    "text": "GIGBarra da Tijuca",
-    "new platform_name": ""
-  },
-  {
-    "id": "5271",
-    "from_place": "Barra da Tijuca",
-    "to_place": "GIG",
-    "platform_name": "China Ctrip API",
-    "text": "Barra da TijucaGIG",
-    "new platform_name": ""
-  },
-  {
-    "id": "5272",
-    "from_place": "GIG",
-    "to_place": "Copacabana",
-    "platform_name": "China Ctrip API",
-    "text": "GIGCopacabana",
-    "new platform_name": ""
-  },
-  {
-    "id": "5273",
-    "from_place": "Copacabana",
-    "to_place": "GIG",
-    "platform_name": "China Ctrip API",
-    "text": "CopacabanaGIG",
-    "new platform_name": ""
-  },
-  {
-    "id": "5274",
-    "from_place": "MBJ",
-    "to_place": "MBJ Hotels",
-    "platform_name": "#N/A",
-    "text": "MBJMBJ Hotels",
-    "new platform_name": ""
-  },
-  {
-    "id": "5275",
-    "from_place": "MBJ Hotels",
-    "to_place": "MBJ",
-    "platform_name": "#N/A",
-    "text": "MBJ HotelsMBJ",
-    "new platform_name": ""
-  },
-  {
-    "id": "5276",
-    "from_place": "MBJ",
-    "to_place": "Hotels Zone",
-    "platform_name": "#N/A",
-    "text": "MBJHotels Zone",
-    "new platform_name": ""
-  },
-  {
-    "id": "5277",
-    "from_place": "Hotels Zone",
-    "to_place": "MBJ",
-    "platform_name": "#N/A",
-    "text": "Hotels ZoneMBJ",
-    "new platform_name": ""
-  },
-  {
-    "id": "5278",
-    "from_place": "MBJ",
-    "to_place": "MBJ airport",
-    "platform_name": "#N/A",
-    "text": "MBJMBJ airport",
-    "new platform_name": ""
-  },
-  {
-    "id": "5279",
-    "from_place": "MBJ airport",
-    "to_place": "MBJ",
-    "platform_name": "#N/A",
-    "text": "MBJ airportMBJ",
-    "new platform_name": ""
-  },
-  {
-    "id": "5280",
-    "from_place": "EZE",
-    "to_place": "Microcentro",
-    "platform_name": "China Ctrip API",
-    "text": "EZEMicrocentro",
-    "new platform_name": ""
-  },
-  {
-    "id": "5281",
-    "from_place": "Microcentro",
-    "to_place": "EZE",
-    "platform_name": "China Ctrip API",
-    "text": "MicrocentroEZE",
-    "new platform_name": ""
-  },
-  {
-    "id": "5282",
-    "from_place": "PUJ",
-    "to_place": "Bavaro",
-    "platform_name": "China Ctrip API",
-    "text": "PUJBavaro",
-    "new platform_name": ""
-  },
-  {
-    "id": "5283",
-    "from_place": "Bavaro",
-    "to_place": "PUJ",
-    "platform_name": "China Ctrip API",
-    "text": "BavaroPUJ",
-    "new platform_name": ""
-  },
-  {
-    "id": "5284",
-    "from_place": "PUJ",
-    "to_place": "Veron",
-    "platform_name": "China Ctrip API",
-    "text": "PUJVeron",
-    "new platform_name": ""
-  },
-  {
-    "id": "5285",
-    "from_place": "Veron",
-    "to_place": "PUJ",
-    "platform_name": "China Ctrip API",
-    "text": "VeronPUJ",
-    "new platform_name": ""
-  },
-  {
-    "id": "5286",
-    "from_place": "PUJ",
-    "to_place": "Punta Cana",
-    "platform_name": "China Ctrip API",
-    "text": "PUJPunta Cana",
-    "new platform_name": ""
-  },
-  {
-    "id": "5287",
-    "from_place": "Punta Cana",
-    "to_place": "PUJ",
-    "platform_name": "China Ctrip API",
-    "text": "Punta CanaPUJ",
-    "new platform_name": ""
-  },
-  {
-    "id": "5288",
-    "from_place": "Centro de São Paulo",
-    "to_place": "GRU",
-    "platform_name": "#N/A",
-    "text": "Centro de São PauloGRU",
-    "new platform_name": ""
-  },
-  {
-    "id": "5289",
-    "from_place": "GRU",
-    "to_place": "Centro de São Paulo",
-    "platform_name": "#N/A",
-    "text": "GRUCentro de São Paulo",
-    "new platform_name": ""
-  },
-  {
-    "id": "5290",
-    "from_place": "MXP",
-    "to_place": "Como",
-    "platform_name": "#N/A",
-    "text": "MXPComo",
-    "new platform_name": ""
-  },
-  {
-    "id": "5291",
-    "from_place": "Como",
-    "to_place": "MXP",
-    "platform_name": "#N/A",
-    "text": "ComoMXP",
-    "new platform_name": ""
-  },
-  {
-    "id": "5292",
-    "from_place": "MXP",
-    "to_place": "Lecco",
-    "platform_name": "#N/A",
-    "text": "MXPLecco",
-    "new platform_name": ""
-  },
-  {
-    "id": "5293",
-    "from_place": "Lecco",
-    "to_place": "MXP",
-    "platform_name": "#N/A",
-    "text": "LeccoMXP",
-    "new platform_name": ""
-  },
-  {
-    "id": "5294",
-    "from_place": "MXP",
-    "to_place": "Bellagio",
-    "platform_name": "#N/A",
-    "text": "MXPBellagio",
-    "new platform_name": ""
-  },
-  {
-    "id": "5295",
-    "from_place": "Bellagio",
-    "to_place": "MXP",
-    "platform_name": "#N/A",
-    "text": "BellagioMXP",
-    "new platform_name": ""
-  },
-  {
-    "id": "5296",
-    "from_place": "BGY",
-    "to_place": "Lago di Garda",
-    "platform_name": "#N/A",
-    "text": "BGYLago di Garda",
-    "new platform_name": ""
-  },
-  {
-    "id": "5297",
-    "from_place": "Lago di Garda",
-    "to_place": "BGY",
-    "platform_name": "#N/A",
-    "text": "Lago di GardaBGY",
-    "new platform_name": ""
-  },
-  {
-    "id": "5298",
-    "from_place": "ZRH",
-    "to_place": "Lucerne",
-    "platform_name": "m.ctrip.com",
-    "text": "ZRHLucerne",
-    "new platform_name": ""
-  },
-  {
-    "id": "5299",
-    "from_place": "Lucerne",
-    "to_place": "ZRH",
-    "platform_name": "m.ctrip.com",
-    "text": "LucerneZRH",
-    "new platform_name": ""
-  },
-  {
-    "id": "5300",
-    "from_place": "MRS",
-    "to_place": "Marseille",
-    "platform_name": "m.ctrip.com",
-    "text": "MRSMarseille",
-    "new platform_name": ""
-  },
-  {
-    "id": "5301",
-    "from_place": "Marseille",
-    "to_place": "MRS",
-    "platform_name": "m.ctrip.com",
-    "text": "MarseilleMRS",
-    "new platform_name": ""
-  },
-  {
-    "id": "5302",
-    "from_place": "BOD",
-    "to_place": "Bordeaux",
-    "platform_name": "m.ctrip.com",
-    "text": "BODBordeaux",
-    "new platform_name": ""
-  },
-  {
-    "id": "5303",
-    "from_place": "Bordeaux",
-    "to_place": "BOD",
-    "platform_name": "m.ctrip.com",
-    "text": "BordeauxBOD",
-    "new platform_name": ""
-  },
-  {
-    "id": "5304",
-    "from_place": "Lyon",
-    "to_place": "LYS",
-    "platform_name": "m.ctrip.com",
-    "text": "LyonLYS",
-    "new platform_name": ""
-  },
-  {
-    "id": "5305",
-    "from_place": "LYS",
-    "to_place": "Lyon",
-    "platform_name": "m.ctrip.com",
-    "text": "LYSLyon",
-    "new platform_name": ""
-  },
-  {
-    "id": "5306",
-    "from_place": "NCE",
-    "to_place": "Nice",
-    "platform_name": "m.ctrip.com",
-    "text": "NCENice",
-    "new platform_name": ""
-  },
-  {
-    "id": "5307",
-    "from_place": "Nice",
-    "to_place": "NCE",
-    "platform_name": "m.ctrip.com",
-    "text": "NiceNCE",
-    "new platform_name": ""
-  },
-  {
-    "id": "5308",
-    "from_place": "NCE",
-    "to_place": "Cannes",
-    "platform_name": "m.ctrip.com",
-    "text": "NCECannes",
-    "new platform_name": ""
-  },
-  {
-    "id": "5309",
-    "from_place": "Cannes",
-    "to_place": "NCE",
-    "platform_name": "m.ctrip.com",
-    "text": "CannesNCE",
-    "new platform_name": ""
-  },
-  {
-    "id": "5310",
-    "from_place": "NCE",
-    "to_place": "Monaco",
-    "platform_name": "m.ctrip.com",
-    "text": "NCEMonaco",
-    "new platform_name": ""
-  },
-  {
-    "id": "5311",
-    "from_place": "Monaco",
-    "to_place": "NCE",
-    "platform_name": "m.ctrip.com",
-    "text": "MonacoNCE",
-    "new platform_name": ""
-  },
-  {
-    "id": "5312",
-    "from_place": "NCE",
-    "to_place": "Antibes",
-    "platform_name": "m.ctrip.com",
-    "text": "NCEAntibes",
-    "new platform_name": ""
-  },
-  {
-    "id": "5313",
-    "from_place": "Antibes",
-    "to_place": "NCE",
-    "platform_name": "m.ctrip.com",
-    "text": "AntibesNCE",
-    "new platform_name": ""
-  },
-  {
-    "id": "5314",
-    "from_place": "BVA",
-    "to_place": "Beauvais",
-    "platform_name": "m.ctrip.com",
-    "text": "BVABeauvais",
-    "new platform_name": ""
-  },
-  {
-    "id": "5315",
-    "from_place": "Beauvais",
-    "to_place": "BVA",
-    "platform_name": "China Ctrip API",
-    "text": "BeauvaisBVA",
-    "new platform_name": ""
-  },
-  {
-    "id": "5316",
-    "from_place": "BVA",
-    "to_place": "paris",
-    "platform_name": "m.ctrip.com",
-    "text": "BVAparis",
-    "new platform_name": ""
-  },
-  {
-    "id": "5317",
-    "from_place": "BVA",
-    "to_place": "Disneyland Paris",
-    "platform_name": "m.ctrip.com",
-    "text": "BVADisneyland Paris",
-    "new platform_name": ""
-  },
-  {
-    "id": "5318",
-    "from_place": "BVA",
-    "to_place": "CDG机场范围",
-    "platform_name": "#N/A",
-    "text": "BVACDG机场范围",
-    "new platform_name": ""
-  },
-  {
-    "id": "5319",
-    "from_place": "BVA",
-    "to_place": "ORY机场范围",
-    "platform_name": "#N/A",
-    "text": "BVAORY机场范围",
-    "new platform_name": ""
-  },
-  {
-    "id": "5320",
-    "from_place": "RVN",
-    "to_place": "Rovaniemi City",
-    "platform_name": "China Ctrip API",
-    "text": "RVNRovaniemi City",
-    "new platform_name": ""
-  },
-  {
-    "id": "5321",
-    "from_place": "Rovaniemi City",
-    "to_place": "RVN",
-    "platform_name": "China Ctrip API",
-    "text": "Rovaniemi CityRVN",
-    "new platform_name": ""
-  },
-  {
-    "id": "5322",
-    "from_place": "IVL",
-    "to_place": "Saariselkä",
-    "platform_name": "China Ctrip API",
-    "text": "IVLSaariselkä",
-    "new platform_name": ""
-  },
-  {
-    "id": "5323",
-    "from_place": "Saariselkä",
-    "to_place": "IVL",
-    "platform_name": "China Ctrip API",
-    "text": "SaariselkäIVL",
-    "new platform_name": ""
-  },
-  {
-    "id": "5324",
-    "from_place": "IVL",
-    "to_place": "Inari",
-    "platform_name": "China Ctrip API",
-    "text": "IVLInari",
-    "new platform_name": ""
-  },
-  {
-    "id": "5325",
-    "from_place": "Inari",
-    "to_place": "IVL",
-    "platform_name": "China Ctrip API",
-    "text": "InariIVL",
-    "new platform_name": ""
-  },
-  {
-    "id": "5326",
-    "from_place": "DEL",
-    "to_place": "东德里",
-    "platform_name": "#N/A",
-    "text": "DEL东德里",
-    "new platform_name": ""
-  },
-  {
-    "id": "5327",
-    "from_place": "东德里",
-    "to_place": "DEL",
-    "platform_name": "#N/A",
-    "text": "东德里DEL",
-    "new platform_name": ""
-  },
-  {
-    "id": "5328",
-    "from_place": "DEL",
-    "to_place": "Noida I",
-    "platform_name": "#N/A",
-    "text": "DELNoida I",
-    "new platform_name": ""
-  },
-  {
-    "id": "5329",
-    "from_place": "Noida I",
-    "to_place": "DEL",
-    "platform_name": "#N/A",
-    "text": "Noida IDEL",
-    "new platform_name": ""
-  },
-  {
-    "id": "5330",
-    "from_place": "DEL",
-    "to_place": "Greater Noida 1",
-    "platform_name": "#N/A",
-    "text": "DELGreater Noida 1",
-    "new platform_name": ""
-  },
-  {
-    "id": "5331",
-    "from_place": "Greater Noida 1",
-    "to_place": "DEL",
-    "platform_name": "#N/A",
-    "text": "Greater Noida 1DEL",
-    "new platform_name": ""
-  },
-  {
-    "id": "5332",
-    "from_place": "DEL",
-    "to_place": "古尔冈",
-    "platform_name": "#N/A",
-    "text": "DEL古尔冈",
-    "new platform_name": ""
-  },
-  {
-    "id": "5333",
-    "from_place": "古尔冈",
-    "to_place": "DEL",
-    "platform_name": "#N/A",
-    "text": "古尔冈DEL",
-    "new platform_name": ""
-  },
-  {
-    "id": "5334",
-    "from_place": "DEL",
-    "to_place": "西德里",
-    "platform_name": "#N/A",
-    "text": "DEL西德里",
-    "new platform_name": ""
-  },
-  {
-    "id": "5335",
-    "from_place": "西德里",
-    "to_place": "DEL",
-    "platform_name": "#N/A",
-    "text": "西德里DEL",
-    "new platform_name": ""
-  },
-  {
-    "id": "5336",
-    "from_place": "DEL",
-    "to_place": "德里市区2",
-    "platform_name": "#N/A",
-    "text": "DEL德里市区2",
-    "new platform_name": ""
-  },
-  {
-    "id": "5337",
-    "from_place": "德里市区2",
-    "to_place": "DEL",
-    "platform_name": "#N/A",
-    "text": "德里市区2DEL",
-    "new platform_name": ""
-  },
-  {
-    "id": "5338",
-    "from_place": "DEL",
-    "to_place": "南德里",
-    "platform_name": "#N/A",
-    "text": "DEL南德里",
-    "new platform_name": ""
-  },
-  {
-    "id": "5339",
-    "from_place": "南德里",
-    "to_place": "DEL",
-    "platform_name": "#N/A",
-    "text": "南德里DEL",
-    "new platform_name": ""
-  },
-  {
-    "id": "5340",
-    "from_place": "DEL",
-    "to_place": "Faridabad",
-    "platform_name": "#N/A",
-    "text": "DELFaridabad",
-    "new platform_name": ""
-  },
-  {
-    "id": "5341",
-    "from_place": "Faridabad",
-    "to_place": "DEL",
-    "platform_name": "#N/A",
-    "text": "FaridabadDEL",
-    "new platform_name": ""
-  },
-  {
-    "id": "5342",
-    "from_place": "BOM",
-    "to_place": "Navi Mumbai",
-    "platform_name": "#N/A",
-    "text": "BOMNavi Mumbai",
-    "new platform_name": ""
-  },
-  {
-    "id": "5343",
-    "from_place": "Navi Mumbai",
-    "to_place": "BOM",
-    "platform_name": "#N/A",
-    "text": "Navi MumbaiBOM",
-    "new platform_name": ""
-  },
-  {
-    "id": "5344",
-    "from_place": "BOM",
-    "to_place": "Malad",
-    "platform_name": "#N/A",
-    "text": "BOMMalad",
-    "new platform_name": ""
-  },
-  {
-    "id": "5345",
-    "from_place": "Malad",
-    "to_place": "BOM",
-    "platform_name": "#N/A",
-    "text": "MaladBOM",
-    "new platform_name": ""
-  },
-  {
-    "id": "5346",
-    "from_place": "BOM",
-    "to_place": "Borivali",
-    "platform_name": "#N/A",
-    "text": "BOMBorivali",
-    "new platform_name": ""
-  },
-  {
-    "id": "5347",
-    "from_place": "Borivali",
-    "to_place": "BOM",
-    "platform_name": "#N/A",
-    "text": "BorivaliBOM",
-    "new platform_name": ""
-  },
-  {
-    "id": "5348",
-    "from_place": "BOM",
-    "to_place": "Mira Bhayandar",
-    "platform_name": "#N/A",
-    "text": "BOMMira Bhayandar",
-    "new platform_name": ""
-  },
-  {
-    "id": "5349",
-    "from_place": "Mira Bhayandar",
-    "to_place": "BOM",
-    "platform_name": "#N/A",
-    "text": "Mira BhayandarBOM",
-    "new platform_name": ""
-  },
-  {
-    "id": "5350",
-    "from_place": "BOM",
-    "to_place": "Surat",
-    "platform_name": "#N/A",
-    "text": "BOMSurat",
-    "new platform_name": ""
-  },
-  {
-    "id": "5351",
-    "from_place": "Surat",
-    "to_place": "BOM",
-    "platform_name": "#N/A",
-    "text": "SuratBOM",
-    "new platform_name": ""
-  },
-  {
-    "id": "5352",
-    "from_place": "BOM",
-    "to_place": "Lonavala",
-    "platform_name": "#N/A",
-    "text": "BOMLonavala",
-    "new platform_name": ""
-  },
-  {
-    "id": "5353",
-    "from_place": "Lonavala",
-    "to_place": "BOM",
-    "platform_name": "#N/A",
-    "text": "LonavalaBOM",
-    "new platform_name": ""
-  },
-  {
-    "id": "5354",
-    "from_place": "JAI",
-    "to_place": "center",
-    "platform_name": "#N/A",
-    "text": "JAIcenter",
-    "new platform_name": ""
-  },
-  {
-    "id": "5355",
-    "from_place": "center",
-    "to_place": "JAI",
-    "platform_name": "#N/A",
-    "text": "centerJAI",
-    "new platform_name": ""
-  },
-  {
-    "id": "5356",
-    "from_place": "JAI",
-    "to_place": "Dhani",
-    "platform_name": "#N/A",
-    "text": "JAIDhani",
-    "new platform_name": ""
-  },
-  {
-    "id": "5357",
-    "from_place": "Dhani",
-    "to_place": "JAI",
-    "platform_name": "#N/A",
-    "text": "DhaniJAI",
-    "new platform_name": ""
-  },
-  {
-    "id": "5358",
-    "from_place": "JAI",
-    "to_place": "Amer",
-    "platform_name": "#N/A",
-    "text": "JAIAmer",
-    "new platform_name": ""
-  },
-  {
-    "id": "5359",
-    "from_place": "Amer",
-    "to_place": "JAI",
-    "platform_name": "#N/A",
-    "text": "AmerJAI",
-    "new platform_name": ""
-  },
-  {
-    "id": "5360",
-    "from_place": "JAI",
-    "to_place": "Kukas",
-    "platform_name": "#N/A",
-    "text": "JAIKukas",
-    "new platform_name": ""
-  },
-  {
-    "id": "5361",
-    "from_place": "Kukas",
-    "to_place": "JAI",
-    "platform_name": "#N/A",
-    "text": "KukasJAI",
-    "new platform_name": ""
-  },
-  {
-    "id": "5362",
-    "from_place": "JAI",
-    "to_place": "JAI-Agra",
-    "platform_name": "#N/A",
-    "text": "JAIJAI-Agra",
-    "new platform_name": ""
-  },
-  {
-    "id": "5363",
-    "from_place": "JAI-Agra",
-    "to_place": "JAI",
-    "platform_name": "#N/A",
-    "text": "JAI-AgraJAI",
-    "new platform_name": ""
-  },
-  {
-    "id": "5364",
-    "from_place": "JAI",
-    "to_place": "JAI-Bharatpur",
-    "platform_name": "#N/A",
-    "text": "JAIJAI-Bharatpur",
-    "new platform_name": ""
-  },
-  {
-    "id": "5365",
-    "from_place": "JAI-Bharatpur",
-    "to_place": "JAI",
-    "platform_name": "#N/A",
-    "text": "JAI-BharatpurJAI",
-    "new platform_name": ""
-  },
-  {
-    "id": "5366",
-    "from_place": "JAI",
-    "to_place": "JAI-DEL",
-    "platform_name": "#N/A",
-    "text": "JAIJAI-DEL",
-    "new platform_name": ""
-  },
-  {
-    "id": "5367",
-    "from_place": "JAI-DEL",
-    "to_place": "JAI",
-    "platform_name": "#N/A",
-    "text": "JAI-DELJAI",
-    "new platform_name": ""
-  },
-  {
-    "id": "5368",
-    "from_place": "JAI",
-    "to_place": "JAI-Pushkar",
-    "platform_name": "#N/A",
-    "text": "JAIJAI-Pushkar",
-    "new platform_name": ""
-  },
-  {
-    "id": "5369",
-    "from_place": "JAI-Pushkar",
-    "to_place": "JAI",
-    "platform_name": "#N/A",
-    "text": "JAI-PushkarJAI",
-    "new platform_name": ""
-  },
-  {
-    "id": "5370",
-    "from_place": "JAI",
-    "to_place": "JAI-Udaipur",
-    "platform_name": "#N/A",
-    "text": "JAIJAI-Udaipur",
-    "new platform_name": ""
-  },
-  {
-    "id": "5371",
-    "from_place": "JAI-Udaipur",
-    "to_place": "JAI",
-    "platform_name": "#N/A",
-    "text": "JAI-UdaipurJAI",
-    "new platform_name": ""
-  },
-  {
-    "id": "5372",
-    "from_place": "JAI",
-    "to_place": "JAI-Jodhpur",
-    "platform_name": "#N/A",
-    "text": "JAIJAI-Jodhpur",
-    "new platform_name": ""
-  },
-  {
-    "id": "5373",
-    "from_place": "JAI-Jodhpur",
-    "to_place": "JAI",
-    "platform_name": "#N/A",
-    "text": "JAI-JodhpurJAI",
-    "new platform_name": ""
-  },
-  {
-    "id": "5374",
-    "from_place": "GOI",
-    "to_place": "Dabolim Airport",
-    "platform_name": "China Ctrip API",
-    "text": "GOIDabolim Airport",
-    "new platform_name": ""
-  },
-  {
-    "id": "5375",
-    "from_place": "Dabolim Airport",
-    "to_place": "GOI",
-    "platform_name": "China Ctrip API",
-    "text": "Dabolim AirportGOI",
-    "new platform_name": ""
-  },
-  {
-    "id": "5376",
-    "from_place": "GOI",
-    "to_place": "Candolim",
-    "platform_name": "China Ctrip API",
-    "text": "GOICandolim",
-    "new platform_name": ""
-  },
-  {
-    "id": "5377",
-    "from_place": "Candolim",
-    "to_place": "GOI",
-    "platform_name": "China Ctrip API",
-    "text": "CandolimGOI",
-    "new platform_name": ""
-  },
-  {
-    "id": "5378",
-    "from_place": "GOI",
-    "to_place": "Panjim",
-    "platform_name": "China Ctrip API",
-    "text": "GOIPanjim",
-    "new platform_name": ""
-  },
-  {
-    "id": "5379",
-    "from_place": "Panjim",
-    "to_place": "GOI",
-    "platform_name": "China Ctrip API",
-    "text": "PanjimGOI",
-    "new platform_name": ""
-  },
-  {
-    "id": "5380",
-    "from_place": "GOI",
-    "to_place": "Verna",
-    "platform_name": "China Ctrip API",
-    "text": "GOIVerna",
-    "new platform_name": ""
-  },
-  {
-    "id": "5381",
-    "from_place": "Verna",
-    "to_place": "GOI",
-    "platform_name": "China Ctrip API",
-    "text": "VernaGOI",
-    "new platform_name": ""
-  },
-  {
-    "id": "5382",
-    "from_place": "GOI",
-    "to_place": "Morjim",
-    "platform_name": "China Ctrip API",
-    "text": "GOIMorjim",
-    "new platform_name": ""
-  },
-  {
-    "id": "5383",
-    "from_place": "Morjim",
-    "to_place": "GOI",
-    "platform_name": "China Ctrip API",
-    "text": "MorjimGOI",
-    "new platform_name": ""
-  },
-  {
-    "id": "5384",
-    "from_place": "GOI",
-    "to_place": "Colva",
-    "platform_name": "China Ctrip API",
-    "text": "GOIColva",
-    "new platform_name": ""
-  },
-  {
-    "id": "5385",
-    "from_place": "Colva",
-    "to_place": "GOI",
-    "platform_name": "China Ctrip API",
-    "text": "ColvaGOI",
-    "new platform_name": ""
-  },
-  {
-    "id": "5386",
-    "from_place": "GOI",
-    "to_place": "Saligao",
-    "platform_name": "China Ctrip API",
-    "text": "GOISaligao",
-    "new platform_name": ""
-  },
-  {
-    "id": "5387",
-    "from_place": "Saligao",
-    "to_place": "GOI",
-    "platform_name": "China Ctrip API",
-    "text": "SaligaoGOI",
-    "new platform_name": ""
-  },
-  {
-    "id": "5388",
-    "from_place": "ARN",
-    "to_place": "Arlanda Airport",
-    "platform_name": "#N/A",
-    "text": "ARNArlanda Airport",
-    "new platform_name": ""
-  },
-  {
-    "id": "5389",
-    "from_place": "Arlanda Airport",
-    "to_place": "ARN",
-    "platform_name": "#N/A",
-    "text": "Arlanda AirportARN",
-    "new platform_name": ""
-  },
-  {
-    "id": "5390",
-    "from_place": "BMA",
-    "to_place": "Arlanda Airport",
-    "platform_name": "#N/A",
-    "text": "BMAArlanda Airport",
-    "new platform_name": ""
-  },
-  {
-    "id": "5391",
-    "from_place": "Arlanda Airport",
-    "to_place": "BMA",
-    "platform_name": "#N/A",
-    "text": "Arlanda AirportBMA",
-    "new platform_name": ""
-  },
-  {
-    "id": "5392",
-    "from_place": "TLL",
-    "to_place": "Tallinn",
-    "platform_name": "#N/A",
-    "text": "TLLTallinn",
-    "new platform_name": ""
-  },
-  {
-    "id": "5393",
-    "from_place": "Tallinn",
-    "to_place": "TLL",
-    "platform_name": "#N/A",
-    "text": "TallinnTLL",
-    "new platform_name": ""
-  },
-  {
-    "id": "5394",
-    "from_place": "BOM",
-    "to_place": "Dadar",
-    "platform_name": "#N/A",
-    "text": "BOMDadar",
-    "new platform_name": ""
-  },
-  {
-    "id": "5395",
-    "from_place": "Dadar",
-    "to_place": "BOM",
-    "platform_name": "#N/A",
-    "text": "DadarBOM",
-    "new platform_name": ""
-  },
-  {
-    "id": "5396",
-    "from_place": "BOM",
-    "to_place": "BOM  airport",
-    "platform_name": "#N/A",
-    "text": "BOMBOM  airport",
-    "new platform_name": ""
-  },
-  {
-    "id": "5397",
-    "from_place": "BOM  airport",
-    "to_place": "BOM",
-    "platform_name": "#N/A",
-    "text": "BOM  airportBOM",
-    "new platform_name": ""
-  },
-  {
-    "id": "5398",
-    "from_place": "BOM",
-    "to_place": "Mumbai East",
-    "platform_name": "#N/A",
-    "text": "BOMMumbai East",
-    "new platform_name": ""
-  },
-  {
-    "id": "5399",
-    "from_place": "Mumbai East",
-    "to_place": "BOM",
-    "platform_name": "#N/A",
-    "text": "Mumbai EastBOM",
-    "new platform_name": ""
-  },
-  {
-    "id": "5400",
-    "from_place": "BOM",
-    "to_place": "Thane",
-    "platform_name": "#N/A",
-    "text": "BOMThane",
-    "new platform_name": ""
-  },
-  {
-    "id": "5401",
-    "from_place": "Thane",
-    "to_place": "BOM",
-    "platform_name": "#N/A",
-    "text": "ThaneBOM",
-    "new platform_name": ""
-  },
-  {
-    "id": "5402",
-    "from_place": "BOM",
-    "to_place": "Khar Ghar",
-    "platform_name": "#N/A",
-    "text": "BOMKhar Ghar",
-    "new platform_name": ""
-  },
-  {
-    "id": "5403",
-    "from_place": "Khar Ghar",
-    "to_place": "BOM",
-    "platform_name": "#N/A",
-    "text": "Khar GharBOM",
-    "new platform_name": ""
-  },
-  {
-    "id": "5404",
-    "from_place": "BOM",
-    "to_place": "Pune/Pimpri",
-    "platform_name": "#N/A",
-    "text": "BOMPune/Pimpri",
-    "new platform_name": ""
-  },
-  {
-    "id": "5405",
-    "from_place": "Pune/Pimpri",
-    "to_place": "BOM",
-    "platform_name": "#N/A",
-    "text": "Pune/PimpriBOM",
-    "new platform_name": ""
-  },
-  {
-    "id": "5406",
-    "from_place": "BOM",
-    "to_place": "Nashik",
-    "platform_name": "#N/A",
-    "text": "BOMNashik",
-    "new platform_name": ""
-  },
-  {
-    "id": "5407",
-    "from_place": "Nashik",
-    "to_place": "BOM",
-    "platform_name": "#N/A",
-    "text": "NashikBOM",
-    "new platform_name": ""
-  },
-  {
-    "id": "5408",
-    "from_place": "BOM",
-    "to_place": "Shirdi",
-    "platform_name": "#N/A",
-    "text": "BOMShirdi",
-    "new platform_name": ""
-  },
-  {
-    "id": "5409",
-    "from_place": "Shirdi",
-    "to_place": "BOM",
-    "platform_name": "#N/A",
-    "text": "ShirdiBOM",
-    "new platform_name": ""
-  },
-  {
-    "id": "5410",
-    "from_place": "BKI",
-    "to_place": "Kota Kinabalu",
-    "platform_name": "#N/A",
-    "text": "BKIKota Kinabalu",
-    "new platform_name": ""
-  },
-  {
-    "id": "5411",
-    "from_place": "Kota Kinabalu",
-    "to_place": "BKI",
-    "platform_name": "#N/A",
-    "text": "Kota KinabaluBKI",
-    "new platform_name": ""
-  },
-  {
-    "id": "5412",
-    "from_place": "BKI",
-    "to_place": "香格里拉酒店",
-    "platform_name": "China Ctrip API",
-    "text": "BKI香格里拉酒店",
-    "new platform_name": ""
-  },
-  {
-    "id": "5413",
-    "from_place": "香格里拉酒店",
-    "to_place": "BKI",
-    "platform_name": "China Ctrip API",
-    "text": "香格里拉酒店BKI",
-    "new platform_name": ""
-  },
-  {
-    "id": "5414",
-    "from_place": "BKI",
-    "to_place": "京那巴鲁山",
-    "platform_name": "#N/A",
-    "text": "BKI京那巴鲁山",
-    "new platform_name": ""
-  },
-  {
-    "id": "5415",
-    "from_place": "京那巴鲁山",
-    "to_place": "BKI",
-    "platform_name": "#N/A",
-    "text": "京那巴鲁山BKI",
-    "new platform_name": ""
-  },
-  {
-    "id": "5416",
-    "from_place": "BKI",
-    "to_place": "哥打贝卢",
-    "platform_name": "China Ctrip API",
-    "text": "BKI哥打贝卢",
-    "new platform_name": ""
-  },
-  {
-    "id": "5417",
-    "from_place": "哥打贝卢",
-    "to_place": "BKI",
-    "platform_name": "China Ctrip API",
-    "text": "哥打贝卢BKI",
-    "new platform_name": ""
-  },
-  {
-    "id": "5418",
-    "from_place": "MEL",
-    "to_place": "北墨尔本",
-    "platform_name": "China Ctrip API",
-    "text": "MEL北墨尔本",
-    "new platform_name": ""
-  },
-  {
-    "id": "5419",
-    "from_place": "北墨尔本",
-    "to_place": "MEL",
-    "platform_name": "China Ctrip API",
-    "text": "北墨尔本MEL",
-    "new platform_name": ""
-  },
-  {
-    "id": "5420",
-    "from_place": "MEL",
-    "to_place": "南墨尔本",
-    "platform_name": "m.ctrip.com",
-    "text": "MEL南墨尔本",
-    "new platform_name": ""
-  },
-  {
-    "id": "5421",
-    "from_place": "南墨尔本",
-    "to_place": "MEL",
-    "platform_name": "m.ctrip.com",
-    "text": "南墨尔本MEL",
-    "new platform_name": ""
-  },
-  {
-    "id": "5422",
-    "from_place": "MEL",
-    "to_place": "St Kilda圣基尔达",
-    "platform_name": "m.ctrip.com",
-    "text": "MELSt Kilda圣基尔达",
-    "new platform_name": ""
-  },
-  {
-    "id": "5423",
-    "from_place": "St Kilda圣基尔达",
-    "to_place": "MEL",
-    "platform_name": "m.ctrip.com",
-    "text": "St Kilda圣基尔达MEL",
-    "new platform_name": ""
-  },
-  {
-    "id": "5424",
-    "from_place": "MEL",
-    "to_place": "Brighton布赖顿",
-    "platform_name": "m.ctrip.com",
-    "text": "MELBrighton布赖顿",
-    "new platform_name": ""
-  },
-  {
-    "id": "5425",
-    "from_place": "Brighton布赖顿",
-    "to_place": "MEL",
-    "platform_name": "m.ctrip.com",
-    "text": "Brighton布赖顿MEL",
-    "new platform_name": ""
-  },
-  {
-    "id": "5426",
-    "from_place": "MEL",
-    "to_place": "里士满Richmond",
-    "platform_name": "m.ctrip.com",
-    "text": "MEL里士满Richmond",
-    "new platform_name": ""
-  },
-  {
-    "id": "5427",
-    "from_place": "里士满Richmond",
-    "to_place": "MEL",
-    "platform_name": "m.ctrip.com",
-    "text": "里士满RichmondMEL",
-    "new platform_name": ""
-  },
-  {
-    "id": "5428",
-    "from_place": "MEL",
-    "to_place": "box hill盒子山",
-    "platform_name": "m.ctrip.com",
-    "text": "MELbox hill盒子山",
-    "new platform_name": ""
-  },
-  {
-    "id": "5429",
-    "from_place": "box hill盒子山",
-    "to_place": "MEL",
-    "platform_name": "m.ctrip.com",
-    "text": "box hill盒子山MEL",
-    "new platform_name": ""
-  },
-  {
-    "id": "5430",
-    "from_place": "MEL",
-    "to_place": "Glen Waverley格伦韦弗利",
-    "platform_name": "m.ctrip.com",
-    "text": "MELGlen Waverley格伦韦弗利",
-    "new platform_name": ""
-  },
-  {
-    "id": "5431",
-    "from_place": "Glen Waverley格伦韦弗利",
-    "to_place": "MEL",
-    "platform_name": "m.ctrip.com",
-    "text": "Glen Waverley格伦韦弗利MEL",
-    "new platform_name": ""
-  },
-  {
-    "id": "5432",
-    "from_place": "MEL",
-    "to_place": "clayton克莱顿",
-    "platform_name": "m.ctrip.com",
-    "text": "MELclayton克莱顿",
-    "new platform_name": ""
-  },
-  {
-    "id": "5433",
-    "from_place": "clayton克莱顿",
-    "to_place": "MEL",
-    "platform_name": "m.ctrip.com",
-    "text": "clayton克莱顿MEL",
-    "new platform_name": ""
-  },
-  {
-    "id": "5434",
-    "from_place": "ADL",
-    "to_place": "市区",
-    "platform_name": "m.ctrip.com",
-    "text": "ADL市区",
-    "new platform_name": ""
-  },
-  {
-    "id": "5435",
-    "from_place": "市区",
-    "to_place": "ADL",
-    "platform_name": "m.ctrip.com",
-    "text": "市区ADL",
-    "new platform_name": ""
-  },
-  {
-    "id": "5436",
-    "from_place": "SYD",
-    "to_place": "Sydney市区",
-    "platform_name": "m.ctrip.com",
-    "text": "SYDSydney市区",
-    "new platform_name": ""
-  },
-  {
-    "id": "5437",
-    "from_place": "Sydney市区",
-    "to_place": "SYD",
-    "platform_name": "m.ctrip.com",
-    "text": "Sydney市区SYD",
-    "new platform_name": ""
-  },
-  {
-    "id": "5438",
-    "from_place": "SYD",
-    "to_place": "北悉尼2",
-    "platform_name": "m.ctrip.com",
-    "text": "SYD北悉尼2",
-    "new platform_name": ""
-  },
-  {
-    "id": "5439",
-    "from_place": "北悉尼2",
-    "to_place": "SYD",
-    "platform_name": "m.ctrip.com",
-    "text": "北悉尼2SYD",
-    "new platform_name": ""
-  },
-  {
-    "id": "5440",
-    "from_place": "SYD",
-    "to_place": "邦迪",
-    "platform_name": "m.ctrip.com",
-    "text": "SYD邦迪",
-    "new platform_name": ""
-  },
-  {
-    "id": "5441",
-    "from_place": "邦迪",
-    "to_place": "SYD",
-    "platform_name": "m.ctrip.com",
-    "text": "邦迪SYD",
-    "new platform_name": ""
-  },
-  {
-    "id": "5442",
-    "from_place": "SYD",
-    "to_place": "Manly",
-    "platform_name": "m.ctrip.com",
-    "text": "SYDManly",
-    "new platform_name": ""
-  },
-  {
-    "id": "5443",
-    "from_place": "Manly",
-    "to_place": "SYD",
-    "platform_name": "m.ctrip.com",
-    "text": "ManlySYD",
-    "new platform_name": ""
-  },
-  {
-    "id": "5444",
-    "from_place": "SYD",
-    "to_place": "帕拉马塔",
-    "platform_name": "#N/A",
-    "text": "SYD帕拉马塔",
-    "new platform_name": ""
-  },
-  {
-    "id": "5445",
-    "from_place": "帕拉马塔",
-    "to_place": "SYD",
-    "platform_name": "#N/A",
-    "text": "帕拉马塔SYD",
-    "new platform_name": ""
-  },
-  {
-    "id": "5446",
-    "from_place": "SYD",
-    "to_place": "Mosman",
-    "platform_name": "#N/A",
-    "text": "SYDMosman",
-    "new platform_name": ""
-  },
-  {
-    "id": "5447",
-    "from_place": "Mosman",
-    "to_place": "SYD",
-    "platform_name": "#N/A",
-    "text": "MosmanSYD",
-    "new platform_name": ""
-  },
-  {
-    "id": "5448",
-    "from_place": "SYD",
-    "to_place": "麦觉理Macquarie",
-    "platform_name": "#N/A",
-    "text": "SYD麦觉理Macquarie",
-    "new platform_name": ""
-  },
-  {
-    "id": "5449",
-    "from_place": "麦觉理Macquarie",
-    "to_place": "SYD",
-    "platform_name": "#N/A",
-    "text": "麦觉理MacquarieSYD",
-    "new platform_name": ""
-  },
-  {
-    "id": "5450",
-    "from_place": "PER",
-    "to_place": "Perth市区",
-    "platform_name": "#N/A",
-    "text": "PERPerth市区",
-    "new platform_name": ""
-  },
-  {
-    "id": "5451",
-    "from_place": "Perth市区",
-    "to_place": "PER",
-    "platform_name": "#N/A",
-    "text": "Perth市区PER",
-    "new platform_name": ""
-  },
-  {
-    "id": "5452",
-    "from_place": "PER",
-    "to_place": "Willetton",
-    "platform_name": "m.ctrip.com",
-    "text": "PERWilletton",
-    "new platform_name": ""
-  },
-  {
-    "id": "5453",
-    "from_place": "Willetton",
-    "to_place": "PER",
-    "platform_name": "m.ctrip.com",
-    "text": "WillettonPER",
-    "new platform_name": ""
-  },
-  {
-    "id": "5454",
-    "from_place": "PER",
-    "to_place": "弗里曼特尔Fremantle",
-    "platform_name": "#N/A",
-    "text": "PER弗里曼特尔Fremantle",
-    "new platform_name": ""
-  },
-  {
-    "id": "5455",
-    "from_place": "弗里曼特尔Fremantle",
-    "to_place": "PER",
-    "platform_name": "#N/A",
-    "text": "弗里曼特尔FremantlePER",
-    "new platform_name": ""
-  },
-  {
-    "id": "5456",
-    "from_place": "BNE",
-    "to_place": "Brisbane市区",
-    "platform_name": "m.ctrip.com",
-    "text": "BNEBrisbane市区",
-    "new platform_name": ""
-  },
-  {
-    "id": "5457",
-    "from_place": "Brisbane市区",
-    "to_place": "BNE",
-    "platform_name": "m.ctrip.com",
-    "text": "Brisbane市区BNE",
-    "new platform_name": ""
-  },
-  {
-    "id": "5458",
-    "from_place": "BNE",
-    "to_place": "黄金海岸市区",
-    "platform_name": "m.ctrip.com",
-    "text": "BNE黄金海岸市区",
-    "new platform_name": ""
-  },
-  {
-    "id": "5459",
-    "from_place": "黄金海岸市区",
-    "to_place": "BNE",
-    "platform_name": "m.ctrip.com",
-    "text": "黄金海岸市区BNE",
-    "new platform_name": ""
-  },
-  {
-    "id": "5460",
-    "from_place": "BNE",
-    "to_place": "奥克斯利Oxley",
-    "platform_name": "m.ctrip.com",
-    "text": "BNE奥克斯利Oxley",
-    "new platform_name": ""
-  },
-  {
-    "id": "5461",
-    "from_place": "奥克斯利Oxley",
-    "to_place": "BNE",
-    "platform_name": "m.ctrip.com",
-    "text": "奥克斯利OxleyBNE",
-    "new platform_name": ""
-  },
-  {
-    "id": "5462",
-    "from_place": "OOL",
-    "to_place": "黄金海岸市区",
-    "platform_name": "m.ctrip.com",
-    "text": "OOL黄金海岸市区",
-    "new platform_name": ""
-  },
-  {
-    "id": "5463",
-    "from_place": "黄金海岸市区",
-    "to_place": "OOL",
-    "platform_name": "m.ctrip.com",
-    "text": "黄金海岸市区OOL",
-    "new platform_name": ""
-  },
-  {
-    "id": "5464",
-    "from_place": "OOL",
-    "to_place": "Main beach和south port",
-    "platform_name": "#N/A",
-    "text": "OOLMain beach和south port",
-    "new platform_name": ""
-  },
-  {
-    "id": "5465",
-    "from_place": "Main beach和south port",
-    "to_place": "OOL",
-    "platform_name": "#N/A",
-    "text": "Main beach和south portOOL",
-    "new platform_name": ""
-  },
-  {
-    "id": "5466",
-    "from_place": "ADL",
-    "to_place": "阿德莱德港",
-    "platform_name": "m.ctrip.com",
-    "text": "ADL阿德莱德港",
-    "new platform_name": ""
-  },
-  {
-    "id": "5467",
-    "from_place": "阿德莱德港",
-    "to_place": "ADL",
-    "platform_name": "m.ctrip.com",
-    "text": "阿德莱德港ADL",
-    "new platform_name": ""
-  },
-  {
-    "id": "5468",
-    "from_place": "AKL",
-    "to_place": "市区",
-    "platform_name": "China Ctrip API",
-    "text": "AKL市区",
-    "new platform_name": ""
-  },
-  {
-    "id": "5469",
-    "from_place": "市区",
-    "to_place": "AKL",
-    "platform_name": "China Ctrip API",
-    "text": "市区AKL",
-    "new platform_name": ""
-  },
-  {
-    "id": "5470",
-    "from_place": "AKL",
-    "to_place": "南区",
-    "platform_name": "China Ctrip API",
-    "text": "AKL南区",
-    "new platform_name": ""
-  },
-  {
-    "id": "5471",
-    "from_place": "南区",
-    "to_place": "AKL",
-    "platform_name": "China Ctrip API",
-    "text": "南区AKL",
-    "new platform_name": ""
-  },
-  {
-    "id": "5472",
-    "from_place": "ZQN",
-    "to_place": "city3",
-    "platform_name": "China Ctrip API",
-    "text": "ZQNcity3",
-    "new platform_name": ""
-  },
-  {
-    "id": "5473",
-    "from_place": "city3",
-    "to_place": "ZQN",
-    "platform_name": "China Ctrip API",
-    "text": "city3ZQN",
-    "new platform_name": ""
-  },
-  {
-    "id": "5474",
-    "from_place": "ZQN",
-    "to_place": "city-2",
-    "platform_name": "China Ctrip API",
-    "text": "ZQNcity-2",
-    "new platform_name": ""
-  },
-  {
-    "id": "5475",
-    "from_place": "city-2",
-    "to_place": "ZQN",
-    "platform_name": "China Ctrip API",
-    "text": "city-2ZQN",
-    "new platform_name": ""
-  },
-  {
-    "id": "5476",
-    "from_place": "LHR",
-    "to_place": "west of london center",
-    "platform_name": "#N/A",
-    "text": "LHRwest of london center",
-    "new platform_name": ""
-  },
-  {
-    "id": "5477",
-    "from_place": "LGW",
-    "to_place": "west of london center",
-    "platform_name": "#N/A",
-    "text": "LGWwest of london center",
-    "new platform_name": ""
-  },
-  {
-    "id": "5478",
-    "from_place": "STN",
-    "to_place": "west of london center",
-    "platform_name": "#N/A",
-    "text": "STNwest of london center",
-    "new platform_name": ""
-  },
-  {
-    "id": "5479",
-    "from_place": "LCY",
-    "to_place": "west of london center",
-    "platform_name": "#N/A",
-    "text": "LCYwest of london center",
-    "new platform_name": ""
-  },
-  {
-    "id": "5480",
-    "from_place": "west of london center",
-    "to_place": "LHR",
-    "platform_name": "#N/A",
-    "text": "west of london centerLHR",
-    "new platform_name": ""
-  },
-  {
-    "id": "5481",
-    "from_place": "west of london center",
-    "to_place": "LGW",
-    "platform_name": "#N/A",
-    "text": "west of london centerLGW",
-    "new platform_name": ""
-  },
-  {
-    "id": "5482",
-    "from_place": "west of london center",
-    "to_place": "STN",
-    "platform_name": "#N/A",
-    "text": "west of london centerSTN",
-    "new platform_name": ""
-  },
-  {
-    "id": "5483",
-    "from_place": "west of london center",
-    "to_place": "LCY",
-    "platform_name": "#N/A",
-    "text": "west of london centerLCY",
-    "new platform_name": ""
-  },
-  {
-    "id": "5484",
-    "from_place": "LHR",
-    "to_place": "north of london city",
-    "platform_name": "#N/A",
-    "text": "LHRnorth of london city",
-    "new platform_name": ""
-  },
-  {
-    "id": "5485",
-    "from_place": "LGW",
-    "to_place": "north of london city",
-    "platform_name": "#N/A",
-    "text": "LGWnorth of london city",
-    "new platform_name": ""
-  },
-  {
-    "id": "5486",
-    "from_place": "STN",
-    "to_place": "north of london city",
-    "platform_name": "#N/A",
-    "text": "STNnorth of london city",
-    "new platform_name": ""
-  },
-  {
-    "id": "5487",
-    "from_place": "LCY",
-    "to_place": "north of london city",
-    "platform_name": "#N/A",
-    "text": "LCYnorth of london city",
-    "new platform_name": ""
-  },
-  {
-    "id": "5488",
-    "from_place": "north of london city",
-    "to_place": "LHR",
-    "platform_name": "#N/A",
-    "text": "north of london cityLHR",
-    "new platform_name": ""
-  },
-  {
-    "id": "5489",
-    "from_place": "north of london city",
-    "to_place": "LGW",
-    "platform_name": "#N/A",
-    "text": "north of london cityLGW",
-    "new platform_name": ""
-  },
-  {
-    "id": "5490",
-    "from_place": "north of london city",
-    "to_place": "STN",
-    "platform_name": "#N/A",
-    "text": "north of london citySTN",
-    "new platform_name": ""
-  },
-  {
-    "id": "5491",
-    "from_place": "north of london city",
-    "to_place": "LCY",
-    "platform_name": "#N/A",
-    "text": "north of london cityLCY",
-    "new platform_name": ""
-  },
-  {
-    "id": "5492",
-    "from_place": "LHR",
-    "to_place": "east of london city",
-    "platform_name": "#N/A",
-    "text": "LHReast of london city",
-    "new platform_name": ""
-  },
-  {
-    "id": "5493",
-    "from_place": "LGW",
-    "to_place": "east of london city",
-    "platform_name": "#N/A",
-    "text": "LGWeast of london city",
-    "new platform_name": ""
-  },
-  {
-    "id": "5494",
-    "from_place": "STN",
-    "to_place": "east of london city",
-    "platform_name": "#N/A",
-    "text": "STNeast of london city",
-    "new platform_name": ""
-  },
-  {
-    "id": "5495",
-    "from_place": "LCY",
-    "to_place": "east of london city",
-    "platform_name": "#N/A",
-    "text": "LCYeast of london city",
-    "new platform_name": ""
-  },
-  {
-    "id": "5496",
-    "from_place": "east of london city",
-    "to_place": "LHR",
-    "platform_name": "#N/A",
-    "text": "east of london cityLHR",
-    "new platform_name": ""
-  },
-  {
-    "id": "5497",
-    "from_place": "east of london city",
-    "to_place": "LGW",
-    "platform_name": "#N/A",
-    "text": "east of london cityLGW",
-    "new platform_name": ""
-  },
-  {
-    "id": "5498",
-    "from_place": "east of london city",
-    "to_place": "STN",
-    "platform_name": "#N/A",
-    "text": "east of london citySTN",
-    "new platform_name": ""
-  },
-  {
-    "id": "5499",
-    "from_place": "east of london city",
-    "to_place": "LCY",
-    "platform_name": "#N/A",
-    "text": "east of london cityLCY",
-    "new platform_name": ""
-  },
-  {
-    "id": "5500",
-    "from_place": "LHR",
-    "to_place": "south of london city",
-    "platform_name": "#N/A",
-    "text": "LHRsouth of london city",
-    "new platform_name": ""
-  },
-  {
-    "id": "5501",
-    "from_place": "LGW",
-    "to_place": "south of london city",
-    "platform_name": "#N/A",
-    "text": "LGWsouth of london city",
-    "new platform_name": ""
-  },
-  {
-    "id": "5502",
-    "from_place": "STN",
-    "to_place": "south of london city",
-    "platform_name": "#N/A",
-    "text": "STNsouth of london city",
-    "new platform_name": ""
-  },
-  {
-    "id": "5503",
-    "from_place": "LCY",
-    "to_place": "south of london city",
-    "platform_name": "#N/A",
-    "text": "LCYsouth of london city",
-    "new platform_name": ""
-  },
-  {
-    "id": "5504",
-    "from_place": "south of london city",
-    "to_place": "LHR",
-    "platform_name": "#N/A",
-    "text": "south of london cityLHR",
-    "new platform_name": ""
-  },
-  {
-    "id": "5505",
-    "from_place": "south of london city",
-    "to_place": "LGW",
-    "platform_name": "#N/A",
-    "text": "south of london cityLGW",
-    "new platform_name": ""
-  },
-  {
-    "id": "5506",
-    "from_place": "south of london city",
-    "to_place": "STN",
-    "platform_name": "#N/A",
-    "text": "south of london citySTN",
-    "new platform_name": ""
-  },
-  {
-    "id": "5507",
-    "from_place": "south of london city",
-    "to_place": "LCY",
-    "platform_name": "#N/A",
-    "text": "south of london cityLCY",
-    "new platform_name": ""
-  },
-  {
-    "id": "5508",
-    "from_place": "LHR",
-    "to_place": "London Luton Airport",
-    "platform_name": "#N/A",
-    "text": "LHRLondon Luton Airport",
-    "new platform_name": ""
-  },
-  {
-    "id": "5509",
-    "from_place": "LGW",
-    "to_place": "London Luton Airport",
-    "platform_name": "#N/A",
-    "text": "LGWLondon Luton Airport",
-    "new platform_name": ""
-  },
-  {
-    "id": "5510",
-    "from_place": "STN",
-    "to_place": "London Luton Airport",
-    "platform_name": "#N/A",
-    "text": "STNLondon Luton Airport",
-    "new platform_name": ""
-  },
-  {
-    "id": "5511",
-    "from_place": "LCY",
-    "to_place": "London Luton Airport",
-    "platform_name": "#N/A",
-    "text": "LCYLondon Luton Airport",
-    "new platform_name": ""
-  },
-  {
-    "id": "5512",
-    "from_place": "London Luton Airport",
-    "to_place": "LHR",
-    "platform_name": "#N/A",
-    "text": "London Luton AirportLHR",
-    "new platform_name": ""
-  },
-  {
-    "id": "5513",
-    "from_place": "London Luton Airport",
-    "to_place": "LGW",
-    "platform_name": "#N/A",
-    "text": "London Luton AirportLGW",
-    "new platform_name": ""
-  },
-  {
-    "id": "5514",
-    "from_place": "London Luton Airport",
-    "to_place": "STN",
-    "platform_name": "#N/A",
-    "text": "London Luton AirportSTN",
-    "new platform_name": ""
-  },
-  {
-    "id": "5515",
-    "from_place": "London Luton Airport",
-    "to_place": "LCY",
-    "platform_name": "#N/A",
-    "text": "London Luton AirportLCY",
-    "new platform_name": ""
-  },
-  {
-    "id": "5516",
-    "from_place": "LHR",
-    "to_place": "STN airport",
-    "platform_name": "#N/A",
-    "text": "LHRSTN airport",
-    "new platform_name": ""
-  },
-  {
-    "id": "5517",
-    "from_place": "LGW",
-    "to_place": "STN airport",
-    "platform_name": "#N/A",
-    "text": "LGWSTN airport",
-    "new platform_name": ""
-  },
-  {
-    "id": "5518",
-    "from_place": "STN",
-    "to_place": "STN airport",
-    "platform_name": "#N/A",
-    "text": "STNSTN airport",
-    "new platform_name": ""
-  },
-  {
-    "id": "5519",
-    "from_place": "LCY",
-    "to_place": "STN airport",
-    "platform_name": "#N/A",
-    "text": "LCYSTN airport",
-    "new platform_name": ""
-  },
-  {
-    "id": "5520",
-    "from_place": "STN airport",
-    "to_place": "LHR",
-    "platform_name": "#N/A",
-    "text": "STN airportLHR",
-    "new platform_name": ""
-  },
-  {
-    "id": "5521",
-    "from_place": "STN airport",
-    "to_place": "LGW",
-    "platform_name": "#N/A",
-    "text": "STN airportLGW",
-    "new platform_name": ""
-  },
-  {
-    "id": "5522",
-    "from_place": "STN airport",
-    "to_place": "STN",
-    "platform_name": "#N/A",
-    "text": "STN airportSTN",
-    "new platform_name": ""
-  },
-  {
-    "id": "5523",
-    "from_place": "STN airport",
-    "to_place": "LCY",
-    "platform_name": "#N/A",
-    "text": "STN airportLCY",
-    "new platform_name": ""
-  },
-  {
-    "id": "5524",
-    "from_place": "LHR",
-    "to_place": "london center",
-    "platform_name": "#N/A",
-    "text": "LHRlondon center",
-    "new platform_name": ""
-  },
-  {
-    "id": "5525",
-    "from_place": "LGW",
-    "to_place": "london center",
-    "platform_name": "#N/A",
-    "text": "LGWlondon center",
-    "new platform_name": ""
-  },
-  {
-    "id": "5526",
-    "from_place": "STN",
-    "to_place": "london center",
-    "platform_name": "#N/A",
-    "text": "STNlondon center",
-    "new platform_name": ""
-  },
-  {
-    "id": "5527",
-    "from_place": "LCY",
-    "to_place": "london center",
-    "platform_name": "#N/A",
-    "text": "LCYlondon center",
-    "new platform_name": ""
-  },
-  {
-    "id": "5528",
-    "from_place": "london center",
-    "to_place": "LHR",
-    "platform_name": "#N/A",
-    "text": "london centerLHR",
-    "new platform_name": ""
-  },
-  {
-    "id": "5529",
-    "from_place": "london center",
-    "to_place": "LGW",
-    "platform_name": "#N/A",
-    "text": "london centerLGW",
-    "new platform_name": ""
-  },
-  {
-    "id": "5530",
-    "from_place": "london center",
-    "to_place": "STN",
-    "platform_name": "#N/A",
-    "text": "london centerSTN",
-    "new platform_name": ""
-  },
-  {
-    "id": "5531",
-    "from_place": "london center",
-    "to_place": "LCY",
-    "platform_name": "#N/A",
-    "text": "london centerLCY",
-    "new platform_name": ""
-  },
-  {
-    "id": "5532",
-    "from_place": "ALC",
-    "to_place": "Torrevieja",
-    "platform_name": "#N/A",
-    "text": "ALCTorrevieja",
-    "new platform_name": ""
-  },
-  {
-    "id": "5533",
-    "from_place": "Torrevieja",
-    "to_place": "ALC",
-    "platform_name": "#N/A",
-    "text": "TorreviejaALC",
-    "new platform_name": ""
-  },
-  {
-    "id": "5534",
-    "from_place": "ALC",
-    "to_place": "Calp",
-    "platform_name": "#N/A",
-    "text": "ALCCalp",
-    "new platform_name": ""
-  },
-  {
-    "id": "5535",
-    "from_place": "Calp",
-    "to_place": "ALC",
-    "platform_name": "#N/A",
-    "text": "CalpALC",
-    "new platform_name": ""
-  },
-  {
-    "id": "5536",
-    "from_place": "BCN",
-    "to_place": "Salou",
-    "platform_name": "#N/A",
-    "text": "BCNSalou",
-    "new platform_name": ""
-  },
-  {
-    "id": "5537",
-    "from_place": "Salou",
-    "to_place": "BCN",
-    "platform_name": "#N/A",
-    "text": "SalouBCN",
-    "new platform_name": ""
-  },
-  {
-    "id": "5538",
-    "from_place": "BCN",
-    "to_place": "Lloret De Mar",
-    "platform_name": "#N/A",
-    "text": "BCNLloret De Mar",
-    "new platform_name": ""
-  },
-  {
-    "id": "5539",
-    "from_place": "Lloret De Mar",
-    "to_place": "BCN",
-    "platform_name": "#N/A",
-    "text": "Lloret De MarBCN",
-    "new platform_name": ""
-  },
-  {
-    "id": "5540",
-    "from_place": "BCN",
-    "to_place": "Malgrat De Mar",
-    "platform_name": "#N/A",
-    "text": "BCNMalgrat De Mar",
-    "new platform_name": ""
-  },
-  {
-    "id": "5541",
-    "from_place": "Malgrat De Mar",
-    "to_place": "BCN",
-    "platform_name": "#N/A",
-    "text": "Malgrat De MarBCN",
-    "new platform_name": ""
-  },
-  {
-    "id": "5542",
-    "from_place": "BCN",
-    "to_place": "Calella (Calella De La Costa)",
-    "platform_name": "#N/A",
-    "text": "BCNCalella (Calella De La Costa)",
-    "new platform_name": ""
-  },
-  {
-    "id": "5543",
-    "from_place": "Calella (Calella De La Costa)",
-    "to_place": "BCN",
-    "platform_name": "#N/A",
-    "text": "Calella (Calella De La Costa)BCN",
-    "new platform_name": ""
-  },
-  {
-    "id": "5544",
-    "from_place": "BCN",
-    "to_place": "Santa Susanna",
-    "platform_name": "#N/A",
-    "text": "BCNSanta Susanna",
-    "new platform_name": ""
-  },
-  {
-    "id": "5545",
-    "from_place": "Santa Susanna",
-    "to_place": "BCN",
-    "platform_name": "#N/A",
-    "text": "Santa SusannaBCN",
-    "new platform_name": ""
-  },
-  {
-    "id": "5546",
-    "from_place": "BCN",
-    "to_place": "Pineda De Mar",
-    "platform_name": "#N/A",
-    "text": "BCNPineda De Mar",
-    "new platform_name": ""
-  },
-  {
-    "id": "5547",
-    "from_place": "Pineda De Mar",
-    "to_place": "BCN",
-    "platform_name": "#N/A",
-    "text": "Pineda De MarBCN",
-    "new platform_name": ""
-  },
-  {
-    "id": "5548",
-    "from_place": "BCN",
-    "to_place": "Tossa De Mar",
-    "platform_name": "#N/A",
-    "text": "BCNTossa De Mar",
-    "new platform_name": ""
-  },
-  {
-    "id": "5549",
-    "from_place": "Tossa De Mar",
-    "to_place": "BCN",
-    "platform_name": "#N/A",
-    "text": "Tossa De MarBCN",
-    "new platform_name": ""
-  },
-  {
-    "id": "5550",
-    "from_place": "BCN",
-    "to_place": "Sitges",
-    "platform_name": "#N/A",
-    "text": "BCNSitges",
-    "new platform_name": ""
-  },
-  {
-    "id": "5551",
-    "from_place": "Sitges",
-    "to_place": "BCN",
-    "platform_name": "#N/A",
-    "text": "SitgesBCN",
-    "new platform_name": ""
-  },
-  {
-    "id": "5552",
-    "from_place": "BCN",
-    "to_place": "Barcelona Port",
-    "platform_name": "#N/A",
-    "text": "BCNBarcelona Port",
-    "new platform_name": ""
-  },
-  {
-    "id": "5553",
-    "from_place": "Barcelona Port",
-    "to_place": "BCN",
-    "platform_name": "#N/A",
-    "text": "Barcelona PortBCN",
-    "new platform_name": ""
-  },
-  {
-    "id": "5554",
-    "from_place": "TFS",
-    "to_place": "Playa De Las Americas",
-    "platform_name": "#N/A",
-    "text": "TFSPlaya De Las Americas",
-    "new platform_name": ""
-  },
-  {
-    "id": "5555",
-    "from_place": "Playa De Las Americas",
-    "to_place": "TFS",
-    "platform_name": "#N/A",
-    "text": "Playa De Las AmericasTFS",
-    "new platform_name": ""
-  },
-  {
-    "id": "5556",
-    "from_place": "LPA",
-    "to_place": "Playa Del Ingles",
-    "platform_name": "#N/A",
-    "text": "LPAPlaya Del Ingles",
-    "new platform_name": ""
-  },
-  {
-    "id": "5557",
-    "from_place": "Playa Del Ingles",
-    "to_place": "LPA",
-    "platform_name": "#N/A",
-    "text": "Playa Del InglesLPA",
-    "new platform_name": ""
-  },
-  {
-    "id": "5558",
-    "from_place": "LPA",
-    "to_place": "Maspalomas",
-    "platform_name": "#N/A",
-    "text": "LPAMaspalomas",
-    "new platform_name": ""
-  },
-  {
-    "id": "5559",
-    "from_place": "Maspalomas",
-    "to_place": "LPA",
-    "platform_name": "#N/A",
-    "text": "MaspalomasLPA",
-    "new platform_name": ""
-  },
-  {
-    "id": "5560",
-    "from_place": "EDI",
-    "to_place": "Edinburgh",
-    "platform_name": "m.ctrip.com",
-    "text": "EDIEdinburgh",
-    "new platform_name": ""
-  },
-  {
-    "id": "5561",
-    "from_place": "Edinburgh",
-    "to_place": "EDI",
-    "platform_name": "m.ctrip.com",
-    "text": "EdinburghEDI",
-    "new platform_name": ""
-  },
-  {
-    "id": "5562",
-    "from_place": "EDI",
-    "to_place": "glasgrow",
-    "platform_name": "#N/A",
-    "text": "EDIglasgrow",
-    "new platform_name": ""
-  },
-  {
-    "id": "5563",
-    "from_place": "glasgrow",
-    "to_place": "EDI",
-    "platform_name": "#N/A",
-    "text": "glasgrowEDI",
-    "new platform_name": ""
-  },
-  {
-    "id": "5564",
-    "from_place": "Liverpool",
-    "to_place": "LPL",
-    "platform_name": "China Ctrip API",
-    "text": "LiverpoolLPL",
-    "new platform_name": ""
-  },
-  {
-    "id": "5565",
-    "from_place": "LPL",
-    "to_place": "Liverpool",
-    "platform_name": "China Ctrip API",
-    "text": "LPLLiverpool",
-    "new platform_name": ""
-  },
-  {
-    "id": "5566",
-    "from_place": "Bournemouth",
-    "to_place": "BOH",
-    "platform_name": "#N/A",
-    "text": "BournemouthBOH",
-    "new platform_name": ""
-  },
-  {
-    "id": "5567",
-    "from_place": "BOH",
-    "to_place": "Bournemouth",
-    "platform_name": "#N/A",
-    "text": "BOHBournemouth",
-    "new platform_name": ""
-  },
-  {
-    "id": "5568",
-    "from_place": "Bristol",
-    "to_place": "BRS",
-    "platform_name": "China Ctrip API",
-    "text": "BristolBRS",
-    "new platform_name": ""
-  },
-  {
-    "id": "5569",
-    "from_place": "BRS",
-    "to_place": "Bristol",
-    "platform_name": "China Ctrip API",
-    "text": "BRSBristol",
-    "new platform_name": ""
-  },
-  {
-    "id": "5570",
-    "from_place": "Cardiff",
-    "to_place": "CWL",
-    "platform_name": "China Ctrip API",
-    "text": "CardiffCWL",
-    "new platform_name": ""
-  },
-  {
-    "id": "5571",
-    "from_place": "CWL",
-    "to_place": "Cardiff",
-    "platform_name": "China Ctrip API",
-    "text": "CWLCardiff",
-    "new platform_name": ""
-  },
-  {
-    "id": "5572",
-    "from_place": "Doncaster",
-    "to_place": "DSA",
-    "platform_name": "#N/A",
-    "text": "DoncasterDSA",
-    "new platform_name": ""
-  },
-  {
-    "id": "5573",
-    "from_place": "DSA",
-    "to_place": "Doncaster",
-    "platform_name": "#N/A",
-    "text": "DSADoncaster",
-    "new platform_name": ""
-  },
-  {
-    "id": "5574",
-    "from_place": "Nottingham",
-    "to_place": "EMA",
-    "platform_name": "#N/A",
-    "text": "NottinghamEMA",
-    "new platform_name": ""
-  },
-  {
-    "id": "5575",
-    "from_place": "EMA",
-    "to_place": "Nottingham",
-    "platform_name": "#N/A",
-    "text": "EMANottingham",
-    "new platform_name": ""
-  },
-  {
-    "id": "5576",
-    "from_place": "Exeter,UK",
-    "to_place": "EXT",
-    "platform_name": "#N/A",
-    "text": "Exeter,UKEXT",
-    "new platform_name": ""
-  },
-  {
-    "id": "5577",
-    "from_place": "EXT",
-    "to_place": "Exeter,UK",
-    "platform_name": "#N/A",
-    "text": "EXTExeter,UK",
-    "new platform_name": ""
-  },
-  {
-    "id": "5578",
-    "from_place": "Leeds",
-    "to_place": "LBA",
-    "platform_name": "#N/A",
-    "text": "LeedsLBA",
-    "new platform_name": ""
-  },
-  {
-    "id": "5579",
-    "from_place": "LBA",
-    "to_place": "Leeds",
-    "platform_name": "#N/A",
-    "text": "LBALeeds",
-    "new platform_name": ""
-  },
-  {
-    "id": "5580",
-    "from_place": "Newcastle upon Tyne",
-    "to_place": "NCL",
-    "platform_name": "China Ctrip API",
-    "text": "Newcastle upon TyneNCL",
-    "new platform_name": ""
-  },
-  {
-    "id": "5581",
-    "from_place": "NCL",
-    "to_place": "Newcastle upon Tyne",
-    "platform_name": "China Ctrip API",
-    "text": "NCLNewcastle upon Tyne",
-    "new platform_name": ""
-  },
-  {
-    "id": "5582",
-    "from_place": "Norwich",
-    "to_place": "NWI",
-    "platform_name": "#N/A",
-    "text": "NorwichNWI",
-    "new platform_name": ""
-  },
-  {
-    "id": "5583",
-    "from_place": "NWI",
-    "to_place": "Norwich",
-    "platform_name": "#N/A",
-    "text": "NWINorwich",
-    "new platform_name": ""
-  },
-  {
-    "id": "5584",
-    "from_place": "Southampton",
-    "to_place": "SOU",
-    "platform_name": "#N/A",
-    "text": "SouthamptonSOU",
-    "new platform_name": ""
-  },
-  {
-    "id": "5585",
-    "from_place": "SOU",
-    "to_place": "Southampton",
-    "platform_name": "#N/A",
-    "text": "SOUSouthampton",
-    "new platform_name": ""
-  },
-  {
-    "id": "5586",
-    "from_place": "Aberdeen",
-    "to_place": "ABZ",
-    "platform_name": "#N/A",
-    "text": "AberdeenABZ",
-    "new platform_name": ""
-  },
-  {
-    "id": "5587",
-    "from_place": "ABZ",
-    "to_place": "Aberdeen",
-    "platform_name": "#N/A",
-    "text": "ABZAberdeen",
-    "new platform_name": ""
-  },
-  {
-    "id": "5588",
-    "from_place": "Inverness",
-    "to_place": "INV",
-    "platform_name": "China Ctrip API",
-    "text": "InvernessINV",
-    "new platform_name": ""
-  },
-  {
-    "id": "5589",
-    "from_place": "INV",
-    "to_place": "Inverness",
-    "platform_name": "China Ctrip API",
-    "text": "INVInverness",
-    "new platform_name": ""
-  },
-  {
-    "id": "5590",
-    "from_place": "Belfast",
-    "to_place": "BFS",
-    "platform_name": "China Ctrip API",
-    "text": "BelfastBFS",
-    "new platform_name": ""
-  },
-  {
-    "id": "5591",
-    "from_place": "BFS",
-    "to_place": "Belfast",
-    "platform_name": "China Ctrip API",
-    "text": "BFSBelfast",
-    "new platform_name": ""
-  },
-  {
-    "id": "5592",
-    "from_place": "Londonderry",
-    "to_place": "LDY",
-    "platform_name": "#N/A",
-    "text": "LondonderryLDY",
-    "new platform_name": ""
-  },
-  {
-    "id": "5593",
-    "from_place": "LDY",
-    "to_place": "Londonderry",
-    "platform_name": "#N/A",
-    "text": "LDYLondonderry",
-    "new platform_name": ""
-  },
-  {
-    "id": "5594",
-    "from_place": "Darlington",
-    "to_place": "MME",
-    "platform_name": "#N/A",
-    "text": "DarlingtonMME",
-    "new platform_name": ""
-  },
-  {
-    "id": "5595",
-    "from_place": "MME",
-    "to_place": "Darlington",
-    "platform_name": "#N/A",
-    "text": "MMEDarlington",
-    "new platform_name": ""
-  },
-  {
-    "id": "5596",
-    "from_place": "Newquay",
-    "to_place": "NQY",
-    "platform_name": "#N/A",
-    "text": "NewquayNQY",
-    "new platform_name": ""
-  },
-  {
-    "id": "5597",
-    "from_place": "NQY",
-    "to_place": "Newquay",
-    "platform_name": "#N/A",
-    "text": "NQYNewquay",
-    "new platform_name": ""
-  },
-  {
-    "id": "5598",
-    "from_place": "SIN",
-    "to_place": "新加坡市区",
-    "platform_name": "China Ctrip API",
-    "text": "SIN新加坡市区",
-    "new platform_name": ""
-  },
-  {
-    "id": "5599",
-    "from_place": "新加坡市区",
-    "to_place": "SIN",
-    "platform_name": "China Ctrip API",
-    "text": "新加坡市区SIN",
-    "new platform_name": ""
-  },
-  {
-    "id": "5600",
-    "from_place": "SIN",
-    "to_place": "新加坡港口",
-    "platform_name": "#N/A",
-    "text": "SIN新加坡港口",
-    "new platform_name": ""
-  },
-  {
-    "id": "5601",
-    "from_place": "新加坡港口",
-    "to_place": "SIN",
-    "platform_name": "#N/A",
-    "text": "新加坡港口SIN",
-    "new platform_name": ""
-  },
-  {
-    "id": "5602",
-    "from_place": "SIN",
-    "to_place": "新加坡西部区",
-    "platform_name": "China Ctrip API",
-    "text": "SIN新加坡西部区",
-    "new platform_name": ""
-  },
-  {
-    "id": "5603",
-    "from_place": "新加坡西部区",
-    "to_place": "SIN",
-    "platform_name": "China Ctrip API",
-    "text": "新加坡西部区SIN",
-    "new platform_name": ""
-  },
-  {
-    "id": "5604",
-    "from_place": "SIN",
-    "to_place": "Johor Bahru/新山",
-    "platform_name": "China Ctrip API",
-    "text": "SINJohor Bahru/新山",
-    "new platform_name": ""
-  },
-  {
-    "id": "5605",
-    "from_place": "Johor Bahru/新山",
-    "to_place": "SIN",
-    "platform_name": "China Ctrip API",
-    "text": "Johor Bahru/新山SIN",
-    "new platform_name": ""
-  },
-  {
-    "id": "5606",
-    "from_place": "DPS",
-    "to_place": "6库塔",
-    "platform_name": "#N/A",
-    "text": "DPS6库塔",
-    "new platform_name": ""
-  },
-  {
-    "id": "5607",
-    "from_place": "6库塔",
-    "to_place": "DPS",
-    "platform_name": "#N/A",
-    "text": "6库塔DPS",
-    "new platform_name": ""
-  },
-  {
-    "id": "5608",
-    "from_place": "DPS",
-    "to_place": "机场附近",
-    "platform_name": "#N/A",
-    "text": "DPS机场附近",
-    "new platform_name": ""
-  },
-  {
-    "id": "5609",
-    "from_place": "机场附近",
-    "to_place": "DPS",
-    "platform_name": "#N/A",
-    "text": "机场附近DPS",
-    "new platform_name": ""
-  },
-  {
-    "id": "5610",
-    "from_place": "DPS",
-    "to_place": "seminyak",
-    "platform_name": "#N/A",
-    "text": "DPSseminyak",
-    "new platform_name": ""
-  },
-  {
-    "id": "5611",
-    "from_place": "seminyak",
-    "to_place": "DPS",
-    "platform_name": "#N/A",
-    "text": "seminyakDPS",
-    "new platform_name": ""
-  },
-  {
-    "id": "5612",
-    "from_place": "DPS",
-    "to_place": "UBUD",
-    "platform_name": "#N/A",
-    "text": "DPSUBUD",
-    "new platform_name": ""
-  },
-  {
-    "id": "5613",
-    "from_place": "UBUD",
-    "to_place": "DPS",
-    "platform_name": "#N/A",
-    "text": "UBUDDPS",
-    "new platform_name": ""
-  },
-  {
-    "id": "5614",
-    "from_place": "HLP",
-    "to_place": "Jakarta",
-    "platform_name": "#N/A",
-    "text": "HLPJakarta",
-    "new platform_name": ""
-  },
-  {
-    "id": "5615",
-    "from_place": "Jakarta",
-    "to_place": "HLP",
-    "platform_name": "#N/A",
-    "text": "JakartaHLP",
-    "new platform_name": ""
-  },
-  {
-    "id": "5616",
-    "from_place": "SCL",
-    "to_place": "Huechuraba",
-    "platform_name": "China Ctrip API",
-    "text": "SCLHuechuraba",
-    "new platform_name": ""
-  },
-  {
-    "id": "5617",
-    "from_place": "Huechuraba",
-    "to_place": "SCL",
-    "platform_name": "China Ctrip API",
-    "text": "HuechurabaSCL",
-    "new platform_name": ""
-  },
-  {
-    "id": "5618",
-    "from_place": "SCL",
-    "to_place": "Lo Barnechea",
-    "platform_name": "China Ctrip API",
-    "text": "SCLLo Barnechea",
-    "new platform_name": ""
-  },
-  {
-    "id": "5619",
-    "from_place": "Lo Barnechea",
-    "to_place": "SCL",
-    "platform_name": "China Ctrip API",
-    "text": "Lo BarnecheaSCL",
-    "new platform_name": ""
-  },
-  {
-    "id": "5620",
-    "from_place": "SCL",
-    "to_place": "/La Parva/Valle Nevado",
-    "platform_name": "China Ctrip API",
-    "text": "SCL/La Parva/Valle Nevado",
-    "new platform_name": ""
-  },
-  {
-    "id": "5621",
-    "from_place": "/La Parva/Valle Nevado",
-    "to_place": "SCL",
-    "platform_name": "China Ctrip API",
-    "text": "/La Parva/Valle NevadoSCL",
-    "new platform_name": ""
-  },
-  {
-    "id": "5622",
-    "from_place": "SCL",
-    "to_place": "Portillo",
-    "platform_name": "China Ctrip API",
-    "text": "SCLPortillo",
-    "new platform_name": ""
-  },
-  {
-    "id": "5623",
-    "from_place": "Portillo",
-    "to_place": "SCL",
-    "platform_name": "China Ctrip API",
-    "text": "PortilloSCL",
-    "new platform_name": ""
-  },
-  {
-    "id": "5624",
-    "from_place": "SCL",
-    "to_place": "Machali",
-    "platform_name": "China Ctrip API",
-    "text": "SCLMachali",
-    "new platform_name": ""
-  },
-  {
-    "id": "5625",
-    "from_place": "Machali",
-    "to_place": "SCL",
-    "platform_name": "China Ctrip API",
-    "text": "MachaliSCL",
-    "new platform_name": ""
-  },
-  {
-    "id": "5626",
-    "from_place": "SCL",
-    "to_place": "Rancagua",
-    "platform_name": "China Ctrip API",
-    "text": "SCLRancagua",
-    "new platform_name": ""
-  },
-  {
-    "id": "5627",
-    "from_place": "Rancagua",
-    "to_place": "SCL",
-    "platform_name": "China Ctrip API",
-    "text": "RancaguaSCL",
-    "new platform_name": ""
-  },
-  {
-    "id": "5628",
-    "from_place": "SCL",
-    "to_place": "Casablanca",
-    "platform_name": "China Ctrip API",
-    "text": "SCLCasablanca",
-    "new platform_name": ""
-  },
-  {
-    "id": "5629",
-    "from_place": "Casablanca",
-    "to_place": "SCL",
-    "platform_name": "China Ctrip API",
-    "text": "CasablancaSCL",
-    "new platform_name": ""
-  },
-  {
-    "id": "5630",
-    "from_place": "SCL",
-    "to_place": "Los Andes",
-    "platform_name": "China Ctrip API",
-    "text": "SCLLos Andes",
-    "new platform_name": ""
-  },
-  {
-    "id": "5631",
-    "from_place": "Los Andes",
-    "to_place": "SCL",
-    "platform_name": "China Ctrip API",
-    "text": "Los AndesSCL",
-    "new platform_name": ""
-  },
-  {
-    "id": "5632",
-    "from_place": "SCL",
-    "to_place": "San Antonio",
-    "platform_name": "China Ctrip API",
-    "text": "SCLSan Antonio",
-    "new platform_name": ""
-  },
-  {
-    "id": "5633",
-    "from_place": "San Antonio",
-    "to_place": "SCL",
-    "platform_name": "China Ctrip API",
-    "text": "San AntonioSCL",
-    "new platform_name": ""
-  },
-  {
-    "id": "5634",
-    "from_place": "SJO",
-    "to_place": "LIBERIA",
-    "platform_name": "China Ctrip API",
-    "text": "SJOLIBERIA",
-    "new platform_name": ""
-  },
-  {
-    "id": "5635",
-    "from_place": "LIBERIA",
-    "to_place": "SJO",
-    "platform_name": "China Ctrip API",
-    "text": "LIBERIASJO",
-    "new platform_name": ""
-  },
-  {
-    "id": "5636",
-    "from_place": "SJO",
-    "to_place": "Desamparados",
-    "platform_name": "China Ctrip API",
-    "text": "SJODesamparados",
-    "new platform_name": ""
-  },
-  {
-    "id": "5637",
-    "from_place": "Desamparados",
-    "to_place": "SJO",
-    "platform_name": "China Ctrip API",
-    "text": "DesamparadosSJO",
-    "new platform_name": ""
-  },
-  {
-    "id": "5638",
-    "from_place": "SJO",
-    "to_place": "Curridabat",
-    "platform_name": "China Ctrip API",
-    "text": "SJOCurridabat",
-    "new platform_name": ""
-  },
-  {
-    "id": "5639",
-    "from_place": "Curridabat",
-    "to_place": "SJO",
-    "platform_name": "China Ctrip API",
-    "text": "CurridabatSJO",
-    "new platform_name": ""
-  },
-  {
-    "id": "5640",
-    "from_place": "SJO",
-    "to_place": "Ulloa",
-    "platform_name": "China Ctrip API",
-    "text": "SJOUlloa",
-    "new platform_name": ""
-  },
-  {
-    "id": "5641",
-    "from_place": "Ulloa",
-    "to_place": "SJO",
-    "platform_name": "China Ctrip API",
-    "text": "UlloaSJO",
-    "new platform_name": ""
-  },
-  {
-    "id": "5642",
-    "from_place": "AUA",
-    "to_place": "Cura Cabai",
-    "platform_name": "#N/A",
-    "text": "AUACura Cabai",
-    "new platform_name": ""
-  },
-  {
-    "id": "5643",
-    "from_place": "Cura Cabai",
-    "to_place": "AUA",
-    "platform_name": "#N/A",
-    "text": "Cura CabaiAUA",
-    "new platform_name": ""
-  },
-  {
-    "id": "5644",
-    "from_place": "AUA",
-    "to_place": "Santa Cruz",
-    "platform_name": "#N/A",
-    "text": "AUASanta Cruz",
-    "new platform_name": ""
-  },
-  {
-    "id": "5645",
-    "from_place": "Santa Cruz",
-    "to_place": "AUA",
-    "platform_name": "#N/A",
-    "text": "Santa CruzAUA",
-    "new platform_name": ""
-  },
-  {
-    "id": "5646",
-    "from_place": "AUA",
-    "to_place": "Savaneta",
-    "platform_name": "#N/A",
-    "text": "AUASavaneta",
-    "new platform_name": ""
-  },
-  {
-    "id": "5647",
-    "from_place": "Savaneta",
-    "to_place": "AUA",
-    "platform_name": "#N/A",
-    "text": "SavanetaAUA",
-    "new platform_name": ""
-  },
-  {
-    "id": "5648",
-    "from_place": "NAS",
-    "to_place": "Paradise Island",
-    "platform_name": "#N/A",
-    "text": "NASParadise Island",
-    "new platform_name": ""
-  },
-  {
-    "id": "5649",
-    "from_place": "Paradise Island",
-    "to_place": "NAS",
-    "platform_name": "#N/A",
-    "text": "Paradise IslandNAS",
-    "new platform_name": ""
-  },
-  {
-    "id": "5650",
-    "from_place": "NAS",
-    "to_place": "Nassau Downtown",
-    "platform_name": "#N/A",
-    "text": "NASNassau Downtown",
-    "new platform_name": ""
-  },
-  {
-    "id": "5651",
-    "from_place": "Nassau Downtown",
-    "to_place": "NAS",
-    "platform_name": "#N/A",
-    "text": "Nassau DowntownNAS",
-    "new platform_name": ""
-  },
-  {
-    "id": "5652",
-    "from_place": "NAS",
-    "to_place": "Breezes Resort",
-    "platform_name": "#N/A",
-    "text": "NASBreezes Resort",
-    "new platform_name": ""
-  },
-  {
-    "id": "5653",
-    "from_place": "Breezes Resort",
-    "to_place": "NAS",
-    "platform_name": "#N/A",
-    "text": "Breezes ResortNAS",
-    "new platform_name": ""
-  },
-  {
-    "id": "5654",
-    "from_place": "AEP",
-    "to_place": "Buenos Aires City",
-    "platform_name": "China Ctrip API",
-    "text": "AEPBuenos Aires City",
-    "new platform_name": ""
-  },
-  {
-    "id": "5655",
-    "from_place": "Buenos Aires City",
-    "to_place": "AEP",
-    "platform_name": "China Ctrip API",
-    "text": "Buenos Aires CityAEP",
-    "new platform_name": ""
-  },
-  {
-    "id": "5656",
-    "from_place": "LIM",
-    "to_place": "La victoria",
-    "platform_name": "China Ctrip API",
-    "text": "LIMLa victoria",
-    "new platform_name": ""
-  },
-  {
-    "id": "5657",
-    "from_place": "La victoria",
-    "to_place": "LIM",
-    "platform_name": "China Ctrip API",
-    "text": "La victoriaLIM",
-    "new platform_name": ""
-  },
-  {
-    "id": "5658",
-    "from_place": "LIM",
-    "to_place": "Cusco",
-    "platform_name": "China Ctrip API",
-    "text": "LIMCusco",
-    "new platform_name": ""
-  },
-  {
-    "id": "5659",
-    "from_place": "Cusco",
-    "to_place": "LIM",
-    "platform_name": "China Ctrip API",
-    "text": "CuscoLIM",
-    "new platform_name": ""
-  },
-  {
-    "id": "5660",
-    "from_place": "LIM",
-    "to_place": "Chorrillo",
-    "platform_name": "China Ctrip API",
-    "text": "LIMChorrillo",
-    "new platform_name": ""
-  },
-  {
-    "id": "5661",
-    "from_place": "Chorrillo",
-    "to_place": "LIM",
-    "platform_name": "China Ctrip API",
-    "text": "ChorrilloLIM",
-    "new platform_name": ""
-  },
-  {
-    "id": "5662",
-    "from_place": "MCZ",
-    "to_place": "Ponta Verde",
-    "platform_name": "#N/A",
-    "text": "MCZPonta Verde",
-    "new platform_name": ""
-  },
-  {
-    "id": "5663",
-    "from_place": "Ponta Verde",
-    "to_place": "MCZ",
-    "platform_name": "#N/A",
-    "text": "Ponta VerdeMCZ",
-    "new platform_name": ""
-  },
-  {
-    "id": "5664",
-    "from_place": "MCZ",
-    "to_place": "Pajuçara",
-    "platform_name": "#N/A",
-    "text": "MCZPajuçara",
-    "new platform_name": ""
-  },
-  {
-    "id": "5665",
-    "from_place": "Pajuçara",
-    "to_place": "MCZ",
-    "platform_name": "#N/A",
-    "text": "PajuçaraMCZ",
-    "new platform_name": ""
-  },
-  {
-    "id": "5666",
-    "from_place": "REC",
-    "to_place": "Maracaípe/Porto de Galinhas",
-    "platform_name": "#N/A",
-    "text": "RECMaracaípe/Porto de Galinhas",
-    "new platform_name": ""
-  },
-  {
-    "id": "5667",
-    "from_place": "Maracaípe/Porto de Galinhas",
-    "to_place": "REC",
-    "platform_name": "#N/A",
-    "text": "Maracaípe/Porto de GalinhasREC",
-    "new platform_name": ""
-  },
-  {
-    "id": "5668",
-    "from_place": "REC",
-    "to_place": "Recife",
-    "platform_name": "#N/A",
-    "text": "RECRecife",
-    "new platform_name": ""
-  },
-  {
-    "id": "5669",
-    "from_place": "Recife",
-    "to_place": "REC",
-    "platform_name": "#N/A",
-    "text": "RecifeREC",
-    "new platform_name": ""
-  },
-  {
-    "id": "5670",
-    "from_place": "RAK",
-    "to_place": "La Palmeraie",
-    "platform_name": "#N/A",
-    "text": "RAKLa Palmeraie",
-    "new platform_name": ""
-  },
-  {
-    "id": "5671",
-    "from_place": "La Palmeraie",
-    "to_place": "RAK",
-    "platform_name": "#N/A",
-    "text": "La PalmeraieRAK",
-    "new platform_name": ""
-  },
-  {
-    "id": "5672",
-    "from_place": "RAK",
-    "to_place": "Medina downtown area",
-    "platform_name": "China Ctrip API",
-    "text": "RAKMedina downtown area",
-    "new platform_name": ""
-  },
-  {
-    "id": "5673",
-    "from_place": "Medina downtown area",
-    "to_place": "RAK",
-    "platform_name": "China Ctrip API",
-    "text": "Medina downtown areaRAK",
-    "new platform_name": ""
-  },
-  {
-    "id": "5674",
-    "from_place": "RAK",
-    "to_place": "Eden Palm grove",
-    "platform_name": "China Ctrip API",
-    "text": "RAKEden Palm grove",
-    "new platform_name": ""
-  },
-  {
-    "id": "5675",
-    "from_place": "Eden Palm grove",
-    "to_place": "RAK",
-    "platform_name": "China Ctrip API",
-    "text": "Eden Palm groveRAK",
-    "new platform_name": ""
-  },
-  {
-    "id": "5676",
-    "from_place": "RAK",
-    "to_place": "Aqua Fun",
-    "platform_name": "China Ctrip API",
-    "text": "RAKAqua Fun",
-    "new platform_name": ""
-  },
-  {
-    "id": "5677",
-    "from_place": "Aqua Fun",
-    "to_place": "RAK",
-    "platform_name": "China Ctrip API",
-    "text": "Aqua FunRAK",
-    "new platform_name": ""
-  },
-  {
-    "id": "5678",
-    "from_place": "RAK",
-    "to_place": "Aghmat",
-    "platform_name": "China Ctrip API",
-    "text": "RAKAghmat",
-    "new platform_name": ""
-  },
-  {
-    "id": "5679",
-    "from_place": "Aghmat",
-    "to_place": "RAK",
-    "platform_name": "China Ctrip API",
-    "text": "AghmatRAK",
-    "new platform_name": ""
-  },
-  {
-    "id": "5680",
-    "from_place": "RAK",
-    "to_place": "Deux Tours",
-    "platform_name": "China Ctrip API",
-    "text": "RAKDeux Tours",
-    "new platform_name": ""
-  },
-  {
-    "id": "5681",
-    "from_place": "Deux Tours",
-    "to_place": "RAK",
-    "platform_name": "China Ctrip API",
-    "text": "Deux ToursRAK",
-    "new platform_name": ""
-  },
-  {
-    "id": "5682",
-    "from_place": "RAK",
-    "to_place": "Outskirts",
-    "platform_name": "China Ctrip API",
-    "text": "RAKOutskirts",
-    "new platform_name": ""
-  },
-  {
-    "id": "5683",
-    "from_place": "Outskirts",
-    "to_place": "RAK",
-    "platform_name": "China Ctrip API",
-    "text": "OutskirtsRAK",
-    "new platform_name": ""
-  },
-  {
-    "id": "5684",
-    "from_place": "RAK",
-    "to_place": "Amizmiz",
-    "platform_name": "China Ctrip API",
-    "text": "RAKAmizmiz",
-    "new platform_name": ""
-  },
-  {
-    "id": "5685",
-    "from_place": "Amizmiz",
-    "to_place": "RAK",
-    "platform_name": "China Ctrip API",
-    "text": "AmizmizRAK",
-    "new platform_name": ""
-  },
-  {
-    "id": "5686",
-    "from_place": "RAK",
-    "to_place": "Aourir",
-    "platform_name": "China Ctrip API",
-    "text": "RAKAourir",
-    "new platform_name": ""
-  },
-  {
-    "id": "5687",
-    "from_place": "Aourir",
-    "to_place": "RAK",
-    "platform_name": "China Ctrip API",
-    "text": "AourirRAK",
-    "new platform_name": ""
-  },
-  {
-    "id": "5688",
-    "from_place": "RAK",
-    "to_place": "Tameslouht",
-    "platform_name": "China Ctrip API",
-    "text": "RAKTameslouht",
-    "new platform_name": ""
-  },
-  {
-    "id": "5689",
-    "from_place": "Tameslouht",
-    "to_place": "RAK",
-    "platform_name": "China Ctrip API",
-    "text": "TameslouhtRAK",
-    "new platform_name": ""
-  },
-  {
-    "id": "5690",
-    "from_place": "RAK",
-    "to_place": "Lalla Takerkoust",
-    "platform_name": "China Ctrip API",
-    "text": "RAKLalla Takerkoust",
-    "new platform_name": ""
-  },
-  {
-    "id": "5691",
-    "from_place": "Lalla Takerkoust",
-    "to_place": "RAK",
-    "platform_name": "China Ctrip API",
-    "text": "Lalla TakerkoustRAK",
-    "new platform_name": ""
-  },
-  {
-    "id": "5692",
-    "from_place": "RAK",
-    "to_place": "Tahnaout",
-    "platform_name": "China Ctrip API",
-    "text": "RAKTahnaout",
-    "new platform_name": ""
-  },
-  {
-    "id": "5693",
-    "from_place": "Tahnaout",
-    "to_place": "RAK",
-    "platform_name": "China Ctrip API",
-    "text": "TahnaoutRAK",
-    "new platform_name": ""
-  },
-  {
-    "id": "5694",
-    "from_place": "RAK",
-    "to_place": "Asni",
-    "platform_name": "China Ctrip API",
-    "text": "RAKAsni",
-    "new platform_name": ""
-  },
-  {
-    "id": "5695",
-    "from_place": "Asni",
-    "to_place": "RAK",
-    "platform_name": "China Ctrip API",
-    "text": "AsniRAK",
-    "new platform_name": ""
-  },
-  {
-    "id": "5696",
-    "from_place": "RAK",
-    "to_place": "Imlil",
-    "platform_name": "China Ctrip API",
-    "text": "RAKImlil",
-    "new platform_name": ""
-  },
-  {
-    "id": "5697",
-    "from_place": "Imlil",
-    "to_place": "RAK",
-    "platform_name": "China Ctrip API",
-    "text": "ImlilRAK",
-    "new platform_name": ""
-  },
-  {
-    "id": "5698",
-    "from_place": "RAK",
-    "to_place": "Ouirgane",
-    "platform_name": "China Ctrip API",
-    "text": "RAKOuirgane",
-    "new platform_name": ""
-  },
-  {
-    "id": "5699",
-    "from_place": "Ouirgane",
-    "to_place": "RAK",
-    "platform_name": "China Ctrip API",
-    "text": "OuirganeRAK",
-    "new platform_name": ""
-  },
-  {
-    "id": "5700",
-    "from_place": "RAK",
-    "to_place": "Oukaimeden",
-    "platform_name": "China Ctrip API",
-    "text": "RAKOukaimeden",
-    "new platform_name": ""
-  },
-  {
-    "id": "5701",
-    "from_place": "Oukaimeden",
-    "to_place": "RAK",
-    "platform_name": "China Ctrip API",
-    "text": "OukaimedenRAK",
-    "new platform_name": ""
-  },
-  {
-    "id": "5702",
-    "from_place": "RAK",
-    "to_place": "Demnate",
-    "platform_name": "China Ctrip API",
-    "text": "RAKDemnate",
-    "new platform_name": ""
-  },
-  {
-    "id": "5703",
-    "from_place": "Demnate",
-    "to_place": "RAK",
-    "platform_name": "China Ctrip API",
-    "text": "DemnateRAK",
-    "new platform_name": ""
-  },
-  {
-    "id": "5704",
-    "from_place": "RAK",
-    "to_place": "Essaouira",
-    "platform_name": "China Ctrip API",
-    "text": "RAKEssaouira",
-    "new platform_name": ""
-  },
-  {
-    "id": "5705",
-    "from_place": "Essaouira",
-    "to_place": "RAK",
-    "platform_name": "China Ctrip API",
-    "text": "EssaouiraRAK",
-    "new platform_name": ""
-  },
-  {
-    "id": "5706",
-    "from_place": "RAK",
-    "to_place": "Setti Fadma",
-    "platform_name": "China Ctrip API",
-    "text": "RAKSetti Fadma",
-    "new platform_name": ""
-  },
-  {
-    "id": "5707",
-    "from_place": "Setti Fadma",
-    "to_place": "RAK",
-    "platform_name": "China Ctrip API",
-    "text": "Setti FadmaRAK",
-    "new platform_name": ""
-  },
-  {
-    "id": "5708",
-    "from_place": "RAK",
-    "to_place": "Berrechid",
-    "platform_name": "China Ctrip API",
-    "text": "RAKBerrechid",
-    "new platform_name": ""
-  },
-  {
-    "id": "5709",
-    "from_place": "Berrechid",
-    "to_place": "RAK",
-    "platform_name": "China Ctrip API",
-    "text": "BerrechidRAK",
-    "new platform_name": ""
-  },
-  {
-    "id": "5710",
-    "from_place": "RAK",
-    "to_place": "Agadir",
-    "platform_name": "China Ctrip API",
-    "text": "RAKAgadir",
-    "new platform_name": ""
-  },
-  {
-    "id": "5711",
-    "from_place": "Agadir",
-    "to_place": "RAK",
-    "platform_name": "China Ctrip API",
-    "text": "AgadirRAK",
-    "new platform_name": ""
-  },
-  {
-    "id": "5712",
-    "from_place": "RAK",
-    "to_place": "Bin El Ouidane",
-    "platform_name": "China Ctrip API",
-    "text": "RAKBin El Ouidane",
-    "new platform_name": ""
-  },
-  {
-    "id": "5713",
-    "from_place": "Bin El Ouidane",
-    "to_place": "RAK",
-    "platform_name": "China Ctrip API",
-    "text": "Bin El OuidaneRAK",
-    "new platform_name": ""
-  },
-  {
-    "id": "5714",
-    "from_place": "RAK",
-    "to_place": "Taroudant",
-    "platform_name": "China Ctrip API",
-    "text": "RAKTaroudant",
-    "new platform_name": ""
-  },
-  {
-    "id": "5715",
-    "from_place": "Taroudant",
-    "to_place": "RAK",
-    "platform_name": "China Ctrip API",
-    "text": "TaroudantRAK",
-    "new platform_name": ""
-  },
-  {
-    "id": "5716",
-    "from_place": "RAK",
-    "to_place": "Nouasseur",
-    "platform_name": "China Ctrip API",
-    "text": "RAKNouasseur",
-    "new platform_name": ""
-  },
-  {
-    "id": "5717",
-    "from_place": "Nouasseur",
-    "to_place": "RAK",
-    "platform_name": "China Ctrip API",
-    "text": "NouasseurRAK",
-    "new platform_name": ""
-  },
-  {
-    "id": "5718",
-    "from_place": "RAK",
-    "to_place": "El Jadida",
-    "platform_name": "China Ctrip API",
-    "text": "RAKEl Jadida",
-    "new platform_name": ""
-  },
-  {
-    "id": "5719",
-    "from_place": "El Jadida",
-    "to_place": "RAK",
-    "platform_name": "China Ctrip API",
-    "text": "El JadidaRAK",
-    "new platform_name": ""
-  },
-  {
-    "id": "5720",
-    "from_place": "RAK",
-    "to_place": "Oualidia",
-    "platform_name": "China Ctrip API",
-    "text": "RAKOualidia",
-    "new platform_name": ""
-  },
-  {
-    "id": "5721",
-    "from_place": "Oualidia",
-    "to_place": "RAK",
-    "platform_name": "China Ctrip API",
-    "text": "OualidiaRAK",
-    "new platform_name": ""
-  },
-  {
-    "id": "5722",
-    "from_place": "RAK",
-    "to_place": "Casablanca",
-    "platform_name": "China Ctrip API",
-    "text": "RAKCasablanca",
-    "new platform_name": ""
-  },
-  {
-    "id": "5723",
-    "from_place": "Casablanca",
-    "to_place": "RAK",
-    "platform_name": "China Ctrip API",
-    "text": "CasablancaRAK",
-    "new platform_name": ""
-  },
-  {
-    "id": "5724",
-    "from_place": "RAK",
-    "to_place": "Ouarzazate",
-    "platform_name": "China Ctrip API",
-    "text": "RAKOuarzazate",
-    "new platform_name": ""
-  },
-  {
-    "id": "5725",
-    "from_place": "Ouarzazate",
-    "to_place": "RAK",
-    "platform_name": "China Ctrip API",
-    "text": "OuarzazateRAK",
-    "new platform_name": ""
-  },
-  {
-    "id": "5726",
-    "from_place": "RAK",
-    "to_place": "Tamraght",
-    "platform_name": "China Ctrip API",
-    "text": "RAKTamraght",
-    "new platform_name": ""
-  },
-  {
-    "id": "5727",
-    "from_place": "Tamraght",
-    "to_place": "RAK",
-    "platform_name": "China Ctrip API",
-    "text": "TamraghtRAK",
-    "new platform_name": ""
-  },
-  {
-    "id": "5728",
-    "from_place": "RAK",
-    "to_place": "Taghazout",
-    "platform_name": "China Ctrip API",
-    "text": "RAKTaghazout",
-    "new platform_name": ""
-  },
-  {
-    "id": "5729",
-    "from_place": "Taghazout",
-    "to_place": "RAK",
-    "platform_name": "China Ctrip API",
-    "text": "TaghazoutRAK",
-    "new platform_name": ""
-  },
-  {
-    "id": "5730",
-    "from_place": "RAK",
-    "to_place": "Skoura",
-    "platform_name": "China Ctrip API",
-    "text": "RAKSkoura",
-    "new platform_name": ""
-  },
-  {
-    "id": "5731",
-    "from_place": "Skoura",
-    "to_place": "RAK",
-    "platform_name": "China Ctrip API",
-    "text": "SkouraRAK",
-    "new platform_name": ""
-  },
-  {
-    "id": "5732",
-    "from_place": "RAK",
-    "to_place": "Mohammedia",
-    "platform_name": "China Ctrip API",
-    "text": "RAKMohammedia",
-    "new platform_name": ""
-  },
-  {
-    "id": "5733",
-    "from_place": "Mohammedia",
-    "to_place": "RAK",
-    "platform_name": "China Ctrip API",
-    "text": "MohammediaRAK",
-    "new platform_name": ""
-  },
-  {
-    "id": "5734",
-    "from_place": "RAK",
-    "to_place": "Rabat",
-    "platform_name": "China Ctrip API",
-    "text": "RAKRabat",
-    "new platform_name": ""
-  },
-  {
-    "id": "5735",
-    "from_place": "Rabat",
-    "to_place": "RAK",
-    "platform_name": "China Ctrip API",
-    "text": "RabatRAK",
-    "new platform_name": ""
-  },
-  {
-    "id": "5736",
-    "from_place": "RAK",
-    "to_place": "Tinerhrir",
-    "platform_name": "China Ctrip API",
-    "text": "RAKTinerhrir",
-    "new platform_name": ""
-  },
-  {
-    "id": "5737",
-    "from_place": "Tinerhrir",
-    "to_place": "RAK",
-    "platform_name": "China Ctrip API",
-    "text": "TinerhrirRAK",
-    "new platform_name": ""
-  },
-  {
-    "id": "5738",
-    "from_place": "RAK",
-    "to_place": "Zagora",
-    "platform_name": "China Ctrip API",
-    "text": "RAKZagora",
-    "new platform_name": ""
-  },
-  {
-    "id": "5739",
-    "from_place": "Zagora",
-    "to_place": "RAK",
-    "platform_name": "China Ctrip API",
-    "text": "ZagoraRAK",
-    "new platform_name": ""
-  },
-  {
-    "id": "5740",
-    "from_place": "RAK",
-    "to_place": "Erfoud",
-    "platform_name": "China Ctrip API",
-    "text": "RAKErfoud",
-    "new platform_name": ""
-  },
-  {
-    "id": "5741",
-    "from_place": "Erfoud",
-    "to_place": "RAK",
-    "platform_name": "China Ctrip API",
-    "text": "ErfoudRAK",
-    "new platform_name": ""
-  },
-  {
-    "id": "5742",
-    "from_place": "RAK",
-    "to_place": "Skhirat Plage",
-    "platform_name": "China Ctrip API",
-    "text": "RAKSkhirat Plage",
-    "new platform_name": ""
-  },
-  {
-    "id": "5743",
-    "from_place": "Skhirat Plage",
-    "to_place": "RAK",
-    "platform_name": "China Ctrip API",
-    "text": "Skhirat PlageRAK",
-    "new platform_name": ""
-  },
-  {
-    "id": "5744",
-    "from_place": "RAK",
-    "to_place": "Kenitra",
-    "platform_name": "China Ctrip API",
-    "text": "RAKKenitra",
-    "new platform_name": ""
-  },
-  {
-    "id": "5745",
-    "from_place": "Kenitra",
-    "to_place": "RAK",
-    "platform_name": "China Ctrip API",
-    "text": "KenitraRAK",
-    "new platform_name": ""
-  },
-  {
-    "id": "5746",
-    "from_place": "RAK",
-    "to_place": "Fes-test",
-    "platform_name": "#N/A",
-    "text": "RAKFes-test",
-    "new platform_name": ""
-  },
-  {
-    "id": "5747",
-    "from_place": "Fes-test",
-    "to_place": "RAK",
-    "platform_name": "#N/A",
-    "text": "Fes-testRAK",
-    "new platform_name": ""
-  },
-  {
-    "id": "5748",
-    "from_place": "RAK",
-    "to_place": "Meknes",
-    "platform_name": "China Ctrip API",
-    "text": "RAKMeknes",
-    "new platform_name": ""
-  },
-  {
-    "id": "5749",
-    "from_place": "Meknes",
-    "to_place": "RAK",
-    "platform_name": "China Ctrip API",
-    "text": "MeknesRAK",
-    "new platform_name": ""
-  },
-  {
-    "id": "5750",
-    "from_place": "RAK",
-    "to_place": "Anza",
-    "platform_name": "China Ctrip API",
-    "text": "RAKAnza",
-    "new platform_name": ""
-  },
-  {
-    "id": "5751",
-    "from_place": "Anza",
-    "to_place": "RAK",
-    "platform_name": "China Ctrip API",
-    "text": "AnzaRAK",
-    "new platform_name": ""
-  },
-  {
-    "id": "5752",
-    "from_place": "RAK",
-    "to_place": "Temara",
-    "platform_name": "China Ctrip API",
-    "text": "RAKTemara",
-    "new platform_name": ""
-  },
-  {
-    "id": "5753",
-    "from_place": "Temara",
-    "to_place": "RAK",
-    "platform_name": "China Ctrip API",
-    "text": "TemaraRAK",
-    "new platform_name": ""
-  },
-  {
-    "id": "5754",
-    "from_place": "AGA",
-    "to_place": "Agadir 1",
-    "platform_name": "#N/A",
-    "text": "AGAAgadir 1",
-    "new platform_name": ""
-  },
-  {
-    "id": "5755",
-    "from_place": "Agadir 1",
-    "to_place": "AGA",
-    "platform_name": "#N/A",
-    "text": "Agadir 1AGA",
-    "new platform_name": ""
-  },
-  {
-    "id": "5756",
-    "from_place": "AGA",
-    "to_place": "Agadir2",
-    "platform_name": "#N/A",
-    "text": "AGAAgadir2",
-    "new platform_name": ""
-  },
-  {
-    "id": "5757",
-    "from_place": "Agadir 2",
-    "to_place": "AGA",
-    "platform_name": "#N/A",
-    "text": "Agadir 2AGA",
-    "new platform_name": ""
-  },
-  {
-    "id": "5758",
-    "from_place": "AGA",
-    "to_place": "Anza",
-    "platform_name": "#N/A",
-    "text": "AGAAnza",
-    "new platform_name": ""
-  },
-  {
-    "id": "5759",
-    "from_place": "Anza",
-    "to_place": "AGA",
-    "platform_name": "#N/A",
-    "text": "AnzaAGA",
-    "new platform_name": ""
-  },
-  {
-    "id": "5760",
-    "from_place": "AGA",
-    "to_place": "Aourir",
-    "platform_name": "#N/A",
-    "text": "AGAAourir",
-    "new platform_name": ""
-  },
-  {
-    "id": "5761",
-    "from_place": "Aourir",
-    "to_place": "AGA",
-    "platform_name": "#N/A",
-    "text": "AourirAGA",
-    "new platform_name": ""
-  },
-  {
-    "id": "5762",
-    "from_place": "AGA",
-    "to_place": "Tamraght",
-    "platform_name": "#N/A",
-    "text": "AGATamraght",
-    "new platform_name": ""
-  },
-  {
-    "id": "5763",
-    "from_place": "Tamraght",
-    "to_place": "AGA",
-    "platform_name": "#N/A",
-    "text": "TamraghtAGA",
-    "new platform_name": ""
-  },
-  {
-    "id": "5764",
-    "from_place": "AGA",
-    "to_place": "Taghazout",
-    "platform_name": "#N/A",
-    "text": "AGATaghazout",
-    "new platform_name": ""
-  },
-  {
-    "id": "5765",
-    "from_place": "Taghazout",
-    "to_place": "AGA",
-    "platform_name": "#N/A",
-    "text": "TaghazoutAGA",
-    "new platform_name": ""
-  },
-  {
-    "id": "5766",
-    "from_place": "AGA",
-    "to_place": "Taroudant",
-    "platform_name": "#N/A",
-    "text": "AGATaroudant",
-    "new platform_name": ""
-  },
-  {
-    "id": "5767",
-    "from_place": "Taroudant",
-    "to_place": "AGA",
-    "platform_name": "#N/A",
-    "text": "TaroudantAGA",
-    "new platform_name": ""
-  },
-  {
-    "id": "5768",
-    "from_place": "AGA",
-    "to_place": "Marrakesh",
-    "platform_name": "#N/A",
-    "text": "AGAMarrakesh",
-    "new platform_name": ""
-  },
-  {
-    "id": "5769",
-    "from_place": "Marrakesh",
-    "to_place": "AGA",
-    "platform_name": "#N/A",
-    "text": "MarrakeshAGA",
-    "new platform_name": ""
-  },
-  {
-    "id": "5770",
-    "from_place": "AGA",
-    "to_place": "Casablanca",
-    "platform_name": "#N/A",
-    "text": "AGACasablanca",
-    "new platform_name": ""
-  },
-  {
-    "id": "5771",
-    "from_place": "Casablanca",
-    "to_place": "AGA",
-    "platform_name": "#N/A",
-    "text": "CasablancaAGA",
-    "new platform_name": ""
-  },
-  {
-    "id": "5772",
-    "from_place": "AGA",
-    "to_place": "Essaouira",
-    "platform_name": "#N/A",
-    "text": "AGAEssaouira",
-    "new platform_name": ""
-  },
-  {
-    "id": "5773",
-    "from_place": "Essaouira",
-    "to_place": "AGA",
-    "platform_name": "#N/A",
-    "text": "EssaouiraAGA",
-    "new platform_name": ""
-  },
-  {
-    "id": "5774",
-    "from_place": "FCO",
-    "to_place": "Castel Gandolfo",
-    "platform_name": "#N/A",
-    "text": "FCOCastel Gandolfo",
-    "new platform_name": ""
-  },
-  {
-    "id": "5775",
-    "from_place": "Castel Gandolfo",
-    "to_place": "FCO",
-    "platform_name": "#N/A",
-    "text": "Castel GandolfoFCO",
-    "new platform_name": ""
-  },
-  {
-    "id": "5776",
-    "from_place": "CIA",
-    "to_place": "Castel Gandolfo",
-    "platform_name": "#N/A",
-    "text": "CIACastel Gandolfo",
-    "new platform_name": ""
-  },
-  {
-    "id": "5777",
-    "from_place": "Castel Gandolfo",
-    "to_place": "CIA",
-    "platform_name": "#N/A",
-    "text": "Castel GandolfoCIA",
-    "new platform_name": ""
-  },
-  {
-    "id": "5778",
-    "from_place": "FCO",
-    "to_place": "Anguillara Sabazia",
-    "platform_name": "#N/A",
-    "text": "FCOAnguillara Sabazia",
-    "new platform_name": ""
-  },
-  {
-    "id": "5779",
-    "from_place": "Anguillara Sabazia",
-    "to_place": "FCO",
-    "platform_name": "#N/A",
-    "text": "Anguillara SabaziaFCO",
-    "new platform_name": ""
-  },
-  {
-    "id": "5780",
-    "from_place": "CIA",
-    "to_place": "Anguillara Sabazia",
-    "platform_name": "#N/A",
-    "text": "CIAAnguillara Sabazia",
-    "new platform_name": ""
-  },
-  {
-    "id": "5781",
-    "from_place": "Anguillara Sabazia",
-    "to_place": "CIA",
-    "platform_name": "#N/A",
-    "text": "Anguillara SabaziaCIA",
-    "new platform_name": ""
-  },
-  {
-    "id": "5782",
-    "from_place": "FCO",
-    "to_place": "Fiano Romano",
-    "platform_name": "#N/A",
-    "text": "FCOFiano Romano",
-    "new platform_name": ""
-  },
-  {
-    "id": "5783",
-    "from_place": "Fiano Romano",
-    "to_place": "FCO",
-    "platform_name": "#N/A",
-    "text": "Fiano RomanoFCO",
-    "new platform_name": ""
-  },
-  {
-    "id": "5784",
-    "from_place": "CIA",
-    "to_place": "Fiano Romano",
-    "platform_name": "#N/A",
-    "text": "CIAFiano Romano",
-    "new platform_name": ""
-  },
-  {
-    "id": "5785",
-    "from_place": "Fiano Romano",
-    "to_place": "CIA",
-    "platform_name": "#N/A",
-    "text": "Fiano RomanoCIA",
-    "new platform_name": ""
-  },
-  {
-    "id": "5786",
-    "from_place": "FCO",
-    "to_place": "Napoli",
-    "platform_name": "#N/A",
-    "text": "FCONapoli",
-    "new platform_name": ""
-  },
-  {
-    "id": "5787",
-    "from_place": "Napoli",
-    "to_place": "FCO",
-    "platform_name": "#N/A",
-    "text": "NapoliFCO",
-    "new platform_name": ""
-  },
-  {
-    "id": "5788",
-    "from_place": "CIA",
-    "to_place": "Napoli",
-    "platform_name": "#N/A",
-    "text": "CIANapoli",
-    "new platform_name": ""
-  },
-  {
-    "id": "5789",
-    "from_place": "Napoli",
-    "to_place": "CIA",
-    "platform_name": "#N/A",
-    "text": "NapoliCIA",
-    "new platform_name": ""
-  },
-  {
-    "id": "5790",
-    "from_place": "FCO",
-    "to_place": "Nettuno",
-    "platform_name": "#N/A",
-    "text": "FCONettuno",
-    "new platform_name": ""
-  },
-  {
-    "id": "5791",
-    "from_place": "Nettuno",
-    "to_place": "FCO",
-    "platform_name": "#N/A",
-    "text": "NettunoFCO",
-    "new platform_name": ""
-  },
-  {
-    "id": "5792",
-    "from_place": "CIA",
-    "to_place": "Nettuno",
-    "platform_name": "#N/A",
-    "text": "CIANettuno",
-    "new platform_name": ""
-  },
-  {
-    "id": "5793",
-    "from_place": "Nettuno",
-    "to_place": "CIA",
-    "platform_name": "#N/A",
-    "text": "NettunoCIA",
-    "new platform_name": ""
-  },
-  {
-    "id": "5794",
-    "from_place": "FCO",
-    "to_place": "milan",
-    "platform_name": "#N/A",
-    "text": "FCOmilan",
-    "new platform_name": ""
-  },
-  {
-    "id": "5795",
-    "from_place": "milan",
-    "to_place": "FCO",
-    "platform_name": "#N/A",
-    "text": "milanFCO",
-    "new platform_name": ""
-  },
-  {
-    "id": "5796",
-    "from_place": "CIA",
-    "to_place": "Milan",
-    "platform_name": "#N/A",
-    "text": "CIAMilan",
-    "new platform_name": ""
-  },
-  {
-    "id": "5797",
-    "from_place": "milan",
-    "to_place": "CIA",
-    "platform_name": "#N/A",
-    "text": "milanCIA",
-    "new platform_name": ""
-  },
-  {
-    "id": "5798",
-    "from_place": "FCO",
-    "to_place": "Florence",
-    "platform_name": "#N/A",
-    "text": "FCOFlorence",
-    "new platform_name": ""
-  },
-  {
-    "id": "5799",
-    "from_place": "Florence",
-    "to_place": "FCO",
-    "platform_name": "#N/A",
-    "text": "FlorenceFCO",
-    "new platform_name": ""
-  },
-  {
-    "id": "5800",
-    "from_place": "CIA",
-    "to_place": "Florence",
-    "platform_name": "#N/A",
-    "text": "CIAFlorence",
-    "new platform_name": ""
-  },
-  {
-    "id": "5801",
-    "from_place": "Florence",
-    "to_place": "CIA",
-    "platform_name": "#N/A",
-    "text": "FlorenceCIA",
-    "new platform_name": ""
-  },
-  {
-    "id": "5802",
-    "from_place": "FCO",
-    "to_place": "Sorrento",
-    "platform_name": "#N/A",
-    "text": "FCOSorrento",
-    "new platform_name": ""
-  },
-  {
-    "id": "5803",
-    "from_place": "Sorrento",
-    "to_place": "FCO",
-    "platform_name": "#N/A",
-    "text": "SorrentoFCO",
-    "new platform_name": ""
-  },
-  {
-    "id": "5804",
-    "from_place": "CIA",
-    "to_place": "Sorrento",
-    "platform_name": "#N/A",
-    "text": "CIASorrento",
-    "new platform_name": ""
-  },
-  {
-    "id": "5805",
-    "from_place": "Sorrento",
-    "to_place": "CIA",
-    "platform_name": "#N/A",
-    "text": "SorrentoCIA",
-    "new platform_name": ""
-  },
-  {
-    "id": "5806",
-    "from_place": "FCO",
-    "to_place": "FCO airport",
-    "platform_name": "#N/A",
-    "text": "FCOFCO airport",
-    "new platform_name": ""
-  },
-  {
-    "id": "5807",
-    "from_place": "FCO airport",
-    "to_place": "FCO",
-    "platform_name": "#N/A",
-    "text": "FCO airportFCO",
-    "new platform_name": ""
-  },
-  {
-    "id": "5808",
-    "from_place": "CIA",
-    "to_place": "FCO airport",
-    "platform_name": "#N/A",
-    "text": "CIAFCO airport",
-    "new platform_name": ""
-  },
-  {
-    "id": "5809",
-    "from_place": "FCO airport",
-    "to_place": "CIA",
-    "platform_name": "#N/A",
-    "text": "FCO airportCIA",
-    "new platform_name": ""
-  },
-  {
-    "id": "5810",
-    "from_place": "FCO",
-    "to_place": "Pomezia",
-    "platform_name": "#N/A",
-    "text": "FCOPomezia",
-    "new platform_name": ""
-  },
-  {
-    "id": "5811",
-    "from_place": "Pomezia",
-    "to_place": "FCO",
-    "platform_name": "#N/A",
-    "text": "PomeziaFCO",
-    "new platform_name": ""
-  },
-  {
-    "id": "5812",
-    "from_place": "CIA",
-    "to_place": "Pomezia",
-    "platform_name": "#N/A",
-    "text": "CIAPomezia",
-    "new platform_name": ""
-  },
-  {
-    "id": "5813",
-    "from_place": "Pomezia",
-    "to_place": "CIA",
-    "platform_name": "#N/A",
-    "text": "PomeziaCIA",
-    "new platform_name": ""
-  },
-  {
-    "id": "5814",
-    "from_place": "LPA",
-    "to_place": "Puerto Rico de Gran Canaria",
-    "platform_name": "#N/A",
-    "text": "LPAPuerto Rico de Gran Canaria",
-    "new platform_name": ""
-  },
-  {
-    "id": "5815",
-    "from_place": "Puerto Rico de Gran Canaria",
-    "to_place": "LPA",
-    "platform_name": "#N/A",
-    "text": "Puerto Rico de Gran CanariaLPA",
-    "new platform_name": ""
+    "id": "23823012",
+    "price": "28.35",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "133",
+    "inserted_at": "2025-07-02 07:36:36.000000 UTC",
+    "last_updated_at": "2025-07-02 07:36:36.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23823102",
+    "price": "28.35",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "133",
+    "inserted_at": "2025-07-02 07:36:36.000000 UTC",
+    "last_updated_at": "2025-07-02 07:36:36.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23823013",
+    "price": "84.72",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "133",
+    "inserted_at": "2025-07-02 07:36:36.000000 UTC",
+    "last_updated_at": "2025-07-02 07:36:36.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23823103",
+    "price": "84.72",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "133",
+    "inserted_at": "2025-07-02 07:36:36.000000 UTC",
+    "last_updated_at": "2025-07-02 07:36:36.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23823014",
+    "price": "47.88",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "133",
+    "inserted_at": "2025-07-02 07:36:36.000000 UTC",
+    "last_updated_at": "2025-07-02 07:36:36.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23823104",
+    "price": "47.88",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "133",
+    "inserted_at": "2025-07-02 07:36:36.000000 UTC",
+    "last_updated_at": "2025-07-02 07:36:36.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23823015",
+    "price": "80.81",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "133",
+    "inserted_at": "2025-07-02 07:36:36.000000 UTC",
+    "last_updated_at": "2025-07-02 07:36:36.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "23823105",
+    "price": "80.81",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "133",
+    "inserted_at": "2025-07-02 07:36:36.000000 UTC",
+    "last_updated_at": "2025-07-02 07:36:36.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "23823016",
+    "price": "105",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "133",
+    "inserted_at": "2025-07-02 07:36:36.000000 UTC",
+    "last_updated_at": "2025-07-02 07:36:36.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "23823106",
+    "price": "105",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "133",
+    "inserted_at": "2025-07-02 07:36:36.000000 UTC",
+    "last_updated_at": "2025-07-02 07:36:36.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "23823017",
+    "price": "39.98",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "133",
+    "inserted_at": "2025-07-02 07:36:36.000000 UTC",
+    "last_updated_at": "2025-07-02 07:36:36.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23823107",
+    "price": "39.98",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "133",
+    "inserted_at": "2025-07-02 07:36:36.000000 UTC",
+    "last_updated_at": "2025-07-02 07:36:36.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23823018",
+    "price": "271.95",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "133",
+    "inserted_at": "2025-07-02 07:36:36.000000 UTC",
+    "last_updated_at": "2025-07-02 07:36:36.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "23823108",
+    "price": "271.95",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "133",
+    "inserted_at": "2025-07-02 07:36:36.000000 UTC",
+    "last_updated_at": "2025-07-02 07:36:36.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "23823019",
+    "price": "273.32",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "133",
+    "inserted_at": "2025-07-02 07:36:36.000000 UTC",
+    "last_updated_at": "2025-07-02 07:36:36.000000 UTC",
+    "vehicle_class_id": "11",
+    "rk": "1"
+  },
+  {
+    "id": "23823109",
+    "price": "273.32",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "133",
+    "inserted_at": "2025-07-02 07:36:36.000000 UTC",
+    "last_updated_at": "2025-07-02 07:36:36.000000 UTC",
+    "vehicle_class_id": "11",
+    "rk": "1"
+  },
+  {
+    "id": "23823020",
+    "price": "81.22",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "133",
+    "inserted_at": "2025-07-02 07:36:36.000000 UTC",
+    "last_updated_at": "2025-07-02 07:36:36.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "23823110",
+    "price": "81.22",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "133",
+    "inserted_at": "2025-07-02 07:36:36.000000 UTC",
+    "last_updated_at": "2025-07-02 07:36:36.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "19974750",
+    "price": "53.24",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "286",
+    "inserted_at": "2025-06-10 10:38:00.000000 UTC",
+    "last_updated_at": "2025-06-10 10:38:00.000000 UTC",
+    "vehicle_class_id": "109",
+    "rk": "1"
+  },
+  {
+    "id": "19974760",
+    "price": "53.24",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "286",
+    "inserted_at": "2025-06-10 10:38:00.000000 UTC",
+    "last_updated_at": "2025-06-10 10:38:00.000000 UTC",
+    "vehicle_class_id": "109",
+    "rk": "1"
+  },
+  {
+    "id": "19974540",
+    "price": "58.05",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "287",
+    "inserted_at": "2025-06-10 10:37:46.000000 UTC",
+    "last_updated_at": "2025-06-10 10:37:46.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "19974547",
+    "price": "58.05",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "287",
+    "inserted_at": "2025-06-10 10:37:46.000000 UTC",
+    "last_updated_at": "2025-06-10 10:37:46.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "19974541",
+    "price": "131.75",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "287",
+    "inserted_at": "2025-06-10 10:37:46.000000 UTC",
+    "last_updated_at": "2025-06-10 10:37:46.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "19974548",
+    "price": "131.75",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "287",
+    "inserted_at": "2025-06-10 10:37:46.000000 UTC",
+    "last_updated_at": "2025-06-10 10:37:46.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "19974542",
+    "price": "73.33",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "287",
+    "inserted_at": "2025-06-10 10:37:46.000000 UTC",
+    "last_updated_at": "2025-06-10 10:37:46.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "19974549",
+    "price": "73.33",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "287",
+    "inserted_at": "2025-06-10 10:37:46.000000 UTC",
+    "last_updated_at": "2025-06-10 10:37:46.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "19974543",
+    "price": "187.39",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "287",
+    "inserted_at": "2025-06-10 10:37:46.000000 UTC",
+    "last_updated_at": "2025-06-10 10:37:46.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "19974550",
+    "price": "187.39",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "287",
+    "inserted_at": "2025-06-10 10:37:46.000000 UTC",
+    "last_updated_at": "2025-06-10 10:37:46.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "19974544",
+    "price": "73.23",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "287",
+    "inserted_at": "2025-06-10 10:37:46.000000 UTC",
+    "last_updated_at": "2025-06-10 10:37:46.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "19974551",
+    "price": "73.23",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "287",
+    "inserted_at": "2025-06-10 10:37:46.000000 UTC",
+    "last_updated_at": "2025-06-10 10:37:46.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "19974545",
+    "price": "58.84",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "287",
+    "inserted_at": "2025-06-10 10:37:46.000000 UTC",
+    "last_updated_at": "2025-06-10 10:37:46.000000 UTC",
+    "vehicle_class_id": "12",
+    "rk": "1"
+  },
+  {
+    "id": "19974552",
+    "price": "58.84",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "287",
+    "inserted_at": "2025-06-10 10:37:46.000000 UTC",
+    "last_updated_at": "2025-06-10 10:37:46.000000 UTC",
+    "vehicle_class_id": "12",
+    "rk": "1"
+  },
+  {
+    "id": "19974546",
+    "price": "57.33",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "287",
+    "inserted_at": "2025-06-10 10:37:46.000000 UTC",
+    "last_updated_at": "2025-06-10 10:37:46.000000 UTC",
+    "vehicle_class_id": "109",
+    "rk": "1"
+  },
+  {
+    "id": "19974553",
+    "price": "57.33",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "287",
+    "inserted_at": "2025-06-10 10:37:46.000000 UTC",
+    "last_updated_at": "2025-06-10 10:37:46.000000 UTC",
+    "vehicle_class_id": "109",
+    "rk": "1"
+  },
+  {
+    "id": "19974852",
+    "price": "52.51",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "449",
+    "inserted_at": "2025-06-10 10:38:12.000000 UTC",
+    "last_updated_at": "2025-06-10 10:38:12.000000 UTC",
+    "vehicle_class_id": "109",
+    "rk": "1"
+  },
+  {
+    "id": "19974861",
+    "price": "52.51",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "449",
+    "inserted_at": "2025-06-10 10:38:12.000000 UTC",
+    "last_updated_at": "2025-06-10 10:38:12.000000 UTC",
+    "vehicle_class_id": "109",
+    "rk": "1"
+  },
+  {
+    "id": "19974416",
+    "price": "113.9",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "459",
+    "inserted_at": "2025-06-10 10:37:36.000000 UTC",
+    "last_updated_at": "2025-06-10 10:37:36.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "19974441",
+    "price": "113.9",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "459",
+    "inserted_at": "2025-06-10 10:37:36.000000 UTC",
+    "last_updated_at": "2025-06-10 10:37:36.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "19974417",
+    "price": "155.78",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "459",
+    "inserted_at": "2025-06-10 10:37:36.000000 UTC",
+    "last_updated_at": "2025-06-10 10:37:36.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "19974442",
+    "price": "155.78",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "459",
+    "inserted_at": "2025-06-10 10:37:36.000000 UTC",
+    "last_updated_at": "2025-06-10 10:37:36.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "19974636",
+    "price": "115.74",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "569",
+    "inserted_at": "2025-06-10 10:37:57.000000 UTC",
+    "last_updated_at": "2025-06-10 10:37:57.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "19974644",
+    "price": "115.74",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "569",
+    "inserted_at": "2025-06-10 10:37:57.000000 UTC",
+    "last_updated_at": "2025-06-10 10:37:57.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "19974637",
+    "price": "198.2",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "569",
+    "inserted_at": "2025-06-10 10:37:57.000000 UTC",
+    "last_updated_at": "2025-06-10 10:37:57.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "19974645",
+    "price": "198.2",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "569",
+    "inserted_at": "2025-06-10 10:37:57.000000 UTC",
+    "last_updated_at": "2025-06-10 10:37:57.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "19974638",
+    "price": "149.24",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "569",
+    "inserted_at": "2025-06-10 10:37:57.000000 UTC",
+    "last_updated_at": "2025-06-10 10:37:57.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "19974646",
+    "price": "149.24",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "569",
+    "inserted_at": "2025-06-10 10:37:57.000000 UTC",
+    "last_updated_at": "2025-06-10 10:37:57.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "19974639",
+    "price": "276.9",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "569",
+    "inserted_at": "2025-06-10 10:37:57.000000 UTC",
+    "last_updated_at": "2025-06-10 10:37:57.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "19974647",
+    "price": "276.9",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "569",
+    "inserted_at": "2025-06-10 10:37:57.000000 UTC",
+    "last_updated_at": "2025-06-10 10:37:57.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "19974640",
+    "price": "145.07",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "569",
+    "inserted_at": "2025-06-10 10:37:57.000000 UTC",
+    "last_updated_at": "2025-06-10 10:37:57.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "19974648",
+    "price": "145.07",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "569",
+    "inserted_at": "2025-06-10 10:37:57.000000 UTC",
+    "last_updated_at": "2025-06-10 10:37:57.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "19974641",
+    "price": "119.1",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "569",
+    "inserted_at": "2025-06-10 10:37:57.000000 UTC",
+    "last_updated_at": "2025-06-10 10:37:57.000000 UTC",
+    "vehicle_class_id": "12",
+    "rk": "1"
+  },
+  {
+    "id": "19974649",
+    "price": "119.1",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "569",
+    "inserted_at": "2025-06-10 10:37:57.000000 UTC",
+    "last_updated_at": "2025-06-10 10:37:57.000000 UTC",
+    "vehicle_class_id": "12",
+    "rk": "1"
+  },
+  {
+    "id": "19974430",
+    "price": "52.53",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "572",
+    "inserted_at": "2025-06-10 10:37:36.000000 UTC",
+    "last_updated_at": "2025-06-10 10:37:36.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "19974448",
+    "price": "52.53",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "572",
+    "inserted_at": "2025-06-10 10:37:36.000000 UTC",
+    "last_updated_at": "2025-06-10 10:37:36.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "24055424",
+    "price": "43.49",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "685",
+    "inserted_at": "2025-07-03 17:48:57.000000 UTC",
+    "last_updated_at": "2025-07-03 17:48:57.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "24055425",
+    "price": "43.49",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "685",
+    "inserted_at": "2025-07-03 17:48:57.000000 UTC",
+    "last_updated_at": "2025-07-03 17:48:57.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23651064",
+    "price": "149.26",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "717",
+    "inserted_at": "2025-07-01 04:40:28.000000 UTC",
+    "last_updated_at": "2025-07-01 04:40:28.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23651069",
+    "price": "149.26",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "717",
+    "inserted_at": "2025-07-01 04:40:28.000000 UTC",
+    "last_updated_at": "2025-07-01 04:40:28.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23651065",
+    "price": "192.39",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "717",
+    "inserted_at": "2025-07-01 04:40:28.000000 UTC",
+    "last_updated_at": "2025-07-01 04:40:28.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23651070",
+    "price": "192.39",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "717",
+    "inserted_at": "2025-07-01 04:40:28.000000 UTC",
+    "last_updated_at": "2025-07-01 04:40:28.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23651066",
+    "price": "250.97",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "717",
+    "inserted_at": "2025-07-01 04:40:28.000000 UTC",
+    "last_updated_at": "2025-07-01 04:40:28.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23651071",
+    "price": "250.97",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "717",
+    "inserted_at": "2025-07-01 04:40:28.000000 UTC",
+    "last_updated_at": "2025-07-01 04:40:28.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23651067",
+    "price": "164.82",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "717",
+    "inserted_at": "2025-07-01 04:40:28.000000 UTC",
+    "last_updated_at": "2025-07-01 04:40:28.000000 UTC",
+    "vehicle_class_id": "12",
+    "rk": "1"
+  },
+  {
+    "id": "23651072",
+    "price": "164.82",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "717",
+    "inserted_at": "2025-07-01 04:40:28.000000 UTC",
+    "last_updated_at": "2025-07-01 04:40:28.000000 UTC",
+    "vehicle_class_id": "12",
+    "rk": "1"
+  },
+  {
+    "id": "23651073",
+    "price": "252.23",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "717",
+    "inserted_at": "2025-07-01 04:40:28.000000 UTC",
+    "last_updated_at": "2025-07-01 04:40:28.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "23651068",
+    "price": "252.23",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "717",
+    "inserted_at": "2025-07-01 04:40:28.000000 UTC",
+    "last_updated_at": "2025-07-01 04:40:28.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "19974626",
+    "price": "69.84",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "761",
+    "inserted_at": "2025-06-10 10:37:56.000000 UTC",
+    "last_updated_at": "2025-06-10 10:37:56.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "19974631",
+    "price": "69.84",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "761",
+    "inserted_at": "2025-06-10 10:37:56.000000 UTC",
+    "last_updated_at": "2025-06-10 10:37:56.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "19974627",
+    "price": "66.62",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "761",
+    "inserted_at": "2025-06-10 10:37:56.000000 UTC",
+    "last_updated_at": "2025-06-10 10:37:56.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "19974632",
+    "price": "66.62",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "761",
+    "inserted_at": "2025-06-10 10:37:56.000000 UTC",
+    "last_updated_at": "2025-06-10 10:37:56.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "19974628",
+    "price": "102.62",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "761",
+    "inserted_at": "2025-06-10 10:37:56.000000 UTC",
+    "last_updated_at": "2025-06-10 10:37:56.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "19974633",
+    "price": "102.62",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "761",
+    "inserted_at": "2025-06-10 10:37:56.000000 UTC",
+    "last_updated_at": "2025-06-10 10:37:56.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "19974629",
+    "price": "60.65",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "761",
+    "inserted_at": "2025-06-10 10:37:56.000000 UTC",
+    "last_updated_at": "2025-06-10 10:37:56.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "19974634",
+    "price": "60.65",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "761",
+    "inserted_at": "2025-06-10 10:37:56.000000 UTC",
+    "last_updated_at": "2025-06-10 10:37:56.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "19974630",
+    "price": "60.59",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "761",
+    "inserted_at": "2025-06-10 10:37:56.000000 UTC",
+    "last_updated_at": "2025-06-10 10:37:56.000000 UTC",
+    "vehicle_class_id": "12",
+    "rk": "1"
+  },
+  {
+    "id": "19974635",
+    "price": "60.59",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "761",
+    "inserted_at": "2025-06-10 10:37:56.000000 UTC",
+    "last_updated_at": "2025-06-10 10:37:56.000000 UTC",
+    "vehicle_class_id": "12",
+    "rk": "1"
+  },
+  {
+    "id": "19974793",
+    "price": "51.63",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "762",
+    "inserted_at": "2025-06-10 10:38:07.000000 UTC",
+    "last_updated_at": "2025-06-10 10:38:07.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "19974803",
+    "price": "51.63",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "762",
+    "inserted_at": "2025-06-10 10:38:07.000000 UTC",
+    "last_updated_at": "2025-06-10 10:38:07.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "19974794",
+    "price": "69.18",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "762",
+    "inserted_at": "2025-06-10 10:38:07.000000 UTC",
+    "last_updated_at": "2025-06-10 10:38:07.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "19974804",
+    "price": "69.18",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "762",
+    "inserted_at": "2025-06-10 10:38:07.000000 UTC",
+    "last_updated_at": "2025-06-10 10:38:07.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "19974795",
+    "price": "98.38",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "762",
+    "inserted_at": "2025-06-10 10:38:07.000000 UTC",
+    "last_updated_at": "2025-06-10 10:38:07.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "19974805",
+    "price": "98.38",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "762",
+    "inserted_at": "2025-06-10 10:38:07.000000 UTC",
+    "last_updated_at": "2025-06-10 10:38:07.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "19974796",
+    "price": "57.78",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "762",
+    "inserted_at": "2025-06-10 10:38:07.000000 UTC",
+    "last_updated_at": "2025-06-10 10:38:07.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "19974806",
+    "price": "57.78",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "762",
+    "inserted_at": "2025-06-10 10:38:07.000000 UTC",
+    "last_updated_at": "2025-06-10 10:38:07.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "19974955",
+    "price": "69.06",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "764",
+    "inserted_at": "2025-06-10 10:38:28.000000 UTC",
+    "last_updated_at": "2025-06-10 10:38:28.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "19974956",
+    "price": "69.06",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "764",
+    "inserted_at": "2025-06-10 10:38:28.000000 UTC",
+    "last_updated_at": "2025-06-10 10:38:28.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "19975210",
+    "price": "481.99",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "767",
+    "inserted_at": "2025-06-10 10:39:00.000000 UTC",
+    "last_updated_at": "2025-06-10 10:39:00.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "19975222",
+    "price": "481.99",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "767",
+    "inserted_at": "2025-06-10 10:39:00.000000 UTC",
+    "last_updated_at": "2025-06-10 10:39:00.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "19975211",
+    "price": "637.96",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "767",
+    "inserted_at": "2025-06-10 10:39:00.000000 UTC",
+    "last_updated_at": "2025-06-10 10:39:00.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "19975223",
+    "price": "637.96",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "767",
+    "inserted_at": "2025-06-10 10:39:00.000000 UTC",
+    "last_updated_at": "2025-06-10 10:39:00.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "19975212",
+    "price": "534.95",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "767",
+    "inserted_at": "2025-06-10 10:39:00.000000 UTC",
+    "last_updated_at": "2025-06-10 10:39:00.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "19975224",
+    "price": "534.95",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "767",
+    "inserted_at": "2025-06-10 10:39:00.000000 UTC",
+    "last_updated_at": "2025-06-10 10:39:00.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "19975213",
+    "price": "534.85",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "767",
+    "inserted_at": "2025-06-10 10:39:00.000000 UTC",
+    "last_updated_at": "2025-06-10 10:39:00.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "19975225",
+    "price": "534.85",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "767",
+    "inserted_at": "2025-06-10 10:39:00.000000 UTC",
+    "last_updated_at": "2025-06-10 10:39:00.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "19975214",
+    "price": "535.21",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "767",
+    "inserted_at": "2025-06-10 10:39:00.000000 UTC",
+    "last_updated_at": "2025-06-10 10:39:00.000000 UTC",
+    "vehicle_class_id": "12",
+    "rk": "1"
+  },
+  {
+    "id": "19975226",
+    "price": "535.21",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "767",
+    "inserted_at": "2025-06-10 10:39:00.000000 UTC",
+    "last_updated_at": "2025-06-10 10:39:00.000000 UTC",
+    "vehicle_class_id": "12",
+    "rk": "1"
+  },
+  {
+    "id": "19975215",
+    "price": "535.21",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "767",
+    "inserted_at": "2025-06-10 10:39:00.000000 UTC",
+    "last_updated_at": "2025-06-10 10:39:00.000000 UTC",
+    "vehicle_class_id": "109",
+    "rk": "1"
+  },
+  {
+    "id": "19975227",
+    "price": "535.21",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "767",
+    "inserted_at": "2025-06-10 10:39:00.000000 UTC",
+    "last_updated_at": "2025-06-10 10:39:00.000000 UTC",
+    "vehicle_class_id": "109",
+    "rk": "1"
+  },
+  {
+    "id": "19975161",
+    "price": "83.19",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "778",
+    "inserted_at": "2025-06-10 10:38:47.000000 UTC",
+    "last_updated_at": "2025-06-10 10:38:47.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "19975167",
+    "price": "83.19",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "778",
+    "inserted_at": "2025-06-10 10:38:47.000000 UTC",
+    "last_updated_at": "2025-06-10 10:38:47.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "19975162",
+    "price": "96.35",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "778",
+    "inserted_at": "2025-06-10 10:38:47.000000 UTC",
+    "last_updated_at": "2025-06-10 10:38:47.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "19975168",
+    "price": "96.35",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "778",
+    "inserted_at": "2025-06-10 10:38:47.000000 UTC",
+    "last_updated_at": "2025-06-10 10:38:47.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "19975163",
+    "price": "96.25",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "778",
+    "inserted_at": "2025-06-10 10:38:47.000000 UTC",
+    "last_updated_at": "2025-06-10 10:38:47.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "19975169",
+    "price": "96.25",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "778",
+    "inserted_at": "2025-06-10 10:38:47.000000 UTC",
+    "last_updated_at": "2025-06-10 10:38:47.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "19975164",
+    "price": "106.14",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "778",
+    "inserted_at": "2025-06-10 10:38:47.000000 UTC",
+    "last_updated_at": "2025-06-10 10:38:47.000000 UTC",
+    "vehicle_class_id": "7",
+    "rk": "1"
+  },
+  {
+    "id": "19975170",
+    "price": "106.14",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "778",
+    "inserted_at": "2025-06-10 10:38:47.000000 UTC",
+    "last_updated_at": "2025-06-10 10:38:47.000000 UTC",
+    "vehicle_class_id": "7",
+    "rk": "1"
+  },
+  {
+    "id": "19975165",
+    "price": "208.32",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "778",
+    "inserted_at": "2025-06-10 10:38:47.000000 UTC",
+    "last_updated_at": "2025-06-10 10:38:47.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "19975171",
+    "price": "208.32",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "778",
+    "inserted_at": "2025-06-10 10:38:47.000000 UTC",
+    "last_updated_at": "2025-06-10 10:38:47.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "19975166",
+    "price": "80.24",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "778",
+    "inserted_at": "2025-06-10 10:38:47.000000 UTC",
+    "last_updated_at": "2025-06-10 10:38:47.000000 UTC",
+    "vehicle_class_id": "109",
+    "rk": "1"
+  },
+  {
+    "id": "19975172",
+    "price": "80.24",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "778",
+    "inserted_at": "2025-06-10 10:38:47.000000 UTC",
+    "last_updated_at": "2025-06-10 10:38:47.000000 UTC",
+    "vehicle_class_id": "109",
+    "rk": "1"
+  },
+  {
+    "id": "19974418",
+    "price": "66.18",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "790",
+    "inserted_at": "2025-06-10 10:37:36.000000 UTC",
+    "last_updated_at": "2025-06-10 10:37:36.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "19974443",
+    "price": "66.18",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "790",
+    "inserted_at": "2025-06-10 10:37:36.000000 UTC",
+    "last_updated_at": "2025-06-10 10:37:36.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "19974419",
+    "price": "91.92",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "790",
+    "inserted_at": "2025-06-10 10:37:36.000000 UTC",
+    "last_updated_at": "2025-06-10 10:37:36.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "19974444",
+    "price": "91.92",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "790",
+    "inserted_at": "2025-06-10 10:37:36.000000 UTC",
+    "last_updated_at": "2025-06-10 10:37:36.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "19974420",
+    "price": "76.89",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "790",
+    "inserted_at": "2025-06-10 10:37:36.000000 UTC",
+    "last_updated_at": "2025-06-10 10:37:36.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "19974445",
+    "price": "76.89",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "790",
+    "inserted_at": "2025-06-10 10:37:36.000000 UTC",
+    "last_updated_at": "2025-06-10 10:37:36.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "19974421",
+    "price": "75.54",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "790",
+    "inserted_at": "2025-06-10 10:37:36.000000 UTC",
+    "last_updated_at": "2025-06-10 10:37:36.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "19974446",
+    "price": "75.54",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "790",
+    "inserted_at": "2025-06-10 10:37:36.000000 UTC",
+    "last_updated_at": "2025-06-10 10:37:36.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "19974422",
+    "price": "72.51",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "790",
+    "inserted_at": "2025-06-10 10:37:36.000000 UTC",
+    "last_updated_at": "2025-06-10 10:37:36.000000 UTC",
+    "vehicle_class_id": "12",
+    "rk": "1"
+  },
+  {
+    "id": "19974447",
+    "price": "72.51",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "790",
+    "inserted_at": "2025-06-10 10:37:36.000000 UTC",
+    "last_updated_at": "2025-06-10 10:37:36.000000 UTC",
+    "vehicle_class_id": "12",
+    "rk": "1"
+  },
+  {
+    "id": "19974398",
+    "price": "122.8",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "958",
+    "inserted_at": "2025-06-10 10:37:35.000000 UTC",
+    "last_updated_at": "2025-06-10 10:37:35.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "19974400",
+    "price": "122.8",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "958",
+    "inserted_at": "2025-06-10 10:37:35.000000 UTC",
+    "last_updated_at": "2025-06-10 10:37:35.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "19974399",
+    "price": "163.14",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "958",
+    "inserted_at": "2025-06-10 10:37:35.000000 UTC",
+    "last_updated_at": "2025-06-10 10:37:35.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "19974401",
+    "price": "163.14",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "958",
+    "inserted_at": "2025-06-10 10:37:35.000000 UTC",
+    "last_updated_at": "2025-06-10 10:37:35.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23717409",
+    "price": "19.87",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1053",
+    "inserted_at": "2025-07-01 16:26:28.000000 UTC",
+    "last_updated_at": "2025-07-01 16:26:28.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23717420",
+    "price": "19.87",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1053",
+    "inserted_at": "2025-07-01 16:26:28.000000 UTC",
+    "last_updated_at": "2025-07-01 16:26:28.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23767411",
+    "price": "16.5",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1054",
+    "inserted_at": "2025-07-02 00:23:58.000000 UTC",
+    "last_updated_at": "2025-07-02 00:23:58.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23767412",
+    "price": "16.5",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1054",
+    "inserted_at": "2025-07-02 00:23:58.000000 UTC",
+    "last_updated_at": "2025-07-02 00:23:58.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23766819",
+    "price": "900",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1054",
+    "inserted_at": "2025-07-02 00:22:58.000000 UTC",
+    "last_updated_at": "2025-07-02 00:22:58.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23766825",
+    "price": "900",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1054",
+    "inserted_at": "2025-07-02 00:22:58.000000 UTC",
+    "last_updated_at": "2025-07-02 00:22:58.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23766824",
+    "price": "22",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1054",
+    "inserted_at": "2025-07-02 00:22:58.000000 UTC",
+    "last_updated_at": "2025-07-02 00:22:58.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23766817",
+    "price": "22",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1054",
+    "inserted_at": "2025-07-02 00:22:58.000000 UTC",
+    "last_updated_at": "2025-07-02 00:22:58.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23766815",
+    "price": "1012.5",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1054",
+    "inserted_at": "2025-07-02 00:22:58.000000 UTC",
+    "last_updated_at": "2025-07-02 00:22:58.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "23766822",
+    "price": "1012.5",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1054",
+    "inserted_at": "2025-07-02 00:22:58.000000 UTC",
+    "last_updated_at": "2025-07-02 00:22:58.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "23766816",
+    "price": "87.15",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1054",
+    "inserted_at": "2025-07-02 00:22:58.000000 UTC",
+    "last_updated_at": "2025-07-02 00:22:58.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "23766826",
+    "price": "87.15",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1054",
+    "inserted_at": "2025-07-02 00:22:58.000000 UTC",
+    "last_updated_at": "2025-07-02 00:22:58.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "23766823",
+    "price": "19.87",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1054",
+    "inserted_at": "2025-07-02 00:22:58.000000 UTC",
+    "last_updated_at": "2025-07-02 00:22:58.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23766818",
+    "price": "19.87",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1054",
+    "inserted_at": "2025-07-02 00:22:58.000000 UTC",
+    "last_updated_at": "2025-07-02 00:22:58.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23714903",
+    "price": "28.77",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1055",
+    "inserted_at": "2025-07-01 16:21:27.000000 UTC",
+    "last_updated_at": "2025-07-01 16:21:27.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23714910",
+    "price": "28.77",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1055",
+    "inserted_at": "2025-07-01 16:21:27.000000 UTC",
+    "last_updated_at": "2025-07-01 16:21:27.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23714905",
+    "price": "240",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1055",
+    "inserted_at": "2025-07-01 16:21:27.000000 UTC",
+    "last_updated_at": "2025-07-01 16:21:27.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23714908",
+    "price": "240",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1055",
+    "inserted_at": "2025-07-01 16:21:27.000000 UTC",
+    "last_updated_at": "2025-07-01 16:21:27.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23714909",
+    "price": "277.07",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1055",
+    "inserted_at": "2025-07-01 16:21:27.000000 UTC",
+    "last_updated_at": "2025-07-01 16:21:27.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "23714904",
+    "price": "277.07",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1055",
+    "inserted_at": "2025-07-01 16:21:27.000000 UTC",
+    "last_updated_at": "2025-07-01 16:21:27.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "23714901",
+    "price": "68.94",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1055",
+    "inserted_at": "2025-07-01 16:21:27.000000 UTC",
+    "last_updated_at": "2025-07-01 16:21:27.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "23714907",
+    "price": "68.94",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1055",
+    "inserted_at": "2025-07-01 16:21:27.000000 UTC",
+    "last_updated_at": "2025-07-01 16:21:27.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "23714906",
+    "price": "38.37",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1055",
+    "inserted_at": "2025-07-01 16:21:27.000000 UTC",
+    "last_updated_at": "2025-07-01 16:21:27.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23714902",
+    "price": "38.37",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1055",
+    "inserted_at": "2025-07-01 16:21:27.000000 UTC",
+    "last_updated_at": "2025-07-01 16:21:27.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23823061",
+    "price": "165",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1056",
+    "inserted_at": "2025-07-02 07:36:36.000000 UTC",
+    "last_updated_at": "2025-07-02 07:36:36.000000 UTC",
+    "vehicle_class_id": "11",
+    "rk": "1"
+  },
+  {
+    "id": "23823062",
+    "price": "165",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1056",
+    "inserted_at": "2025-07-02 07:36:36.000000 UTC",
+    "last_updated_at": "2025-07-02 07:36:36.000000 UTC",
+    "vehicle_class_id": "11",
+    "rk": "1"
+  },
+  {
+    "id": "24053669",
+    "price": "150",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1115",
+    "inserted_at": "2025-07-03 17:32:58.000000 UTC",
+    "last_updated_at": "2025-07-03 17:32:58.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "24053687",
+    "price": "150",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1115",
+    "inserted_at": "2025-07-03 17:32:58.000000 UTC",
+    "last_updated_at": "2025-07-03 17:32:58.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "24053670",
+    "price": "168",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1115",
+    "inserted_at": "2025-07-03 17:32:58.000000 UTC",
+    "last_updated_at": "2025-07-03 17:32:58.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "24053688",
+    "price": "168",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1115",
+    "inserted_at": "2025-07-03 17:32:58.000000 UTC",
+    "last_updated_at": "2025-07-03 17:32:58.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "24053671",
+    "price": "213.67",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1115",
+    "inserted_at": "2025-07-03 17:32:58.000000 UTC",
+    "last_updated_at": "2025-07-03 17:32:58.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "24053689",
+    "price": "213.67",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1115",
+    "inserted_at": "2025-07-03 17:32:58.000000 UTC",
+    "last_updated_at": "2025-07-03 17:32:58.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "24053672",
+    "price": "216",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1115",
+    "inserted_at": "2025-07-03 17:32:58.000000 UTC",
+    "last_updated_at": "2025-07-03 17:32:58.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "24053690",
+    "price": "216",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1115",
+    "inserted_at": "2025-07-03 17:32:58.000000 UTC",
+    "last_updated_at": "2025-07-03 17:32:58.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "24053673",
+    "price": "264",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1115",
+    "inserted_at": "2025-07-03 17:32:58.000000 UTC",
+    "last_updated_at": "2025-07-03 17:32:58.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "24053691",
+    "price": "264",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1115",
+    "inserted_at": "2025-07-03 17:32:58.000000 UTC",
+    "last_updated_at": "2025-07-03 17:32:58.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "24053674",
+    "price": "211.91",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1115",
+    "inserted_at": "2025-07-03 17:32:58.000000 UTC",
+    "last_updated_at": "2025-07-03 17:32:58.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "24053692",
+    "price": "211.91",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1115",
+    "inserted_at": "2025-07-03 17:32:58.000000 UTC",
+    "last_updated_at": "2025-07-03 17:32:58.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "24053693",
+    "price": "533.85",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1115",
+    "inserted_at": "2025-07-03 17:32:58.000000 UTC",
+    "last_updated_at": "2025-07-03 17:32:58.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "24053675",
+    "price": "533.85",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1115",
+    "inserted_at": "2025-07-03 17:32:58.000000 UTC",
+    "last_updated_at": "2025-07-03 17:32:58.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "24053694",
+    "price": "616",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1115",
+    "inserted_at": "2025-07-03 17:32:58.000000 UTC",
+    "last_updated_at": "2025-07-03 17:32:58.000000 UTC",
+    "vehicle_class_id": "11",
+    "rk": "1"
+  },
+  {
+    "id": "24053676",
+    "price": "616",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1115",
+    "inserted_at": "2025-07-03 17:32:58.000000 UTC",
+    "last_updated_at": "2025-07-03 17:32:58.000000 UTC",
+    "vehicle_class_id": "11",
+    "rk": "1"
+  },
+  {
+    "id": "24053677",
+    "price": "216",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1115",
+    "inserted_at": "2025-07-03 17:32:58.000000 UTC",
+    "last_updated_at": "2025-07-03 17:32:58.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "24053695",
+    "price": "216",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1115",
+    "inserted_at": "2025-07-03 17:32:58.000000 UTC",
+    "last_updated_at": "2025-07-03 17:32:58.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "24053820",
+    "price": "104.5",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1156",
+    "inserted_at": "2025-07-03 17:33:00.000000 UTC",
+    "last_updated_at": "2025-07-03 17:33:00.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "24053847",
+    "price": "104.5",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1156",
+    "inserted_at": "2025-07-03 17:33:00.000000 UTC",
+    "last_updated_at": "2025-07-03 17:33:00.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "24053848",
+    "price": "175.95",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1156",
+    "inserted_at": "2025-07-03 17:33:00.000000 UTC",
+    "last_updated_at": "2025-07-03 17:33:00.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "24053821",
+    "price": "175.95",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1156",
+    "inserted_at": "2025-07-03 17:33:00.000000 UTC",
+    "last_updated_at": "2025-07-03 17:33:00.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "24053849",
+    "price": "165",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1156",
+    "inserted_at": "2025-07-03 17:33:00.000000 UTC",
+    "last_updated_at": "2025-07-03 17:33:00.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "24053822",
+    "price": "165",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1156",
+    "inserted_at": "2025-07-03 17:33:00.000000 UTC",
+    "last_updated_at": "2025-07-03 17:33:00.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "24053850",
+    "price": "187",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1156",
+    "inserted_at": "2025-07-03 17:33:00.000000 UTC",
+    "last_updated_at": "2025-07-03 17:33:00.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "24053823",
+    "price": "187",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1156",
+    "inserted_at": "2025-07-03 17:33:00.000000 UTC",
+    "last_updated_at": "2025-07-03 17:33:00.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "24053824",
+    "price": "352",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1156",
+    "inserted_at": "2025-07-03 17:33:00.000000 UTC",
+    "last_updated_at": "2025-07-03 17:33:00.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "24053851",
+    "price": "352",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1156",
+    "inserted_at": "2025-07-03 17:33:00.000000 UTC",
+    "last_updated_at": "2025-07-03 17:33:00.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "24053825",
+    "price": "148.5",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1156",
+    "inserted_at": "2025-07-03 17:33:00.000000 UTC",
+    "last_updated_at": "2025-07-03 17:33:00.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "24053852",
+    "price": "148.5",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1156",
+    "inserted_at": "2025-07-03 17:33:00.000000 UTC",
+    "last_updated_at": "2025-07-03 17:33:00.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "24053853",
+    "price": "707.48",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1156",
+    "inserted_at": "2025-07-03 17:33:00.000000 UTC",
+    "last_updated_at": "2025-07-03 17:33:00.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "24053826",
+    "price": "707.48",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1156",
+    "inserted_at": "2025-07-03 17:33:00.000000 UTC",
+    "last_updated_at": "2025-07-03 17:33:00.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "24053854",
+    "price": "711.04",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1156",
+    "inserted_at": "2025-07-03 17:33:00.000000 UTC",
+    "last_updated_at": "2025-07-03 17:33:00.000000 UTC",
+    "vehicle_class_id": "11",
+    "rk": "1"
+  },
+  {
+    "id": "24053827",
+    "price": "711.04",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1156",
+    "inserted_at": "2025-07-03 17:33:00.000000 UTC",
+    "last_updated_at": "2025-07-03 17:33:00.000000 UTC",
+    "vehicle_class_id": "11",
+    "rk": "1"
+  },
+  {
+    "id": "24053855",
+    "price": "187",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1156",
+    "inserted_at": "2025-07-03 17:33:00.000000 UTC",
+    "last_updated_at": "2025-07-03 17:33:00.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "24053828",
+    "price": "187",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1156",
+    "inserted_at": "2025-07-03 17:33:00.000000 UTC",
+    "last_updated_at": "2025-07-03 17:33:00.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "24053751",
+    "price": "46.13",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1204",
+    "inserted_at": "2025-07-03 17:32:59.000000 UTC",
+    "last_updated_at": "2025-07-03 17:32:59.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "24053758",
+    "price": "46.13",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1204",
+    "inserted_at": "2025-07-03 17:32:59.000000 UTC",
+    "last_updated_at": "2025-07-03 17:32:59.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "24053759",
+    "price": "580.34",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1204",
+    "inserted_at": "2025-07-03 17:32:59.000000 UTC",
+    "last_updated_at": "2025-07-03 17:32:59.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "24053752",
+    "price": "580.34",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1204",
+    "inserted_at": "2025-07-03 17:32:59.000000 UTC",
+    "last_updated_at": "2025-07-03 17:32:59.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "24053760",
+    "price": "86.48",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1204",
+    "inserted_at": "2025-07-03 17:32:59.000000 UTC",
+    "last_updated_at": "2025-07-03 17:32:59.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "24053753",
+    "price": "86.48",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1204",
+    "inserted_at": "2025-07-03 17:32:59.000000 UTC",
+    "last_updated_at": "2025-07-03 17:32:59.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "24053761",
+    "price": "92.61",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1204",
+    "inserted_at": "2025-07-03 17:32:59.000000 UTC",
+    "last_updated_at": "2025-07-03 17:32:59.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "24053754",
+    "price": "92.61",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1204",
+    "inserted_at": "2025-07-03 17:32:59.000000 UTC",
+    "last_updated_at": "2025-07-03 17:32:59.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "24053755",
+    "price": "86.05",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1204",
+    "inserted_at": "2025-07-03 17:32:59.000000 UTC",
+    "last_updated_at": "2025-07-03 17:32:59.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "24053762",
+    "price": "86.05",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1204",
+    "inserted_at": "2025-07-03 17:32:59.000000 UTC",
+    "last_updated_at": "2025-07-03 17:32:59.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "24053756",
+    "price": "1126.83",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1204",
+    "inserted_at": "2025-07-03 17:32:59.000000 UTC",
+    "last_updated_at": "2025-07-03 17:32:59.000000 UTC",
+    "vehicle_class_id": "9",
+    "rk": "1"
+  },
+  {
+    "id": "24053763",
+    "price": "1126.83",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1204",
+    "inserted_at": "2025-07-03 17:32:59.000000 UTC",
+    "last_updated_at": "2025-07-03 17:32:59.000000 UTC",
+    "vehicle_class_id": "9",
+    "rk": "1"
+  },
+  {
+    "id": "24053757",
+    "price": "660.16",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1204",
+    "inserted_at": "2025-07-03 17:32:59.000000 UTC",
+    "last_updated_at": "2025-07-03 17:32:59.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "24053764",
+    "price": "660.16",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1204",
+    "inserted_at": "2025-07-03 17:32:59.000000 UTC",
+    "last_updated_at": "2025-07-03 17:32:59.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "23736173",
+    "price": "69.8",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1463",
+    "inserted_at": "2025-07-01 17:36:27.000000 UTC",
+    "last_updated_at": "2025-07-01 17:36:27.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23736182",
+    "price": "69.8",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1463",
+    "inserted_at": "2025-07-01 17:36:27.000000 UTC",
+    "last_updated_at": "2025-07-01 17:36:27.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23736183",
+    "price": "111.03",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1463",
+    "inserted_at": "2025-07-01 17:36:27.000000 UTC",
+    "last_updated_at": "2025-07-01 17:36:27.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23736174",
+    "price": "111.03",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1463",
+    "inserted_at": "2025-07-01 17:36:27.000000 UTC",
+    "last_updated_at": "2025-07-01 17:36:27.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23736184",
+    "price": "97.65",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1463",
+    "inserted_at": "2025-07-01 17:36:27.000000 UTC",
+    "last_updated_at": "2025-07-01 17:36:27.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23736175",
+    "price": "97.65",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1463",
+    "inserted_at": "2025-07-01 17:36:27.000000 UTC",
+    "last_updated_at": "2025-07-01 17:36:27.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23736185",
+    "price": "115.5",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1463",
+    "inserted_at": "2025-07-01 17:36:27.000000 UTC",
+    "last_updated_at": "2025-07-01 17:36:27.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "23736176",
+    "price": "115.5",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1463",
+    "inserted_at": "2025-07-01 17:36:27.000000 UTC",
+    "last_updated_at": "2025-07-01 17:36:27.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "23736186",
+    "price": "81.22",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1463",
+    "inserted_at": "2025-07-01 17:36:27.000000 UTC",
+    "last_updated_at": "2025-07-01 17:36:27.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23736177",
+    "price": "81.22",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1463",
+    "inserted_at": "2025-07-01 17:36:27.000000 UTC",
+    "last_updated_at": "2025-07-01 17:36:27.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23736187",
+    "price": "880.33",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1463",
+    "inserted_at": "2025-07-01 17:36:27.000000 UTC",
+    "last_updated_at": "2025-07-01 17:36:27.000000 UTC",
+    "vehicle_class_id": "9",
+    "rk": "1"
+  },
+  {
+    "id": "23736178",
+    "price": "880.33",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1463",
+    "inserted_at": "2025-07-01 17:36:27.000000 UTC",
+    "last_updated_at": "2025-07-01 17:36:27.000000 UTC",
+    "vehicle_class_id": "9",
+    "rk": "1"
+  },
+  {
+    "id": "23736188",
+    "price": "884.75",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1463",
+    "inserted_at": "2025-07-01 17:36:27.000000 UTC",
+    "last_updated_at": "2025-07-01 17:36:27.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "23736179",
+    "price": "884.75",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1463",
+    "inserted_at": "2025-07-01 17:36:27.000000 UTC",
+    "last_updated_at": "2025-07-01 17:36:27.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "23736180",
+    "price": "889.2",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1463",
+    "inserted_at": "2025-07-01 17:36:27.000000 UTC",
+    "last_updated_at": "2025-07-01 17:36:27.000000 UTC",
+    "vehicle_class_id": "11",
+    "rk": "1"
+  },
+  {
+    "id": "23736189",
+    "price": "889.2",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1463",
+    "inserted_at": "2025-07-01 17:36:27.000000 UTC",
+    "last_updated_at": "2025-07-01 17:36:27.000000 UTC",
+    "vehicle_class_id": "11",
+    "rk": "1"
+  },
+  {
+    "id": "23736190",
+    "price": "115.5",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1463",
+    "inserted_at": "2025-07-01 17:36:27.000000 UTC",
+    "last_updated_at": "2025-07-01 17:36:27.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "23736181",
+    "price": "115.5",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1463",
+    "inserted_at": "2025-07-01 17:36:27.000000 UTC",
+    "last_updated_at": "2025-07-01 17:36:27.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "23736168",
+    "price": "188.23",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1475",
+    "inserted_at": "2025-07-01 17:36:27.000000 UTC",
+    "last_updated_at": "2025-07-01 17:36:27.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23736163",
+    "price": "188.23",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1475",
+    "inserted_at": "2025-07-01 17:36:27.000000 UTC",
+    "last_updated_at": "2025-07-01 17:36:27.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23736169",
+    "price": "481.09",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1475",
+    "inserted_at": "2025-07-01 17:36:27.000000 UTC",
+    "last_updated_at": "2025-07-01 17:36:27.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23736164",
+    "price": "481.09",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1475",
+    "inserted_at": "2025-07-01 17:36:27.000000 UTC",
+    "last_updated_at": "2025-07-01 17:36:27.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23736170",
+    "price": "221.57",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1475",
+    "inserted_at": "2025-07-01 17:36:27.000000 UTC",
+    "last_updated_at": "2025-07-01 17:36:27.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23736165",
+    "price": "221.57",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1475",
+    "inserted_at": "2025-07-01 17:36:27.000000 UTC",
+    "last_updated_at": "2025-07-01 17:36:27.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23736166",
+    "price": "234",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1475",
+    "inserted_at": "2025-07-01 17:36:27.000000 UTC",
+    "last_updated_at": "2025-07-01 17:36:27.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "23736171",
+    "price": "234",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1475",
+    "inserted_at": "2025-07-01 17:36:27.000000 UTC",
+    "last_updated_at": "2025-07-01 17:36:27.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "23736167",
+    "price": "208",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1475",
+    "inserted_at": "2025-07-01 17:36:27.000000 UTC",
+    "last_updated_at": "2025-07-01 17:36:27.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23736172",
+    "price": "208",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1475",
+    "inserted_at": "2025-07-01 17:36:27.000000 UTC",
+    "last_updated_at": "2025-07-01 17:36:27.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23835564",
+    "price": "17.34",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1527",
+    "inserted_at": "2025-07-02 08:25:28.000000 UTC",
+    "last_updated_at": "2025-07-02 08:25:28.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23835555",
+    "price": "17.35",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1527",
+    "inserted_at": "2025-07-02 08:25:28.000000 UTC",
+    "last_updated_at": "2025-07-02 08:25:28.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23835562",
+    "price": "39.97",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1527",
+    "inserted_at": "2025-07-02 08:25:28.000000 UTC",
+    "last_updated_at": "2025-07-02 08:25:28.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23835556",
+    "price": "33.18",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1527",
+    "inserted_at": "2025-07-02 08:25:28.000000 UTC",
+    "last_updated_at": "2025-07-02 08:25:28.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23835563",
+    "price": "47.93",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1527",
+    "inserted_at": "2025-07-02 08:25:28.000000 UTC",
+    "last_updated_at": "2025-07-02 08:25:28.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "23835554",
+    "price": "42.5",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1527",
+    "inserted_at": "2025-07-02 08:25:28.000000 UTC",
+    "last_updated_at": "2025-07-02 08:25:28.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "23835561",
+    "price": "22.58",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1527",
+    "inserted_at": "2025-07-02 08:25:28.000000 UTC",
+    "last_updated_at": "2025-07-02 08:25:28.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23835553",
+    "price": "22.62",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1527",
+    "inserted_at": "2025-07-02 08:25:28.000000 UTC",
+    "last_updated_at": "2025-07-02 08:25:28.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23768491",
+    "price": "154",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1530",
+    "inserted_at": "2025-07-02 00:25:58.000000 UTC",
+    "last_updated_at": "2025-07-02 00:25:58.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "23768487",
+    "price": "154",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1530",
+    "inserted_at": "2025-07-02 00:25:58.000000 UTC",
+    "last_updated_at": "2025-07-02 00:25:58.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "23768493",
+    "price": "17.95",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1530",
+    "inserted_at": "2025-07-02 00:25:58.000000 UTC",
+    "last_updated_at": "2025-07-02 00:25:58.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23768488",
+    "price": "17.95",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1530",
+    "inserted_at": "2025-07-02 00:25:58.000000 UTC",
+    "last_updated_at": "2025-07-02 00:25:58.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23967862",
+    "price": "10.49",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1538",
+    "inserted_at": "2025-07-03 04:20:58.000000 UTC",
+    "last_updated_at": "2025-07-03 04:20:58.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23967859",
+    "price": "10.49",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1538",
+    "inserted_at": "2025-07-03 04:20:58.000000 UTC",
+    "last_updated_at": "2025-07-03 04:20:58.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23760829",
+    "price": "181.44",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1538",
+    "inserted_at": "2025-07-01 22:21:28.000000 UTC",
+    "last_updated_at": "2025-07-01 22:21:28.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23760833",
+    "price": "199.93",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1538",
+    "inserted_at": "2025-07-01 22:21:28.000000 UTC",
+    "last_updated_at": "2025-07-01 22:21:28.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23967864",
+    "price": "25.76",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1538",
+    "inserted_at": "2025-07-03 04:20:58.000000 UTC",
+    "last_updated_at": "2025-07-03 04:20:58.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "23967861",
+    "price": "25.76",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1538",
+    "inserted_at": "2025-07-03 04:20:58.000000 UTC",
+    "last_updated_at": "2025-07-03 04:20:58.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "23761232",
+    "price": "14.55",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1538",
+    "inserted_at": "2025-07-01 22:22:28.000000 UTC",
+    "last_updated_at": "2025-07-01 22:22:28.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23761234",
+    "price": "13.23",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1538",
+    "inserted_at": "2025-07-01 22:22:28.000000 UTC",
+    "last_updated_at": "2025-07-01 22:22:28.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "24007987",
+    "price": "10.49",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1539",
+    "inserted_at": "2025-07-03 08:29:28.000000 UTC",
+    "last_updated_at": "2025-07-03 08:29:28.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "24007992",
+    "price": "10.49",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1539",
+    "inserted_at": "2025-07-03 08:29:28.000000 UTC",
+    "last_updated_at": "2025-07-03 08:29:28.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "24007988",
+    "price": "181.44",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1539",
+    "inserted_at": "2025-07-03 08:29:28.000000 UTC",
+    "last_updated_at": "2025-07-03 08:29:28.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "24007993",
+    "price": "181.44",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1539",
+    "inserted_at": "2025-07-03 08:29:28.000000 UTC",
+    "last_updated_at": "2025-07-03 08:29:28.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "24007990",
+    "price": "25.76",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1539",
+    "inserted_at": "2025-07-03 08:29:28.000000 UTC",
+    "last_updated_at": "2025-07-03 08:29:28.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "24007995",
+    "price": "25.76",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1539",
+    "inserted_at": "2025-07-03 08:29:28.000000 UTC",
+    "last_updated_at": "2025-07-03 08:29:28.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "24007996",
+    "price": "13.23",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1539",
+    "inserted_at": "2025-07-03 08:29:28.000000 UTC",
+    "last_updated_at": "2025-07-03 08:29:28.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "24007991",
+    "price": "13.23",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1539",
+    "inserted_at": "2025-07-03 08:29:28.000000 UTC",
+    "last_updated_at": "2025-07-03 08:29:28.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23717522",
+    "price": "101.48",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1572",
+    "inserted_at": "2025-07-01 16:26:29.000000 UTC",
+    "last_updated_at": "2025-07-01 16:26:29.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23717511",
+    "price": "101.48",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1572",
+    "inserted_at": "2025-07-01 16:26:29.000000 UTC",
+    "last_updated_at": "2025-07-01 16:26:29.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23834793",
+    "price": "161.93",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1574",
+    "inserted_at": "2025-07-02 08:23:59.000000 UTC",
+    "last_updated_at": "2025-07-02 08:23:59.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23834788",
+    "price": "161.93",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1574",
+    "inserted_at": "2025-07-02 08:23:59.000000 UTC",
+    "last_updated_at": "2025-07-02 08:23:59.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23834280",
+    "price": "223.67",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1574",
+    "inserted_at": "2025-07-02 08:22:58.000000 UTC",
+    "last_updated_at": "2025-07-02 08:22:58.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23834284",
+    "price": "223.67",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1574",
+    "inserted_at": "2025-07-02 08:22:58.000000 UTC",
+    "last_updated_at": "2025-07-02 08:22:58.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23834791",
+    "price": "170.5",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1574",
+    "inserted_at": "2025-07-02 08:23:59.000000 UTC",
+    "last_updated_at": "2025-07-02 08:23:59.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23834787",
+    "price": "170.5",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1574",
+    "inserted_at": "2025-07-02 08:23:59.000000 UTC",
+    "last_updated_at": "2025-07-02 08:23:59.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23835033",
+    "price": "68.25",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1578",
+    "inserted_at": "2025-07-02 08:24:28.000000 UTC",
+    "last_updated_at": "2025-07-02 08:24:28.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23835036",
+    "price": "68.25",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1578",
+    "inserted_at": "2025-07-02 08:24:28.000000 UTC",
+    "last_updated_at": "2025-07-02 08:24:28.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23834538",
+    "price": "138.67",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1578",
+    "inserted_at": "2025-07-02 08:23:28.000000 UTC",
+    "last_updated_at": "2025-07-02 08:23:28.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23834535",
+    "price": "92.45",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1578",
+    "inserted_at": "2025-07-02 08:23:28.000000 UTC",
+    "last_updated_at": "2025-07-02 08:23:28.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23944141",
+    "price": "159.2",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1578",
+    "inserted_at": "2025-07-03 00:21:59.000000 UTC",
+    "last_updated_at": "2025-07-03 00:21:59.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "23944142",
+    "price": "159.2",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1578",
+    "inserted_at": "2025-07-03 00:21:59.000000 UTC",
+    "last_updated_at": "2025-07-03 00:21:59.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "23944144",
+    "price": "184",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1578",
+    "inserted_at": "2025-07-03 00:21:59.000000 UTC",
+    "last_updated_at": "2025-07-03 00:21:59.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "23944139",
+    "price": "184",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1578",
+    "inserted_at": "2025-07-03 00:21:59.000000 UTC",
+    "last_updated_at": "2025-07-03 00:21:59.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "23823048",
+    "price": "240",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1579",
+    "inserted_at": "2025-07-02 07:36:36.000000 UTC",
+    "last_updated_at": "2025-07-02 07:36:36.000000 UTC",
+    "vehicle_class_id": "11",
+    "rk": "1"
+  },
+  {
+    "id": "23823049",
+    "price": "240",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1579",
+    "inserted_at": "2025-07-02 07:36:36.000000 UTC",
+    "last_updated_at": "2025-07-02 07:36:36.000000 UTC",
+    "vehicle_class_id": "11",
+    "rk": "1"
+  },
+  {
+    "id": "23767054",
+    "price": "74.69",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1600",
+    "inserted_at": "2025-07-02 00:23:28.000000 UTC",
+    "last_updated_at": "2025-07-02 00:23:28.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23767055",
+    "price": "74.69",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1600",
+    "inserted_at": "2025-07-02 00:23:28.000000 UTC",
+    "last_updated_at": "2025-07-02 00:23:28.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23767052",
+    "price": "89.33",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1600",
+    "inserted_at": "2025-07-02 00:23:28.000000 UTC",
+    "last_updated_at": "2025-07-02 00:23:28.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23767057",
+    "price": "89.33",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1600",
+    "inserted_at": "2025-07-02 00:23:28.000000 UTC",
+    "last_updated_at": "2025-07-02 00:23:28.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23767056",
+    "price": "84.94",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1600",
+    "inserted_at": "2025-07-02 00:23:28.000000 UTC",
+    "last_updated_at": "2025-07-02 00:23:28.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23767053",
+    "price": "84.94",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1600",
+    "inserted_at": "2025-07-02 00:23:28.000000 UTC",
+    "last_updated_at": "2025-07-02 00:23:28.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23900117",
+    "price": "60",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1606",
+    "inserted_at": "2025-07-02 16:42:59.000000 UTC",
+    "last_updated_at": "2025-07-02 16:42:59.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23900118",
+    "price": "60",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1606",
+    "inserted_at": "2025-07-02 16:42:59.000000 UTC",
+    "last_updated_at": "2025-07-02 16:42:59.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "19974523",
+    "price": "125.39",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1609",
+    "inserted_at": "2025-06-10 10:37:45.000000 UTC",
+    "last_updated_at": "2025-06-10 10:37:45.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "19974529",
+    "price": "125.39",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1609",
+    "inserted_at": "2025-06-10 10:37:45.000000 UTC",
+    "last_updated_at": "2025-06-10 10:37:45.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "19974524",
+    "price": "145.61",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1609",
+    "inserted_at": "2025-06-10 10:37:45.000000 UTC",
+    "last_updated_at": "2025-06-10 10:37:45.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "19974530",
+    "price": "145.61",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1609",
+    "inserted_at": "2025-06-10 10:37:45.000000 UTC",
+    "last_updated_at": "2025-06-10 10:37:45.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23736323",
+    "price": "58.69",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1886",
+    "inserted_at": "2025-07-01 17:36:29.000000 UTC",
+    "last_updated_at": "2025-07-01 17:36:29.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23736361",
+    "price": "58.69",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1886",
+    "inserted_at": "2025-07-01 17:36:29.000000 UTC",
+    "last_updated_at": "2025-07-01 17:36:29.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23736324",
+    "price": "107.53",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1886",
+    "inserted_at": "2025-07-01 17:36:29.000000 UTC",
+    "last_updated_at": "2025-07-01 17:36:29.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23736362",
+    "price": "107.53",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1886",
+    "inserted_at": "2025-07-01 17:36:29.000000 UTC",
+    "last_updated_at": "2025-07-01 17:36:29.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23736325",
+    "price": "59.28",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1886",
+    "inserted_at": "2025-07-01 17:36:29.000000 UTC",
+    "last_updated_at": "2025-07-01 17:36:29.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23736363",
+    "price": "59.28",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1886",
+    "inserted_at": "2025-07-01 17:36:29.000000 UTC",
+    "last_updated_at": "2025-07-01 17:36:29.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23736364",
+    "price": "58.98",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1886",
+    "inserted_at": "2025-07-01 17:36:29.000000 UTC",
+    "last_updated_at": "2025-07-01 17:36:29.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23736326",
+    "price": "58.98",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1886",
+    "inserted_at": "2025-07-01 17:36:29.000000 UTC",
+    "last_updated_at": "2025-07-01 17:36:29.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23736365",
+    "price": "148.5",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1886",
+    "inserted_at": "2025-07-01 17:36:29.000000 UTC",
+    "last_updated_at": "2025-07-01 17:36:29.000000 UTC",
+    "vehicle_class_id": "9",
+    "rk": "1"
+  },
+  {
+    "id": "23736327",
+    "price": "148.5",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1886",
+    "inserted_at": "2025-07-01 17:36:29.000000 UTC",
+    "last_updated_at": "2025-07-01 17:36:29.000000 UTC",
+    "vehicle_class_id": "9",
+    "rk": "1"
+  },
+  {
+    "id": "23736366",
+    "price": "148.5",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1886",
+    "inserted_at": "2025-07-01 17:36:29.000000 UTC",
+    "last_updated_at": "2025-07-01 17:36:29.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "23736328",
+    "price": "148.5",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1886",
+    "inserted_at": "2025-07-01 17:36:29.000000 UTC",
+    "last_updated_at": "2025-07-01 17:36:29.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "23736367",
+    "price": "330",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1886",
+    "inserted_at": "2025-07-01 17:36:29.000000 UTC",
+    "last_updated_at": "2025-07-01 17:36:29.000000 UTC",
+    "vehicle_class_id": "11",
+    "rk": "1"
+  },
+  {
+    "id": "23736329",
+    "price": "330",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1886",
+    "inserted_at": "2025-07-01 17:36:29.000000 UTC",
+    "last_updated_at": "2025-07-01 17:36:29.000000 UTC",
+    "vehicle_class_id": "11",
+    "rk": "1"
+  },
+  {
+    "id": "23736330",
+    "price": "132.97",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1886",
+    "inserted_at": "2025-07-01 17:36:29.000000 UTC",
+    "last_updated_at": "2025-07-01 17:36:29.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "23736368",
+    "price": "132.97",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1886",
+    "inserted_at": "2025-07-01 17:36:29.000000 UTC",
+    "last_updated_at": "2025-07-01 17:36:29.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "23736331",
+    "price": "77",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1896",
+    "inserted_at": "2025-07-01 17:36:29.000000 UTC",
+    "last_updated_at": "2025-07-01 17:36:29.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23736369",
+    "price": "77",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1896",
+    "inserted_at": "2025-07-01 17:36:29.000000 UTC",
+    "last_updated_at": "2025-07-01 17:36:29.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23736370",
+    "price": "154.03",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1896",
+    "inserted_at": "2025-07-01 17:36:29.000000 UTC",
+    "last_updated_at": "2025-07-01 17:36:29.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23736332",
+    "price": "154.03",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1896",
+    "inserted_at": "2025-07-01 17:36:29.000000 UTC",
+    "last_updated_at": "2025-07-01 17:36:29.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23736371",
+    "price": "89.98",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1896",
+    "inserted_at": "2025-07-01 17:36:29.000000 UTC",
+    "last_updated_at": "2025-07-01 17:36:29.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23736333",
+    "price": "89.98",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1896",
+    "inserted_at": "2025-07-01 17:36:29.000000 UTC",
+    "last_updated_at": "2025-07-01 17:36:29.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23736372",
+    "price": "82.5",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1896",
+    "inserted_at": "2025-07-01 17:36:29.000000 UTC",
+    "last_updated_at": "2025-07-01 17:36:29.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23736334",
+    "price": "82.5",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1896",
+    "inserted_at": "2025-07-01 17:36:29.000000 UTC",
+    "last_updated_at": "2025-07-01 17:36:29.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23736373",
+    "price": "187",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1896",
+    "inserted_at": "2025-07-01 17:36:29.000000 UTC",
+    "last_updated_at": "2025-07-01 17:36:29.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "23736335",
+    "price": "187",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1896",
+    "inserted_at": "2025-07-01 17:36:29.000000 UTC",
+    "last_updated_at": "2025-07-01 17:36:29.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "23736374",
+    "price": "459.4",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1896",
+    "inserted_at": "2025-07-01 17:36:29.000000 UTC",
+    "last_updated_at": "2025-07-01 17:36:29.000000 UTC",
+    "vehicle_class_id": "11",
+    "rk": "1"
+  },
+  {
+    "id": "23736336",
+    "price": "459.4",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1896",
+    "inserted_at": "2025-07-01 17:36:29.000000 UTC",
+    "last_updated_at": "2025-07-01 17:36:29.000000 UTC",
+    "vehicle_class_id": "11",
+    "rk": "1"
+  },
+  {
+    "id": "23736375",
+    "price": "77",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1897",
+    "inserted_at": "2025-07-01 17:36:29.000000 UTC",
+    "last_updated_at": "2025-07-01 17:36:29.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23736337",
+    "price": "77",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1897",
+    "inserted_at": "2025-07-01 17:36:29.000000 UTC",
+    "last_updated_at": "2025-07-01 17:36:29.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23736338",
+    "price": "154.03",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1897",
+    "inserted_at": "2025-07-01 17:36:29.000000 UTC",
+    "last_updated_at": "2025-07-01 17:36:29.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23736376",
+    "price": "154.03",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1897",
+    "inserted_at": "2025-07-01 17:36:29.000000 UTC",
+    "last_updated_at": "2025-07-01 17:36:29.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23736377",
+    "price": "89.98",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1897",
+    "inserted_at": "2025-07-01 17:36:29.000000 UTC",
+    "last_updated_at": "2025-07-01 17:36:29.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23736339",
+    "price": "89.98",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1897",
+    "inserted_at": "2025-07-01 17:36:29.000000 UTC",
+    "last_updated_at": "2025-07-01 17:36:29.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23736340",
+    "price": "82.5",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1897",
+    "inserted_at": "2025-07-01 17:36:29.000000 UTC",
+    "last_updated_at": "2025-07-01 17:36:29.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23736378",
+    "price": "82.5",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1897",
+    "inserted_at": "2025-07-01 17:36:29.000000 UTC",
+    "last_updated_at": "2025-07-01 17:36:29.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23736341",
+    "price": "179.46",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1897",
+    "inserted_at": "2025-07-01 17:36:29.000000 UTC",
+    "last_updated_at": "2025-07-01 17:36:29.000000 UTC",
+    "vehicle_class_id": "9",
+    "rk": "1"
+  },
+  {
+    "id": "23736379",
+    "price": "179.46",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1897",
+    "inserted_at": "2025-07-01 17:36:29.000000 UTC",
+    "last_updated_at": "2025-07-01 17:36:29.000000 UTC",
+    "vehicle_class_id": "9",
+    "rk": "1"
+  },
+  {
+    "id": "23736380",
+    "price": "187",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1897",
+    "inserted_at": "2025-07-01 17:36:29.000000 UTC",
+    "last_updated_at": "2025-07-01 17:36:29.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "23736342",
+    "price": "187",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1897",
+    "inserted_at": "2025-07-01 17:36:29.000000 UTC",
+    "last_updated_at": "2025-07-01 17:36:29.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "23736343",
+    "price": "528.76",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1897",
+    "inserted_at": "2025-07-01 17:36:29.000000 UTC",
+    "last_updated_at": "2025-07-01 17:36:29.000000 UTC",
+    "vehicle_class_id": "11",
+    "rk": "1"
+  },
+  {
+    "id": "23736381",
+    "price": "528.76",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1897",
+    "inserted_at": "2025-07-01 17:36:29.000000 UTC",
+    "last_updated_at": "2025-07-01 17:36:29.000000 UTC",
+    "vehicle_class_id": "11",
+    "rk": "1"
+  },
+  {
+    "id": "23736344",
+    "price": "163.67",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1897",
+    "inserted_at": "2025-07-01 17:36:29.000000 UTC",
+    "last_updated_at": "2025-07-01 17:36:29.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "23736382",
+    "price": "163.67",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1897",
+    "inserted_at": "2025-07-01 17:36:29.000000 UTC",
+    "last_updated_at": "2025-07-01 17:36:29.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "23887683",
+    "price": "15.98",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1940",
+    "inserted_at": "2025-07-02 16:23:28.000000 UTC",
+    "last_updated_at": "2025-07-02 16:23:28.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23887685",
+    "price": "15.98",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1940",
+    "inserted_at": "2025-07-02 16:23:28.000000 UTC",
+    "last_updated_at": "2025-07-02 16:23:28.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23862345",
+    "price": "88",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1940",
+    "inserted_at": "2025-07-02 12:23:58.000000 UTC",
+    "last_updated_at": "2025-07-02 12:23:58.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23862342",
+    "price": "88",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1940",
+    "inserted_at": "2025-07-02 12:23:58.000000 UTC",
+    "last_updated_at": "2025-07-02 12:23:58.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23887681",
+    "price": "36",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1940",
+    "inserted_at": "2025-07-02 16:23:28.000000 UTC",
+    "last_updated_at": "2025-07-02 16:23:28.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23887686",
+    "price": "36",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1940",
+    "inserted_at": "2025-07-02 16:23:28.000000 UTC",
+    "last_updated_at": "2025-07-02 16:23:28.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23887687",
+    "price": "55.88",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1940",
+    "inserted_at": "2025-07-02 16:23:28.000000 UTC",
+    "last_updated_at": "2025-07-02 16:23:28.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "23887682",
+    "price": "55.88",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1940",
+    "inserted_at": "2025-07-02 16:23:28.000000 UTC",
+    "last_updated_at": "2025-07-02 16:23:28.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "23887684",
+    "price": "18.62",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1940",
+    "inserted_at": "2025-07-02 16:23:28.000000 UTC",
+    "last_updated_at": "2025-07-02 16:23:28.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23887680",
+    "price": "18.62",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1940",
+    "inserted_at": "2025-07-02 16:23:28.000000 UTC",
+    "last_updated_at": "2025-07-02 16:23:28.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23788180",
+    "price": "14.5",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1941",
+    "inserted_at": "2025-07-02 04:25:57.000000 UTC",
+    "last_updated_at": "2025-07-02 04:25:57.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23788189",
+    "price": "14.5",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1941",
+    "inserted_at": "2025-07-02 04:25:57.000000 UTC",
+    "last_updated_at": "2025-07-02 04:25:57.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23679184",
+    "price": "88",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1941",
+    "inserted_at": "2025-07-01 08:27:28.000000 UTC",
+    "last_updated_at": "2025-07-01 08:27:28.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23679189",
+    "price": "88",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1941",
+    "inserted_at": "2025-07-01 08:27:28.000000 UTC",
+    "last_updated_at": "2025-07-01 08:27:28.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23788188",
+    "price": "36",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1941",
+    "inserted_at": "2025-07-02 04:25:57.000000 UTC",
+    "last_updated_at": "2025-07-02 04:25:57.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23788184",
+    "price": "36",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1941",
+    "inserted_at": "2025-07-02 04:25:57.000000 UTC",
+    "last_updated_at": "2025-07-02 04:25:57.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23788185",
+    "price": "55.78",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1941",
+    "inserted_at": "2025-07-02 04:25:57.000000 UTC",
+    "last_updated_at": "2025-07-02 04:25:57.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "23788181",
+    "price": "55.78",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1941",
+    "inserted_at": "2025-07-02 04:25:57.000000 UTC",
+    "last_updated_at": "2025-07-02 04:25:57.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "23788183",
+    "price": "18.58",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1941",
+    "inserted_at": "2025-07-02 04:25:57.000000 UTC",
+    "last_updated_at": "2025-07-02 04:25:57.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23788186",
+    "price": "18.58",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1941",
+    "inserted_at": "2025-07-02 04:25:57.000000 UTC",
+    "last_updated_at": "2025-07-02 04:25:57.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23766451",
+    "price": "18.14",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1942",
+    "inserted_at": "2025-07-02 00:22:28.000000 UTC",
+    "last_updated_at": "2025-07-02 00:22:28.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23766452",
+    "price": "18.14",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1942",
+    "inserted_at": "2025-07-02 00:22:28.000000 UTC",
+    "last_updated_at": "2025-07-02 00:22:28.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23767048",
+    "price": "88",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1942",
+    "inserted_at": "2025-07-02 00:23:28.000000 UTC",
+    "last_updated_at": "2025-07-02 00:23:28.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23767050",
+    "price": "88",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1942",
+    "inserted_at": "2025-07-02 00:23:28.000000 UTC",
+    "last_updated_at": "2025-07-02 00:23:28.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23766454",
+    "price": "39",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1942",
+    "inserted_at": "2025-07-02 00:22:28.000000 UTC",
+    "last_updated_at": "2025-07-02 00:22:28.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23766448",
+    "price": "39",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1942",
+    "inserted_at": "2025-07-02 00:22:28.000000 UTC",
+    "last_updated_at": "2025-07-02 00:22:28.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23766456",
+    "price": "59.67",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1942",
+    "inserted_at": "2025-07-02 00:22:28.000000 UTC",
+    "last_updated_at": "2025-07-02 00:22:28.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "23766450",
+    "price": "59.67",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1942",
+    "inserted_at": "2025-07-02 00:22:28.000000 UTC",
+    "last_updated_at": "2025-07-02 00:22:28.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "23766457",
+    "price": "21.99",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1942",
+    "inserted_at": "2025-07-02 00:22:28.000000 UTC",
+    "last_updated_at": "2025-07-02 00:22:28.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23766447",
+    "price": "21.99",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1942",
+    "inserted_at": "2025-07-02 00:22:28.000000 UTC",
+    "last_updated_at": "2025-07-02 00:22:28.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23768987",
+    "price": "18.14",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1943",
+    "inserted_at": "2025-07-02 00:26:58.000000 UTC",
+    "last_updated_at": "2025-07-02 00:26:58.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23768982",
+    "price": "18.14",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1943",
+    "inserted_at": "2025-07-02 00:26:58.000000 UTC",
+    "last_updated_at": "2025-07-02 00:26:58.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23769552",
+    "price": "88",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1943",
+    "inserted_at": "2025-07-02 00:27:58.000000 UTC",
+    "last_updated_at": "2025-07-02 00:27:58.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23769550",
+    "price": "88",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1943",
+    "inserted_at": "2025-07-02 00:27:58.000000 UTC",
+    "last_updated_at": "2025-07-02 00:27:58.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23768984",
+    "price": "39",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1943",
+    "inserted_at": "2025-07-02 00:26:58.000000 UTC",
+    "last_updated_at": "2025-07-02 00:26:58.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23768988",
+    "price": "39",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1943",
+    "inserted_at": "2025-07-02 00:26:58.000000 UTC",
+    "last_updated_at": "2025-07-02 00:26:58.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23717478",
+    "price": "54.18",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1943",
+    "inserted_at": "2025-07-01 16:26:28.000000 UTC",
+    "last_updated_at": "2025-07-01 16:26:28.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "23717457",
+    "price": "54.72",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1943",
+    "inserted_at": "2025-07-01 16:26:28.000000 UTC",
+    "last_updated_at": "2025-07-01 16:26:28.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "23717481",
+    "price": "21.99",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1943",
+    "inserted_at": "2025-07-01 16:26:28.000000 UTC",
+    "last_updated_at": "2025-07-01 16:26:28.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23717456",
+    "price": "23.58",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1943",
+    "inserted_at": "2025-07-01 16:26:28.000000 UTC",
+    "last_updated_at": "2025-07-01 16:26:28.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23835020",
+    "price": "600",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1946",
+    "inserted_at": "2025-07-02 08:24:28.000000 UTC",
+    "last_updated_at": "2025-07-02 08:24:28.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23835015",
+    "price": "600",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1946",
+    "inserted_at": "2025-07-02 08:24:28.000000 UTC",
+    "last_updated_at": "2025-07-02 08:24:28.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23835027",
+    "price": "600",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1946",
+    "inserted_at": "2025-07-02 08:24:28.000000 UTC",
+    "last_updated_at": "2025-07-02 08:24:28.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23835021",
+    "price": "50",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1946",
+    "inserted_at": "2025-07-02 08:24:28.000000 UTC",
+    "last_updated_at": "2025-07-02 08:24:28.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "23835017",
+    "price": "50",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1946",
+    "inserted_at": "2025-07-02 08:24:28.000000 UTC",
+    "last_updated_at": "2025-07-02 08:24:28.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "23835029",
+    "price": "50",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1946",
+    "inserted_at": "2025-07-02 08:24:28.000000 UTC",
+    "last_updated_at": "2025-07-02 08:24:28.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "23835031",
+    "price": "660",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1946",
+    "inserted_at": "2025-07-02 08:24:28.000000 UTC",
+    "last_updated_at": "2025-07-02 08:24:28.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "23835019",
+    "price": "660",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1946",
+    "inserted_at": "2025-07-02 08:24:28.000000 UTC",
+    "last_updated_at": "2025-07-02 08:24:28.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "23835024",
+    "price": "660",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1946",
+    "inserted_at": "2025-07-02 08:24:28.000000 UTC",
+    "last_updated_at": "2025-07-02 08:24:28.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "23968017",
+    "price": "49.25",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1947",
+    "inserted_at": "2025-07-03 04:21:28.000000 UTC",
+    "last_updated_at": "2025-07-03 04:21:28.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23968011",
+    "price": "49.25",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1947",
+    "inserted_at": "2025-07-03 04:21:28.000000 UTC",
+    "last_updated_at": "2025-07-03 04:21:28.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23968020",
+    "price": "600",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1947",
+    "inserted_at": "2025-07-03 04:21:28.000000 UTC",
+    "last_updated_at": "2025-07-03 04:21:28.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23968016",
+    "price": "600",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1947",
+    "inserted_at": "2025-07-03 04:21:28.000000 UTC",
+    "last_updated_at": "2025-07-03 04:21:28.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23968012",
+    "price": "49.75",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1947",
+    "inserted_at": "2025-07-03 04:21:28.000000 UTC",
+    "last_updated_at": "2025-07-03 04:21:28.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23968021",
+    "price": "49.75",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1947",
+    "inserted_at": "2025-07-03 04:21:28.000000 UTC",
+    "last_updated_at": "2025-07-03 04:21:28.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23968022",
+    "price": "656.7",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1947",
+    "inserted_at": "2025-07-03 04:21:28.000000 UTC",
+    "last_updated_at": "2025-07-03 04:21:28.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "23968015",
+    "price": "656.7",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1947",
+    "inserted_at": "2025-07-03 04:21:28.000000 UTC",
+    "last_updated_at": "2025-07-03 04:21:28.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "23968018",
+    "price": "50",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1947",
+    "inserted_at": "2025-07-03 04:21:28.000000 UTC",
+    "last_updated_at": "2025-07-03 04:21:28.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "23968014",
+    "price": "50",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1947",
+    "inserted_at": "2025-07-03 04:21:28.000000 UTC",
+    "last_updated_at": "2025-07-03 04:21:28.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "23968013",
+    "price": "49.5",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1947",
+    "inserted_at": "2025-07-03 04:21:28.000000 UTC",
+    "last_updated_at": "2025-07-03 04:21:28.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23968019",
+    "price": "49.5",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1947",
+    "inserted_at": "2025-07-03 04:21:28.000000 UTC",
+    "last_updated_at": "2025-07-03 04:21:28.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23678228",
+    "price": "33",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1952",
+    "inserted_at": "2025-07-01 08:25:58.000000 UTC",
+    "last_updated_at": "2025-07-01 08:25:58.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23678232",
+    "price": "33",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1952",
+    "inserted_at": "2025-07-01 08:25:58.000000 UTC",
+    "last_updated_at": "2025-07-01 08:25:58.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23678229",
+    "price": "55",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1952",
+    "inserted_at": "2025-07-01 08:25:58.000000 UTC",
+    "last_updated_at": "2025-07-01 08:25:58.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23678233",
+    "price": "55",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1952",
+    "inserted_at": "2025-07-01 08:25:58.000000 UTC",
+    "last_updated_at": "2025-07-01 08:25:58.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23678227",
+    "price": "44",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1952",
+    "inserted_at": "2025-07-01 08:25:58.000000 UTC",
+    "last_updated_at": "2025-07-01 08:25:58.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23678231",
+    "price": "44",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1952",
+    "inserted_at": "2025-07-01 08:25:58.000000 UTC",
+    "last_updated_at": "2025-07-01 08:25:58.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23751285",
+    "price": "16.54",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1955",
+    "inserted_at": "2025-07-01 20:21:58.000000 UTC",
+    "last_updated_at": "2025-07-01 20:21:58.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23751289",
+    "price": "16.54",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1955",
+    "inserted_at": "2025-07-01 20:21:58.000000 UTC",
+    "last_updated_at": "2025-07-01 20:21:58.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23787422",
+    "price": "172.5",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1955",
+    "inserted_at": "2025-07-02 04:24:28.000000 UTC",
+    "last_updated_at": "2025-07-02 04:24:28.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23787424",
+    "price": "172.5",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1955",
+    "inserted_at": "2025-07-02 04:24:28.000000 UTC",
+    "last_updated_at": "2025-07-02 04:24:28.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23751290",
+    "price": "26.18",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1955",
+    "inserted_at": "2025-07-01 20:21:58.000000 UTC",
+    "last_updated_at": "2025-07-01 20:21:58.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23751284",
+    "price": "26.18",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1955",
+    "inserted_at": "2025-07-01 20:21:58.000000 UTC",
+    "last_updated_at": "2025-07-01 20:21:58.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23787425",
+    "price": "38.5",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1955",
+    "inserted_at": "2025-07-02 04:24:28.000000 UTC",
+    "last_updated_at": "2025-07-02 04:24:28.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "23787421",
+    "price": "38.5",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1955",
+    "inserted_at": "2025-07-02 04:24:28.000000 UTC",
+    "last_updated_at": "2025-07-02 04:24:28.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "23751283",
+    "price": "18.53",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1955",
+    "inserted_at": "2025-07-01 20:21:58.000000 UTC",
+    "last_updated_at": "2025-07-01 20:21:58.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23751293",
+    "price": "18.53",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1955",
+    "inserted_at": "2025-07-01 20:21:58.000000 UTC",
+    "last_updated_at": "2025-07-01 20:21:58.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23787420",
+    "price": "172.5",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1955",
+    "inserted_at": "2025-07-02 04:24:28.000000 UTC",
+    "last_updated_at": "2025-07-02 04:24:28.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "23787426",
+    "price": "172.5",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1955",
+    "inserted_at": "2025-07-02 04:24:28.000000 UTC",
+    "last_updated_at": "2025-07-02 04:24:28.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "24004490",
+    "price": "115",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1957",
+    "inserted_at": "2025-07-03 08:22:58.000000 UTC",
+    "last_updated_at": "2025-07-03 08:22:58.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "24004496",
+    "price": "115",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1957",
+    "inserted_at": "2025-07-03 08:22:58.000000 UTC",
+    "last_updated_at": "2025-07-03 08:22:58.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "24004491",
+    "price": "40.25",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1957",
+    "inserted_at": "2025-07-03 08:22:58.000000 UTC",
+    "last_updated_at": "2025-07-03 08:22:58.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "24004497",
+    "price": "40.25",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1957",
+    "inserted_at": "2025-07-03 08:22:58.000000 UTC",
+    "last_updated_at": "2025-07-03 08:22:58.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "23642369",
+    "price": "51.5",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1970",
+    "inserted_at": "2025-07-01 04:22:58.000000 UTC",
+    "last_updated_at": "2025-07-01 04:22:58.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23642363",
+    "price": "51.5",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1970",
+    "inserted_at": "2025-07-01 04:22:58.000000 UTC",
+    "last_updated_at": "2025-07-01 04:22:58.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23676135",
+    "price": "60.04",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1970",
+    "inserted_at": "2025-07-01 08:22:15.000000 UTC",
+    "last_updated_at": "2025-07-01 08:22:15.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23676131",
+    "price": "60.04",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1970",
+    "inserted_at": "2025-07-01 08:22:15.000000 UTC",
+    "last_updated_at": "2025-07-01 08:22:15.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23642368",
+    "price": "65.37",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1970",
+    "inserted_at": "2025-07-01 04:22:58.000000 UTC",
+    "last_updated_at": "2025-07-01 04:22:58.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23642362",
+    "price": "65.37",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1970",
+    "inserted_at": "2025-07-01 04:22:58.000000 UTC",
+    "last_updated_at": "2025-07-01 04:22:58.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23970352",
+    "price": "54.48",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1972",
+    "inserted_at": "2025-07-03 04:25:28.000000 UTC",
+    "last_updated_at": "2025-07-03 04:25:28.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23970360",
+    "price": "54.48",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1972",
+    "inserted_at": "2025-07-03 04:25:28.000000 UTC",
+    "last_updated_at": "2025-07-03 04:25:28.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23970351",
+    "price": "77.99",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1972",
+    "inserted_at": "2025-07-03 04:25:28.000000 UTC",
+    "last_updated_at": "2025-07-03 04:25:28.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23970357",
+    "price": "77.99",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1972",
+    "inserted_at": "2025-07-03 04:25:28.000000 UTC",
+    "last_updated_at": "2025-07-03 04:25:28.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23970354",
+    "price": "116.5",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1972",
+    "inserted_at": "2025-07-03 04:25:28.000000 UTC",
+    "last_updated_at": "2025-07-03 04:25:28.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23970358",
+    "price": "116.5",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1972",
+    "inserted_at": "2025-07-03 04:25:28.000000 UTC",
+    "last_updated_at": "2025-07-03 04:25:28.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23970355",
+    "price": "55.12",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1972",
+    "inserted_at": "2025-07-03 04:25:28.000000 UTC",
+    "last_updated_at": "2025-07-03 04:25:28.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23970359",
+    "price": "55.12",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1972",
+    "inserted_at": "2025-07-03 04:25:28.000000 UTC",
+    "last_updated_at": "2025-07-03 04:25:28.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23945379",
+    "price": "52.5",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1973",
+    "inserted_at": "2025-07-03 00:24:28.000000 UTC",
+    "last_updated_at": "2025-07-03 00:24:28.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23945376",
+    "price": "52.5",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1973",
+    "inserted_at": "2025-07-03 00:24:28.000000 UTC",
+    "last_updated_at": "2025-07-03 00:24:28.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "24004893",
+    "price": "117.14",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1973",
+    "inserted_at": "2025-07-03 08:23:29.000000 UTC",
+    "last_updated_at": "2025-07-03 08:23:29.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "24004901",
+    "price": "78.09",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1973",
+    "inserted_at": "2025-07-03 08:23:29.000000 UTC",
+    "last_updated_at": "2025-07-03 08:23:29.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23945380",
+    "price": "116.5",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1973",
+    "inserted_at": "2025-07-03 00:24:28.000000 UTC",
+    "last_updated_at": "2025-07-03 00:24:28.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23945372",
+    "price": "109.75",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1973",
+    "inserted_at": "2025-07-03 00:24:28.000000 UTC",
+    "last_updated_at": "2025-07-03 00:24:28.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23945381",
+    "price": "55.65",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1973",
+    "inserted_at": "2025-07-03 00:24:28.000000 UTC",
+    "last_updated_at": "2025-07-03 00:24:28.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23945375",
+    "price": "55.65",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1973",
+    "inserted_at": "2025-07-03 00:24:28.000000 UTC",
+    "last_updated_at": "2025-07-03 00:24:28.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23786295",
+    "price": "66.95",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1974",
+    "inserted_at": "2025-07-02 04:22:28.000000 UTC",
+    "last_updated_at": "2025-07-02 04:22:28.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23786299",
+    "price": "66.95",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1974",
+    "inserted_at": "2025-07-02 04:22:28.000000 UTC",
+    "last_updated_at": "2025-07-02 04:22:28.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23786294",
+    "price": "77.25",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1974",
+    "inserted_at": "2025-07-02 04:22:28.000000 UTC",
+    "last_updated_at": "2025-07-02 04:22:28.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23786301",
+    "price": "77.25",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1974",
+    "inserted_at": "2025-07-02 04:22:28.000000 UTC",
+    "last_updated_at": "2025-07-02 04:22:28.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23785806",
+    "price": "104.94",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1974",
+    "inserted_at": "2025-07-02 04:21:30.000000 UTC",
+    "last_updated_at": "2025-07-02 04:21:30.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23785809",
+    "price": "104.94",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1974",
+    "inserted_at": "2025-07-02 04:21:30.000000 UTC",
+    "last_updated_at": "2025-07-02 04:21:30.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23786300",
+    "price": "72.1",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1974",
+    "inserted_at": "2025-07-02 04:22:28.000000 UTC",
+    "last_updated_at": "2025-07-02 04:22:28.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23786296",
+    "price": "72.1",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1974",
+    "inserted_at": "2025-07-02 04:22:28.000000 UTC",
+    "last_updated_at": "2025-07-02 04:22:28.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23786614",
+    "price": "77.25",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1975",
+    "inserted_at": "2025-07-02 04:22:59.000000 UTC",
+    "last_updated_at": "2025-07-02 04:22:59.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23786605",
+    "price": "77.25",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1975",
+    "inserted_at": "2025-07-02 04:22:59.000000 UTC",
+    "last_updated_at": "2025-07-02 04:22:59.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23786613",
+    "price": "66.95",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1975",
+    "inserted_at": "2025-07-02 04:22:59.000000 UTC",
+    "last_updated_at": "2025-07-02 04:22:59.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23786604",
+    "price": "66.95",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "1975",
+    "inserted_at": "2025-07-02 04:22:59.000000 UTC",
+    "last_updated_at": "2025-07-02 04:22:59.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "9209934",
+    "price": "104.93",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2062",
+    "inserted_at": "2025-04-08 16:42:51.000000 UTC",
+    "last_updated_at": "2025-04-08 16:42:51.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "9209931",
+    "price": "104.93",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2062",
+    "inserted_at": "2025-04-08 16:42:51.000000 UTC",
+    "last_updated_at": "2025-04-08 16:42:51.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "23736281",
+    "price": "51",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2064",
+    "inserted_at": "2025-07-01 17:36:28.000000 UTC",
+    "last_updated_at": "2025-07-01 17:36:28.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23736257",
+    "price": "51",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2064",
+    "inserted_at": "2025-07-01 17:36:28.000000 UTC",
+    "last_updated_at": "2025-07-01 17:36:28.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23736282",
+    "price": "118.93",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2064",
+    "inserted_at": "2025-07-01 17:36:28.000000 UTC",
+    "last_updated_at": "2025-07-01 17:36:28.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23736258",
+    "price": "118.93",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2064",
+    "inserted_at": "2025-07-01 17:36:28.000000 UTC",
+    "last_updated_at": "2025-07-01 17:36:28.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23736259",
+    "price": "57.53",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2064",
+    "inserted_at": "2025-07-01 17:36:28.000000 UTC",
+    "last_updated_at": "2025-07-01 17:36:28.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23736283",
+    "price": "57.53",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2064",
+    "inserted_at": "2025-07-01 17:36:28.000000 UTC",
+    "last_updated_at": "2025-07-01 17:36:28.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23736260",
+    "price": "78.75",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2064",
+    "inserted_at": "2025-07-01 17:36:28.000000 UTC",
+    "last_updated_at": "2025-07-01 17:36:28.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "23736284",
+    "price": "78.75",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2064",
+    "inserted_at": "2025-07-01 17:36:28.000000 UTC",
+    "last_updated_at": "2025-07-01 17:36:28.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "23736261",
+    "price": "287.5",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2064",
+    "inserted_at": "2025-07-01 17:36:28.000000 UTC",
+    "last_updated_at": "2025-07-01 17:36:28.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "23736285",
+    "price": "287.5",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2064",
+    "inserted_at": "2025-07-01 17:36:28.000000 UTC",
+    "last_updated_at": "2025-07-01 17:36:28.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "23736262",
+    "price": "54.06",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2064",
+    "inserted_at": "2025-07-01 17:36:28.000000 UTC",
+    "last_updated_at": "2025-07-01 17:36:28.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23736286",
+    "price": "54.06",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2064",
+    "inserted_at": "2025-07-01 17:36:28.000000 UTC",
+    "last_updated_at": "2025-07-01 17:36:28.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23736263",
+    "price": "385.42",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2064",
+    "inserted_at": "2025-07-01 17:36:28.000000 UTC",
+    "last_updated_at": "2025-07-01 17:36:28.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "23736287",
+    "price": "385.42",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2064",
+    "inserted_at": "2025-07-01 17:36:28.000000 UTC",
+    "last_updated_at": "2025-07-01 17:36:28.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "23736288",
+    "price": "387.36",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2064",
+    "inserted_at": "2025-07-01 17:36:28.000000 UTC",
+    "last_updated_at": "2025-07-01 17:36:28.000000 UTC",
+    "vehicle_class_id": "11",
+    "rk": "1"
+  },
+  {
+    "id": "23736264",
+    "price": "387.36",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2064",
+    "inserted_at": "2025-07-01 17:36:28.000000 UTC",
+    "last_updated_at": "2025-07-01 17:36:28.000000 UTC",
+    "vehicle_class_id": "11",
+    "rk": "1"
+  },
+  {
+    "id": "23736289",
+    "price": "51",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2065",
+    "inserted_at": "2025-07-01 17:36:28.000000 UTC",
+    "last_updated_at": "2025-07-01 17:36:28.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23736265",
+    "price": "51",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2065",
+    "inserted_at": "2025-07-01 17:36:28.000000 UTC",
+    "last_updated_at": "2025-07-01 17:36:28.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23736290",
+    "price": "117.18",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2065",
+    "inserted_at": "2025-07-01 17:36:28.000000 UTC",
+    "last_updated_at": "2025-07-01 17:36:28.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23736266",
+    "price": "117.18",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2065",
+    "inserted_at": "2025-07-01 17:36:28.000000 UTC",
+    "last_updated_at": "2025-07-01 17:36:28.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23736291",
+    "price": "57.53",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2065",
+    "inserted_at": "2025-07-01 17:36:28.000000 UTC",
+    "last_updated_at": "2025-07-01 17:36:28.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23736267",
+    "price": "57.53",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2065",
+    "inserted_at": "2025-07-01 17:36:28.000000 UTC",
+    "last_updated_at": "2025-07-01 17:36:28.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23736268",
+    "price": "75.08",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2065",
+    "inserted_at": "2025-07-01 17:36:28.000000 UTC",
+    "last_updated_at": "2025-07-01 17:36:28.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "23736292",
+    "price": "75.08",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2065",
+    "inserted_at": "2025-07-01 17:36:28.000000 UTC",
+    "last_updated_at": "2025-07-01 17:36:28.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "23736293",
+    "price": "287.5",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2065",
+    "inserted_at": "2025-07-01 17:36:28.000000 UTC",
+    "last_updated_at": "2025-07-01 17:36:28.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "23736269",
+    "price": "287.5",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2065",
+    "inserted_at": "2025-07-01 17:36:28.000000 UTC",
+    "last_updated_at": "2025-07-01 17:36:28.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "23736294",
+    "price": "54.06",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2065",
+    "inserted_at": "2025-07-01 17:36:28.000000 UTC",
+    "last_updated_at": "2025-07-01 17:36:28.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23736270",
+    "price": "54.06",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2065",
+    "inserted_at": "2025-07-01 17:36:28.000000 UTC",
+    "last_updated_at": "2025-07-01 17:36:28.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23736295",
+    "price": "379.5",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2065",
+    "inserted_at": "2025-07-01 17:36:28.000000 UTC",
+    "last_updated_at": "2025-07-01 17:36:28.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "23736271",
+    "price": "379.5",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2065",
+    "inserted_at": "2025-07-01 17:36:28.000000 UTC",
+    "last_updated_at": "2025-07-01 17:36:28.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "23736296",
+    "price": "379.5",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2065",
+    "inserted_at": "2025-07-01 17:36:28.000000 UTC",
+    "last_updated_at": "2025-07-01 17:36:28.000000 UTC",
+    "vehicle_class_id": "11",
+    "rk": "1"
+  },
+  {
+    "id": "23736272",
+    "price": "379.5",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2065",
+    "inserted_at": "2025-07-01 17:36:28.000000 UTC",
+    "last_updated_at": "2025-07-01 17:36:28.000000 UTC",
+    "vehicle_class_id": "11",
+    "rk": "1"
+  },
+  {
+    "id": "24053958",
+    "price": "52.5",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2067",
+    "inserted_at": "2025-07-03 17:33:28.000000 UTC",
+    "last_updated_at": "2025-07-03 17:33:28.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "24053950",
+    "price": "52.5",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2067",
+    "inserted_at": "2025-07-03 17:33:28.000000 UTC",
+    "last_updated_at": "2025-07-03 17:33:28.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "24053959",
+    "price": "105.77",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2067",
+    "inserted_at": "2025-07-03 17:33:28.000000 UTC",
+    "last_updated_at": "2025-07-03 17:33:28.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "24053951",
+    "price": "105.77",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2067",
+    "inserted_at": "2025-07-03 17:33:28.000000 UTC",
+    "last_updated_at": "2025-07-03 17:33:28.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "24053952",
+    "price": "74.69",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2067",
+    "inserted_at": "2025-07-03 17:33:28.000000 UTC",
+    "last_updated_at": "2025-07-03 17:33:28.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "24053960",
+    "price": "74.69",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2067",
+    "inserted_at": "2025-07-03 17:33:28.000000 UTC",
+    "last_updated_at": "2025-07-03 17:33:28.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "24053953",
+    "price": "75.07",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2067",
+    "inserted_at": "2025-07-03 17:33:28.000000 UTC",
+    "last_updated_at": "2025-07-03 17:33:28.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "24053961",
+    "price": "75.07",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2067",
+    "inserted_at": "2025-07-03 17:33:28.000000 UTC",
+    "last_updated_at": "2025-07-03 17:33:28.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "24053962",
+    "price": "287.5",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2067",
+    "inserted_at": "2025-07-03 17:33:28.000000 UTC",
+    "last_updated_at": "2025-07-03 17:33:28.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "24053954",
+    "price": "287.5",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2067",
+    "inserted_at": "2025-07-03 17:33:28.000000 UTC",
+    "last_updated_at": "2025-07-03 17:33:28.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "24053955",
+    "price": "65.42",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2067",
+    "inserted_at": "2025-07-03 17:33:28.000000 UTC",
+    "last_updated_at": "2025-07-03 17:33:28.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "24053963",
+    "price": "65.42",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2067",
+    "inserted_at": "2025-07-03 17:33:28.000000 UTC",
+    "last_updated_at": "2025-07-03 17:33:28.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "24053956",
+    "price": "371.45",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2067",
+    "inserted_at": "2025-07-03 17:33:28.000000 UTC",
+    "last_updated_at": "2025-07-03 17:33:28.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "24053964",
+    "price": "371.45",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2067",
+    "inserted_at": "2025-07-03 17:33:28.000000 UTC",
+    "last_updated_at": "2025-07-03 17:33:28.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "24053965",
+    "price": "373.32",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2067",
+    "inserted_at": "2025-07-03 17:33:28.000000 UTC",
+    "last_updated_at": "2025-07-03 17:33:28.000000 UTC",
+    "vehicle_class_id": "11",
+    "rk": "1"
+  },
+  {
+    "id": "24053957",
+    "price": "373.32",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2067",
+    "inserted_at": "2025-07-03 17:33:28.000000 UTC",
+    "last_updated_at": "2025-07-03 17:33:28.000000 UTC",
+    "vehicle_class_id": "11",
+    "rk": "1"
+  },
+  {
+    "id": "23736273",
+    "price": "51.39",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2068",
+    "inserted_at": "2025-07-01 17:36:28.000000 UTC",
+    "last_updated_at": "2025-07-01 17:36:28.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23736297",
+    "price": "51.39",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2068",
+    "inserted_at": "2025-07-01 17:36:28.000000 UTC",
+    "last_updated_at": "2025-07-01 17:36:28.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23736298",
+    "price": "85.6",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2068",
+    "inserted_at": "2025-07-01 17:36:28.000000 UTC",
+    "last_updated_at": "2025-07-01 17:36:28.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23736274",
+    "price": "85.6",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2068",
+    "inserted_at": "2025-07-01 17:36:28.000000 UTC",
+    "last_updated_at": "2025-07-01 17:36:28.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23736299",
+    "price": "74.2",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2068",
+    "inserted_at": "2025-07-01 17:36:28.000000 UTC",
+    "last_updated_at": "2025-07-01 17:36:28.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23736275",
+    "price": "74.2",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2068",
+    "inserted_at": "2025-07-01 17:36:28.000000 UTC",
+    "last_updated_at": "2025-07-01 17:36:28.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23736300",
+    "price": "95.25",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2068",
+    "inserted_at": "2025-07-01 17:36:28.000000 UTC",
+    "last_updated_at": "2025-07-01 17:36:28.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "23736276",
+    "price": "95.25",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2068",
+    "inserted_at": "2025-07-01 17:36:28.000000 UTC",
+    "last_updated_at": "2025-07-01 17:36:28.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "23736277",
+    "price": "287.5",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2068",
+    "inserted_at": "2025-07-01 17:36:28.000000 UTC",
+    "last_updated_at": "2025-07-01 17:36:28.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "23736301",
+    "price": "287.5",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2068",
+    "inserted_at": "2025-07-01 17:36:28.000000 UTC",
+    "last_updated_at": "2025-07-01 17:36:28.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "23736278",
+    "price": "61.92",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2068",
+    "inserted_at": "2025-07-01 17:36:28.000000 UTC",
+    "last_updated_at": "2025-07-01 17:36:28.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23736302",
+    "price": "61.92",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2068",
+    "inserted_at": "2025-07-01 17:36:28.000000 UTC",
+    "last_updated_at": "2025-07-01 17:36:28.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23736303",
+    "price": "379.5",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2068",
+    "inserted_at": "2025-07-01 17:36:28.000000 UTC",
+    "last_updated_at": "2025-07-01 17:36:28.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "23736279",
+    "price": "379.5",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2068",
+    "inserted_at": "2025-07-01 17:36:28.000000 UTC",
+    "last_updated_at": "2025-07-01 17:36:28.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "23736280",
+    "price": "379.5",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2068",
+    "inserted_at": "2025-07-01 17:36:28.000000 UTC",
+    "last_updated_at": "2025-07-01 17:36:28.000000 UTC",
+    "vehicle_class_id": "11",
+    "rk": "1"
+  },
+  {
+    "id": "23736304",
+    "price": "379.5",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2068",
+    "inserted_at": "2025-07-01 17:36:28.000000 UTC",
+    "last_updated_at": "2025-07-01 17:36:28.000000 UTC",
+    "vehicle_class_id": "11",
+    "rk": "1"
+  },
+  {
+    "id": "8918134",
+    "price": "47.52",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2086",
+    "inserted_at": "2025-04-06 04:40:41.000000 UTC",
+    "last_updated_at": "2025-04-06 04:40:41.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "8918126",
+    "price": "46.71",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2086",
+    "inserted_at": "2025-04-06 04:40:41.000000 UTC",
+    "last_updated_at": "2025-04-06 04:40:41.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23737427",
+    "price": "122.44",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2147",
+    "inserted_at": "2025-07-01 17:41:58.000000 UTC",
+    "last_updated_at": "2025-07-01 17:41:58.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23737420",
+    "price": "122.44",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2147",
+    "inserted_at": "2025-07-01 17:41:58.000000 UTC",
+    "last_updated_at": "2025-07-01 17:41:58.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23737428",
+    "price": "247.88",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2147",
+    "inserted_at": "2025-07-01 17:41:58.000000 UTC",
+    "last_updated_at": "2025-07-01 17:41:58.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23737421",
+    "price": "247.88",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2147",
+    "inserted_at": "2025-07-01 17:41:58.000000 UTC",
+    "last_updated_at": "2025-07-01 17:41:58.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23737429",
+    "price": "146.13",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2147",
+    "inserted_at": "2025-07-01 17:41:58.000000 UTC",
+    "last_updated_at": "2025-07-01 17:41:58.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23737422",
+    "price": "146.13",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2147",
+    "inserted_at": "2025-07-01 17:41:58.000000 UTC",
+    "last_updated_at": "2025-07-01 17:41:58.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23737423",
+    "price": "190.66",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2147",
+    "inserted_at": "2025-07-01 17:41:58.000000 UTC",
+    "last_updated_at": "2025-07-01 17:41:58.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "23737430",
+    "price": "190.66",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2147",
+    "inserted_at": "2025-07-01 17:41:58.000000 UTC",
+    "last_updated_at": "2025-07-01 17:41:58.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "23737424",
+    "price": "175.95",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2147",
+    "inserted_at": "2025-07-01 17:41:58.000000 UTC",
+    "last_updated_at": "2025-07-01 17:41:58.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "23737431",
+    "price": "175.95",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2147",
+    "inserted_at": "2025-07-01 17:41:58.000000 UTC",
+    "last_updated_at": "2025-07-01 17:41:58.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "23737425",
+    "price": "130.34",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2147",
+    "inserted_at": "2025-07-01 17:41:58.000000 UTC",
+    "last_updated_at": "2025-07-01 17:41:58.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23737432",
+    "price": "130.34",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2147",
+    "inserted_at": "2025-07-01 17:41:58.000000 UTC",
+    "last_updated_at": "2025-07-01 17:41:58.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23737426",
+    "price": "610.16",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2147",
+    "inserted_at": "2025-07-01 17:41:58.000000 UTC",
+    "last_updated_at": "2025-07-01 17:41:58.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "23737433",
+    "price": "610.16",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2147",
+    "inserted_at": "2025-07-01 17:41:58.000000 UTC",
+    "last_updated_at": "2025-07-01 17:41:58.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "23737516",
+    "price": "92.16",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2183",
+    "inserted_at": "2025-07-01 17:41:58.000000 UTC",
+    "last_updated_at": "2025-07-01 17:41:58.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23737525",
+    "price": "92.16",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2183",
+    "inserted_at": "2025-07-01 17:41:58.000000 UTC",
+    "last_updated_at": "2025-07-01 17:41:58.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23737517",
+    "price": "92.62",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2183",
+    "inserted_at": "2025-07-01 17:41:58.000000 UTC",
+    "last_updated_at": "2025-07-01 17:41:58.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23737526",
+    "price": "92.62",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2183",
+    "inserted_at": "2025-07-01 17:41:58.000000 UTC",
+    "last_updated_at": "2025-07-01 17:41:58.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23737518",
+    "price": "120.69",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2183",
+    "inserted_at": "2025-07-01 17:41:58.000000 UTC",
+    "last_updated_at": "2025-07-01 17:41:58.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23737527",
+    "price": "120.69",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2183",
+    "inserted_at": "2025-07-01 17:41:58.000000 UTC",
+    "last_updated_at": "2025-07-01 17:41:58.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23737528",
+    "price": "127.07",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2183",
+    "inserted_at": "2025-07-01 17:41:58.000000 UTC",
+    "last_updated_at": "2025-07-01 17:41:58.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "23737519",
+    "price": "127.07",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2183",
+    "inserted_at": "2025-07-01 17:41:58.000000 UTC",
+    "last_updated_at": "2025-07-01 17:41:58.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "23737520",
+    "price": "387.36",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2183",
+    "inserted_at": "2025-07-01 17:41:58.000000 UTC",
+    "last_updated_at": "2025-07-01 17:41:58.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "23737529",
+    "price": "387.36",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2183",
+    "inserted_at": "2025-07-01 17:41:58.000000 UTC",
+    "last_updated_at": "2025-07-01 17:41:58.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "23737530",
+    "price": "120.09",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2183",
+    "inserted_at": "2025-07-01 17:41:58.000000 UTC",
+    "last_updated_at": "2025-07-01 17:41:58.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23737521",
+    "price": "120.09",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2183",
+    "inserted_at": "2025-07-01 17:41:58.000000 UTC",
+    "last_updated_at": "2025-07-01 17:41:58.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23737531",
+    "price": "409.86",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2183",
+    "inserted_at": "2025-07-01 17:41:58.000000 UTC",
+    "last_updated_at": "2025-07-01 17:41:58.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "23737522",
+    "price": "409.86",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2183",
+    "inserted_at": "2025-07-01 17:41:58.000000 UTC",
+    "last_updated_at": "2025-07-01 17:41:58.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "23737523",
+    "price": "411.92",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2183",
+    "inserted_at": "2025-07-01 17:41:58.000000 UTC",
+    "last_updated_at": "2025-07-01 17:41:58.000000 UTC",
+    "vehicle_class_id": "11",
+    "rk": "1"
+  },
+  {
+    "id": "23737532",
+    "price": "411.92",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2183",
+    "inserted_at": "2025-07-01 17:41:58.000000 UTC",
+    "last_updated_at": "2025-07-01 17:41:58.000000 UTC",
+    "vehicle_class_id": "11",
+    "rk": "1"
+  },
+  {
+    "id": "23737524",
+    "price": "127.71",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2183",
+    "inserted_at": "2025-07-01 17:41:58.000000 UTC",
+    "last_updated_at": "2025-07-01 17:41:58.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "23737533",
+    "price": "127.71",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2183",
+    "inserted_at": "2025-07-01 17:41:58.000000 UTC",
+    "last_updated_at": "2025-07-01 17:41:58.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "24054032",
+    "price": "88.23",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2191",
+    "inserted_at": "2025-07-03 17:33:29.000000 UTC",
+    "last_updated_at": "2025-07-03 17:33:29.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "24054023",
+    "price": "88.23",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2191",
+    "inserted_at": "2025-07-03 17:33:29.000000 UTC",
+    "last_updated_at": "2025-07-03 17:33:29.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "24054024",
+    "price": "114.55",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2191",
+    "inserted_at": "2025-07-03 17:33:29.000000 UTC",
+    "last_updated_at": "2025-07-03 17:33:29.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "24054033",
+    "price": "114.55",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2191",
+    "inserted_at": "2025-07-03 17:33:29.000000 UTC",
+    "last_updated_at": "2025-07-03 17:33:29.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "24054025",
+    "price": "93.5",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2191",
+    "inserted_at": "2025-07-03 17:33:29.000000 UTC",
+    "last_updated_at": "2025-07-03 17:33:29.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "24054034",
+    "price": "93.5",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2191",
+    "inserted_at": "2025-07-03 17:33:29.000000 UTC",
+    "last_updated_at": "2025-07-03 17:33:29.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "24054026",
+    "price": "181.18",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2191",
+    "inserted_at": "2025-07-03 17:33:29.000000 UTC",
+    "last_updated_at": "2025-07-03 17:33:29.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "24054035",
+    "price": "181.18",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2191",
+    "inserted_at": "2025-07-03 17:33:29.000000 UTC",
+    "last_updated_at": "2025-07-03 17:33:29.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "24054036",
+    "price": "157.5",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2191",
+    "inserted_at": "2025-07-03 17:33:29.000000 UTC",
+    "last_updated_at": "2025-07-03 17:33:29.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "24054027",
+    "price": "157.5",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2191",
+    "inserted_at": "2025-07-03 17:33:29.000000 UTC",
+    "last_updated_at": "2025-07-03 17:33:29.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "24054037",
+    "price": "93.03",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2191",
+    "inserted_at": "2025-07-03 17:33:29.000000 UTC",
+    "last_updated_at": "2025-07-03 17:33:29.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "24054028",
+    "price": "93.03",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2191",
+    "inserted_at": "2025-07-03 17:33:29.000000 UTC",
+    "last_updated_at": "2025-07-03 17:33:29.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "24054038",
+    "price": "211.91",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2191",
+    "inserted_at": "2025-07-03 17:33:29.000000 UTC",
+    "last_updated_at": "2025-07-03 17:33:29.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "24054029",
+    "price": "211.91",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2191",
+    "inserted_at": "2025-07-03 17:33:29.000000 UTC",
+    "last_updated_at": "2025-07-03 17:33:29.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "24054030",
+    "price": "521.56",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2191",
+    "inserted_at": "2025-07-03 17:33:29.000000 UTC",
+    "last_updated_at": "2025-07-03 17:33:29.000000 UTC",
+    "vehicle_class_id": "11",
+    "rk": "1"
+  },
+  {
+    "id": "24054039",
+    "price": "521.56",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2191",
+    "inserted_at": "2025-07-03 17:33:29.000000 UTC",
+    "last_updated_at": "2025-07-03 17:33:29.000000 UTC",
+    "vehicle_class_id": "11",
+    "rk": "1"
+  },
+  {
+    "id": "24054031",
+    "price": "182.09",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2191",
+    "inserted_at": "2025-07-03 17:33:29.000000 UTC",
+    "last_updated_at": "2025-07-03 17:33:29.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "24054040",
+    "price": "182.09",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2191",
+    "inserted_at": "2025-07-03 17:33:29.000000 UTC",
+    "last_updated_at": "2025-07-03 17:33:29.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "23823021",
+    "price": "32.97",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2227",
+    "inserted_at": "2025-07-02 07:36:36.000000 UTC",
+    "last_updated_at": "2025-07-02 07:36:36.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23823111",
+    "price": "32.97",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2227",
+    "inserted_at": "2025-07-02 07:36:36.000000 UTC",
+    "last_updated_at": "2025-07-02 07:36:36.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23823022",
+    "price": "86.47",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2227",
+    "inserted_at": "2025-07-02 07:36:36.000000 UTC",
+    "last_updated_at": "2025-07-02 07:36:36.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23823112",
+    "price": "86.47",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2227",
+    "inserted_at": "2025-07-02 07:36:36.000000 UTC",
+    "last_updated_at": "2025-07-02 07:36:36.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23823023",
+    "price": "47.88",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2227",
+    "inserted_at": "2025-07-02 07:36:36.000000 UTC",
+    "last_updated_at": "2025-07-02 07:36:36.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23823113",
+    "price": "47.88",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2227",
+    "inserted_at": "2025-07-02 07:36:36.000000 UTC",
+    "last_updated_at": "2025-07-02 07:36:36.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23823024",
+    "price": "78.19",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2227",
+    "inserted_at": "2025-07-02 07:36:36.000000 UTC",
+    "last_updated_at": "2025-07-02 07:36:36.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "23823114",
+    "price": "78.19",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2227",
+    "inserted_at": "2025-07-02 07:36:36.000000 UTC",
+    "last_updated_at": "2025-07-02 07:36:36.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "23823025",
+    "price": "110",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2227",
+    "inserted_at": "2025-07-02 07:36:36.000000 UTC",
+    "last_updated_at": "2025-07-02 07:36:36.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "23823115",
+    "price": "110",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2227",
+    "inserted_at": "2025-07-02 07:36:36.000000 UTC",
+    "last_updated_at": "2025-07-02 07:36:36.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "23823026",
+    "price": "47.64",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2227",
+    "inserted_at": "2025-07-02 07:36:36.000000 UTC",
+    "last_updated_at": "2025-07-02 07:36:36.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23823116",
+    "price": "47.64",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2227",
+    "inserted_at": "2025-07-02 07:36:36.000000 UTC",
+    "last_updated_at": "2025-07-02 07:36:36.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23823027",
+    "price": "340.03",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2227",
+    "inserted_at": "2025-07-02 07:36:36.000000 UTC",
+    "last_updated_at": "2025-07-02 07:36:36.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "23823117",
+    "price": "340.03",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2227",
+    "inserted_at": "2025-07-02 07:36:36.000000 UTC",
+    "last_updated_at": "2025-07-02 07:36:36.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "23823028",
+    "price": "341.74",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2227",
+    "inserted_at": "2025-07-02 07:36:36.000000 UTC",
+    "last_updated_at": "2025-07-02 07:36:36.000000 UTC",
+    "vehicle_class_id": "11",
+    "rk": "1"
+  },
+  {
+    "id": "23823118",
+    "price": "341.74",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2227",
+    "inserted_at": "2025-07-02 07:36:36.000000 UTC",
+    "last_updated_at": "2025-07-02 07:36:36.000000 UTC",
+    "vehicle_class_id": "11",
+    "rk": "1"
+  },
+  {
+    "id": "23823029",
+    "price": "78.58",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2227",
+    "inserted_at": "2025-07-02 07:36:36.000000 UTC",
+    "last_updated_at": "2025-07-02 07:36:36.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "23823119",
+    "price": "78.58",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2227",
+    "inserted_at": "2025-07-02 07:36:36.000000 UTC",
+    "last_updated_at": "2025-07-02 07:36:36.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "23823030",
+    "price": "75.07",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2238",
+    "inserted_at": "2025-07-02 07:36:36.000000 UTC",
+    "last_updated_at": "2025-07-02 07:36:36.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23823120",
+    "price": "75.07",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2238",
+    "inserted_at": "2025-07-02 07:36:36.000000 UTC",
+    "last_updated_at": "2025-07-02 07:36:36.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23823031",
+    "price": "129.46",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2238",
+    "inserted_at": "2025-07-02 07:36:36.000000 UTC",
+    "last_updated_at": "2025-07-02 07:36:36.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23823121",
+    "price": "129.46",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2238",
+    "inserted_at": "2025-07-02 07:36:36.000000 UTC",
+    "last_updated_at": "2025-07-02 07:36:36.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23823032",
+    "price": "111.04",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2238",
+    "inserted_at": "2025-07-02 07:36:36.000000 UTC",
+    "last_updated_at": "2025-07-02 07:36:36.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23823122",
+    "price": "111.04",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2238",
+    "inserted_at": "2025-07-02 07:36:36.000000 UTC",
+    "last_updated_at": "2025-07-02 07:36:36.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23823033",
+    "price": "122.7",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2238",
+    "inserted_at": "2025-07-02 07:36:36.000000 UTC",
+    "last_updated_at": "2025-07-02 07:36:36.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "23823123",
+    "price": "122.7",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2238",
+    "inserted_at": "2025-07-02 07:36:36.000000 UTC",
+    "last_updated_at": "2025-07-02 07:36:36.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "23823034",
+    "price": "176",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2238",
+    "inserted_at": "2025-07-02 07:36:36.000000 UTC",
+    "last_updated_at": "2025-07-02 07:36:36.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "23823124",
+    "price": "176",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2238",
+    "inserted_at": "2025-07-02 07:36:36.000000 UTC",
+    "last_updated_at": "2025-07-02 07:36:36.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "23823035",
+    "price": "85.6",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2238",
+    "inserted_at": "2025-07-02 07:36:36.000000 UTC",
+    "last_updated_at": "2025-07-02 07:36:36.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23823125",
+    "price": "85.6",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2238",
+    "inserted_at": "2025-07-02 07:36:36.000000 UTC",
+    "last_updated_at": "2025-07-02 07:36:36.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23823036",
+    "price": "297.27",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2238",
+    "inserted_at": "2025-07-02 07:36:36.000000 UTC",
+    "last_updated_at": "2025-07-02 07:36:36.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "23823126",
+    "price": "297.27",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2238",
+    "inserted_at": "2025-07-02 07:36:36.000000 UTC",
+    "last_updated_at": "2025-07-02 07:36:36.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "23823037",
+    "price": "298.76",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2238",
+    "inserted_at": "2025-07-02 07:36:36.000000 UTC",
+    "last_updated_at": "2025-07-02 07:36:36.000000 UTC",
+    "vehicle_class_id": "11",
+    "rk": "1"
+  },
+  {
+    "id": "23823127",
+    "price": "298.76",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2238",
+    "inserted_at": "2025-07-02 07:36:36.000000 UTC",
+    "last_updated_at": "2025-07-02 07:36:36.000000 UTC",
+    "vehicle_class_id": "11",
+    "rk": "1"
+  },
+  {
+    "id": "23823038",
+    "price": "123.32",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2238",
+    "inserted_at": "2025-07-02 07:36:36.000000 UTC",
+    "last_updated_at": "2025-07-02 07:36:36.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "23823128",
+    "price": "123.32",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2238",
+    "inserted_at": "2025-07-02 07:36:36.000000 UTC",
+    "last_updated_at": "2025-07-02 07:36:36.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "23823039",
+    "price": "38.5",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2242",
+    "inserted_at": "2025-07-02 07:36:36.000000 UTC",
+    "last_updated_at": "2025-07-02 07:36:36.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23823129",
+    "price": "38.5",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2242",
+    "inserted_at": "2025-07-02 07:36:36.000000 UTC",
+    "last_updated_at": "2025-07-02 07:36:36.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23823040",
+    "price": "84.72",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2242",
+    "inserted_at": "2025-07-02 07:36:36.000000 UTC",
+    "last_updated_at": "2025-07-02 07:36:36.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23823130",
+    "price": "84.72",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2242",
+    "inserted_at": "2025-07-02 07:36:36.000000 UTC",
+    "last_updated_at": "2025-07-02 07:36:36.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23823041",
+    "price": "49.5",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2242",
+    "inserted_at": "2025-07-02 07:36:36.000000 UTC",
+    "last_updated_at": "2025-07-02 07:36:36.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23823131",
+    "price": "49.5",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2242",
+    "inserted_at": "2025-07-02 07:36:36.000000 UTC",
+    "last_updated_at": "2025-07-02 07:36:36.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23823042",
+    "price": "77",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2242",
+    "inserted_at": "2025-07-02 07:36:36.000000 UTC",
+    "last_updated_at": "2025-07-02 07:36:36.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "23823132",
+    "price": "77",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2242",
+    "inserted_at": "2025-07-02 07:36:36.000000 UTC",
+    "last_updated_at": "2025-07-02 07:36:36.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "23823043",
+    "price": "176",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2242",
+    "inserted_at": "2025-07-02 07:36:36.000000 UTC",
+    "last_updated_at": "2025-07-02 07:36:36.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "23823133",
+    "price": "176",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2242",
+    "inserted_at": "2025-07-02 07:36:36.000000 UTC",
+    "last_updated_at": "2025-07-02 07:36:36.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "23823044",
+    "price": "47.01",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2242",
+    "inserted_at": "2025-07-02 07:36:36.000000 UTC",
+    "last_updated_at": "2025-07-02 07:36:36.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23823134",
+    "price": "47.01",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2242",
+    "inserted_at": "2025-07-02 07:36:36.000000 UTC",
+    "last_updated_at": "2025-07-02 07:36:36.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23823045",
+    "price": "271.95",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2242",
+    "inserted_at": "2025-07-02 07:36:36.000000 UTC",
+    "last_updated_at": "2025-07-02 07:36:36.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "23823135",
+    "price": "271.95",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2242",
+    "inserted_at": "2025-07-02 07:36:36.000000 UTC",
+    "last_updated_at": "2025-07-02 07:36:36.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "23823046",
+    "price": "273.32",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2242",
+    "inserted_at": "2025-07-02 07:36:36.000000 UTC",
+    "last_updated_at": "2025-07-02 07:36:36.000000 UTC",
+    "vehicle_class_id": "11",
+    "rk": "1"
+  },
+  {
+    "id": "23823136",
+    "price": "273.32",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2242",
+    "inserted_at": "2025-07-02 07:36:36.000000 UTC",
+    "last_updated_at": "2025-07-02 07:36:36.000000 UTC",
+    "vehicle_class_id": "11",
+    "rk": "1"
+  },
+  {
+    "id": "23823047",
+    "price": "77",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2242",
+    "inserted_at": "2025-07-02 07:36:36.000000 UTC",
+    "last_updated_at": "2025-07-02 07:36:36.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "23823137",
+    "price": "77",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2242",
+    "inserted_at": "2025-07-02 07:36:36.000000 UTC",
+    "last_updated_at": "2025-07-02 07:36:36.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "19976670",
+    "price": "152.52",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2335",
+    "inserted_at": "2025-06-10 10:41:13.000000 UTC",
+    "last_updated_at": "2025-06-10 10:41:13.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "19976700",
+    "price": "152.52",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2335",
+    "inserted_at": "2025-06-10 10:41:13.000000 UTC",
+    "last_updated_at": "2025-06-10 10:41:13.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "19976671",
+    "price": "202.78",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2335",
+    "inserted_at": "2025-06-10 10:41:13.000000 UTC",
+    "last_updated_at": "2025-06-10 10:41:13.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "19976701",
+    "price": "202.78",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2335",
+    "inserted_at": "2025-06-10 10:41:13.000000 UTC",
+    "last_updated_at": "2025-06-10 10:41:13.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "19976672",
+    "price": "199.81",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2335",
+    "inserted_at": "2025-06-10 10:41:13.000000 UTC",
+    "last_updated_at": "2025-06-10 10:41:13.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "19976702",
+    "price": "199.81",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2335",
+    "inserted_at": "2025-06-10 10:41:13.000000 UTC",
+    "last_updated_at": "2025-06-10 10:41:13.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "19976673",
+    "price": "187.48",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2335",
+    "inserted_at": "2025-06-10 10:41:13.000000 UTC",
+    "last_updated_at": "2025-06-10 10:41:13.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "19976703",
+    "price": "187.48",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2335",
+    "inserted_at": "2025-06-10 10:41:13.000000 UTC",
+    "last_updated_at": "2025-06-10 10:41:13.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "19976674",
+    "price": "263.31",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2335",
+    "inserted_at": "2025-06-10 10:41:13.000000 UTC",
+    "last_updated_at": "2025-06-10 10:41:13.000000 UTC",
+    "vehicle_class_id": "7",
+    "rk": "1"
+  },
+  {
+    "id": "19976704",
+    "price": "263.31",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2335",
+    "inserted_at": "2025-06-10 10:41:13.000000 UTC",
+    "last_updated_at": "2025-06-10 10:41:13.000000 UTC",
+    "vehicle_class_id": "7",
+    "rk": "1"
+  },
+  {
+    "id": "19976675",
+    "price": "170.81",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2335",
+    "inserted_at": "2025-06-10 10:41:13.000000 UTC",
+    "last_updated_at": "2025-06-10 10:41:13.000000 UTC",
+    "vehicle_class_id": "12",
+    "rk": "1"
+  },
+  {
+    "id": "19976705",
+    "price": "170.81",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2335",
+    "inserted_at": "2025-06-10 10:41:13.000000 UTC",
+    "last_updated_at": "2025-06-10 10:41:13.000000 UTC",
+    "vehicle_class_id": "12",
+    "rk": "1"
+  },
+  {
+    "id": "19976676",
+    "price": "447.5",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2335",
+    "inserted_at": "2025-06-10 10:41:13.000000 UTC",
+    "last_updated_at": "2025-06-10 10:41:13.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "19976706",
+    "price": "447.5",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2335",
+    "inserted_at": "2025-06-10 10:41:13.000000 UTC",
+    "last_updated_at": "2025-06-10 10:41:13.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "19976677",
+    "price": "152.38",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2335",
+    "inserted_at": "2025-06-10 10:41:13.000000 UTC",
+    "last_updated_at": "2025-06-10 10:41:13.000000 UTC",
+    "vehicle_class_id": "109",
+    "rk": "1"
+  },
+  {
+    "id": "19976707",
+    "price": "152.38",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2335",
+    "inserted_at": "2025-06-10 10:41:13.000000 UTC",
+    "last_updated_at": "2025-06-10 10:41:13.000000 UTC",
+    "vehicle_class_id": "109",
+    "rk": "1"
+  },
+  {
+    "id": "19977094",
+    "price": "50.38",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2340",
+    "inserted_at": "2025-06-10 10:42:08.000000 UTC",
+    "last_updated_at": "2025-06-10 10:42:08.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "19977100",
+    "price": "50.38",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2340",
+    "inserted_at": "2025-06-10 10:42:08.000000 UTC",
+    "last_updated_at": "2025-06-10 10:42:08.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "19977095",
+    "price": "60.76",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2340",
+    "inserted_at": "2025-06-10 10:42:08.000000 UTC",
+    "last_updated_at": "2025-06-10 10:42:08.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "19977101",
+    "price": "60.76",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2340",
+    "inserted_at": "2025-06-10 10:42:08.000000 UTC",
+    "last_updated_at": "2025-06-10 10:42:08.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "19977096",
+    "price": "59.5",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2340",
+    "inserted_at": "2025-06-10 10:42:08.000000 UTC",
+    "last_updated_at": "2025-06-10 10:42:08.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "19977102",
+    "price": "59.5",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2340",
+    "inserted_at": "2025-06-10 10:42:08.000000 UTC",
+    "last_updated_at": "2025-06-10 10:42:08.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "19977097",
+    "price": "76.13",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2340",
+    "inserted_at": "2025-06-10 10:42:08.000000 UTC",
+    "last_updated_at": "2025-06-10 10:42:08.000000 UTC",
+    "vehicle_class_id": "7",
+    "rk": "1"
+  },
+  {
+    "id": "19977103",
+    "price": "76.13",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2340",
+    "inserted_at": "2025-06-10 10:42:08.000000 UTC",
+    "last_updated_at": "2025-06-10 10:42:08.000000 UTC",
+    "vehicle_class_id": "7",
+    "rk": "1"
+  },
+  {
+    "id": "19977098",
+    "price": "110.25",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2340",
+    "inserted_at": "2025-06-10 10:42:08.000000 UTC",
+    "last_updated_at": "2025-06-10 10:42:08.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "19977104",
+    "price": "110.25",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2340",
+    "inserted_at": "2025-06-10 10:42:08.000000 UTC",
+    "last_updated_at": "2025-06-10 10:42:08.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "19977099",
+    "price": "49.77",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2340",
+    "inserted_at": "2025-06-10 10:42:08.000000 UTC",
+    "last_updated_at": "2025-06-10 10:42:08.000000 UTC",
+    "vehicle_class_id": "109",
+    "rk": "1"
+  },
+  {
+    "id": "19977105",
+    "price": "49.77",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2340",
+    "inserted_at": "2025-06-10 10:42:08.000000 UTC",
+    "last_updated_at": "2025-06-10 10:42:08.000000 UTC",
+    "vehicle_class_id": "109",
+    "rk": "1"
+  },
+  {
+    "id": "19974827",
+    "price": "112.84",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2367",
+    "inserted_at": "2025-06-10 10:38:08.000000 UTC",
+    "last_updated_at": "2025-06-10 10:38:08.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "19974833",
+    "price": "112.84",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2367",
+    "inserted_at": "2025-06-10 10:38:08.000000 UTC",
+    "last_updated_at": "2025-06-10 10:38:08.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "19974828",
+    "price": "133.05",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2367",
+    "inserted_at": "2025-06-10 10:38:08.000000 UTC",
+    "last_updated_at": "2025-06-10 10:38:08.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "19974834",
+    "price": "133.05",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2367",
+    "inserted_at": "2025-06-10 10:38:08.000000 UTC",
+    "last_updated_at": "2025-06-10 10:38:08.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "19974829",
+    "price": "133.6",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2367",
+    "inserted_at": "2025-06-10 10:38:08.000000 UTC",
+    "last_updated_at": "2025-06-10 10:38:08.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "19974835",
+    "price": "133.6",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2367",
+    "inserted_at": "2025-06-10 10:38:08.000000 UTC",
+    "last_updated_at": "2025-06-10 10:38:08.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "19974830",
+    "price": "176.8",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2367",
+    "inserted_at": "2025-06-10 10:38:08.000000 UTC",
+    "last_updated_at": "2025-06-10 10:38:08.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "19974836",
+    "price": "176.8",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2367",
+    "inserted_at": "2025-06-10 10:38:08.000000 UTC",
+    "last_updated_at": "2025-06-10 10:38:08.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "19974831",
+    "price": "133.5",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2367",
+    "inserted_at": "2025-06-10 10:38:08.000000 UTC",
+    "last_updated_at": "2025-06-10 10:38:08.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "19974837",
+    "price": "133.5",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2367",
+    "inserted_at": "2025-06-10 10:38:08.000000 UTC",
+    "last_updated_at": "2025-06-10 10:38:08.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "19974832",
+    "price": "116.05",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2367",
+    "inserted_at": "2025-06-10 10:38:08.000000 UTC",
+    "last_updated_at": "2025-06-10 10:38:08.000000 UTC",
+    "vehicle_class_id": "12",
+    "rk": "1"
+  },
+  {
+    "id": "19974838",
+    "price": "116.05",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2367",
+    "inserted_at": "2025-06-10 10:38:08.000000 UTC",
+    "last_updated_at": "2025-06-10 10:38:08.000000 UTC",
+    "vehicle_class_id": "12",
+    "rk": "1"
+  },
+  {
+    "id": "23945707",
+    "price": "28.99",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2424",
+    "inserted_at": "2025-07-03 00:25:07.000000 UTC",
+    "last_updated_at": "2025-07-03 00:25:07.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23945698",
+    "price": "28.99",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2424",
+    "inserted_at": "2025-07-03 00:25:07.000000 UTC",
+    "last_updated_at": "2025-07-03 00:25:07.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23946200",
+    "price": "36.41",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2424",
+    "inserted_at": "2025-07-03 00:26:05.000000 UTC",
+    "last_updated_at": "2025-07-03 00:26:05.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23946196",
+    "price": "36.41",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2424",
+    "inserted_at": "2025-07-03 00:26:05.000000 UTC",
+    "last_updated_at": "2025-07-03 00:26:05.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23945695",
+    "price": "40.99",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2424",
+    "inserted_at": "2025-07-03 00:25:07.000000 UTC",
+    "last_updated_at": "2025-07-03 00:25:07.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23945708",
+    "price": "40.99",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2424",
+    "inserted_at": "2025-07-03 00:25:07.000000 UTC",
+    "last_updated_at": "2025-07-03 00:25:07.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23945696",
+    "price": "31.99",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2424",
+    "inserted_at": "2025-07-03 00:25:07.000000 UTC",
+    "last_updated_at": "2025-07-03 00:25:07.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23945705",
+    "price": "31.99",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2424",
+    "inserted_at": "2025-07-03 00:25:07.000000 UTC",
+    "last_updated_at": "2025-07-03 00:25:07.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23834922",
+    "price": "49.21",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2427",
+    "inserted_at": "2025-07-02 08:24:07.000000 UTC",
+    "last_updated_at": "2025-07-02 08:24:07.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23834956",
+    "price": "49.21",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2427",
+    "inserted_at": "2025-07-02 08:24:07.000000 UTC",
+    "last_updated_at": "2025-07-02 08:24:07.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23945092",
+    "price": "49.09",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2427",
+    "inserted_at": "2025-07-03 00:23:37.000000 UTC",
+    "last_updated_at": "2025-07-03 00:23:37.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23945067",
+    "price": "54",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2427",
+    "inserted_at": "2025-07-03 00:23:37.000000 UTC",
+    "last_updated_at": "2025-07-03 00:23:37.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23945301",
+    "price": "114.67",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2428",
+    "inserted_at": "2025-07-03 00:24:05.000000 UTC",
+    "last_updated_at": "2025-07-03 00:24:05.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "23945293",
+    "price": "114.67",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2428",
+    "inserted_at": "2025-07-03 00:24:05.000000 UTC",
+    "last_updated_at": "2025-07-03 00:24:05.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "24005577",
+    "price": "155.54",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2433",
+    "inserted_at": "2025-07-03 08:24:32.000000 UTC",
+    "last_updated_at": "2025-07-03 08:24:32.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "24005570",
+    "price": "155.54",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2433",
+    "inserted_at": "2025-07-03 08:24:32.000000 UTC",
+    "last_updated_at": "2025-07-03 08:24:32.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "24005569",
+    "price": "200.49",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2433",
+    "inserted_at": "2025-07-03 08:24:32.000000 UTC",
+    "last_updated_at": "2025-07-03 08:24:32.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "24005580",
+    "price": "200.49",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2433",
+    "inserted_at": "2025-07-03 08:24:32.000000 UTC",
+    "last_updated_at": "2025-07-03 08:24:32.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "24005567",
+    "price": "391.05",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2433",
+    "inserted_at": "2025-07-03 08:24:32.000000 UTC",
+    "last_updated_at": "2025-07-03 08:24:32.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "24005581",
+    "price": "391.05",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2433",
+    "inserted_at": "2025-07-03 08:24:32.000000 UTC",
+    "last_updated_at": "2025-07-03 08:24:32.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "24005571",
+    "price": "198.49",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2433",
+    "inserted_at": "2025-07-03 08:24:32.000000 UTC",
+    "last_updated_at": "2025-07-03 08:24:32.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "24005582",
+    "price": "198.49",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2433",
+    "inserted_at": "2025-07-03 08:24:32.000000 UTC",
+    "last_updated_at": "2025-07-03 08:24:32.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "24007760",
+    "price": "130.68",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2436",
+    "inserted_at": "2025-07-03 08:28:35.000000 UTC",
+    "last_updated_at": "2025-07-03 08:28:35.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "24007787",
+    "price": "130.68",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2436",
+    "inserted_at": "2025-07-03 08:28:35.000000 UTC",
+    "last_updated_at": "2025-07-03 08:28:35.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "24007758",
+    "price": "192.96",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2436",
+    "inserted_at": "2025-07-03 08:28:35.000000 UTC",
+    "last_updated_at": "2025-07-03 08:28:35.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "24007783",
+    "price": "212.25",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2436",
+    "inserted_at": "2025-07-03 08:28:35.000000 UTC",
+    "last_updated_at": "2025-07-03 08:28:35.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "24007762",
+    "price": "198.45",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2436",
+    "inserted_at": "2025-07-03 08:28:35.000000 UTC",
+    "last_updated_at": "2025-07-03 08:28:35.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "24007785",
+    "price": "218.29",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2436",
+    "inserted_at": "2025-07-03 08:28:35.000000 UTC",
+    "last_updated_at": "2025-07-03 08:28:35.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "24007784",
+    "price": "280.09",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2436",
+    "inserted_at": "2025-07-03 08:28:35.000000 UTC",
+    "last_updated_at": "2025-07-03 08:28:35.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "24007757",
+    "price": "280.09",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2436",
+    "inserted_at": "2025-07-03 08:28:35.000000 UTC",
+    "last_updated_at": "2025-07-03 08:28:35.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "24007786",
+    "price": "197.65",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2436",
+    "inserted_at": "2025-07-03 08:28:35.000000 UTC",
+    "last_updated_at": "2025-07-03 08:28:35.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "24007759",
+    "price": "179.68",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2436",
+    "inserted_at": "2025-07-03 08:28:35.000000 UTC",
+    "last_updated_at": "2025-07-03 08:28:35.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "24003801",
+    "price": "41.75",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2444",
+    "inserted_at": "2025-07-03 08:21:31.000000 UTC",
+    "last_updated_at": "2025-07-03 08:21:31.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "24003783",
+    "price": "41.75",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2444",
+    "inserted_at": "2025-07-03 08:21:31.000000 UTC",
+    "last_updated_at": "2025-07-03 08:21:31.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23945310",
+    "price": "56.76",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2444",
+    "inserted_at": "2025-07-03 00:24:05.000000 UTC",
+    "last_updated_at": "2025-07-03 00:24:05.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23945272",
+    "price": "62.44",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2444",
+    "inserted_at": "2025-07-03 00:24:05.000000 UTC",
+    "last_updated_at": "2025-07-03 00:24:05.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "24003802",
+    "price": "49.39",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2444",
+    "inserted_at": "2025-07-03 08:21:31.000000 UTC",
+    "last_updated_at": "2025-07-03 08:21:31.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "24003784",
+    "price": "49.39",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2444",
+    "inserted_at": "2025-07-03 08:21:31.000000 UTC",
+    "last_updated_at": "2025-07-03 08:21:31.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "24003803",
+    "price": "77.87",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2444",
+    "inserted_at": "2025-07-03 08:21:31.000000 UTC",
+    "last_updated_at": "2025-07-03 08:21:31.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "24003785",
+    "price": "77.87",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2444",
+    "inserted_at": "2025-07-03 08:21:31.000000 UTC",
+    "last_updated_at": "2025-07-03 08:21:31.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "24003804",
+    "price": "160.23",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2444",
+    "inserted_at": "2025-07-03 08:21:31.000000 UTC",
+    "last_updated_at": "2025-07-03 08:21:31.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "24003786",
+    "price": "160.23",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2444",
+    "inserted_at": "2025-07-03 08:21:31.000000 UTC",
+    "last_updated_at": "2025-07-03 08:21:31.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "23945311",
+    "price": "49.14",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2444",
+    "inserted_at": "2025-07-03 00:24:05.000000 UTC",
+    "last_updated_at": "2025-07-03 00:24:05.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23945271",
+    "price": "49.14",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2444",
+    "inserted_at": "2025-07-03 00:24:05.000000 UTC",
+    "last_updated_at": "2025-07-03 00:24:05.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "24007799",
+    "price": "52.66",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2447",
+    "inserted_at": "2025-07-03 08:28:35.000000 UTC",
+    "last_updated_at": "2025-07-03 08:28:35.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "24007750",
+    "price": "52.66",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2447",
+    "inserted_at": "2025-07-03 08:28:35.000000 UTC",
+    "last_updated_at": "2025-07-03 08:28:35.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "24007749",
+    "price": "108.8",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2447",
+    "inserted_at": "2025-07-03 08:28:35.000000 UTC",
+    "last_updated_at": "2025-07-03 08:28:35.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "24007798",
+    "price": "72.59",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2447",
+    "inserted_at": "2025-07-03 08:28:35.000000 UTC",
+    "last_updated_at": "2025-07-03 08:28:35.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "24007801",
+    "price": "63.77",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2447",
+    "inserted_at": "2025-07-03 08:28:35.000000 UTC",
+    "last_updated_at": "2025-07-03 08:28:35.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "24007745",
+    "price": "63.77",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2447",
+    "inserted_at": "2025-07-03 08:28:35.000000 UTC",
+    "last_updated_at": "2025-07-03 08:28:35.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "24007748",
+    "price": "103.47",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2447",
+    "inserted_at": "2025-07-03 08:28:35.000000 UTC",
+    "last_updated_at": "2025-07-03 08:28:35.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "24007800",
+    "price": "103.47",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2447",
+    "inserted_at": "2025-07-03 08:28:35.000000 UTC",
+    "last_updated_at": "2025-07-03 08:28:35.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "24007797",
+    "price": "222.02",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2447",
+    "inserted_at": "2025-07-03 08:28:35.000000 UTC",
+    "last_updated_at": "2025-07-03 08:28:35.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "24007747",
+    "price": "222.02",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2447",
+    "inserted_at": "2025-07-03 08:28:35.000000 UTC",
+    "last_updated_at": "2025-07-03 08:28:35.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "23944027",
+    "price": "52.66",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2448",
+    "inserted_at": "2025-07-03 00:21:32.000000 UTC",
+    "last_updated_at": "2025-07-03 00:21:32.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23944044",
+    "price": "52.66",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2448",
+    "inserted_at": "2025-07-03 00:21:32.000000 UTC",
+    "last_updated_at": "2025-07-03 00:21:32.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23944029",
+    "price": "63.77",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2448",
+    "inserted_at": "2025-07-03 00:21:32.000000 UTC",
+    "last_updated_at": "2025-07-03 00:21:32.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23944046",
+    "price": "63.77",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2448",
+    "inserted_at": "2025-07-03 00:21:32.000000 UTC",
+    "last_updated_at": "2025-07-03 00:21:32.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23944043",
+    "price": "101.49",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2448",
+    "inserted_at": "2025-07-03 00:21:32.000000 UTC",
+    "last_updated_at": "2025-07-03 00:21:32.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "23944030",
+    "price": "101.49",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2448",
+    "inserted_at": "2025-07-03 00:21:32.000000 UTC",
+    "last_updated_at": "2025-07-03 00:21:32.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "23944045",
+    "price": "222.73",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2448",
+    "inserted_at": "2025-07-03 00:21:32.000000 UTC",
+    "last_updated_at": "2025-07-03 00:21:32.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "23944031",
+    "price": "222.73",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2448",
+    "inserted_at": "2025-07-03 00:21:32.000000 UTC",
+    "last_updated_at": "2025-07-03 00:21:32.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "23970558",
+    "price": "139.1",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2457",
+    "inserted_at": "2025-07-03 04:25:31.000000 UTC",
+    "last_updated_at": "2025-07-03 04:25:31.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23970585",
+    "price": "139.1",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2457",
+    "inserted_at": "2025-07-03 04:25:31.000000 UTC",
+    "last_updated_at": "2025-07-03 04:25:31.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23970559",
+    "price": "138.4",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2457",
+    "inserted_at": "2025-07-03 04:25:31.000000 UTC",
+    "last_updated_at": "2025-07-03 04:25:31.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23970582",
+    "price": "138.4",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2457",
+    "inserted_at": "2025-07-03 04:25:31.000000 UTC",
+    "last_updated_at": "2025-07-03 04:25:31.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23969041",
+    "price": "338.3",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2459",
+    "inserted_at": "2025-07-03 04:23:05.000000 UTC",
+    "last_updated_at": "2025-07-03 04:23:05.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "23969066",
+    "price": "338.3",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2459",
+    "inserted_at": "2025-07-03 04:23:05.000000 UTC",
+    "last_updated_at": "2025-07-03 04:23:05.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "24005324",
+    "price": "269.35",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2460",
+    "inserted_at": "2025-07-03 08:24:03.000000 UTC",
+    "last_updated_at": "2025-07-03 08:24:03.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "24005328",
+    "price": "269.35",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2460",
+    "inserted_at": "2025-07-03 08:24:03.000000 UTC",
+    "last_updated_at": "2025-07-03 08:24:03.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23791221",
+    "price": "400",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2464",
+    "inserted_at": "2025-07-02 04:30:34.000000 UTC",
+    "last_updated_at": "2025-07-02 04:30:34.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23791182",
+    "price": "400",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2464",
+    "inserted_at": "2025-07-02 04:30:34.000000 UTC",
+    "last_updated_at": "2025-07-02 04:30:34.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23790568",
+    "price": "589.04",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2464",
+    "inserted_at": "2025-07-02 04:29:32.000000 UTC",
+    "last_updated_at": "2025-07-02 04:29:32.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23790594",
+    "price": "589.04",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2464",
+    "inserted_at": "2025-07-02 04:29:32.000000 UTC",
+    "last_updated_at": "2025-07-02 04:29:32.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23790569",
+    "price": "544.51",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2464",
+    "inserted_at": "2025-07-02 04:29:32.000000 UTC",
+    "last_updated_at": "2025-07-02 04:29:32.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23790595",
+    "price": "544.51",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2464",
+    "inserted_at": "2025-07-02 04:29:32.000000 UTC",
+    "last_updated_at": "2025-07-02 04:29:32.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23790591",
+    "price": "547.25",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2464",
+    "inserted_at": "2025-07-02 04:29:32.000000 UTC",
+    "last_updated_at": "2025-07-02 04:29:32.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "23790566",
+    "price": "547.25",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2464",
+    "inserted_at": "2025-07-02 04:29:32.000000 UTC",
+    "last_updated_at": "2025-07-02 04:29:32.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "23786701",
+    "price": "59.73",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2469",
+    "inserted_at": "2025-07-02 04:23:28.000000 UTC",
+    "last_updated_at": "2025-07-02 04:23:28.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23786705",
+    "price": "59.73",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2469",
+    "inserted_at": "2025-07-02 04:23:28.000000 UTC",
+    "last_updated_at": "2025-07-02 04:23:28.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23786243",
+    "price": "105.63",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2469",
+    "inserted_at": "2025-07-02 04:22:28.000000 UTC",
+    "last_updated_at": "2025-07-02 04:22:28.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23786235",
+    "price": "105.63",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2469",
+    "inserted_at": "2025-07-02 04:22:28.000000 UTC",
+    "last_updated_at": "2025-07-02 04:22:28.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23786241",
+    "price": "86.99",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2469",
+    "inserted_at": "2025-07-02 04:22:28.000000 UTC",
+    "last_updated_at": "2025-07-02 04:22:28.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23786236",
+    "price": "86.99",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2469",
+    "inserted_at": "2025-07-02 04:22:28.000000 UTC",
+    "last_updated_at": "2025-07-02 04:22:28.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23786704",
+    "price": "109.35",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2469",
+    "inserted_at": "2025-07-02 04:23:28.000000 UTC",
+    "last_updated_at": "2025-07-02 04:23:28.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "23786702",
+    "price": "109.35",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2469",
+    "inserted_at": "2025-07-02 04:23:28.000000 UTC",
+    "last_updated_at": "2025-07-02 04:23:28.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "23786238",
+    "price": "220",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2469",
+    "inserted_at": "2025-07-02 04:22:28.000000 UTC",
+    "last_updated_at": "2025-07-02 04:22:28.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "23786240",
+    "price": "220",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2469",
+    "inserted_at": "2025-07-02 04:22:28.000000 UTC",
+    "last_updated_at": "2025-07-02 04:22:28.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "23786239",
+    "price": "63.63",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2469",
+    "inserted_at": "2025-07-02 04:22:28.000000 UTC",
+    "last_updated_at": "2025-07-02 04:22:28.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23786233",
+    "price": "63.63",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2469",
+    "inserted_at": "2025-07-02 04:22:28.000000 UTC",
+    "last_updated_at": "2025-07-02 04:22:28.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23833312",
+    "price": "59.72",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2470",
+    "inserted_at": "2025-07-02 08:20:28.000000 UTC",
+    "last_updated_at": "2025-07-02 08:20:28.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23833306",
+    "price": "59.72",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2470",
+    "inserted_at": "2025-07-02 08:20:28.000000 UTC",
+    "last_updated_at": "2025-07-02 08:20:28.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23833307",
+    "price": "98.99",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2470",
+    "inserted_at": "2025-07-02 08:20:28.000000 UTC",
+    "last_updated_at": "2025-07-02 08:20:28.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23833313",
+    "price": "98.99",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2470",
+    "inserted_at": "2025-07-02 08:20:28.000000 UTC",
+    "last_updated_at": "2025-07-02 08:20:28.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23833314",
+    "price": "89.09",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2470",
+    "inserted_at": "2025-07-02 08:20:28.000000 UTC",
+    "last_updated_at": "2025-07-02 08:20:28.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23833308",
+    "price": "89.09",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2470",
+    "inserted_at": "2025-07-02 08:20:28.000000 UTC",
+    "last_updated_at": "2025-07-02 08:20:28.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23833310",
+    "price": "282.61",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2470",
+    "inserted_at": "2025-07-02 08:20:28.000000 UTC",
+    "last_updated_at": "2025-07-02 08:20:28.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "23833316",
+    "price": "282.61",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2470",
+    "inserted_at": "2025-07-02 08:20:28.000000 UTC",
+    "last_updated_at": "2025-07-02 08:20:28.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "23833311",
+    "price": "71.82",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2470",
+    "inserted_at": "2025-07-02 08:20:28.000000 UTC",
+    "last_updated_at": "2025-07-02 08:20:28.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23833317",
+    "price": "71.82",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2470",
+    "inserted_at": "2025-07-02 08:20:28.000000 UTC",
+    "last_updated_at": "2025-07-02 08:20:28.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "6635214",
+    "price": "41.28",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2492",
+    "inserted_at": "2025-03-14 16:48:04.000000 UTC",
+    "last_updated_at": "2025-03-14 16:48:04.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "6635227",
+    "price": "37.8",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2492",
+    "inserted_at": "2025-03-14 16:48:04.000000 UTC",
+    "last_updated_at": "2025-03-14 16:48:04.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "6635226",
+    "price": "68.4",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2492",
+    "inserted_at": "2025-03-14 16:48:04.000000 UTC",
+    "last_updated_at": "2025-03-14 16:48:04.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "6635216",
+    "price": "68.4",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2492",
+    "inserted_at": "2025-03-14 16:48:04.000000 UTC",
+    "last_updated_at": "2025-03-14 16:48:04.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "6635208",
+    "price": "72.48",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2492",
+    "inserted_at": "2025-03-14 16:48:04.000000 UTC",
+    "last_updated_at": "2025-03-14 16:48:04.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "6635222",
+    "price": "56.1",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2492",
+    "inserted_at": "2025-03-14 16:48:04.000000 UTC",
+    "last_updated_at": "2025-03-14 16:48:04.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "6635217",
+    "price": "86.25",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2492",
+    "inserted_at": "2025-03-14 16:48:04.000000 UTC",
+    "last_updated_at": "2025-03-14 16:48:04.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "6635223",
+    "price": "86.25",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2492",
+    "inserted_at": "2025-03-14 16:48:04.000000 UTC",
+    "last_updated_at": "2025-03-14 16:48:04.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "6635228",
+    "price": "78.2",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2492",
+    "inserted_at": "2025-03-14 16:48:04.000000 UTC",
+    "last_updated_at": "2025-03-14 16:48:04.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "6635215",
+    "price": "142",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2492",
+    "inserted_at": "2025-03-14 16:48:04.000000 UTC",
+    "last_updated_at": "2025-03-14 16:48:04.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "6635220",
+    "price": "56.1",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2492",
+    "inserted_at": "2025-03-14 16:48:04.000000 UTC",
+    "last_updated_at": "2025-03-14 16:48:04.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "6635210",
+    "price": "56.1",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2492",
+    "inserted_at": "2025-03-14 16:48:04.000000 UTC",
+    "last_updated_at": "2025-03-14 16:48:04.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "6635224",
+    "price": "78.2",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2492",
+    "inserted_at": "2025-03-14 16:48:04.000000 UTC",
+    "last_updated_at": "2025-03-14 16:48:04.000000 UTC",
+    "vehicle_class_id": "9",
+    "rk": "1"
+  },
+  {
+    "id": "6635213",
+    "price": "142.1",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2492",
+    "inserted_at": "2025-03-14 16:48:04.000000 UTC",
+    "last_updated_at": "2025-03-14 16:48:04.000000 UTC",
+    "vehicle_class_id": "9",
+    "rk": "1"
+  },
+  {
+    "id": "6635219",
+    "price": "193.2",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2492",
+    "inserted_at": "2025-03-14 16:48:04.000000 UTC",
+    "last_updated_at": "2025-03-14 16:48:04.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "6635218",
+    "price": "193.2",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2492",
+    "inserted_at": "2025-03-14 16:48:04.000000 UTC",
+    "last_updated_at": "2025-03-14 16:48:04.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "6635221",
+    "price": "39.6",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2492",
+    "inserted_at": "2025-03-14 16:48:04.000000 UTC",
+    "last_updated_at": "2025-03-14 16:48:04.000000 UTC",
+    "vehicle_class_id": "12",
+    "rk": "1"
+  },
+  {
+    "id": "6635211",
+    "price": "51.38",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2492",
+    "inserted_at": "2025-03-14 16:48:04.000000 UTC",
+    "last_updated_at": "2025-03-14 16:48:04.000000 UTC",
+    "vehicle_class_id": "12",
+    "rk": "1"
+  },
+  {
+    "id": "6635225",
+    "price": "86.25",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2492",
+    "inserted_at": "2025-03-14 16:48:04.000000 UTC",
+    "last_updated_at": "2025-03-14 16:48:04.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "6635212",
+    "price": "86.25",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2492",
+    "inserted_at": "2025-03-14 16:48:04.000000 UTC",
+    "last_updated_at": "2025-03-14 16:48:04.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "8816127",
+    "price": "212.75",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2515",
+    "inserted_at": "2025-04-05 04:34:30.000000 UTC",
+    "last_updated_at": "2025-04-05 04:34:30.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "8816134",
+    "price": "212.75",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2515",
+    "inserted_at": "2025-04-05 04:34:30.000000 UTC",
+    "last_updated_at": "2025-04-05 04:34:30.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "4184465",
+    "price": "45.15",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2520",
+    "inserted_at": "2025-02-10 16:50:40.000000 UTC",
+    "last_updated_at": "2025-02-10 16:50:40.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "4184458",
+    "price": "45.15",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2520",
+    "inserted_at": "2025-02-10 16:50:40.000000 UTC",
+    "last_updated_at": "2025-02-10 16:50:40.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "4184469",
+    "price": "44.1",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2520",
+    "inserted_at": "2025-02-10 16:50:40.000000 UTC",
+    "last_updated_at": "2025-02-10 16:50:40.000000 UTC",
+    "vehicle_class_id": "12",
+    "rk": "1"
+  },
+  {
+    "id": "4184460",
+    "price": "44.1",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2520",
+    "inserted_at": "2025-02-10 16:50:40.000000 UTC",
+    "last_updated_at": "2025-02-10 16:50:40.000000 UTC",
+    "vehicle_class_id": "12",
+    "rk": "1"
+  },
+  {
+    "id": "4344615",
+    "price": "420",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2565",
+    "inserted_at": "2025-02-13 06:50:29.000000 UTC",
+    "last_updated_at": "2025-02-13 06:50:29.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "4344612",
+    "price": "420",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2565",
+    "inserted_at": "2025-02-13 06:50:29.000000 UTC",
+    "last_updated_at": "2025-02-13 06:50:29.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "4344613",
+    "price": "420",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2565",
+    "inserted_at": "2025-02-13 06:50:29.000000 UTC",
+    "last_updated_at": "2025-02-13 06:50:29.000000 UTC",
+    "vehicle_class_id": "9",
+    "rk": "1"
+  },
+  {
+    "id": "4344616",
+    "price": "420",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2565",
+    "inserted_at": "2025-02-13 06:50:29.000000 UTC",
+    "last_updated_at": "2025-02-13 06:50:29.000000 UTC",
+    "vehicle_class_id": "9",
+    "rk": "1"
+  },
+  {
+    "id": "4344617",
+    "price": "420",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2565",
+    "inserted_at": "2025-02-13 06:50:29.000000 UTC",
+    "last_updated_at": "2025-02-13 06:50:29.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "4344614",
+    "price": "420",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2565",
+    "inserted_at": "2025-02-13 06:50:29.000000 UTC",
+    "last_updated_at": "2025-02-13 06:50:29.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "7716213",
+    "price": "80.87",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2587",
+    "inserted_at": "2025-03-25 10:07:05.000000 UTC",
+    "last_updated_at": "2025-03-25 10:07:05.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "7716198",
+    "price": "88.31",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2587",
+    "inserted_at": "2025-03-25 10:07:05.000000 UTC",
+    "last_updated_at": "2025-03-25 10:07:05.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "6275817",
+    "price": "77.98",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2596",
+    "inserted_at": "2025-03-10 16:04:50.000000 UTC",
+    "last_updated_at": "2025-03-10 16:04:50.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "6275824",
+    "price": "77.98",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2596",
+    "inserted_at": "2025-03-10 16:04:50.000000 UTC",
+    "last_updated_at": "2025-03-10 16:04:50.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "6275821",
+    "price": "77.98",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2596",
+    "inserted_at": "2025-03-10 16:04:50.000000 UTC",
+    "last_updated_at": "2025-03-10 16:04:50.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "6275823",
+    "price": "77.98",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2596",
+    "inserted_at": "2025-03-10 16:04:50.000000 UTC",
+    "last_updated_at": "2025-03-10 16:04:50.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "6276192",
+    "price": "138",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2596",
+    "inserted_at": "2025-03-10 16:07:04.000000 UTC",
+    "last_updated_at": "2025-03-10 16:07:04.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "6276191",
+    "price": "138",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2596",
+    "inserted_at": "2025-03-10 16:07:04.000000 UTC",
+    "last_updated_at": "2025-03-10 16:07:04.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "6275818",
+    "price": "235.78",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2596",
+    "inserted_at": "2025-03-10 16:04:50.000000 UTC",
+    "last_updated_at": "2025-03-10 16:04:50.000000 UTC",
+    "vehicle_class_id": "9",
+    "rk": "1"
+  },
+  {
+    "id": "6275827",
+    "price": "159.28",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2596",
+    "inserted_at": "2025-03-10 16:04:50.000000 UTC",
+    "last_updated_at": "2025-03-10 16:04:50.000000 UTC",
+    "vehicle_class_id": "9",
+    "rk": "1"
+  },
+  {
+    "id": "6275816",
+    "price": "59.63",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2596",
+    "inserted_at": "2025-03-10 16:04:50.000000 UTC",
+    "last_updated_at": "2025-03-10 16:04:50.000000 UTC",
+    "vehicle_class_id": "12",
+    "rk": "1"
+  },
+  {
+    "id": "6275825",
+    "price": "59.63",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2596",
+    "inserted_at": "2025-03-10 16:04:50.000000 UTC",
+    "last_updated_at": "2025-03-10 16:04:50.000000 UTC",
+    "vehicle_class_id": "12",
+    "rk": "1"
+  },
+  {
+    "id": "3696558",
+    "price": "83.17",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2603",
+    "inserted_at": "2025-02-01 17:12:48.000000 UTC",
+    "last_updated_at": "2025-02-01 17:12:48.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "3696557",
+    "price": "83.17",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2603",
+    "inserted_at": "2025-02-01 17:12:48.000000 UTC",
+    "last_updated_at": "2025-02-01 17:12:48.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "15465545",
+    "price": "313.06",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2603",
+    "inserted_at": "2025-05-21 10:05:28.000000 UTC",
+    "last_updated_at": "2025-05-21 10:05:28.000000 UTC",
+    "vehicle_class_id": "9",
+    "rk": "1"
+  },
+  {
+    "id": "15465575",
+    "price": "273.26",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2603",
+    "inserted_at": "2025-05-21 10:05:28.000000 UTC",
+    "last_updated_at": "2025-05-21 10:05:28.000000 UTC",
+    "vehicle_class_id": "9",
+    "rk": "1"
+  },
+  {
+    "id": "15465547",
+    "price": "416.75",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2603",
+    "inserted_at": "2025-05-21 10:05:28.000000 UTC",
+    "last_updated_at": "2025-05-21 10:05:28.000000 UTC",
+    "vehicle_class_id": "11",
+    "rk": "1"
+  },
+  {
+    "id": "15465576",
+    "price": "360.56",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2603",
+    "inserted_at": "2025-05-21 10:05:28.000000 UTC",
+    "last_updated_at": "2025-05-21 10:05:28.000000 UTC",
+    "vehicle_class_id": "11",
+    "rk": "1"
+  },
+  {
+    "id": "7215905",
+    "price": "59.33",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2604",
+    "inserted_at": "2025-03-20 16:13:08.000000 UTC",
+    "last_updated_at": "2025-03-20 16:13:08.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "7215908",
+    "price": "52.5",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2604",
+    "inserted_at": "2025-03-20 16:13:08.000000 UTC",
+    "last_updated_at": "2025-03-20 16:13:08.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "5902795",
+    "price": "121",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2624",
+    "inserted_at": "2025-03-05 16:15:36.000000 UTC",
+    "last_updated_at": "2025-03-05 16:15:36.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "5902849",
+    "price": "142.2",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2624",
+    "inserted_at": "2025-03-05 16:15:36.000000 UTC",
+    "last_updated_at": "2025-03-05 16:15:36.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "9620629",
+    "price": "84.06",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2676",
+    "inserted_at": "2025-04-11 18:13:01.000000 UTC",
+    "last_updated_at": "2025-04-11 18:13:01.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "9620632",
+    "price": "84.06",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2676",
+    "inserted_at": "2025-04-11 18:13:01.000000 UTC",
+    "last_updated_at": "2025-04-11 18:13:01.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "9620916",
+    "price": "57.51",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2676",
+    "inserted_at": "2025-04-11 18:15:20.000000 UTC",
+    "last_updated_at": "2025-04-11 18:15:20.000000 UTC",
+    "vehicle_class_id": "12",
+    "rk": "1"
+  },
+  {
+    "id": "9620915",
+    "price": "57.51",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2676",
+    "inserted_at": "2025-04-11 18:15:20.000000 UTC",
+    "last_updated_at": "2025-04-11 18:15:20.000000 UTC",
+    "vehicle_class_id": "12",
+    "rk": "1"
+  },
+  {
+    "id": "11535706",
+    "price": "88",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2679",
+    "inserted_at": "2025-04-27 05:45:16.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:16.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "11535710",
+    "price": "88",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2679",
+    "inserted_at": "2025-04-27 05:45:16.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:16.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "11535711",
+    "price": "88",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2679",
+    "inserted_at": "2025-04-27 05:45:16.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:16.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "11535708",
+    "price": "88",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2679",
+    "inserted_at": "2025-04-27 05:45:16.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:16.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "9735004",
+    "price": "162.93",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2680",
+    "inserted_at": "2025-04-12 16:12:34.000000 UTC",
+    "last_updated_at": "2025-04-12 16:12:34.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "9735011",
+    "price": "178.67",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2680",
+    "inserted_at": "2025-04-12 16:12:34.000000 UTC",
+    "last_updated_at": "2025-04-12 16:12:34.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "9735012",
+    "price": "93",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2680",
+    "inserted_at": "2025-04-12 16:12:34.000000 UTC",
+    "last_updated_at": "2025-04-12 16:12:34.000000 UTC",
+    "vehicle_class_id": "12",
+    "rk": "1"
+  },
+  {
+    "id": "9735003",
+    "price": "84.71",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2680",
+    "inserted_at": "2025-04-12 16:12:34.000000 UTC",
+    "last_updated_at": "2025-04-12 16:12:34.000000 UTC",
+    "vehicle_class_id": "12",
+    "rk": "1"
+  },
+  {
+    "id": "6962657",
+    "price": "76.94",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2682",
+    "inserted_at": "2025-03-18 04:11:59.000000 UTC",
+    "last_updated_at": "2025-03-18 04:11:59.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "6962663",
+    "price": "70.46",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2682",
+    "inserted_at": "2025-03-18 04:11:59.000000 UTC",
+    "last_updated_at": "2025-03-18 04:11:59.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "11535513",
+    "price": "449.4",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2701",
+    "inserted_at": "2025-04-27 05:45:08.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:08.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "11535517",
+    "price": "449.4",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2701",
+    "inserted_at": "2025-04-27 05:45:08.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:08.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "6964675",
+    "price": "57.8",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2704",
+    "inserted_at": "2025-03-18 04:15:53.000000 UTC",
+    "last_updated_at": "2025-03-18 04:15:53.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "6964671",
+    "price": "57.8",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2704",
+    "inserted_at": "2025-03-18 04:15:53.000000 UTC",
+    "last_updated_at": "2025-03-18 04:15:53.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "6964674",
+    "price": "82.57",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2704",
+    "inserted_at": "2025-03-18 04:15:53.000000 UTC",
+    "last_updated_at": "2025-03-18 04:15:53.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "6964676",
+    "price": "82.57",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2704",
+    "inserted_at": "2025-03-18 04:15:53.000000 UTC",
+    "last_updated_at": "2025-03-18 04:15:53.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "6964678",
+    "price": "99.08",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2704",
+    "inserted_at": "2025-03-18 04:15:53.000000 UTC",
+    "last_updated_at": "2025-03-18 04:15:53.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "6964673",
+    "price": "99.08",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2704",
+    "inserted_at": "2025-03-18 04:15:53.000000 UTC",
+    "last_updated_at": "2025-03-18 04:15:53.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "6964677",
+    "price": "97.65",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2704",
+    "inserted_at": "2025-03-18 04:15:53.000000 UTC",
+    "last_updated_at": "2025-03-18 04:15:53.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "6964672",
+    "price": "97.65",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2704",
+    "inserted_at": "2025-03-18 04:15:53.000000 UTC",
+    "last_updated_at": "2025-03-18 04:15:53.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "10908112",
+    "price": "58.8",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2705",
+    "inserted_at": "2025-04-22 10:12:52.000000 UTC",
+    "last_updated_at": "2025-04-22 10:12:52.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "10908120",
+    "price": "58.8",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2705",
+    "inserted_at": "2025-04-22 10:12:52.000000 UTC",
+    "last_updated_at": "2025-04-22 10:12:52.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "10908121",
+    "price": "97.65",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2705",
+    "inserted_at": "2025-04-22 10:12:52.000000 UTC",
+    "last_updated_at": "2025-04-22 10:12:52.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "10908113",
+    "price": "97.65",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2705",
+    "inserted_at": "2025-04-22 10:12:52.000000 UTC",
+    "last_updated_at": "2025-04-22 10:12:52.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "10908122",
+    "price": "99.75",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2705",
+    "inserted_at": "2025-04-22 10:12:52.000000 UTC",
+    "last_updated_at": "2025-04-22 10:12:52.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "10908114",
+    "price": "99.75",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2705",
+    "inserted_at": "2025-04-22 10:12:52.000000 UTC",
+    "last_updated_at": "2025-04-22 10:12:52.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "10908115",
+    "price": "116.98",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2705",
+    "inserted_at": "2025-04-22 10:12:52.000000 UTC",
+    "last_updated_at": "2025-04-22 10:12:52.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "10908123",
+    "price": "116.98",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2705",
+    "inserted_at": "2025-04-22 10:12:52.000000 UTC",
+    "last_updated_at": "2025-04-22 10:12:52.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "10908116",
+    "price": "449.4",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2705",
+    "inserted_at": "2025-04-22 10:12:52.000000 UTC",
+    "last_updated_at": "2025-04-22 10:12:52.000000 UTC",
+    "vehicle_class_id": "9",
+    "rk": "1"
+  },
+  {
+    "id": "10908124",
+    "price": "449.4",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2705",
+    "inserted_at": "2025-04-22 10:12:52.000000 UTC",
+    "last_updated_at": "2025-04-22 10:12:52.000000 UTC",
+    "vehicle_class_id": "9",
+    "rk": "1"
+  },
+  {
+    "id": "10908117",
+    "price": "449.4",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2705",
+    "inserted_at": "2025-04-22 10:12:52.000000 UTC",
+    "last_updated_at": "2025-04-22 10:12:52.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "10908125",
+    "price": "449.4",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2705",
+    "inserted_at": "2025-04-22 10:12:52.000000 UTC",
+    "last_updated_at": "2025-04-22 10:12:52.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "10908126",
+    "price": "449.4",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2705",
+    "inserted_at": "2025-04-22 10:12:52.000000 UTC",
+    "last_updated_at": "2025-04-22 10:12:52.000000 UTC",
+    "vehicle_class_id": "11",
+    "rk": "1"
+  },
+  {
+    "id": "10908118",
+    "price": "449.4",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2705",
+    "inserted_at": "2025-04-22 10:12:52.000000 UTC",
+    "last_updated_at": "2025-04-22 10:12:52.000000 UTC",
+    "vehicle_class_id": "11",
+    "rk": "1"
+  },
+  {
+    "id": "10908127",
+    "price": "97.65",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2705",
+    "inserted_at": "2025-04-22 10:12:52.000000 UTC",
+    "last_updated_at": "2025-04-22 10:12:52.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "10908119",
+    "price": "97.65",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2705",
+    "inserted_at": "2025-04-22 10:12:52.000000 UTC",
+    "last_updated_at": "2025-04-22 10:12:52.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "3340602",
+    "price": "54.13",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2711",
+    "inserted_at": "2025-01-26 05:39:48.000000 UTC",
+    "last_updated_at": "2025-01-26 05:39:48.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "3340596",
+    "price": "61.9",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2711",
+    "inserted_at": "2025-01-26 05:39:48.000000 UTC",
+    "last_updated_at": "2025-01-26 05:39:48.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "3340597",
+    "price": "76.19",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2711",
+    "inserted_at": "2025-01-26 05:39:48.000000 UTC",
+    "last_updated_at": "2025-01-26 05:39:48.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "3340604",
+    "price": "73.5",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2711",
+    "inserted_at": "2025-01-26 05:39:48.000000 UTC",
+    "last_updated_at": "2025-01-26 05:39:48.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "3340603",
+    "price": "108.16",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2711",
+    "inserted_at": "2025-01-26 05:39:48.000000 UTC",
+    "last_updated_at": "2025-01-26 05:39:48.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "3340598",
+    "price": "136.19",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2711",
+    "inserted_at": "2025-01-26 05:39:48.000000 UTC",
+    "last_updated_at": "2025-01-26 05:39:48.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "3340601",
+    "price": "87.16",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2711",
+    "inserted_at": "2025-01-26 05:39:48.000000 UTC",
+    "last_updated_at": "2025-01-26 05:39:48.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "3340599",
+    "price": "94.29",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2711",
+    "inserted_at": "2025-01-26 05:39:48.000000 UTC",
+    "last_updated_at": "2025-01-26 05:39:48.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "3340605",
+    "price": "108.26",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2711",
+    "inserted_at": "2025-01-26 05:39:48.000000 UTC",
+    "last_updated_at": "2025-01-26 05:39:48.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "3340600",
+    "price": "122.86",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2711",
+    "inserted_at": "2025-01-26 05:39:48.000000 UTC",
+    "last_updated_at": "2025-01-26 05:39:48.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "6631808",
+    "price": "51.38",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2717",
+    "inserted_at": "2025-03-14 16:34:42.000000 UTC",
+    "last_updated_at": "2025-03-14 16:34:42.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "6631792",
+    "price": "59.05",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2717",
+    "inserted_at": "2025-03-14 16:34:42.000000 UTC",
+    "last_updated_at": "2025-03-14 16:34:42.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "6631797",
+    "price": "144.76",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2717",
+    "inserted_at": "2025-03-14 16:34:42.000000 UTC",
+    "last_updated_at": "2025-03-14 16:34:42.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "6631806",
+    "price": "127.52",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2717",
+    "inserted_at": "2025-03-14 16:34:42.000000 UTC",
+    "last_updated_at": "2025-03-14 16:34:42.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "6632016",
+    "price": "141.24",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2718",
+    "inserted_at": "2025-03-14 16:35:09.000000 UTC",
+    "last_updated_at": "2025-03-14 16:35:09.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "6632028",
+    "price": "141.24",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2718",
+    "inserted_at": "2025-03-14 16:35:09.000000 UTC",
+    "last_updated_at": "2025-03-14 16:35:09.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "11534993",
+    "price": "579.06",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2719",
+    "inserted_at": "2025-04-27 05:45:02.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:02.000000 UTC",
+    "vehicle_class_id": "9",
+    "rk": "1"
+  },
+  {
+    "id": "11534998",
+    "price": "579.06",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2719",
+    "inserted_at": "2025-04-27 05:45:02.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:02.000000 UTC",
+    "vehicle_class_id": "9",
+    "rk": "1"
+  },
+  {
+    "id": "11534996",
+    "price": "618.09",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2719",
+    "inserted_at": "2025-04-27 05:45:02.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:02.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "11535001",
+    "price": "618.09",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2719",
+    "inserted_at": "2025-04-27 05:45:02.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:02.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "11535000",
+    "price": "659.73",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2719",
+    "inserted_at": "2025-04-27 05:45:02.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:02.000000 UTC",
+    "vehicle_class_id": "11",
+    "rk": "1"
+  },
+  {
+    "id": "11534995",
+    "price": "659.73",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2719",
+    "inserted_at": "2025-04-27 05:45:02.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:02.000000 UTC",
+    "vehicle_class_id": "11",
+    "rk": "1"
+  },
+  {
+    "id": "11534999",
+    "price": "285.87",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2719",
+    "inserted_at": "2025-04-27 05:45:02.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:02.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "11534994",
+    "price": "285.87",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "2719",
+    "inserted_at": "2025-04-27 05:45:02.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:02.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "23719851",
+    "price": "80.4",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3039",
+    "inserted_at": "2025-07-01 16:30:28.000000 UTC",
+    "last_updated_at": "2025-07-01 16:30:28.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23719854",
+    "price": "80.4",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3039",
+    "inserted_at": "2025-07-01 16:30:28.000000 UTC",
+    "last_updated_at": "2025-07-01 16:30:28.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23900328",
+    "price": "74.99",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3039",
+    "inserted_at": "2025-07-02 16:43:27.000000 UTC",
+    "last_updated_at": "2025-07-02 16:43:27.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23900333",
+    "price": "82.49",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3039",
+    "inserted_at": "2025-07-02 16:43:27.000000 UTC",
+    "last_updated_at": "2025-07-02 16:43:27.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "6632604",
+    "price": "31.45",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3065",
+    "inserted_at": "2025-03-14 16:36:10.000000 UTC",
+    "last_updated_at": "2025-03-14 16:36:10.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "6632609",
+    "price": "31.45",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3065",
+    "inserted_at": "2025-03-14 16:36:10.000000 UTC",
+    "last_updated_at": "2025-03-14 16:36:10.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "6632600",
+    "price": "57.74",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3065",
+    "inserted_at": "2025-03-14 16:36:10.000000 UTC",
+    "last_updated_at": "2025-03-14 16:36:10.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "6632607",
+    "price": "57.74",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3065",
+    "inserted_at": "2025-03-14 16:36:10.000000 UTC",
+    "last_updated_at": "2025-03-14 16:36:10.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "6632612",
+    "price": "40.85",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3065",
+    "inserted_at": "2025-03-14 16:36:10.000000 UTC",
+    "last_updated_at": "2025-03-14 16:36:10.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "6632599",
+    "price": "43.02",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3065",
+    "inserted_at": "2025-03-14 16:36:10.000000 UTC",
+    "last_updated_at": "2025-03-14 16:36:10.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "6632608",
+    "price": "57.74",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3065",
+    "inserted_at": "2025-03-14 16:36:10.000000 UTC",
+    "last_updated_at": "2025-03-14 16:36:10.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "6632597",
+    "price": "57.74",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3065",
+    "inserted_at": "2025-03-14 16:36:10.000000 UTC",
+    "last_updated_at": "2025-03-14 16:36:10.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "6632598",
+    "price": "62.16",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3065",
+    "inserted_at": "2025-03-14 16:36:10.000000 UTC",
+    "last_updated_at": "2025-03-14 16:36:10.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "6632613",
+    "price": "62.16",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3065",
+    "inserted_at": "2025-03-14 16:36:10.000000 UTC",
+    "last_updated_at": "2025-03-14 16:36:10.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "6632603",
+    "price": "35.53",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3065",
+    "inserted_at": "2025-03-14 16:36:10.000000 UTC",
+    "last_updated_at": "2025-03-14 16:36:10.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "6632606",
+    "price": "35.53",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3065",
+    "inserted_at": "2025-03-14 16:36:10.000000 UTC",
+    "last_updated_at": "2025-03-14 16:36:10.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "6632602",
+    "price": "105.6",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3065",
+    "inserted_at": "2025-03-14 16:36:10.000000 UTC",
+    "last_updated_at": "2025-03-14 16:36:10.000000 UTC",
+    "vehicle_class_id": "9",
+    "rk": "1"
+  },
+  {
+    "id": "6632605",
+    "price": "105.6",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3065",
+    "inserted_at": "2025-03-14 16:36:10.000000 UTC",
+    "last_updated_at": "2025-03-14 16:36:10.000000 UTC",
+    "vehicle_class_id": "9",
+    "rk": "1"
+  },
+  {
+    "id": "6632610",
+    "price": "105.6",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3065",
+    "inserted_at": "2025-03-14 16:36:10.000000 UTC",
+    "last_updated_at": "2025-03-14 16:36:10.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "6632596",
+    "price": "105.6",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3065",
+    "inserted_at": "2025-03-14 16:36:10.000000 UTC",
+    "last_updated_at": "2025-03-14 16:36:10.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "6632601",
+    "price": "105.6",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3065",
+    "inserted_at": "2025-03-14 16:36:10.000000 UTC",
+    "last_updated_at": "2025-03-14 16:36:10.000000 UTC",
+    "vehicle_class_id": "11",
+    "rk": "1"
+  },
+  {
+    "id": "6632614",
+    "price": "105.6",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3065",
+    "inserted_at": "2025-03-14 16:36:10.000000 UTC",
+    "last_updated_at": "2025-03-14 16:36:10.000000 UTC",
+    "vehicle_class_id": "11",
+    "rk": "1"
+  },
+  {
+    "id": "6632595",
+    "price": "31.45",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3065",
+    "inserted_at": "2025-03-14 16:36:10.000000 UTC",
+    "last_updated_at": "2025-03-14 16:36:10.000000 UTC",
+    "vehicle_class_id": "12",
+    "rk": "1"
+  },
+  {
+    "id": "6632611",
+    "price": "31.45",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3065",
+    "inserted_at": "2025-03-14 16:36:10.000000 UTC",
+    "last_updated_at": "2025-03-14 16:36:10.000000 UTC",
+    "vehicle_class_id": "12",
+    "rk": "1"
+  },
+  {
+    "id": "13446303",
+    "price": "75.23",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3086",
+    "inserted_at": "2025-05-10 16:50:52.000000 UTC",
+    "last_updated_at": "2025-05-10 16:50:52.000000 UTC",
+    "vehicle_class_id": "11",
+    "rk": "1"
+  },
+  {
+    "id": "13446289",
+    "price": "92.57",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3086",
+    "inserted_at": "2025-05-10 16:50:52.000000 UTC",
+    "last_updated_at": "2025-05-10 16:50:52.000000 UTC",
+    "vehicle_class_id": "11",
+    "rk": "1"
+  },
+  {
+    "id": "23258752",
+    "price": "224.7",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3103",
+    "inserted_at": "2025-06-28 08:21:11.000000 UTC",
+    "last_updated_at": "2025-06-28 08:21:11.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "23258822",
+    "price": "224.7",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3103",
+    "inserted_at": "2025-06-28 08:21:11.000000 UTC",
+    "last_updated_at": "2025-06-28 08:21:11.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "23259744",
+    "price": "408.11",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3104",
+    "inserted_at": "2025-06-28 08:23:17.000000 UTC",
+    "last_updated_at": "2025-06-28 08:23:17.000000 UTC",
+    "vehicle_class_id": "9",
+    "rk": "1"
+  },
+  {
+    "id": "23259687",
+    "price": "373.71",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3104",
+    "inserted_at": "2025-06-28 08:23:17.000000 UTC",
+    "last_updated_at": "2025-06-28 08:23:17.000000 UTC",
+    "vehicle_class_id": "9",
+    "rk": "1"
+  },
+  {
+    "id": "9637463",
+    "price": "358.68",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3173",
+    "inserted_at": "2025-04-11 22:09:24.000000 UTC",
+    "last_updated_at": "2025-04-11 22:09:24.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "9637460",
+    "price": "358.68",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3173",
+    "inserted_at": "2025-04-11 22:09:24.000000 UTC",
+    "last_updated_at": "2025-04-11 22:09:24.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "9637461",
+    "price": "358.78",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3173",
+    "inserted_at": "2025-04-11 22:09:24.000000 UTC",
+    "last_updated_at": "2025-04-11 22:09:24.000000 UTC",
+    "vehicle_class_id": "9",
+    "rk": "1"
+  },
+  {
+    "id": "9637458",
+    "price": "358.78",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3173",
+    "inserted_at": "2025-04-11 22:09:24.000000 UTC",
+    "last_updated_at": "2025-04-11 22:09:24.000000 UTC",
+    "vehicle_class_id": "9",
+    "rk": "1"
+  },
+  {
+    "id": "9637465",
+    "price": "358.88",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3173",
+    "inserted_at": "2025-04-11 22:09:24.000000 UTC",
+    "last_updated_at": "2025-04-11 22:09:24.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "9637456",
+    "price": "358.88",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3173",
+    "inserted_at": "2025-04-11 22:09:24.000000 UTC",
+    "last_updated_at": "2025-04-11 22:09:24.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "9637464",
+    "price": "98.17",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3173",
+    "inserted_at": "2025-04-11 22:09:24.000000 UTC",
+    "last_updated_at": "2025-04-11 22:09:24.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "9637459",
+    "price": "98.17",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3173",
+    "inserted_at": "2025-04-11 22:09:24.000000 UTC",
+    "last_updated_at": "2025-04-11 22:09:24.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "11534974",
+    "price": "68.73",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3174",
+    "inserted_at": "2025-04-27 05:45:03.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:03.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "11534975",
+    "price": "68.73",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3174",
+    "inserted_at": "2025-04-27 05:45:03.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:03.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "10907692",
+    "price": "77",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3187",
+    "inserted_at": "2025-04-22 10:12:21.000000 UTC",
+    "last_updated_at": "2025-04-22 10:12:21.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "10907706",
+    "price": "77",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3187",
+    "inserted_at": "2025-04-22 10:12:21.000000 UTC",
+    "last_updated_at": "2025-04-22 10:12:21.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "10907691",
+    "price": "110",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3187",
+    "inserted_at": "2025-04-22 10:12:21.000000 UTC",
+    "last_updated_at": "2025-04-22 10:12:21.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "10907705",
+    "price": "110",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3187",
+    "inserted_at": "2025-04-22 10:12:21.000000 UTC",
+    "last_updated_at": "2025-04-22 10:12:21.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "11536073",
+    "price": "293.16",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3195",
+    "inserted_at": "2025-04-27 05:45:26.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:26.000000 UTC",
+    "vehicle_class_id": "11",
+    "rk": "1"
+  },
+  {
+    "id": "11536079",
+    "price": "293.16",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3195",
+    "inserted_at": "2025-04-27 05:45:26.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:26.000000 UTC",
+    "vehicle_class_id": "11",
+    "rk": "1"
+  },
+  {
+    "id": "9688223",
+    "price": "110",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3198",
+    "inserted_at": "2025-04-12 06:13:36.000000 UTC",
+    "last_updated_at": "2025-04-12 06:13:36.000000 UTC",
+    "vehicle_class_id": "9",
+    "rk": "1"
+  },
+  {
+    "id": "9688228",
+    "price": "110",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3198",
+    "inserted_at": "2025-04-12 06:13:36.000000 UTC",
+    "last_updated_at": "2025-04-12 06:13:36.000000 UTC",
+    "vehicle_class_id": "9",
+    "rk": "1"
+  },
+  {
+    "id": "6679993",
+    "price": "935",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3214",
+    "inserted_at": "2025-03-15 04:25:26.000000 UTC",
+    "last_updated_at": "2025-03-15 04:25:26.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "6679999",
+    "price": "935",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3214",
+    "inserted_at": "2025-03-15 04:25:26.000000 UTC",
+    "last_updated_at": "2025-03-15 04:25:26.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "9672453",
+    "price": "38.82",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3222",
+    "inserted_at": "2025-04-12 04:26:38.000000 UTC",
+    "last_updated_at": "2025-04-12 04:26:38.000000 UTC",
+    "vehicle_class_id": "12",
+    "rk": "1"
+  },
+  {
+    "id": "9672454",
+    "price": "36.05",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3222",
+    "inserted_at": "2025-04-12 04:26:38.000000 UTC",
+    "last_updated_at": "2025-04-12 04:26:38.000000 UTC",
+    "vehicle_class_id": "12",
+    "rk": "1"
+  },
+  {
+    "id": "9620728",
+    "price": "177.54",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3244",
+    "inserted_at": "2025-04-11 18:13:47.000000 UTC",
+    "last_updated_at": "2025-04-11 18:13:47.000000 UTC",
+    "vehicle_class_id": "9",
+    "rk": "1"
+  },
+  {
+    "id": "9620730",
+    "price": "161.74",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3244",
+    "inserted_at": "2025-04-11 18:13:47.000000 UTC",
+    "last_updated_at": "2025-04-11 18:13:47.000000 UTC",
+    "vehicle_class_id": "9",
+    "rk": "1"
+  },
+  {
+    "id": "11535598",
+    "price": "98.2",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3289",
+    "inserted_at": "2025-04-27 05:45:10.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:10.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "11535600",
+    "price": "98.2",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3289",
+    "inserted_at": "2025-04-27 05:45:10.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:10.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "8016470",
+    "price": "318.96",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3289",
+    "inserted_at": "2025-03-28 04:07:04.000000 UTC",
+    "last_updated_at": "2025-03-28 04:07:04.000000 UTC",
+    "vehicle_class_id": "11",
+    "rk": "1"
+  },
+  {
+    "id": "8016475",
+    "price": "266.11",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3289",
+    "inserted_at": "2025-03-28 04:07:04.000000 UTC",
+    "last_updated_at": "2025-03-28 04:07:04.000000 UTC",
+    "vehicle_class_id": "11",
+    "rk": "1"
+  },
+  {
+    "id": "8016472",
+    "price": "75.97",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3289",
+    "inserted_at": "2025-03-28 04:07:04.000000 UTC",
+    "last_updated_at": "2025-03-28 04:07:04.000000 UTC",
+    "vehicle_class_id": "12",
+    "rk": "1"
+  },
+  {
+    "id": "8016479",
+    "price": "63.92",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3289",
+    "inserted_at": "2025-03-28 04:07:04.000000 UTC",
+    "last_updated_at": "2025-03-28 04:07:04.000000 UTC",
+    "vehicle_class_id": "12",
+    "rk": "1"
+  },
+  {
+    "id": "11535597",
+    "price": "108.39",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3289",
+    "inserted_at": "2025-04-27 05:45:10.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:10.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "11535599",
+    "price": "108.39",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3289",
+    "inserted_at": "2025-04-27 05:45:10.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:10.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "9733565",
+    "price": "199.86",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3295",
+    "inserted_at": "2025-04-12 16:07:34.000000 UTC",
+    "last_updated_at": "2025-04-12 16:07:34.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "9733563",
+    "price": "199.86",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3295",
+    "inserted_at": "2025-04-12 16:07:34.000000 UTC",
+    "last_updated_at": "2025-04-12 16:07:34.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "9733570",
+    "price": "199.96",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3295",
+    "inserted_at": "2025-04-12 16:07:34.000000 UTC",
+    "last_updated_at": "2025-04-12 16:07:34.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "9733560",
+    "price": "199.96",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3295",
+    "inserted_at": "2025-04-12 16:07:34.000000 UTC",
+    "last_updated_at": "2025-04-12 16:07:34.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "9603191",
+    "price": "65.1",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3302",
+    "inserted_at": "2025-04-11 16:30:17.000000 UTC",
+    "last_updated_at": "2025-04-11 16:30:17.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "9603190",
+    "price": "65.1",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3302",
+    "inserted_at": "2025-04-11 16:30:17.000000 UTC",
+    "last_updated_at": "2025-04-11 16:30:17.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "9603200",
+    "price": "70.1",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3302",
+    "inserted_at": "2025-04-11 16:30:17.000000 UTC",
+    "last_updated_at": "2025-04-11 16:30:17.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "9603201",
+    "price": "70.1",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3302",
+    "inserted_at": "2025-04-11 16:30:17.000000 UTC",
+    "last_updated_at": "2025-04-11 16:30:17.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "9603199",
+    "price": "80.12",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3302",
+    "inserted_at": "2025-04-11 16:30:17.000000 UTC",
+    "last_updated_at": "2025-04-11 16:30:17.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "9603198",
+    "price": "80.12",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3302",
+    "inserted_at": "2025-04-11 16:30:17.000000 UTC",
+    "last_updated_at": "2025-04-11 16:30:17.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "9603195",
+    "price": "100.15",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3302",
+    "inserted_at": "2025-04-11 16:30:17.000000 UTC",
+    "last_updated_at": "2025-04-11 16:30:17.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "9603194",
+    "price": "100.15",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3302",
+    "inserted_at": "2025-04-11 16:30:17.000000 UTC",
+    "last_updated_at": "2025-04-11 16:30:17.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "9603196",
+    "price": "70.1",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3302",
+    "inserted_at": "2025-04-11 16:30:17.000000 UTC",
+    "last_updated_at": "2025-04-11 16:30:17.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "9603197",
+    "price": "70.1",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3302",
+    "inserted_at": "2025-04-11 16:30:17.000000 UTC",
+    "last_updated_at": "2025-04-11 16:30:17.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "9603193",
+    "price": "65.1",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3302",
+    "inserted_at": "2025-04-11 16:30:17.000000 UTC",
+    "last_updated_at": "2025-04-11 16:30:17.000000 UTC",
+    "vehicle_class_id": "12",
+    "rk": "1"
+  },
+  {
+    "id": "9603192",
+    "price": "65.1",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3302",
+    "inserted_at": "2025-04-11 16:30:17.000000 UTC",
+    "last_updated_at": "2025-04-11 16:30:17.000000 UTC",
+    "vehicle_class_id": "12",
+    "rk": "1"
+  },
+  {
+    "id": "22719335",
+    "price": "153.64",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3309",
+    "inserted_at": "2025-06-24 04:39:52.000000 UTC",
+    "last_updated_at": "2025-06-24 04:39:52.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "22719339",
+    "price": "117.43",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3309",
+    "inserted_at": "2025-06-24 04:39:52.000000 UTC",
+    "last_updated_at": "2025-06-24 04:39:52.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "24054021",
+    "price": "603.48",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3365",
+    "inserted_at": "2025-07-03 17:33:29.000000 UTC",
+    "last_updated_at": "2025-07-03 17:33:29.000000 UTC",
+    "vehicle_class_id": "11",
+    "rk": "1"
+  },
+  {
+    "id": "24054022",
+    "price": "603.48",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3365",
+    "inserted_at": "2025-07-03 17:33:29.000000 UTC",
+    "last_updated_at": "2025-07-03 17:33:29.000000 UTC",
+    "vehicle_class_id": "11",
+    "rk": "1"
+  },
+  {
+    "id": "23970181",
+    "price": "28.49",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3392",
+    "inserted_at": "2025-07-03 04:25:04.000000 UTC",
+    "last_updated_at": "2025-07-03 04:25:04.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23970203",
+    "price": "28.49",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3392",
+    "inserted_at": "2025-07-03 04:25:04.000000 UTC",
+    "last_updated_at": "2025-07-03 04:25:04.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23970927",
+    "price": "40",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3392",
+    "inserted_at": "2025-07-03 04:26:05.000000 UTC",
+    "last_updated_at": "2025-07-03 04:26:05.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23970910",
+    "price": "40",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3392",
+    "inserted_at": "2025-07-03 04:26:05.000000 UTC",
+    "last_updated_at": "2025-07-03 04:26:05.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23970206",
+    "price": "51.99",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3392",
+    "inserted_at": "2025-07-03 04:25:04.000000 UTC",
+    "last_updated_at": "2025-07-03 04:25:04.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23970179",
+    "price": "51.99",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3392",
+    "inserted_at": "2025-07-03 04:25:04.000000 UTC",
+    "last_updated_at": "2025-07-03 04:25:04.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23970208",
+    "price": "56.43",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3392",
+    "inserted_at": "2025-07-03 04:25:04.000000 UTC",
+    "last_updated_at": "2025-07-03 04:25:04.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "23970180",
+    "price": "56.43",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3392",
+    "inserted_at": "2025-07-03 04:25:04.000000 UTC",
+    "last_updated_at": "2025-07-03 04:25:04.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "23970183",
+    "price": "114.67",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3392",
+    "inserted_at": "2025-07-03 04:25:04.000000 UTC",
+    "last_updated_at": "2025-07-03 04:25:04.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "23970207",
+    "price": "114.67",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3392",
+    "inserted_at": "2025-07-03 04:25:04.000000 UTC",
+    "last_updated_at": "2025-07-03 04:25:04.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "23970205",
+    "price": "31.99",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3392",
+    "inserted_at": "2025-07-03 04:25:04.000000 UTC",
+    "last_updated_at": "2025-07-03 04:25:04.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23970182",
+    "price": "31.99",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3392",
+    "inserted_at": "2025-07-03 04:25:04.000000 UTC",
+    "last_updated_at": "2025-07-03 04:25:04.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23836354",
+    "price": "76.74",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3396",
+    "inserted_at": "2025-07-02 08:26:35.000000 UTC",
+    "last_updated_at": "2025-07-02 08:26:35.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23836352",
+    "price": "76.74",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3396",
+    "inserted_at": "2025-07-02 08:26:35.000000 UTC",
+    "last_updated_at": "2025-07-02 08:26:35.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23836347",
+    "price": "98.81",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3396",
+    "inserted_at": "2025-07-02 08:26:35.000000 UTC",
+    "last_updated_at": "2025-07-02 08:26:35.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23836353",
+    "price": "98.81",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3396",
+    "inserted_at": "2025-07-02 08:26:35.000000 UTC",
+    "last_updated_at": "2025-07-02 08:26:35.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23836358",
+    "price": "107.24",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3396",
+    "inserted_at": "2025-07-02 08:26:35.000000 UTC",
+    "last_updated_at": "2025-07-02 08:26:35.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23836350",
+    "price": "107.24",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3396",
+    "inserted_at": "2025-07-02 08:26:35.000000 UTC",
+    "last_updated_at": "2025-07-02 08:26:35.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23836783",
+    "price": "116.82",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3396",
+    "inserted_at": "2025-07-02 08:27:35.000000 UTC",
+    "last_updated_at": "2025-07-02 08:27:35.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "23836787",
+    "price": "116.82",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3396",
+    "inserted_at": "2025-07-02 08:27:35.000000 UTC",
+    "last_updated_at": "2025-07-02 08:27:35.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "23836785",
+    "price": "106.7",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3396",
+    "inserted_at": "2025-07-02 08:27:35.000000 UTC",
+    "last_updated_at": "2025-07-02 08:27:35.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23836784",
+    "price": "106.7",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3396",
+    "inserted_at": "2025-07-02 08:27:35.000000 UTC",
+    "last_updated_at": "2025-07-02 08:27:35.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23946295",
+    "price": "74.09",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3399",
+    "inserted_at": "2025-07-03 00:26:31.000000 UTC",
+    "last_updated_at": "2025-07-03 00:26:31.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23946284",
+    "price": "81.49",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3399",
+    "inserted_at": "2025-07-03 00:26:31.000000 UTC",
+    "last_updated_at": "2025-07-03 00:26:31.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23946296",
+    "price": "94.7",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3399",
+    "inserted_at": "2025-07-03 00:26:31.000000 UTC",
+    "last_updated_at": "2025-07-03 00:26:31.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23946285",
+    "price": "104.17",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3399",
+    "inserted_at": "2025-07-03 00:26:31.000000 UTC",
+    "last_updated_at": "2025-07-03 00:26:31.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23946294",
+    "price": "127.43",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3399",
+    "inserted_at": "2025-07-03 00:26:31.000000 UTC",
+    "last_updated_at": "2025-07-03 00:26:31.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "23946286",
+    "price": "140.17",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3399",
+    "inserted_at": "2025-07-03 00:26:31.000000 UTC",
+    "last_updated_at": "2025-07-03 00:26:31.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "23946293",
+    "price": "80.27",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3399",
+    "inserted_at": "2025-07-03 00:26:31.000000 UTC",
+    "last_updated_at": "2025-07-03 00:26:31.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23946288",
+    "price": "88.29",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3399",
+    "inserted_at": "2025-07-03 00:26:31.000000 UTC",
+    "last_updated_at": "2025-07-03 00:26:31.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23677972",
+    "price": "48.11",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3405",
+    "inserted_at": "2025-07-01 08:25:06.000000 UTC",
+    "last_updated_at": "2025-07-01 08:25:06.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23677946",
+    "price": "46.55",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3405",
+    "inserted_at": "2025-07-01 08:25:06.000000 UTC",
+    "last_updated_at": "2025-07-01 08:25:06.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23677945",
+    "price": "57.74",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3405",
+    "inserted_at": "2025-07-01 08:25:06.000000 UTC",
+    "last_updated_at": "2025-07-01 08:25:06.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23677970",
+    "price": "63.51",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3405",
+    "inserted_at": "2025-07-01 08:25:06.000000 UTC",
+    "last_updated_at": "2025-07-01 08:25:06.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23970885",
+    "price": "120",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3419",
+    "inserted_at": "2025-07-03 04:26:05.000000 UTC",
+    "last_updated_at": "2025-07-03 04:26:05.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "23970918",
+    "price": "120",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3419",
+    "inserted_at": "2025-07-03 04:26:05.000000 UTC",
+    "last_updated_at": "2025-07-03 04:26:05.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "23787606",
+    "price": "71.91",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3421",
+    "inserted_at": "2025-07-02 04:24:34.000000 UTC",
+    "last_updated_at": "2025-07-02 04:24:34.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23787582",
+    "price": "71.91",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3421",
+    "inserted_at": "2025-07-02 04:24:34.000000 UTC",
+    "last_updated_at": "2025-07-02 04:24:34.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23945747",
+    "price": "85.57",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3421",
+    "inserted_at": "2025-07-03 00:25:07.000000 UTC",
+    "last_updated_at": "2025-07-03 00:25:07.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23945730",
+    "price": "94.13",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3421",
+    "inserted_at": "2025-07-03 00:25:07.000000 UTC",
+    "last_updated_at": "2025-07-03 00:25:07.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23787581",
+    "price": "95.02",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3421",
+    "inserted_at": "2025-07-02 04:24:34.000000 UTC",
+    "last_updated_at": "2025-07-02 04:24:34.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "23787610",
+    "price": "95.02",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3421",
+    "inserted_at": "2025-07-02 04:24:34.000000 UTC",
+    "last_updated_at": "2025-07-02 04:24:34.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "23787609",
+    "price": "192.51",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3421",
+    "inserted_at": "2025-07-02 04:24:34.000000 UTC",
+    "last_updated_at": "2025-07-02 04:24:34.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "23787584",
+    "price": "192.51",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3421",
+    "inserted_at": "2025-07-02 04:24:34.000000 UTC",
+    "last_updated_at": "2025-07-02 04:24:34.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "23787608",
+    "price": "62.96",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3421",
+    "inserted_at": "2025-07-02 04:24:34.000000 UTC",
+    "last_updated_at": "2025-07-02 04:24:34.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23787585",
+    "price": "62.96",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3421",
+    "inserted_at": "2025-07-02 04:24:34.000000 UTC",
+    "last_updated_at": "2025-07-02 04:24:34.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23821765",
+    "price": "106.71",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3423",
+    "inserted_at": "2025-07-02 07:35:53.000000 UTC",
+    "last_updated_at": "2025-07-02 07:35:53.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23821694",
+    "price": "106.71",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3423",
+    "inserted_at": "2025-07-02 07:35:53.000000 UTC",
+    "last_updated_at": "2025-07-02 07:35:53.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23821697",
+    "price": "237.52",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3423",
+    "inserted_at": "2025-07-02 07:35:53.000000 UTC",
+    "last_updated_at": "2025-07-02 07:35:53.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "23821768",
+    "price": "237.52",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3423",
+    "inserted_at": "2025-07-02 07:35:53.000000 UTC",
+    "last_updated_at": "2025-07-02 07:35:53.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "23821769",
+    "price": "197.01",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3423",
+    "inserted_at": "2025-07-02 07:35:53.000000 UTC",
+    "last_updated_at": "2025-07-02 07:35:53.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23821699",
+    "price": "197.01",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3423",
+    "inserted_at": "2025-07-02 07:35:53.000000 UTC",
+    "last_updated_at": "2025-07-02 07:35:53.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23705813",
+    "price": "264",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3428",
+    "inserted_at": "2025-07-01 13:50:08.000000 UTC",
+    "last_updated_at": "2025-07-01 13:50:08.000000 UTC",
+    "vehicle_class_id": "9",
+    "rk": "1"
+  },
+  {
+    "id": "23705807",
+    "price": "264",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3428",
+    "inserted_at": "2025-07-01 13:50:08.000000 UTC",
+    "last_updated_at": "2025-07-01 13:50:08.000000 UTC",
+    "vehicle_class_id": "9",
+    "rk": "1"
+  },
+  {
+    "id": "23705213",
+    "price": "593.01",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3437",
+    "inserted_at": "2025-07-01 13:45:04.000000 UTC",
+    "last_updated_at": "2025-07-01 13:45:04.000000 UTC",
+    "vehicle_class_id": "9",
+    "rk": "1"
+  },
+  {
+    "id": "23705207",
+    "price": "593.01",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3437",
+    "inserted_at": "2025-07-01 13:45:04.000000 UTC",
+    "last_updated_at": "2025-07-01 13:45:04.000000 UTC",
+    "vehicle_class_id": "9",
+    "rk": "1"
+  },
+  {
+    "id": "23767173",
+    "price": "63.56",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3572",
+    "inserted_at": "2025-07-02 00:23:28.000000 UTC",
+    "last_updated_at": "2025-07-02 00:23:28.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23767169",
+    "price": "63.56",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3572",
+    "inserted_at": "2025-07-02 00:23:28.000000 UTC",
+    "last_updated_at": "2025-07-02 00:23:28.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23767167",
+    "price": "74.99",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3572",
+    "inserted_at": "2025-07-02 00:23:28.000000 UTC",
+    "last_updated_at": "2025-07-02 00:23:28.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23767176",
+    "price": "74.99",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3572",
+    "inserted_at": "2025-07-02 00:23:28.000000 UTC",
+    "last_updated_at": "2025-07-02 00:23:28.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23767174",
+    "price": "76.99",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3572",
+    "inserted_at": "2025-07-02 00:23:28.000000 UTC",
+    "last_updated_at": "2025-07-02 00:23:28.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23767170",
+    "price": "76.99",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3572",
+    "inserted_at": "2025-07-02 00:23:28.000000 UTC",
+    "last_updated_at": "2025-07-02 00:23:28.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23767168",
+    "price": "147",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3572",
+    "inserted_at": "2025-07-02 00:23:28.000000 UTC",
+    "last_updated_at": "2025-07-02 00:23:28.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "23767172",
+    "price": "147",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3572",
+    "inserted_at": "2025-07-02 00:23:28.000000 UTC",
+    "last_updated_at": "2025-07-02 00:23:28.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "23766597",
+    "price": "147.58",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3572",
+    "inserted_at": "2025-07-02 00:22:29.000000 UTC",
+    "last_updated_at": "2025-07-02 00:22:29.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "23766589",
+    "price": "147.58",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3572",
+    "inserted_at": "2025-07-02 00:22:29.000000 UTC",
+    "last_updated_at": "2025-07-02 00:22:29.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "23767166",
+    "price": "71.55",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3572",
+    "inserted_at": "2025-07-02 00:23:28.000000 UTC",
+    "last_updated_at": "2025-07-02 00:23:28.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23767175",
+    "price": "71.55",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3572",
+    "inserted_at": "2025-07-02 00:23:28.000000 UTC",
+    "last_updated_at": "2025-07-02 00:23:28.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23822493",
+    "price": "242.49",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3581",
+    "inserted_at": "2025-07-02 07:36:29.000000 UTC",
+    "last_updated_at": "2025-07-02 07:36:29.000000 UTC",
+    "vehicle_class_id": "11",
+    "rk": "1"
+  },
+  {
+    "id": "23822492",
+    "price": "242.49",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3581",
+    "inserted_at": "2025-07-02 07:36:29.000000 UTC",
+    "last_updated_at": "2025-07-02 07:36:29.000000 UTC",
+    "vehicle_class_id": "11",
+    "rk": "1"
+  },
+  {
+    "id": "23895746",
+    "price": "100",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3667",
+    "inserted_at": "2025-07-02 16:36:59.000000 UTC",
+    "last_updated_at": "2025-07-02 16:36:59.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23895740",
+    "price": "100",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3667",
+    "inserted_at": "2025-07-02 16:36:59.000000 UTC",
+    "last_updated_at": "2025-07-02 16:36:59.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23895036",
+    "price": "109.14",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3667",
+    "inserted_at": "2025-07-02 16:35:59.000000 UTC",
+    "last_updated_at": "2025-07-02 16:35:59.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23895042",
+    "price": "109.14",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3667",
+    "inserted_at": "2025-07-02 16:35:59.000000 UTC",
+    "last_updated_at": "2025-07-02 16:35:59.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23895047",
+    "price": "188.87",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3667",
+    "inserted_at": "2025-07-02 16:35:59.000000 UTC",
+    "last_updated_at": "2025-07-02 16:35:59.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "23895038",
+    "price": "188.87",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3667",
+    "inserted_at": "2025-07-02 16:35:59.000000 UTC",
+    "last_updated_at": "2025-07-02 16:35:59.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "23895037",
+    "price": "81.04",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3667",
+    "inserted_at": "2025-07-02 16:35:59.000000 UTC",
+    "last_updated_at": "2025-07-02 16:35:59.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23895046",
+    "price": "81.04",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3667",
+    "inserted_at": "2025-07-02 16:35:59.000000 UTC",
+    "last_updated_at": "2025-07-02 16:35:59.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23786849",
+    "price": "68.21",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3688",
+    "inserted_at": "2025-07-02 04:23:30.000000 UTC",
+    "last_updated_at": "2025-07-02 04:23:30.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23786862",
+    "price": "62.01",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3688",
+    "inserted_at": "2025-07-02 04:23:30.000000 UTC",
+    "last_updated_at": "2025-07-02 04:23:30.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23786864",
+    "price": "88.01",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3688",
+    "inserted_at": "2025-07-02 04:23:30.000000 UTC",
+    "last_updated_at": "2025-07-02 04:23:30.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23786844",
+    "price": "96.81",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3688",
+    "inserted_at": "2025-07-02 04:23:30.000000 UTC",
+    "last_updated_at": "2025-07-02 04:23:30.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23786847",
+    "price": "72.4",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3688",
+    "inserted_at": "2025-07-02 04:23:30.000000 UTC",
+    "last_updated_at": "2025-07-02 04:23:30.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23786863",
+    "price": "65.81",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3688",
+    "inserted_at": "2025-07-02 04:23:30.000000 UTC",
+    "last_updated_at": "2025-07-02 04:23:30.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23766834",
+    "price": "131.65",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3876",
+    "inserted_at": "2025-07-02 00:22:58.000000 UTC",
+    "last_updated_at": "2025-07-02 00:22:58.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23766830",
+    "price": "125",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3876",
+    "inserted_at": "2025-07-02 00:22:58.000000 UTC",
+    "last_updated_at": "2025-07-02 00:22:58.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23766828",
+    "price": "124.38",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3876",
+    "inserted_at": "2025-07-02 00:22:58.000000 UTC",
+    "last_updated_at": "2025-07-02 00:22:58.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23766835",
+    "price": "124.38",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3876",
+    "inserted_at": "2025-07-02 00:22:58.000000 UTC",
+    "last_updated_at": "2025-07-02 00:22:58.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23679667",
+    "price": "59.7",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3892",
+    "inserted_at": "2025-07-01 08:28:29.000000 UTC",
+    "last_updated_at": "2025-07-01 08:28:29.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23679672",
+    "price": "59.7",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3892",
+    "inserted_at": "2025-07-01 08:28:29.000000 UTC",
+    "last_updated_at": "2025-07-01 08:28:29.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23679666",
+    "price": "77.99",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3892",
+    "inserted_at": "2025-07-01 08:28:29.000000 UTC",
+    "last_updated_at": "2025-07-01 08:28:29.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23679671",
+    "price": "77.99",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3892",
+    "inserted_at": "2025-07-01 08:28:29.000000 UTC",
+    "last_updated_at": "2025-07-01 08:28:29.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23679670",
+    "price": "77.6",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3892",
+    "inserted_at": "2025-07-01 08:28:29.000000 UTC",
+    "last_updated_at": "2025-07-01 08:28:29.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23679665",
+    "price": "77.6",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3892",
+    "inserted_at": "2025-07-01 08:28:29.000000 UTC",
+    "last_updated_at": "2025-07-01 08:28:29.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23945231",
+    "price": "55.53",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3893",
+    "inserted_at": "2025-07-03 00:23:58.000000 UTC",
+    "last_updated_at": "2025-07-03 00:23:58.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23945237",
+    "price": "59.7",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3893",
+    "inserted_at": "2025-07-03 00:23:58.000000 UTC",
+    "last_updated_at": "2025-07-03 00:23:58.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23945238",
+    "price": "61.7",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3893",
+    "inserted_at": "2025-07-03 00:23:58.000000 UTC",
+    "last_updated_at": "2025-07-03 00:23:58.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23945232",
+    "price": "56.09",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3893",
+    "inserted_at": "2025-07-03 00:23:58.000000 UTC",
+    "last_updated_at": "2025-07-03 00:23:58.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23945230",
+    "price": "55.81",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3893",
+    "inserted_at": "2025-07-03 00:23:58.000000 UTC",
+    "last_updated_at": "2025-07-03 00:23:58.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23945234",
+    "price": "61.39",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3893",
+    "inserted_at": "2025-07-03 00:23:58.000000 UTC",
+    "last_updated_at": "2025-07-03 00:23:58.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23768347",
+    "price": "60.89",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3894",
+    "inserted_at": "2025-07-02 00:25:30.000000 UTC",
+    "last_updated_at": "2025-07-02 00:25:30.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23768344",
+    "price": "60.89",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3894",
+    "inserted_at": "2025-07-02 00:25:30.000000 UTC",
+    "last_updated_at": "2025-07-02 00:25:30.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23768340",
+    "price": "81.47",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3894",
+    "inserted_at": "2025-07-02 00:25:30.000000 UTC",
+    "last_updated_at": "2025-07-02 00:25:30.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23768348",
+    "price": "81.47",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3894",
+    "inserted_at": "2025-07-02 00:25:30.000000 UTC",
+    "last_updated_at": "2025-07-02 00:25:30.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23768346",
+    "price": "84.89",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3894",
+    "inserted_at": "2025-07-02 00:25:30.000000 UTC",
+    "last_updated_at": "2025-07-02 00:25:30.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23768341",
+    "price": "84.89",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3894",
+    "inserted_at": "2025-07-02 00:25:30.000000 UTC",
+    "last_updated_at": "2025-07-02 00:25:30.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23768801",
+    "price": "110",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3894",
+    "inserted_at": "2025-07-02 00:26:28.000000 UTC",
+    "last_updated_at": "2025-07-02 00:26:28.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "23768802",
+    "price": "110",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3894",
+    "inserted_at": "2025-07-02 00:26:28.000000 UTC",
+    "last_updated_at": "2025-07-02 00:26:28.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "23768342",
+    "price": "262.22",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3894",
+    "inserted_at": "2025-07-02 00:25:30.000000 UTC",
+    "last_updated_at": "2025-07-02 00:25:30.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "23768350",
+    "price": "262.22",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3894",
+    "inserted_at": "2025-07-02 00:25:30.000000 UTC",
+    "last_updated_at": "2025-07-02 00:25:30.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "23768349",
+    "price": "75.99",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3894",
+    "inserted_at": "2025-07-02 00:25:30.000000 UTC",
+    "last_updated_at": "2025-07-02 00:25:30.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23768345",
+    "price": "75.99",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3894",
+    "inserted_at": "2025-07-02 00:25:30.000000 UTC",
+    "last_updated_at": "2025-07-02 00:25:30.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23813584",
+    "price": "407.1",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3933",
+    "inserted_at": "2025-07-02 07:26:39.000000 UTC",
+    "last_updated_at": "2025-07-02 07:26:39.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23813532",
+    "price": "295",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3933",
+    "inserted_at": "2025-07-02 07:26:39.000000 UTC",
+    "last_updated_at": "2025-07-02 07:26:39.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23813529",
+    "price": "285",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3933",
+    "inserted_at": "2025-07-02 07:26:39.000000 UTC",
+    "last_updated_at": "2025-07-02 07:26:39.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23813586",
+    "price": "285",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3933",
+    "inserted_at": "2025-07-02 07:26:39.000000 UTC",
+    "last_updated_at": "2025-07-02 07:26:39.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23813587",
+    "price": "405",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3933",
+    "inserted_at": "2025-07-02 07:26:39.000000 UTC",
+    "last_updated_at": "2025-07-02 07:26:39.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "23813530",
+    "price": "405",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3933",
+    "inserted_at": "2025-07-02 07:26:39.000000 UTC",
+    "last_updated_at": "2025-07-02 07:26:39.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "7967955",
+    "price": "44",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3994",
+    "inserted_at": "2025-03-27 16:20:55.000000 UTC",
+    "last_updated_at": "2025-03-27 16:20:55.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "7967931",
+    "price": "52.8",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3994",
+    "inserted_at": "2025-03-27 16:20:55.000000 UTC",
+    "last_updated_at": "2025-03-27 16:20:55.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "7967935",
+    "price": "320",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3994",
+    "inserted_at": "2025-03-27 16:20:55.000000 UTC",
+    "last_updated_at": "2025-03-27 16:20:55.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "7967958",
+    "price": "260.45",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3994",
+    "inserted_at": "2025-03-27 16:20:55.000000 UTC",
+    "last_updated_at": "2025-03-27 16:20:55.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "7967957",
+    "price": "260.55",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3994",
+    "inserted_at": "2025-03-27 16:20:55.000000 UTC",
+    "last_updated_at": "2025-03-27 16:20:55.000000 UTC",
+    "vehicle_class_id": "11",
+    "rk": "1"
+  },
+  {
+    "id": "7967936",
+    "price": "321.14",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "3994",
+    "inserted_at": "2025-03-27 16:20:55.000000 UTC",
+    "last_updated_at": "2025-03-27 16:20:55.000000 UTC",
+    "vehicle_class_id": "11",
+    "rk": "1"
+  },
+  {
+    "id": "23260438",
+    "price": "369.15",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4015",
+    "inserted_at": "2025-06-28 08:24:59.000000 UTC",
+    "last_updated_at": "2025-06-28 08:24:59.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "23260474",
+    "price": "423.1",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4015",
+    "inserted_at": "2025-06-28 08:24:59.000000 UTC",
+    "last_updated_at": "2025-06-28 08:24:59.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "23260475",
+    "price": "441.66",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4015",
+    "inserted_at": "2025-06-28 08:24:59.000000 UTC",
+    "last_updated_at": "2025-06-28 08:24:59.000000 UTC",
+    "vehicle_class_id": "11",
+    "rk": "1"
+  },
+  {
+    "id": "23260437",
+    "price": "380.65",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4015",
+    "inserted_at": "2025-06-28 08:24:59.000000 UTC",
+    "last_updated_at": "2025-06-28 08:24:59.000000 UTC",
+    "vehicle_class_id": "11",
+    "rk": "1"
+  },
+  {
+    "id": "23259566",
+    "price": "558.88",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4017",
+    "inserted_at": "2025-06-28 08:23:17.000000 UTC",
+    "last_updated_at": "2025-06-28 08:23:17.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "23259588",
+    "price": "539.49",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4017",
+    "inserted_at": "2025-06-28 08:23:17.000000 UTC",
+    "last_updated_at": "2025-06-28 08:23:17.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "23259567",
+    "price": "578.5",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4017",
+    "inserted_at": "2025-06-28 08:23:17.000000 UTC",
+    "last_updated_at": "2025-06-28 08:23:17.000000 UTC",
+    "vehicle_class_id": "11",
+    "rk": "1"
+  },
+  {
+    "id": "23259589",
+    "price": "543.4",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4017",
+    "inserted_at": "2025-06-28 08:23:17.000000 UTC",
+    "last_updated_at": "2025-06-28 08:23:17.000000 UTC",
+    "vehicle_class_id": "11",
+    "rk": "1"
+  },
+  {
+    "id": "22854991",
+    "price": "590.83",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4071",
+    "inserted_at": "2025-06-25 10:16:04.000000 UTC",
+    "last_updated_at": "2025-06-25 10:16:04.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "22855004",
+    "price": "590.83",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4071",
+    "inserted_at": "2025-06-25 10:16:04.000000 UTC",
+    "last_updated_at": "2025-06-25 10:16:04.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "22854993",
+    "price": "814.28",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4071",
+    "inserted_at": "2025-06-25 10:16:04.000000 UTC",
+    "last_updated_at": "2025-06-25 10:16:04.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "22855005",
+    "price": "814.28",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4071",
+    "inserted_at": "2025-06-25 10:16:04.000000 UTC",
+    "last_updated_at": "2025-06-25 10:16:04.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "22854990",
+    "price": "795.65",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4071",
+    "inserted_at": "2025-06-25 10:16:04.000000 UTC",
+    "last_updated_at": "2025-06-25 10:16:04.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "22855003",
+    "price": "795.65",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4071",
+    "inserted_at": "2025-06-25 10:16:04.000000 UTC",
+    "last_updated_at": "2025-06-25 10:16:04.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "22854988",
+    "price": "799.65",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4071",
+    "inserted_at": "2025-06-25 10:16:04.000000 UTC",
+    "last_updated_at": "2025-06-25 10:16:04.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "22855002",
+    "price": "799.65",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4071",
+    "inserted_at": "2025-06-25 10:16:04.000000 UTC",
+    "last_updated_at": "2025-06-25 10:16:04.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "22854986",
+    "price": "869.28",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4071",
+    "inserted_at": "2025-06-25 10:16:04.000000 UTC",
+    "last_updated_at": "2025-06-25 10:16:04.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "22855000",
+    "price": "869.28",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4071",
+    "inserted_at": "2025-06-25 10:16:04.000000 UTC",
+    "last_updated_at": "2025-06-25 10:16:04.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "22854994",
+    "price": "726.5",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4071",
+    "inserted_at": "2025-06-25 10:16:04.000000 UTC",
+    "last_updated_at": "2025-06-25 10:16:04.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "22854996",
+    "price": "726.5",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4071",
+    "inserted_at": "2025-06-25 10:16:04.000000 UTC",
+    "last_updated_at": "2025-06-25 10:16:04.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "22854989",
+    "price": "2432.73",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4071",
+    "inserted_at": "2025-06-25 10:16:04.000000 UTC",
+    "last_updated_at": "2025-06-25 10:16:04.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "22854998",
+    "price": "2432.73",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4071",
+    "inserted_at": "2025-06-25 10:16:04.000000 UTC",
+    "last_updated_at": "2025-06-25 10:16:04.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "22854995",
+    "price": "2444.95",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4071",
+    "inserted_at": "2025-06-25 10:16:04.000000 UTC",
+    "last_updated_at": "2025-06-25 10:16:04.000000 UTC",
+    "vehicle_class_id": "11",
+    "rk": "1"
+  },
+  {
+    "id": "22854997",
+    "price": "2444.95",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4071",
+    "inserted_at": "2025-06-25 10:16:04.000000 UTC",
+    "last_updated_at": "2025-06-25 10:16:04.000000 UTC",
+    "vehicle_class_id": "11",
+    "rk": "1"
+  },
+  {
+    "id": "22854992",
+    "price": "726.5",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4071",
+    "inserted_at": "2025-06-25 10:16:04.000000 UTC",
+    "last_updated_at": "2025-06-25 10:16:04.000000 UTC",
+    "vehicle_class_id": "12",
+    "rk": "1"
+  },
+  {
+    "id": "22855001",
+    "price": "726.5",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4071",
+    "inserted_at": "2025-06-25 10:16:04.000000 UTC",
+    "last_updated_at": "2025-06-25 10:16:04.000000 UTC",
+    "vehicle_class_id": "12",
+    "rk": "1"
+  },
+  {
+    "id": "22854987",
+    "price": "803.67",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4071",
+    "inserted_at": "2025-06-25 10:16:04.000000 UTC",
+    "last_updated_at": "2025-06-25 10:16:04.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "22854999",
+    "price": "803.67",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4071",
+    "inserted_at": "2025-06-25 10:16:04.000000 UTC",
+    "last_updated_at": "2025-06-25 10:16:04.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "22856971",
+    "price": "522.02",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4088",
+    "inserted_at": "2025-06-25 10:18:56.000000 UTC",
+    "last_updated_at": "2025-06-25 10:18:56.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "22856985",
+    "price": "639.25",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4088",
+    "inserted_at": "2025-06-25 10:18:56.000000 UTC",
+    "last_updated_at": "2025-06-25 10:18:56.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "22860878",
+    "price": "609.46",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4100",
+    "inserted_at": "2025-06-25 10:24:59.000000 UTC",
+    "last_updated_at": "2025-06-25 10:24:59.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "22860883",
+    "price": "609.46",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4100",
+    "inserted_at": "2025-06-25 10:24:59.000000 UTC",
+    "last_updated_at": "2025-06-25 10:24:59.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "22860872",
+    "price": "615.6",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4100",
+    "inserted_at": "2025-06-25 10:24:59.000000 UTC",
+    "last_updated_at": "2025-06-25 10:24:59.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "22860887",
+    "price": "615.6",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4100",
+    "inserted_at": "2025-06-25 10:24:59.000000 UTC",
+    "last_updated_at": "2025-06-25 10:24:59.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "22860879",
+    "price": "648.51",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4100",
+    "inserted_at": "2025-06-25 10:24:59.000000 UTC",
+    "last_updated_at": "2025-06-25 10:24:59.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "22860884",
+    "price": "648.51",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4100",
+    "inserted_at": "2025-06-25 10:24:59.000000 UTC",
+    "last_updated_at": "2025-06-25 10:24:59.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "22860873",
+    "price": "651.77",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4100",
+    "inserted_at": "2025-06-25 10:24:59.000000 UTC",
+    "last_updated_at": "2025-06-25 10:24:59.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "22860888",
+    "price": "651.77",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4100",
+    "inserted_at": "2025-06-25 10:24:59.000000 UTC",
+    "last_updated_at": "2025-06-25 10:24:59.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "22860876",
+    "price": "722.06",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4100",
+    "inserted_at": "2025-06-25 10:24:59.000000 UTC",
+    "last_updated_at": "2025-06-25 10:24:59.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "22860886",
+    "price": "722.06",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4100",
+    "inserted_at": "2025-06-25 10:24:59.000000 UTC",
+    "last_updated_at": "2025-06-25 10:24:59.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "22860875",
+    "price": "645.27",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4100",
+    "inserted_at": "2025-06-25 10:24:59.000000 UTC",
+    "last_updated_at": "2025-06-25 10:24:59.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "22860881",
+    "price": "645.27",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4100",
+    "inserted_at": "2025-06-25 10:24:59.000000 UTC",
+    "last_updated_at": "2025-06-25 10:24:59.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "22860877",
+    "price": "725.69",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4100",
+    "inserted_at": "2025-06-25 10:24:59.000000 UTC",
+    "last_updated_at": "2025-06-25 10:24:59.000000 UTC",
+    "vehicle_class_id": "9",
+    "rk": "1"
+  },
+  {
+    "id": "22860882",
+    "price": "725.69",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4100",
+    "inserted_at": "2025-06-25 10:24:59.000000 UTC",
+    "last_updated_at": "2025-06-25 10:24:59.000000 UTC",
+    "vehicle_class_id": "9",
+    "rk": "1"
+  },
+  {
+    "id": "22860874",
+    "price": "612.52",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4100",
+    "inserted_at": "2025-06-25 10:24:59.000000 UTC",
+    "last_updated_at": "2025-06-25 10:24:59.000000 UTC",
+    "vehicle_class_id": "12",
+    "rk": "1"
+  },
+  {
+    "id": "22860885",
+    "price": "612.52",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4100",
+    "inserted_at": "2025-06-25 10:24:59.000000 UTC",
+    "last_updated_at": "2025-06-25 10:24:59.000000 UTC",
+    "vehicle_class_id": "12",
+    "rk": "1"
+  },
+  {
+    "id": "22860880",
+    "price": "655.05",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4100",
+    "inserted_at": "2025-06-25 10:24:59.000000 UTC",
+    "last_updated_at": "2025-06-25 10:24:59.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "22860889",
+    "price": "655.05",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4100",
+    "inserted_at": "2025-06-25 10:24:59.000000 UTC",
+    "last_updated_at": "2025-06-25 10:24:59.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "22861465",
+    "price": "511.66",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4104",
+    "inserted_at": "2025-06-25 10:26:32.000000 UTC",
+    "last_updated_at": "2025-06-25 10:26:32.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "22861475",
+    "price": "511.66",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4104",
+    "inserted_at": "2025-06-25 10:26:32.000000 UTC",
+    "last_updated_at": "2025-06-25 10:26:32.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "22861463",
+    "price": "516.81",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4104",
+    "inserted_at": "2025-06-25 10:26:32.000000 UTC",
+    "last_updated_at": "2025-06-25 10:26:32.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "22861478",
+    "price": "516.81",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4104",
+    "inserted_at": "2025-06-25 10:26:32.000000 UTC",
+    "last_updated_at": "2025-06-25 10:26:32.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "22861462",
+    "price": "514.23",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4104",
+    "inserted_at": "2025-06-25 10:26:32.000000 UTC",
+    "last_updated_at": "2025-06-25 10:26:32.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "22861476",
+    "price": "514.23",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4104",
+    "inserted_at": "2025-06-25 10:26:32.000000 UTC",
+    "last_updated_at": "2025-06-25 10:26:32.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "22861798",
+    "price": "123.53",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4109",
+    "inserted_at": "2025-06-25 10:28:13.000000 UTC",
+    "last_updated_at": "2025-06-25 10:28:13.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "22861800",
+    "price": "123.53",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4109",
+    "inserted_at": "2025-06-25 10:28:13.000000 UTC",
+    "last_updated_at": "2025-06-25 10:28:13.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "22861797",
+    "price": "122.91",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4109",
+    "inserted_at": "2025-06-25 10:28:13.000000 UTC",
+    "last_updated_at": "2025-06-25 10:28:13.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "22861801",
+    "price": "122.91",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4109",
+    "inserted_at": "2025-06-25 10:28:13.000000 UTC",
+    "last_updated_at": "2025-06-25 10:28:13.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "22861538",
+    "price": "138.6",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4110",
+    "inserted_at": "2025-06-25 10:26:50.000000 UTC",
+    "last_updated_at": "2025-06-25 10:26:50.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "22861546",
+    "price": "138.6",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4110",
+    "inserted_at": "2025-06-25 10:26:50.000000 UTC",
+    "last_updated_at": "2025-06-25 10:26:50.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "22861542",
+    "price": "395.63",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4110",
+    "inserted_at": "2025-06-25 10:26:50.000000 UTC",
+    "last_updated_at": "2025-06-25 10:26:50.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "22861550",
+    "price": "395.63",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4110",
+    "inserted_at": "2025-06-25 10:26:50.000000 UTC",
+    "last_updated_at": "2025-06-25 10:26:50.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "22861543",
+    "price": "406.98",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4110",
+    "inserted_at": "2025-06-25 10:26:50.000000 UTC",
+    "last_updated_at": "2025-06-25 10:26:50.000000 UTC",
+    "vehicle_class_id": "11",
+    "rk": "1"
+  },
+  {
+    "id": "22861551",
+    "price": "406.98",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4110",
+    "inserted_at": "2025-06-25 10:26:50.000000 UTC",
+    "last_updated_at": "2025-06-25 10:26:50.000000 UTC",
+    "vehicle_class_id": "11",
+    "rk": "1"
+  },
+  {
+    "id": "12486898",
+    "price": "94.76",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4143",
+    "inserted_at": "2025-05-04 05:47:24.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:24.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "12486890",
+    "price": "94.76",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4143",
+    "inserted_at": "2025-05-04 05:47:24.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:24.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "12486892",
+    "price": "96.82",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4143",
+    "inserted_at": "2025-05-04 05:47:24.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:24.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "12486900",
+    "price": "96.82",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4143",
+    "inserted_at": "2025-05-04 05:47:24.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:24.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "12486902",
+    "price": "98.88",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4143",
+    "inserted_at": "2025-05-04 05:47:24.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:24.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "12486895",
+    "price": "98.88",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4143",
+    "inserted_at": "2025-05-04 05:47:24.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:24.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "12486899",
+    "price": "95.79",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4143",
+    "inserted_at": "2025-05-04 05:47:24.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:24.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "12486891",
+    "price": "95.79",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4143",
+    "inserted_at": "2025-05-04 05:47:24.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:24.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "12486901",
+    "price": "520.9",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4143",
+    "inserted_at": "2025-05-04 05:47:24.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:24.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "12486893",
+    "price": "520.8",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4143",
+    "inserted_at": "2025-05-04 05:47:24.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:24.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "12486897",
+    "price": "96.21",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4143",
+    "inserted_at": "2025-05-04 05:47:24.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:24.000000 UTC",
+    "vehicle_class_id": "12",
+    "rk": "1"
+  },
+  {
+    "id": "12486889",
+    "price": "96.11",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4143",
+    "inserted_at": "2025-05-04 05:47:24.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:24.000000 UTC",
+    "vehicle_class_id": "12",
+    "rk": "1"
+  },
+  {
+    "id": "12486888",
+    "price": "99.91",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4143",
+    "inserted_at": "2025-05-04 05:47:24.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:24.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "12486896",
+    "price": "99.91",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4143",
+    "inserted_at": "2025-05-04 05:47:24.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:24.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "12487898",
+    "price": "132.92",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4144",
+    "inserted_at": "2025-05-04 05:47:45.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:45.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "12487895",
+    "price": "132.92",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4144",
+    "inserted_at": "2025-05-04 05:47:45.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:45.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "22854476",
+    "price": "110.81",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4144",
+    "inserted_at": "2025-06-25 10:15:08.000000 UTC",
+    "last_updated_at": "2025-06-25 10:15:08.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "22854478",
+    "price": "110.81",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4144",
+    "inserted_at": "2025-06-25 10:15:08.000000 UTC",
+    "last_updated_at": "2025-06-25 10:15:08.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "22854814",
+    "price": "131.93",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4144",
+    "inserted_at": "2025-06-25 10:15:47.000000 UTC",
+    "last_updated_at": "2025-06-25 10:15:47.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "22854819",
+    "price": "131.93",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4144",
+    "inserted_at": "2025-06-25 10:15:47.000000 UTC",
+    "last_updated_at": "2025-06-25 10:15:47.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "22854815",
+    "price": "102.5",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4144",
+    "inserted_at": "2025-06-25 10:15:47.000000 UTC",
+    "last_updated_at": "2025-06-25 10:15:47.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "22854818",
+    "price": "102.5",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4144",
+    "inserted_at": "2025-06-25 10:15:47.000000 UTC",
+    "last_updated_at": "2025-06-25 10:15:47.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "22854816",
+    "price": "513.76",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4144",
+    "inserted_at": "2025-06-25 10:15:47.000000 UTC",
+    "last_updated_at": "2025-06-25 10:15:47.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "22854820",
+    "price": "513.76",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4144",
+    "inserted_at": "2025-06-25 10:15:47.000000 UTC",
+    "last_updated_at": "2025-06-25 10:15:47.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "22854813",
+    "price": "132.59",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4144",
+    "inserted_at": "2025-06-25 10:15:47.000000 UTC",
+    "last_updated_at": "2025-06-25 10:15:47.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "22854817",
+    "price": "132.59",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4144",
+    "inserted_at": "2025-06-25 10:15:47.000000 UTC",
+    "last_updated_at": "2025-06-25 10:15:47.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "12489144",
+    "price": "120.18",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4145",
+    "inserted_at": "2025-05-04 05:48:13.000000 UTC",
+    "last_updated_at": "2025-05-04 05:48:13.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "12489135",
+    "price": "120.08",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4145",
+    "inserted_at": "2025-05-04 05:48:13.000000 UTC",
+    "last_updated_at": "2025-05-04 05:48:13.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "12489136",
+    "price": "115.33",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4145",
+    "inserted_at": "2025-05-04 05:48:13.000000 UTC",
+    "last_updated_at": "2025-05-04 05:48:13.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "12489145",
+    "price": "115.43",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4145",
+    "inserted_at": "2025-05-04 05:48:13.000000 UTC",
+    "last_updated_at": "2025-05-04 05:48:13.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "12489141",
+    "price": "123.65",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4145",
+    "inserted_at": "2025-05-04 05:48:13.000000 UTC",
+    "last_updated_at": "2025-05-04 05:48:13.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "12489130",
+    "price": "123.55",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4145",
+    "inserted_at": "2025-05-04 05:48:13.000000 UTC",
+    "last_updated_at": "2025-05-04 05:48:13.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "12489142",
+    "price": "107.67",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4145",
+    "inserted_at": "2025-05-04 05:48:13.000000 UTC",
+    "last_updated_at": "2025-05-04 05:48:13.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "12489131",
+    "price": "107.57",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4145",
+    "inserted_at": "2025-05-04 05:48:13.000000 UTC",
+    "last_updated_at": "2025-05-04 05:48:13.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "12489143",
+    "price": "551.18",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4145",
+    "inserted_at": "2025-05-04 05:48:13.000000 UTC",
+    "last_updated_at": "2025-05-04 05:48:13.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "12489132",
+    "price": "551.08",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4145",
+    "inserted_at": "2025-05-04 05:48:13.000000 UTC",
+    "last_updated_at": "2025-05-04 05:48:13.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "12489138",
+    "price": "115.53",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4145",
+    "inserted_at": "2025-05-04 05:48:13.000000 UTC",
+    "last_updated_at": "2025-05-04 05:48:13.000000 UTC",
+    "vehicle_class_id": "12",
+    "rk": "1"
+  },
+  {
+    "id": "12489147",
+    "price": "115.63",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4145",
+    "inserted_at": "2025-05-04 05:48:13.000000 UTC",
+    "last_updated_at": "2025-05-04 05:48:13.000000 UTC",
+    "vehicle_class_id": "12",
+    "rk": "1"
+  },
+  {
+    "id": "12489137",
+    "price": "123.75",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4145",
+    "inserted_at": "2025-05-04 05:48:13.000000 UTC",
+    "last_updated_at": "2025-05-04 05:48:13.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "12489146",
+    "price": "123.85",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4145",
+    "inserted_at": "2025-05-04 05:48:13.000000 UTC",
+    "last_updated_at": "2025-05-04 05:48:13.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "12488277",
+    "price": "77.98",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4179",
+    "inserted_at": "2025-05-04 05:47:49.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:49.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "12488279",
+    "price": "77.98",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4179",
+    "inserted_at": "2025-05-04 05:47:49.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:49.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "12488278",
+    "price": "394.5",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4179",
+    "inserted_at": "2025-05-04 05:47:49.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:49.000000 UTC",
+    "vehicle_class_id": "9",
+    "rk": "1"
+  },
+  {
+    "id": "12488276",
+    "price": "394.5",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4179",
+    "inserted_at": "2025-05-04 05:47:49.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:49.000000 UTC",
+    "vehicle_class_id": "9",
+    "rk": "1"
+  },
+  {
+    "id": "12489443",
+    "price": "72.66",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4186",
+    "inserted_at": "2025-05-04 05:48:25.000000 UTC",
+    "last_updated_at": "2025-05-04 05:48:25.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "12489448",
+    "price": "72.76",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4186",
+    "inserted_at": "2025-05-04 05:48:25.000000 UTC",
+    "last_updated_at": "2025-05-04 05:48:25.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "12489438",
+    "price": "67.28",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4186",
+    "inserted_at": "2025-05-04 05:48:25.000000 UTC",
+    "last_updated_at": "2025-05-04 05:48:25.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "12489446",
+    "price": "67.38",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4186",
+    "inserted_at": "2025-05-04 05:48:25.000000 UTC",
+    "last_updated_at": "2025-05-04 05:48:25.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "12489435",
+    "price": "797.51",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4186",
+    "inserted_at": "2025-05-04 05:48:25.000000 UTC",
+    "last_updated_at": "2025-05-04 05:48:25.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "12489445",
+    "price": "797.61",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4186",
+    "inserted_at": "2025-05-04 05:48:25.000000 UTC",
+    "last_updated_at": "2025-05-04 05:48:25.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "12489441",
+    "price": "67.28",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4186",
+    "inserted_at": "2025-05-04 05:48:25.000000 UTC",
+    "last_updated_at": "2025-05-04 05:48:25.000000 UTC",
+    "vehicle_class_id": "12",
+    "rk": "1"
+  },
+  {
+    "id": "12489447",
+    "price": "67.38",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4186",
+    "inserted_at": "2025-05-04 05:48:25.000000 UTC",
+    "last_updated_at": "2025-05-04 05:48:25.000000 UTC",
+    "vehicle_class_id": "12",
+    "rk": "1"
+  },
+  {
+    "id": "12489249",
+    "price": "77.98",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4187",
+    "inserted_at": "2025-05-04 05:48:20.000000 UTC",
+    "last_updated_at": "2025-05-04 05:48:20.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "12489245",
+    "price": "77.98",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4187",
+    "inserted_at": "2025-05-04 05:48:20.000000 UTC",
+    "last_updated_at": "2025-05-04 05:48:20.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "12489250",
+    "price": "131.19",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4187",
+    "inserted_at": "2025-05-04 05:48:20.000000 UTC",
+    "last_updated_at": "2025-05-04 05:48:20.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "12489246",
+    "price": "131.19",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4187",
+    "inserted_at": "2025-05-04 05:48:20.000000 UTC",
+    "last_updated_at": "2025-05-04 05:48:20.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "12489248",
+    "price": "394.5",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4187",
+    "inserted_at": "2025-05-04 05:48:20.000000 UTC",
+    "last_updated_at": "2025-05-04 05:48:20.000000 UTC",
+    "vehicle_class_id": "9",
+    "rk": "1"
+  },
+  {
+    "id": "12489244",
+    "price": "394.5",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4187",
+    "inserted_at": "2025-05-04 05:48:20.000000 UTC",
+    "last_updated_at": "2025-05-04 05:48:20.000000 UTC",
+    "vehicle_class_id": "9",
+    "rk": "1"
+  },
+  {
+    "id": "12489247",
+    "price": "93.58",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4187",
+    "inserted_at": "2025-05-04 05:48:20.000000 UTC",
+    "last_updated_at": "2025-05-04 05:48:20.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "12489243",
+    "price": "93.58",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4187",
+    "inserted_at": "2025-05-04 05:48:20.000000 UTC",
+    "last_updated_at": "2025-05-04 05:48:20.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "12486954",
+    "price": "165.3",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4189",
+    "inserted_at": "2025-05-04 05:47:25.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:25.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "12486947",
+    "price": "165.2",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4189",
+    "inserted_at": "2025-05-04 05:47:25.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:25.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "12486942",
+    "price": "108.78",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4189",
+    "inserted_at": "2025-05-04 05:47:25.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:25.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "12486952",
+    "price": "108.88",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4189",
+    "inserted_at": "2025-05-04 05:47:25.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:25.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "12486956",
+    "price": "108.88",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4189",
+    "inserted_at": "2025-05-04 05:47:25.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:25.000000 UTC",
+    "vehicle_class_id": "12",
+    "rk": "1"
+  },
+  {
+    "id": "12486950",
+    "price": "108.78",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4189",
+    "inserted_at": "2025-05-04 05:47:25.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:25.000000 UTC",
+    "vehicle_class_id": "12",
+    "rk": "1"
+  },
+  {
+    "id": "12486948",
+    "price": "165.4",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4189",
+    "inserted_at": "2025-05-04 05:47:25.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:25.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "12486955",
+    "price": "165.5",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4189",
+    "inserted_at": "2025-05-04 05:47:25.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:25.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "12488869",
+    "price": "392.66",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4190",
+    "inserted_at": "2025-05-04 05:48:04.000000 UTC",
+    "last_updated_at": "2025-05-04 05:48:04.000000 UTC",
+    "vehicle_class_id": "9",
+    "rk": "1"
+  },
+  {
+    "id": "12488865",
+    "price": "392.66",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4190",
+    "inserted_at": "2025-05-04 05:48:04.000000 UTC",
+    "last_updated_at": "2025-05-04 05:48:04.000000 UTC",
+    "vehicle_class_id": "9",
+    "rk": "1"
+  },
+  {
+    "id": "12486509",
+    "price": "207.38",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4191",
+    "inserted_at": "2025-05-04 05:47:02.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:02.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "12486519",
+    "price": "207.48",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4191",
+    "inserted_at": "2025-05-04 05:47:02.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:02.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "12486517",
+    "price": "207.18",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4191",
+    "inserted_at": "2025-05-04 05:47:02.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:02.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "12486525",
+    "price": "207.28",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4191",
+    "inserted_at": "2025-05-04 05:47:02.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:02.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "12486508",
+    "price": "195.67",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4191",
+    "inserted_at": "2025-05-04 05:47:02.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:02.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "12486518",
+    "price": "195.77",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4191",
+    "inserted_at": "2025-05-04 05:47:02.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:02.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "12486522",
+    "price": "522.94",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4191",
+    "inserted_at": "2025-05-04 05:47:02.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:02.000000 UTC",
+    "vehicle_class_id": "9",
+    "rk": "1"
+  },
+  {
+    "id": "12486512",
+    "price": "522.84",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4191",
+    "inserted_at": "2025-05-04 05:47:02.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:02.000000 UTC",
+    "vehicle_class_id": "9",
+    "rk": "1"
+  },
+  {
+    "id": "12486524",
+    "price": "808.06",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4191",
+    "inserted_at": "2025-05-04 05:47:02.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:02.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "12486514",
+    "price": "807.96",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4191",
+    "inserted_at": "2025-05-04 05:47:02.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:02.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "12486511",
+    "price": "808.16",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4191",
+    "inserted_at": "2025-05-04 05:47:02.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:02.000000 UTC",
+    "vehicle_class_id": "11",
+    "rk": "1"
+  },
+  {
+    "id": "12486521",
+    "price": "808.26",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4191",
+    "inserted_at": "2025-05-04 05:47:02.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:02.000000 UTC",
+    "vehicle_class_id": "11",
+    "rk": "1"
+  },
+  {
+    "id": "12486520",
+    "price": "195.77",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4191",
+    "inserted_at": "2025-05-04 05:47:02.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:02.000000 UTC",
+    "vehicle_class_id": "12",
+    "rk": "1"
+  },
+  {
+    "id": "12486510",
+    "price": "195.67",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4191",
+    "inserted_at": "2025-05-04 05:47:02.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:02.000000 UTC",
+    "vehicle_class_id": "12",
+    "rk": "1"
+  },
+  {
+    "id": "12486523",
+    "price": "207.48",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4191",
+    "inserted_at": "2025-05-04 05:47:02.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:02.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "12486513",
+    "price": "207.38",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4191",
+    "inserted_at": "2025-05-04 05:47:02.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:02.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "6626308",
+    "price": "106.42",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4194",
+    "inserted_at": "2025-03-14 16:20:01.000000 UTC",
+    "last_updated_at": "2025-03-14 16:20:01.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "6626304",
+    "price": "106.42",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4194",
+    "inserted_at": "2025-03-14 16:20:01.000000 UTC",
+    "last_updated_at": "2025-03-14 16:20:01.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "6626314",
+    "price": "118.35",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4194",
+    "inserted_at": "2025-03-14 16:20:01.000000 UTC",
+    "last_updated_at": "2025-03-14 16:20:01.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "6626303",
+    "price": "118.35",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4194",
+    "inserted_at": "2025-03-14 16:20:01.000000 UTC",
+    "last_updated_at": "2025-03-14 16:20:01.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "6626306",
+    "price": "118.15",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4194",
+    "inserted_at": "2025-03-14 16:20:01.000000 UTC",
+    "last_updated_at": "2025-03-14 16:20:01.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "6626313",
+    "price": "118.15",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4194",
+    "inserted_at": "2025-03-14 16:20:01.000000 UTC",
+    "last_updated_at": "2025-03-14 16:20:01.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "6626305",
+    "price": "118.25",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4194",
+    "inserted_at": "2025-03-14 16:20:01.000000 UTC",
+    "last_updated_at": "2025-03-14 16:20:01.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "6626310",
+    "price": "118.25",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4194",
+    "inserted_at": "2025-03-14 16:20:01.000000 UTC",
+    "last_updated_at": "2025-03-14 16:20:01.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "6626307",
+    "price": "118.05",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4194",
+    "inserted_at": "2025-03-14 16:20:01.000000 UTC",
+    "last_updated_at": "2025-03-14 16:20:01.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "6626312",
+    "price": "118.05",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4194",
+    "inserted_at": "2025-03-14 16:20:01.000000 UTC",
+    "last_updated_at": "2025-03-14 16:20:01.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "6626302",
+    "price": "118.25",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4194",
+    "inserted_at": "2025-03-14 16:20:01.000000 UTC",
+    "last_updated_at": "2025-03-14 16:20:01.000000 UTC",
+    "vehicle_class_id": "12",
+    "rk": "1"
+  },
+  {
+    "id": "6626309",
+    "price": "118.25",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4194",
+    "inserted_at": "2025-03-14 16:20:01.000000 UTC",
+    "last_updated_at": "2025-03-14 16:20:01.000000 UTC",
+    "vehicle_class_id": "12",
+    "rk": "1"
+  },
+  {
+    "id": "6626311",
+    "price": "118.35",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4194",
+    "inserted_at": "2025-03-14 16:20:01.000000 UTC",
+    "last_updated_at": "2025-03-14 16:20:01.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "6626301",
+    "price": "118.35",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4194",
+    "inserted_at": "2025-03-14 16:20:01.000000 UTC",
+    "last_updated_at": "2025-03-14 16:20:01.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "5541094",
+    "price": "41.8",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4218",
+    "inserted_at": "2025-03-01 04:11:11.000000 UTC",
+    "last_updated_at": "2025-03-01 04:11:11.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "5541097",
+    "price": "41.8",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4218",
+    "inserted_at": "2025-03-01 04:11:11.000000 UTC",
+    "last_updated_at": "2025-03-01 04:11:11.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "5042236",
+    "price": "16.51",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4225",
+    "inserted_at": "2025-02-22 04:07:14.000000 UTC",
+    "last_updated_at": "2025-02-22 04:07:14.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "5042233",
+    "price": "19.27",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4225",
+    "inserted_at": "2025-02-22 04:07:14.000000 UTC",
+    "last_updated_at": "2025-02-22 04:07:14.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "5375865",
+    "price": "205.85",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4231",
+    "inserted_at": "2025-02-26 04:07:57.000000 UTC",
+    "last_updated_at": "2025-02-26 04:07:57.000000 UTC",
+    "vehicle_class_id": "11",
+    "rk": "1"
+  },
+  {
+    "id": "5375867",
+    "price": "171.7",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4231",
+    "inserted_at": "2025-02-26 04:07:57.000000 UTC",
+    "last_updated_at": "2025-02-26 04:07:57.000000 UTC",
+    "vehicle_class_id": "11",
+    "rk": "1"
+  },
+  {
+    "id": "11536963",
+    "price": "47.32",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4236",
+    "inserted_at": "2025-04-27 05:45:36.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:36.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "11536970",
+    "price": "47.42",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4236",
+    "inserted_at": "2025-04-27 05:45:36.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:36.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "11535664",
+    "price": "107.88",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4237",
+    "inserted_at": "2025-04-27 05:45:15.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:15.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "11535668",
+    "price": "107.88",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4237",
+    "inserted_at": "2025-04-27 05:45:15.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:15.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "11535463",
+    "price": "21.87",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4243",
+    "inserted_at": "2025-04-27 05:45:08.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:08.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "11535455",
+    "price": "21.87",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4243",
+    "inserted_at": "2025-04-27 05:45:08.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:08.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "11535452",
+    "price": "198.15",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4243",
+    "inserted_at": "2025-04-27 05:45:08.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:08.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "11535460",
+    "price": "198.15",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4243",
+    "inserted_at": "2025-04-27 05:45:08.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:08.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "11535456",
+    "price": "38.7",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4243",
+    "inserted_at": "2025-04-27 05:45:08.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:08.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "11535464",
+    "price": "38.7",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4243",
+    "inserted_at": "2025-04-27 05:45:08.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:08.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "11535461",
+    "price": "223",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4243",
+    "inserted_at": "2025-04-27 05:45:08.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:08.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "11535453",
+    "price": "223",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4243",
+    "inserted_at": "2025-04-27 05:45:08.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:08.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "11535466",
+    "price": "39.44",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4243",
+    "inserted_at": "2025-04-27 05:45:08.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:08.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "11535458",
+    "price": "39.44",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4243",
+    "inserted_at": "2025-04-27 05:45:08.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:08.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "11535454",
+    "price": "21",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4243",
+    "inserted_at": "2025-04-27 05:45:08.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:08.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "11535462",
+    "price": "21",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4243",
+    "inserted_at": "2025-04-27 05:45:08.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:08.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "11535459",
+    "price": "50.42",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4243",
+    "inserted_at": "2025-04-27 05:45:08.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:08.000000 UTC",
+    "vehicle_class_id": "9",
+    "rk": "1"
+  },
+  {
+    "id": "11535451",
+    "price": "50.42",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4243",
+    "inserted_at": "2025-04-27 05:45:08.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:08.000000 UTC",
+    "vehicle_class_id": "9",
+    "rk": "1"
+  },
+  {
+    "id": "11535465",
+    "price": "85.32",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4243",
+    "inserted_at": "2025-04-27 05:45:08.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:08.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "11535457",
+    "price": "85.32",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4243",
+    "inserted_at": "2025-04-27 05:45:08.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:08.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "12489661",
+    "price": "330",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4251",
+    "inserted_at": "2025-05-04 05:48:33.000000 UTC",
+    "last_updated_at": "2025-05-04 05:48:33.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "12489663",
+    "price": "330",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4251",
+    "inserted_at": "2025-05-04 05:48:33.000000 UTC",
+    "last_updated_at": "2025-05-04 05:48:33.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "12486806",
+    "price": "71.5",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4261",
+    "inserted_at": "2025-05-04 05:47:22.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:22.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "12486810",
+    "price": "71.5",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4261",
+    "inserted_at": "2025-05-04 05:47:22.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:22.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "12486809",
+    "price": "77",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4261",
+    "inserted_at": "2025-05-04 05:47:22.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:22.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "12486805",
+    "price": "77",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4261",
+    "inserted_at": "2025-05-04 05:47:22.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:22.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "12486440",
+    "price": "71.5",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4262",
+    "inserted_at": "2025-05-04 05:46:54.000000 UTC",
+    "last_updated_at": "2025-05-04 05:46:54.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "12486442",
+    "price": "71.5",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4262",
+    "inserted_at": "2025-05-04 05:46:54.000000 UTC",
+    "last_updated_at": "2025-05-04 05:46:54.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "12486436",
+    "price": "77",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4262",
+    "inserted_at": "2025-05-04 05:46:54.000000 UTC",
+    "last_updated_at": "2025-05-04 05:46:54.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "12486441",
+    "price": "77",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4262",
+    "inserted_at": "2025-05-04 05:46:54.000000 UTC",
+    "last_updated_at": "2025-05-04 05:46:54.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "5539591",
+    "price": "44",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4267",
+    "inserted_at": "2025-03-01 04:05:16.000000 UTC",
+    "last_updated_at": "2025-03-01 04:05:16.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "5539583",
+    "price": "44",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4267",
+    "inserted_at": "2025-03-01 04:05:16.000000 UTC",
+    "last_updated_at": "2025-03-01 04:05:16.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "5539592",
+    "price": "176",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4267",
+    "inserted_at": "2025-03-01 04:05:16.000000 UTC",
+    "last_updated_at": "2025-03-01 04:05:16.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "5539584",
+    "price": "176",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4267",
+    "inserted_at": "2025-03-01 04:05:16.000000 UTC",
+    "last_updated_at": "2025-03-01 04:05:16.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "5539594",
+    "price": "99.05",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4267",
+    "inserted_at": "2025-03-01 04:05:16.000000 UTC",
+    "last_updated_at": "2025-03-01 04:05:16.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "5539586",
+    "price": "99.05",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4267",
+    "inserted_at": "2025-03-01 04:05:16.000000 UTC",
+    "last_updated_at": "2025-03-01 04:05:16.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "5539587",
+    "price": "59.05",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4267",
+    "inserted_at": "2025-03-01 04:05:16.000000 UTC",
+    "last_updated_at": "2025-03-01 04:05:16.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "5539595",
+    "price": "59.05",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4267",
+    "inserted_at": "2025-03-01 04:05:16.000000 UTC",
+    "last_updated_at": "2025-03-01 04:05:16.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "5539597",
+    "price": "161.9",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4267",
+    "inserted_at": "2025-03-01 04:05:16.000000 UTC",
+    "last_updated_at": "2025-03-01 04:05:16.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "5539589",
+    "price": "161.9",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4267",
+    "inserted_at": "2025-03-01 04:05:16.000000 UTC",
+    "last_updated_at": "2025-03-01 04:05:16.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "12487262",
+    "price": "530.66",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4268",
+    "inserted_at": "2025-05-04 05:47:30.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:30.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "12487265",
+    "price": "530.66",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4268",
+    "inserted_at": "2025-05-04 05:47:30.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:30.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "12487261",
+    "price": "88",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4268",
+    "inserted_at": "2025-05-04 05:47:30.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:30.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "12487264",
+    "price": "88",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4268",
+    "inserted_at": "2025-05-04 05:47:30.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:30.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "12488212",
+    "price": "226.16",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4269",
+    "inserted_at": "2025-05-04 05:47:48.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:48.000000 UTC",
+    "vehicle_class_id": "9",
+    "rk": "1"
+  },
+  {
+    "id": "12488205",
+    "price": "226.06",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4269",
+    "inserted_at": "2025-05-04 05:47:48.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:48.000000 UTC",
+    "vehicle_class_id": "9",
+    "rk": "1"
+  },
+  {
+    "id": "12487118",
+    "price": "525.39",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4271",
+    "inserted_at": "2025-05-04 05:47:28.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:28.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "12487128",
+    "price": "525.49",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4271",
+    "inserted_at": "2025-05-04 05:47:28.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:28.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "12487060",
+    "price": "476.86",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4272",
+    "inserted_at": "2025-05-04 05:47:27.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:27.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "12487055",
+    "price": "476.76",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4272",
+    "inserted_at": "2025-05-04 05:47:27.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:27.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "12488838",
+    "price": "26.7",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4273",
+    "inserted_at": "2025-05-04 05:48:04.000000 UTC",
+    "last_updated_at": "2025-05-04 05:48:04.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "12488846",
+    "price": "26.8",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4273",
+    "inserted_at": "2025-05-04 05:48:04.000000 UTC",
+    "last_updated_at": "2025-05-04 05:48:04.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "12488847",
+    "price": "27",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4273",
+    "inserted_at": "2025-05-04 05:48:04.000000 UTC",
+    "last_updated_at": "2025-05-04 05:48:04.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "12488841",
+    "price": "26.9",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4273",
+    "inserted_at": "2025-05-04 05:48:04.000000 UTC",
+    "last_updated_at": "2025-05-04 05:48:04.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "12487822",
+    "price": "357.01",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4280",
+    "inserted_at": "2025-05-04 05:47:44.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:44.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "12487826",
+    "price": "357.11",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4280",
+    "inserted_at": "2025-05-04 05:47:44.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:44.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "12487817",
+    "price": "69.41",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4280",
+    "inserted_at": "2025-05-04 05:47:44.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:44.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "12487824",
+    "price": "69.51",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4280",
+    "inserted_at": "2025-05-04 05:47:44.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:44.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "12487825",
+    "price": "357.31",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4280",
+    "inserted_at": "2025-05-04 05:47:44.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:44.000000 UTC",
+    "vehicle_class_id": "9",
+    "rk": "1"
+  },
+  {
+    "id": "12487818",
+    "price": "357.21",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4280",
+    "inserted_at": "2025-05-04 05:47:44.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:44.000000 UTC",
+    "vehicle_class_id": "9",
+    "rk": "1"
+  },
+  {
+    "id": "12487823",
+    "price": "357.41",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4280",
+    "inserted_at": "2025-05-04 05:47:44.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:44.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "12487827",
+    "price": "357.51",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4280",
+    "inserted_at": "2025-05-04 05:47:44.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:44.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "12487736",
+    "price": "29.6",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4281",
+    "inserted_at": "2025-05-04 05:47:42.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:42.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "12487743",
+    "price": "29.7",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4281",
+    "inserted_at": "2025-05-04 05:47:42.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:42.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "12488750",
+    "price": "15.78",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4284",
+    "inserted_at": "2025-05-04 05:48:01.000000 UTC",
+    "last_updated_at": "2025-05-04 05:48:01.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "12488755",
+    "price": "15.88",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4284",
+    "inserted_at": "2025-05-04 05:48:01.000000 UTC",
+    "last_updated_at": "2025-05-04 05:48:01.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "12488752",
+    "price": "16.1",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4284",
+    "inserted_at": "2025-05-04 05:48:01.000000 UTC",
+    "last_updated_at": "2025-05-04 05:48:01.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "12488745",
+    "price": "16.1",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4284",
+    "inserted_at": "2025-05-04 05:48:01.000000 UTC",
+    "last_updated_at": "2025-05-04 05:48:01.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "10905646",
+    "price": "61.01",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4289",
+    "inserted_at": "2025-04-22 10:09:12.000000 UTC",
+    "last_updated_at": "2025-04-22 10:09:12.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "10905648",
+    "price": "61.01",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4289",
+    "inserted_at": "2025-04-22 10:09:12.000000 UTC",
+    "last_updated_at": "2025-04-22 10:09:12.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "5042381",
+    "price": "79.35",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4289",
+    "inserted_at": "2025-02-22 04:07:45.000000 UTC",
+    "last_updated_at": "2025-02-22 04:07:45.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "5042387",
+    "price": "79.35",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4289",
+    "inserted_at": "2025-02-22 04:07:45.000000 UTC",
+    "last_updated_at": "2025-02-22 04:07:45.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "5042386",
+    "price": "1000",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4289",
+    "inserted_at": "2025-02-22 04:07:45.000000 UTC",
+    "last_updated_at": "2025-02-22 04:07:45.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "5042382",
+    "price": "1000",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4289",
+    "inserted_at": "2025-02-22 04:07:45.000000 UTC",
+    "last_updated_at": "2025-02-22 04:07:45.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "5042383",
+    "price": "1000",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4289",
+    "inserted_at": "2025-02-22 04:07:45.000000 UTC",
+    "last_updated_at": "2025-02-22 04:07:45.000000 UTC",
+    "vehicle_class_id": "11",
+    "rk": "1"
+  },
+  {
+    "id": "5042385",
+    "price": "1000",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4289",
+    "inserted_at": "2025-02-22 04:07:45.000000 UTC",
+    "last_updated_at": "2025-02-22 04:07:45.000000 UTC",
+    "vehicle_class_id": "11",
+    "rk": "1"
+  },
+  {
+    "id": "8016372",
+    "price": "110.09",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4294",
+    "inserted_at": "2025-03-28 04:06:35.000000 UTC",
+    "last_updated_at": "2025-03-28 04:06:35.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "8016368",
+    "price": "100.92",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4294",
+    "inserted_at": "2025-03-28 04:06:35.000000 UTC",
+    "last_updated_at": "2025-03-28 04:06:35.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "11536442",
+    "price": "56.72",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4295",
+    "inserted_at": "2025-04-27 05:45:31.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:31.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "11536444",
+    "price": "56.72",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4295",
+    "inserted_at": "2025-04-27 05:45:31.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:31.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "5540437",
+    "price": "72.35",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4296",
+    "inserted_at": "2025-03-01 04:08:02.000000 UTC",
+    "last_updated_at": "2025-03-01 04:08:02.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "5540450",
+    "price": "72.35",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4296",
+    "inserted_at": "2025-03-01 04:08:02.000000 UTC",
+    "last_updated_at": "2025-03-01 04:08:02.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "11536095",
+    "price": "50.88",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4296",
+    "inserted_at": "2025-04-27 05:45:27.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:27.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "11536101",
+    "price": "50.88",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4296",
+    "inserted_at": "2025-04-27 05:45:27.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:27.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "11536092",
+    "price": "55.2",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4296",
+    "inserted_at": "2025-04-27 05:45:27.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:27.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "11536098",
+    "price": "55.2",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4296",
+    "inserted_at": "2025-04-27 05:45:27.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:27.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "8016664",
+    "price": "67.98",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4297",
+    "inserted_at": "2025-03-28 04:08:20.000000 UTC",
+    "last_updated_at": "2025-03-28 04:08:20.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "8016665",
+    "price": "67.98",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4297",
+    "inserted_at": "2025-03-28 04:08:20.000000 UTC",
+    "last_updated_at": "2025-03-28 04:08:20.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "8016662",
+    "price": "69.81",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4297",
+    "inserted_at": "2025-03-28 04:08:20.000000 UTC",
+    "last_updated_at": "2025-03-28 04:08:20.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "8016667",
+    "price": "69.81",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4297",
+    "inserted_at": "2025-03-28 04:08:20.000000 UTC",
+    "last_updated_at": "2025-03-28 04:08:20.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "12486626",
+    "price": "175.95",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4304",
+    "inserted_at": "2025-05-04 05:47:15.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:15.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "12486620",
+    "price": "175.85",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4304",
+    "inserted_at": "2025-05-04 05:47:15.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:15.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "12486622",
+    "price": "176.05",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4304",
+    "inserted_at": "2025-05-04 05:47:15.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:15.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "12486628",
+    "price": "176.15",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4304",
+    "inserted_at": "2025-05-04 05:47:15.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:15.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "24537679",
+    "price": "289.95",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4343",
+    "inserted_at": "2025-07-08 19:05:28.000000 UTC",
+    "last_updated_at": "2025-07-08 19:05:28.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "24537667",
+    "price": "347.94",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4343",
+    "inserted_at": "2025-07-08 19:05:28.000000 UTC",
+    "last_updated_at": "2025-07-08 19:05:28.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "24537668",
+    "price": "255.31",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4343",
+    "inserted_at": "2025-07-08 19:05:28.000000 UTC",
+    "last_updated_at": "2025-07-08 19:05:28.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "24537676",
+    "price": "212.76",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4343",
+    "inserted_at": "2025-07-08 19:05:28.000000 UTC",
+    "last_updated_at": "2025-07-08 19:05:28.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "24537669",
+    "price": "385.2",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4343",
+    "inserted_at": "2025-07-08 19:05:28.000000 UTC",
+    "last_updated_at": "2025-07-08 19:05:28.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "24537677",
+    "price": "321",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4343",
+    "inserted_at": "2025-07-08 19:05:28.000000 UTC",
+    "last_updated_at": "2025-07-08 19:05:28.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "24510287",
+    "price": "800.13",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4392",
+    "inserted_at": "2025-07-08 13:06:58.000000 UTC",
+    "last_updated_at": "2025-07-08 13:06:58.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "24510290",
+    "price": "800.13",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4392",
+    "inserted_at": "2025-07-08 13:06:58.000000 UTC",
+    "last_updated_at": "2025-07-08 13:06:58.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "24510288",
+    "price": "804.15",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4392",
+    "inserted_at": "2025-07-08 13:06:58.000000 UTC",
+    "last_updated_at": "2025-07-08 13:06:58.000000 UTC",
+    "vehicle_class_id": "9",
+    "rk": "1"
+  },
+  {
+    "id": "24510291",
+    "price": "804.15",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4392",
+    "inserted_at": "2025-07-08 13:06:58.000000 UTC",
+    "last_updated_at": "2025-07-08 13:06:58.000000 UTC",
+    "vehicle_class_id": "9",
+    "rk": "1"
+  },
+  {
+    "id": "24510289",
+    "price": "808.19",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4392",
+    "inserted_at": "2025-07-08 13:06:58.000000 UTC",
+    "last_updated_at": "2025-07-08 13:06:58.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "24510292",
+    "price": "808.19",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4392",
+    "inserted_at": "2025-07-08 13:06:58.000000 UTC",
+    "last_updated_at": "2025-07-08 13:06:58.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "24510589",
+    "price": "266.87",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4408",
+    "inserted_at": "2025-07-08 13:07:58.000000 UTC",
+    "last_updated_at": "2025-07-08 13:07:58.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "24510584",
+    "price": "266.06",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4408",
+    "inserted_at": "2025-07-08 13:07:58.000000 UTC",
+    "last_updated_at": "2025-07-08 13:07:58.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "21468173",
+    "price": "235.87",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4662",
+    "inserted_at": "2025-06-17 10:50:02.000000 UTC",
+    "last_updated_at": "2025-06-17 10:50:02.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "21468181",
+    "price": "235.87",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4662",
+    "inserted_at": "2025-06-17 10:50:02.000000 UTC",
+    "last_updated_at": "2025-06-17 10:50:02.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "21468174",
+    "price": "237.93",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4662",
+    "inserted_at": "2025-06-17 10:50:02.000000 UTC",
+    "last_updated_at": "2025-06-17 10:50:02.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "21468180",
+    "price": "237.93",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4662",
+    "inserted_at": "2025-06-17 10:50:02.000000 UTC",
+    "last_updated_at": "2025-06-17 10:50:02.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "21468175",
+    "price": "280.16",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4662",
+    "inserted_at": "2025-06-17 10:50:02.000000 UTC",
+    "last_updated_at": "2025-06-17 10:50:02.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "21468179",
+    "price": "280.16",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4662",
+    "inserted_at": "2025-06-17 10:50:02.000000 UTC",
+    "last_updated_at": "2025-06-17 10:50:02.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "21468177",
+    "price": "236.9",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4662",
+    "inserted_at": "2025-06-17 10:50:02.000000 UTC",
+    "last_updated_at": "2025-06-17 10:50:02.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "21468178",
+    "price": "236.9",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4662",
+    "inserted_at": "2025-06-17 10:50:02.000000 UTC",
+    "last_updated_at": "2025-06-17 10:50:02.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "21468176",
+    "price": "368.74",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4662",
+    "inserted_at": "2025-06-17 10:50:02.000000 UTC",
+    "last_updated_at": "2025-06-17 10:50:02.000000 UTC",
+    "vehicle_class_id": "9",
+    "rk": "1"
+  },
+  {
+    "id": "21468182",
+    "price": "368.74",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4662",
+    "inserted_at": "2025-06-17 10:50:02.000000 UTC",
+    "last_updated_at": "2025-06-17 10:50:02.000000 UTC",
+    "vehicle_class_id": "9",
+    "rk": "1"
+  },
+  {
+    "id": "24511527",
+    "price": "28.55",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4711",
+    "inserted_at": "2025-07-08 13:12:58.000000 UTC",
+    "last_updated_at": "2025-07-08 13:12:58.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "24511532",
+    "price": "27.87",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4711",
+    "inserted_at": "2025-07-08 13:12:58.000000 UTC",
+    "last_updated_at": "2025-07-08 13:12:58.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "24511530",
+    "price": "28.49",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4711",
+    "inserted_at": "2025-07-08 13:12:58.000000 UTC",
+    "last_updated_at": "2025-07-08 13:12:58.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "24511531",
+    "price": "27.81",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4711",
+    "inserted_at": "2025-07-08 13:12:58.000000 UTC",
+    "last_updated_at": "2025-07-08 13:12:58.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "24511544",
+    "price": "132.4",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4711",
+    "inserted_at": "2025-07-08 13:12:58.000000 UTC",
+    "last_updated_at": "2025-07-08 13:12:58.000000 UTC",
+    "vehicle_class_id": "9",
+    "rk": "1"
+  },
+  {
+    "id": "24511541",
+    "price": "132.27",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4711",
+    "inserted_at": "2025-07-08 13:12:58.000000 UTC",
+    "last_updated_at": "2025-07-08 13:12:58.000000 UTC",
+    "vehicle_class_id": "9",
+    "rk": "1"
+  },
+  {
+    "id": "23822649",
+    "price": "18.7",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4725",
+    "inserted_at": "2025-07-02 07:36:30.000000 UTC",
+    "last_updated_at": "2025-07-02 07:36:30.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23822607",
+    "price": "18.7",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4725",
+    "inserted_at": "2025-07-02 07:36:30.000000 UTC",
+    "last_updated_at": "2025-07-02 07:36:30.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23822651",
+    "price": "47.3",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4725",
+    "inserted_at": "2025-07-02 07:36:30.000000 UTC",
+    "last_updated_at": "2025-07-02 07:36:30.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23822605",
+    "price": "47.3",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4725",
+    "inserted_at": "2025-07-02 07:36:30.000000 UTC",
+    "last_updated_at": "2025-07-02 07:36:30.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23822647",
+    "price": "41.25",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4725",
+    "inserted_at": "2025-07-02 07:36:30.000000 UTC",
+    "last_updated_at": "2025-07-02 07:36:30.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23822608",
+    "price": "30.8",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4725",
+    "inserted_at": "2025-07-02 07:36:30.000000 UTC",
+    "last_updated_at": "2025-07-02 07:36:30.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23822650",
+    "price": "55",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4725",
+    "inserted_at": "2025-07-02 07:36:30.000000 UTC",
+    "last_updated_at": "2025-07-02 07:36:30.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "23822609",
+    "price": "55",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4725",
+    "inserted_at": "2025-07-02 07:36:30.000000 UTC",
+    "last_updated_at": "2025-07-02 07:36:30.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "23822604",
+    "price": "71.5",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4725",
+    "inserted_at": "2025-07-02 07:36:30.000000 UTC",
+    "last_updated_at": "2025-07-02 07:36:30.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "23822646",
+    "price": "91.91",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4725",
+    "inserted_at": "2025-07-02 07:36:30.000000 UTC",
+    "last_updated_at": "2025-07-02 07:36:30.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "23822606",
+    "price": "28.6",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4725",
+    "inserted_at": "2025-07-02 07:36:30.000000 UTC",
+    "last_updated_at": "2025-07-02 07:36:30.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23822648",
+    "price": "28.6",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4725",
+    "inserted_at": "2025-07-02 07:36:30.000000 UTC",
+    "last_updated_at": "2025-07-02 07:36:30.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23822610",
+    "price": "55",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4725",
+    "inserted_at": "2025-07-02 07:36:30.000000 UTC",
+    "last_updated_at": "2025-07-02 07:36:30.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "23822652",
+    "price": "55",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4725",
+    "inserted_at": "2025-07-02 07:36:30.000000 UTC",
+    "last_updated_at": "2025-07-02 07:36:30.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "23822848",
+    "price": "84.99",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4742",
+    "inserted_at": "2025-07-02 07:36:33.000000 UTC",
+    "last_updated_at": "2025-07-02 07:36:33.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23822838",
+    "price": "99.92",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4742",
+    "inserted_at": "2025-07-02 07:36:33.000000 UTC",
+    "last_updated_at": "2025-07-02 07:36:33.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23822847",
+    "price": "185.97",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4742",
+    "inserted_at": "2025-07-02 07:36:33.000000 UTC",
+    "last_updated_at": "2025-07-02 07:36:33.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "23822837",
+    "price": "190.53",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4742",
+    "inserted_at": "2025-07-02 07:36:33.000000 UTC",
+    "last_updated_at": "2025-07-02 07:36:33.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "23822834",
+    "price": "48.3",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4744",
+    "inserted_at": "2025-07-02 07:36:33.000000 UTC",
+    "last_updated_at": "2025-07-02 07:36:33.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23822843",
+    "price": "48.3",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4744",
+    "inserted_at": "2025-07-02 07:36:33.000000 UTC",
+    "last_updated_at": "2025-07-02 07:36:33.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23822842",
+    "price": "57.5",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4744",
+    "inserted_at": "2025-07-02 07:36:33.000000 UTC",
+    "last_updated_at": "2025-07-02 07:36:33.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23822836",
+    "price": "57.5",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4744",
+    "inserted_at": "2025-07-02 07:36:33.000000 UTC",
+    "last_updated_at": "2025-07-02 07:36:33.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23822835",
+    "price": "103.5",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4744",
+    "inserted_at": "2025-07-02 07:36:33.000000 UTC",
+    "last_updated_at": "2025-07-02 07:36:33.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "23822841",
+    "price": "103.5",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4744",
+    "inserted_at": "2025-07-02 07:36:33.000000 UTC",
+    "last_updated_at": "2025-07-02 07:36:33.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "23822833",
+    "price": "54.05",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4744",
+    "inserted_at": "2025-07-02 07:36:33.000000 UTC",
+    "last_updated_at": "2025-07-02 07:36:33.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23822840",
+    "price": "54.05",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4744",
+    "inserted_at": "2025-07-02 07:36:33.000000 UTC",
+    "last_updated_at": "2025-07-02 07:36:33.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "24516987",
+    "price": "56.18",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4758",
+    "inserted_at": "2025-07-08 15:12:28.000000 UTC",
+    "last_updated_at": "2025-07-08 15:12:28.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "24516975",
+    "price": "56.18",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4758",
+    "inserted_at": "2025-07-08 15:12:28.000000 UTC",
+    "last_updated_at": "2025-07-08 15:12:28.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "24516974",
+    "price": "58.3",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4758",
+    "inserted_at": "2025-07-08 15:12:28.000000 UTC",
+    "last_updated_at": "2025-07-08 15:12:28.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "24516988",
+    "price": "58.3",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4758",
+    "inserted_at": "2025-07-08 15:12:28.000000 UTC",
+    "last_updated_at": "2025-07-08 15:12:28.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "24516978",
+    "price": "85.77",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4758",
+    "inserted_at": "2025-07-08 15:12:28.000000 UTC",
+    "last_updated_at": "2025-07-08 15:12:28.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "24516985",
+    "price": "85.77",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4758",
+    "inserted_at": "2025-07-08 15:12:28.000000 UTC",
+    "last_updated_at": "2025-07-08 15:12:28.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "24516976",
+    "price": "57.24",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4758",
+    "inserted_at": "2025-07-08 15:12:28.000000 UTC",
+    "last_updated_at": "2025-07-08 15:12:28.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "24516989",
+    "price": "57.24",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4758",
+    "inserted_at": "2025-07-08 15:12:28.000000 UTC",
+    "last_updated_at": "2025-07-08 15:12:28.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "24516979",
+    "price": "221.54",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4758",
+    "inserted_at": "2025-07-08 15:12:28.000000 UTC",
+    "last_updated_at": "2025-07-08 15:12:28.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "24516986",
+    "price": "221.54",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4758",
+    "inserted_at": "2025-07-08 15:12:28.000000 UTC",
+    "last_updated_at": "2025-07-08 15:12:28.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "24516977",
+    "price": "227.9",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4758",
+    "inserted_at": "2025-07-08 15:12:28.000000 UTC",
+    "last_updated_at": "2025-07-08 15:12:28.000000 UTC",
+    "vehicle_class_id": "11",
+    "rk": "1"
+  },
+  {
+    "id": "24516984",
+    "price": "227.9",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4758",
+    "inserted_at": "2025-07-08 15:12:28.000000 UTC",
+    "last_updated_at": "2025-07-08 15:12:28.000000 UTC",
+    "vehicle_class_id": "11",
+    "rk": "1"
+  },
+  {
+    "id": "23903807",
+    "price": "210.43",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4763",
+    "inserted_at": "2025-07-02 16:51:33.000000 UTC",
+    "last_updated_at": "2025-07-02 16:51:33.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23903833",
+    "price": "210.43",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4763",
+    "inserted_at": "2025-07-02 16:51:33.000000 UTC",
+    "last_updated_at": "2025-07-02 16:51:33.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23903808",
+    "price": "211.49",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4763",
+    "inserted_at": "2025-07-02 16:51:33.000000 UTC",
+    "last_updated_at": "2025-07-02 16:51:33.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23903834",
+    "price": "211.49",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4763",
+    "inserted_at": "2025-07-02 16:51:33.000000 UTC",
+    "last_updated_at": "2025-07-02 16:51:33.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23813368",
+    "price": "1007.44",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4763",
+    "inserted_at": "2025-07-02 07:26:37.000000 UTC",
+    "last_updated_at": "2025-07-02 07:26:37.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "23813359",
+    "price": "1007.44",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4763",
+    "inserted_at": "2025-07-02 07:26:37.000000 UTC",
+    "last_updated_at": "2025-07-02 07:26:37.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "24511420",
+    "price": "154.6",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4765",
+    "inserted_at": "2025-07-08 13:11:59.000000 UTC",
+    "last_updated_at": "2025-07-08 13:11:59.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "24511422",
+    "price": "186.85",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4765",
+    "inserted_at": "2025-07-08 13:11:59.000000 UTC",
+    "last_updated_at": "2025-07-08 13:11:59.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "23818745",
+    "price": "389.19",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4768",
+    "inserted_at": "2025-07-02 07:32:33.000000 UTC",
+    "last_updated_at": "2025-07-02 07:32:33.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "23818751",
+    "price": "388.04",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4768",
+    "inserted_at": "2025-07-02 07:32:33.000000 UTC",
+    "last_updated_at": "2025-07-02 07:32:33.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "19977046",
+    "price": "149.1",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4798",
+    "inserted_at": "2025-06-10 10:42:00.000000 UTC",
+    "last_updated_at": "2025-06-10 10:42:00.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "19977049",
+    "price": "149.1",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4798",
+    "inserted_at": "2025-06-10 10:42:00.000000 UTC",
+    "last_updated_at": "2025-06-10 10:42:00.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "19977045",
+    "price": "151.2",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4798",
+    "inserted_at": "2025-06-10 10:42:00.000000 UTC",
+    "last_updated_at": "2025-06-10 10:42:00.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "19977048",
+    "price": "151.2",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4798",
+    "inserted_at": "2025-06-10 10:42:00.000000 UTC",
+    "last_updated_at": "2025-06-10 10:42:00.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "19977044",
+    "price": "150.15",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4798",
+    "inserted_at": "2025-06-10 10:42:00.000000 UTC",
+    "last_updated_at": "2025-06-10 10:42:00.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "19977047",
+    "price": "150.15",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4798",
+    "inserted_at": "2025-06-10 10:42:00.000000 UTC",
+    "last_updated_at": "2025-06-10 10:42:00.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23767337",
+    "price": "45.15",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4829",
+    "inserted_at": "2025-07-02 00:23:58.000000 UTC",
+    "last_updated_at": "2025-07-02 00:23:58.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23767338",
+    "price": "45.15",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4829",
+    "inserted_at": "2025-07-02 00:23:58.000000 UTC",
+    "last_updated_at": "2025-07-02 00:23:58.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23677575",
+    "price": "81.44",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4829",
+    "inserted_at": "2025-07-01 08:24:28.000000 UTC",
+    "last_updated_at": "2025-07-01 08:24:28.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23677578",
+    "price": "89.99",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4829",
+    "inserted_at": "2025-07-01 08:24:28.000000 UTC",
+    "last_updated_at": "2025-07-01 08:24:28.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23834780",
+    "price": "101.2",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4829",
+    "inserted_at": "2025-07-02 08:23:59.000000 UTC",
+    "last_updated_at": "2025-07-02 08:23:59.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "23834783",
+    "price": "101.2",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4829",
+    "inserted_at": "2025-07-02 08:23:59.000000 UTC",
+    "last_updated_at": "2025-07-02 08:23:59.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "23834782",
+    "price": "82.95",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4829",
+    "inserted_at": "2025-07-02 08:23:59.000000 UTC",
+    "last_updated_at": "2025-07-02 08:23:59.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "23834781",
+    "price": "82.95",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4829",
+    "inserted_at": "2025-07-02 08:23:59.000000 UTC",
+    "last_updated_at": "2025-07-02 08:23:59.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "23786280",
+    "price": "52.7",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4829",
+    "inserted_at": "2025-07-02 04:22:28.000000 UTC",
+    "last_updated_at": "2025-07-02 04:22:28.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23786289",
+    "price": "52.7",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4829",
+    "inserted_at": "2025-07-02 04:22:28.000000 UTC",
+    "last_updated_at": "2025-07-02 04:22:28.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23837710",
+    "price": "45.15",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4830",
+    "inserted_at": "2025-07-02 08:30:58.000000 UTC",
+    "last_updated_at": "2025-07-02 08:30:58.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23837712",
+    "price": "45.15",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4830",
+    "inserted_at": "2025-07-02 08:30:58.000000 UTC",
+    "last_updated_at": "2025-07-02 08:30:58.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23837715",
+    "price": "89.99",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4830",
+    "inserted_at": "2025-07-02 08:30:58.000000 UTC",
+    "last_updated_at": "2025-07-02 08:30:58.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23837708",
+    "price": "98.54",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4830",
+    "inserted_at": "2025-07-02 08:30:58.000000 UTC",
+    "last_updated_at": "2025-07-02 08:30:58.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23837807",
+    "price": "101.2",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4830",
+    "inserted_at": "2025-07-02 08:31:58.000000 UTC",
+    "last_updated_at": "2025-07-02 08:31:58.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "23837804",
+    "price": "101.2",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4830",
+    "inserted_at": "2025-07-02 08:31:58.000000 UTC",
+    "last_updated_at": "2025-07-02 08:31:58.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "23837808",
+    "price": "82.95",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4830",
+    "inserted_at": "2025-07-02 08:31:58.000000 UTC",
+    "last_updated_at": "2025-07-02 08:31:58.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "23837806",
+    "price": "82.95",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4830",
+    "inserted_at": "2025-07-02 08:31:58.000000 UTC",
+    "last_updated_at": "2025-07-02 08:31:58.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "23946069",
+    "price": "53.18",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4830",
+    "inserted_at": "2025-07-03 00:25:59.000000 UTC",
+    "last_updated_at": "2025-07-03 00:25:59.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23946070",
+    "price": "53.18",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4830",
+    "inserted_at": "2025-07-03 00:25:59.000000 UTC",
+    "last_updated_at": "2025-07-03 00:25:59.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23823324",
+    "price": "152.9",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4830",
+    "inserted_at": "2025-07-02 07:36:59.000000 UTC",
+    "last_updated_at": "2025-07-02 07:36:59.000000 UTC",
+    "vehicle_class_id": "11",
+    "rk": "1"
+  },
+  {
+    "id": "23823328",
+    "price": "152.9",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4830",
+    "inserted_at": "2025-07-02 07:36:59.000000 UTC",
+    "last_updated_at": "2025-07-02 07:36:59.000000 UTC",
+    "vehicle_class_id": "11",
+    "rk": "1"
+  },
+  {
+    "id": "23945021",
+    "price": "62.12",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4841",
+    "inserted_at": "2025-07-03 00:23:30.000000 UTC",
+    "last_updated_at": "2025-07-03 00:23:30.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23945006",
+    "price": "62.12",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4841",
+    "inserted_at": "2025-07-03 00:23:30.000000 UTC",
+    "last_updated_at": "2025-07-03 00:23:30.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23969227",
+    "price": "48.51",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4842",
+    "inserted_at": "2025-07-03 04:23:28.000000 UTC",
+    "last_updated_at": "2025-07-03 04:23:28.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23969221",
+    "price": "48.51",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4842",
+    "inserted_at": "2025-07-03 04:23:28.000000 UTC",
+    "last_updated_at": "2025-07-03 04:23:28.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23968578",
+    "price": "56.88",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4842",
+    "inserted_at": "2025-07-03 04:22:29.000000 UTC",
+    "last_updated_at": "2025-07-03 04:22:29.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23968570",
+    "price": "56.88",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4842",
+    "inserted_at": "2025-07-03 04:22:29.000000 UTC",
+    "last_updated_at": "2025-07-03 04:22:29.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23969228",
+    "price": "71.42",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4842",
+    "inserted_at": "2025-07-03 04:23:28.000000 UTC",
+    "last_updated_at": "2025-07-03 04:23:28.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23969223",
+    "price": "71.42",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4842",
+    "inserted_at": "2025-07-03 04:23:28.000000 UTC",
+    "last_updated_at": "2025-07-03 04:23:28.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23969230",
+    "price": "86.94",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4842",
+    "inserted_at": "2025-07-03 04:23:28.000000 UTC",
+    "last_updated_at": "2025-07-03 04:23:28.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "23969222",
+    "price": "86.94",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4842",
+    "inserted_at": "2025-07-03 04:23:28.000000 UTC",
+    "last_updated_at": "2025-07-03 04:23:28.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "23751612",
+    "price": "59.09",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4845",
+    "inserted_at": "2025-07-01 20:22:29.000000 UTC",
+    "last_updated_at": "2025-07-01 20:22:29.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23751608",
+    "price": "59.09",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4845",
+    "inserted_at": "2025-07-01 20:22:29.000000 UTC",
+    "last_updated_at": "2025-07-01 20:22:29.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "24005798",
+    "price": "68.83",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4845",
+    "inserted_at": "2025-07-03 08:24:59.000000 UTC",
+    "last_updated_at": "2025-07-03 08:24:59.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "24005794",
+    "price": "68.83",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4845",
+    "inserted_at": "2025-07-03 08:24:59.000000 UTC",
+    "last_updated_at": "2025-07-03 08:24:59.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23751605",
+    "price": "84.45",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4845",
+    "inserted_at": "2025-07-01 20:22:29.000000 UTC",
+    "last_updated_at": "2025-07-01 20:22:29.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23751611",
+    "price": "84.45",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4845",
+    "inserted_at": "2025-07-01 20:22:29.000000 UTC",
+    "last_updated_at": "2025-07-01 20:22:29.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "24005194",
+    "price": "141.76",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4845",
+    "inserted_at": "2025-07-03 08:23:59.000000 UTC",
+    "last_updated_at": "2025-07-03 08:23:59.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "24005195",
+    "price": "141.76",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4845",
+    "inserted_at": "2025-07-03 08:23:59.000000 UTC",
+    "last_updated_at": "2025-07-03 08:23:59.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "23944164",
+    "price": "51.13",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4846",
+    "inserted_at": "2025-07-03 00:21:59.000000 UTC",
+    "last_updated_at": "2025-07-03 00:21:59.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23944171",
+    "price": "51.13",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4846",
+    "inserted_at": "2025-07-03 00:21:59.000000 UTC",
+    "last_updated_at": "2025-07-03 00:21:59.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23944172",
+    "price": "57.96",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4846",
+    "inserted_at": "2025-07-03 00:21:59.000000 UTC",
+    "last_updated_at": "2025-07-03 00:21:59.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23944165",
+    "price": "57.96",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4846",
+    "inserted_at": "2025-07-03 00:21:59.000000 UTC",
+    "last_updated_at": "2025-07-03 00:21:59.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23944170",
+    "price": "83.16",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4846",
+    "inserted_at": "2025-07-03 00:21:59.000000 UTC",
+    "last_updated_at": "2025-07-03 00:21:59.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "23944168",
+    "price": "83.16",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4846",
+    "inserted_at": "2025-07-03 00:21:59.000000 UTC",
+    "last_updated_at": "2025-07-03 00:21:59.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "23836261",
+    "price": "46.75",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4851",
+    "inserted_at": "2025-07-02 08:26:28.000000 UTC",
+    "last_updated_at": "2025-07-02 08:26:28.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23836265",
+    "price": "46.75",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4851",
+    "inserted_at": "2025-07-02 08:26:28.000000 UTC",
+    "last_updated_at": "2025-07-02 08:26:28.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23836257",
+    "price": "68.83",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4851",
+    "inserted_at": "2025-07-02 08:26:28.000000 UTC",
+    "last_updated_at": "2025-07-02 08:26:28.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23836264",
+    "price": "68.83",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4851",
+    "inserted_at": "2025-07-02 08:26:28.000000 UTC",
+    "last_updated_at": "2025-07-02 08:26:28.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23836266",
+    "price": "81.67",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4851",
+    "inserted_at": "2025-07-02 08:26:28.000000 UTC",
+    "last_updated_at": "2025-07-02 08:26:28.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23836259",
+    "price": "82.48",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4851",
+    "inserted_at": "2025-07-02 08:26:28.000000 UTC",
+    "last_updated_at": "2025-07-02 08:26:28.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23836258",
+    "price": "54.8",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4851",
+    "inserted_at": "2025-07-02 08:26:28.000000 UTC",
+    "last_updated_at": "2025-07-02 08:26:28.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23836268",
+    "price": "53.98",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4851",
+    "inserted_at": "2025-07-02 08:26:28.000000 UTC",
+    "last_updated_at": "2025-07-02 08:26:28.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23836260",
+    "price": "94.18",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4851",
+    "inserted_at": "2025-07-02 08:26:28.000000 UTC",
+    "last_updated_at": "2025-07-02 08:26:28.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "23836267",
+    "price": "94.18",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4851",
+    "inserted_at": "2025-07-02 08:26:28.000000 UTC",
+    "last_updated_at": "2025-07-02 08:26:28.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "23719773",
+    "price": "99.14",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4857",
+    "inserted_at": "2025-07-01 16:29:59.000000 UTC",
+    "last_updated_at": "2025-07-01 16:29:59.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23719762",
+    "price": "99.14",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4857",
+    "inserted_at": "2025-07-01 16:29:59.000000 UTC",
+    "last_updated_at": "2025-07-01 16:29:59.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23719765",
+    "price": "99.14",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4857",
+    "inserted_at": "2025-07-01 16:29:59.000000 UTC",
+    "last_updated_at": "2025-07-01 16:29:59.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23719774",
+    "price": "126.38",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4857",
+    "inserted_at": "2025-07-01 16:29:59.000000 UTC",
+    "last_updated_at": "2025-07-01 16:29:59.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23719766",
+    "price": "126.38",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4857",
+    "inserted_at": "2025-07-01 16:29:59.000000 UTC",
+    "last_updated_at": "2025-07-01 16:29:59.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23719761",
+    "price": "126.38",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4857",
+    "inserted_at": "2025-07-01 16:29:59.000000 UTC",
+    "last_updated_at": "2025-07-01 16:29:59.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23719767",
+    "price": "115.25",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4857",
+    "inserted_at": "2025-07-01 16:29:59.000000 UTC",
+    "last_updated_at": "2025-07-01 16:29:59.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23719772",
+    "price": "115.25",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4857",
+    "inserted_at": "2025-07-01 16:29:59.000000 UTC",
+    "last_updated_at": "2025-07-01 16:29:59.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23719764",
+    "price": "115.25",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4857",
+    "inserted_at": "2025-07-01 16:29:59.000000 UTC",
+    "last_updated_at": "2025-07-01 16:29:59.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23786583",
+    "price": "152.14",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4857",
+    "inserted_at": "2025-07-02 04:22:59.000000 UTC",
+    "last_updated_at": "2025-07-02 04:22:59.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "23786586",
+    "price": "152.14",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4857",
+    "inserted_at": "2025-07-02 04:22:59.000000 UTC",
+    "last_updated_at": "2025-07-02 04:22:59.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "23697156",
+    "price": "39.3",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4867",
+    "inserted_at": "2025-07-01 12:23:59.000000 UTC",
+    "last_updated_at": "2025-07-01 12:23:59.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23697151",
+    "price": "39.3",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4867",
+    "inserted_at": "2025-07-01 12:23:59.000000 UTC",
+    "last_updated_at": "2025-07-01 12:23:59.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23697149",
+    "price": "58.1",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4867",
+    "inserted_at": "2025-07-01 12:23:59.000000 UTC",
+    "last_updated_at": "2025-07-01 12:23:59.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23697157",
+    "price": "58.1",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4867",
+    "inserted_at": "2025-07-01 12:23:59.000000 UTC",
+    "last_updated_at": "2025-07-01 12:23:59.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23697155",
+    "price": "64.1",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4867",
+    "inserted_at": "2025-07-01 12:23:59.000000 UTC",
+    "last_updated_at": "2025-07-01 12:23:59.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23697150",
+    "price": "64.1",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4867",
+    "inserted_at": "2025-07-01 12:23:59.000000 UTC",
+    "last_updated_at": "2025-07-01 12:23:59.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23697152",
+    "price": "49.44",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4867",
+    "inserted_at": "2025-07-01 12:23:59.000000 UTC",
+    "last_updated_at": "2025-07-01 12:23:59.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23697159",
+    "price": "49.44",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4867",
+    "inserted_at": "2025-07-01 12:23:59.000000 UTC",
+    "last_updated_at": "2025-07-01 12:23:59.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23697158",
+    "price": "72.77",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4867",
+    "inserted_at": "2025-07-01 12:23:59.000000 UTC",
+    "last_updated_at": "2025-07-01 12:23:59.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "23697153",
+    "price": "72.77",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4867",
+    "inserted_at": "2025-07-01 12:23:59.000000 UTC",
+    "last_updated_at": "2025-07-01 12:23:59.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "23786696",
+    "price": "56.1",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4868",
+    "inserted_at": "2025-07-02 04:23:28.000000 UTC",
+    "last_updated_at": "2025-07-02 04:23:28.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23786691",
+    "price": "56.1",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4868",
+    "inserted_at": "2025-07-02 04:23:28.000000 UTC",
+    "last_updated_at": "2025-07-02 04:23:28.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23786699",
+    "price": "56.99",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4868",
+    "inserted_at": "2025-07-02 04:23:28.000000 UTC",
+    "last_updated_at": "2025-07-02 04:23:28.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23786692",
+    "price": "56.99",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4868",
+    "inserted_at": "2025-07-02 04:23:28.000000 UTC",
+    "last_updated_at": "2025-07-02 04:23:28.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23786697",
+    "price": "49.69",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4868",
+    "inserted_at": "2025-07-02 04:23:28.000000 UTC",
+    "last_updated_at": "2025-07-02 04:23:28.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23786689",
+    "price": "49.69",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4868",
+    "inserted_at": "2025-07-02 04:23:28.000000 UTC",
+    "last_updated_at": "2025-07-02 04:23:28.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23786690",
+    "price": "69.3",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4868",
+    "inserted_at": "2025-07-02 04:23:28.000000 UTC",
+    "last_updated_at": "2025-07-02 04:23:28.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "23786698",
+    "price": "69.3",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4868",
+    "inserted_at": "2025-07-02 04:23:28.000000 UTC",
+    "last_updated_at": "2025-07-02 04:23:28.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "24007239",
+    "price": "52.79",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4875",
+    "inserted_at": "2025-07-03 08:27:28.000000 UTC",
+    "last_updated_at": "2025-07-03 08:27:28.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "24007237",
+    "price": "52.79",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4875",
+    "inserted_at": "2025-07-03 08:27:28.000000 UTC",
+    "last_updated_at": "2025-07-03 08:27:28.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "24006591",
+    "price": "76.53",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4875",
+    "inserted_at": "2025-07-03 08:26:28.000000 UTC",
+    "last_updated_at": "2025-07-03 08:26:28.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "24006586",
+    "price": "76.53",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4875",
+    "inserted_at": "2025-07-03 08:26:28.000000 UTC",
+    "last_updated_at": "2025-07-03 08:26:28.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "24006583",
+    "price": "76.89",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4875",
+    "inserted_at": "2025-07-03 08:26:28.000000 UTC",
+    "last_updated_at": "2025-07-03 08:26:28.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "24006590",
+    "price": "76.89",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4875",
+    "inserted_at": "2025-07-03 08:26:28.000000 UTC",
+    "last_updated_at": "2025-07-03 08:26:28.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "24006592",
+    "price": "65.32",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4875",
+    "inserted_at": "2025-07-03 08:26:28.000000 UTC",
+    "last_updated_at": "2025-07-03 08:26:28.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "24006584",
+    "price": "65.32",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4875",
+    "inserted_at": "2025-07-03 08:26:28.000000 UTC",
+    "last_updated_at": "2025-07-03 08:26:28.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "24006587",
+    "price": "115.92",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4875",
+    "inserted_at": "2025-07-03 08:26:28.000000 UTC",
+    "last_updated_at": "2025-07-03 08:26:28.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "24006589",
+    "price": "115.92",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "4875",
+    "inserted_at": "2025-07-03 08:26:28.000000 UTC",
+    "last_updated_at": "2025-07-03 08:26:28.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "24492652",
+    "price": "156.72",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5125",
+    "inserted_at": "2025-07-08 08:22:58.000000 UTC",
+    "last_updated_at": "2025-07-08 08:22:58.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "24492650",
+    "price": "188.07",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5125",
+    "inserted_at": "2025-07-08 08:22:58.000000 UTC",
+    "last_updated_at": "2025-07-08 08:22:58.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "23903969",
+    "price": "1534.02",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5152",
+    "inserted_at": "2025-07-02 16:52:03.000000 UTC",
+    "last_updated_at": "2025-07-02 16:52:03.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "23903937",
+    "price": "1534.02",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5152",
+    "inserted_at": "2025-07-02 16:52:03.000000 UTC",
+    "last_updated_at": "2025-07-02 16:52:03.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "24028349",
+    "price": "437.16",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5189",
+    "inserted_at": "2025-07-03 12:21:59.000000 UTC",
+    "last_updated_at": "2025-07-03 12:21:59.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "24028350",
+    "price": "437.16",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5189",
+    "inserted_at": "2025-07-03 12:21:59.000000 UTC",
+    "last_updated_at": "2025-07-03 12:21:59.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "23899246",
+    "price": "192.99",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5193",
+    "inserted_at": "2025-07-02 16:41:31.000000 UTC",
+    "last_updated_at": "2025-07-02 16:41:31.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23899242",
+    "price": "176.51",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5193",
+    "inserted_at": "2025-07-02 16:41:31.000000 UTC",
+    "last_updated_at": "2025-07-02 16:41:31.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23899245",
+    "price": "210.76",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5193",
+    "inserted_at": "2025-07-02 16:41:31.000000 UTC",
+    "last_updated_at": "2025-07-02 16:41:31.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23899244",
+    "price": "177.4",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5193",
+    "inserted_at": "2025-07-02 16:41:31.000000 UTC",
+    "last_updated_at": "2025-07-02 16:41:31.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23898602",
+    "price": "108.45",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5194",
+    "inserted_at": "2025-07-02 16:40:31.000000 UTC",
+    "last_updated_at": "2025-07-02 16:40:31.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23898623",
+    "price": "108.45",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5194",
+    "inserted_at": "2025-07-02 16:40:31.000000 UTC",
+    "last_updated_at": "2025-07-02 16:40:31.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23898601",
+    "price": "107.91",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5194",
+    "inserted_at": "2025-07-02 16:40:31.000000 UTC",
+    "last_updated_at": "2025-07-02 16:40:31.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23898624",
+    "price": "107.91",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5194",
+    "inserted_at": "2025-07-02 16:40:31.000000 UTC",
+    "last_updated_at": "2025-07-02 16:40:31.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "24277731",
+    "price": "1068.08",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5207",
+    "inserted_at": "2025-07-05 20:30:29.000000 UTC",
+    "last_updated_at": "2025-07-05 20:30:29.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "24277724",
+    "price": "1068.08",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5207",
+    "inserted_at": "2025-07-05 20:30:29.000000 UTC",
+    "last_updated_at": "2025-07-05 20:30:29.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "23904217",
+    "price": "484.67",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5216",
+    "inserted_at": "2025-07-02 16:52:30.000000 UTC",
+    "last_updated_at": "2025-07-02 16:52:30.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "23904234",
+    "price": "484.67",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5216",
+    "inserted_at": "2025-07-02 16:52:30.000000 UTC",
+    "last_updated_at": "2025-07-02 16:52:30.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "23898307",
+    "price": "494.47",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5245",
+    "inserted_at": "2025-07-02 16:40:29.000000 UTC",
+    "last_updated_at": "2025-07-02 16:40:29.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23898319",
+    "price": "437.66",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5245",
+    "inserted_at": "2025-07-02 16:40:29.000000 UTC",
+    "last_updated_at": "2025-07-02 16:40:29.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23898313",
+    "price": "437.66",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5245",
+    "inserted_at": "2025-07-02 16:40:29.000000 UTC",
+    "last_updated_at": "2025-07-02 16:40:29.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23898315",
+    "price": "458.73",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5245",
+    "inserted_at": "2025-07-02 16:40:29.000000 UTC",
+    "last_updated_at": "2025-07-02 16:40:29.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23898304",
+    "price": "499.45",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5245",
+    "inserted_at": "2025-07-02 16:40:29.000000 UTC",
+    "last_updated_at": "2025-07-02 16:40:29.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23898310",
+    "price": "458.73",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5245",
+    "inserted_at": "2025-07-02 16:40:29.000000 UTC",
+    "last_updated_at": "2025-07-02 16:40:29.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23898306",
+    "price": "501.96",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5245",
+    "inserted_at": "2025-07-02 16:40:29.000000 UTC",
+    "last_updated_at": "2025-07-02 16:40:29.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "23898312",
+    "price": "502.13",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5245",
+    "inserted_at": "2025-07-02 16:40:29.000000 UTC",
+    "last_updated_at": "2025-07-02 16:40:29.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "23898317",
+    "price": "502.13",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5245",
+    "inserted_at": "2025-07-02 16:40:29.000000 UTC",
+    "last_updated_at": "2025-07-02 16:40:29.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "23898305",
+    "price": "496.95",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5245",
+    "inserted_at": "2025-07-02 16:40:29.000000 UTC",
+    "last_updated_at": "2025-07-02 16:40:29.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23898316",
+    "price": "456.44",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5245",
+    "inserted_at": "2025-07-02 16:40:29.000000 UTC",
+    "last_updated_at": "2025-07-02 16:40:29.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23898311",
+    "price": "456.44",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5245",
+    "inserted_at": "2025-07-02 16:40:29.000000 UTC",
+    "last_updated_at": "2025-07-02 16:40:29.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23898308",
+    "price": "507.02",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5245",
+    "inserted_at": "2025-07-02 16:40:29.000000 UTC",
+    "last_updated_at": "2025-07-02 16:40:29.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "23898318",
+    "price": "507.85",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5245",
+    "inserted_at": "2025-07-02 16:40:29.000000 UTC",
+    "last_updated_at": "2025-07-02 16:40:29.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "23898314",
+    "price": "507.85",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5245",
+    "inserted_at": "2025-07-02 16:40:29.000000 UTC",
+    "last_updated_at": "2025-07-02 16:40:29.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "22521462",
+    "price": "985.3",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5264",
+    "inserted_at": "2025-06-22 21:50:41.000000 UTC",
+    "last_updated_at": "2025-06-22 21:50:41.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "22521467",
+    "price": "985.3",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5264",
+    "inserted_at": "2025-06-22 21:50:41.000000 UTC",
+    "last_updated_at": "2025-06-22 21:50:41.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "22521737",
+    "price": "1423.95",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5273",
+    "inserted_at": "2025-06-22 21:52:57.000000 UTC",
+    "last_updated_at": "2025-06-22 21:52:57.000000 UTC",
+    "vehicle_class_id": "11",
+    "rk": "1"
+  },
+  {
+    "id": "22521742",
+    "price": "1423.95",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5273",
+    "inserted_at": "2025-06-22 21:52:57.000000 UTC",
+    "last_updated_at": "2025-06-22 21:52:57.000000 UTC",
+    "vehicle_class_id": "11",
+    "rk": "1"
+  },
+  {
+    "id": "10000397",
+    "price": "83.6",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5298",
+    "inserted_at": "2025-04-15 16:47:29.000000 UTC",
+    "last_updated_at": "2025-04-15 16:47:29.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "10000401",
+    "price": "83.6",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5298",
+    "inserted_at": "2025-04-15 16:47:29.000000 UTC",
+    "last_updated_at": "2025-04-15 16:47:29.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "10001369",
+    "price": "114.4",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5315",
+    "inserted_at": "2025-04-15 16:51:08.000000 UTC",
+    "last_updated_at": "2025-04-15 16:51:08.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "10001363",
+    "price": "114.4",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5315",
+    "inserted_at": "2025-04-15 16:51:08.000000 UTC",
+    "last_updated_at": "2025-04-15 16:51:08.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "23679549",
+    "price": "72.96",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5453",
+    "inserted_at": "2025-07-01 08:27:59.000000 UTC",
+    "last_updated_at": "2025-07-01 08:27:59.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23679544",
+    "price": "72.96",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5453",
+    "inserted_at": "2025-07-01 08:27:59.000000 UTC",
+    "last_updated_at": "2025-07-01 08:27:59.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23679546",
+    "price": "93.24",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5453",
+    "inserted_at": "2025-07-01 08:27:59.000000 UTC",
+    "last_updated_at": "2025-07-01 08:27:59.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23679551",
+    "price": "93.24",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5453",
+    "inserted_at": "2025-07-01 08:27:59.000000 UTC",
+    "last_updated_at": "2025-07-01 08:27:59.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23679547",
+    "price": "141.27",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5453",
+    "inserted_at": "2025-07-01 08:27:59.000000 UTC",
+    "last_updated_at": "2025-07-01 08:27:59.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "23679552",
+    "price": "141.27",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5453",
+    "inserted_at": "2025-07-01 08:27:59.000000 UTC",
+    "last_updated_at": "2025-07-01 08:27:59.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "24006868",
+    "price": "54.59",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5455",
+    "inserted_at": "2025-07-03 08:26:58.000000 UTC",
+    "last_updated_at": "2025-07-03 08:26:58.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "24006878",
+    "price": "54.6",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5455",
+    "inserted_at": "2025-07-03 08:26:58.000000 UTC",
+    "last_updated_at": "2025-07-03 08:26:58.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "24006872",
+    "price": "59.32",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5455",
+    "inserted_at": "2025-07-03 08:26:58.000000 UTC",
+    "last_updated_at": "2025-07-03 08:26:58.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23822512",
+    "price": "1000",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5455",
+    "inserted_at": "2025-07-02 07:36:29.000000 UTC",
+    "last_updated_at": "2025-07-02 07:36:29.000000 UTC",
+    "vehicle_class_id": "11",
+    "rk": "1"
+  },
+  {
+    "id": "23822518",
+    "price": "1000",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5455",
+    "inserted_at": "2025-07-02 07:36:29.000000 UTC",
+    "last_updated_at": "2025-07-02 07:36:29.000000 UTC",
+    "vehicle_class_id": "11",
+    "rk": "1"
+  },
+  {
+    "id": "23676810",
+    "price": "42.31",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5460",
+    "inserted_at": "2025-07-01 08:23:32.000000 UTC",
+    "last_updated_at": "2025-07-01 08:23:32.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23676787",
+    "price": "42.31",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5460",
+    "inserted_at": "2025-07-01 08:23:32.000000 UTC",
+    "last_updated_at": "2025-07-01 08:23:32.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23676812",
+    "price": "61.58",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5460",
+    "inserted_at": "2025-07-01 08:23:32.000000 UTC",
+    "last_updated_at": "2025-07-01 08:23:32.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23676786",
+    "price": "61.58",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5460",
+    "inserted_at": "2025-07-01 08:23:32.000000 UTC",
+    "last_updated_at": "2025-07-01 08:23:32.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23676785",
+    "price": "71.49",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5460",
+    "inserted_at": "2025-07-01 08:23:32.000000 UTC",
+    "last_updated_at": "2025-07-01 08:23:32.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23676811",
+    "price": "71.49",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5460",
+    "inserted_at": "2025-07-01 08:23:32.000000 UTC",
+    "last_updated_at": "2025-07-01 08:23:32.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23676813",
+    "price": "49.44",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5460",
+    "inserted_at": "2025-07-01 08:23:32.000000 UTC",
+    "last_updated_at": "2025-07-01 08:23:32.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23676789",
+    "price": "49.44",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5460",
+    "inserted_at": "2025-07-01 08:23:32.000000 UTC",
+    "last_updated_at": "2025-07-01 08:23:32.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23676814",
+    "price": "76.07",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5460",
+    "inserted_at": "2025-07-01 08:23:32.000000 UTC",
+    "last_updated_at": "2025-07-01 08:23:32.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "23676788",
+    "price": "76.07",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5460",
+    "inserted_at": "2025-07-01 08:23:32.000000 UTC",
+    "last_updated_at": "2025-07-01 08:23:32.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "23787036",
+    "price": "67.64",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5462",
+    "inserted_at": "2025-07-02 04:23:58.000000 UTC",
+    "last_updated_at": "2025-07-02 04:23:58.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23787029",
+    "price": "67.01",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5462",
+    "inserted_at": "2025-07-02 04:23:58.000000 UTC",
+    "last_updated_at": "2025-07-02 04:23:58.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23787032",
+    "price": "115.92",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5462",
+    "inserted_at": "2025-07-02 04:23:58.000000 UTC",
+    "last_updated_at": "2025-07-02 04:23:58.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23787026",
+    "price": "115.92",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5462",
+    "inserted_at": "2025-07-02 04:23:58.000000 UTC",
+    "last_updated_at": "2025-07-02 04:23:58.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23787033",
+    "price": "114.76",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5462",
+    "inserted_at": "2025-07-02 04:23:58.000000 UTC",
+    "last_updated_at": "2025-07-02 04:23:58.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23787027",
+    "price": "114.76",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5462",
+    "inserted_at": "2025-07-02 04:23:58.000000 UTC",
+    "last_updated_at": "2025-07-02 04:23:58.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23787034",
+    "price": "100.94",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5462",
+    "inserted_at": "2025-07-02 04:23:58.000000 UTC",
+    "last_updated_at": "2025-07-02 04:23:58.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23787028",
+    "price": "100.94",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5462",
+    "inserted_at": "2025-07-02 04:23:58.000000 UTC",
+    "last_updated_at": "2025-07-02 04:23:58.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23787025",
+    "price": "115.92",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5462",
+    "inserted_at": "2025-07-02 04:23:58.000000 UTC",
+    "last_updated_at": "2025-07-02 04:23:58.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "23787035",
+    "price": "115.92",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5462",
+    "inserted_at": "2025-07-02 04:23:58.000000 UTC",
+    "last_updated_at": "2025-07-02 04:23:58.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "24007644",
+    "price": "23.68",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5499",
+    "inserted_at": "2025-07-03 08:28:28.000000 UTC",
+    "last_updated_at": "2025-07-03 08:28:28.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "24007638",
+    "price": "23.68",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5499",
+    "inserted_at": "2025-07-03 08:28:28.000000 UTC",
+    "last_updated_at": "2025-07-03 08:28:28.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "24008021",
+    "price": "54.39",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5499",
+    "inserted_at": "2025-07-03 08:29:28.000000 UTC",
+    "last_updated_at": "2025-07-03 08:29:28.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "24008023",
+    "price": "54.05",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5499",
+    "inserted_at": "2025-07-03 08:29:28.000000 UTC",
+    "last_updated_at": "2025-07-03 08:29:28.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "24007637",
+    "price": "25.53",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5499",
+    "inserted_at": "2025-07-03 08:28:28.000000 UTC",
+    "last_updated_at": "2025-07-03 08:28:28.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "24007645",
+    "price": "25.53",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5499",
+    "inserted_at": "2025-07-03 08:28:28.000000 UTC",
+    "last_updated_at": "2025-07-03 08:28:28.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "24006302",
+    "price": "54.49",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5500",
+    "inserted_at": "2025-07-03 08:25:58.000000 UTC",
+    "last_updated_at": "2025-07-03 08:25:58.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "24006307",
+    "price": "54.49",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5500",
+    "inserted_at": "2025-07-03 08:25:58.000000 UTC",
+    "last_updated_at": "2025-07-03 08:25:58.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "24007641",
+    "price": "56.98",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5501",
+    "inserted_at": "2025-07-03 08:28:28.000000 UTC",
+    "last_updated_at": "2025-07-03 08:28:28.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "24007647",
+    "price": "51.8",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5501",
+    "inserted_at": "2025-07-03 08:28:28.000000 UTC",
+    "last_updated_at": "2025-07-03 08:28:28.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "24006697",
+    "price": "35.7",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5525",
+    "inserted_at": "2025-07-03 08:26:29.000000 UTC",
+    "last_updated_at": "2025-07-03 08:26:29.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "24006688",
+    "price": "35.7",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5525",
+    "inserted_at": "2025-07-03 08:26:29.000000 UTC",
+    "last_updated_at": "2025-07-03 08:26:29.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "24006689",
+    "price": "84.7",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5525",
+    "inserted_at": "2025-07-03 08:26:29.000000 UTC",
+    "last_updated_at": "2025-07-03 08:26:29.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "24006696",
+    "price": "84.7",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5525",
+    "inserted_at": "2025-07-03 08:26:29.000000 UTC",
+    "last_updated_at": "2025-07-03 08:26:29.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "24006698",
+    "price": "46.2",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5525",
+    "inserted_at": "2025-07-03 08:26:29.000000 UTC",
+    "last_updated_at": "2025-07-03 08:26:29.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "24006687",
+    "price": "46.2",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5525",
+    "inserted_at": "2025-07-03 08:26:29.000000 UTC",
+    "last_updated_at": "2025-07-03 08:26:29.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "24006426",
+    "price": "190",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5527",
+    "inserted_at": "2025-07-03 08:26:01.000000 UTC",
+    "last_updated_at": "2025-07-03 08:26:01.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "24006414",
+    "price": "190",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5527",
+    "inserted_at": "2025-07-03 08:26:01.000000 UTC",
+    "last_updated_at": "2025-07-03 08:26:01.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "24006413",
+    "price": "228.85",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5527",
+    "inserted_at": "2025-07-03 08:26:01.000000 UTC",
+    "last_updated_at": "2025-07-03 08:26:01.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "24006427",
+    "price": "228.85",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5527",
+    "inserted_at": "2025-07-03 08:26:01.000000 UTC",
+    "last_updated_at": "2025-07-03 08:26:01.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "24006972",
+    "price": "80.85",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5527",
+    "inserted_at": "2025-07-03 08:27:00.000000 UTC",
+    "last_updated_at": "2025-07-03 08:27:00.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "24006959",
+    "price": "80.85",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5527",
+    "inserted_at": "2025-07-03 08:27:00.000000 UTC",
+    "last_updated_at": "2025-07-03 08:27:00.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "23788920",
+    "price": "49.63",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5540",
+    "inserted_at": "2025-07-02 04:26:58.000000 UTC",
+    "last_updated_at": "2025-07-02 04:26:58.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23788914",
+    "price": "49.63",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5540",
+    "inserted_at": "2025-07-02 04:26:58.000000 UTC",
+    "last_updated_at": "2025-07-02 04:26:58.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23789594",
+    "price": "90.85",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5540",
+    "inserted_at": "2025-07-02 04:27:59.000000 UTC",
+    "last_updated_at": "2025-07-02 04:27:59.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23789595",
+    "price": "90.85",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5540",
+    "inserted_at": "2025-07-02 04:27:59.000000 UTC",
+    "last_updated_at": "2025-07-02 04:27:59.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23789592",
+    "price": "85.1",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5540",
+    "inserted_at": "2025-07-02 04:27:59.000000 UTC",
+    "last_updated_at": "2025-07-02 04:27:59.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "23789596",
+    "price": "85.1",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5540",
+    "inserted_at": "2025-07-02 04:27:59.000000 UTC",
+    "last_updated_at": "2025-07-02 04:27:59.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "23789593",
+    "price": "87.98",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5540",
+    "inserted_at": "2025-07-02 04:27:59.000000 UTC",
+    "last_updated_at": "2025-07-02 04:27:59.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "23789597",
+    "price": "87.98",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5540",
+    "inserted_at": "2025-07-02 04:27:59.000000 UTC",
+    "last_updated_at": "2025-07-02 04:27:59.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "23788915",
+    "price": "62.09",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5540",
+    "inserted_at": "2025-07-02 04:26:58.000000 UTC",
+    "last_updated_at": "2025-07-02 04:26:58.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23788919",
+    "price": "62.09",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5540",
+    "inserted_at": "2025-07-02 04:26:58.000000 UTC",
+    "last_updated_at": "2025-07-02 04:26:58.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "24007610",
+    "price": "50.77",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5545",
+    "inserted_at": "2025-07-03 08:28:28.000000 UTC",
+    "last_updated_at": "2025-07-03 08:28:28.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "24007614",
+    "price": "56.1",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5545",
+    "inserted_at": "2025-07-03 08:28:28.000000 UTC",
+    "last_updated_at": "2025-07-03 08:28:28.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "24005694",
+    "price": "48.11",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5550",
+    "inserted_at": "2025-07-03 08:24:58.000000 UTC",
+    "last_updated_at": "2025-07-03 08:24:58.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "24005690",
+    "price": "48.11",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5550",
+    "inserted_at": "2025-07-03 08:24:58.000000 UTC",
+    "last_updated_at": "2025-07-03 08:24:58.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "24005695",
+    "price": "98.99",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5550",
+    "inserted_at": "2025-07-03 08:24:58.000000 UTC",
+    "last_updated_at": "2025-07-03 08:24:58.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "24005687",
+    "price": "98.99",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5550",
+    "inserted_at": "2025-07-03 08:24:58.000000 UTC",
+    "last_updated_at": "2025-07-03 08:24:58.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "24005693",
+    "price": "34.82",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5550",
+    "inserted_at": "2025-07-03 08:24:58.000000 UTC",
+    "last_updated_at": "2025-07-03 08:24:58.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "24005688",
+    "price": "34.82",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5550",
+    "inserted_at": "2025-07-03 08:24:58.000000 UTC",
+    "last_updated_at": "2025-07-03 08:24:58.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23788468",
+    "price": "48.11",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5551",
+    "inserted_at": "2025-07-02 04:25:59.000000 UTC",
+    "last_updated_at": "2025-07-02 04:25:59.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23788474",
+    "price": "43.74",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5551",
+    "inserted_at": "2025-07-02 04:25:59.000000 UTC",
+    "last_updated_at": "2025-07-02 04:25:59.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23788478",
+    "price": "89.99",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5551",
+    "inserted_at": "2025-07-02 04:25:59.000000 UTC",
+    "last_updated_at": "2025-07-02 04:25:59.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "23788465",
+    "price": "98.99",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5551",
+    "inserted_at": "2025-07-02 04:25:59.000000 UTC",
+    "last_updated_at": "2025-07-02 04:25:59.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "23835190",
+    "price": "86.4",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5552",
+    "inserted_at": "2025-07-02 08:24:59.000000 UTC",
+    "last_updated_at": "2025-07-02 08:24:59.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "23835184",
+    "price": "86.4",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5552",
+    "inserted_at": "2025-07-02 08:24:59.000000 UTC",
+    "last_updated_at": "2025-07-02 08:24:59.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "23835188",
+    "price": "34.82",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5552",
+    "inserted_at": "2025-07-02 08:24:59.000000 UTC",
+    "last_updated_at": "2025-07-02 08:24:59.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23835185",
+    "price": "34.82",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5552",
+    "inserted_at": "2025-07-02 08:24:59.000000 UTC",
+    "last_updated_at": "2025-07-02 08:24:59.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23835851",
+    "price": "42.59",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5566",
+    "inserted_at": "2025-07-02 08:25:29.000000 UTC",
+    "last_updated_at": "2025-07-02 08:25:29.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23835847",
+    "price": "42.59",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5566",
+    "inserted_at": "2025-07-02 08:25:29.000000 UTC",
+    "last_updated_at": "2025-07-02 08:25:29.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23835844",
+    "price": "91.12",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5566",
+    "inserted_at": "2025-07-02 08:25:29.000000 UTC",
+    "last_updated_at": "2025-07-02 08:25:29.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23835850",
+    "price": "82.84",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5566",
+    "inserted_at": "2025-07-02 08:25:29.000000 UTC",
+    "last_updated_at": "2025-07-02 08:25:29.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23835852",
+    "price": "54.3",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5566",
+    "inserted_at": "2025-07-02 08:25:29.000000 UTC",
+    "last_updated_at": "2025-07-02 08:25:29.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23835846",
+    "price": "59.73",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5566",
+    "inserted_at": "2025-07-02 08:25:29.000000 UTC",
+    "last_updated_at": "2025-07-02 08:25:29.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23835843",
+    "price": "107.85",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5566",
+    "inserted_at": "2025-07-02 08:25:29.000000 UTC",
+    "last_updated_at": "2025-07-02 08:25:29.000000 UTC",
+    "vehicle_class_id": "8",
+    "rk": "1"
+  },
+  {
+    "id": "23835848",
+    "price": "98.05",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5566",
+    "inserted_at": "2025-07-02 08:25:29.000000 UTC",
+    "last_updated_at": "2025-07-02 08:25:29.000000 UTC",
+    "vehicle_class_id": "8",
+    "rk": "1"
+  },
+  {
+    "id": "23786115",
+    "price": "29.99",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5574",
+    "inserted_at": "2025-07-02 04:21:59.000000 UTC",
+    "last_updated_at": "2025-07-02 04:21:59.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23786117",
+    "price": "29.99",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5574",
+    "inserted_at": "2025-07-02 04:21:59.000000 UTC",
+    "last_updated_at": "2025-07-02 04:21:59.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23767912",
+    "price": "24.87",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5578",
+    "inserted_at": "2025-07-02 00:24:58.000000 UTC",
+    "last_updated_at": "2025-07-02 00:24:58.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23767902",
+    "price": "27.28",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5578",
+    "inserted_at": "2025-07-02 00:24:58.000000 UTC",
+    "last_updated_at": "2025-07-02 00:24:58.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23767904",
+    "price": "58.23",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5578",
+    "inserted_at": "2025-07-02 00:24:58.000000 UTC",
+    "last_updated_at": "2025-07-02 00:24:58.000000 UTC",
+    "vehicle_class_id": "8",
+    "rk": "1"
+  },
+  {
+    "id": "23767914",
+    "price": "53.14",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5578",
+    "inserted_at": "2025-07-02 00:24:58.000000 UTC",
+    "last_updated_at": "2025-07-02 00:24:58.000000 UTC",
+    "vehicle_class_id": "8",
+    "rk": "1"
+  },
+  {
+    "id": "24008032",
+    "price": "43.05",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5582",
+    "inserted_at": "2025-07-03 08:29:28.000000 UTC",
+    "last_updated_at": "2025-07-03 08:29:28.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "24008029",
+    "price": "47.36",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5582",
+    "inserted_at": "2025-07-03 08:29:28.000000 UTC",
+    "last_updated_at": "2025-07-03 08:29:28.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23726177",
+    "price": "29.23",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5590",
+    "inserted_at": "2025-07-01 16:41:01.000000 UTC",
+    "last_updated_at": "2025-07-01 16:41:01.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23726176",
+    "price": "29.23",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5590",
+    "inserted_at": "2025-07-01 16:41:01.000000 UTC",
+    "last_updated_at": "2025-07-01 16:41:01.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23726175",
+    "price": "50.18",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5590",
+    "inserted_at": "2025-07-01 16:41:01.000000 UTC",
+    "last_updated_at": "2025-07-01 16:41:01.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23726178",
+    "price": "50.18",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5590",
+    "inserted_at": "2025-07-01 16:41:01.000000 UTC",
+    "last_updated_at": "2025-07-01 16:41:01.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23725169",
+    "price": "31.2",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5590",
+    "inserted_at": "2025-07-01 16:39:29.000000 UTC",
+    "last_updated_at": "2025-07-01 16:39:29.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23725173",
+    "price": "31.2",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5590",
+    "inserted_at": "2025-07-01 16:39:29.000000 UTC",
+    "last_updated_at": "2025-07-01 16:39:29.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23717904",
+    "price": "88",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5598",
+    "inserted_at": "2025-07-01 16:27:28.000000 UTC",
+    "last_updated_at": "2025-07-01 16:27:28.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23717915",
+    "price": "88",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5598",
+    "inserted_at": "2025-07-01 16:27:28.000000 UTC",
+    "last_updated_at": "2025-07-01 16:27:28.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23717907",
+    "price": "30.8",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5598",
+    "inserted_at": "2025-07-01 16:27:28.000000 UTC",
+    "last_updated_at": "2025-07-01 16:27:28.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "23717914",
+    "price": "30.8",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5598",
+    "inserted_at": "2025-07-01 16:27:28.000000 UTC",
+    "last_updated_at": "2025-07-01 16:27:28.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "23717918",
+    "price": "16.55",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5598",
+    "inserted_at": "2025-07-01 16:27:28.000000 UTC",
+    "last_updated_at": "2025-07-01 16:27:28.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23717905",
+    "price": "22.43",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5598",
+    "inserted_at": "2025-07-01 16:27:28.000000 UTC",
+    "last_updated_at": "2025-07-01 16:27:28.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23677193",
+    "price": "15.41",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5599",
+    "inserted_at": "2025-07-01 08:23:58.000000 UTC",
+    "last_updated_at": "2025-07-01 08:23:58.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23677190",
+    "price": "15.44",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5599",
+    "inserted_at": "2025-07-01 08:23:58.000000 UTC",
+    "last_updated_at": "2025-07-01 08:23:58.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23677183",
+    "price": "15.44",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5599",
+    "inserted_at": "2025-07-01 08:23:58.000000 UTC",
+    "last_updated_at": "2025-07-01 08:23:58.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23786557",
+    "price": "88",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5599",
+    "inserted_at": "2025-07-02 04:22:59.000000 UTC",
+    "last_updated_at": "2025-07-02 04:22:59.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23786560",
+    "price": "88",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5599",
+    "inserted_at": "2025-07-02 04:22:59.000000 UTC",
+    "last_updated_at": "2025-07-02 04:22:59.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23677194",
+    "price": "20.59",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5599",
+    "inserted_at": "2025-07-01 08:23:58.000000 UTC",
+    "last_updated_at": "2025-07-01 08:23:58.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23677189",
+    "price": "20.53",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5599",
+    "inserted_at": "2025-07-01 08:23:58.000000 UTC",
+    "last_updated_at": "2025-07-01 08:23:58.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23677179",
+    "price": "20.53",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5599",
+    "inserted_at": "2025-07-01 08:23:58.000000 UTC",
+    "last_updated_at": "2025-07-01 08:23:58.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23677187",
+    "price": "31.68",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5599",
+    "inserted_at": "2025-07-01 08:23:58.000000 UTC",
+    "last_updated_at": "2025-07-01 08:23:58.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "23677196",
+    "price": "31.77",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5599",
+    "inserted_at": "2025-07-01 08:23:58.000000 UTC",
+    "last_updated_at": "2025-07-01 08:23:58.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "23677184",
+    "price": "31.68",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5599",
+    "inserted_at": "2025-07-01 08:23:58.000000 UTC",
+    "last_updated_at": "2025-07-01 08:23:58.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "23677180",
+    "price": "17.07",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5599",
+    "inserted_at": "2025-07-01 08:23:58.000000 UTC",
+    "last_updated_at": "2025-07-01 08:23:58.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23677197",
+    "price": "17.12",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5599",
+    "inserted_at": "2025-07-01 08:23:58.000000 UTC",
+    "last_updated_at": "2025-07-01 08:23:58.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23677191",
+    "price": "17.07",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5599",
+    "inserted_at": "2025-07-01 08:23:58.000000 UTC",
+    "last_updated_at": "2025-07-01 08:23:58.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "12489104",
+    "price": "292.66",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5636",
+    "inserted_at": "2025-05-04 05:48:12.000000 UTC",
+    "last_updated_at": "2025-05-04 05:48:12.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "12489106",
+    "price": "292.66",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5636",
+    "inserted_at": "2025-05-04 05:48:12.000000 UTC",
+    "last_updated_at": "2025-05-04 05:48:12.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "12489105",
+    "price": "330",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5636",
+    "inserted_at": "2025-05-04 05:48:12.000000 UTC",
+    "last_updated_at": "2025-05-04 05:48:12.000000 UTC",
+    "vehicle_class_id": "11",
+    "rk": "1"
+  },
+  {
+    "id": "12489107",
+    "price": "330",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5636",
+    "inserted_at": "2025-05-04 05:48:12.000000 UTC",
+    "last_updated_at": "2025-05-04 05:48:12.000000 UTC",
+    "vehicle_class_id": "11",
+    "rk": "1"
+  },
+  {
+    "id": "12487307",
+    "price": "143",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5637",
+    "inserted_at": "2025-05-04 05:47:30.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:30.000000 UTC",
+    "vehicle_class_id": "9",
+    "rk": "1"
+  },
+  {
+    "id": "12487296",
+    "price": "143",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5637",
+    "inserted_at": "2025-05-04 05:47:30.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:30.000000 UTC",
+    "vehicle_class_id": "9",
+    "rk": "1"
+  },
+  {
+    "id": "12487302",
+    "price": "176",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5637",
+    "inserted_at": "2025-05-04 05:47:30.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:30.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "12487313",
+    "price": "176",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5637",
+    "inserted_at": "2025-05-04 05:47:30.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:30.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "12487293",
+    "price": "330",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5637",
+    "inserted_at": "2025-05-04 05:47:30.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:30.000000 UTC",
+    "vehicle_class_id": "11",
+    "rk": "1"
+  },
+  {
+    "id": "12487304",
+    "price": "330",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5637",
+    "inserted_at": "2025-05-04 05:47:30.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:30.000000 UTC",
+    "vehicle_class_id": "11",
+    "rk": "1"
+  },
+  {
+    "id": "12488836",
+    "price": "330",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5638",
+    "inserted_at": "2025-05-04 05:48:03.000000 UTC",
+    "last_updated_at": "2025-05-04 05:48:03.000000 UTC",
+    "vehicle_class_id": "11",
+    "rk": "1"
+  },
+  {
+    "id": "12488834",
+    "price": "330",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5638",
+    "inserted_at": "2025-05-04 05:48:03.000000 UTC",
+    "last_updated_at": "2025-05-04 05:48:03.000000 UTC",
+    "vehicle_class_id": "11",
+    "rk": "1"
+  },
+  {
+    "id": "12487385",
+    "price": "58.3",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5639",
+    "inserted_at": "2025-05-04 05:47:31.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:31.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "12487377",
+    "price": "58.3",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5639",
+    "inserted_at": "2025-05-04 05:47:31.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:31.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "12487386",
+    "price": "66",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5639",
+    "inserted_at": "2025-05-04 05:47:31.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:31.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "12487378",
+    "price": "66",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5639",
+    "inserted_at": "2025-05-04 05:47:31.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:31.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "12487374",
+    "price": "330",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5639",
+    "inserted_at": "2025-05-04 05:47:31.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:31.000000 UTC",
+    "vehicle_class_id": "11",
+    "rk": "1"
+  },
+  {
+    "id": "12487383",
+    "price": "330",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5639",
+    "inserted_at": "2025-05-04 05:47:31.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:31.000000 UTC",
+    "vehicle_class_id": "11",
+    "rk": "1"
+  },
+  {
+    "id": "12487388",
+    "price": "104.5",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5639",
+    "inserted_at": "2025-05-04 05:47:31.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:31.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "12487380",
+    "price": "104.5",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5639",
+    "inserted_at": "2025-05-04 05:47:31.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:31.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "12489078",
+    "price": "71.5",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5641",
+    "inserted_at": "2025-05-04 05:48:11.000000 UTC",
+    "last_updated_at": "2025-05-04 05:48:11.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "12489067",
+    "price": "71.5",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5641",
+    "inserted_at": "2025-05-04 05:48:11.000000 UTC",
+    "last_updated_at": "2025-05-04 05:48:11.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "12489076",
+    "price": "71.5",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5641",
+    "inserted_at": "2025-05-04 05:48:11.000000 UTC",
+    "last_updated_at": "2025-05-04 05:48:11.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "12489084",
+    "price": "71.5",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5641",
+    "inserted_at": "2025-05-04 05:48:11.000000 UTC",
+    "last_updated_at": "2025-05-04 05:48:11.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "12486494",
+    "price": "60.5",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5642",
+    "inserted_at": "2025-05-04 05:47:00.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:00.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "12486487",
+    "price": "60.5",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5642",
+    "inserted_at": "2025-05-04 05:47:00.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:00.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "12486496",
+    "price": "330",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5642",
+    "inserted_at": "2025-05-04 05:47:00.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:00.000000 UTC",
+    "vehicle_class_id": "11",
+    "rk": "1"
+  },
+  {
+    "id": "12486489",
+    "price": "330",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5642",
+    "inserted_at": "2025-05-04 05:47:00.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:00.000000 UTC",
+    "vehicle_class_id": "11",
+    "rk": "1"
+  },
+  {
+    "id": "12488665",
+    "price": "60.5",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5643",
+    "inserted_at": "2025-05-04 05:47:59.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:59.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "12488656",
+    "price": "60.5",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5643",
+    "inserted_at": "2025-05-04 05:47:59.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:59.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "12488650",
+    "price": "55",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5643",
+    "inserted_at": "2025-05-04 05:47:59.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:59.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "12488660",
+    "price": "55",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5643",
+    "inserted_at": "2025-05-04 05:47:59.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:59.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "12488664",
+    "price": "60.5",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5643",
+    "inserted_at": "2025-05-04 05:47:59.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:59.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "12488655",
+    "price": "60.5",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5643",
+    "inserted_at": "2025-05-04 05:47:59.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:59.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "12488651",
+    "price": "55",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5643",
+    "inserted_at": "2025-05-04 05:47:59.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:59.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "12488661",
+    "price": "55",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5643",
+    "inserted_at": "2025-05-04 05:47:59.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:59.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "12488663",
+    "price": "148.5",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5643",
+    "inserted_at": "2025-05-04 05:47:59.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:59.000000 UTC",
+    "vehicle_class_id": "9",
+    "rk": "1"
+  },
+  {
+    "id": "12488653",
+    "price": "148.5",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5643",
+    "inserted_at": "2025-05-04 05:47:59.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:59.000000 UTC",
+    "vehicle_class_id": "9",
+    "rk": "1"
+  },
+  {
+    "id": "12488666",
+    "price": "330",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5643",
+    "inserted_at": "2025-05-04 05:47:59.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:59.000000 UTC",
+    "vehicle_class_id": "11",
+    "rk": "1"
+  },
+  {
+    "id": "12488658",
+    "price": "330",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5643",
+    "inserted_at": "2025-05-04 05:47:59.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:59.000000 UTC",
+    "vehicle_class_id": "11",
+    "rk": "1"
+  },
+  {
+    "id": "12488652",
+    "price": "60.5",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5643",
+    "inserted_at": "2025-05-04 05:47:59.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:59.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "12488662",
+    "price": "60.5",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5643",
+    "inserted_at": "2025-05-04 05:47:59.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:59.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "12489875",
+    "price": "82.57",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5644",
+    "inserted_at": "2025-05-04 05:48:42.000000 UTC",
+    "last_updated_at": "2025-05-04 05:48:42.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "12489869",
+    "price": "82.57",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5644",
+    "inserted_at": "2025-05-04 05:48:42.000000 UTC",
+    "last_updated_at": "2025-05-04 05:48:42.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "12489876",
+    "price": "59.63",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5644",
+    "inserted_at": "2025-05-04 05:48:42.000000 UTC",
+    "last_updated_at": "2025-05-04 05:48:42.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "12489870",
+    "price": "59.63",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5644",
+    "inserted_at": "2025-05-04 05:48:42.000000 UTC",
+    "last_updated_at": "2025-05-04 05:48:42.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "12489872",
+    "price": "88",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5644",
+    "inserted_at": "2025-05-04 05:48:42.000000 UTC",
+    "last_updated_at": "2025-05-04 05:48:42.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "12489878",
+    "price": "88",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5644",
+    "inserted_at": "2025-05-04 05:48:42.000000 UTC",
+    "last_updated_at": "2025-05-04 05:48:42.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "12489873",
+    "price": "57.8",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5644",
+    "inserted_at": "2025-05-04 05:48:42.000000 UTC",
+    "last_updated_at": "2025-05-04 05:48:42.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "12489867",
+    "price": "57.8",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5644",
+    "inserted_at": "2025-05-04 05:48:42.000000 UTC",
+    "last_updated_at": "2025-05-04 05:48:42.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "12489874",
+    "price": "179.82",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5644",
+    "inserted_at": "2025-05-04 05:48:42.000000 UTC",
+    "last_updated_at": "2025-05-04 05:48:42.000000 UTC",
+    "vehicle_class_id": "9",
+    "rk": "1"
+  },
+  {
+    "id": "12489868",
+    "price": "179.82",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5644",
+    "inserted_at": "2025-05-04 05:48:42.000000 UTC",
+    "last_updated_at": "2025-05-04 05:48:42.000000 UTC",
+    "vehicle_class_id": "9",
+    "rk": "1"
+  },
+  {
+    "id": "12489871",
+    "price": "203.67",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5644",
+    "inserted_at": "2025-05-04 05:48:42.000000 UTC",
+    "last_updated_at": "2025-05-04 05:48:42.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "12489877",
+    "price": "203.67",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5644",
+    "inserted_at": "2025-05-04 05:48:42.000000 UTC",
+    "last_updated_at": "2025-05-04 05:48:42.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "12489917",
+    "price": "59.63",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5645",
+    "inserted_at": "2025-05-04 05:48:43.000000 UTC",
+    "last_updated_at": "2025-05-04 05:48:43.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "12489913",
+    "price": "59.63",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5645",
+    "inserted_at": "2025-05-04 05:48:43.000000 UTC",
+    "last_updated_at": "2025-05-04 05:48:43.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "12489911",
+    "price": "88",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5645",
+    "inserted_at": "2025-05-04 05:48:43.000000 UTC",
+    "last_updated_at": "2025-05-04 05:48:43.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "12489915",
+    "price": "88",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5645",
+    "inserted_at": "2025-05-04 05:48:43.000000 UTC",
+    "last_updated_at": "2025-05-04 05:48:43.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "12489912",
+    "price": "179.82",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5645",
+    "inserted_at": "2025-05-04 05:48:43.000000 UTC",
+    "last_updated_at": "2025-05-04 05:48:43.000000 UTC",
+    "vehicle_class_id": "9",
+    "rk": "1"
+  },
+  {
+    "id": "12489916",
+    "price": "179.82",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5645",
+    "inserted_at": "2025-05-04 05:48:43.000000 UTC",
+    "last_updated_at": "2025-05-04 05:48:43.000000 UTC",
+    "vehicle_class_id": "9",
+    "rk": "1"
+  },
+  {
+    "id": "12489910",
+    "price": "203.67",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5645",
+    "inserted_at": "2025-05-04 05:48:43.000000 UTC",
+    "last_updated_at": "2025-05-04 05:48:43.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "12489914",
+    "price": "203.67",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5645",
+    "inserted_at": "2025-05-04 05:48:43.000000 UTC",
+    "last_updated_at": "2025-05-04 05:48:43.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "11535730",
+    "price": "45.53",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5647",
+    "inserted_at": "2025-04-27 05:45:17.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:17.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "11535740",
+    "price": "45.63",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5647",
+    "inserted_at": "2025-04-27 05:45:17.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:17.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "11535726",
+    "price": "62.23",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5647",
+    "inserted_at": "2025-04-27 05:45:17.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:17.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "11535737",
+    "price": "62.33",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5647",
+    "inserted_at": "2025-04-27 05:45:17.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:17.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "12489099",
+    "price": "88",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5647",
+    "inserted_at": "2025-05-04 05:48:12.000000 UTC",
+    "last_updated_at": "2025-05-04 05:48:12.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "12489102",
+    "price": "88",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5647",
+    "inserted_at": "2025-05-04 05:48:12.000000 UTC",
+    "last_updated_at": "2025-05-04 05:48:12.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "11535741",
+    "price": "55",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5647",
+    "inserted_at": "2025-04-27 05:45:17.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:17.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "11535734",
+    "price": "55",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5647",
+    "inserted_at": "2025-04-27 05:45:17.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:17.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "12489098",
+    "price": "181.92",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5647",
+    "inserted_at": "2025-05-04 05:48:12.000000 UTC",
+    "last_updated_at": "2025-05-04 05:48:12.000000 UTC",
+    "vehicle_class_id": "9",
+    "rk": "1"
+  },
+  {
+    "id": "12489101",
+    "price": "181.92",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5647",
+    "inserted_at": "2025-05-04 05:48:12.000000 UTC",
+    "last_updated_at": "2025-05-04 05:48:12.000000 UTC",
+    "vehicle_class_id": "9",
+    "rk": "1"
+  },
+  {
+    "id": "12489100",
+    "price": "206.05",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5647",
+    "inserted_at": "2025-05-04 05:48:12.000000 UTC",
+    "last_updated_at": "2025-05-04 05:48:12.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "12489097",
+    "price": "206.05",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5647",
+    "inserted_at": "2025-05-04 05:48:12.000000 UTC",
+    "last_updated_at": "2025-05-04 05:48:12.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "11535738",
+    "price": "330",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5647",
+    "inserted_at": "2025-04-27 05:45:17.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:17.000000 UTC",
+    "vehicle_class_id": "11",
+    "rk": "1"
+  },
+  {
+    "id": "11535727",
+    "price": "330",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5647",
+    "inserted_at": "2025-04-27 05:45:17.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:17.000000 UTC",
+    "vehicle_class_id": "11",
+    "rk": "1"
+  },
+  {
+    "id": "11535725",
+    "price": "45.73",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5647",
+    "inserted_at": "2025-04-27 05:45:17.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:17.000000 UTC",
+    "vehicle_class_id": "12",
+    "rk": "1"
+  },
+  {
+    "id": "11535736",
+    "price": "45.83",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5647",
+    "inserted_at": "2025-04-27 05:45:17.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:17.000000 UTC",
+    "vehicle_class_id": "12",
+    "rk": "1"
+  },
+  {
+    "id": "12487979",
+    "price": "77",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5650",
+    "inserted_at": "2025-05-04 05:47:46.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:46.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "12487985",
+    "price": "77",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5650",
+    "inserted_at": "2025-05-04 05:47:46.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:46.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "11538490",
+    "price": "69.3",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5651",
+    "inserted_at": "2025-04-27 05:46:17.000000 UTC",
+    "last_updated_at": "2025-04-27 05:46:17.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "11538486",
+    "price": "69.3",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5651",
+    "inserted_at": "2025-04-27 05:46:17.000000 UTC",
+    "last_updated_at": "2025-04-27 05:46:17.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "11538488",
+    "price": "110.09",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5651",
+    "inserted_at": "2025-04-27 05:46:17.000000 UTC",
+    "last_updated_at": "2025-04-27 05:46:17.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "11538492",
+    "price": "110.09",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5651",
+    "inserted_at": "2025-04-27 05:46:17.000000 UTC",
+    "last_updated_at": "2025-04-27 05:46:17.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "11538487",
+    "price": "148.5",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5651",
+    "inserted_at": "2025-04-27 05:46:17.000000 UTC",
+    "last_updated_at": "2025-04-27 05:46:17.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "11538491",
+    "price": "148.5",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5651",
+    "inserted_at": "2025-04-27 05:46:17.000000 UTC",
+    "last_updated_at": "2025-04-27 05:46:17.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "11538493",
+    "price": "385",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5651",
+    "inserted_at": "2025-04-27 05:46:17.000000 UTC",
+    "last_updated_at": "2025-04-27 05:46:17.000000 UTC",
+    "vehicle_class_id": "11",
+    "rk": "1"
+  },
+  {
+    "id": "11538489",
+    "price": "385",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5651",
+    "inserted_at": "2025-04-27 05:46:17.000000 UTC",
+    "last_updated_at": "2025-04-27 05:46:17.000000 UTC",
+    "vehicle_class_id": "11",
+    "rk": "1"
+  },
+  {
+    "id": "12488135",
+    "price": "115.5",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5651",
+    "inserted_at": "2025-05-04 05:47:47.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:47.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "12488128",
+    "price": "115.5",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5651",
+    "inserted_at": "2025-05-04 05:47:47.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:47.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "12487914",
+    "price": "199.8",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5661",
+    "inserted_at": "2025-05-04 05:47:45.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:45.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "12487905",
+    "price": "199.7",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5661",
+    "inserted_at": "2025-05-04 05:47:45.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:45.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "12487908",
+    "price": "216.01",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5661",
+    "inserted_at": "2025-05-04 05:47:45.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:45.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "12487916",
+    "price": "216.11",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5661",
+    "inserted_at": "2025-05-04 05:47:45.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:45.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "12487907",
+    "price": "216.21",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5661",
+    "inserted_at": "2025-05-04 05:47:45.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:45.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "12487915",
+    "price": "216.31",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5661",
+    "inserted_at": "2025-05-04 05:47:45.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:45.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "12487910",
+    "price": "239.35",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5661",
+    "inserted_at": "2025-05-04 05:47:45.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:45.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "12487917",
+    "price": "239.45",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5661",
+    "inserted_at": "2025-05-04 05:47:45.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:45.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "12487913",
+    "price": "200",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5661",
+    "inserted_at": "2025-05-04 05:47:45.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:45.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "12487902",
+    "price": "199.9",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5661",
+    "inserted_at": "2025-05-04 05:47:45.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:45.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "12487901",
+    "price": "216.41",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5661",
+    "inserted_at": "2025-05-04 05:47:45.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:45.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "12487912",
+    "price": "216.51",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5661",
+    "inserted_at": "2025-05-04 05:47:45.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:45.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "11535637",
+    "price": "233.94",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5668",
+    "inserted_at": "2025-04-27 05:45:14.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:14.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "11535633",
+    "price": "233.94",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5668",
+    "inserted_at": "2025-04-27 05:45:14.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:14.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "11535635",
+    "price": "220.18",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5668",
+    "inserted_at": "2025-04-27 05:45:14.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:14.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "11535631",
+    "price": "220.18",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5668",
+    "inserted_at": "2025-04-27 05:45:14.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:14.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "11535636",
+    "price": "246.79",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5668",
+    "inserted_at": "2025-04-27 05:45:14.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:14.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "11535632",
+    "price": "246.79",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5668",
+    "inserted_at": "2025-04-27 05:45:14.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:14.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "12487521",
+    "price": "183.49",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5669",
+    "inserted_at": "2025-05-04 05:47:36.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:36.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "12487518",
+    "price": "183.49",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5669",
+    "inserted_at": "2025-05-04 05:47:36.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:36.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "9269247",
+    "price": "451",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5669",
+    "inserted_at": "2025-04-09 04:34:51.000000 UTC",
+    "last_updated_at": "2025-04-09 04:34:51.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "9269232",
+    "price": "451",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5669",
+    "inserted_at": "2025-04-09 04:34:51.000000 UTC",
+    "last_updated_at": "2025-04-09 04:34:51.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "12487520",
+    "price": "201.83",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5669",
+    "inserted_at": "2025-05-04 05:47:36.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:36.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "12487517",
+    "price": "201.83",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5669",
+    "inserted_at": "2025-05-04 05:47:36.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:36.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "9269246",
+    "price": "451",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5669",
+    "inserted_at": "2025-04-09 04:34:51.000000 UTC",
+    "last_updated_at": "2025-04-09 04:34:51.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "9269230",
+    "price": "451",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5669",
+    "inserted_at": "2025-04-09 04:34:51.000000 UTC",
+    "last_updated_at": "2025-04-09 04:34:51.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "11535830",
+    "price": "367.69",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5670",
+    "inserted_at": "2025-04-27 05:45:20.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:20.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "11535824",
+    "price": "367.59",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5670",
+    "inserted_at": "2025-04-27 05:45:20.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:20.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "11535823",
+    "price": "400.62",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5670",
+    "inserted_at": "2025-04-27 05:45:20.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:20.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "11535829",
+    "price": "400.72",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5670",
+    "inserted_at": "2025-04-27 05:45:20.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:20.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "11535820",
+    "price": "615.5",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5670",
+    "inserted_at": "2025-04-27 05:45:20.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:20.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "11535827",
+    "price": "615.6",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5670",
+    "inserted_at": "2025-04-27 05:45:20.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:20.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "12487173",
+    "price": "299.9",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5670",
+    "inserted_at": "2025-05-04 05:47:29.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:29.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "12487175",
+    "price": "300",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5670",
+    "inserted_at": "2025-05-04 05:47:29.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:29.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "11535819",
+    "price": "367.79",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5670",
+    "inserted_at": "2025-04-27 05:45:20.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:20.000000 UTC",
+    "vehicle_class_id": "12",
+    "rk": "1"
+  },
+  {
+    "id": "11535826",
+    "price": "367.89",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5670",
+    "inserted_at": "2025-04-27 05:45:20.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:20.000000 UTC",
+    "vehicle_class_id": "12",
+    "rk": "1"
+  },
+  {
+    "id": "11535822",
+    "price": "400.82",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5670",
+    "inserted_at": "2025-04-27 05:45:20.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:20.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "11535828",
+    "price": "400.92",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5670",
+    "inserted_at": "2025-04-27 05:45:20.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:20.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "12488676",
+    "price": "360.55",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5671",
+    "inserted_at": "2025-05-04 05:47:59.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:59.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "12488673",
+    "price": "360.55",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5671",
+    "inserted_at": "2025-05-04 05:47:59.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:59.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "12488671",
+    "price": "341.28",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5671",
+    "inserted_at": "2025-05-04 05:47:59.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:59.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "12488674",
+    "price": "341.28",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5671",
+    "inserted_at": "2025-05-04 05:47:59.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:59.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "12488339",
+    "price": "833.94",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5672",
+    "inserted_at": "2025-05-04 05:47:51.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:51.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "12488333",
+    "price": "833.84",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5672",
+    "inserted_at": "2025-05-04 05:47:51.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:51.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "11536503",
+    "price": "841.9",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5673",
+    "inserted_at": "2025-04-27 05:45:31.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:31.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "11536509",
+    "price": "842",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5673",
+    "inserted_at": "2025-04-27 05:45:31.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:31.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "11536505",
+    "price": "842.1",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5673",
+    "inserted_at": "2025-04-27 05:45:31.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:31.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "11536511",
+    "price": "842.2",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5673",
+    "inserted_at": "2025-04-27 05:45:31.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:31.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "12486450",
+    "price": "178.6",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5676",
+    "inserted_at": "2025-05-04 05:46:56.000000 UTC",
+    "last_updated_at": "2025-05-04 05:46:56.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "12486457",
+    "price": "178.7",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5676",
+    "inserted_at": "2025-05-04 05:46:56.000000 UTC",
+    "last_updated_at": "2025-05-04 05:46:56.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "12486451",
+    "price": "565.26",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5676",
+    "inserted_at": "2025-05-04 05:46:56.000000 UTC",
+    "last_updated_at": "2025-05-04 05:46:56.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "12486458",
+    "price": "565.36",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5676",
+    "inserted_at": "2025-05-04 05:46:56.000000 UTC",
+    "last_updated_at": "2025-05-04 05:46:56.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "12486460",
+    "price": "259.43",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5676",
+    "inserted_at": "2025-05-04 05:46:56.000000 UTC",
+    "last_updated_at": "2025-05-04 05:46:56.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "12486455",
+    "price": "259.33",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5676",
+    "inserted_at": "2025-05-04 05:46:56.000000 UTC",
+    "last_updated_at": "2025-05-04 05:46:56.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "12486459",
+    "price": "565.56",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5676",
+    "inserted_at": "2025-05-04 05:46:56.000000 UTC",
+    "last_updated_at": "2025-05-04 05:46:56.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "12486454",
+    "price": "565.46",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5676",
+    "inserted_at": "2025-05-04 05:46:56.000000 UTC",
+    "last_updated_at": "2025-05-04 05:46:56.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "12488359",
+    "price": "165.14",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5677",
+    "inserted_at": "2025-05-04 05:47:51.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:51.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "12488354",
+    "price": "165.04",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5677",
+    "inserted_at": "2025-05-04 05:47:51.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:51.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "12488348",
+    "price": "675.85",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5677",
+    "inserted_at": "2025-05-04 05:47:51.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:51.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "12488356",
+    "price": "675.95",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5677",
+    "inserted_at": "2025-05-04 05:47:51.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:51.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "12488357",
+    "price": "178.9",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5677",
+    "inserted_at": "2025-05-04 05:47:51.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:51.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "12488351",
+    "price": "178.8",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5677",
+    "inserted_at": "2025-05-04 05:47:51.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:51.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "12488360",
+    "price": "178.9",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5677",
+    "inserted_at": "2025-05-04 05:47:51.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:51.000000 UTC",
+    "vehicle_class_id": "12",
+    "rk": "1"
+  },
+  {
+    "id": "12488355",
+    "price": "178.8",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5677",
+    "inserted_at": "2025-05-04 05:47:51.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:51.000000 UTC",
+    "vehicle_class_id": "12",
+    "rk": "1"
+  },
+  {
+    "id": "12488352",
+    "price": "676.05",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5677",
+    "inserted_at": "2025-05-04 05:47:51.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:51.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "12488358",
+    "price": "676.15",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5677",
+    "inserted_at": "2025-05-04 05:47:51.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:51.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "12489294",
+    "price": "449.14",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5680",
+    "inserted_at": "2025-05-04 05:48:22.000000 UTC",
+    "last_updated_at": "2025-05-04 05:48:22.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "12489300",
+    "price": "449.24",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5680",
+    "inserted_at": "2025-05-04 05:48:22.000000 UTC",
+    "last_updated_at": "2025-05-04 05:48:22.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "12489295",
+    "price": "600.82",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5680",
+    "inserted_at": "2025-05-04 05:48:22.000000 UTC",
+    "last_updated_at": "2025-05-04 05:48:22.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "12489301",
+    "price": "600.92",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5680",
+    "inserted_at": "2025-05-04 05:48:22.000000 UTC",
+    "last_updated_at": "2025-05-04 05:48:22.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "12489299",
+    "price": "521.92",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5680",
+    "inserted_at": "2025-05-04 05:48:22.000000 UTC",
+    "last_updated_at": "2025-05-04 05:48:22.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "12489302",
+    "price": "522.02",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5680",
+    "inserted_at": "2025-05-04 05:48:22.000000 UTC",
+    "last_updated_at": "2025-05-04 05:48:22.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "11537495",
+    "price": "362.39",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5681",
+    "inserted_at": "2025-04-27 05:45:44.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:44.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "11537492",
+    "price": "362.39",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5681",
+    "inserted_at": "2025-04-27 05:45:44.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:44.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "11537496",
+    "price": "432.11",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5681",
+    "inserted_at": "2025-04-27 05:45:44.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:44.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "11537493",
+    "price": "432.11",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5681",
+    "inserted_at": "2025-04-27 05:45:44.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:44.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23658233",
+    "price": "14.19",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5842",
+    "inserted_at": "2025-07-01 06:24:28.000000 UTC",
+    "last_updated_at": "2025-07-01 06:24:28.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23658232",
+    "price": "14.19",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5842",
+    "inserted_at": "2025-07-01 06:24:28.000000 UTC",
+    "last_updated_at": "2025-07-01 06:24:28.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23821117",
+    "price": "45.9",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5846",
+    "inserted_at": "2025-07-02 07:35:31.000000 UTC",
+    "last_updated_at": "2025-07-02 07:35:31.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23821112",
+    "price": "45.9",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5846",
+    "inserted_at": "2025-07-02 07:35:31.000000 UTC",
+    "last_updated_at": "2025-07-02 07:35:31.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23821115",
+    "price": "158.2",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5846",
+    "inserted_at": "2025-07-02 07:35:31.000000 UTC",
+    "last_updated_at": "2025-07-02 07:35:31.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23821110",
+    "price": "158.2",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5846",
+    "inserted_at": "2025-07-02 07:35:31.000000 UTC",
+    "last_updated_at": "2025-07-02 07:35:31.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23821113",
+    "price": "81",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5846",
+    "inserted_at": "2025-07-02 07:35:31.000000 UTC",
+    "last_updated_at": "2025-07-02 07:35:31.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "23821118",
+    "price": "81",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5846",
+    "inserted_at": "2025-07-02 07:35:31.000000 UTC",
+    "last_updated_at": "2025-07-02 07:35:31.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "23901154",
+    "price": "13.49",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5854",
+    "inserted_at": "2025-07-02 16:44:57.000000 UTC",
+    "last_updated_at": "2025-07-02 16:44:57.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23901153",
+    "price": "14.23",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5854",
+    "inserted_at": "2025-07-02 16:44:57.000000 UTC",
+    "last_updated_at": "2025-07-02 16:44:57.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23761678",
+    "price": "16.47",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5859",
+    "inserted_at": "2025-07-01 22:23:58.000000 UTC",
+    "last_updated_at": "2025-07-01 22:23:58.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23761663",
+    "price": "16.47",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5859",
+    "inserted_at": "2025-07-01 22:23:58.000000 UTC",
+    "last_updated_at": "2025-07-01 22:23:58.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23761661",
+    "price": "32.2",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5859",
+    "inserted_at": "2025-07-01 22:23:58.000000 UTC",
+    "last_updated_at": "2025-07-01 22:23:58.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23761676",
+    "price": "32.2",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5859",
+    "inserted_at": "2025-07-01 22:23:58.000000 UTC",
+    "last_updated_at": "2025-07-01 22:23:58.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23761674",
+    "price": "51.75",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5859",
+    "inserted_at": "2025-07-01 22:23:58.000000 UTC",
+    "last_updated_at": "2025-07-01 22:23:58.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "23761662",
+    "price": "51.75",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5859",
+    "inserted_at": "2025-07-01 22:23:58.000000 UTC",
+    "last_updated_at": "2025-07-01 22:23:58.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "23761660",
+    "price": "42.55",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5859",
+    "inserted_at": "2025-07-01 22:23:58.000000 UTC",
+    "last_updated_at": "2025-07-01 22:23:58.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "23761677",
+    "price": "42.55",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5859",
+    "inserted_at": "2025-07-01 22:23:58.000000 UTC",
+    "last_updated_at": "2025-07-01 22:23:58.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "23761659",
+    "price": "18.98",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5859",
+    "inserted_at": "2025-07-01 22:23:58.000000 UTC",
+    "last_updated_at": "2025-07-01 22:23:58.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23761675",
+    "price": "18.98",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5859",
+    "inserted_at": "2025-07-01 22:23:58.000000 UTC",
+    "last_updated_at": "2025-07-01 22:23:58.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23818323",
+    "price": "690",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5870",
+    "inserted_at": "2025-07-02 07:32:29.000000 UTC",
+    "last_updated_at": "2025-07-02 07:32:29.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "23818336",
+    "price": "855.7",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5870",
+    "inserted_at": "2025-07-02 07:32:29.000000 UTC",
+    "last_updated_at": "2025-07-02 07:32:29.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "23818334",
+    "price": "590.05",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5870",
+    "inserted_at": "2025-07-02 07:32:29.000000 UTC",
+    "last_updated_at": "2025-07-02 07:32:29.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23818326",
+    "price": "490",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5870",
+    "inserted_at": "2025-07-02 07:32:29.000000 UTC",
+    "last_updated_at": "2025-07-02 07:32:29.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "12487870",
+    "price": "69.62",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5980",
+    "inserted_at": "2025-05-04 05:47:45.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:45.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "12487881",
+    "price": "69.72",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5980",
+    "inserted_at": "2025-05-04 05:47:45.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:45.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "12487874",
+    "price": "143.74",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5980",
+    "inserted_at": "2025-05-04 05:47:45.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:45.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "12487884",
+    "price": "143.84",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5980",
+    "inserted_at": "2025-05-04 05:47:45.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:45.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "12487883",
+    "price": "219.98",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5980",
+    "inserted_at": "2025-05-04 05:47:45.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:45.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "12487872",
+    "price": "219.88",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5980",
+    "inserted_at": "2025-05-04 05:47:45.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:45.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "12487875",
+    "price": "143.94",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5980",
+    "inserted_at": "2025-05-04 05:47:45.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:45.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "12487885",
+    "price": "144.04",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5980",
+    "inserted_at": "2025-05-04 05:47:45.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:45.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "12487871",
+    "price": "143.54",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5980",
+    "inserted_at": "2025-05-04 05:47:45.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:45.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "12487882",
+    "price": "143.64",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5980",
+    "inserted_at": "2025-05-04 05:47:45.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:45.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "12488455",
+    "price": "119.07",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5981",
+    "inserted_at": "2025-05-04 05:47:53.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:53.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "12488446",
+    "price": "118.97",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5981",
+    "inserted_at": "2025-05-04 05:47:53.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:53.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "12488452",
+    "price": "228.24",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5981",
+    "inserted_at": "2025-05-04 05:47:53.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:53.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "12488441",
+    "price": "228.14",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5981",
+    "inserted_at": "2025-05-04 05:47:53.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:53.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "12488451",
+    "price": "132",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5981",
+    "inserted_at": "2025-05-04 05:47:53.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:53.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "12488456",
+    "price": "132",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5981",
+    "inserted_at": "2025-05-04 05:47:53.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:53.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "12488453",
+    "price": "117.43",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5981",
+    "inserted_at": "2025-05-04 05:47:53.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:53.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "12488444",
+    "price": "117.33",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5981",
+    "inserted_at": "2025-05-04 05:47:53.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:53.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "12488445",
+    "price": "228.34",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5981",
+    "inserted_at": "2025-05-04 05:47:53.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:53.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "12488454",
+    "price": "228.44",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5981",
+    "inserted_at": "2025-05-04 05:47:53.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:53.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "12488782",
+    "price": "71.51",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5982",
+    "inserted_at": "2025-05-04 05:48:01.000000 UTC",
+    "last_updated_at": "2025-05-04 05:48:01.000000 UTC",
+    "vehicle_class_id": "11",
+    "rk": "1"
+  },
+  {
+    "id": "12488786",
+    "price": "71.51",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5982",
+    "inserted_at": "2025-05-04 05:48:01.000000 UTC",
+    "last_updated_at": "2025-05-04 05:48:01.000000 UTC",
+    "vehicle_class_id": "11",
+    "rk": "1"
+  },
+  {
+    "id": "12489381",
+    "price": "49.66",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5983",
+    "inserted_at": "2025-05-04 05:48:23.000000 UTC",
+    "last_updated_at": "2025-05-04 05:48:23.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "12489371",
+    "price": "49.66",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5983",
+    "inserted_at": "2025-05-04 05:48:23.000000 UTC",
+    "last_updated_at": "2025-05-04 05:48:23.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "12489377",
+    "price": "71.51",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5983",
+    "inserted_at": "2025-05-04 05:48:23.000000 UTC",
+    "last_updated_at": "2025-05-04 05:48:23.000000 UTC",
+    "vehicle_class_id": "11",
+    "rk": "1"
+  },
+  {
+    "id": "12489386",
+    "price": "71.51",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5983",
+    "inserted_at": "2025-05-04 05:48:23.000000 UTC",
+    "last_updated_at": "2025-05-04 05:48:23.000000 UTC",
+    "vehicle_class_id": "11",
+    "rk": "1"
+  },
+  {
+    "id": "11537473",
+    "price": "23.85",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5983",
+    "inserted_at": "2025-04-27 05:45:44.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:44.000000 UTC",
+    "vehicle_class_id": "12",
+    "rk": "1"
+  },
+  {
+    "id": "11537467",
+    "price": "23.85",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5983",
+    "inserted_at": "2025-04-27 05:45:44.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:44.000000 UTC",
+    "vehicle_class_id": "12",
+    "rk": "1"
+  },
+  {
+    "id": "12488161",
+    "price": "70.44",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5984",
+    "inserted_at": "2025-05-04 05:47:48.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:48.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "12488150",
+    "price": "70.34",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5984",
+    "inserted_at": "2025-05-04 05:47:48.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:48.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "12488151",
+    "price": "92.56",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5984",
+    "inserted_at": "2025-05-04 05:47:48.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:48.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "12488162",
+    "price": "92.66",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5984",
+    "inserted_at": "2025-05-04 05:47:48.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:48.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "12488146",
+    "price": "104.49",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5984",
+    "inserted_at": "2025-05-04 05:47:48.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:48.000000 UTC",
+    "vehicle_class_id": "11",
+    "rk": "1"
+  },
+  {
+    "id": "12488157",
+    "price": "104.59",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5984",
+    "inserted_at": "2025-05-04 05:47:48.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:48.000000 UTC",
+    "vehicle_class_id": "11",
+    "rk": "1"
+  },
+  {
+    "id": "12488154",
+    "price": "70.54",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5984",
+    "inserted_at": "2025-05-04 05:47:48.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:48.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "12488165",
+    "price": "70.64",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5984",
+    "inserted_at": "2025-05-04 05:47:48.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:48.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "11537324",
+    "price": "44.85",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5985",
+    "inserted_at": "2025-04-27 05:45:42.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:42.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "11537333",
+    "price": "44.95",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5985",
+    "inserted_at": "2025-04-27 05:45:42.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:42.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "11537326",
+    "price": "63",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5985",
+    "inserted_at": "2025-04-27 05:45:42.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:42.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "11537335",
+    "price": "63.1",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5985",
+    "inserted_at": "2025-04-27 05:45:42.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:42.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "11537330",
+    "price": "63.3",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5985",
+    "inserted_at": "2025-04-27 05:45:42.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:42.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "11537321",
+    "price": "63.2",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5985",
+    "inserted_at": "2025-04-27 05:45:42.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:42.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "11535536",
+    "price": "121.1",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5986",
+    "inserted_at": "2025-04-27 05:45:09.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:09.000000 UTC",
+    "vehicle_class_id": "11",
+    "rk": "1"
+  },
+  {
+    "id": "11535531",
+    "price": "121.1",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5986",
+    "inserted_at": "2025-04-27 05:45:09.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:09.000000 UTC",
+    "vehicle_class_id": "11",
+    "rk": "1"
+  },
+  {
+    "id": "12488000",
+    "price": "125.69",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5987",
+    "inserted_at": "2025-05-04 05:47:46.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:46.000000 UTC",
+    "vehicle_class_id": "11",
+    "rk": "1"
+  },
+  {
+    "id": "12487994",
+    "price": "125.69",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5987",
+    "inserted_at": "2025-05-04 05:47:46.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:46.000000 UTC",
+    "vehicle_class_id": "11",
+    "rk": "1"
+  },
+  {
+    "id": "12488107",
+    "price": "79.82",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5988",
+    "inserted_at": "2025-05-04 05:47:47.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:47.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "12488104",
+    "price": "79.82",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5988",
+    "inserted_at": "2025-05-04 05:47:47.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:47.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "12488103",
+    "price": "89.91",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5988",
+    "inserted_at": "2025-05-04 05:47:47.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:47.000000 UTC",
+    "vehicle_class_id": "11",
+    "rk": "1"
+  },
+  {
+    "id": "12488106",
+    "price": "89.91",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5988",
+    "inserted_at": "2025-05-04 05:47:47.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:47.000000 UTC",
+    "vehicle_class_id": "11",
+    "rk": "1"
+  },
+  {
+    "id": "12488108",
+    "price": "61.47",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5988",
+    "inserted_at": "2025-05-04 05:47:47.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:47.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "12488105",
+    "price": "61.47",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5988",
+    "inserted_at": "2025-05-04 05:47:47.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:47.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "11536135",
+    "price": "67.89",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5989",
+    "inserted_at": "2025-04-27 05:45:27.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:27.000000 UTC",
+    "vehicle_class_id": "9",
+    "rk": "1"
+  },
+  {
+    "id": "11536139",
+    "price": "67.89",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5989",
+    "inserted_at": "2025-04-27 05:45:27.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:27.000000 UTC",
+    "vehicle_class_id": "9",
+    "rk": "1"
+  },
+  {
+    "id": "11536138",
+    "price": "76.15",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5989",
+    "inserted_at": "2025-04-27 05:45:27.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:27.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "11536134",
+    "price": "76.15",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5989",
+    "inserted_at": "2025-04-27 05:45:27.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:27.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "11536141",
+    "price": "85.32",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5989",
+    "inserted_at": "2025-04-27 05:45:27.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:27.000000 UTC",
+    "vehicle_class_id": "11",
+    "rk": "1"
+  },
+  {
+    "id": "11536137",
+    "price": "85.32",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5989",
+    "inserted_at": "2025-04-27 05:45:27.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:27.000000 UTC",
+    "vehicle_class_id": "11",
+    "rk": "1"
+  },
+  {
+    "id": "12487849",
+    "price": "70.64",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5989",
+    "inserted_at": "2025-05-04 05:47:45.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:45.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "12487850",
+    "price": "70.64",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5989",
+    "inserted_at": "2025-05-04 05:47:45.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:45.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "12489235",
+    "price": "124.77",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5990",
+    "inserted_at": "2025-05-04 05:48:19.000000 UTC",
+    "last_updated_at": "2025-05-04 05:48:19.000000 UTC",
+    "vehicle_class_id": "11",
+    "rk": "1"
+  },
+  {
+    "id": "12489234",
+    "price": "124.77",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5990",
+    "inserted_at": "2025-05-04 05:48:19.000000 UTC",
+    "last_updated_at": "2025-05-04 05:48:19.000000 UTC",
+    "vehicle_class_id": "11",
+    "rk": "1"
+  },
+  {
+    "id": "12488490",
+    "price": "61.47",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5992",
+    "inserted_at": "2025-05-04 05:47:54.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:54.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "12488487",
+    "price": "61.47",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5992",
+    "inserted_at": "2025-05-04 05:47:54.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:54.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "11536273",
+    "price": "81.65",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5998",
+    "inserted_at": "2025-04-27 05:45:28.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:28.000000 UTC",
+    "vehicle_class_id": "9",
+    "rk": "1"
+  },
+  {
+    "id": "11536279",
+    "price": "81.65",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5998",
+    "inserted_at": "2025-04-27 05:45:28.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:28.000000 UTC",
+    "vehicle_class_id": "9",
+    "rk": "1"
+  },
+  {
+    "id": "11536269",
+    "price": "90.83",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5998",
+    "inserted_at": "2025-04-27 05:45:28.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:28.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "11536275",
+    "price": "90.83",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5998",
+    "inserted_at": "2025-04-27 05:45:28.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:28.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "11536272",
+    "price": "102.75",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5998",
+    "inserted_at": "2025-04-27 05:45:28.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:28.000000 UTC",
+    "vehicle_class_id": "11",
+    "rk": "1"
+  },
+  {
+    "id": "11536278",
+    "price": "102.75",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5998",
+    "inserted_at": "2025-04-27 05:45:28.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:28.000000 UTC",
+    "vehicle_class_id": "11",
+    "rk": "1"
+  },
+  {
+    "id": "11535585",
+    "price": "74.21",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5999",
+    "inserted_at": "2025-04-27 05:45:10.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:10.000000 UTC",
+    "vehicle_class_id": "9",
+    "rk": "1"
+  },
+  {
+    "id": "11535594",
+    "price": "74.31",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5999",
+    "inserted_at": "2025-04-27 05:45:10.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:10.000000 UTC",
+    "vehicle_class_id": "9",
+    "rk": "1"
+  },
+  {
+    "id": "11535591",
+    "price": "82.57",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5999",
+    "inserted_at": "2025-04-27 05:45:10.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:10.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "11535582",
+    "price": "82.47",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5999",
+    "inserted_at": "2025-04-27 05:45:10.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:10.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "11535592",
+    "price": "93.58",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5999",
+    "inserted_at": "2025-04-27 05:45:10.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:10.000000 UTC",
+    "vehicle_class_id": "11",
+    "rk": "1"
+  },
+  {
+    "id": "11535583",
+    "price": "93.48",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "5999",
+    "inserted_at": "2025-04-27 05:45:10.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:10.000000 UTC",
+    "vehicle_class_id": "11",
+    "rk": "1"
+  },
+  {
+    "id": "12489802",
+    "price": "113.76",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6001",
+    "inserted_at": "2025-05-04 05:48:39.000000 UTC",
+    "last_updated_at": "2025-05-04 05:48:39.000000 UTC",
+    "vehicle_class_id": "11",
+    "rk": "1"
+  },
+  {
+    "id": "12489799",
+    "price": "113.76",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6001",
+    "inserted_at": "2025-05-04 05:48:39.000000 UTC",
+    "last_updated_at": "2025-05-04 05:48:39.000000 UTC",
+    "vehicle_class_id": "11",
+    "rk": "1"
+  },
+  {
+    "id": "11535757",
+    "price": "51.38",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6002",
+    "inserted_at": "2025-04-27 05:45:19.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:19.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "11535761",
+    "price": "51.38",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6002",
+    "inserted_at": "2025-04-27 05:45:19.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:19.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "11535764",
+    "price": "130.28",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6002",
+    "inserted_at": "2025-04-27 05:45:19.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:19.000000 UTC",
+    "vehicle_class_id": "11",
+    "rk": "1"
+  },
+  {
+    "id": "11535760",
+    "price": "130.28",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6002",
+    "inserted_at": "2025-04-27 05:45:19.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:19.000000 UTC",
+    "vehicle_class_id": "11",
+    "rk": "1"
+  },
+  {
+    "id": "11535758",
+    "price": "68.81",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6002",
+    "inserted_at": "2025-04-27 05:45:19.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:19.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "11535762",
+    "price": "68.81",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6002",
+    "inserted_at": "2025-04-27 05:45:19.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:19.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "12488175",
+    "price": "135.78",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6003",
+    "inserted_at": "2025-05-04 05:47:48.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:48.000000 UTC",
+    "vehicle_class_id": "11",
+    "rk": "1"
+  },
+  {
+    "id": "12488178",
+    "price": "135.78",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6003",
+    "inserted_at": "2025-05-04 05:47:48.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:48.000000 UTC",
+    "vehicle_class_id": "11",
+    "rk": "1"
+  },
+  {
+    "id": "12488174",
+    "price": "71.56",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6003",
+    "inserted_at": "2025-05-04 05:47:48.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:48.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "12488177",
+    "price": "71.56",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6003",
+    "inserted_at": "2025-05-04 05:47:48.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:48.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "12488777",
+    "price": "107.14",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6005",
+    "inserted_at": "2025-05-04 05:48:01.000000 UTC",
+    "last_updated_at": "2025-05-04 05:48:01.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "12488770",
+    "price": "107.04",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6005",
+    "inserted_at": "2025-05-04 05:48:01.000000 UTC",
+    "last_updated_at": "2025-05-04 05:48:01.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "12488776",
+    "price": "65.96",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6005",
+    "inserted_at": "2025-05-04 05:48:01.000000 UTC",
+    "last_updated_at": "2025-05-04 05:48:01.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "12488780",
+    "price": "66.06",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6005",
+    "inserted_at": "2025-05-04 05:48:01.000000 UTC",
+    "last_updated_at": "2025-05-04 05:48:01.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "12488775",
+    "price": "107.24",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6005",
+    "inserted_at": "2025-05-04 05:48:01.000000 UTC",
+    "last_updated_at": "2025-05-04 05:48:01.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "12488779",
+    "price": "107.34",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6005",
+    "inserted_at": "2025-05-04 05:48:01.000000 UTC",
+    "last_updated_at": "2025-05-04 05:48:01.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "12488722",
+    "price": "93.58",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6006",
+    "inserted_at": "2025-05-04 05:48:00.000000 UTC",
+    "last_updated_at": "2025-05-04 05:48:00.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "12488712",
+    "price": "93.48",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6006",
+    "inserted_at": "2025-05-04 05:48:00.000000 UTC",
+    "last_updated_at": "2025-05-04 05:48:00.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "12488724",
+    "price": "93.38",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6006",
+    "inserted_at": "2025-05-04 05:48:00.000000 UTC",
+    "last_updated_at": "2025-05-04 05:48:00.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "12488715",
+    "price": "93.28",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6006",
+    "inserted_at": "2025-05-04 05:48:00.000000 UTC",
+    "last_updated_at": "2025-05-04 05:48:00.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "12488718",
+    "price": "175.13",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6006",
+    "inserted_at": "2025-05-04 05:48:00.000000 UTC",
+    "last_updated_at": "2025-05-04 05:48:00.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "12488727",
+    "price": "175.23",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6006",
+    "inserted_at": "2025-05-04 05:48:00.000000 UTC",
+    "last_updated_at": "2025-05-04 05:48:00.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "12488725",
+    "price": "93.58",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6006",
+    "inserted_at": "2025-05-04 05:48:00.000000 UTC",
+    "last_updated_at": "2025-05-04 05:48:00.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "12488716",
+    "price": "93.48",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6006",
+    "inserted_at": "2025-05-04 05:48:00.000000 UTC",
+    "last_updated_at": "2025-05-04 05:48:00.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "12488034",
+    "price": "124.47",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6007",
+    "inserted_at": "2025-05-04 05:47:46.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:46.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "12488044",
+    "price": "124.57",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6007",
+    "inserted_at": "2025-05-04 05:47:46.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:46.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "12488035",
+    "price": "210.71",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6007",
+    "inserted_at": "2025-05-04 05:47:46.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:46.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "12488045",
+    "price": "210.81",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6007",
+    "inserted_at": "2025-05-04 05:47:46.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:46.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "12488048",
+    "price": "124.77",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6007",
+    "inserted_at": "2025-05-04 05:47:46.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:46.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "12488041",
+    "price": "124.67",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6007",
+    "inserted_at": "2025-05-04 05:47:46.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:46.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "12488875",
+    "price": "144.65",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6008",
+    "inserted_at": "2025-05-04 05:48:04.000000 UTC",
+    "last_updated_at": "2025-05-04 05:48:04.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "12488885",
+    "price": "144.75",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6008",
+    "inserted_at": "2025-05-04 05:48:04.000000 UTC",
+    "last_updated_at": "2025-05-04 05:48:04.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "12488872",
+    "price": "56.78",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6008",
+    "inserted_at": "2025-05-04 05:48:04.000000 UTC",
+    "last_updated_at": "2025-05-04 05:48:04.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "12488883",
+    "price": "56.88",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6008",
+    "inserted_at": "2025-05-04 05:48:04.000000 UTC",
+    "last_updated_at": "2025-05-04 05:48:04.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "12488873",
+    "price": "56.78",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6008",
+    "inserted_at": "2025-05-04 05:48:04.000000 UTC",
+    "last_updated_at": "2025-05-04 05:48:04.000000 UTC",
+    "vehicle_class_id": "12",
+    "rk": "1"
+  },
+  {
+    "id": "12488884",
+    "price": "56.88",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6008",
+    "inserted_at": "2025-05-04 05:48:04.000000 UTC",
+    "last_updated_at": "2025-05-04 05:48:04.000000 UTC",
+    "vehicle_class_id": "12",
+    "rk": "1"
+  },
+  {
+    "id": "12488886",
+    "price": "144.95",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6008",
+    "inserted_at": "2025-05-04 05:48:04.000000 UTC",
+    "last_updated_at": "2025-05-04 05:48:04.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "12488878",
+    "price": "144.85",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6008",
+    "inserted_at": "2025-05-04 05:48:04.000000 UTC",
+    "last_updated_at": "2025-05-04 05:48:04.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "12488983",
+    "price": "154.03",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6009",
+    "inserted_at": "2025-05-04 05:48:09.000000 UTC",
+    "last_updated_at": "2025-05-04 05:48:09.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "12488988",
+    "price": "154.13",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6009",
+    "inserted_at": "2025-05-04 05:48:09.000000 UTC",
+    "last_updated_at": "2025-05-04 05:48:09.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "12488986",
+    "price": "153.93",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6009",
+    "inserted_at": "2025-05-04 05:48:09.000000 UTC",
+    "last_updated_at": "2025-05-04 05:48:09.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "12488975",
+    "price": "153.83",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6009",
+    "inserted_at": "2025-05-04 05:48:09.000000 UTC",
+    "last_updated_at": "2025-05-04 05:48:09.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "12488980",
+    "price": "83.39",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6009",
+    "inserted_at": "2025-05-04 05:48:09.000000 UTC",
+    "last_updated_at": "2025-05-04 05:48:09.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "12488987",
+    "price": "83.49",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6009",
+    "inserted_at": "2025-05-04 05:48:09.000000 UTC",
+    "last_updated_at": "2025-05-04 05:48:09.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "12488985",
+    "price": "154.13",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6009",
+    "inserted_at": "2025-05-04 05:48:09.000000 UTC",
+    "last_updated_at": "2025-05-04 05:48:09.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "12488974",
+    "price": "154.03",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6009",
+    "inserted_at": "2025-05-04 05:48:09.000000 UTC",
+    "last_updated_at": "2025-05-04 05:48:09.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "11535911",
+    "price": "76.15",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6013",
+    "inserted_at": "2025-04-27 05:45:22.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:22.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "11535913",
+    "price": "76.15",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6013",
+    "inserted_at": "2025-04-27 05:45:22.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:22.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "12488589",
+    "price": "51.28",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6014",
+    "inserted_at": "2025-05-04 05:47:58.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:58.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "12488599",
+    "price": "51.38",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6014",
+    "inserted_at": "2025-05-04 05:47:58.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:58.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "12488590",
+    "price": "190.56",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6014",
+    "inserted_at": "2025-05-04 05:47:58.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:58.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "12488600",
+    "price": "190.66",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6014",
+    "inserted_at": "2025-05-04 05:47:58.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:58.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "12488603",
+    "price": "151.8",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6014",
+    "inserted_at": "2025-05-04 05:47:58.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:58.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "12488597",
+    "price": "151.8",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6014",
+    "inserted_at": "2025-05-04 05:47:58.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:58.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "12488602",
+    "price": "55.05",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6014",
+    "inserted_at": "2025-05-04 05:47:58.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:58.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "12488594",
+    "price": "54.95",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6014",
+    "inserted_at": "2025-05-04 05:47:58.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:58.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "12488593",
+    "price": "151.8",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6014",
+    "inserted_at": "2025-05-04 05:47:58.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:58.000000 UTC",
+    "vehicle_class_id": "9",
+    "rk": "1"
+  },
+  {
+    "id": "12488601",
+    "price": "151.8",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6014",
+    "inserted_at": "2025-05-04 05:47:58.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:58.000000 UTC",
+    "vehicle_class_id": "9",
+    "rk": "1"
+  },
+  {
+    "id": "11536559",
+    "price": "52.29",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6014",
+    "inserted_at": "2025-04-27 05:45:32.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:32.000000 UTC",
+    "vehicle_class_id": "12",
+    "rk": "1"
+  },
+  {
+    "id": "11536558",
+    "price": "52.29",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6014",
+    "inserted_at": "2025-04-27 05:45:32.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:32.000000 UTC",
+    "vehicle_class_id": "12",
+    "rk": "1"
+  },
+  {
+    "id": "12489127",
+    "price": "184.15",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6015",
+    "inserted_at": "2025-05-04 05:48:13.000000 UTC",
+    "last_updated_at": "2025-05-04 05:48:13.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "12489119",
+    "price": "184.05",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6015",
+    "inserted_at": "2025-05-04 05:48:13.000000 UTC",
+    "last_updated_at": "2025-05-04 05:48:13.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "11538462",
+    "price": "170.31",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6015",
+    "inserted_at": "2025-04-27 05:46:16.000000 UTC",
+    "last_updated_at": "2025-04-27 05:46:16.000000 UTC",
+    "vehicle_class_id": "9",
+    "rk": "1"
+  },
+  {
+    "id": "11538465",
+    "price": "170.31",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6015",
+    "inserted_at": "2025-04-27 05:46:16.000000 UTC",
+    "last_updated_at": "2025-04-27 05:46:16.000000 UTC",
+    "vehicle_class_id": "9",
+    "rk": "1"
+  },
+  {
+    "id": "11538464",
+    "price": "52.29",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6015",
+    "inserted_at": "2025-04-27 05:46:16.000000 UTC",
+    "last_updated_at": "2025-04-27 05:46:16.000000 UTC",
+    "vehicle_class_id": "12",
+    "rk": "1"
+  },
+  {
+    "id": "11538461",
+    "price": "52.29",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6015",
+    "inserted_at": "2025-04-27 05:46:16.000000 UTC",
+    "last_updated_at": "2025-04-27 05:46:16.000000 UTC",
+    "vehicle_class_id": "12",
+    "rk": "1"
+  },
+  {
+    "id": "11538460",
+    "price": "184.99",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6015",
+    "inserted_at": "2025-04-27 05:46:16.000000 UTC",
+    "last_updated_at": "2025-04-27 05:46:16.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "11538463",
+    "price": "184.99",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6015",
+    "inserted_at": "2025-04-27 05:46:16.000000 UTC",
+    "last_updated_at": "2025-04-27 05:46:16.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "11535290",
+    "price": "196.03",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6020",
+    "inserted_at": "2025-04-27 05:45:06.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:06.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "11535301",
+    "price": "196.13",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6020",
+    "inserted_at": "2025-04-27 05:45:06.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:06.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "11535293",
+    "price": "218.9",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6020",
+    "inserted_at": "2025-04-27 05:45:06.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:06.000000 UTC",
+    "vehicle_class_id": "12",
+    "rk": "1"
+  },
+  {
+    "id": "11535304",
+    "price": "218.9",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6020",
+    "inserted_at": "2025-04-27 05:45:06.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:06.000000 UTC",
+    "vehicle_class_id": "12",
+    "rk": "1"
+  },
+  {
+    "id": "12489581",
+    "price": "496.1",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6021",
+    "inserted_at": "2025-05-04 05:48:30.000000 UTC",
+    "last_updated_at": "2025-05-04 05:48:30.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "12489590",
+    "price": "496.1",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6021",
+    "inserted_at": "2025-05-04 05:48:30.000000 UTC",
+    "last_updated_at": "2025-05-04 05:48:30.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "12489588",
+    "price": "245.77",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6021",
+    "inserted_at": "2025-05-04 05:48:30.000000 UTC",
+    "last_updated_at": "2025-05-04 05:48:30.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "12489595",
+    "price": "245.87",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6021",
+    "inserted_at": "2025-05-04 05:48:30.000000 UTC",
+    "last_updated_at": "2025-05-04 05:48:30.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "11535207",
+    "price": "64.02",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6031",
+    "inserted_at": "2025-04-27 05:45:06.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:06.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "11535201",
+    "price": "63.92",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6031",
+    "inserted_at": "2025-04-27 05:45:06.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:06.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "11535206",
+    "price": "37.61",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6031",
+    "inserted_at": "2025-04-27 05:45:06.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:06.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "11535199",
+    "price": "37.51",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6031",
+    "inserted_at": "2025-04-27 05:45:06.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:06.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "11535197",
+    "price": "64.12",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6031",
+    "inserted_at": "2025-04-27 05:45:06.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:06.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "11535205",
+    "price": "64.22",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6031",
+    "inserted_at": "2025-04-27 05:45:06.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:06.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "11536030",
+    "price": "190.83",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6032",
+    "inserted_at": "2025-04-27 05:45:25.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:25.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "11536026",
+    "price": "190.73",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6032",
+    "inserted_at": "2025-04-27 05:45:25.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:25.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "11536028",
+    "price": "503.67",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6032",
+    "inserted_at": "2025-04-27 05:45:25.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:25.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "11536019",
+    "price": "503.57",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6032",
+    "inserted_at": "2025-04-27 05:45:25.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:25.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "11536023",
+    "price": "584.1",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6032",
+    "inserted_at": "2025-04-27 05:45:25.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:25.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "11536029",
+    "price": "584.2",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6032",
+    "inserted_at": "2025-04-27 05:45:25.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:25.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "11535864",
+    "price": "190.73",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6033",
+    "inserted_at": "2025-04-27 05:45:21.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:21.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "11535869",
+    "price": "190.83",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6033",
+    "inserted_at": "2025-04-27 05:45:21.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:21.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "11535870",
+    "price": "503.47",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6033",
+    "inserted_at": "2025-04-27 05:45:21.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:21.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "11535866",
+    "price": "503.37",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6033",
+    "inserted_at": "2025-04-27 05:45:21.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:21.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "11535863",
+    "price": "503.57",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6033",
+    "inserted_at": "2025-04-27 05:45:21.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:21.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "11535868",
+    "price": "503.67",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6033",
+    "inserted_at": "2025-04-27 05:45:21.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:21.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "11535884",
+    "price": "219.27",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6034",
+    "inserted_at": "2025-04-27 05:45:21.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:21.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "11535880",
+    "price": "219.17",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6034",
+    "inserted_at": "2025-04-27 05:45:21.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:21.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "11535883",
+    "price": "578.7",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6034",
+    "inserted_at": "2025-04-27 05:45:21.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:21.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "11535876",
+    "price": "578.6",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6034",
+    "inserted_at": "2025-04-27 05:45:21.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:21.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "11535882",
+    "price": "578.9",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6034",
+    "inserted_at": "2025-04-27 05:45:21.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:21.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "11535873",
+    "price": "578.8",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6034",
+    "inserted_at": "2025-04-27 05:45:21.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:21.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "12489773",
+    "price": "512.64",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6038",
+    "inserted_at": "2025-05-04 05:48:37.000000 UTC",
+    "last_updated_at": "2025-05-04 05:48:37.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "12489763",
+    "price": "512.54",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6038",
+    "inserted_at": "2025-05-04 05:48:37.000000 UTC",
+    "last_updated_at": "2025-05-04 05:48:37.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "12489772",
+    "price": "512.74",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6038",
+    "inserted_at": "2025-05-04 05:48:37.000000 UTC",
+    "last_updated_at": "2025-05-04 05:48:37.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "12489779",
+    "price": "512.84",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6038",
+    "inserted_at": "2025-05-04 05:48:37.000000 UTC",
+    "last_updated_at": "2025-05-04 05:48:37.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "11537969",
+    "price": "333.64",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6039",
+    "inserted_at": "2025-04-27 05:45:54.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:54.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "11537974",
+    "price": "333.74",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6039",
+    "inserted_at": "2025-04-27 05:45:54.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:54.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "11537973",
+    "price": "333.94",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6039",
+    "inserted_at": "2025-04-27 05:45:54.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:54.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "11537967",
+    "price": "333.84",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6039",
+    "inserted_at": "2025-04-27 05:45:54.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:54.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "12487576",
+    "price": "44.95",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6044",
+    "inserted_at": "2025-05-04 05:47:38.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:38.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "12487574",
+    "price": "44.85",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6044",
+    "inserted_at": "2025-05-04 05:47:38.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:38.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "11537544",
+    "price": "60.45",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6044",
+    "inserted_at": "2025-04-27 05:45:44.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:44.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "11537554",
+    "price": "60.55",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6044",
+    "inserted_at": "2025-04-27 05:45:44.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:44.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "11537537",
+    "price": "64.84",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6044",
+    "inserted_at": "2025-04-27 05:45:44.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:44.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "11537548",
+    "price": "64.94",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6044",
+    "inserted_at": "2025-04-27 05:45:44.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:44.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "11537547",
+    "price": "274.63",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6044",
+    "inserted_at": "2025-04-27 05:45:44.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:44.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "11537536",
+    "price": "274.53",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6044",
+    "inserted_at": "2025-04-27 05:45:44.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:44.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "11537545",
+    "price": "60.25",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6044",
+    "inserted_at": "2025-04-27 05:45:44.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:44.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "11537555",
+    "price": "60.35",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6044",
+    "inserted_at": "2025-04-27 05:45:44.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:44.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "11537539",
+    "price": "274.73",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6044",
+    "inserted_at": "2025-04-27 05:45:44.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:44.000000 UTC",
+    "vehicle_class_id": "9",
+    "rk": "1"
+  },
+  {
+    "id": "11537550",
+    "price": "274.83",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6044",
+    "inserted_at": "2025-04-27 05:45:44.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:44.000000 UTC",
+    "vehicle_class_id": "9",
+    "rk": "1"
+  },
+  {
+    "id": "11537543",
+    "price": "274.93",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6044",
+    "inserted_at": "2025-04-27 05:45:44.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:44.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "11537553",
+    "price": "275.03",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6044",
+    "inserted_at": "2025-04-27 05:45:44.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:44.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "11537541",
+    "price": "275.13",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6044",
+    "inserted_at": "2025-04-27 05:45:44.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:44.000000 UTC",
+    "vehicle_class_id": "11",
+    "rk": "1"
+  },
+  {
+    "id": "11537551",
+    "price": "275.23",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6044",
+    "inserted_at": "2025-04-27 05:45:44.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:44.000000 UTC",
+    "vehicle_class_id": "11",
+    "rk": "1"
+  },
+  {
+    "id": "11537549",
+    "price": "44.1",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6044",
+    "inserted_at": "2025-04-27 05:45:44.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:44.000000 UTC",
+    "vehicle_class_id": "12",
+    "rk": "1"
+  },
+  {
+    "id": "11537538",
+    "price": "44.1",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6044",
+    "inserted_at": "2025-04-27 05:45:44.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:44.000000 UTC",
+    "vehicle_class_id": "12",
+    "rk": "1"
+  },
+  {
+    "id": "11537552",
+    "price": "65.14",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6044",
+    "inserted_at": "2025-04-27 05:45:44.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:44.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "11537542",
+    "price": "65.04",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6044",
+    "inserted_at": "2025-04-27 05:45:44.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:44.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "11537243",
+    "price": "60.45",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6045",
+    "inserted_at": "2025-04-27 05:45:40.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:40.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "11537253",
+    "price": "60.55",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6045",
+    "inserted_at": "2025-04-27 05:45:40.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:40.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "11537233",
+    "price": "64.84",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6045",
+    "inserted_at": "2025-04-27 05:45:40.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:40.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "11537244",
+    "price": "64.94",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6045",
+    "inserted_at": "2025-04-27 05:45:40.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:40.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "11537250",
+    "price": "274.63",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6045",
+    "inserted_at": "2025-04-27 05:45:40.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:40.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "11537239",
+    "price": "274.53",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6045",
+    "inserted_at": "2025-04-27 05:45:40.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:40.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "11537235",
+    "price": "60.25",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6045",
+    "inserted_at": "2025-04-27 05:45:40.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:40.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "11537246",
+    "price": "60.35",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6045",
+    "inserted_at": "2025-04-27 05:45:40.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:40.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "11537252",
+    "price": "274.83",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6045",
+    "inserted_at": "2025-04-27 05:45:40.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:40.000000 UTC",
+    "vehicle_class_id": "9",
+    "rk": "1"
+  },
+  {
+    "id": "11537242",
+    "price": "274.73",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6045",
+    "inserted_at": "2025-04-27 05:45:40.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:40.000000 UTC",
+    "vehicle_class_id": "9",
+    "rk": "1"
+  },
+  {
+    "id": "11537234",
+    "price": "274.93",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6045",
+    "inserted_at": "2025-04-27 05:45:40.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:40.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "11537245",
+    "price": "275.03",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6045",
+    "inserted_at": "2025-04-27 05:45:40.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:40.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "11537238",
+    "price": "275.13",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6045",
+    "inserted_at": "2025-04-27 05:45:40.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:40.000000 UTC",
+    "vehicle_class_id": "11",
+    "rk": "1"
+  },
+  {
+    "id": "11537249",
+    "price": "275.23",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6045",
+    "inserted_at": "2025-04-27 05:45:40.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:40.000000 UTC",
+    "vehicle_class_id": "11",
+    "rk": "1"
+  },
+  {
+    "id": "11537251",
+    "price": "44.1",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6045",
+    "inserted_at": "2025-04-27 05:45:40.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:40.000000 UTC",
+    "vehicle_class_id": "12",
+    "rk": "1"
+  },
+  {
+    "id": "11537240",
+    "price": "44.1",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6045",
+    "inserted_at": "2025-04-27 05:45:40.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:40.000000 UTC",
+    "vehicle_class_id": "12",
+    "rk": "1"
+  },
+  {
+    "id": "11537236",
+    "price": "65.04",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6045",
+    "inserted_at": "2025-04-27 05:45:40.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:40.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "11537247",
+    "price": "65.14",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6045",
+    "inserted_at": "2025-04-27 05:45:40.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:40.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "12487669",
+    "price": "47.25",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6048",
+    "inserted_at": "2025-05-04 05:47:40.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:40.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "12487658",
+    "price": "47.25",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6048",
+    "inserted_at": "2025-05-04 05:47:40.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:40.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "12487670",
+    "price": "96.33",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6048",
+    "inserted_at": "2025-05-04 05:47:40.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:40.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "12487659",
+    "price": "96.23",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6048",
+    "inserted_at": "2025-05-04 05:47:40.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:40.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "12487672",
+    "price": "249.86",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6048",
+    "inserted_at": "2025-05-04 05:47:40.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:40.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "12487665",
+    "price": "249.76",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6048",
+    "inserted_at": "2025-05-04 05:47:40.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:40.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "12487668",
+    "price": "78.9",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6048",
+    "inserted_at": "2025-05-04 05:47:40.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:40.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "12487657",
+    "price": "78.8",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6048",
+    "inserted_at": "2025-05-04 05:47:40.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:40.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "12487673",
+    "price": "250.06",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6048",
+    "inserted_at": "2025-05-04 05:47:40.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:40.000000 UTC",
+    "vehicle_class_id": "9",
+    "rk": "1"
+  },
+  {
+    "id": "12487666",
+    "price": "249.96",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6048",
+    "inserted_at": "2025-05-04 05:47:40.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:40.000000 UTC",
+    "vehicle_class_id": "9",
+    "rk": "1"
+  },
+  {
+    "id": "12487662",
+    "price": "250.16",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6048",
+    "inserted_at": "2025-05-04 05:47:40.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:40.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "12487671",
+    "price": "250.26",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6048",
+    "inserted_at": "2025-05-04 05:47:40.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:40.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "12487674",
+    "price": "67.89",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6048",
+    "inserted_at": "2025-05-04 05:47:40.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:40.000000 UTC",
+    "vehicle_class_id": "12",
+    "rk": "1"
+  },
+  {
+    "id": "12487667",
+    "price": "67.79",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6048",
+    "inserted_at": "2025-05-04 05:47:40.000000 UTC",
+    "last_updated_at": "2025-05-04 05:47:40.000000 UTC",
+    "vehicle_class_id": "12",
+    "rk": "1"
+  },
+  {
+    "id": "11535771",
+    "price": "49.44",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6049",
+    "inserted_at": "2025-04-27 05:45:19.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:19.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "11535782",
+    "price": "49.54",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6049",
+    "inserted_at": "2025-04-27 05:45:19.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:19.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "11535790",
+    "price": "69.72",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6049",
+    "inserted_at": "2025-04-27 05:45:19.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:19.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "11535781",
+    "price": "69.62",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6049",
+    "inserted_at": "2025-04-27 05:45:19.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:19.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "11535775",
+    "price": "72.99",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6049",
+    "inserted_at": "2025-04-27 05:45:19.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:19.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "11535785",
+    "price": "73.09",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6049",
+    "inserted_at": "2025-04-27 05:45:19.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:19.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "11535783",
+    "price": "72.89",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6049",
+    "inserted_at": "2025-04-27 05:45:19.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:19.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "11535772",
+    "price": "72.79",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6049",
+    "inserted_at": "2025-04-27 05:45:19.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:19.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "11535779",
+    "price": "249.96",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6049",
+    "inserted_at": "2025-04-27 05:45:19.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:19.000000 UTC",
+    "vehicle_class_id": "9",
+    "rk": "1"
+  },
+  {
+    "id": "11535789",
+    "price": "250.06",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6049",
+    "inserted_at": "2025-04-27 05:45:19.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:19.000000 UTC",
+    "vehicle_class_id": "9",
+    "rk": "1"
+  },
+  {
+    "id": "11535787",
+    "price": "250.26",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6049",
+    "inserted_at": "2025-04-27 05:45:19.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:19.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "11535777",
+    "price": "250.16",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6049",
+    "inserted_at": "2025-04-27 05:45:19.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:19.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "11535786",
+    "price": "250.46",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6049",
+    "inserted_at": "2025-04-27 05:45:19.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:19.000000 UTC",
+    "vehicle_class_id": "11",
+    "rk": "1"
+  },
+  {
+    "id": "11535776",
+    "price": "250.36",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6049",
+    "inserted_at": "2025-04-27 05:45:19.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:19.000000 UTC",
+    "vehicle_class_id": "11",
+    "rk": "1"
+  },
+  {
+    "id": "11535784",
+    "price": "69.52",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6049",
+    "inserted_at": "2025-04-27 05:45:19.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:19.000000 UTC",
+    "vehicle_class_id": "12",
+    "rk": "1"
+  },
+  {
+    "id": "11535773",
+    "price": "69.42",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6049",
+    "inserted_at": "2025-04-27 05:45:19.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:19.000000 UTC",
+    "vehicle_class_id": "12",
+    "rk": "1"
+  },
+  {
+    "id": "11535788",
+    "price": "78.9",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6049",
+    "inserted_at": "2025-04-27 05:45:19.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:19.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "11535778",
+    "price": "78.8",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6049",
+    "inserted_at": "2025-04-27 05:45:19.000000 UTC",
+    "last_updated_at": "2025-04-27 05:45:19.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "23834325",
+    "price": "19.43",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6529",
+    "inserted_at": "2025-07-02 08:22:58.000000 UTC",
+    "last_updated_at": "2025-07-02 08:22:58.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23834329",
+    "price": "19.43",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6529",
+    "inserted_at": "2025-07-02 08:22:58.000000 UTC",
+    "last_updated_at": "2025-07-02 08:22:58.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23834328",
+    "price": "23.31",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6529",
+    "inserted_at": "2025-07-02 08:22:58.000000 UTC",
+    "last_updated_at": "2025-07-02 08:22:58.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23834324",
+    "price": "23.31",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6529",
+    "inserted_at": "2025-07-02 08:22:58.000000 UTC",
+    "last_updated_at": "2025-07-02 08:22:58.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23833798",
+    "price": "28.97",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6529",
+    "inserted_at": "2025-07-02 08:21:59.000000 UTC",
+    "last_updated_at": "2025-07-02 08:21:59.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23833801",
+    "price": "28.97",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6529",
+    "inserted_at": "2025-07-02 08:21:59.000000 UTC",
+    "last_updated_at": "2025-07-02 08:21:59.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23834326",
+    "price": "25.89",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6529",
+    "inserted_at": "2025-07-02 08:22:58.000000 UTC",
+    "last_updated_at": "2025-07-02 08:22:58.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23834327",
+    "price": "25.89",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6529",
+    "inserted_at": "2025-07-02 08:22:58.000000 UTC",
+    "last_updated_at": "2025-07-02 08:22:58.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23834330",
+    "price": "75.08",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6529",
+    "inserted_at": "2025-07-02 08:22:58.000000 UTC",
+    "last_updated_at": "2025-07-02 08:22:58.000000 UTC",
+    "vehicle_class_id": "40",
+    "rk": "1"
+  },
+  {
+    "id": "23834323",
+    "price": "75.08",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6529",
+    "inserted_at": "2025-07-02 08:22:58.000000 UTC",
+    "last_updated_at": "2025-07-02 08:22:58.000000 UTC",
+    "vehicle_class_id": "40",
+    "rk": "1"
+  },
+  {
+    "id": "23970657",
+    "price": "17.48",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6530",
+    "inserted_at": "2025-07-03 04:25:58.000000 UTC",
+    "last_updated_at": "2025-07-03 04:25:58.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23970662",
+    "price": "17.48",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6530",
+    "inserted_at": "2025-07-03 04:25:58.000000 UTC",
+    "last_updated_at": "2025-07-03 04:25:58.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23970659",
+    "price": "23.31",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6530",
+    "inserted_at": "2025-07-03 04:25:58.000000 UTC",
+    "last_updated_at": "2025-07-03 04:25:58.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23970656",
+    "price": "23.31",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6530",
+    "inserted_at": "2025-07-03 04:25:58.000000 UTC",
+    "last_updated_at": "2025-07-03 04:25:58.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23970036",
+    "price": "27.43",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6530",
+    "inserted_at": "2025-07-03 04:24:58.000000 UTC",
+    "last_updated_at": "2025-07-03 04:24:58.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23970027",
+    "price": "27.43",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6530",
+    "inserted_at": "2025-07-03 04:24:58.000000 UTC",
+    "last_updated_at": "2025-07-03 04:24:58.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23970661",
+    "price": "23.31",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6530",
+    "inserted_at": "2025-07-03 04:25:58.000000 UTC",
+    "last_updated_at": "2025-07-03 04:25:58.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23970654",
+    "price": "23.31",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6530",
+    "inserted_at": "2025-07-03 04:25:58.000000 UTC",
+    "last_updated_at": "2025-07-03 04:25:58.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23970660",
+    "price": "75.08",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6530",
+    "inserted_at": "2025-07-03 04:25:58.000000 UTC",
+    "last_updated_at": "2025-07-03 04:25:58.000000 UTC",
+    "vehicle_class_id": "40",
+    "rk": "1"
+  },
+  {
+    "id": "23970655",
+    "price": "75.08",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6530",
+    "inserted_at": "2025-07-03 04:25:58.000000 UTC",
+    "last_updated_at": "2025-07-03 04:25:58.000000 UTC",
+    "vehicle_class_id": "40",
+    "rk": "1"
+  },
+  {
+    "id": "23821089",
+    "price": "38.82",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6540",
+    "inserted_at": "2025-07-02 07:35:30.000000 UTC",
+    "last_updated_at": "2025-07-02 07:35:30.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23821070",
+    "price": "38.82",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6540",
+    "inserted_at": "2025-07-02 07:35:30.000000 UTC",
+    "last_updated_at": "2025-07-02 07:35:30.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23821091",
+    "price": "54.99",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6540",
+    "inserted_at": "2025-07-02 07:35:30.000000 UTC",
+    "last_updated_at": "2025-07-02 07:35:30.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23821073",
+    "price": "54.99",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6540",
+    "inserted_at": "2025-07-02 07:35:30.000000 UTC",
+    "last_updated_at": "2025-07-02 07:35:30.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23821088",
+    "price": "50.14",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6540",
+    "inserted_at": "2025-07-02 07:35:30.000000 UTC",
+    "last_updated_at": "2025-07-02 07:35:30.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23821069",
+    "price": "50.14",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6540",
+    "inserted_at": "2025-07-02 07:35:30.000000 UTC",
+    "last_updated_at": "2025-07-02 07:35:30.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23821090",
+    "price": "145.57",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6540",
+    "inserted_at": "2025-07-02 07:35:30.000000 UTC",
+    "last_updated_at": "2025-07-02 07:35:30.000000 UTC",
+    "vehicle_class_id": "40",
+    "rk": "1"
+  },
+  {
+    "id": "23821072",
+    "price": "145.57",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6540",
+    "inserted_at": "2025-07-02 07:35:30.000000 UTC",
+    "last_updated_at": "2025-07-02 07:35:30.000000 UTC",
+    "vehicle_class_id": "40",
+    "rk": "1"
+  },
+  {
+    "id": "23705288",
+    "price": "57.07",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6565",
+    "inserted_at": "2025-07-01 13:46:01.000000 UTC",
+    "last_updated_at": "2025-07-01 13:46:01.000000 UTC",
+    "vehicle_class_id": "9",
+    "rk": "1"
+  },
+  {
+    "id": "23705287",
+    "price": "57.07",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6565",
+    "inserted_at": "2025-07-01 13:46:01.000000 UTC",
+    "last_updated_at": "2025-07-01 13:46:01.000000 UTC",
+    "vehicle_class_id": "9",
+    "rk": "1"
+  },
+  {
+    "id": "23822461",
+    "price": "25.3",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6567",
+    "inserted_at": "2025-07-02 07:36:28.000000 UTC",
+    "last_updated_at": "2025-07-02 07:36:28.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23822443",
+    "price": "25.3",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6567",
+    "inserted_at": "2025-07-02 07:36:28.000000 UTC",
+    "last_updated_at": "2025-07-02 07:36:28.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23822445",
+    "price": "33",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6567",
+    "inserted_at": "2025-07-02 07:36:28.000000 UTC",
+    "last_updated_at": "2025-07-02 07:36:28.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23822463",
+    "price": "33",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6567",
+    "inserted_at": "2025-07-02 07:36:28.000000 UTC",
+    "last_updated_at": "2025-07-02 07:36:28.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23822462",
+    "price": "29.7",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6567",
+    "inserted_at": "2025-07-02 07:36:28.000000 UTC",
+    "last_updated_at": "2025-07-02 07:36:28.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23822444",
+    "price": "29.7",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6567",
+    "inserted_at": "2025-07-02 07:36:28.000000 UTC",
+    "last_updated_at": "2025-07-02 07:36:28.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23823487",
+    "price": "36.75",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6961",
+    "inserted_at": "2025-07-02 07:37:03.000000 UTC",
+    "last_updated_at": "2025-07-02 07:37:03.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23823455",
+    "price": "36.75",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6961",
+    "inserted_at": "2025-07-02 07:37:03.000000 UTC",
+    "last_updated_at": "2025-07-02 07:37:03.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23823460",
+    "price": "63.25",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6961",
+    "inserted_at": "2025-07-02 07:37:03.000000 UTC",
+    "last_updated_at": "2025-07-02 07:37:03.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23823492",
+    "price": "63.25",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6961",
+    "inserted_at": "2025-07-02 07:37:03.000000 UTC",
+    "last_updated_at": "2025-07-02 07:37:03.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23823456",
+    "price": "42.8",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6961",
+    "inserted_at": "2025-07-02 07:37:03.000000 UTC",
+    "last_updated_at": "2025-07-02 07:37:03.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23823488",
+    "price": "42.8",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6961",
+    "inserted_at": "2025-07-02 07:37:03.000000 UTC",
+    "last_updated_at": "2025-07-02 07:37:03.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23823490",
+    "price": "86.25",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6961",
+    "inserted_at": "2025-07-02 07:37:03.000000 UTC",
+    "last_updated_at": "2025-07-02 07:37:03.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "23823458",
+    "price": "86.25",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6961",
+    "inserted_at": "2025-07-02 07:37:03.000000 UTC",
+    "last_updated_at": "2025-07-02 07:37:03.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "23823459",
+    "price": "129.6",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6961",
+    "inserted_at": "2025-07-02 07:37:03.000000 UTC",
+    "last_updated_at": "2025-07-02 07:37:03.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "23823491",
+    "price": "129.6",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6961",
+    "inserted_at": "2025-07-02 07:37:03.000000 UTC",
+    "last_updated_at": "2025-07-02 07:37:03.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "23823489",
+    "price": "38.85",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6961",
+    "inserted_at": "2025-07-02 07:37:03.000000 UTC",
+    "last_updated_at": "2025-07-02 07:37:03.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23823457",
+    "price": "38.85",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6961",
+    "inserted_at": "2025-07-02 07:37:03.000000 UTC",
+    "last_updated_at": "2025-07-02 07:37:03.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23813215",
+    "price": "219.45",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6966",
+    "inserted_at": "2025-07-02 07:26:33.000000 UTC",
+    "last_updated_at": "2025-07-02 07:26:33.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23813251",
+    "price": "219.45",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6966",
+    "inserted_at": "2025-07-02 07:26:33.000000 UTC",
+    "last_updated_at": "2025-07-02 07:26:33.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23813217",
+    "price": "264.5",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6966",
+    "inserted_at": "2025-07-02 07:26:33.000000 UTC",
+    "last_updated_at": "2025-07-02 07:26:33.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23813253",
+    "price": "264.5",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6966",
+    "inserted_at": "2025-07-02 07:26:33.000000 UTC",
+    "last_updated_at": "2025-07-02 07:26:33.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23813250",
+    "price": "317.94",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6966",
+    "inserted_at": "2025-07-02 07:26:33.000000 UTC",
+    "last_updated_at": "2025-07-02 07:26:33.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23813214",
+    "price": "317.94",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6966",
+    "inserted_at": "2025-07-02 07:26:33.000000 UTC",
+    "last_updated_at": "2025-07-02 07:26:33.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23813252",
+    "price": "348.32",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6966",
+    "inserted_at": "2025-07-02 07:26:33.000000 UTC",
+    "last_updated_at": "2025-07-02 07:26:33.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "23813216",
+    "price": "348.32",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6966",
+    "inserted_at": "2025-07-02 07:26:33.000000 UTC",
+    "last_updated_at": "2025-07-02 07:26:33.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "23813213",
+    "price": "233.1",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6966",
+    "inserted_at": "2025-07-02 07:26:33.000000 UTC",
+    "last_updated_at": "2025-07-02 07:26:33.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23813249",
+    "price": "233.1",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "6966",
+    "inserted_at": "2025-07-02 07:26:33.000000 UTC",
+    "last_updated_at": "2025-07-02 07:26:33.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "24005713",
+    "price": "14.1",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "7892",
+    "inserted_at": "2025-07-03 08:24:58.000000 UTC",
+    "last_updated_at": "2025-07-03 08:24:58.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "24005702",
+    "price": "15.5",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "7892",
+    "inserted_at": "2025-07-03 08:24:58.000000 UTC",
+    "last_updated_at": "2025-07-03 08:24:58.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "24005705",
+    "price": "18.42",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "7892",
+    "inserted_at": "2025-07-03 08:24:58.000000 UTC",
+    "last_updated_at": "2025-07-03 08:24:58.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "24005716",
+    "price": "16.75",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "7892",
+    "inserted_at": "2025-07-03 08:24:58.000000 UTC",
+    "last_updated_at": "2025-07-03 08:24:58.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "24510877",
+    "price": "38.98",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "7973",
+    "inserted_at": "2025-07-08 13:08:57.000000 UTC",
+    "last_updated_at": "2025-07-08 13:08:57.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "24510869",
+    "price": "38.98",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "7973",
+    "inserted_at": "2025-07-08 13:08:57.000000 UTC",
+    "last_updated_at": "2025-07-08 13:08:57.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "24510870",
+    "price": "69.99",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "7973",
+    "inserted_at": "2025-07-08 13:08:57.000000 UTC",
+    "last_updated_at": "2025-07-08 13:08:57.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "24510876",
+    "price": "69.99",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "7973",
+    "inserted_at": "2025-07-08 13:08:57.000000 UTC",
+    "last_updated_at": "2025-07-08 13:08:57.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "24510878",
+    "price": "27.99",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "7973",
+    "inserted_at": "2025-07-08 13:08:57.000000 UTC",
+    "last_updated_at": "2025-07-08 13:08:57.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "24510868",
+    "price": "27.99",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "7973",
+    "inserted_at": "2025-07-08 13:08:57.000000 UTC",
+    "last_updated_at": "2025-07-08 13:08:57.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "24510871",
+    "price": "139.69",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "7973",
+    "inserted_at": "2025-07-08 13:08:57.000000 UTC",
+    "last_updated_at": "2025-07-08 13:08:57.000000 UTC",
+    "vehicle_class_id": "9",
+    "rk": "1"
+  },
+  {
+    "id": "24510875",
+    "price": "114.36",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "7973",
+    "inserted_at": "2025-07-08 13:08:57.000000 UTC",
+    "last_updated_at": "2025-07-08 13:08:57.000000 UTC",
+    "vehicle_class_id": "9",
+    "rk": "1"
+  },
+  {
+    "id": "24510872",
+    "price": "114.93",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "7973",
+    "inserted_at": "2025-07-08 13:08:57.000000 UTC",
+    "last_updated_at": "2025-07-08 13:08:57.000000 UTC",
+    "vehicle_class_id": "9",
+    "rk": "1"
+  },
+  {
+    "id": "24511508",
+    "price": "16.99",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "7985",
+    "inserted_at": "2025-07-08 13:12:58.000000 UTC",
+    "last_updated_at": "2025-07-08 13:12:58.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "24511503",
+    "price": "16.99",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "7985",
+    "inserted_at": "2025-07-08 13:12:58.000000 UTC",
+    "last_updated_at": "2025-07-08 13:12:58.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "24511510",
+    "price": "27.79",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "7985",
+    "inserted_at": "2025-07-08 13:12:58.000000 UTC",
+    "last_updated_at": "2025-07-08 13:12:58.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "24511502",
+    "price": "27.79",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "7985",
+    "inserted_at": "2025-07-08 13:12:58.000000 UTC",
+    "last_updated_at": "2025-07-08 13:12:58.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "24511500",
+    "price": "96.99",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "7985",
+    "inserted_at": "2025-07-08 13:12:58.000000 UTC",
+    "last_updated_at": "2025-07-08 13:12:58.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "24511507",
+    "price": "96.99",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "7985",
+    "inserted_at": "2025-07-08 13:12:58.000000 UTC",
+    "last_updated_at": "2025-07-08 13:12:58.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "24511509",
+    "price": "19.99",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "7985",
+    "inserted_at": "2025-07-08 13:12:58.000000 UTC",
+    "last_updated_at": "2025-07-08 13:12:58.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "24511501",
+    "price": "19.99",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "7985",
+    "inserted_at": "2025-07-08 13:12:58.000000 UTC",
+    "last_updated_at": "2025-07-08 13:12:58.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "24511505",
+    "price": "129.75",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "7985",
+    "inserted_at": "2025-07-08 13:12:58.000000 UTC",
+    "last_updated_at": "2025-07-08 13:12:58.000000 UTC",
+    "vehicle_class_id": "9",
+    "rk": "1"
+  },
+  {
+    "id": "24511504",
+    "price": "108.13",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "7985",
+    "inserted_at": "2025-07-08 13:12:58.000000 UTC",
+    "last_updated_at": "2025-07-08 13:12:58.000000 UTC",
+    "vehicle_class_id": "9",
+    "rk": "1"
+  },
+  {
+    "id": "24511512",
+    "price": "108.13",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "7985",
+    "inserted_at": "2025-07-08 13:12:58.000000 UTC",
+    "last_updated_at": "2025-07-08 13:12:58.000000 UTC",
+    "vehicle_class_id": "9",
+    "rk": "1"
+  },
+  {
+    "id": "24511511",
+    "price": "108.67",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "7985",
+    "inserted_at": "2025-07-08 13:12:58.000000 UTC",
+    "last_updated_at": "2025-07-08 13:12:58.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "24511499",
+    "price": "108.67",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "7985",
+    "inserted_at": "2025-07-08 13:12:58.000000 UTC",
+    "last_updated_at": "2025-07-08 13:12:58.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "23818805",
+    "price": "15.42",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "8058",
+    "inserted_at": "2025-07-02 07:32:35.000000 UTC",
+    "last_updated_at": "2025-07-02 07:32:35.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23818898",
+    "price": "20.79",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "8058",
+    "inserted_at": "2025-07-02 07:32:35.000000 UTC",
+    "last_updated_at": "2025-07-02 07:32:35.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23818802",
+    "price": "42.66",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "8058",
+    "inserted_at": "2025-07-02 07:32:35.000000 UTC",
+    "last_updated_at": "2025-07-02 07:32:35.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23818899",
+    "price": "61.5",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "8058",
+    "inserted_at": "2025-07-02 07:32:35.000000 UTC",
+    "last_updated_at": "2025-07-02 07:32:35.000000 UTC",
+    "vehicle_class_id": "2",
+    "rk": "1"
+  },
+  {
+    "id": "23818893",
+    "price": "34.82",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "8058",
+    "inserted_at": "2025-07-02 07:32:35.000000 UTC",
+    "last_updated_at": "2025-07-02 07:32:35.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23818804",
+    "price": "21.33",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "8058",
+    "inserted_at": "2025-07-02 07:32:35.000000 UTC",
+    "last_updated_at": "2025-07-02 07:32:35.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23818895",
+    "price": "65.92",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "8058",
+    "inserted_at": "2025-07-02 07:32:35.000000 UTC",
+    "last_updated_at": "2025-07-02 07:32:35.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "23818803",
+    "price": "42.66",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "8058",
+    "inserted_at": "2025-07-02 07:32:35.000000 UTC",
+    "last_updated_at": "2025-07-02 07:32:35.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "23818799",
+    "price": "47.41",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "8058",
+    "inserted_at": "2025-07-02 07:32:35.000000 UTC",
+    "last_updated_at": "2025-07-02 07:32:35.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "23818894",
+    "price": "47.41",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "8058",
+    "inserted_at": "2025-07-02 07:32:35.000000 UTC",
+    "last_updated_at": "2025-07-02 07:32:35.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "23818896",
+    "price": "33.85",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "8058",
+    "inserted_at": "2025-07-02 07:32:35.000000 UTC",
+    "last_updated_at": "2025-07-02 07:32:35.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23818801",
+    "price": "17.78",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "8058",
+    "inserted_at": "2025-07-02 07:32:35.000000 UTC",
+    "last_updated_at": "2025-07-02 07:32:35.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23818897",
+    "price": "124.89",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "8058",
+    "inserted_at": "2025-07-02 07:32:35.000000 UTC",
+    "last_updated_at": "2025-07-02 07:32:35.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "23818800",
+    "price": "43.72",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "8058",
+    "inserted_at": "2025-07-02 07:32:35.000000 UTC",
+    "last_updated_at": "2025-07-02 07:32:35.000000 UTC",
+    "vehicle_class_id": "36",
+    "rk": "1"
+  },
+  {
+    "id": "23821319",
+    "price": "14.33",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "8067",
+    "inserted_at": "2025-07-02 07:35:37.000000 UTC",
+    "last_updated_at": "2025-07-02 07:35:37.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23821375",
+    "price": "14.32",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "8067",
+    "inserted_at": "2025-07-02 07:35:37.000000 UTC",
+    "last_updated_at": "2025-07-02 07:35:37.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23821318",
+    "price": "23.1",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "8067",
+    "inserted_at": "2025-07-02 07:35:37.000000 UTC",
+    "last_updated_at": "2025-07-02 07:35:37.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23821373",
+    "price": "23.1",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "8067",
+    "inserted_at": "2025-07-02 07:35:37.000000 UTC",
+    "last_updated_at": "2025-07-02 07:35:37.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23821371",
+    "price": "44.1",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "8067",
+    "inserted_at": "2025-07-02 07:35:37.000000 UTC",
+    "last_updated_at": "2025-07-02 07:35:37.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "23821320",
+    "price": "44.1",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "8067",
+    "inserted_at": "2025-07-02 07:35:37.000000 UTC",
+    "last_updated_at": "2025-07-02 07:35:37.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "23821321",
+    "price": "47.73",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "8067",
+    "inserted_at": "2025-07-02 07:35:37.000000 UTC",
+    "last_updated_at": "2025-07-02 07:35:37.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "23821372",
+    "price": "47.73",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "8067",
+    "inserted_at": "2025-07-02 07:35:37.000000 UTC",
+    "last_updated_at": "2025-07-02 07:35:37.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "23821374",
+    "price": "17.9",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "8067",
+    "inserted_at": "2025-07-02 07:35:37.000000 UTC",
+    "last_updated_at": "2025-07-02 07:35:37.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23821317",
+    "price": "17.91",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "8067",
+    "inserted_at": "2025-07-02 07:35:37.000000 UTC",
+    "last_updated_at": "2025-07-02 07:35:37.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23816746",
+    "price": "249.04",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "8081",
+    "inserted_at": "2025-07-02 07:30:55.000000 UTC",
+    "last_updated_at": "2025-07-02 07:30:55.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "23816813",
+    "price": "249.04",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "8081",
+    "inserted_at": "2025-07-02 07:30:55.000000 UTC",
+    "last_updated_at": "2025-07-02 07:30:55.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "23813167",
+    "price": "671",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "8093",
+    "inserted_at": "2025-07-02 07:26:33.000000 UTC",
+    "last_updated_at": "2025-07-02 07:26:33.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "23813211",
+    "price": "671",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "8093",
+    "inserted_at": "2025-07-02 07:26:33.000000 UTC",
+    "last_updated_at": "2025-07-02 07:26:33.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "23813207",
+    "price": "655.27",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "8095",
+    "inserted_at": "2025-07-02 07:26:33.000000 UTC",
+    "last_updated_at": "2025-07-02 07:26:33.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "23813164",
+    "price": "655.27",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "8095",
+    "inserted_at": "2025-07-02 07:26:33.000000 UTC",
+    "last_updated_at": "2025-07-02 07:26:33.000000 UTC",
+    "vehicle_class_id": "10",
+    "rk": "1"
+  },
+  {
+    "id": "24516663",
+    "price": "111.37",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "8102",
+    "inserted_at": "2025-07-08 15:09:28.000000 UTC",
+    "last_updated_at": "2025-07-08 15:09:28.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "24516668",
+    "price": "111.37",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "8102",
+    "inserted_at": "2025-07-08 15:09:28.000000 UTC",
+    "last_updated_at": "2025-07-08 15:09:28.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "24516786",
+    "price": "55.96",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "8102",
+    "inserted_at": "2025-07-08 15:10:27.000000 UTC",
+    "last_updated_at": "2025-07-08 15:10:27.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "24516779",
+    "price": "56.25",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "8102",
+    "inserted_at": "2025-07-08 15:10:27.000000 UTC",
+    "last_updated_at": "2025-07-08 15:10:27.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "24516785",
+    "price": "56.24",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "8102",
+    "inserted_at": "2025-07-08 15:10:27.000000 UTC",
+    "last_updated_at": "2025-07-08 15:10:27.000000 UTC",
+    "vehicle_class_id": "9",
+    "rk": "1"
+  },
+  {
+    "id": "24516781",
+    "price": "56.53",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "8102",
+    "inserted_at": "2025-07-08 15:10:27.000000 UTC",
+    "last_updated_at": "2025-07-08 15:10:27.000000 UTC",
+    "vehicle_class_id": "9",
+    "rk": "1"
+  },
+  {
+    "id": "17050382",
+    "price": "75.55",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "8111",
+    "inserted_at": "2025-05-28 16:51:04.000000 UTC",
+    "last_updated_at": "2025-05-28 16:51:04.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "17050392",
+    "price": "75.55",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "8111",
+    "inserted_at": "2025-05-28 16:51:04.000000 UTC",
+    "last_updated_at": "2025-05-28 16:51:04.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "17050383",
+    "price": "75.65",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "8111",
+    "inserted_at": "2025-05-28 16:51:04.000000 UTC",
+    "last_updated_at": "2025-05-28 16:51:04.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "17050393",
+    "price": "75.65",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "8111",
+    "inserted_at": "2025-05-28 16:51:04.000000 UTC",
+    "last_updated_at": "2025-05-28 16:51:04.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "23704327",
+    "price": "148.5",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "8148",
+    "inserted_at": "2025-07-01 13:38:58.000000 UTC",
+    "last_updated_at": "2025-07-01 13:38:58.000000 UTC",
+    "vehicle_class_id": "9",
+    "rk": "1"
+  },
+  {
+    "id": "23704328",
+    "price": "148.5",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "8148",
+    "inserted_at": "2025-07-01 13:38:58.000000 UTC",
+    "last_updated_at": "2025-07-01 13:38:58.000000 UTC",
+    "vehicle_class_id": "9",
+    "rk": "1"
+  },
+  {
+    "id": "23821009",
+    "price": "36.3",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "8153",
+    "inserted_at": "2025-07-02 07:35:28.000000 UTC",
+    "last_updated_at": "2025-07-02 07:35:28.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23821006",
+    "price": "36.3",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "8153",
+    "inserted_at": "2025-07-02 07:35:28.000000 UTC",
+    "last_updated_at": "2025-07-02 07:35:28.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23821001",
+    "price": "147.11",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "8159",
+    "inserted_at": "2025-07-02 07:35:28.000000 UTC",
+    "last_updated_at": "2025-07-02 07:35:28.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "23821002",
+    "price": "147.11",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "8159",
+    "inserted_at": "2025-07-02 07:35:28.000000 UTC",
+    "last_updated_at": "2025-07-02 07:35:28.000000 UTC",
+    "vehicle_class_id": "5",
+    "rk": "1"
+  },
+  {
+    "id": "23704313",
+    "price": "120.33",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "8173",
+    "inserted_at": "2025-07-01 13:38:58.000000 UTC",
+    "last_updated_at": "2025-07-01 13:38:58.000000 UTC",
+    "vehicle_class_id": "9",
+    "rk": "1"
+  },
+  {
+    "id": "23704314",
+    "price": "120.33",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "8173",
+    "inserted_at": "2025-07-01 13:38:58.000000 UTC",
+    "last_updated_at": "2025-07-01 13:38:58.000000 UTC",
+    "vehicle_class_id": "9",
+    "rk": "1"
+  },
+  {
+    "id": "23704488",
+    "price": "1641.75",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "8267",
+    "inserted_at": "2025-07-01 13:39:59.000000 UTC",
+    "last_updated_at": "2025-07-01 13:39:59.000000 UTC",
+    "vehicle_class_id": "9",
+    "rk": "1"
+  },
+  {
+    "id": "23704489",
+    "price": "1641.75",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "8267",
+    "inserted_at": "2025-07-01 13:39:59.000000 UTC",
+    "last_updated_at": "2025-07-01 13:39:59.000000 UTC",
+    "vehicle_class_id": "9",
+    "rk": "1"
+  },
+  {
+    "id": "23704333",
+    "price": "333.55",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "8270",
+    "inserted_at": "2025-07-01 13:38:58.000000 UTC",
+    "last_updated_at": "2025-07-01 13:38:58.000000 UTC",
+    "vehicle_class_id": "9",
+    "rk": "1"
+  },
+  {
+    "id": "23704337",
+    "price": "333.55",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "8270",
+    "inserted_at": "2025-07-01 13:38:58.000000 UTC",
+    "last_updated_at": "2025-07-01 13:38:58.000000 UTC",
+    "vehicle_class_id": "9",
+    "rk": "1"
+  },
+  {
+    "id": "21604451",
+    "price": "842.63",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "8443",
+    "inserted_at": "2025-06-18 16:29:37.000000 UTC",
+    "last_updated_at": "2025-06-18 16:29:37.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "21604452",
+    "price": "842.63",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "8443",
+    "inserted_at": "2025-06-18 16:29:37.000000 UTC",
+    "last_updated_at": "2025-06-18 16:29:37.000000 UTC",
+    "vehicle_class_id": "4",
+    "rk": "1"
+  },
+  {
+    "id": "23705366",
+    "price": "78",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "9658",
+    "inserted_at": "2025-07-01 13:46:29.000000 UTC",
+    "last_updated_at": "2025-07-01 13:46:29.000000 UTC",
+    "vehicle_class_id": "9",
+    "rk": "1"
+  },
+  {
+    "id": "23705362",
+    "price": "78",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "9658",
+    "inserted_at": "2025-07-01 13:46:29.000000 UTC",
+    "last_updated_at": "2025-07-01 13:46:29.000000 UTC",
+    "vehicle_class_id": "9",
+    "rk": "1"
+  },
+  {
+    "id": "23819020",
+    "price": "32.7",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "9659",
+    "inserted_at": "2025-07-02 07:32:58.000000 UTC",
+    "last_updated_at": "2025-07-02 07:32:58.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23819046",
+    "price": "32.7",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "9659",
+    "inserted_at": "2025-07-02 07:32:58.000000 UTC",
+    "last_updated_at": "2025-07-02 07:32:58.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23812958",
+    "price": "91.77",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "9669",
+    "inserted_at": "2025-07-02 07:26:30.000000 UTC",
+    "last_updated_at": "2025-07-02 07:26:30.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23812934",
+    "price": "91.77",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "9669",
+    "inserted_at": "2025-07-02 07:26:30.000000 UTC",
+    "last_updated_at": "2025-07-02 07:26:30.000000 UTC",
+    "vehicle_class_id": "1",
+    "rk": "1"
+  },
+  {
+    "id": "23812957",
+    "price": "146.83",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "9669",
+    "inserted_at": "2025-07-02 07:26:30.000000 UTC",
+    "last_updated_at": "2025-07-02 07:26:30.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23812933",
+    "price": "146.83",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "9669",
+    "inserted_at": "2025-07-02 07:26:30.000000 UTC",
+    "last_updated_at": "2025-07-02 07:26:30.000000 UTC",
+    "vehicle_class_id": "3",
+    "rk": "1"
+  },
+  {
+    "id": "23812959",
+    "price": "116.23",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "9669",
+    "inserted_at": "2025-07-02 07:26:30.000000 UTC",
+    "last_updated_at": "2025-07-02 07:26:30.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
+  },
+  {
+    "id": "23812935",
+    "price": "116.23",
+    "rate_by_human": "",
+    "rate_by_computer": "",
+    "route_id": "9669",
+    "inserted_at": "2025-07-02 07:26:30.000000 UTC",
+    "last_updated_at": "2025-07-02 07:26:30.000000 UTC",
+    "vehicle_class_id": "6",
+    "rk": "1"
   }
 ]
